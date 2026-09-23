@@ -1,0 +1,45 @@
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*~
+
+# Claude Code
+.claude/settings.local.json
+
+# Node (por si se agrega código JS/TS)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.env
+.env.local
+.env.*.local
+
+# Python (por si se agrega código Python)
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Archivos temporales / borradores locales
+*.tmp
+*.bak
+*.orig
