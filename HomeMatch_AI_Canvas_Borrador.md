@@ -269,6 +269,10 @@ Si HomeMatch prepara un mensaje para una inmobiliaria o agente, **el envío requ
 
 La PoC se comparará contra una **búsqueda tradicional con filtros**.
 
+### KPI principal — Thumbs up
+
+Cada recomendación recibida por el usuario puede ser evaluada con un "thumbs up" si le resulta relevante o con un "thumbs down" si no lo es.
+
 ### KPI principal — Precision@5
 
 **Precision@5 = propiedades del Top 5 que el usuario visitaría / 5**
@@ -319,8 +323,9 @@ Se compararán:
 
 ### Scraping
 Los portales pueden modificar su estructura o limitar el acceso automatizado.
+Además, el scraping puede no estar permitido por los términos de uso de los portales.
 
-**Mitigación:** comenzar con un portal y ampliar solamente si el tiempo lo permite.
+**Mitigación:** comenzar con un portal y ampliar solamente si el tiempo lo permite + verificar los términos de uso de cada portal antes de implementar scraping.
 
 ### Calidad de datos
 Puede haber publicaciones incompletas, desactualizadas o duplicadas.
