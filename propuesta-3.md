@@ -1,427 +1,254 @@
-# HomeMatch AI — Product Canvas
+# AI Opportunity Canvas — HomeMatch AI
 
-> **Alcance de la PoC:** búsqueda de departamentos en alquiler en CABA.
-
-## 1. Problema / necesidad
-
-Buscar un departamento para alquilar requiere revisar muchas publicaciones distribuidas entre distintos portales, con información heterogénea y difícil de comparar.
-
-Los buscadores tradicionales permiten filtrar variables explícitas —precio, barrio, ambientes, superficie—, pero no capturan preferencias expresadas de forma natural, por ejemplo:
-
-- “quiero algo luminoso y tranquilo”;
-- “prefiero estar cerca del trabajo aunque sea un poco más caro”;
-- “quiero balcón, pero podría resignarlo por una mejor ubicación”.
-
-Además, las preferencias pueden cambiar a medida que la persona ve alternativas. El problema no es solamente **encontrar publicaciones**, sino **identificar cuáles vale la pena visitar sin revisar manualmente decenas de opciones**.
-
-**Pregunta de producto**
-
-> ¿Podemos reducir el esfuerzo de búsqueda y ayudar al usuario a encontrar mejores candidatos para visitar para comprender sus preferencias y comparar propiedades?
+> **Equipo:** …  
+> **Integrantes:** …  
+> **Caso:** HomeMatch AI — búsqueda de departamentos en alquiler en CABA  
+> **Versión:** 1 · **Fecha:** 2026-09-28
 
 ---
 
-## 2. Usuario / stakeholders
+## 1. Problema y contexto
 
-### Usuario principal
-Personas que buscan alquilar un departamento en CABA. (Restringido a CABA en fase inica)
+### A quién le pasa
 
-### Mercado potencial inicial
-Como referencia de magnitud, una nota de Infobae de enero de 2025 reporta aproximadamente **12.500–13.000 contratos de alquiler mensuales en CABA**. Cerca de un tercio correspondería a nuevos acuerdos.
+Alguien que está buscando alquilar un departamento en CABA — en proceso activo de búsqueda, con restricciones reales (presupuesto, barrio, ambientes) y preferencias subjetivas difíciles de expresar en filtros estructurados.
 
-Esto equivale a aproximadamente **50.000–52.000 nuevos contratos por año**, que se utilizarán como **proxy inicial del flujo anual del mercado potencial**, no como cantidad directa de usuarios.
+### Qué le pasa
 
----
+> "Entro a ZonaProp, pongo precio y ambientes, y me aparecen 200 resultados. Los reviso uno por uno porque los filtros no capturan lo que me importa: quiero algo luminoso y tranquilo, cerca del trabajo aunque sea un poco más caro, con balcón pero podría resignarlo si la ubicación es mejor. Y encima mis preferencias van cambiando a medida que veo alternativas."
 
-## 3. Soluciones actuales / alternativas
+El problema no es solo encontrar publicaciones — es identificar cuáles vale la pena visitar sin revisar manualmente decenas de opciones. Las dimensiones:
 
-### Portales inmobiliarios tradicionales
-ZonaProp, Argenprop y Mercado Libre permiten buscar mediante filtros estructurados.
+- **Funcional:** tiempo y esfuerzo de revisión manual; incapacidad de los filtros de capturar trade-offs.
+- **Social:** sensación de que otros "saben moverse" mejor en el mercado; dependencia de recomendaciones informales.
+- **Emocional:** agotamiento, incertidumbre sobre si se tomó la mejor decisión, ansiedad por el tiempo que demanda la búsqueda.
 
-**Fortaleza:** gran cantidad de publicaciones y filtros simples.  
-**Limitación:** el usuario debe traducir sus necesidades a filtros y comparar manualmente las alternativas.
+### Cuánto le cuesta
 
-### Soluciones con IA similares
+El mercado de CABA procesa aproximadamente **50.000–52.000 nuevos contratos por año** (proxy del volumen de búsquedas activas). No se tiene el dato de cuántas publicaciones revisa en promedio cada buscador, ni cuánto tiempo destina — esa línea de base hay que medirla en el piloto.
 
-**RentIQ — UC Berkeley**  
-Asistente de búsqueda de vivienda que combina conversación, extracción de preferencias, filtros estructurados, búsqueda semántica y reranking.
+### Evidencia
 
-**AgonProp — Argentina**  
-Plataforma inmobiliaria con búsqueda mediante lenguaje natural, asistente conversacional y herramientas de comparación.
+#### De confirmación
 
-**Zillow AI Mode**  
-Experiencia conversacional para buscar y comparar propiedades a partir de preferencias expresadas en lenguaje natural.
+- Infobae (14/01/2025) reporta **12.500–13.000 contratos mensuales** en CABA, aproximadamente un tercio correspondiente a nuevos acuerdos. Confirma la escala del mercado y la existencia de un flujo continuo de buscadores activos. [1]
+- La existencia de tres portales grandes con catálogos superpuestos (ZonaProp, Argenprop, MercadoLibre) es evidencia de que el problema de encontrar la propiedad adecuada no está resuelto por ninguno de ellos solo.
+- RentIQ [2], AgonProp [3] y Zillow AI Mode [4] apuestan al mismo diagnóstico de forma independiente — confirma que el problema fue validado por equipos con recursos distintos.
 
----
+#### De refutación
 
-## 4. Hipótesis de solución
-
-La persona cuenta qué busca con sus propias palabras. El sistema identifica qué es excluyente y qué es deseable, lee todos los avisos disponibles (incluida la descripción), descarta los que violan algo excluyente y ordena el resto. Muestra 5 opciones con el motivo de cada una y lo que sacrifica. La persona reacciona ("este me gusta, pero el balcón me importa más de lo que dije") y el orden se ajusta.
-
-Si la solucion puede:
-
-1. comprender necesidades expresadas libremente por el usuario;
-2. distinguir restricciones obligatorias de preferencias;
-3. combinar información estructurada y semántica de las propiedades;
-4. aprender del feedback durante la búsqueda;
-5. explicar por qué recomienda cada alternativa;
-
-entonces el usuario podrá **encontrar propiedades que consideraría visitar revisando menos publicaciones que con una búsqueda tradicional**.
-
-### Oportunidad 
-No limitarse a “buscar con lenguaje natural”, sino funcionar como un **asistente de decisión** que aprende de la interacción, reordena alternativas y explica los trade-offs.
+- Los portales existentes tienen alta tasa de uso sostenida, lo que podría indicar que el problema no duele lo suficiente como para cambiar de herramienta.
+- No se tiene evidencia propia (entrevistas, observación) de cuánto tiempo pierde un buscador ni si lo vive como un problema grave. Hay que conseguirla antes de invertir más en la solución.
 
 ---
 
-## 5. Propuesta de valor
+## 2. Stakeholders
 
-> **HomeMatch AI ayuda a encontrar departamentos para alquilar en CABA que se ajusten a las necesidades y preferencias reales del usuario, reduciendo el esfuerzo de revisar y comparar publicaciones.**
+### Roles
 
-El objetivo no es reemplazar la decisión humana. HomeMatch **prioriza, compara y explica**; el usuario decide qué propiedad visitar.
+| Papel | Quién es | Qué necesita ver para decir que sí |
+|---|---|---|
+| Usuario | Persona que busca alquilar un departamento en CABA | Que las recomendaciones reflejen lo que describió, que le ahorre tiempo frente al portal tradicional |
+| Influenciador | Pareja, familiar o compañero de cuarto que también vivirá en el departamento | Que el sistema considere las preferencias de todos, no solo de quien lo usa |
+| Recomendador | Amigo o conocido con experiencia reciente en el mercado porteño | Que el sistema conozca el mercado real y no muestre propiedades fuera de precio o de barrio |
+| Comprador | El mismo usuario (paga el alquiler) | Que el tiempo invertido en la búsqueda sea menor que con el método actual |
+| Decisor | El mismo usuario | Que la decisión final siempre sea suya; que el sistema explique, no imponga |
+| Saboteador | Portales inmobiliarios (pueden restringir scraping) / inmobiliarias (pueden perder consultas directas) | — |
 
----
+### Evidencia
 
-## 6. Solución propuesta
+#### De confirmación
 
-### Experiencia del usuario
+- En vivienda para uso propio, usuario, comprador y decisor suelen ser la misma persona o pareja — simplifica la dinámica de adopción.
+- El saboteador más concreto es el portal inmobiliario: si restringe el scraping, el producto pierde su fuente de datos.
 
-**Conversación → perfil de búsqueda → candidatos → ranking personalizado → explicación → feedback → nuevo ranking**
+#### De refutación
 
-El usuario describe libremente qué busca.
-
-Ejemplo:
-
-> “Busco un dos ambientes, hasta $X, que acepte mascotas. Trabajo en Microcentro y no quisiera viajar más de 35 minutos. Prefiero algo luminoso y con balcón.”
-
-HomeMatch interpreta la conversación y construye un perfil.
-
-### Restricciones obligatorias
-Ejemplos:
-- presupuesto máximo;
-- cantidad mínima de ambientes;
-- mascotas;
-- ubicación excluida/incluida.
-
-Las propiedades que no cumplen estas condiciones se eliminan.
-
-### Preferencias
-Ejemplos:
-- balcón;
-- luminosidad;
-- tranquilidad;
-- cercanía al trabajo;
-- espacios verdes;
-- transporte.
-
-Estas variables participan del ranking pero no necesariamente eliminan una propiedad.
-
-### Resultado
-HomeMatch devuelve un **Top 5 personalizado**, indicando:
-
-- por qué cada propiedad es compatible;
-- qué preferencias cumple;
-- qué compromisos o trade-offs presenta;
-- link a la publicación original.
+- No se verificó si hay un perfil de buscador que delegue la búsqueda a una inmobiliaria (que actuaría como recomendador con mucho peso) — en ese caso la propuesta de valor se dirige al lugar equivocado.
 
 ---
 
-## 7. Inteligencia Artificial
+## 3. Hipótesis de solución
 
-### LLM
-Se utiliza para:
+### Descripción del producto
 
-- interpretar la conversación;
-- extraer restricciones y preferencias;
-- detectar información faltante o ambigua;
-- interpretar el feedback;
-- generar explicaciones de las recomendaciones.
+El usuario describe en lenguaje natural qué busca. HomeMatch interpreta la conversación, identifica **restricciones obligatorias** (presupuesto, ambientes, mascotas, zona excluida) y **preferencias** (luminosidad, balcón, cercanía al trabajo), lee las publicaciones disponibles, descarta las que violan alguna restricción, y rankea el resto. Devuelve un **Top 5** con explicación de por qué cada opción es compatible y qué trade-offs presenta. El usuario reacciona con feedback libre y el ranking se actualiza.
 
-Los cambios importantes inferidos por el LLM deben ser confirmados por el usuario.
+### Acción
 
-### Embeddings / búsqueda semántica
-Permiten relacionar preferencias subjetivas con el texto de las publicaciones.
+El usuario ve un Top 5 personalizado con explicaciones y trade-offs en lugar de tener que revisar y comparar manualmente las publicaciones que devuelve un filtro.
 
-Ejemplo:
+### Predicción
 
-> “quiero un departamento luminoso”
+Qué tan compatible es cada propiedad con las restricciones y preferencias del usuario, combinando atributos estructurados (precio, ambientes, ubicación) con similitud semántica entre las preferencias expresadas y el texto de la publicación.
 
-puede relacionarse semánticamente con descripciones como:
+### Juicio
 
-> “gran entrada de luz natural”, “ventanales amplios”, “orientación abierta”.
+- El umbral de restricciones duras (qué excluye y qué no) lo confirma el usuario antes del primer ranking.
+- El parámetro α que balancea score estructurado y score semántico lo fija el equipo experimentalmente durante la PoC — no lo elige el usuario.
+- Si HomeMatch infiere un cambio relevante en el perfil a partir del feedback, se lo muestra al usuario y espera confirmación antes de actualizar.
 
-### Ranking híbrido
+### Evidencia
 
-**Score final = α × Score estructurado + (1 − α) × Score semántico**
+#### De confirmación
 
-El ranking combina:
+- RentIQ (UC Berkeley, 2025) [2] combina conversación, extracción de preferencias, filtros estructurados y búsqueda semántica — confirma que la predicción propuesta es técnicamente realizable.
+- Los embeddings de texto ya se usan para búsqueda semántica en propiedades en otros contextos (Zillow AI Mode [4]).
 
-- cumplimiento de preferencias cuantificables;
-- similitud semántica;
-- restricciones duras aplicadas previamente.
+#### De refutación
 
-El parámetro **α** se determinará experimentalmente durante la PoC.
+- No se demostró aún que el ranking híbrido sea mejor que un filtro tradicional para este dominio — eso es precisamente lo que hay que medir en la PoC.
+- Si el LLM interpreta mal una restricción obligatoria (por ejemplo, acepta una propiedad que no acepta mascotas), el error es grave. Ese riesgo no está cuantificado.
 
 ---
 
-## 8. Datos / inputs
+## 4. Alternativas y statu quo
 
-### Publicaciones inmobiliarias
-Obtenidas mediante scraping de uno o más portales.
+### Qué hace hoy el usuario
 
-Variables posibles:
+Entra a ZonaProp, Argenprop o MercadoLibre. Aplica filtros por precio, barrio y ambientes. Revisa una a una las publicaciones resultantes. Guarda algunas en favoritos o en un grupo de WhatsApp. Vuelve a hacer lo mismo en otro portal. Compara manualmente y coordina visitas por su cuenta. El proceso se repite cada vez que actualiza sus preferencias.
 
-- precio;
-- expensas;
-- barrio / ubicación;
-- ambientes;
-- superficie;
-- amenities;
-- acepta mascotas;
-- descripción;
-- URL de la publicación.
+### Qué otras soluciones existen o podrían aparecer
 
-### Texto de las publicaciones
-Utilizado para extracción de características y embeddings.
+| Solución | Fortaleza | Limitación |
+|---|---|---|
+| ZonaProp / Argenprop / MercadoLibre | Gran volumen de publicaciones, filtros conocidos | No capturan preferencias subjetivas ni trade-offs; comparación manual |
+| RentIQ (UC Berkeley) [2] | Conversación + semántica + reranking | No disponible en Argentina |
+| AgonProp (Argentina) [3] | Búsqueda en lenguaje natural, asistente conversacional | Funcionalidad no verificada en profundidad |
+| Zillow AI Mode [4] | Conversacional, con comparación de propiedades | Solo para mercado de EEUU |
 
-### Información geográfica
-Variables simples de contexto:
+### Por qué lo nuestro sería suficientemente mejor como para que alguien se mueva
 
-- tiempo estimado de viaje;
-- transporte;
-- cercanía a espacios verdes o servicios.
+Los portales actuales obligan al usuario a traducir sus necesidades a filtros y comparar manualmente. HomeMatch entiende preferencias subjetivas expresadas libremente, aprende del feedback durante la misma sesión, y explica los trade-offs de cada opción. La diferencia no es solo la interfaz conversacional — es que funciona como **asistente de decisión** que aprende de la interacción, no solo como buscador que filtra.
 
-### Información del usuario
-Obtenida durante la conversación:
+### Evidencia
 
-- restricciones;
-- preferencias;
-- prioridades;
-- feedback sobre recomendaciones.
+#### De confirmación
 
-### Alcance de datos de la PoC
-Para validar la hipótesis **no es necesario integrar todos los portales**. Si el scraping multiportal aumenta demasiado el alcance, la PoC puede realizarse inicialmente con una única fuente.
+- AgonProp [3] existe y opera en Argentina — confirma que hay demanda local para este tipo de herramienta.
+- La persistencia de múltiples portales con catálogos superpuestos sugiere que ninguno resuelve bien el problema de encontrar la propiedad correcta, no solo mostrar publicaciones.
+
+#### De refutación
+
+- No se midió cuánto tiempo dedica hoy un buscador ni qué tan satisfecho queda con el proceso — sin esa línea de base, no se puede afirmar que HomeMatch sea "suficientemente mejor".
+- El statu quo tiene cero fricción de adopción (ya está instalado, es gratis, lo conocen). Para que alguien cambie, la mejora tiene que ser perceptible desde el primer uso.
 
 ---
 
-## 9. Feedback / aprendizaje durante la búsqueda
+## 5. Hipótesis de datos
 
-Después de recibir recomendaciones, el usuario puede expresar:
+### Dataset
 
-> “Me gustaron estos, pero me doy cuenta de que el balcón es más importante de lo que pensaba.”
+| Dato | Origen | ¿Público? | ¿Lo vimos? | ¿Sensibles? | Sesgo conocido | Comentarios |
+|---|---|---|---|---|---|---|
+| Listings (precio, barrio, ambientes, superficie, amenities, mascotas) | ZonaProp / Argenprop — scraping | Sí (web pública) | No | No | Pueden estar desactualizados o duplicados entre portales | Verificar TOS antes de implementar; empezar con un solo portal |
+| Texto de las publicaciones (descripción libre) | Mismo origen | Sí | No | No | Calidad y extensión muy variables | Clave para embeddings; publicaciones breves pueden quedar mal representadas |
+| Información geográfica (tiempo de viaje, transporte) | APIs de mapas (ej. Google Maps) | Parcialmente (requiere API key) | No | No | Tráfico estimado puede no reflejar horas pico reales | Feature adicional en el score; no crítica para la PoC |
+| Preferencias del usuario | Conversación generada en sesión | N/A | N/A | Sí | — | No se persiste entre sesiones en la PoC; el usuario las re-expresa en cada uso |
 
-o:
+### Evidencia
 
-> “50 minutos de viaje es demasiado.”
+#### De confirmación
 
-El LLM interpreta el feedback y propone una modificación del perfil.
+- Los portales mencionados publican sus listings en web abierta — el dato existe y en principio es accesible.
 
-**Feedback → propuesta de cambio → confirmación → actualización del perfil → nuevo ranking**
+#### De refutación
 
-La PoC no requiere entrenar nuevamente un modelo con cada interacción.
-
----
-
-## 10. Output
-
-El producto entrega:
-
-### Top 5 de propiedades recomendadas
-
-Para cada propiedad:
-
-- nivel de compatibilidad;
-- principales razones de recomendación;
-- preferencias que cumple;
-- trade-offs;
-- acceso a la publicación original.
-
-Ejemplo:
-
-> **Opción A**  
-> Cumple presupuesto, acepta mascotas y reduce el viaje al trabajo a 28 min. Tiene balcón y buena coincidencia con tu preferencia por luminosidad. Como trade-off, tiene menor superficie que otras alternativas.
+- No se bajó ni inspeccionó ningún dataset todavía. Que el dato esté publicado no significa que tenga las columnas necesarias con valores completos — hay que abrirlo.
+- Los TOS de los portales pueden prohibir el scraping automatizado. Eso no es un riesgo hipotético: es una restricción concreta que hay que verificar antes de construir.
 
 ---
 
-## 11. Interacción humano–IA
+## 6. Métrica de éxito
 
-La IA **asiste**, pero no toma la decisión final.
+### Métrica de negocio
 
-**Usuario**
-- define necesidades;
-- confirma restricciones importantes;
-- evalúa recomendaciones;
-- proporciona feedback;
-- decide qué propiedad visitar;
-- autoriza cualquier contacto externo.
+**Esfuerzo de búsqueda:** cantidad de publicaciones que el usuario debe revisar hasta encontrar 3 propiedades que visitaría. La hipótesis es que HomeMatch reduce esta cantidad frente a la búsqueda tradicional.
 
-**IA**
-- interpreta;
-- estructura preferencias;
-- filtra;
-- rankea;
-- explica;
-- adapta recomendaciones.
+**Precision@5:** propiedades del Top 5 que el usuario visitaría / 5.
 
-Si HomeMatch prepara un mensaje para una inmobiliaria o agente, **el envío requiere confirmación explícita del usuario**.
+### Umbral — por debajo de esto, no vale la pena
 
----
+Los umbrales cuantitativos se fijan después de medir el baseline con los primeros participantes del piloto. Establecerlos antes de tener evidencia del statu quo sería inventar un número. Lo que sí se puede decir: si HomeMatch no supera el baseline en esfuerzo de búsqueda Y en Precision@5, la hipótesis no se sostiene.
 
-## 12. Métricas de éxito
+### Cómo se mediría dentro del trimestre
 
-La PoC se comparará contra una **búsqueda tradicional con filtros**.
+Test con aproximadamente **10 personas**. Cada participante resuelve la misma búsqueda de alquiler con:
 
-### KPI principal — Thumbs up
+- **A. Baseline:** portal inmobiliario + filtros tradicionales (ZonaProp).
+- **B. HomeMatch:** conversación + recomendaciones personalizadas.
 
-Cada recomendación recibida por el usuario puede ser evaluada con un "thumbs up" si le resulta relevante o con un "thumbs down" si no lo es.
+Se comparan: publicaciones revisadas hasta encontrar 3 candidatos, tiempo total, Precision@5, satisfacción (escala 1–5) y percepción de que las recomendaciones reflejan lo que buscaba.
 
-### KPI principal — Precision@5
+### Métrica técnica que usaríamos como proxy
 
-**Precision@5 = propiedades del Top 5 que el usuario visitaría / 5**
+Thumbs up / thumbs down por recomendación individual — mide la relevancia percibida de cada propiedad en el momento.
 
-Mide la relevancia de las primeras recomendaciones.
+### Qué se registra de cada uso
 
-### KPI principal — esfuerzo de búsqueda
+- Perfil de preferencias inferido (restricciones y preferencias identificadas).
+- Cambios al perfil tras cada ronda de feedback.
+- Score estructurado y semántico de cada propiedad en el ranking.
+- Evaluación del usuario por propiedad (thumbs up / down).
 
-**Cantidad de publicaciones que el usuario debe revisar hasta encontrar 3 propiedades que visitaría.**
+### Evidencia
 
-La hipótesis es que HomeMatch reduzca esta cantidad frente a la búsqueda tradicional.
+#### De confirmación
 
-### Métricas secundarias
+- La métrica de "publicaciones revisadas hasta encontrar 3 candidatos" es observable sin acceso al modelo: se puede medir con un contador en la UI o con un protocolo de pensamiento en voz alta.
 
-- tiempo hasta encontrar 3 candidatos;
-- satisfacción del usuario;
-- percepción de que las recomendaciones reflejan lo que buscaba (escala 1–5).
+#### De refutación
 
-### Criterio de éxito
-
-HomeMatch deberá **superar el baseline de búsqueda tradicional** en las métricas principales.
-
-Los umbrales cuantitativos definitivos se fijarán después de un primer piloto, evitando establecer valores arbitrarios sin evidencia.
+- No hay línea de base medida todavía. Sin saber cuántas publicaciones revisa hoy un buscador típico, el umbral de mejora no tiene referencia.
 
 ---
 
-## 13. Validación
+## 7. Riesgos éticos y de sesgo (preliminar)
 
-### Prueba con usuarios
+**Calidad de servicio desigual:** el modelo semántico puede funcionar mejor para publicaciones bien redactadas (generalmente las de mayor precio o de inmobiliarias grandes), penalizando opciones más económicas o con descripciones breves. Habría que medir Precision@5 por rango de precio para detectarlo.
 
-Realizar una prueba pequeña con aproximadamente **10 personas**.
+**Representación:** las publicaciones en los portales pueden sobre-representar ciertos barrios o rangos de precio. El sistema recomendaría lo que hay en el dataset, no necesariamente lo que está disponible en el mercado real.
 
-Cada participante deberá resolver una búsqueda de alquiler utilizando:
+**Interpersonal / privacidad:** las preferencias del usuario (presupuesto, zona deseada, composición del hogar, mascotas) son datos personales. En la PoC no se persisten entre sesiones; si el producto evoluciona a perfiles guardados, se requiere consentimiento explícito.
 
-**A. Baseline:** portal inmobiliario + filtros tradicionales.  
-**B. HomeMatch:** conversación + recomendaciones personalizadas.
+**Sesgo de confirmación en el feedback:** si el sistema aprende solo de lo que el usuario aprueba, puede quedarse en un óptimo local y dejar de mostrar opciones que el usuario no consideró pero podrían interesarle.
 
-Se compararán:
+**Para qué no debería usarse:** el sistema no debe inferir características del arrendatario (capacidad de pago, composición familiar, origen) ni usarse para discriminar en la oferta disponible.
 
-- relevancia del Top 5;
-- cantidad de publicaciones revisadas;
-- tiempo de búsqueda;
-- satisfacción.
+**Regulación:** el dominio de vivienda no está entre los de mayor riesgo regulatorio (crédito, empleo, salud), pero si el producto evoluciona a coordinar contactos con inmobiliarias o a comprometer visitas, entran en juego normas de protección al consumidor.
 
----
+### Evidencia
 
-## 14. Riesgos y limitaciones
+#### De confirmación
 
-### Scraping
-Los portales pueden modificar su estructura o limitar el acceso automatizado.
-Además, el scraping puede no estar permitido por los términos de uso de los portales.
+- Sesgos similares están documentados en sistemas de recomendación de propiedades en mercados de EEUU (housing recommendation bias), donde los sistemas refuerzan tendencias de segregación existentes en los datos.
 
-**Mitigación:** comenzar con un portal y ampliar solamente si el tiempo lo permite + verificar los términos de uso de cada portal antes de implementar scraping.
+#### De refutación
 
-### Calidad de datos
-Puede haber publicaciones incompletas, desactualizadas o duplicadas.
-
-**Mitigación:** normalización, validaciones y deduplicación básica.
-
-### Interpretación del LLM
-El modelo puede interpretar incorrectamente una preferencia.
-
-**Mitigación:** mostrar el perfil inferido y pedir confirmación ante cambios relevantes.
-
-### Calidad del ranking
-Un score alto no garantiza que la propiedad sea realmente atractiva para el usuario.
-
-**Mitigación:** validación con usuarios y comparación contra baseline.
-
-### Alcance
-El proyecto debe poder implementarse dentro de aproximadamente dentro del dictado de la materia
-
-**Mitigación:** priorizar el recomendador y la experiencia conversacional; multiportal, automatización de contactos y funcionalidades avanzadas quedan como evolución.
+- No se identificó regulación argentina específica que aplique a la PoC en su alcance actual (asistente de búsqueda, sin transacciones ni datos persistidos).
 
 ---
 
-## 15. MVP / alcance de la PoC
+## Bitácora de revisiones
 
-### Incluido
-- CABA.
-- Departamentos en alquiler.
-- Una fuente inmobiliaria como mínimo.
-- Scraping de publicaciones reales.
-- Interfaz conversacional.
-- Extracción de preferencias con LLM.
-- Hard filters.
-- Score estructurado.
-- Embeddings.
-- Ranking híbrido.
-- Top 5 explicado.
-- Feedback y reranking.
-- Evaluación contra baseline.
+*Una línea por revisión. Qué cambió y qué evidencia lo motivó.*
 
-### Fuera del MVP
-- Análisis de imágenes.
-- Negociación automática.
-- Reserva autónoma de visitas.
-- Aprendizaje colaborativo entre usuarios.
-- Integración obligatoria con todos los portales.
-- Entrenamiento de un LLM propio.
-
----
-
-## 16. Evolución posible
-
-Una vez validada la PoC:
-
-- incorporar múltiples portales;
-- detectar publicaciones duplicadas entre plataformas;
-- mejorar información de movilidad y contexto;
-- incorporar alertas de nuevas propiedades compatibles;
-- preparar contacto con inmobiliarias;
-- coordinar visitas con autorización del usuario;
-- aprender preferencias longitudinales;
-- incorporar información adicional sobre barrios.
-
----
-
-## Síntesis del Canvas
-
-| Bloque | HomeMatch AI |
-|---|---|
-| **Problema** | Buscar alquiler requiere revisar y comparar muchas publicaciones; los filtros tradicionales no representan bien preferencias subjetivas y trade-offs. |
-| **Usuario** | Personas que buscan alquilar departamentos en CABA. |
-| **Alternativas** | Portales tradicionales; RentIQ; AgonProp; Zillow AI Mode. |
-| **Hipótesis** | Comprender preferencias + ranking personalizado + feedback permitirá encontrar mejores candidatos revisando menos publicaciones. |
-| **Valor** | Mejores candidatos para visitar con menor esfuerzo de búsqueda. |
-| **Solución** | Asistente conversacional con recomendador híbrido y feedback iterativo. |
-| **Datos** | Listings reales, texto, ubicación/contexto y preferencias del usuario. |
-| **IA** | LLM + embeddings + scoring/ranking híbrido. |
-| **Output** | Top 5 explicado con cumplimiento de preferencias y trade-offs. |
-| **Humano–IA** | La IA recomienda y explica; el usuario confirma preferencias y toma la decisión. |
-| **Éxito** | Precision@5 + publicaciones revisadas hasta encontrar 3 candidatos + tiempo/satisfacción. |
-| **Validación** | 10 usuarios; comparación HomeMatch vs. búsqueda tradicional. |
-| **Riesgos** | Scraping, calidad de datos, errores del LLM, ranking y alcance. |
-| **MVP** | CABA + alquiler + ≥1 portal + conversación + ranking + feedback. |
+| Fecha | Sección | Qué cambió | Qué lo motivó |
+|---|---|---|---|
+| 2026-09-28 | Todas | Adaptación de propuesta-3 al formato canvas | Primera versión |
 
 ---
 
 ## Referencias
 
-- Infobae (14/01/2025), mercado de alquileres en CABA:  
-  https://www.infobae.com/economia/2025/01/14/crecio-200-la-oferta-de-alquileres-pero-tambien-la-demanda-cuanto-demora-cerrar-hoy-una-operacion-en-caba/
+[1] Infobae (14/01/2025). *Creció 200% la oferta de alquileres pero también la demanda: cuánto demora cerrar hoy una operación en CABA.*  
+https://www.infobae.com/economia/2025/01/14/crecio-200-la-oferta-de-alquileres-pero-tambien-la-demanda-cuanto-demora-cerrar-hoy-una-operacion-en-caba/
 
-- RentIQ — UC Berkeley School of Information:  
-  https://www.ischool.berkeley.edu/projects/2025/rentiq-your-smart-ai-guide-finding-right-home
+[2] UC Berkeley School of Information (2025). *RentIQ: Your Smart AI Guide to Finding the Right Home.*  
+https://www.ischool.berkeley.edu/projects/2025/rentiq-your-smart-ai-guide-finding-right-home
 
-- AgonProp:  
-  https://agonprop.com/
+[3] AgonProp.  
+https://agonprop.com/
 
-- Zillow AI Mode:  
-  https://www.zillow.com/news/zillow-debuts-ai-mode/
+[4] Zillow (2025). *Zillow Debuts AI Mode.*  
+https://www.zillow.com/news/zillow-debuts-ai-mode/
