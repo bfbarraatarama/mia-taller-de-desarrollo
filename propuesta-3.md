@@ -1,7 +1,6 @@
 # AI Opportunity Canvas — HomeMatch AI
 
-> **Equipo:** …  
-> **Integrantes:** …  
+> **Integrantes:** Luisa, Bruno, Matías, Felipe.  
 > **Caso:** HomeMatch AI — búsqueda de departamentos en alquiler en CABA  
 > **Versión:** 1 · **Fecha:** 2026-09-28
 
