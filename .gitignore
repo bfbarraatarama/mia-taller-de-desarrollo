@@ -49,3 +49,5 @@ clases/
 
 # Hito 2: fuentes crudas descargadas (se regeneran con hito-2/scripts/descargar_fuentes.py)
 hito-2/.cache/
+data/
+scrapper/
