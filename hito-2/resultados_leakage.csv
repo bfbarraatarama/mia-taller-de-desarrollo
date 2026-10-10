@@ -1,0 +1,6 @@
+id,busqueda,resultado
+L1,La definición,"32 de 79 columnas son anotación posterior a la reunión; 5 apuntan al audio, que es lo único que recibe el producto. No se le pasa al sistema ni la cantidad de hablantes ni los tiempos de habla"
+L2,El tiempo,Grabado en 2001–2005 y público hace más de 15 años. pyannote declara AMI y VoxConverse como datos de entrenamiento: 154 de 171 reuniones de AMI están en su parte de entrenamiento o ajuste y 16 en la de prueba. ICSI no figura. Quedan 91 reuniones con transcripción que pyannote no declara haber visto (16 de AMI y 75 de ICSI). Whisper no publica sus datos de entrenamiento
+L3,Los duplicados,Turnos de 8 palabras o más repetidos palabra por palabra en otra serie: 0 de 31174 en AMI y 2 de 40783 en ICSI. Filas duplicadas exactas: 0 (K1)
+L4,Los grupos,AMI: 171 reuniones en 46 series con las mismas personas; 17 de 190 hablantes están en más de una serie. La partición de pyannote no reparte series ni hablantes entre entrenamiento y prueba (0 de 16 repetidos). ICSI: 8 grupos; un mismo hablante está en 49 de 75 reuniones. Se parte por serie y por hablante
+L5,La generación,"72.5% de las horas de AMI son reuniones actuadas con el mismo guion. 5.2% del habla de ICSI es lectura de dígitos. En AMI los tiempos de las palabras salen de una alineación automática; en VoxConverse, de un sistema automático corregido a mano"

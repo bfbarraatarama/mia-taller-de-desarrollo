@@ -1,0 +1,144 @@
+{
+ "generado": "2026-10-10",
+ "por_fuente": {
+  "ami": {
+   "reuniones": 171
+  },
+  "icsi": {
+   "reuniones": 75
+  },
+  "voxconverse": {
+   "sesiones": 448
+  }
+ },
+ "archivos_crudos": {
+  "ami/ami_public_manual_1.6.2.zip": {
+   "bytes": 22887865,
+   "sha256": "b56e5babb2496b8795deeeda7e71178d7fbc9963f94276cf2a3f4b56ebbc9f9d"
+  },
+  "audio/extractos/Bed006.wav": {
+   "bytes": 960044,
+   "sha256": "752dd82b2b99a1b4bb43c173b1974343f90bd69b5450709cf67ec43d27b99ad5"
+  },
+  "audio/extractos/Bed015.wav": {
+   "bytes": 960044,
+   "sha256": "a624eb4fd2375754e86d416e3093a871e06da1e898fbd9c7dc856459ffa62341"
+  },
+  "audio/extractos/Bmr006.wav": {
+   "bytes": 960044,
+   "sha256": "15858fa5cc7ab122f4d8e25525ab3b18bf645d3666b321324405e36da2b1af56"
+  },
+  "audio/extractos/Bmr026.wav": {
+   "bytes": 960044,
+   "sha256": "a9e662017c8e73248e8d3a73823da2654ddf297e586346c8bcd93bc82234c707"
+  },
+  "audio/extractos/Bmr030.wav": {
+   "bytes": 960044,
+   "sha256": "4fa0c88be975145170821354a874a91cbef348fa3fb8280d033e58afede8c470"
+  },
+  "audio/extractos/Bro010.wav": {
+   "bytes": 960044,
+   "sha256": "d0fbfb42f70e937bc5a96bfdb61efb08ebcc93854576e701c8aca77f2062cad2"
+  },
+  "audio/extractos/Bro018.wav": {
+   "bytes": 960044,
+   "sha256": "c0fdecece86b72f8cc333e2f378536fe10785960ea7f44b6a4b2b0b70f4d777d"
+  },
+  "audio/extractos/Bro025.wav": {
+   "bytes": 960044,
+   "sha256": "1651c349ae815bb84384828c5a60ebc4de0908f8e220b7aaffcc7adbe1f631d3"
+  },
+  "audio/extractos/EN2001b.wav": {
+   "bytes": 960044,
+   "sha256": "b9fd6ec05d27b72b6dddd07fae8e5da8ca3220f467d5ed490333e9efb1dc9caf"
+  },
+  "audio/extractos/EN2009d.wav": {
+   "bytes": 960044,
+   "sha256": "925ba6af4cc6c0e7b94fc41ad24f0c5e735e9169e86bd3f74c0638870f1a9915"
+  },
+  "audio/extractos/ES2005c.wav": {
+   "bytes": 960044,
+   "sha256": "0a928f04fad0f9364d6e66dbf078e6c82c0871fc589f2bfb3eda98e188d08caa"
+  },
+  "audio/extractos/ES2007c.wav": {
+   "bytes": 960044,
+   "sha256": "5433c059a43ebb3102ab520d2fba39136070b1cf3ca6145ec4436beeb2690572"
+  },
+  "audio/extractos/ES2012c.wav": {
+   "bytes": 960044,
+   "sha256": "40abc924dc63f75aafb2400bb99fd66741e22eb9ff2450973a18db53a06286ac"
+  },
+  "audio/extractos/ES2014d.wav": {
+   "bytes": 960044,
+   "sha256": "72bdd8c5502c0207b2aa2da5064eb59e263b5e2a42bb137ba8062bda686b0a2e"
+  },
+  "audio/extractos/IB4003.wav": {
+   "bytes": 960044,
+   "sha256": "accb2f41949daed28f2811398dbb495cf7d4a60843b8bfe7a1a95a62cb6352af"
+  },
+  "audio/extractos/IB4004.wav": {
+   "bytes": 960044,
+   "sha256": "574cfc1ee33d1003768cd84cee9677021dea0a3b6d9e869636d9fa6f6cc2396a"
+  },
+  "audio/extractos/IS1002d.wav": {
+   "bytes": 960044,
+   "sha256": "26f4332cdb5ce48536ce29003114ef78692b4039943f617d1b9b318772f07f88"
+  },
+  "audio/extractos/IS1003a.wav": {
+   "bytes": 960044,
+   "sha256": "bf2db70d2787a12afb32fc1fc105cc744c45066c427e94a1dd372a83fc31d38e"
+  },
+  "audio/extractos/IS1004b.wav": {
+   "bytes": 960044,
+   "sha256": "c985948e59c0ec92d36e097426980ca1f2072eb9cf0f3f1dcaec57ea427e08bd"
+  },
+  "audio/extractos/IS1006a.wav": {
+   "bytes": 960044,
+   "sha256": "3617c544b4957820b3eef99931ab6b501c9c3d75784c96b24c4472e44cbf069a"
+  },
+  "audio/extractos/TS3005c.wav": {
+   "bytes": 960044,
+   "sha256": "fccd0f30971f6818e61a1245794fd13f6ac943fad23d6f8e6bdd55dfcd2a5d94"
+  },
+  "audio/extractos/TS3008a.wav": {
+   "bytes": 960044,
+   "sha256": "57c3f377fec5733cabde43250ca74f23f152fb36b09fee9f04a00653c3223e16"
+  },
+  "audio/extractos/TS3010a.wav": {
+   "bytes": 960044,
+   "sha256": "2b0d685ce780b8c1cf544ff0073ba7f94ad0eb9b66c5952252fc25165d7b7d00"
+  },
+  "audio/extractos/TS3012c.wav": {
+   "bytes": 960044,
+   "sha256": "b326950401b70f02777a249dad756973fb2df631e954f1b2ce31f268b82a5523"
+  },
+  "audio/extractos/plan.json": {
+   "bytes": 2123,
+   "sha256": "2c588dc013025f944cf464d9555de82f4fcad5dc6b04fbf457e41291554d6ba8"
+  },
+  "audio/indice.json": {
+   "bytes": 72012,
+   "sha256": "22ca1220996b45df79443992d6a722880237f9566bd63fcf129e2d5fff47e0da"
+  },
+  "icsi/ICSI_plus_NXT.zip": {
+   "bytes": 55491177,
+   "sha256": "e4ab79a8b638bdd29121d744c452c680fe23791e406ffe5125e2f5b118923439"
+  },
+  "pyannote_ami/dev.meetings.txt": {
+   "bytes": 138,
+   "sha256": "f9a75648195c1731b9055dc3df8eb5cea261e08e7d9125a1976c1a45480a2aa9"
+  },
+  "pyannote_ami/test.meetings.txt": {
+   "bytes": 128,
+   "sha256": "30193ba8eb5c4a08166221d82f6eedddf57222f25d6aa7b2c20b9ef447e071c5"
+  },
+  "pyannote_ami/train.meetings.txt": {
+   "bytes": 1078,
+   "sha256": "752c2a2b5af083c3fc468d524269b6481a4610572b81df44026a0a94b05e2f56"
+  },
+  "voxconverse/voxconverse-master.zip": {
+   "bytes": 324462,
+   "sha256": "4a424c40aa78f0b2c1160b1ff9392bed6c5661c6a2737eef9dd5d757b4e08a62"
+  }
+ }
+}

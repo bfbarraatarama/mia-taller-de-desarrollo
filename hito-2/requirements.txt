@@ -1,0 +1,11 @@
+# Entorno del Hito 2 (notebook de EDA y armado de la muestra)
+#   uv venv .venv && uv pip install -r hito-2/requirements.txt
+pandas>=2.2
+pyarrow>=17
+numpy>=2
+matplotlib>=3.9
+soundfile>=0.12
+lxml>=5
+jupyter>=1.1
+nbconvert>=7.16
+ipykernel>=6.29

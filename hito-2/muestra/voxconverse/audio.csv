@@ -1,0 +1,3 @@
+particion,audio_url,audio_disponible,audio_bytes
+dev,https://www.robots.ox.ac.uk/~vgg/data/voxconverse/data/voxconverse_dev_wav.zip,True,1988647478
+test,https://www.robots.ox.ac.uk/~vgg/data/voxconverse/data/voxconverse_test_wav.zip,True,4272764397
