@@ -150,7 +150,7 @@ Detalle en el [mapa de fuentes](hito-2/1-mapa-de-fuentes.md).
 | **Métrica de negocio** | Tiempo desde que termina la reunión hasta que la minuta está lista para enviar |
 | **Umbral** | ≤ 10 min de revisión en ≥ 70% de las reuniones de 1 hora; ≤ 30 min de procesamiento por hora, sin placa de video |
 | **Cómo se mide** | Línea de base: cronometrar la minuta manual 2 semanas. Después, lo mismo con el prototipo |
-| **Proxy técnico** | Error por palabra (transcripción), error de diarización (hablantes) y error combinado, sobre 91 reuniones de AMI e ICSI |
+| **Proxy técnico** | Error por palabra (transcripción), error de diarización (hablantes), error en la minuta (LLM as a judge?) y error combinado, sobre 91 reuniones de AMI e ICSI |
 | **Qué se registra** | Correcciones del usuario y tiempo de revisión, en local |
 
 ### Evidencia

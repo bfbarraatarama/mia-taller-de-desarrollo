@@ -48,8 +48,13 @@ Exposición = probabilidad × impacto, en horas de trabajo.
 1. Inglés; transcribir y separar hablantes.
 2. Métricas: error por palabra, error de diarización y el error combinado
    (palabra + hablante), sobre las 91 reuniones.
-3. Los resultados valen para reuniones presenciales con micrófono cercano.
+3. La minuta se evalúa solo con AMI (142 reuniones, partidas por serie) con
+   verificaciones determinísticas, cobertura contra la referencia con
+   embeddings y un LLM como juez calibrado contra anotación humana. El LLM
+   generador se define después. Se planea validar las citas (posiblemente por
+   coincidencia exacta de texto); aún no.
+4. Los resultados valen para reuniones presenciales con micrófono cercano.
    La videollamada se mide aparte, con 5 reuniones propias.
 
-**Qué quedó afuera:** castellano; la etapa de minuta; VoxConverse como
+**Qué quedó afuera:** castellano; VoxConverse como
 evaluación principal (pyannote entrenó con él y no tiene transcripción).

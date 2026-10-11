@@ -14,9 +14,11 @@ Qué entra y qué queda afuera, por fuente:
   ami/          Las 171 reuniones: quién habla, cuándo y qué dice (turnos con
                 hablante, tiempos y texto), los datos de los participantes y
                 un índice del audio de cada reunión. De audio, 16 extractos de
-                30 s. Afuera: el audio completo, el video y las capas de
-                anotación que no hacen a transcribir ni a separar hablantes
-                (resúmenes, gestos, temas, etc.).
+                30 s. Además, la minuta de referencia (resumen, acciones,
+                decisiones y problemas) de las 142 reuniones que la tienen.
+                Afuera: el audio completo, el video y las demás capas de
+                anotación (gestos, temas, actos de diálogo, enlaces de
+                evidencia de la minuta, etc.).
   icsi/         Ídem, 75 reuniones y 8 extractos.
   voxconverse/  Quién habla cuándo en las 448 sesiones (RTTM). No tiene
                 transcripción. Afuera: el audio.
@@ -159,6 +161,25 @@ def extractos(corpus: str, plan: list[dict]) -> pd.DataFrame:
     return pd.DataFrame(filas)
 
 
+# Secciones de la minuta abstractiva de AMI y el nombre que reciben en la muestra.
+MINUTA_TIPOS = {"abstract": "resumen", "actions": "accion", "decisions": "decision", "problems": "problema"}
+
+
+def minutas_ami(z: zipfile.ZipFile) -> pd.DataFrame:
+    """Una fila por frase de la minuta de referencia: reunión, sección, orden y texto."""
+    filas = []
+    for n in sorted(x for x in z.namelist() if x.startswith("abstractive/") and x.endswith(".abssumm.xml")):
+        reunion = Path(n).name.split(".")[0]
+        orden = {t: 0 for t in MINUTA_TIPOS.values()}
+        for seccion in xml(z, n):
+            tipo = MINUTA_TIPOS.get(seccion.tag)
+            for frase in seccion.iter("sentence") if tipo else ():
+                orden[tipo] += 1
+                filas.append({"reunion": reunion, "tipo": tipo, "orden": orden[tipo],
+                              "item_id": frase.get(NITE + "id"), "texto": " ".join((frase.text or "").split())})
+    return pd.DataFrame(filas)
+
+
 def armar_ami(indice: dict, plan: list[dict]) -> dict:
     print("[ami]")
     z = zipfile.ZipFile(CACHE / "ami" / "ami_public_manual_1.6.2.zip")
@@ -207,11 +228,16 @@ def armar_ami(indice: dict, plan: list[dict]) -> dict:
                            for (r, _), p in indice_palabras.items()]).groupby("reunion").sum().reset_index()
     reuniones = columnas_de_audio(reuniones.merge(conteo, on="reunion", how="left"), indice)
 
+    minutas = minutas_ami(z)
+    reuniones["tiene_minuta"] = reuniones["reunion"].isin(minutas["reunion"])
+
     guardar(reuniones, OUT / "ami" / "reuniones.csv")
     guardar(participantes, OUT / "ami" / "participantes.csv")
     guardar(turnos, OUT / "ami" / "turnos.parquet")
+    guardar(minutas, OUT / "ami" / "minutas.parquet")
     guardar(extractos("ami", plan), OUT / "ami" / "extractos.csv")
-    return {"reuniones": len(reuniones)}
+    return {"reuniones": len(reuniones), "reuniones_con_minuta": int(reuniones["tiene_minuta"].sum()),
+            "items_de_minuta": len(minutas)}
 
 
 def armar_icsi(indice: dict, plan: list[dict]) -> dict:

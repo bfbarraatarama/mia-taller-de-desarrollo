@@ -1,11 +1,17 @@
 # Niveles que el producto necesita
 
-**Revisión 2 · 2026-10-10.** Alcance: reuniones en inglés; transcribir y separar hablantes.
+**Revisión 3 · 2026-10-11.** Alcance: reuniones en inglés; transcribir, separar hablantes y generar la minuta (esta última, solo con AMI).
 
-Los umbrales son los de la revisión 1, escrita antes de descargar datos. La
-revisión 2 solo cambia el idioma, quita los niveles de la minuta y reescribe
-V5 y R6 para el alcance nuevo, sin tocar ningún umbral. Se escribió antes de
-abrir ningún audio.
+Los umbrales V, C, K, G, R y F son los de la revisión 2, sin cambios. La
+revisión 3 agrega los niveles M1 a M3 de la minuta. Esos tres se escribieron
+después de inspeccionar qué anotaciones de resumen trae AMI (cuántas
+reuniones, no su contenido) y antes de correr ninguna celda que los mida.
+M1 se cumple de antemano por esa inspección y M2 probablemente no; se
+declaran igual.
+
+La revisión 2 (2026-10-10) había cambiado el idioma, quitado los niveles de la
+minuta y reescrito V5 y R6 para el alcance de entonces, sin tocar ningún
+umbral. Se escribió antes de abrir ningún audio.
 
 | Id | Propiedad | Nivel | De dónde sale |
 |---|---|---|---|
@@ -29,3 +35,6 @@ abrir ningún audio.
 | R6 | Representatividad · reuniones reales | ≥ 30% de las horas de reuniones no actuadas | Una reunión actuada no se parece del todo a una real |
 | F1 | Confiabilidad · transcripción | 100% hecha o validada por personas, con procedimiento documentado | No se evalúa un modelo contra otro modelo |
 | F3 | Confiabilidad · error de la referencia | ≤ 2% de palabras en desacuerdo entre dos personas del equipo que transcriben por separado la misma muestra chica | Por debajo del error que queremos medir en el sistema |
+| M1 | Volumen · minuta de referencia | ≥ 10 reuniones con resumen, decisiones y acciones de referencia | Para comparar la minuta generada contra una referencia en varias reuniones y series |
+| M2 | Representatividad · minuta de reuniones reales | ≥ 30% de las horas de reuniones con minuta de referencia son de reuniones no actuadas | Una reunión actuada no se parece del todo a una real (igual criterio que R6) |
+| M3 | Confiabilidad · juez de la minuta | El juez (LLM) coincide con la anotación humana en ≥ 80% de los ítems de una muestra etiquetada por el equipo (κ de Cohen ≥ 0,6) | Un juez sin calibrar no mide nada |

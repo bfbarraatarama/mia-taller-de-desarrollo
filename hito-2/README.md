@@ -42,7 +42,8 @@ hito-2/
 ├── notebooks/eda_viabilidad.ipynb
 ├── scripts/descargar_fuentes.py, armar_muestra.py
 └── muestra/                                     18 MB
-    ├── ami/          171 reuniones: turnos, participantes, índice de audio, 16 extractos
+    ├── ami/          171 reuniones: turnos, participantes, índice de audio, 16 extractos;
+    │                 minutas de referencia de 142 (resumen, decisiones, acciones, problemas)
     ├── icsi/         75 reuniones: ídem, 8 extractos
     └── voxconverse/  448 sesiones: quién habla cuándo
 ```

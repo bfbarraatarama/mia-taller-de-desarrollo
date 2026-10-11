@@ -4,7 +4,7 @@
 
 ## 1. Lo esencial
 
-20 niveles: 14 se cumplen, 3 no, 2 en parte, 1 pendiente.
+23 niveles: 15 se cumplen, 4 no, 2 en parte, 2 pendientes.
 
 | Propiedad | Número |
 |---|---|

@@ -45,5 +45,6 @@ etapas): OpenSLR 61, CORdeBA, Humyn LATAM, Common Voice.
 |---|---|---|---|
 | 1 | Transcripción, hablantes y tiempos de las 171 reuniones; índice del audio de las 171; 16 extractos de 30 s | Sí | Las 171 tienen audio. La duración que declaran los metadatos no coincide con el audio en el 20% de las reuniones. 40 de 190 hablantes no tienen datos demográficos |
 | 2 | Ídem para las 75 reuniones; 8 extractos | Sí | Las 75 tienen audio. El 11,5% de las palabras no tiene tiempo |
+| 1b | Minutas de referencia de AMI (resumen, decisiones, acciones, problemas) | Sí | Cubren 142 de 171 reuniones; las EN e IN no tienen. Un solo anotador por reunión |
 | 3 | Tiempos de las 448 sesiones | Sí | pyannote lo usa para entrenar: no sirve como evaluación principal |
 | 4 | — | No | — |

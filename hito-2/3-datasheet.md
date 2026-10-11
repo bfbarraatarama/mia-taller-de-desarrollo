@@ -38,6 +38,7 @@ Respuesta:
 | `ami/reuniones.csv` | Una reunión, con el índice de su audio | 171 |
 | `ami/participantes.csv` | Una persona | 189 |
 | `ami/turnos.parquet` | Un turno: hablante, inicio, fin, texto | 93.637 |
+| `ami/minutas.parquet` | Un ítem de la minuta de referencia (resumen, decisión, acción o problema) | 2.649 |
 | `ami/extractos/` | 30 s de audio de una reunión | 16 |
 | `icsi/reuniones.csv` | Una reunión, con el índice de su audio | 75 |
 | `icsi/hablantes.csv` | Una persona | 61 |
@@ -111,7 +112,10 @@ con licencia abierta. VoxConverse: videos públicos de YouTube; no sabemos.
 Respuesta: Ver EDA, L1 a L5. pyannote entrenó con AMI y VoxConverse: solo 91
 reuniones sirven para evaluarlo. Las mismas personas se repiten entre
 reuniones: se parte por serie. El 72,5% de las horas de AMI son reuniones
-actuadas. Todo es presencial y de 2001–2005.
+actuadas. Todo es presencial y de 2001–2005. Las minutas de referencia
+cubren 142 de las 171 reuniones de AMI (sin EN ni IN), tienen un solo
+anotador por reunión y casi todas son del escenario del control remoto (solo
+3,5% de las horas son de reuniones no actuadas).
 
 **15. ¿Para qué tareas no debería usarse?**
 

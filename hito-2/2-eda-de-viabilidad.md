@@ -9,8 +9,8 @@
 **Alcance:** reuniones en inglés; transcribir y separar hablantes. Los datos
 son el conjunto de evaluación: no se entrena ningún modelo.
 
-**Resultado:** de 20 niveles, 14 se cumplen, 3 no, 2 en parte y 1 está
-pendiente. "Celda" es el identificador de la celda del notebook.
+**Resultado:** de 23 niveles, 15 se cumplen, 4 no, 2 en parte y 2 están
+pendientes. "Celda" es el identificador de la celda del notebook.
 
 ---
 
@@ -23,6 +23,7 @@ Fijados en [`niveles-a-priori.md`](niveles-a-priori.md).
 | Volumen | **V1** ≥ 3 h y ≥ 30 hablantes transcriptos. **V2** ≥ 1 h de habla espontánea. **V3** ≥ 20 sesiones y ≥ 3 h con turnos con tiempos. **V5** ≥ 10 reuniones de ≥ 20 min con audio, transcripción y hablantes | Medir el error por palabra con ±1 punto y el error de diarización promediando varias sesiones |
 | Completitud | **C1** transcripción en ≥ 99% de los audios. **C2** hablante en ≥ 95% de los turnos. **C5** género, edad y acento en ≥ 70% de los hablantes de una fuente | Canvas §3 y §7 |
 | Corrección | **K1** duplicados ≤ 1%. **K2** cero turnos con fin ≤ inicio. **K3** ≥ 99% de los audios legibles y con la duración declarada. **K4** ≤ 1% de textos con caracteres ajenos | Las métricas comparan texto y tiempos |
+| Minuta de referencia (solo AMI) | **M1** ≥ 10 reuniones con resumen, decisiones y acciones. **M2** ≥ 30% de las horas con minuta son de reuniones no actuadas. **M3** el juez (LLM) coincide con la anotación humana en ≥ 80% de los ítems de una muestra (κ ≥ 0,6) | Evaluar la minuta que genera el sistema contra una referencia. M1 a M3 se escribieron tras ver la cobertura de AMI, antes de medir |
 | Vigencia | **G1** ≥ 80% de las horas de 2015 en adelante. **G2** al menos una fuente de videollamada | El producto graba reuniones virtuales |
 | Representatividad | **R1** ningún género bajo el 30%. **R2** ≥ 50% del habla de personas de 30 o más. **R3** ≥ 50% espontáneo. **R4** ≥ 50% de las sesiones con 3 a 8 hablantes. **R6** ≥ 30% de las horas de reuniones reales | Canvas §1: profesionales en reuniones de trabajo |
 | Confiabilidad | **F1** transcripción hecha por personas. **F3** ≤ 2% de desacuerdo entre dos transcriptores del equipo | El error de la referencia tiene que ser menor que el que se mide |
@@ -42,6 +43,9 @@ Fijados en [`niveles-a-priori.md`](niveles-a-priori.md).
 | K2 | Medido | 2 turnos con fin ≤ inicio (AMI); 6 terminan después del audio | `K2` | — | **No**: se descartan por regla |
 | K3 | Medido | Audio disponible: 246 de 246. Cubre todos los turnos en 99,4% (AMI) y 98,7% (ICSI). 24 de 24 extractos coinciden con el índice. Los metadatos de AMI declaran bien la duración solo en el 80,1% | `K3` | — | **Parcial**: se usa la duración del audio |
 | K4 | Medido | Caracteres ajenos: 0,0% (AMI) y 0,4% (ICSI) de los turnos | `K4` | — | Sí |
+| M1 | Medido | 131 reuniones con resumen, decisiones y acciones, en 37 series (142 de 171 con alguna minuta; 2.649 ítems). Las EN y las IN no tienen minuta | `M1` | — | Sí |
+| M2 | Medido | 3,5% de las horas con minuta son de reuniones no actuadas (2,6 h de 75,1 h); solo las 4 IB. El resto es el escenario del control remoto | `M2` | — | **No** |
+| M3 | No medido | Pendiente: el equipo etiqueta una muestra de ítems y se compara contra el juez | `M3` | — | Pendiente |
 | G1 | Medido | 0% posterior a 2015: AMI es de 2004–2005 e ICSI de 2001–2002 | `G1` | — | **No** |
 | G2 | Estimado | 0 de 3 fuentes son de videollamada | `G2` | Documentación de las fuentes | **No** |
 | R1 | Medido | Mujeres: 37,2% del habla en AMI; 21,1% en ICSI | `R1` | — | **Parcial**: no ICSI |
