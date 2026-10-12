@@ -4,7 +4,7 @@
 
 **Equipo:** Luisa, Bruno, Matías, Felipe.
 
-**Muestra:** [`hito-2/muestra/`](muestra/) · **Fecha:** 2026-10-10
+**Muestra:** [`hito-2/muestra/`](muestra/) · **Fecha:** 2026-10-12
 
 Las mediciones están en el [EDA](2-eda-de-viabilidad.md).
 
@@ -14,18 +14,20 @@ Las mediciones están en el [EDA](2-eda-de-viabilidad.md).
 
 **1. ¿Para qué se creó el dataset?**
 
-Respuesta: La muestra, para decidir si la transcripción y la separación de
-hablantes se pueden evaluar con datos públicos en inglés. Las fuentes: AMI,
-para investigar la comprensión automática de reuniones; ICSI, para el
-reconocimiento de voz en reuniones; VoxConverse, para medir separación de
-hablantes en videos reales.
+Respuesta: La muestra, para decidir si cada módulo del producto (transcribir,
+separar hablantes, escribir la minuta) se puede evaluar con datos públicos.
+Las fuentes: OpenSLR 61, para sintetizar voz en castellano de Latinoamérica;
+CORdeBA, para estudiar el castellano bonaerense; Humyn LATAM, muestra
+comercial para reconocimiento de voz; AMI e ICSI, para investigar reuniones;
+VoxConverse, para medir separación de hablantes.
 
 **2. ¿Quién lo creó, y por encargo de quién?**
 
 Respuesta: La muestra, el equipo, con [`scripts/armar_muestra.py`](scripts/armar_muestra.py).
-AMI: consorcio AMI (la distribuye la Universidad de Edimburgo). ICSI:
+OpenSLR 61: Google. CORdeBA: Universidad Nacional de La Plata. Humyn LATAM:
+Humyn Labs. AMI: consorcio AMI (Universidad de Edimburgo). ICSI:
 International Computer Science Institute, Berkeley. VoxConverse: Universidad
-de Oxford. Quién financió cada una: no sabemos.
+de Oxford. Quién financió AMI, ICSI y VoxConverse: no sabemos.
 
 ## 2. Composición
 
@@ -33,92 +35,99 @@ de Oxford. Quién financió cada una: no sabemos.
 
 Respuesta:
 
-| Tabla | Cada fila es | Filas |
-|---|---|---|
-| `ami/reuniones.csv` | Una reunión, con el índice de su audio | 171 |
-| `ami/participantes.csv` | Una persona | 189 |
-| `ami/turnos.parquet` | Un turno: hablante, inicio, fin, texto | 93.637 |
-| `ami/minutas.parquet` | Un ítem de la minuta de referencia (resumen, decisión, acción o problema) | 2.649 |
-| `ami/extractos/` | 30 s de audio de una reunión | 16 |
-| `icsi/reuniones.csv` | Una reunión, con el índice de su audio | 75 |
-| `icsi/hablantes.csv` | Una persona | 61 |
-| `icsi/turnos.parquet` | Un turno | 129.106 |
-| `icsi/extractos/` | 30 s de audio de una reunión | 8 |
-| `voxconverse/rttm.parquet` | Un tramo en que habla una persona | 27.747 |
+| Módulo | Tabla | Cada fila es | Filas |
+|---|---|---|---|
+| Transcripción | `slr61/transcripciones.csv` | Un clip leído, con su texto | 5.739 |
+| | `slr61/manifiesto_audio.csv` | Un audio de la fuente: duración, frecuencia, pico | 5.739 |
+| | `cordeba/grabaciones.csv` | Una grabación | 24 |
+| | `cordeba/turnos.parquet` | Un turno: hablante y texto, sin tiempos | 5.187 |
+| | `humyn/grabaciones.csv` | Una grabación | 28 |
+| | `humyn/turnos.parquet` | Un turno en castellano: hablante, inicio, fin, texto | 445 |
+| Hablantes | `ami/reuniones.csv`, `icsi/reuniones.csv` | Una reunión, con el índice de su audio | 171 y 75 |
+| | `ami/participantes.csv`, `icsi/hablantes.csv` | Una persona | 189 y 61 |
+| | `ami/turnos.parquet`, `icsi/turnos.parquet` | Un turno: hablante, inicio, fin, texto | 93.637 y 129.106 |
+| | `ami/extractos_energia.parquet`, `icsi/extractos_energia.parquet` | La energía de 20 ms de audio de un extracto de 30 s | 24.000 y 12.000 |
+| | `voxconverse/rttm.parquet` | Un tramo en que habla una persona | 27.747 |
+| Minuta | `ami/minutas.parquet` | Un ítem de la minuta de referencia: resumen, decisión, acción o problema | 2.649 |
+| | `ami/evidencias.parquet` | Un fragmento de la transcripción que respalda un ítem | 22.100 |
 
 **4. ¿Es todo lo que existe o una muestra?**
 
-Respuesta: Transcripción, hablantes, tiempos e índice de audio: todo lo que
-trae cada fuente. Audio: una muestra, 24 extractos de 30 s (12 minutos de
-171,6 horas).
+Respuesta: Texto, hablantes, tiempos, minutas e índices de audio: todo lo que
+trae cada fuente. Audio: ninguno. De 24 extractos de AMI e ICSI se guarda
+solo la energía por cuadro.
 
 **5. Si es una muestra, ¿de qué, y es representativa?**
 
-Respuesta: Los 24 extractos se eligieron por grupo de reuniones (AMI: 4 ES,
-4 IS, 4 TS, 2 EN, 2 IB; ICSI: 3 Bmr, 3 Bro, 2 Bed), con semilla fija. Cubren
-todos los sitios de grabación. No son proporcionales a las horas de cada
-grupo.
+Respuesta: Los 24 extractos de los que se guarda la energía se eligieron por
+grupo de reuniones (AMI: 4 ES, 4 IS, 4 TS, 2 EN, 2 IB; ICSI: 3 Bmr, 3 Bro,
+2 Bed); no son proporcionales a las horas.
 
 **6. ¿Falta información?**
 
-Respuesta: Ver EDA, C1 a C5. El 11,5% de las palabras de ICSI no tiene
-tiempo. 40 de los 190 hablantes de AMI no tienen datos demográficos.
-VoxConverse no tiene transcripción.
+Respuesta: Ver EDA, C1, C2, C4 y C5. En Humyn el texto cubre el 71,4% del
+audio. CORdeBA no tiene tiempos y 3 de sus 24 transcripciones no separan
+hablantes. 29 de las 171 reuniones de AMI no tienen minuta. Ninguna fuente en
+castellano trae la edad.
 
 **7. ¿Hay errores, ruido o duplicados?**
 
-Respuesta: Ver EDA, K1 a K4. Cero duplicados. 2 turnos de duración cero. La
-duración de los metadatos de AMI no coincide con el audio en el 20% de las
-reuniones. Errores dentro de las transcripciones: no sabemos (EDA, F3).
+Respuesta: Ver EDA, K1 a K4. 78 clips de OpenSLR 61 repiten hablante y
+oración. 12 turnos de duración cero. 1 archivo de CORdeBA no es audio. 47
+ítems de las minutas son el marcador `*NA*`. Errores dentro de las
+transcripciones: no sabemos (EDA, F3).
 
 **8. ¿Depende de recursos externos, con licencias o costos?**
 
-Respuesta: Las tres fuentes son CC BY 4.0 y gratuitas. El audio completo
-(26,1 GB) está en servidores de las universidades de Edimburgo y Oxford.
-Atribución en [`muestra/LICENCIAS.md`](muestra/LICENCIAS.md).
+Respuesta: Sin costo. OpenSLR 61: CC BY-SA 4.0. CORdeBA: CC BY-NC-SA 4.0
+(no comercial). Humyn, AMI, ICSI y VoxConverse: CC BY 4.0. El audio completo
+está en los servidores de cada fuente. Atribución en
+[`muestra/LICENCIAS.md`](muestra/LICENCIAS.md).
 
 **9. Si hay personas, ¿se puede identificar a alguien, directa o indirectamente?**
 
-Respuesta: Indirectamente, sí: por la voz (24 extractos), por nombres de
-pila dichos en las reuniones y por los datos de cada participante (sexo,
-edad, lengua nativa), que están bajo un código.
+Respuesta: Indirectamente, sí: por nombres de pila
+dichos en las conversaciones y por los datos de cada participante de AMI e
+ICSI (sexo, edad, lengua nativa), que están bajo un código.
 
 **10. ¿Hay datos sensibles?**
 
-Respuesta: La voz. No encontramos otros; no se leyeron las transcripciones
-completas.
+Respuesta: Opiniones políticas en las dos grabaciones argentinas de
+Humyn. Conversaciones privadas en CORdeBA; no se leyeron completas.
 
 ## 3. Recolección
 
 **11. ¿Cómo se consiguió cada dato, y en qué período?**
 
-Respuesta: Descarga del 10/10/2026 con [`scripts/descargar_fuentes.py`](scripts/descargar_fuentes.py).
-Grabado en 2004–2005 (AMI) y 2001–2002 (ICSI). VoxConverse: no sabemos.
+Respuesta: Descarga del 10 y 12/10/2026 con [`scripts/descargar_fuentes.py`](scripts/descargar_fuentes.py).
+Grabado en 2018–2019 (OpenSLR 61, según su ficha), 2014–2019 (CORdeBA, según
+su ficha), 2004–2005 (AMI) y 2001–2002 (ICSI). Humyn y VoxConverse: no
+sabemos.
 
 **12. Si es una muestra, ¿con qué criterio se eligió?**
 
-Respuesta: Extractos al azar con semilla 20261010, por grupo de reuniones;
-cada uno empieza entre el 20% y el 80% de la reunión.
+Respuesta: Al azar con semilla 20261010: un extracto de 30 s por reunión
+elegida en AMI e ICSI, entre el 20% y el 80% de la reunión.
 
 **13. Si hay personas, ¿sabían que se recolectaban sus datos, y lo consintieron?**
 
-Respuesta: AMI e ICSI: no figura en los archivos descargados; se publican
-con licencia abierta. VoxConverse: videos públicos de YouTube; no sabemos.
+Respuesta: OpenSLR 61: voluntarios. CORdeBA: grabado "con autorización de los
+participantes" (ficha). AMI, ICSI y Humyn: no figura en los archivos
+descargados. VoxConverse: videos públicos de YouTube; no sabemos.
 
 ## 4. Usos
 
 **14. ¿Hay algo en cómo se armó que afecte sus usos?**
 
-Respuesta: Ver EDA, L1 a L5. pyannote entrenó con AMI y VoxConverse: solo 91
-reuniones sirven para evaluarlo. Las mismas personas se repiten entre
-reuniones: se parte por serie. El 72,5% de las horas de AMI son reuniones
-actuadas. Todo es presencial y de 2001–2005. Las minutas de referencia
-cubren 142 de las 171 reuniones de AMI (sin EN ni IN), tienen un solo
-anotador por reunión y casi todas son del escenario del control remoto (solo
-3,5% de las horas son de reuniones no actuadas).
+Respuesta: Ver EDA, L1 a L5. No sirve para evaluar el producto completo:
+ninguna reunión tiene castellano, hablantes y minuta a la vez. OpenSLR 61 es
+lectura, con 44 hablantes para 5.739 clips: se parte por hablante. pyannote
+entrenó con AMI y VoxConverse: solo 91 reuniones sirven para evaluarlo. Las
+minutas son en inglés y el 97% son de reuniones actuadas con el mismo guion:
+se parte por serie.
 
 **15. ¿Para qué tareas no debería usarse?**
 
-Respuesta: Identificar personas por la voz. Sacar conclusiones sobre
-videollamadas o sobre otros idiomas. Entrenar y evaluar con las mismas
-reuniones.
+Respuesta: Identificar personas. Uso comercial, mientras incluya
+CORdeBA. Sacar conclusiones sobre reuniones reales en castellano. Entrenar y
+evaluar con las mismas personas o series.

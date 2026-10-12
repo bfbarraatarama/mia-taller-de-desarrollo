@@ -1,62 +1,59 @@
 # Hito 2 en una página
 
-**Equipo:** Luisa, Bruno, Matías, Felipe · **Alcance:** reuniones en inglés; transcribir y separar hablantes
+**Equipo:** Luisa, Bruno, Matías, Felipe · **Alcance:** producto en castellano, evaluado por módulo
 
 ## 1. Qué hicimos y cómo
 
-El objetivo del hito fue responder una pregunta: ¿existen datos públicos que permitan evaluar un sistema que transcribe reuniones y separa hablantes?
+El objetivo del hito fue responder una pregunta: ¿existen datos públicos que permitan evaluar un sistema que transcribe reuniones, separa hablantes y escribe la minuta, en castellano?
 
 **Paso 1 — Buscar y obtener las fuentes** · [1-mapa-de-fuentes.md](1-mapa-de-fuentes.md)
-Listamos todas las fuentes candidatas, evaluamos disponibilidad, licencia y volumen, y descartamos las que no cubrían el alcance (castellano, portugués, sin relación con las dos etapas). Quedaron tres fuentes públicas: AMI, ICSI y VoxConverse. 
+Ninguna fuente tiene todo. Elegimos una por módulo: audio rioplatense con transcripción (OpenSLR 61, CORdeBA, Humyn), reuniones con hablantes anotados (AMI, ICSI, VoxConverse) y reuniones con minuta de referencia (AMI).
 
 **Paso 2 — Fijar los niveles antes de medir** · [niveles-a-priori.md](niveles-a-priori.md)
-Antes de abrir los datos escribimos los 23 umbrales mínimos que el producto necesita cubrir: horas, completitud, corrección, vigencia, representatividad y confiabilidad. Los niveles de minuta (M1–M3) se agregaron después de ver qué anotaciones trae AMI, pero antes de correr ninguna medición.
+25 umbrales mínimos, asignados a un módulo cada uno: volumen, completitud, corrección, vigencia, representatividad y confiabilidad.
 
 **Paso 3 — Armar la muestra** · [`scripts/armar_muestra.py`](scripts/armar_muestra.py)
-No trabajamos sobre los datos crudos directamente. Un script descargó las fuentes y construyó una muestra estructurada: tablas en CSV y Parquet con reuniones, hablantes, turnos y minutas, más 24 extractos de audio de 30 segundos. Esa muestra es lo que está en [`muestra/`](muestra/) y lo que se puede reproducir sin descargar los 26 GB de audio completo.
+Un script descarga las fuentes y construye una muestra estructurada: tablas con clips, reuniones, hablantes, turnos, minutas y sus enlaces de evidencia. Está en [`muestra/`](muestra/), sin audio.
 
 **Paso 4 — Correr el EDA** · [notebooks/eda_viabilidad.ipynb](notebooks/eda_viabilidad.ipynb)
-El notebook midió cada uno de los 23 niveles celda por celda. También buscó exposición a leakage: columnas que el modelo no debería ver, reuniones que pyannote ya usó para entrenarse y hablantes repetidos entre particiones. Los resultados quedaron guardados en [`resultados_eda.csv`](../resultados_eda.csv) y [`resultados_leakage.csv`](../resultados_leakage.csv), y se generaron 4 gráficos en [`figuras/`](figuras/).
+El notebook mide los 25 niveles, una sección por módulo, y busca exposición a *leakage*. Resultados en [`resultados_eda.csv`](resultados_eda.csv) y [`resultados_leakage.csv`](resultados_leakage.csv); gráficos en [`figuras/`](figuras/).
 
 **Paso 5 — Documentar los datos** · [3-datasheet.md](3-datasheet.md)
-Completamos la datasheet abreviada: qué representa cada tabla, qué falta, qué errores hay, cómo se recolectó y para qué no deberían usarse los datos.
 
 **Paso 6 — Decidir** · [4-veredicto.md](4-veredicto.md)
-Con los resultados del EDA tomamos una decisión explícita: ajustar el alcance. No descartamos los datos sino que acotamos qué se puede concluir con ellos. Las consecuencias concretas quedaron escritas en el veredicto.
+Ajustar el alcance: evaluar por módulo y grabar reuniones propias para el producto completo.
 
 ---
 
 ## 2. Lo esencial
 
-23 niveles: 15 se cumplen, 4 no, 2 en parte, 2 pendientes.
+25 niveles: 10 se cumplen, 9 no, 3 en parte, 3 pendientes.
 
-| Propiedad | Número |
+| Módulo | Número |
 |---|---|
-| Volumen | 171,6 h transcriptas, 250 hablantes, 222 reuniones completas |
-| Completitud | 100% de los audios con transcripción y hablantes |
-| Corrección | 246 de 246 audios disponibles; 0 duplicados; 2 turnos inválidos |
-| Vigencia | **0% posterior a 2015; 0 fuentes de videollamada** |
-| Representatividad | 57,8% de las horas son reuniones reales; mujeres: 37,2% (AMI) y 21,1% (ICSI) del habla |
-| Confiabilidad | Los tiempos anotados coinciden con el audio (AUC 0,89) |
-| *Leakage* | pyannote entrenó con 154 de las 171 reuniones de AMI. Quedan 91 no vistas |
+| Transcripción | 15,0 h de audio rioplatense, 44 hablantes. Solo 46,4% es espontáneo, y casi todo sin tiempos |
+| Separación de hablantes | 700 sesiones, 236 h. pyannote ya vio 154 de las 171 de AMI: quedan 91 para evaluar |
+| Minuta | 105 reuniones con minuta completa; 90,5% de los ítems con evidencia. **Todas en inglés**; 97% actuadas |
+| De punta a punta | **0 reuniones en castellano con todo** |
 
 **Veredicto: ajustar el alcance.**
 
-1. **Obtención:** evaluación sobre 91 reuniones (16 AMI + 75 ICSI), partidas por serie y hablante.
-2. **Limpieza:** fuera turnos inválidos, turnos sin palabras y lectura de dígitos; texto normalizado.
-3. **Estructura:** por reunión, audio + turnos (hablante, inicio, fin, texto).
+1. **Obtención:** un conjunto de evaluación por módulo, partido por hablante o por serie.
+2. **Limpieza:** fuera duplicados, turnos inválidos y marcadores vacíos; CORdeBA se alinea; AMI se traduce al castellano (dataset derivado).
+3. **Estructura:** por módulo: audio + texto; audio + turnos; turnos + ítems con citas.
 
-## 2. La decisión que tomamos, y qué descartamos
+## 3. La decisión que tomamos, y qué descartamos
 
-- Solo inglés, solo transcribir y separar hablantes.
-- Evaluar sobre las 91 reuniones que pyannote no vio.
-- Descartado: fuentes en castellano; VoxConverse como evaluación principal.
+- Castellano, evaluado por módulo: no hace falta un dataset que tenga todo.
+- Minuta sobre AMI traducido, con sus enlaces de evidencia.
+- 10 reuniones propias en castellano para el producto completo.
+- Descartado: Common Voice espontáneo (0,08 h validadas); VoxConverse como evaluación principal.
 
-## 3. Nuestro mayor riesgo
+## 4. Nuestro mayor riesgo
 
-Los datos son de sala, de 2001–2005. El error en videollamada puede ser
-distinto, y solo se mide con reuniones propias.
+No completar las 10 reuniones propias. Sin ellas, el producto queda evaluado solo por partes, y la minuta, solo sobre texto traducido.
 
-## 4. Qué necesitamos del docente
+## 5. Qué necesitamos del docente
 
-- Si 5 reuniones propias alcanzan para medir la brecha con videollamada.
+- Si la minuta evaluada sobre AMI traducido vale como evidencia, declarada como dato sintético.
+- Si 10 reuniones propias alcanzan para la evaluación de punta a punta.

@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Descarga las fuentes crudas del Hito 2 a hito-2/.cache/.
 
-Alcance: reuniones en inglés, para transcribir y separar hablantes.
+Alcance: producto en castellano, evaluado por módulo.
 
 Uso (desde la raíz del repo):
     python3 -I hito-2/scripts/descargar_fuentes.py            # todo
     python3 -I hito-2/scripts/descargar_fuentes.py anotaciones
     python3 -I hito-2/scripts/descargar_fuentes.py audio
+    python3 -I hito-2/scripts/descargar_fuentes.py castellano
 
 Solo usa la biblioteca estándar. No vuelve a bajar lo que ya está. Lo
 descargado NO se versiona (hito-2/.cache/ está en .gitignore).
@@ -19,6 +20,10 @@ Qué baja:
                   ICSI, para saber si existe, cuánto pesa y cuánto dura.
                2. Extractos: baja 30 segundos de 24 reuniones elegidas con
                   semilla fija. El servidor permite pedir solo un tramo.
+  castellano   Audio con transcripción en castellano rioplatense, para el
+               módulo de transcripción: OpenSLR 61, CORdeBA y Humyn LATAM.
+               3,1 GB. Common Voice 26 rioplatense no se descarga: queda
+               planteada como fuente candidata en el mapa de fuentes.
 """
 from __future__ import annotations
 
@@ -49,6 +54,18 @@ AUDIO_AMI = EDI + "/AMICorpusMirror/amicorpus/{r}/audio/{r}.Mix-Headset.wav"
 AUDIO_ICSI = EDI + "/ICSIsignals/NXT/{r}.interaction.wav"
 AUDIO_VOX = {p: f"https://www.robots.ox.ac.uk/~vgg/data/voxconverse/data/voxconverse_{p}_wav.zip"
              for p in ("dev", "test")}
+
+HF = "https://huggingface.co/datasets/{repo}/resolve/main/{path}"
+CASTELLANO = {
+    **{f"slr61/{f}": f"https://www.openslr.org/resources/61/{f}"
+       for f in ("line_index_female.tsv", "line_index_male.tsv", "es_ar_male.zip", "es_ar_female.zip")},
+    "cordeba/metadata.csv": HF.format(repo="marianbasti/cordeba", path="metadata.csv"),
+    **{f"cordeba/CordeBA_{i:04d}.{e}": HF.format(repo="marianbasti/cordeba", path=f"data/CordeBA_{i:04d}.{e}")
+       for i in range(1, 25) for e in (("wma",) if i == 16 else ("mp3",))},
+    **{f"humyn/train-{i:05d}-of-00007.parquet":
+       HF.format(repo="humyn-labs/LATAM-High-Fidelity-ASR", path=f"data/train-{i:05d}-of-00007.parquet")
+       for i in range(7)},
+}
 
 # Cuántos extractos por grupo de reuniones (prefijo del identificador).
 EXTRACTOS = {"ami": {"ES": 4, "IS": 4, "TS": 4, "EN": 2, "IB": 2}, "icsi": {"Bmr": 3, "Bro": 3, "Bed": 2}}
@@ -177,8 +194,14 @@ def audio() -> None:
     extractos(indice_de_audio())
 
 
+def castellano() -> None:
+    print("[castellano]")
+    for destino, url in CASTELLANO.items():
+        bajar(url, CACHE / destino)
+
+
 def main(argv: list[str]) -> int:
-    pasos = {"anotaciones": anotaciones, "audio": audio}
+    pasos = {"anotaciones": anotaciones, "audio": audio, "castellano": castellano}
     try:
         for nombre in argv or list(pasos):
             pasos[nombre]()

@@ -1,9 +1,9 @@
 # AI Opportunity Canvas — Generador local de minutas de reuniones
 
 > **Integrantes:** Luisa, Bruno, Matías, Felipe.
-> **Versión:** 3 · **Fecha:** 2026-10-10
-> **Alcance actual:** reuniones en inglés. Etapas con datos verificados:
-> transcribir y separar hablantes ([Hito 2](hito-2/README.md)).
+> **Versión:** 4 · **Fecha:** 2026-10-12
+> **Alcance:** producto en castellano. Se evalúa por módulo: transcripción,
+> separación de hablantes y minuta ([Hito 2](hito-2/README.md)).
 >
 > Versión 1 (Hito 1): [HomeMatch AI](propuesta-3.md). Texto corto de esta idea: [propuesta-2.md](propuesta-2.md).
 
@@ -95,7 +95,7 @@ hace el usuario), validar citas (regla), exportar (plantilla).
 
 ### Evidencia
 
-- **Confirmación:** transcribir y separar hablantes en local ya existe (noScribe [8]). Hay 171,6 h de reuniones en inglés para evaluarlo ([EDA](hito-2/2-eda-de-viabilidad.md)).
+- **Confirmación:** transcribir y separar hablantes en local ya existe (noScribe [8]). Cada módulo tiene datos para evaluarse ([EDA](hito-2/2-eda-de-viabilidad.md)).
 - **Refutación:** la separación de hablantes se equivoca en ~17–20% del tiempo en AMI [9], y Whisper inventa frases en ~1% de las transcripciones [10].
 
 ---
@@ -124,20 +124,25 @@ publicados.
 
 ## 5. Hipótesis de datos
 
-No se entrena ningún modelo. Los datos son el conjunto de evaluación.
-Detalle en el [mapa de fuentes](hito-2/1-mapa-de-fuentes.md).
+No se entrena ningún modelo. Los datos son el conjunto de evaluación, uno por
+módulo. Detalle en el [mapa de fuentes](hito-2/1-mapa-de-fuentes.md).
 
-| Dato | Origen | ¿Público? | ¿Lo vimos? | ¿Sensibles? | Sesgo conocido | Comentarios |
-|---|---|---|---|---|---|---|
-| AMI Meeting Corpus | Univ. de Edimburgo | CC BY 4.0 | Sí (10/10) | Voz | 72,5% de las horas son reuniones actuadas; 2004–2005 | 171 reuniones, 100,0 h, audio + transcripción + hablantes |
-| ICSI Meeting Corpus | ICSI Berkeley | CC BY 4.0 | Sí (10/10) | Voz | Grupos de investigación; 79% del habla es de varones; 2001–2002 | 75 reuniones, 71,7 h, ídem |
-| VoxConverse | Univ. de Oxford | CC BY 4.0 | Sí (10/10) | — | Videos de YouTube | 448 sesiones; solo hablantes, sin transcripción |
-| Reuniones propias por videollamada | El equipo | No | No existe | Voz | 4 personas | 5 reuniones, para medir la brecha con videollamada |
+| Módulo | Dato | Origen | ¿Público? | ¿Lo vimos? | ¿Sensibles? | Sesgo conocido | Comentarios |
+|---|---|---|---|---|---|---|---|
+| Transcripción | OpenSLR 61 | Google | CC BY-SA 4.0 | Sí | Voz anónima | Lectura; solo Buenos Aires; 70% mujeres | 8,0 h, 44 hablantes |
+| Transcripción | CORdeBA | UNLP | CC BY-NC-SA 4.0 | Sí | Conversaciones privadas | Hablantes jóvenes | 6,4 h espontáneas, sin tiempos |
+| Transcripción | Humyn LATAM | Humyn Labs | CC BY 4.0 | Sí | Voz | Muestra comercial | 2 grabaciones argentinas (31 min), con tiempos |
+| Transcripción | Common Voice 26 rioplatense | Mozilla | CC0 | No (pide cuenta) | Voz | Lectura | ~16 h según su ficha |
+| Hablantes | AMI, ICSI | Univ. de Edimburgo, ICSI | CC BY 4.0 | Sí | Voz | Inglés; presencial; 2001–2005 | 246 reuniones, 171,7 h; 91 no vistas por pyannote |
+| Hablantes | VoxConverse | Univ. de Oxford | CC BY 4.0 | Sí | — | Videos de YouTube | 448 sesiones |
+| Minuta | AMI (minutas y evidencias) | Univ. de Edimburgo | CC BY 4.0 | Sí | — | Inglés; 97% de reuniones actuadas | 142 minutas; 90,5% de los ítems con evidencia |
+| Minuta | AMI traducido al castellano | Sintético, derivado | — | No existe | — | Castellano de traductor | Transcripción y minuta |
+| Punta a punta | Reuniones propias en castellano | El equipo | No | No existe | Voz | 4 personas | 10 reuniones, anotadas como AMI |
 
 ### Evidencia
 
-- **Confirmación:** 14 de 20 niveles cumplidos; 222 reuniones completas; audio disponible para las 246.
-- **Refutación:** 0% del material es posterior a 2015 y nada es de videollamada. pyannote entrenó con 154 de las 171 reuniones de AMI: quedan 91 para evaluar.
+- **Confirmación:** 10 de 25 niveles cumplidos; cada módulo tiene al menos una fuente utilizable.
+- **Refutación:** 0 reuniones en castellano con audio, transcripción, hablantes y minuta. 0 minutas en castellano. Solo el 46% del audio rioplatense es espontáneo.
 
 **Veredicto del Hito 2:** [ajustar el alcance](hito-2/4-veredicto.md).
 
@@ -150,13 +155,13 @@ Detalle en el [mapa de fuentes](hito-2/1-mapa-de-fuentes.md).
 | **Métrica de negocio** | Tiempo desde que termina la reunión hasta que la minuta está lista para enviar |
 | **Umbral** | ≤ 10 min de revisión en ≥ 70% de las reuniones de 1 hora; ≤ 30 min de procesamiento por hora, sin placa de video |
 | **Cómo se mide** | Línea de base: cronometrar la minuta manual 2 semanas. Después, lo mismo con el prototipo |
-| **Proxy técnico** | Error por palabra (transcripción), error de diarización (hablantes), error en la minuta (LLM as a judge?) y error combinado, sobre 91 reuniones de AMI e ICSI |
+| **Proxy técnico** | Por módulo: error por palabra (transcripción, castellano); error de diarización (91 reuniones de AMI e ICSI); minuta: cobertura contra la referencia, citas válidas y un LLM como juez calibrado contra anotación humana (AMI traducido) |
 | **Qué se registra** | Correcciones del usuario y tiempo de revisión, en local |
 
 ### Evidencia
 
 - **Confirmación:** las métricas técnicas tienen referencias publicadas [9][10].
-- **Refutación:** los resultados sobre audio de sala pueden no valer para videollamada.
+- **Refutación:** los resultados sobre audio de sala, lectura o texto traducido pueden no valer para reuniones reales en castellano.
 
 ---
 
@@ -165,7 +170,7 @@ Detalle en el [mapa de fuentes](hito-2/1-mapa-de-fuentes.md).
 | Familia | Riesgo | Decisión de diseño |
 |---|---|---|
 | Asignación | Atribuir un compromiso a quien no lo asumió | Cita por ítem; "hablante no identificado"; revisión humana |
-| Calidad de servicio | Peor resultado para quienes pesan menos en los datos: mujeres (21% del habla en ICSI), no nativos, menores de 30 en ICSI | Medir el error por grupo |
+| Calidad de servicio | Peor resultado para quienes pesan menos en los datos: hablantes de fuera de Buenos Aires, mayores de 50 | Medir el error por grupo; declarar para quién no se probó |
 | Representación | La minuta reescribe lo que cada uno dijo | La cita muestra el texto original |
 | Interpersonal | Grabar sin que los demás se enteren | Aviso de consentimiento obligatorio; indicador visible; borrado del audio |
 | Social | Si todo se transcribe, se habla con menos franqueza | Opción de guardar solo la minuta |
@@ -208,13 +213,15 @@ flowchart LR
 | 10 | Revisión y exportación | Editar y exportar | Humano | Interfaz web local | — |
 | 11 | Evaluación | Corre las métricas sobre el conjunto congelado | Regla | Código propio | — |
 
-Las partes 4 y 5 son las que tienen datos de evaluación verificados. La 8 se
-evalúa más adelante.
+Cada módulo con modelo (4, 5 y 8) se evalúa por separado, con su propia
+fuente. El producto completo, con reuniones propias.
 
-**Salida de las partes 4–6** (lo que se evalúa en esta etapa):
+**Contratos entre partes:**
 
 ```json
-{"turnos": [{"id": "t12", "hablante": "S1", "inicio": 132.4, "fin": 142.1, "texto": "..."}]}
+{"turnos": [{"id": "t12", "hablante": "S1", "inicio": 132.4, "fin": 142.1, "texto": "..."}],
+ "minuta": {"decisiones": [{"texto": "...", "citas": ["t12"]}],
+            "compromisos": [{"quien": "S1", "que": "...", "para_cuando": "...", "citas": ["t40"]}]}}
 ```
 
 **Equipo de cómputo:** mínimo, laptop de 16 GB sin placa de video. Desarrollo:
@@ -229,7 +236,9 @@ evalúa más adelante.
 | 2026-09-28 | Todas | Versión 1: HomeMatch AI ([propuesta-3.md](propuesta-3.md)) | Hito 1 |
 | 2026-10-09 | Todas | Cambio de problema: generador local de minutas | Decisión del equipo |
 | 2026-10-10 | 3, 5, 6, 8 | Alcance: solo inglés; datos solo para transcribir y separar hablantes | Decisión del equipo |
-| 2026-10-10 | 5, 6 | Evaluación sobre 91 reuniones; videollamada aparte | [Veredicto del Hito 2](hito-2/4-veredicto.md) |
+| 2026-10-10 | 5, 6 | Evaluación sobre 91 reuniones; videollamada aparte | Veredicto del Hito 2 |
+| 2026-10-11 | 6 | Se suma la evaluación de la minuta con AMI | Felipe: niveles M1 a M3 |
+| 2026-10-12 | 3, 5, 6, 7, 8 | El alcance vuelve a castellano. Evaluación por módulo; AMI traducido para la minuta; reuniones propias para el producto completo | Decisión del equipo; [veredicto del Hito 2](hito-2/4-veredicto.md) |
 
 ## Referencias
 

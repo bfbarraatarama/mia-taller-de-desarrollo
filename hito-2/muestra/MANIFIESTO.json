@@ -1,14 +1,27 @@
 {
- "generado": "2026-10-10",
+ "generado": "2026-10-12",
+ "semilla": 20261010,
  "por_fuente": {
   "ami": {
-   "reuniones": 171
+   "reuniones": 171,
+   "reuniones_con_minuta": 142,
+   "items_de_minuta": 2649
   },
   "icsi": {
    "reuniones": 75
   },
   "voxconverse": {
    "sesiones": 448
+  },
+  "slr61": {
+   "clips": 5739,
+   "clips_en_muestra": 44
+  },
+  "humyn": {
+   "grabaciones": 28
+  },
+  "cordeba": {
+   "grabaciones": 24
   }
  },
  "archivos_crudos": {
@@ -120,6 +133,134 @@
    "bytes": 72012,
    "sha256": "22ca1220996b45df79443992d6a722880237f9566bd63fcf129e2d5fff47e0da"
   },
+  "cordeba/CordeBA_0001.mp3": {
+   "bytes": 14621654,
+   "sha256": "198a1d112fea679b029d165f6c432741296b2d94d51fedb30065bdb4052f41d2"
+  },
+  "cordeba/CordeBA_0002.mp3": {
+   "bytes": 11980570,
+   "sha256": "a8c89a4dbdcb825a46863ba0ece2892d03d21d1eef105ae62bbd11246d5452e1"
+  },
+  "cordeba/CordeBA_0003.mp3": {
+   "bytes": 6513664,
+   "sha256": "bb1c9123b4066769ae86d488b4ac1a35dd92d5068ecc8adb28d549301f0c64c3"
+  },
+  "cordeba/CordeBA_0004.mp3": {
+   "bytes": 14419780,
+   "sha256": "dad2f683de40233e8c83c9fab733986372b909200289ffca172f82fc5cd460ed"
+  },
+  "cordeba/CordeBA_0005.mp3": {
+   "bytes": 17915591,
+   "sha256": "99f8715ad5c630534ebd67484b57ac17c50a67bba494ece8ae7b21286125fbd1"
+  },
+  "cordeba/CordeBA_0006.mp3": {
+   "bytes": 22692864,
+   "sha256": "13d5e0da954505c7d64487f05f126d93af73ea1a5a3c633171a0575dd5854ee4"
+  },
+  "cordeba/CordeBA_0007.mp3": {
+   "bytes": 13454565,
+   "sha256": "d78a89e881f725bb0b9592a33bcb7499afad205e092eeb8dd03716fcb580022b"
+  },
+  "cordeba/CordeBA_0008.mp3": {
+   "bytes": 14241311,
+   "sha256": "0f3d83864a59d216b0c64135e28c893b9a9e42cf4e6e51535c18a97fcbfa02a9"
+  },
+  "cordeba/CordeBA_0009.mp3": {
+   "bytes": 17678874,
+   "sha256": "87cc62d3dc2042f5e7da3e70613c714dcf81f00b1066bcc34790d34312bd3b83"
+  },
+  "cordeba/CordeBA_0010.mp3": {
+   "bytes": 9962665,
+   "sha256": "eaa5327736b94f55a5e02ca4f5791bd458a8e6e762029bdccd902cd2db7549b6"
+  },
+  "cordeba/CordeBA_0011.mp3": {
+   "bytes": 10763891,
+   "sha256": "72b3eb57363ab951aead163d1a390ed48cad1382b1074293e3f552fd3a4a9e71"
+  },
+  "cordeba/CordeBA_0012.mp3": {
+   "bytes": 35716926,
+   "sha256": "54b708a8e3befc63e78c0240b90dc0eabb345dd578c127cdc9c0285d35a257f7"
+  },
+  "cordeba/CordeBA_0013.mp3": {
+   "bytes": 9223239,
+   "sha256": "7aa286be4211a1eb36dc09a634dc06d9c1450486a6802340170261223aa92884"
+  },
+  "cordeba/CordeBA_0014.mp3": {
+   "bytes": 14570979,
+   "sha256": "e7b2b8616f90a4422293983f36f40659a7e4de5befe62c4252a9cc814028f844"
+  },
+  "cordeba/CordeBA_0015.mp3": {
+   "bytes": 21872149,
+   "sha256": "cd97249007057398a773a7aa33494dd0c20ab7dcb54e869ef613108430ad1b33"
+  },
+  "cordeba/CordeBA_0016.wma": {
+   "bytes": 21194,
+   "sha256": "04fc9083cbe51d4b57a99f3cdc2dc7e3eeaa362b41af4eccfcaec31001850892"
+  },
+  "cordeba/CordeBA_0017.mp3": {
+   "bytes": 7231238,
+   "sha256": "6d357b11714e102cd7ed14222d2aeb5da5b4f2ffeee6202bf3ac10b309a97398"
+  },
+  "cordeba/CordeBA_0018.mp3": {
+   "bytes": 14505462,
+   "sha256": "7fd4a71bbe0407bb6996fcecdcf711cf1be6e876ff74780797758e605492b5f2"
+  },
+  "cordeba/CordeBA_0019.mp3": {
+   "bytes": 10822585,
+   "sha256": "dfa675f08ca1048dca7b16c51be9265b07d1761fd846094d1a3c4a8fd6c4f5db"
+  },
+  "cordeba/CordeBA_0020.mp3": {
+   "bytes": 10871892,
+   "sha256": "0267889ee363bca11f0baf0bd85d8e642f4024ff06183902c8880d5c5654db65"
+  },
+  "cordeba/CordeBA_0021.mp3": {
+   "bytes": 25838007,
+   "sha256": "2dc94e38d7c0feaf810b890d5f90f84e811273fc3c4c5a515e7333dbb8a33615"
+  },
+  "cordeba/CordeBA_0022.mp3": {
+   "bytes": 19550647,
+   "sha256": "a811770017f08ab51b0e57847028fb82b9cd7530c1afe030b86f5922ebc5f61f"
+  },
+  "cordeba/CordeBA_0023.mp3": {
+   "bytes": 14626670,
+   "sha256": "6470de77ce8011e83a3ef5faf0be89171e3bf60dbb6c52214eb9d6400d2ca9e5"
+  },
+  "cordeba/CordeBA_0024.mp3": {
+   "bytes": 8285673,
+   "sha256": "cddcc846f0eca95aa5bff573983d8d98e7b2638002d388c801937581e7d3fab7"
+  },
+  "cordeba/metadata.csv": {
+   "bytes": 580328,
+   "sha256": "3311b9d265cd72bb0d5488d3f160d5b1f453012b1b3a583b452c0543e574ff44"
+  },
+  "humyn/train-00000-of-00007.parquet": {
+   "bytes": 666851177,
+   "sha256": "46406f2726a10459ea9da7b80c1a318fe5216ea65a1b0c3025f63e8178cd39ae"
+  },
+  "humyn/train-00001-of-00007.parquet": {
+   "bytes": 333243659,
+   "sha256": "a5bd7c5a5caf8cbf051d547f8dae8014e5b76716cb3fc45a96d554d5bcee063f"
+  },
+  "humyn/train-00002-of-00007.parquet": {
+   "bytes": 2178178,
+   "sha256": "d3290a10382df5e06903dc213629f2fc67a29414fca96ed1ae26ba222d5b8509"
+  },
+  "humyn/train-00003-of-00007.parquet": {
+   "bytes": 2898652,
+   "sha256": "b9eca59f80cde89599a1d9429dc2bca353756776fc6e994b3b440d11b446c98e"
+  },
+  "humyn/train-00004-of-00007.parquet": {
+   "bytes": 1920290,
+   "sha256": "0520697a90e4396279a2e1786055a813f9c9b8eb11926b11adf6ff1e8c157e9b"
+  },
+  "humyn/train-00005-of-00007.parquet": {
+   "bytes": 2971851,
+   "sha256": "1b0dfce7e11764b1aac834de3b5d15ca5ea7b7c7d5381db111e5a7d766352132"
+  },
+  "humyn/train-00006-of-00007.parquet": {
+   "bytes": 1426308,
+   "sha256": "20016651406e2d370f4aeb5bad392428709e51a163707752787da5b4ae3abdb1"
+  },
   "icsi/ICSI_plus_NXT.zip": {
    "bytes": 55491177,
    "sha256": "e4ab79a8b638bdd29121d744c452c680fe23791e406ffe5125e2f5b118923439"
@@ -135,6 +276,22 @@
   "pyannote_ami/train.meetings.txt": {
    "bytes": 1078,
    "sha256": "752c2a2b5af083c3fc468d524269b6481a4610572b81df44026a0a94b05e2f56"
+  },
+  "slr61/es_ar_female.zip": {
+   "bytes": 1262394798,
+   "sha256": "9cc0f2895d6466c478af9a393def99a9ff4688f26593bbfbb5468eb21627bf08"
+  },
+  "slr61/es_ar_male.zip": {
+   "bytes": 551574109,
+   "sha256": "9f0cd8441370ce6a7fe2693c306a83d699d7d05608170f8a1d42b0556bf3d9bc"
+  },
+  "slr61/line_index_female.tsv": {
+   "bytes": 294085,
+   "sha256": "b1ecaea981f29623b9f07a35cb6b90b1dc97fc655d9a17a3cb39e825b37dc9e2"
+  },
+  "slr61/line_index_male.tsv": {
+   "bytes": 139328,
+   "sha256": "cd3e47467638e14c6173e8eb82058e97f512b231e116e364d9f3967c2f839826"
   },
   "voxconverse/voxconverse-master.zip": {
    "bytes": 324462,

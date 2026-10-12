@@ -1,0 +1,29 @@
+archivo,idioma,tipo,legible,duracion_s,codec,frecuencia_hz,canales,transcripcion_con_turnos,transcripcion_sha1,n_turnos,n_hablantes,n_palabras
+Spanish_Peru_1.wav,Spanish- Peru,multi-speaker,True,916.992,pcm_s16le,48000.0,2,True,b7c13081a945,28,2,1771
+Spanish_Peru_2.wav,Spanish- Peru,multi-speaker,True,923.562667,pcm_s16le,48000.0,2,True,a5d9b444ddf1,39,2,1778
+Spanish_Venezuela_1.wav,Spanish- Venezuela,multi-speaker,True,940.757333,pcm_s16le,48000.0,2,True,4b26df24670b,85,2,1558
+Spanish_Venezuela_2.wav,Spanish- Venezuela,multi-speaker,True,899.541333,pcm_s16le,48000.0,2,True,a2b701a7fe42,125,2,1548
+Spanish_Argentina_1.wav,Spanish- Argentina,multi-speaker,True,937.807521,pcm_s16le,48000.0,2,True,9e8c33d4372d,67,2,1595
+Spanish_Argentina_2.wav,Spanish- Argentina,multi-speaker,True,930.934417,pcm_s16le,48000.0,2,True,95304240feff,101,2,1904
+Portugese_1.wav,Portugese (Brazil),multi-speaker,True,993.28,pcm_s16le,48000.0,2,True,0cfd24fb0811,106,2,3024
+Portugese_2.wav,Portugese (Brazil),multi-speaker,True,651.605333,pcm_s16le,48000.0,2,True,a083462f4a25,59,2,1814
+portAudio1.mp3,Portuguese,single-speaker,True,26.592,mp3,48000.0,2,False,2b5d2ac3716c,1,1,99
+portAudio2.mp3,Portuguese,single-speaker,True,42.888,mp3,48000.0,1,False,2b5d2ac3716c,1,1,99
+portAudio3.mp3,Portuguese,single-speaker,True,34.8,mp3,48000.0,1,False,2b5d2ac3716c,1,1,99
+portAudio4.mp3,Portuguese,single-speaker,True,35.88,mp3,48000.0,1,False,a964c7768342,1,1,112
+portAudio5.mp3,Portuguese,single-speaker,True,13.056,mp3,48000.0,2,False,a964c7768342,1,1,112
+portAudio6.mp3,Portuguese,single-speaker,True,47.76,mp3,48000.0,2,False,a964c7768342,1,1,112
+portAudio7.mp3,Portuguese,single-speaker,True,33.576,mp3,48000.0,2,False,33fb5dfdc120,1,1,97
+portAudio8.mp3,Portuguese,single-speaker,True,31.252854,aac,48000.0,1,False,33fb5dfdc120,1,1,97
+portAudio9.mp3,Portuguese,single-speaker,True,25.898667,aac,48000.0,2,False,96441d132c99,1,1,85
+portAudio10.mp3,Portuguese,single-speaker,True,25.968,mp3,48000.0,1,False,96441d132c99,1,1,85
+portAudio11.mp3,Portuguese,single-speaker,True,36.048,mp3,48000.0,2,False,01821757d916,1,1,89
+portAudio12.mp3,Portuguese,single-speaker,True,16.152,mp3,48000.0,2,False,01821757d916,1,1,89
+portAudio13.mp3,Portuguese,single-speaker,True,39.072,mp3,48000.0,2,False,01821757d916,1,1,89
+portAudio14.mp3,Portuguese,single-speaker,True,40.176,mp3,48000.0,2,False,12fc0fbb4687,1,1,120
+portAudio15.mp3,Portuguese,single-speaker,True,42.239333,aac,48000.0,1,False,12fc0fbb4687,1,1,120
+portAudio16.mp3,Portuguese,single-speaker,True,35.082167,opus,48000.0,1,False,f15c62798e43,1,1,97
+portAudio17.mp3,Portuguese,single-speaker,True,8.599752,aac,48000.0,2,False,f15c62798e43,1,1,97
+portAudio18.mp3,Portuguese,single-speaker,True,28.272,mp3,48000.0,1,False,6f8372a52491,1,1,82
+portAudio19.mp3,Portuguese,single-speaker,True,34.848,mp3,48000.0,2,False,6f8372a52491,1,1,82
+portAudio20.mp3,Portuguese,single-speaker,True,34.032,mp3,48000.0,1,False,6f8372a52491,1,1,82

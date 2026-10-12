@@ -51,3 +51,6 @@ clases/
 hito-2/.cache/
 data/
 scrapper/
+
+# Audio de la muestra: se regenera con hito-2/scripts/armar_muestra.py
+hito-2/muestra/**/*.flac

@@ -2,11 +2,18 @@
 
 **Equipo:** Luisa, Bruno, Matías, Felipe · [Canvas](../canvas.md)
 
-**Alcance:** reuniones en inglés; transcribir y separar hablantes.
+**Alcance:** producto en castellano, evaluado por módulo.
 
-**Veredicto: ajustar el alcance.** Hay 171,6 h de reuniones con audio,
-transcripción y hablantes (AMI e ICSI). Todo es presencial y de 2001–2005: la
-videollamada se mide aparte, con reuniones propias.
+**Veredicto: ajustar el alcance.** Hay datos para evaluar cada módulo por
+separado. No hay ninguna reunión en castellano con audio, transcripción,
+hablantes y minuta: el producto completo se evalúa con reuniones propias.
+
+| Módulo | Fuentes | Idioma |
+|---|---|---|
+| Transcripción | OpenSLR 61, CORdeBA, Humyn LATAM | Castellano rioplatense |
+| Separación de hablantes | AMI, ICSI, VoxConverse, Humyn LATAM | Inglés (no depende del idioma) |
+| Minuta | AMI, con sus enlaces de evidencia | Inglés; se traduce al castellano |
+| De punta a punta | Reuniones propias | Castellano |
 
 | # | Documento |
 |---|---|
@@ -18,7 +25,7 @@ videollamada se mide aparte, con reuniones propias.
 
 ## Cómo se reproduce
 
-Python 3.12 o posterior y [`uv`](https://docs.astral.sh/uv/). Desde la raíz del repo:
+Python 3.12 o posterior, [`uv`](https://docs.astral.sh/uv/) y `ffmpeg`. Desde la raíz del repo:
 
 ```bash
 uv venv .venv && uv pip install -r hito-2/requirements.txt
@@ -26,7 +33,7 @@ uv venv .venv && uv pip install -r hito-2/requirements.txt
 # Notebook sobre la muestra del repo (sin red)
 .venv/bin/jupyter nbconvert --to notebook --execute --inplace hito-2/notebooks/eda_viabilidad.ipynb
 
-# Opcional: regenerar la muestra desde las fuentes (100 MB, ~10 min)
+# Opcional: regenerar la muestra desde las fuentes (3,2 GB, ~40 min)
 .venv/bin/python -I hito-2/scripts/descargar_fuentes.py
 .venv/bin/python -I hito-2/scripts/armar_muestra.py
 ```
@@ -39,14 +46,19 @@ hito-2/
 ├── niveles-a-priori.md
 ├── resultados_eda.csv, resultados_leakage.csv   salida del notebook
 ├── figuras/                                     salida del notebook
-├── notebooks/eda_viabilidad.ipynb
+├── notebooks/eda_viabilidad.ipynb               una sección por módulo
 ├── scripts/descargar_fuentes.py, armar_muestra.py
-└── muestra/                                     18 MB
-    ├── ami/          171 reuniones: turnos, participantes, índice de audio, 16 extractos;
-    │                 minutas de referencia de 142 (resumen, decisiones, acciones, problemas)
-    ├── icsi/         75 reuniones: ídem, 8 extractos
-    └── voxconverse/  448 sesiones: quién habla cuándo
+└── muestra/
+    ├── slr61/        transcripciones, índice de audio
+    ├── cordeba/      índice de grabaciones y turnos
+    ├── humyn/        índice de grabaciones y turnos en castellano
+    ├── ami/          turnos, participantes, índice de audio,
+    │                 minutas y evidencias
+    ├── icsi/         turnos, hablantes, índice de audio
+    └── voxconverse/  quién habla cuándo
 ```
 
-El audio completo (26,1 GB) no está en el repo: cada reunión tiene su URL en
-`reuniones.csv`.
+**El repo no tiene audio.** Los scripts lo dejan en disco (`.cache/` y
+`muestra/**/*.flac`, ignorados por git): 44 clips de OpenSLR 61 y 24
+extractos de 30 s de AMI e ICSI. El audio completo de AMI e ICSI se baja con
+la URL de cada reunión en `reuniones.csv`.
