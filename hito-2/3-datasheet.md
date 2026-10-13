@@ -14,136 +14,174 @@ Las mediciones están en el [EDA](2-eda-de-viabilidad.md) y se regeneran desde s
 
 **1. ¿Para qué se creó el dataset?**
 
-Respuesta: La muestra, para decidir si cada módulo del producto (transcribir,
-separar hablantes, escribir la minuta) se puede evaluar con datos públicos.
-Las fuentes: OpenSLR 61, para sintetizar voz en castellano de Latinoamérica;
-CORdeBA, para estudiar el castellano bonaerense; Humyn LATAM, muestra
-comercial para reconocimiento de voz; AMI e ICSI, para investigar reuniones;
-VoxConverse, para medir separación de hablantes. Common Voice 26 Rioplatense se creó para habla leída de colaboradores; CALLHOME Spanish registra llamadas telefónicas espontáneas y UBA Games Figshare v2 reúne tareas de interacción lúdica. **No** se produjeron como reuniones de trabajo con minuta.
+Respuesta: Ninguno de los datasets utilizados fue creado específicamente para nuestro objetivo: generar automáticamente minutas a partir de grabaciones de reuniones en castellano.
+
+Las fuentes originales fueron desarrolladas con distintos propósitos, principalmente relacionados con el reconocimiento del habla, la diarización de hablantes y el análisis de conversaciones. En nuestro proyecto, se utilizan para evaluar la viabilidad de los distintos módulos del sistema: transcripción, identificación de hablantes y generación de minutas.
+
+| Fuente | Propósito original | Uso en nuestro proyecto |
+|---|---|---|
+| OpenSLR 61 | Investigación y desarrollo de tecnologías de síntesis de voz en español argentino | Evaluar transcripción en castellano rioplatense |
+| CORdeBA | Investigación lingüística del español bonaerense espontáneo | Evaluar transcripción de habla espontánea |
+| Humyn LATAM | Desarrollo y evaluación de tecnologías de reconocimiento del habla en español latinoamericano | Evaluar transcripción y diarización en castellano |
+| Common Voice | Construcción de un corpus abierto y multilingüe para tecnologías de reconocimiento del habla | Evaluar transcripción en castellano leído y analizar la disponibilidad de información demográfica de los hablantes |
+| AMI | Investigación sobre reconocimiento y comprensión automática de reuniones | Evaluar diarización y generación de minutas |
+| ICSI | Investigación sobre reconocimiento del habla y análisis de reuniones espontáneas | Evaluar diarización |
+| VoxConverse | Desarrollo y evaluación de sistemas de diarización en grabaciones audiovisuales | Referencia adicional para diarización (descartada) |
+| CALLHOME | Investigación sobre reconocimiento del habla y análisis de conversaciones telefónicas espontáneas | Evaluar diarización en castellano |
+| Figshare v2 | Investigación de la interacción entre dos personas durante actividades lúdicas | Evaluar diarización en castellano |
 
 **2. ¿Quién lo creó, y por encargo de quién?**
 
-Respuesta: La muestra, el equipo, con [`scripts/armar_muestra.py`](scripts/armar_muestra.py).
-OpenSLR 61: Google. CORdeBA: Universidad Nacional de La Plata. Humyn LATAM:
-Humyn Labs. AMI: consorcio AMI (Universidad de Edimburgo). ICSI:
-International Computer Science Institute, Berkeley. VoxConverse: Universidad
-de Oxford. Common Voice: comunidad Mozilla/Data Collective; CALLHOME: TalkBank (distribución procesada en Hugging Face); Figshare v2: autores de la distribución SIS. Quién financió AMI, ICSI y VoxConverse: no sabemos.
+Respuesta:
+
+| Fuente | Quién lo creó | Por encargo de quién |
+|---|---|---|
+| OpenSLR 61 | Equipo de investigación de Google, con grabaciones de voluntarios de Buenos Aires | No sabemos |
+| CORdeBA | Universidad Nacional de La Plata (UNLP) | No sabemos |
+| Humyn LATAM | Humyn Labs | No sabemos |
+| Common Voice | Mozilla Data Collective, con aportes de voluntarios de todo el mundo | Mozilla Foundation (iniciativa propia) |
+| AMI | Consorcio de investigación AMI, coordinado por la Universidad de Edimburgo | Unión Europea (Sexto Programa Marco de investigación) |
+| ICSI | International Computer Science Institute (ICSI), Berkeley | No sabemos |
+| VoxConverse | Investigadores de la Universidad de Oxford | Programa EPSRC Seebibyte y becas de Google |
+| CALLHOME | Linguistic Data Consortium (LDC) y Rutgers University | No sabemos |
+| Figshare v2 | Autores del estudio SIS | No sabemos |
 
 ## 2. Composición
 
 **3. ¿Qué representa cada instancia, y cuántas hay?**
 
-La normalización común complementa la muestra histórica con **16.156 instancias de transcripción** (10.393 Common Voice, 5.739 OpenSLR 61 y 24 CORdeBA); **359 registros de grabación para diarización** (219 Figshare, 140 CALLHOME); **49.492 segmentos** (21.382 Figshare, 28.110 CALLHOME) y tablas auxiliares de hablantes (434 ASR, 374 diarización). Los identificadores de CALLHOME tienen alcance local al registro y **no son personas ni sesiones independientes acreditadas**. Figshare agrupa 219 pares en **nueve sesiones**. A continuación se conserva el inventario histórico de fuentes complementarias.
+La normalización común complementa la muestra histórica con **16.156 instancias de transcripción** (10.393 Common Voice, 5.739 OpenSLR 61 y 24 CORdeBA); **359 registros de grabación para diarización** (219 Figshare, 140 CALLHOME), que no equivalen a grabaciones o sesiones independientes; **49.492 segmentos** (21.382 Figshare, 28.110 CALLHOME) y tablas auxiliares de hablantes (434 ASR, 374 diarización). Los identificadores de CALLHOME tienen alcance local al registro y **no son personas ni sesiones independientes acreditadas**. Figshare agrupa 219 pares en **nueve sesiones**. A continuación se conserva el inventario histórico de fuentes complementarias.
 
 Respuesta:
 
-| Módulo | Tabla | Cada fila es | Filas |
-|---|---|---|---|
-| Transcripción | `slr61/transcripciones.csv` | Un clip leído, con su texto | 5.739 |
-| | `slr61/manifiesto_audio.csv` | Un audio de la fuente: duración, frecuencia, pico | 5.739 |
-| | `cordeba/grabaciones.csv` | Una grabación | 24 |
-| | `cordeba/turnos.parquet` | Un turno: hablante y texto, sin tiempos | 5.187 |
-| | `humyn/grabaciones.csv` | Una grabación | 28 |
-| | `humyn/turnos.parquet` | Un turno en castellano: hablante, inicio, fin, texto | 445 |
-| Hablantes | `ami/reuniones.csv`, `icsi/reuniones.csv` | Una reunión, con el índice de su audio | 171 y 75 |
-| | `ami/participantes.csv`, `icsi/hablantes.csv` | Una persona | 189 y 61 |
-| | `ami/turnos.parquet`, `icsi/turnos.parquet` | Un turno: hablante, inicio, fin, texto | 93.637 y 129.106 |
-| | `ami/extractos_energia.parquet`, `icsi/extractos_energia.parquet` | La energía de 20 ms de audio de un extracto de 30 s | 24.000 y 12.000 |
-| | `voxconverse/rttm.parquet` | Un tramo en que habla una persona | 27.747 |
-| Minuta | `ami/minutas.parquet` | Un ítem de la minuta de referencia: resumen, decisión, acción o problema | 2.649 |
-| | `ami/evidencias.parquet` | Un fragmento de la transcripción que respalda un ítem | 22.100 |
+| Fuente | Tabla | Módulo | Qué representa cada instancia | Cuántas hay |
+|---|---|---|---|---|
+| OpenSLR 61 | `slr61/transcripciones.csv` | Transcripción | El texto de una oración leída en español rioplatense | 5.739 |
+| OpenSLR 61 | `slr61/manifiesto_audio.csv` | Transcripción | Las características acústicas del mismo clip: duración, frecuencia de muestreo y pico de amplitud | 5.739 |
+| CORdeBA | `cordeba/grabaciones.csv` | Transcripción | Los metadatos de una grabación de habla espontánea en español bonaerense | 24 |
+| CORdeBA | `cordeba/turnos.parquet` | Transcripción | El texto de un turno espontáneo en español bonaerense: hablante y texto, sin tiempos | 5.187 |
+| Humyn LATAM | `humyn/grabaciones.csv` | Transcripción | Los metadatos de una grabación de habla espontánea en castellano | 28 |
+| Humyn LATAM | `humyn/turnos.parquet` | Transcripción | El texto y tiempos de un turno espontáneo en castellano: hablante, inicio, fin, texto | 445 |
+| AMI | `ami/reuniones.csv` | Hablantes | Los metadatos de una reunión en inglés (mayormente actuada): serie, índice de audio | 171 |
+| AMI | `ami/participantes.csv` | Hablantes | El perfil de una persona: código, sexo, edad y lengua nativa | 189 |
+| AMI | `ami/turnos.parquet` | Hablantes | Un turno de habla actuada en inglés: hablante, inicio, fin, texto | 93.637 |
+| AMI | `ami/extractos_energia.parquet` | Hablantes | La energía de 20 ms de un fragmento de 30 s de audio de reunión en inglés | 24.000 |
+| AMI | `ami/minutas.parquet` | Minuta | Un ítem de minuta de reunión en inglés: resumen, decisión, acción o problema | 2.649 |
+| AMI | `ami/evidencias.parquet` | Minuta | Un fragmento de transcripción en inglés que respalda un ítem de minuta | 22.100 |
+| ICSI | `icsi/reuniones.csv` | Hablantes | Los metadatos de una reunión en inglés espontánea: serie, índice de audio | 75 |
+| ICSI | `icsi/hablantes.csv` | Hablantes | El perfil de una persona: código, sexo, edad y lengua nativa | 61 |
+| ICSI | `icsi/turnos.parquet` | Hablantes | Un turno de habla espontánea en inglés: hablante, inicio, fin, texto | 129.106 |
+| ICSI | `icsi/extractos_energia.parquet` | Hablantes | La energía de 20 ms de un fragmento de 30 s de audio de reunión en inglés | 12.000 |
+| VoxConverse | `voxconverse/rttm.parquet` | Hablantes | Un tramo de audio espontáneo en inglés (video de YouTube) en que habla una persona | 27.747 |
 
 **4. ¿Es todo lo que existe o una muestra?**
 
-**Actualización comprobable:** La distribución de Figshare v2 es una porción específica del material UBA Games, no el corpus CONICET completo. CALLHOME consta de cinco Parquet procesados; su cardinalidad de 140 registros no prueba completitud de llamadas ni sesiones independientes. Common Voice incluye el TAR y sus 10.393 MP3/TSV declarados, no otros idiomas o variantes.
+Respuesta: El conjunto de datos reúne fuentes con distintos niveles de cobertura. Para OpenSLR 61, CORdeBA, Humyn LATAM, AMI, ICSI y VoxConverse se dispone de la totalidad de las distribuciones identificadas. En cambio, Common Voice corresponde a un subconjunto de un corpus multilingüe, del cual se descargaron 10.393 grabaciones en español rioplatense (9.903 de entrenamiento, 266 de validación y 224 de prueba). Por su parte, Figshare v2 corresponde a una distribución pública específica del material UBA Games, que no representa la totalidad del corpus original de CONICET.
 
-Respuesta: Se incluyen las anotaciones e índices disponibles de las fuentes históricas y las cinco tablas comunes. No se redistribuyen audios originales; permanecen en la caché local bajo las condiciones de cada fuente. De 24 extractos AMI/ICSI se conserva sólo la energía por cuadro.
+Para CALLHOME se obtuvieron cinco archivos Parquet procesados que contienen 140 registros. Sin embargo, no se pudo verificar si estos representan la totalidad de las conversaciones del corpus original ni cuántas sesiones independientes contienen.
+
+A partir de las fuentes obtenidas se construyeron cinco tablas normalizadas para las tareas de transcripción y diarización. Si bien se procesaron las anotaciones y los metadatos disponibles, el análisis acústico se realizó sobre una selección de grabaciones o extractos de audio. En particular, para AMI e ICSI se analizaron 24 extractos, de los cuales se conservaron únicamente las mediciones de energía por cuadro.
+
+Los audios originales no se incluyen en el repositorio y permanecen almacenados localmente, sujetos a las condiciones de uso de cada fuente.
 
 **5. Si es una muestra, ¿de qué, y es representativa?**
 
-**Actualización comprobable:** La auditoría acústica selecciona 10 MP3 por split de Common Voice (30), 44 FLAC preseleccionados de OpenSLR, ocho grabaciones CORdeBA —incluida la marcada ilegible—, nueve mezclas de 30 segundos de Figshare y tres registros por cada uno de cinco Parquet CALLHOME (15). Se selecciona determinísticamente, pero no es una muestra probabilística representativa del dominio de reuniones.
+Respuesta: Para el análisis acústico se seleccionaron muestras de las grabaciones disponibles en cada fuente. En Common Voice se analizaron 30 clips (10 por cada conjunto de entrenamiento, validación y prueba); en OpenSLR 61, 44 archivos de audio, uno por hablante; en CORdeBA, 8 grabaciones; en Figshare v2, 9 extractos de 30 segundos, uno por sesión; y en CALLHOME, 15 registros, tres por cada archivo Parquet.
 
-Respuesta: Los 24 extractos de los que se guarda la energía se eligieron por
-grupo de reuniones (AMI: 4 ES, 4 IS, 4 TS, 2 EN, 2 IB; ICSI: 3 Bmr, 3 Bro,
-2 Bed); no son proporcionales a las horas.
+Para AMI e ICSI se seleccionaron 24 extractos de audio de 30 segundos, correspondientes a distintas series de reuniones: 16 de AMI (4 ES, 4 IS, 4 TS, 2 EN y 2 IB) y 8 de ICSI (3 Bmr, 3 Bro y 2 Bed). Esta distribución buscó incluir diferentes grupos de reuniones, pero no fue proporcional a la cantidad de horas disponibles en cada uno.
+
+La selección se realizó mediante criterios definidos y reproducibles, utilizando una semilla fija (20261010) cuando correspondía. Sin embargo, no se diseñó como un muestreo probabilístico representativo de las fuentes originales.
+
+Por lo tanto, las muestras permiten realizar una evaluación exploratoria de la calidad y las características acústicas de los datos, pero no pueden considerarse estadísticamente representativas del dominio objetivo de reuniones en castellano. Esta limitación es especialmente relevante porque algunas fuentes contienen grabaciones en otros idiomas o situaciones de habla diferentes de las reuniones que se busca procesar.
 
 **6. ¿Falta información?**
 
-**Actualización comprobable:** Common Voice dispone simultáneamente de edad, género y acento en el **97,5%** de los clips (faltan 139 edades, 261 géneros y ningún acento); son metadatos por clip, no proporciones de hablantes. CORdeBA carece de tiempos alineados. CALLHOME no acredita grupos de sesión ni contiene minutas. Figshare sólo dispone en el repositorio de nueve mezclas cortas de inspección; sus WAV originales completos quedan en caché local. Ninguna fuente aporta la referencia de minuta en castellano del producto completo.
+Respuesta: Sí, se identificaron datos faltantes y limitaciones en las anotaciones disponibles, que varían según la fuente.
 
-Respuesta: Ver EDA, C1, C2, C4 y C5. En Humyn el texto cubre el 71,4% del
-audio. CORdeBA no tiene tiempos y 3 de sus 24 transcripciones no separan
-hablantes. 29 de las 171 reuniones de AMI no tienen minuta. En las fuentes históricas no constaba edad por hablante; Common Voice incorpora una columna opcional, cuya completitud quedó medida por clip. No se verificó todavía R2 por persona.
+En Common Voice, el 97,5 % de los 10.393 clips cuenta simultáneamente con información de edad, género y acento. Sin embargo, esta cobertura se calcula por grabación y no por hablante, por lo que no permite determinar la proporción de personas con información demográfica completa.
+
+En Humyn LATAM, las transcripciones cubren el 71,4 % de la duración total del audio. En CORdeBA, las transcripciones no cuentan con marcas temporales que permitan ubicar las intervenciones dentro de las grabaciones y, además, 3 de las 24 transcripciones no separan los hablantes.
+
+En AMI, 29 de las 171 reuniones no cuentan con una minuta asociada. Por su parte, CALLHOME no dispone de identificadores que permitan distinguir de manera independiente las sesiones y tampoco contiene minutas, dado que corresponde a conversaciones telefónicas. En Figshare v2, el repositorio conserva únicamente nueve mezclas cortas para inspección, mientras que los 219 pares de audio completos permanecen en la caché local.
+
+La principal limitación para el objetivo del proyecto es que ninguna de las fuentes dispone de minutas de referencia en castellano. Aunque AMI incluye minutas, estas se encuentran en inglés.
+
+Finalmente, todavía no se pudo verificar la distribución de edades por hablante para evaluar el requisito de que al menos el 50 % de los participantes tenga 30 años o más, ya que la información disponible no permite realizar esa comprobación a nivel de persona.
 
 **7. ¿Hay errores, ruido o duplicados?**
 
-**Actualización comprobable:** La normalización conservó dos anomalías temporales CALLHOME (28.112 intervalos originales, 28.110 válidos estructuralmente); en dos de 15 audios muestreados sus anotaciones exceden la duración por 187,73 y 260,12 s. Los 219 pares Figshare respetan la tolerancia de 10 ms (213 requieren aceptarla). De 106 archivos acústicos seleccionados, 105 se decodificaron; el único no decodificable fue CORdeBA_0016.wma. La superposición textual entre voces no implica identidad de audio; no se encontraron colaboradores identificados compartidos entre los splits originales de Common Voice (0), sin que ello acredite independencia frente a preentrenamientos externos.
+Respuesta: Sí, el análisis exploratorio identificó duplicaciones, inconsistencias temporales y problemas de calidad en algunas fuentes.
 
-Respuesta: Ver EDA, K1 a K4. 78 clips de OpenSLR 61 repiten hablante y
-oración. 12 turnos de duración cero. 1 archivo de CORdeBA no es audio. 47
-ítems de las minutas son el marcador `*NA*`. Errores dentro de las
-transcripciones: no sabemos (EDA, F3).
+En OpenSLR 61, se detectaron 78 clips (1,4 % del total) que repiten la combinación de hablante y oración, aunque esto no implica necesariamente que los archivos de audio sean idénticos.
+
+En las anotaciones temporales se encontraron 12 turnos inválidos (2 de AMI y 10 de Humyn LATAM), cuya duración es nula o negativa. En CALLHOME se identificaron otros 2 intervalos inválidos entre 28.112 registros originales. Además, en 2 de los 15 audios inspeccionados de CALLHOME, las anotaciones exceden la duración real de la grabación en 187,73 y 260,12 segundos, respectivamente.
+
+Respecto de la integridad de los archivos, 105 de los 106 audios seleccionados para la auditoría acústica pudieron decodificarse. El único archivo que presentó problemas fue CORdeBA_0016.wma, previamente identificado como ilegible. En Figshare v2, los 219 pares de audio cumplen con la tolerancia temporal de 10 milisegundos establecida para las diferencias entre canales.
+
+En las minutas de AMI, 47 de los 2.649 ítems contienen el marcador *NA*, en lugar de contenido válido.
+
+Por otra parte, no se encontraron colaboradores identificados compartidos entre los conjuntos de entrenamiento, validación y prueba de Common Voice. Sin embargo, esto no permite descartar posibles solapamientos con los datos de preentrenamiento de modelos externos.
+
+Finalmente, no se realizó una evaluación sistemática de los errores en el contenido de las transcripciones, por lo que todavía no es posible cuantificar su precisión ni determinar la magnitud del ruido en las anotaciones textuales.
 
 **8. ¿Depende de recursos externos, con licencias o costos?**
 
-**Actualización comprobable:** Common Voice se obtuvo tras aceptar condiciones de Mozilla Data Collective; las referencias del proyecto declaran CC0, pero el acceso/redistribución debe regirse además por los términos aceptados. CALLHOME requiere permiso de acceso a TalkBank/Hugging Face y no se redistribuye. Figshare v2 declara CC BY 4.0. CORdeBA prohíbe uso comercial (CC BY-NC-SA 4.0). Los originales restringidos y el audio no se incluyen en la entrega.
+Respuesta: Sí. Los datos provienen de fuentes externas sujetas a diferentes licencias, permisos y condiciones de uso. Su adquisición no tuvo costos monetarios directos.
 
-Respuesta: Sin costo monetario directo en esta adquisición, pero con permisos y condiciones de uso. OpenSLR 61: CC BY-SA 4.0. CORdeBA: CC BY-NC-SA 4.0
-(no comercial). Humyn, AMI, ICSI y VoxConverse: CC BY 4.0. Los originales completos están en la caché local o en el servidor de cada fuente según las condiciones de acceso. Atribución en
-[`muestra/LICENCIAS.md`](muestra/LICENCIAS.md).
+OpenSLR 61 utiliza la licencia CC BY-SA 4.0 y CORdeBA CC BY-NC-SA 4.0. Ambas requieren atribución y establecen condiciones de ShareAlike para la distribución de materiales derivados; CORdeBA, además, restringe el uso comercial. Humyn LATAM, AMI, ICSI, VoxConverse y Figshare v2 declaran licencias CC BY 4.0, que requieren atribución.
+
+Common Voice declara CC0, pero su descarga mediante Mozilla Data Collective requiere aceptar condiciones adicionales de acceso y uso. Por este motivo, el archivo original no se redistribuye desde el repositorio. CALLHOME, obtenido mediante una distribución procesada de TalkBank, requiere acceso autorizado y tampoco se redistribuye.
+
+Los archivos originales de audio y los materiales sujetos a restricciones permanecen fuera del repositorio, almacenados localmente o disponibles en los servidores de origen.
+
+Las licencias, condiciones de uso y referencias académicas de cada fuente se documentan en [`muestra/LICENCIAS.md`](muestra/LICENCIAS.md).
 
 **9. Si hay personas, ¿se puede identificar a alguien, directa o indirectamente?**
 
-Respuesta: Indirectamente, sí: por nombres de pila
-dichos en las conversaciones y por los datos de cada participante de AMI e
-ICSI (sexo, edad, lengua nativa), que están bajo un código.
+Respuesta: Sí, existe riesgo de identificación directa o indirecta de los participantes, aunque las fuentes presentan distintos niveles de información personal.
+
+En AMI e ICSI, los participantes están asociados a identificadores codificados, junto con atributos demográficos como sexo, edad y lengua nativa. Si bien estos códigos no revelan directamente su identidad, la combinación de atributos podría facilitar su identificación.
+
+En CORdeBA, Humyn LATAM, AMI e ICSI, las conversaciones espontáneas pueden contener nombres de pila y referencias personales que permitan reconocer a los participantes. En VoxConverse, las grabaciones provienen de videos de YouTube, por lo que algunas personas podrían identificarse a partir del contenido y contexto del video original.
+
+Por su parte, Common Voice utiliza identificadores de colaboradores sin nombres personales, pero las grabaciones conservan la voz de cada participante, que constituye un posible medio de identificación.
+
+En consecuencia, los identificadores codificados no garantizan el anonimato, especialmente cuando se combinan datos demográficos, contenido de las conversaciones y características de la voz. Por este motivo, los datos deben tratarse considerando el riesgo de reidentificación y las condiciones de uso de cada fuente.
 
 **10. ¿Hay datos sensibles?**
 
-Respuesta: Opiniones políticas en las dos grabaciones argentinas de
-Humyn. Conversaciones privadas en CORdeBA; no se leyeron completas.
+Respuesta: Todavía no se realizó una evaluación sistemática del contenido sensible de las grabaciones y transcripciones, por lo que no es posible determinar su alcance en el conjunto de datos.
+
+Como hallazgo puntual, se identificaron opiniones políticas en dos grabaciones argentinas de Humyn LATAM. Además, algunas fuentes presentan riesgos potenciales por la naturaleza de sus contenidos: CORdeBA y CALLHOME incluyen conversaciones privadas; AMI e ICSI, reuniones de trabajo que podrían contener información institucional o profesional confidencial; y VoxConverse, videos públicos que podrían incluir información sensible sobre sus participantes.
+
+Por otra parte, Common Voice y las demás fuentes de audio contienen grabaciones de voz que pueden permitir la identificación de personas, aunque esto no implica por sí solo que se hayan identificado categorías especiales de datos sensibles.
+
+En consecuencia, la presencia y magnitud de información sensible sigue siendo una limitación pendiente de evaluación. Los casos identificados no permiten caracterizar el conjunto completo ni descartar la existencia de otros contenidos sensibles.
 
 ## 3. Recolección
 
 **11. ¿Cómo se consiguió cada dato, y en qué período?**
 
-**Actualización comprobable:** La adquisición de Common Voice, CALLHOME y Figshare se verificó el 13/10/2026 con tamaño, hash y manifiestos locales (`fuentes.lock.json`). La fecha de descarga o publicación **no demuestra** el año de captación de cada voz. Los originales quedan en `.cache/`, con acceso reproducible según licencias y credenciales propias.
+Respuesta: Los datos se obtuvieron mediante descargas realizadas el 10 y 12/10/2026 con [`scripts/descargar_fuentes.py`](scripts/descargar_fuentes.py). La adquisición de Common Voice, CALLHOME y Figshare v2 se verificó el 13/10/2026 mediante tamaños, hashes y manifiestos locales (`fuentes.lock.json`). Los originales se conservan en `.cache/`, sujetos a las condiciones de acceso de cada fuente.
 
-Respuesta: Descarga del 10 y 12/10/2026 con [`scripts/descargar_fuentes.py`](scripts/descargar_fuentes.py).
-Grabado en 2018–2019 (OpenSLR 61, según su ficha), 2014–2019 (CORdeBA, según
-su ficha), 2004–2005 (AMI) y 2001–2002 (ICSI). Humyn y VoxConverse: no
-sabemos.
+Según las fichas originales, las grabaciones corresponden a 2018–2019 (OpenSLR 61), 2014–2019 (CORdeBA), 2004–2005 (AMI) y 2001–2002 (ICSI). Para Humyn, VoxConverse, Common Voice, CALLHOME y Figshare v2 no se verificó el período de grabación. Las fechas de descarga o publicación no permiten inferir cuándo se registraron las voces.
 
 **12. Si es una muestra, ¿con qué criterio se eligió?**
 
-**Actualización comprobable:** La muestra acústica quedó fijada por semilla 20261010 y SHA-256 del identificador; Common Voice estratifica por partición y CALLHOME por Parquet. En OpenSLR se auditan 44 FLAC derivados preseleccionados y en Figshare nueve mezclas, no todos los originales. `muestra/normalizado/aptitud/RESULTADOS_B.csv` e `INFORME_B.json` documentan evidencia y procedencia sin contener audio ni texto.
-
-Respuesta: Al azar con semilla 20261010: un extracto de 30 s por reunión
-elegida en AMI e ICSI, entre el 20% y el 80% de la reunión.
+Respuesta: Los criterios de selección variaron según la fuente. Para AMI e ICSI se eligió al azar con semilla 20261010 y SHA-256 del identificador: un extracto de 30 s por reunión, entre el 20 % y el 80 % de la reunión. Common Voice se estratificó por partición; CALLHOME, por archivo Parquet; en OpenSLR se auditaron 44 FLAC derivados preseleccionados; y en Figshare, nueve mezclas de inspección, no todos los originales. La muestra acústica quedó fijada de forma reproducible. Los archivos [`muestra/normalizado/aptitud/RESULTADOS_B.csv`](muestra/normalizado/aptitud/RESULTADOS_B.csv) e [`INFORME_B.json`](muestra/normalizado/aptitud/INFORME_B.json) documentan la evidencia y procedencia sin incluir audio ni texto.
 
 **13. Si hay personas, ¿sabían que se recolectaban sus datos, y lo consintieron?**
 
-Respuesta: OpenSLR 61: voluntarios. CORdeBA: grabado "con autorización de los
-participantes" (ficha). AMI, ICSI y Humyn: no figura en los archivos
-descargados. VoxConverse: videos públicos de YouTube; no sabemos.
+Respuesta: OpenSLR 61: voluntarios. CORdeBA: grabado "con autorización de los participantes" (ficha). Common Voice: no verificado en los archivos descargados. AMI, ICSI y Humyn: no figura en los archivos descargados. VoxConverse: videos públicos de YouTube; no sabemos. CALLHOME y Figshare v2: no verificado.
 
 ## 4. Usos
 
 **14. ¿Hay algo en cómo se armó que afecte sus usos?**
 
-**Actualización comprobable:** Los 140 registros CALLHOME no pueden tratarse como sesiones autónomas ni todos los intervalos normalizados como referencias puntuables. Figshare requiere segmentar por sus nueve sesiones y no por las 219 tareas. Common Voice exige controlar identidad de colaborador entre splits y es habla leída. Las observaciones acústicas son parciales: un FLAC o mezcla decodificable no valida el original completo ni la calidad de una anotación.
+Respuesta: Ver EDA, L1 a L5. No sirve para evaluar el producto completo: ninguna reunión tiene castellano, hablantes y minuta a la vez. OpenSLR 61 es lectura, con 44 hablantes para 5.739 clips: se parte por hablante. Common Voice también es habla leída y requiere controlar la identidad de los colaboradores entre splits. CALLHOME tiene 140 registros que no pueden tratarse como sesiones independientes ni todos sus intervalos como referencias válidas. Figshare debe segmentarse por sus nueve sesiones, no por las 219 tareas.
 
-Respuesta: Ver EDA, L1 a L5. No sirve para evaluar el producto completo:
-ninguna reunión tiene castellano, hablantes y minuta a la vez. OpenSLR 61 es
-lectura, con 44 hablantes para 5.739 clips: se parte por hablante. pyannote
-entrenó con AMI y VoxConverse: 91 reuniones AMI/ICSI estaban identificadas históricamente como no usadas por una configuración concreta; esto debe contrastarse con la versión exacta del modelo evaluado. Las
-minutas son en inglés y el 97% son de reuniones actuadas con el mismo guion:
-se parte por serie.
+Pyannote entrenó con AMI y VoxConverse: 91 reuniones AMI/ICSI estaban identificadas históricamente como no usadas por una configuración concreta de pyannote, pero debe contrastarse con la versión exacta del modelo evaluado. Las minutas son en inglés y el 97 % de las minutas de AMI corresponde a reuniones actuadas con el mismo guion: se parte por serie. Las observaciones acústicas son parciales; que un extracto se decodifique no garantiza la calidad del audio original completo ni de sus anotaciones.
 
 **15. ¿Para qué tareas no debería usarse?**
 
-**Actualización comprobable:** Tampoco para evaluar sin filtrado temporal CALLHOME, para estimar WER/DER a partir de la auditoría de decodificación, ni para extrapolar la precisión del producto a reuniones de trabajo en castellano. No se permite inferir identidades de personas entre registros ni utilizar originales restringidos fuera de las condiciones aceptadas.
-
-Respuesta: Identificar personas. Uso comercial, mientras incluya
-CORdeBA. Sacar conclusiones sobre reuniones reales en castellano. Entrenar y
-evaluar con las mismas personas o series.
+Respuesta: No debería utilizarse para identificar personas ni inferir identidades entre registros; para uso comercial mientras incluya CORdeBA; para sacar conclusiones o extrapolar la precisión del producto a reuniones reales de trabajo en castellano; ni para entrenar y evaluar con las mismas personas o series. Tampoco para evaluar CALLHOME sin filtrar las inconsistencias temporales, estimar WER/DER a partir de la auditoría de decodificación o utilizar originales restringidos fuera de las condiciones de acceso y uso aceptadas.
