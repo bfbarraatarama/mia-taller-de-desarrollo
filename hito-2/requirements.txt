@@ -1,5 +1,6 @@
 # Entorno del Hito 2 (notebook de EDA y armado de la muestra)
-#   uv venv .venv && uv pip install -r hito-2/requirements.txt
+#   python3 -m venv .venv
+#   .venv/bin/python -m pip install -r hito-2/requirements.txt -r hito-2/requirements-adquisicion.txt
 pandas>=2.2
 pyarrow>=17
 numpy>=2

@@ -1,56 +1,60 @@
-# Windows
+# Sistema operativo
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 *.lnk
-
-# macOS
 .DS_Store
 .AppleDouble
 .LSOverride
 
-# Editor / IDE
+# Editores
 .vscode/
 .idea/
 *.suo
 *.user
 *.swp
 *~
-
-# Claude Code
 .claude/settings.local.json
 
-# Node (por si se agrega código JS/TS)
-node_modules/
-npm-debug.log*
-yarn-error.log*
-.env
-.env.local
-.env.*.local
-
-# Python (por si se agrega código Python)
-__pycache__/
-*.py[cod]
-*.pyo
+# Python y entornos virtuales
 .venv/
 venv/
-dist/
-build/
+__pycache__/
+*.py[cod]
 *.egg-info/
 
-# Archivos temporales / borradores locales
+# Pruebas y cachés
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Compilación y dependencias
+build/
+dist/
+node_modules/
+
+# Entorno local y credenciales
+.env
+.env.*
+
+# Archivos temporales
 *.tmp
 *.bak
 *.orig
 
-# Carpeta
+# Directorios locales previamente excluidos
 clases/
-
-# Hito 2: fuentes crudas descargadas (se regeneran con hito-2/scripts/descargar_fuentes.py)
-hito-2/.cache/
 data/
 scrapper/
 
-# Audio de la muestra: se regenera con hito-2/scripts/armar_muestra.py
+# Hito 2: originales descargados
+hito-2/.cache/
+
+# Hito 2: audio derivado
 hito-2/muestra/**/*.flac
+
+# Hito 2: derivados con redistribución restringida o pendiente
+hito-2/muestra/normalizado/
+hito-2/muestra/uba_games_figshare/

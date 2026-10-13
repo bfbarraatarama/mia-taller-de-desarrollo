@@ -1,72 +1,32 @@
 # Veredicto de viabilidad
 
-**Documento 4 de 4 del [Hito 2](README.md)**
+**MIA104 · Hito 2 · Luisa, Bruno, Matías y Felipe.** Evidencia: [`EDA`](2-eda-de-viabilidad.md), [`notebook`](notebooks/eda_viabilidad.ipynb) y [`niveles a priori`](niveles-a-priori.md).
 
-**Equipo:** Luisa, Bruno, Matías, Felipe.
+## Decisión: ajustar el alcance
 
-**Datos sobre los que se decidió:** reales (OpenSLR 61, CORdeBA, Humyn LATAM,
-AMI, ICSI, VoxConverse). Los códigos son celdas del
-[notebook](notebooks/eda_viabilidad.ipynb).
+**Continuar con la evaluación por módulo; no considerar aún viable la evaluación integral en castellano.** La validez estructural no implica que todas las referencias sean puntuables.
 
----
+## Fundamentos
 
-## 1. Decisión
+- **Transcripción:** 5.739 clips de OpenSLR (44 voces) y 10.393 de Common Voice. C5 cumple (97,5 % de clips con género, edad y acento); R3 no (46,4 % de horas espontáneas en fuentes históricas). F3 permanece sin medir.
+- **Hablantes:** 700 sesiones históricas; Figshare aporta nueve sesiones, no 219. En CALLHOME, 159/3.168 segmentos de 15 audios inspeccionados exceden la duración del audio (dos registros). K2 no cumple; la muestra no permite extrapolar esta tasa.
+- **Minuta e integral:** AMI tiene 105 reuniones con minuta completa, todas en inglés; solo el 3,5 % de las horas con minuta son de reuniones reales (M2). **V5 = 0**, frente a diez reuniones integrales requeridas en castellano.
 
-**Ajustar el alcance:** el producto es en castellano y se evalúa por módulo.
+## Riesgos y procedencia
 
-| Módulo | Veredicto | Con qué datos |
+| Riesgo | Evidencia del EDA | Qué falta medir o conseguir |
 |---|---|---|
-| Transcripción | Ajustar | Castellano rioplatense: lectura completa; espontáneo, después de alinear CORdeBA |
-| Separación de hablantes | Seguir | AMI e ICSI (inglés): 91 reuniones que pyannote no vio |
-| Minuta | Ajustar | AMI traducido al castellano (dataset derivado), con sus enlaces de evidencia |
-| De punta a punta | Sin datos | 10 reuniones propias en castellano |
+| Dominio y volumen integral | G2: **0** fuentes de videollamada; V5: **0/10** reuniones integrales | Grabar y anotar diez reuniones propias consentidas |
+| Contaminación | L2: **154/171** AMI figuran en entrenamiento/ajuste de una configuración de pyannote | Auditar la versión y el entrenamiento de cada modelo candidato |
+| Referencias | CALLHOME: **2/15** audios con exceso temporal; F3 y M3 sin medir | Filtrar intervalos no puntuables, doble transcripción y calibrar el juez |
+| Representatividad | G1: **53,6–92,8 %** estimado desde fichas; R2 sin medición por persona | Obtener fechas de captación y edades por hablante |
 
-## 2. Fundamentos
+Las cifras de CALLHOME son muestrales; las de G1 son estimaciones documentadas, no mediciones directas. No se asignan probabilidades de fracaso sin sustento.
 
-- **Cada módulo tiene datos:** 15,0 h de audio rioplatense de 44 hablantes
-  (`V1`), 700 sesiones con hablantes y tiempos (`V3`), 105 reuniones con
-  minuta completa y el 90,5% de sus decisiones y acciones enlazadas a la
-  transcripción (`M1`, `C4`).
-- **El producto completo no tiene:** 0 reuniones en castellano con audio,
-  transcripción, hablantes y minuta (`V5`), y 0 minutas en castellano (`R5`).
-- **Pesó más `V5`:** ninguna fuente pública cubre el caso completo, pero lo
-  que falta se puede producir.
+## Plan básico del procesamiento
 
-## 3. Exposición al riesgo
+- **Obtención:** fijar originales, permisos y hashes; particionar por colaborador, serie o sesión comprobada; no inventar grupos CALLHOME.
+- **Transformaciones:** comprobar audio y tiempos; preservar originales, silencio y solapamientos; excluir con trazabilidad tramos inválidos y distinguir traducciones sintéticas.
+- **Estructura:** conjuntos separados de ASR, diarización y minuta, más diez reuniones propias con audio, transcripción, hablantes y minuta para la evaluación integral.
 
-Exposición = probabilidad × impacto, en horas de trabajo.
-
-| Propiedad estimada | Riesgo (cifra) | Procedencia | Qué haría falta para medirla |
-|---|---|---|---|
-| Modalidad (`G2`) | El error medido en sala o en lectura no vale para videollamada: 0,6 × 12 h = **7,2 h** | 0 de 4 fuentes de videollamada (documentación) | Reuniones propias por videollamada |
-| Cobertura de CORdeBA (`C1`) | El texto no se alinea solo con el audio: 0,4 × 15 h = **6,0 h** | Sin tiempos; 3 de 23 grabaciones bajo 100 palabras/min | Probar la alineación en 2 grabaciones |
-| Traducción (`R5`) | La minuta sobre texto traducido no predice el resultado en castellano real: 0,5 × 10 h = **5,0 h** | 0 de 142 minutas en castellano | Comparar con las reuniones propias |
-| Datos ya vistos (`L2`) | La minuta sobre AMI da mejor porque el modelo ya la vio: 0,7 × 6 h = **4,2 h** | Minutas públicas hace más de 15 años | Comparar con las reuniones propias |
-| Edad (`R2`) | Transcribe peor a mayores de 50 y no se ve: 0,3 × 8 h = **2,4 h** | Mediana de 24 años (ficha de CORdeBA) | Common Voice 26, que trae edad |
-| Error de la referencia (`F1`, `F3`) | Más de 2% de error en las transcripciones: 0,35 × 5 h = **1,8 h** | No medido; 20 de 28 filas de Humyn contradicen su ficha | Doble transcripción de 44 clips |
-
-**Total: 26,6 h.** Riesgo del ajuste: no completar las 10 reuniones propias,
-0,4 × 35 h = **14 h**.
-
-## 4. Consecuencias de la decisión
-
-| | Plan |
-|---|---|
-| Obtención y conjunto de evaluación | Un conjunto por módulo, congelado con su huella antes de ajustar nada. Transcripción: OpenSLR 61 partido por hablante, más CORdeBA y Humyn Argentina. Hablantes: las 91 reuniones de AMI e ICSI que pyannote no vio. Minuta: AMI partido por serie (`L4`). Punta a punta: 10 reuniones propias |
-| Limpieza y transformaciones | Fuera: 78 clips repetidos, 12 turnos de duración cero, 47 marcadores `*NA*`, 1 audio ilegible, las filas de Humyn que no están en castellano. Texto normalizado (minúsculas, comillas, marcas de oralidad). CORdeBA se alinea con su audio. AMI se traduce al castellano (transcripción y minuta), marcado como sintético |
-| Estructura final | Transcripción: audio + texto. Hablantes: audio + turnos (hablante, inicio, fin). Minuta: turnos + ítems (tipo, texto, citas). Cada fila con fuente, partición y origen (real o sintético) |
-
-**Alcance nuevo:**
-
-1. Castellano. Cada módulo se evalúa con su fuente; no hace falta un dataset
-   que tenga todo.
-2. La minuta se evalúa sobre AMI traducido, con verificaciones
-   determinísticas, cobertura contra la referencia y un LLM como juez
-   calibrado contra anotación humana (`M3`). Las citas se validan contra los
-   enlaces de evidencia de AMI.
-3. El producto completo se evalúa con 10 reuniones propias, anotadas igual
-   que AMI (transcripción, hablantes, minuta y evidencias).
-
-**Qué quedó afuera:** afirmar algo sobre reuniones reales en castellano antes
-de tener las propias; hablantes de fuera de Buenos Aires; VoxConverse como
-evaluación principal (pyannote entrenó con él).
+**Nuevo alcance:** evaluación modular; la evaluación integral queda como trabajo futuro hasta reunir referencias válidas.

@@ -1,0 +1,221 @@
+{
+  "archivos": {
+    "ami/ami_public_manual_1.6.2.zip": {
+      "bytes": 22887865,
+      "sha256": "b56e5babb2496b8795deeeda7e71178d7fbc9963f94276cf2a3f4b56ebbc9f9d"
+    },
+    "callhome/data-00000-of-00005.parquet": {
+      "bytes": 490136158,
+      "sha256": "d9cd29760788d79397bc21c8f57e164de9668c3884c808ecb63c94e14fd9049d"
+    },
+    "callhome/data-00001-of-00005.parquet": {
+      "bytes": 500741540,
+      "sha256": "c1ad2a7d23db32dac8a9c11f562ac97744c1d228dd0bebb4b3510b4f69572f1d"
+    },
+    "callhome/data-00002-of-00005.parquet": {
+      "bytes": 500373954,
+      "sha256": "d6129aef0c3102d079d1ca6f389d33d125c8bd31b55d4d1cf7ff40f545e86dc1"
+    },
+    "callhome/data-00003-of-00005.parquet": {
+      "bytes": 474770851,
+      "sha256": "03f580f50243702e1cbdb09bb08b143fe3228f6b7e03254d085b3afa74200ad7"
+    },
+    "callhome/data-00004-of-00005.parquet": {
+      "bytes": 458907309,
+      "sha256": "999a5fefba78d3d2b05cfefcb6994cfbf1fe47d5b010d281a89dd0c569a99fb5"
+    },
+    "common_voice/common-voice-scripted-speech-26-0-riopla-0a258d97.tar.gz": {
+      "bytes": 447367525,
+      "sha256": "0c69b1e1f49b02afbe2f99af90651b8867cf5c7e9ea02137c995518e575546ec"
+    },
+    "cordeba/CordeBA_0001.mp3": {
+      "bytes": 14621654,
+      "sha256": "198a1d112fea679b029d165f6c432741296b2d94d51fedb30065bdb4052f41d2"
+    },
+    "cordeba/CordeBA_0002.mp3": {
+      "bytes": 11980570,
+      "sha256": "a8c89a4dbdcb825a46863ba0ece2892d03d21d1eef105ae62bbd11246d5452e1"
+    },
+    "cordeba/CordeBA_0003.mp3": {
+      "bytes": 6513664,
+      "sha256": "bb1c9123b4066769ae86d488b4ac1a35dd92d5068ecc8adb28d549301f0c64c3"
+    },
+    "cordeba/CordeBA_0004.mp3": {
+      "bytes": 14419780,
+      "sha256": "dad2f683de40233e8c83c9fab733986372b909200289ffca172f82fc5cd460ed"
+    },
+    "cordeba/CordeBA_0005.mp3": {
+      "bytes": 17915591,
+      "sha256": "99f8715ad5c630534ebd67484b57ac17c50a67bba494ece8ae7b21286125fbd1"
+    },
+    "cordeba/CordeBA_0006.mp3": {
+      "bytes": 22692864,
+      "sha256": "13d5e0da954505c7d64487f05f126d93af73ea1a5a3c633171a0575dd5854ee4"
+    },
+    "cordeba/CordeBA_0007.mp3": {
+      "bytes": 13454565,
+      "sha256": "d78a89e881f725bb0b9592a33bcb7499afad205e092eeb8dd03716fcb580022b"
+    },
+    "cordeba/CordeBA_0008.mp3": {
+      "bytes": 14241311,
+      "sha256": "0f3d83864a59d216b0c64135e28c893b9a9e42cf4e6e51535c18a97fcbfa02a9"
+    },
+    "cordeba/CordeBA_0009.mp3": {
+      "bytes": 17678874,
+      "sha256": "87cc62d3dc2042f5e7da3e70613c714dcf81f00b1066bcc34790d34312bd3b83"
+    },
+    "cordeba/CordeBA_0010.mp3": {
+      "bytes": 9962665,
+      "sha256": "eaa5327736b94f55a5e02ca4f5791bd458a8e6e762029bdccd902cd2db7549b6"
+    },
+    "cordeba/CordeBA_0011.mp3": {
+      "bytes": 10763891,
+      "sha256": "72b3eb57363ab951aead163d1a390ed48cad1382b1074293e3f552fd3a4a9e71"
+    },
+    "cordeba/CordeBA_0012.mp3": {
+      "bytes": 35716926,
+      "sha256": "54b708a8e3befc63e78c0240b90dc0eabb345dd578c127cdc9c0285d35a257f7"
+    },
+    "cordeba/CordeBA_0013.mp3": {
+      "bytes": 9223239,
+      "sha256": "7aa286be4211a1eb36dc09a634dc06d9c1450486a6802340170261223aa92884"
+    },
+    "cordeba/CordeBA_0014.mp3": {
+      "bytes": 14570979,
+      "sha256": "e7b2b8616f90a4422293983f36f40659a7e4de5befe62c4252a9cc814028f844"
+    },
+    "cordeba/CordeBA_0015.mp3": {
+      "bytes": 21872149,
+      "sha256": "cd97249007057398a773a7aa33494dd0c20ab7dcb54e869ef613108430ad1b33"
+    },
+    "cordeba/CordeBA_0016.wma": {
+      "bytes": 21194,
+      "sha256": "04fc9083cbe51d4b57a99f3cdc2dc7e3eeaa362b41af4eccfcaec31001850892"
+    },
+    "cordeba/CordeBA_0017.mp3": {
+      "bytes": 7231238,
+      "sha256": "6d357b11714e102cd7ed14222d2aeb5da5b4f2ffeee6202bf3ac10b309a97398"
+    },
+    "cordeba/CordeBA_0018.mp3": {
+      "bytes": 14505462,
+      "sha256": "7fd4a71bbe0407bb6996fcecdcf711cf1be6e876ff74780797758e605492b5f2"
+    },
+    "cordeba/CordeBA_0019.mp3": {
+      "bytes": 10822585,
+      "sha256": "dfa675f08ca1048dca7b16c51be9265b07d1761fd846094d1a3c4a8fd6c4f5db"
+    },
+    "cordeba/CordeBA_0020.mp3": {
+      "bytes": 10871892,
+      "sha256": "0267889ee363bca11f0baf0bd85d8e642f4024ff06183902c8880d5c5654db65"
+    },
+    "cordeba/CordeBA_0021.mp3": {
+      "bytes": 25838007,
+      "sha256": "2dc94e38d7c0feaf810b890d5f90f84e811273fc3c4c5a515e7333dbb8a33615"
+    },
+    "cordeba/CordeBA_0022.mp3": {
+      "bytes": 19550647,
+      "sha256": "a811770017f08ab51b0e57847028fb82b9cd7530c1afe030b86f5922ebc5f61f"
+    },
+    "cordeba/CordeBA_0023.mp3": {
+      "bytes": 14626670,
+      "sha256": "6470de77ce8011e83a3ef5faf0be89171e3bf60dbb6c52214eb9d6400d2ca9e5"
+    },
+    "cordeba/CordeBA_0024.mp3": {
+      "bytes": 8285673,
+      "sha256": "cddcc846f0eca95aa5bff573983d8d98e7b2638002d388c801937581e7d3fab7"
+    },
+    "cordeba/metadata.csv": {
+      "bytes": 580328,
+      "sha256": "3311b9d265cd72bb0d5488d3f160d5b1f453012b1b3a583b452c0543e574ff44"
+    },
+    "icsi/ICSI_plus_NXT.zip": {
+      "bytes": 55491177,
+      "sha256": "e4ab79a8b638bdd29121d744c452c680fe23791e406ffe5125e2f5b118923439"
+    },
+    "pyannote_ami/dev.meetings.txt": {
+      "bytes": 138,
+      "sha256": "f9a75648195c1731b9055dc3df8eb5cea261e08e7d9125a1976c1a45480a2aa9"
+    },
+    "pyannote_ami/test.meetings.txt": {
+      "bytes": 128,
+      "sha256": "30193ba8eb5c4a08166221d82f6eedddf57222f25d6aa7b2c20b9ef447e071c5"
+    },
+    "pyannote_ami/train.meetings.txt": {
+      "bytes": 1078,
+      "sha256": "752c2a2b5af083c3fc468d524269b6481a4610572b81df44026a0a94b05e2f56"
+    },
+    "slr61/es_ar_female.zip": {
+      "bytes": 1262394798,
+      "sha256": "9cc0f2895d6466c478af9a393def99a9ff4688f26593bbfbb5468eb21627bf08"
+    },
+    "slr61/es_ar_male.zip": {
+      "bytes": 551574109,
+      "sha256": "9f0cd8441370ce6a7fe2693c306a83d699d7d05608170f8a1d42b0556bf3d9bc"
+    },
+    "slr61/line_index_female.tsv": {
+      "bytes": 294085,
+      "sha256": "b1ecaea981f29623b9f07a35cb6b90b1dc97fc655d9a17a3cb39e825b37dc9e2"
+    },
+    "slr61/line_index_male.tsv": {
+      "bytes": 139328,
+      "sha256": "cd3e47467638e14c6173e8eb82058e97f512b231e116e364d9f3967c2f839826"
+    },
+    "uba_games/figshare-v2/phrases.rar": {
+      "bytes": 347152,
+      "sha256": "687d1a6c1db8cda12c5ca8a6d50051966a2d638dd0daafb82803162ebf2c3e8b"
+    },
+    "uba_games/figshare-v2/wavs.rar": {
+      "bytes": 721854279,
+      "sha256": "6cd828e4c80006aedbf328035166824f042b59af03796dafdc6b2e785870233b"
+    },
+    "voxconverse/voxconverse-master.zip": {
+      "bytes": 324462,
+      "sha256": "4a424c40aa78f0b2c1160b1ff9392bed6c5661c6a2737eef9dd5d757b4e08a62"
+    }
+  },
+  "repos": {
+    "callhome": {
+      "archivos": [
+        "spa/data-00000-of-00005.parquet",
+        "spa/data-00001-of-00005.parquet",
+        "spa/data-00002-of-00005.parquet",
+        "spa/data-00003-of-00005.parquet",
+        "spa/data-00004-of-00005.parquet"
+      ],
+      "repo": "talkbank/callhome",
+      "revision": "17c8a153215aa7c50b805078fd6284ba81c2fc47"
+    },
+    "cordeba": {
+      "archivos": [
+        "data/CordeBA_0001.mp3",
+        "data/CordeBA_0002.mp3",
+        "data/CordeBA_0003.mp3",
+        "data/CordeBA_0004.mp3",
+        "data/CordeBA_0005.mp3",
+        "data/CordeBA_0006.mp3",
+        "data/CordeBA_0007.mp3",
+        "data/CordeBA_0008.mp3",
+        "data/CordeBA_0009.mp3",
+        "data/CordeBA_0010.mp3",
+        "data/CordeBA_0011.mp3",
+        "data/CordeBA_0012.mp3",
+        "data/CordeBA_0013.mp3",
+        "data/CordeBA_0014.mp3",
+        "data/CordeBA_0015.mp3",
+        "data/CordeBA_0016.wma",
+        "data/CordeBA_0017.mp3",
+        "data/CordeBA_0018.mp3",
+        "data/CordeBA_0019.mp3",
+        "data/CordeBA_0020.mp3",
+        "data/CordeBA_0021.mp3",
+        "data/CordeBA_0022.mp3",
+        "data/CordeBA_0023.mp3",
+        "data/CordeBA_0024.mp3",
+        "metadata.csv"
+      ],
+      "repo": "marianbasti/cordeba",
+      "revision": "9c3f8c045aa49ac23d8f28c0ae954202b6f5d5d4"
+    }
+  },
+  "version": 1
+}

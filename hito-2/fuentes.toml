@@ -1,0 +1,54 @@
+# Identidad de las fuentes. Las revisiones y hashes adquiridos
+# se fijan en fuentes.lock.json.
+
+[common_voice]
+id = "cmr468dhn00lvmm07a22jwgh5"
+archivo = "common-voice-scripted-speech-26-0-riopla-0a258d97.tar.gz"
+
+[uba_games]
+registro = "https://ri.conicet.gov.ar/handle/11336/191235"
+# Incorporar una sección [uba_games.urls] con un enlace oficial
+# verificado para cada archivo antes de habilitar su descarga.
+archivos = [
+    "b1-dialogue-phrases.zip",
+    "b1-dialogue-tasks.zip",
+    "b1-dialogue-turns.zip",
+    "b1-dialogue-wavs.zip",
+    "b1-dialogue-words.zip",
+    "b2-dialogue-phrases.zip",
+    "b2-dialogue-tasks.zip",
+    "b2-dialogue-turns.zip",
+    "b2-dialogue-wavs.zip",
+    "sessions-info.csv",
+    "subjects-info.csv",
+]
+
+# Subconjunto original depositado con el estudio SIS (Figshare, versión 2).
+# Es una distribución distinta de los once archivos de CONICET.
+[uba_games_figshare]
+article_id = 22647313
+version = 2
+licencia_declarada = "CC BY 4.0"
+
+[uba_games_figshare.archivos."phrases.rar"]
+file_id = 40201189
+bytes = 347152
+md5 = "31f429c6a43ac7411e0cfacf22726ac6"
+
+[uba_games_figshare.archivos."wavs.rar"]
+file_id = 40201195
+bytes = 721854279
+md5 = "5ddfe4d3bca45b1a70d3dd95fc3f18ad"
+
+[huggingface.cordeba]
+repo = "marianbasti/cordeba"
+prefijo = "data/CordeBA_"
+
+[huggingface.humyn]
+repo = "humyn-labs/LATAM-High-Fidelity-ASR"
+prefijo = "data/train-"
+
+[huggingface.callhome]
+repo = "talkbank/callhome"
+prefijo = "spa/data-"
+autenticado = true

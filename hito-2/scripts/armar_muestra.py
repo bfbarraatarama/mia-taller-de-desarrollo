@@ -33,6 +33,7 @@ import random
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import zipfile
 from collections import defaultdict
@@ -42,6 +43,13 @@ from pathlib import Path
 import pandas as pd
 import soundfile as sf
 from lxml import etree
+
+# El modo aislado (-I) no incorpora el directorio del script a sys.path.
+SCRIPTS_DIR = str(Path(__file__).resolve().parent)
+if SCRIPTS_DIR not in sys.path:
+    sys.path.insert(0, SCRIPTS_DIR)
+
+from validar_muestra import TOLERANCIA_FIN_FIGSHARE_S
 
 SEMILLA = 20261010
 HITO = Path(__file__).resolve().parent.parent
@@ -534,14 +542,468 @@ def sha256(ruta: Path) -> str:
     return h.hexdigest()
 
 
-def main() -> None:
+# La lectura de RAR y ZIP es compartida por los adaptadores, sin extracción permanente.
+def entradas_comprimidas(ruta: Path, *, incluir=None):
+    """Itera (nombre, flujo) sobre las entradas regulares de un archivo.
+
+    Si `incluir` descarta una entrada, entrega (nombre, None) sin solicitar
+    su contenido descomprimido; su nombre sigue disponible para procedencia.
+    Se usa libarchive y un archivo temporal para datos mayores de 8 MiB.
+    """
+    import ctypes as ct
+    from ctypes.util import find_library
+
+    nombre_biblioteca = find_library("archive")
+    if not nombre_biblioteca:
+        raise RuntimeError("Se requiere libarchive (en Ubuntu: libarchive13)")
+    biblioteca = ct.CDLL(nombre_biblioteca)
+    prototipos = {
+        "archive_read_new": ([], ct.c_void_p),
+        "archive_read_support_format_all": ([ct.c_void_p], ct.c_int),
+        "archive_read_support_filter_all": ([ct.c_void_p], ct.c_int),
+        "archive_read_open_filename": ([ct.c_void_p, ct.c_char_p, ct.c_size_t], ct.c_int),
+        "archive_read_next_header": ([ct.c_void_p, ct.POINTER(ct.c_void_p)], ct.c_int),
+        "archive_entry_pathname": ([ct.c_void_p], ct.c_char_p),
+        "archive_entry_filetype": ([ct.c_void_p], ct.c_uint),
+        "archive_read_data": ([ct.c_void_p, ct.c_void_p, ct.c_size_t], ct.c_ssize_t),
+        "archive_read_data_skip": ([ct.c_void_p], ct.c_int),
+        "archive_error_string": ([ct.c_void_p], ct.c_char_p),
+        "archive_read_free": ([ct.c_void_p], ct.c_int),
+    }
+    for nombre, (argumentos, resultado) in prototipos.items():
+        funcion = getattr(biblioteca, nombre)
+        funcion.argtypes, funcion.restype = argumentos, resultado
+
+    lector = biblioteca.archive_read_new()
+    if not lector:
+        raise RuntimeError("libarchive no pudo inicializarse")
+    try:
+        biblioteca.archive_read_support_format_all(lector)
+        biblioteca.archive_read_support_filter_all(lector)
+        if biblioteca.archive_read_open_filename(lector, str(ruta).encode(), 10240) != 0:
+            raise ValueError(f"No se pudo abrir {ruta}")
+        entrada = ct.c_void_p()
+        bloque = ct.create_string_buffer(1024 * 1024)
+        while True:
+            estado = biblioteca.archive_read_next_header(lector, ct.byref(entrada))
+            if estado == 1:  # ARCHIVE_EOF
+                break
+            if estado != 0:
+                raise ValueError(f"Cabecera dañada en {ruta}: {estado}")
+            nombre = biblioteca.archive_entry_pathname(entrada).decode("utf-8")
+            partes = Path(nombre.replace("\\", "/"))
+            if partes.is_absolute() or ".." in partes.parts:
+                raise ValueError(f"Ruta interna no permitida: {nombre}")
+            tipo = biblioteca.archive_entry_filetype(entrada)
+            if tipo == 0o040000:  # directorio
+                continue
+            if tipo != 0o100000:
+                raise ValueError(f"Tipo de entrada no admitido: {nombre}")
+            if incluir is not None and not incluir(nombre):
+                estado_omision = biblioteca.archive_read_data_skip(lector)
+                if estado_omision != 0:
+                    detalle = biblioteca.archive_error_string(lector)
+                    mensaje = detalle.decode("utf-8", "replace") if detalle else "sin detalle"
+                    raise ValueError(
+                        f"No se pudo omitir la entrada auxiliar {nombre}: "
+                        f"libarchive={estado_omision}: {mensaje}"
+                    )
+                yield nombre, None
+                continue
+            with tempfile.SpooledTemporaryFile(max_size=8 * 1024 * 1024) as temporal:
+                while True:
+                    cantidad = biblioteca.archive_read_data(lector, bloque, len(bloque))
+                    if cantidad == 0:
+                        break
+                    if cantidad < 0:
+                        detalle = biblioteca.archive_error_string(lector)
+                        mensaje = detalle.decode("utf-8", "replace") if detalle else "sin detalle"
+                        raise ValueError(
+                            f"Error leyendo {nombre}: libarchive={cantidad}: {mensaje}"
+                        )
+                    temporal.write(bloque.raw[:cantidad])
+                temporal.seek(0)
+                yield nombre, temporal
+    finally:
+        biblioteca.archive_read_free(lector)
+
+
+_UBA_ARCHIVO = re.compile(r"s(\d+)\.objects\.(\d+)\.channel([12])\.(phrases|wav)\Z", re.I)
+
+
+def _uba_identidad(nombre: str, extension: str):
+    ruta_interna = Path(nombre.replace("\\", "/"))
+
+    # Los WAV de este directorio no están separados por hablante.
+    # Se registran como auxiliares y no se asignan a ningún canal.
+    if extension == "wav" and any(
+        parte.casefold() == "sin separar canales"
+        for parte in ruta_interna.parts
+    ):
+        return None
+
+    coincidencia = _UBA_ARCHIVO.fullmatch(ruta_interna.name)
+    if coincidencia is None:
+        if nombre.lower().endswith(f".{extension}"):
+            raise ValueError(f"Nombre inesperado en UBA Games: {nombre}")
+        return None
+    if coincidencia[4].lower() != extension:
+        raise ValueError(f"Tipo incompatible: {nombre}")
+    sesion = f"S{int(coincidencia[1])}"
+    tarea = f"{int(coincidencia[2]):02d}"
+    canal = int(coincidencia[3])
+    return sesion, tarea, canal
+
+
+def _uba_grabacion(sesion: str, tarea: str) -> str:
+    return f"figshare_v2_{sesion}_objects_{tarea}"
+
+
+def armar_uba_games_figshare() -> dict:
+    """Prepara datos de diarización de Figshare v2; no emite un veredicto."""
+    import tomllib
+    import wave
+    import numpy as np
+
+    print("[uba_games_figshare]")
+    cfg = tomllib.loads((HITO / "fuentes.toml").read_text(encoding="utf-8"))["uba_games_figshare"]
+    lock = json.loads((HITO / "fuentes.lock.json").read_text(encoding="utf-8"))
+    raiz = CACHE / "uba_games" / "figshare-v2"
+    rutas = {}
+    for nombre, ficha in cfg["archivos"].items():
+        ruta = raiz / nombre
+        clave = f"uba_games/figshare-v2/{nombre}"
+        if not ruta.is_file() or ruta.stat().st_size != ficha["bytes"]:
+            raise ValueError(f"Falta original o tamaño oficial incorrecto: {clave}")
+        sha = sha256(ruta)
+        if lock.get("archivos", {}).get(clave) != {"bytes": ficha["bytes"], "sha256": sha}:
+            raise ValueError(f"Original no fijado correctamente: {clave}")
+        resumen = hashlib.md5()
+        with ruta.open("rb") as f:
+            for bloque in iter(lambda: f.read(1024 * 1024), b""):
+                resumen.update(bloque)
+        if resumen.hexdigest() != ficha["md5"]:
+            raise ValueError(f"Original diferente al publicado por Figshare: {clave}")
+        rutas[nombre] = ruta
+
+    intervalos = []
+    referencias = defaultdict(dict)
+    auxiliares = {"phrases": [], "wavs": []}
+    for nombre, contenido in entradas_comprimidas(rutas["phrases.rar"]):
+        identidad = _uba_identidad(nombre, "phrases")
+        if identidad is None:
+            auxiliares["phrases"].append(nombre)
+            continue
+        sesion, tarea, canal = identidad
+        clave = (sesion, tarea)
+        if canal in referencias[clave]:
+            raise ValueError(f"Canal de anotación duplicado: {nombre}")
+        anterior = 0.0
+        cantidad = 0
+        for numero, linea in enumerate(contenido.read().decode("utf-8-sig").splitlines(), 1):
+            campos = linea.split("\t", 2)
+            if len(campos) != 3 or not campos[2].strip():
+                raise ValueError(f"Anotación mal formada: {nombre}:{numero}")
+            inicio, fin = float(campos[0]), float(campos[1])
+            if not (np.isfinite(inicio) and np.isfinite(fin) and 0 <= inicio < fin):
+                raise ValueError(f"Tiempos inválidos: {nombre}:{numero}")
+            if inicio < anterior - 1e-4:
+                raise ValueError(f"Tiempos desordenados: {nombre}:{numero}")
+            texto = campos[2].strip()
+            intervalos.append({
+                "fuente": "uba_games_figshare", "session_id": f"figshare_v2_{sesion}",
+                "recording_id": _uba_grabacion(sesion, tarea),
+                "speaker_id": f"figshare_v2_{sesion}_canal{canal}",
+                "canal": canal, "orden": numero, "inicio_s": inicio, "fin_s": fin,
+                "texto_original": texto, "silencio_marcado": texto == "#",
+                "origen_anotacion": nombre,
+            })
+            anterior = fin
+            cantidad += 1
+        if cantidad == 0:
+            raise ValueError(f"Anotación vacía: {nombre}")
+        referencias[clave][canal] = {"fin_s": anterior, "archivo": nombre}
+
+    # Se selecciona determinísticamente la primera tarea de cada sesión.
+    # Los extractos acústicos son derivados, no forman parte de las referencias.
+    primeras = {}
+    for sesion, tarea in sorted(referencias):
+        primeras.setdefault(sesion, tarea)
+    audios = defaultdict(dict)
+    fragmentos = defaultdict(dict)
+    for nombre, contenido in entradas_comprimidas(
+        rutas["wavs.rar"],
+        incluir=lambda nombre: _uba_identidad(nombre, "wav") is not None,
+    ):
+        identidad = _uba_identidad(nombre, "wav")
+        if identidad is None:
+            auxiliares["wavs"].append(nombre)
+            continue
+        sesion, tarea, canal = identidad
+        clave = (sesion, tarea)
+        if canal in audios[clave]:
+            raise ValueError(f"Canal WAV duplicado: {nombre}")
+        try:
+            with wave.open(contenido, "rb") as audio:
+                hz, canales, ancho = audio.getframerate(), audio.getnchannels(), audio.getsampwidth()
+                cuadros = audio.getnframes()
+                compresion = audio.getcomptype()
+                if min(hz, canales, ancho, cuadros) <= 0:
+                    raise ValueError(f"WAV vacío o inválido: {nombre}")
+                primer_tramo = None
+                if primeras.get(sesion) == tarea and (canales, hz, ancho, compresion) == (1, 16000, 2, "NONE"):
+                    primer_tramo = audio.readframes(min(cuadros, 30 * hz))
+                # Inspección exhaustiva: una cabecera correcta no alcanza.
+                # Si ya se leyó el extracto, se continúa desde esa posición.
+                bytes_leidos = len(primer_tramo) if primer_tramo is not None else 0
+                while datos := audio.readframes(65536):
+                    bytes_leidos += len(datos)
+                if bytes_leidos != cuadros * canales * ancho:
+                    raise ValueError(f"WAV truncado: {nombre}")
+        except (wave.Error, EOFError) as e:
+            raise ValueError(f"Audio ilegible {nombre}: {e}") from e
+        audios[clave][canal] = {
+            "archivo": nombre, "duracion_s": cuadros / hz,
+            "hz": hz, "canales": canales, "bytes_muestra": ancho,
+            "compresion": compresion,
+        }
+        if primer_tramo is not None:
+            fragmentos[clave][canal] = np.frombuffer(primer_tramo, dtype="<i2").copy()
+
+    grabaciones, hablantes, extractos = [], [], []
+    salida = OUT / "uba_games_figshare"
+    carpeta_audio = salida / "audio_muestra"
+    carpeta_audio.mkdir(parents=True, exist_ok=True)
+    anomalías = []
+    por_precision = []
+    for sesion, tarea in sorted(set(referencias) | set(audios)):
+        clave = (sesion, tarea)
+        ref, audio = referencias.get(clave, {}), audios.get(clave, {})
+        recording = _uba_grabacion(sesion, tarea)
+        formatos = {(a["hz"], a["canales"], a["bytes_muestra"], a["compresion"]) for a in audio.values()}
+        duraciones = [a["duracion_s"] for a in audio.values()]
+        duracion = max(duraciones, default=None)
+        completa = set(ref) == {1, 2} and set(audio) == {1, 2}
+        alineacion = (abs(duraciones[0] - duraciones[1]) if len(duraciones) == 2 else None)
+        excesos = {
+            c: max(0.0, ref[c]["fin_s"] - audio[c]["duracion_s"])
+            for c in ref.keys() & audio.keys()
+        }
+        exceso_max = max(excesos.values(), default=0.0)
+        fuera = exceso_max > 0.0
+        fuera_tolerancia = exceso_max > TOLERANCIA_FIN_FIGSHARE_S + 1e-12
+        aceptada_por_precision = fuera and not fuera_tolerancia
+        mismo_formato = len(formatos) == 1 and next(iter(formatos), None) == (16000, 1, 2, "NONE")
+        valido_audio = completa and mismo_formato and alineacion <= 1 / 16000 and not fuera_tolerancia
+        grabaciones.append({
+            "fuente": "uba_games_figshare", "session_id": f"figshare_v2_{sesion}",
+            "recording_id": recording, "group_id": f"figshare_v2_{sesion}",
+            "tarea": tarea, "duracion_s": duracion,
+            "canales_con_referencia": len(ref), "canales_con_audio": len(audio),
+            "n_hablantes_referencia": len(ref), "audio_hz": 16000 if mismo_formato else None,
+            "alineacion_canales_s": alineacion,
+            "anotacion_fuera_del_audio": fuera,
+            "exceso_terminal_max_s": exceso_max,
+            "exceso_aceptado_por_precision": aceptada_por_precision,
+            "exceso_superior_a_tolerancia": fuera_tolerancia,
+            "par_audio_referencia_valido": bool(valido_audio),
+            "origen": "figshare:22647313:v2", "source_split": None,
+            "project_split": None,
+        })
+        if not valido_audio:
+            anomalías.append(recording)
+        if aceptada_por_precision and valido_audio:
+            por_precision.append(recording)
+        for canal in sorted(ref.keys() | audio.keys()):
+            hablantes.append({"fuente": "uba_games_figshare", "session_id": f"figshare_v2_{sesion}",
+                              "recording_id": recording, "speaker_id": f"figshare_v2_{sesion}_canal{canal}",
+                              "canal": canal, "tiene_anotacion": canal in ref, "tiene_audio": canal in audio,
+                              "archivo_anotacion": ref.get(canal, {}).get("archivo"),
+                              "archivo_audio": audio.get(canal, {}).get("archivo")})
+        if valido_audio and primeras.get(sesion) == tarea and set(fragmentos.get(clave, {})) == {1, 2}:
+            a, b = fragmentos[clave][1], fragmentos[clave][2]
+            largo = max(len(a), len(b))
+            mezcla = np.zeros(largo, dtype=np.int32)
+            mezcla[:len(a)] += a.astype(np.int32)
+            mezcla[:len(b)] += b.astype(np.int32)
+            mezcla = np.floor_divide(mezcla, 2).astype(np.int16)
+            archivo = f"{recording}.flac"
+            sf.write(carpeta_audio / archivo, mezcla, 16000, format="FLAC", subtype="PCM_16")
+            extractos.append({"recording_id": recording, "archivo": f"audio_muestra/{archivo}",
+                             "inicio_s": 0.0, "duracion_s": len(mezcla) / 16000,
+                             "metodo": "(canal1 + canal2) / 2; PCM16"})
+
+    guardar(pd.DataFrame(grabaciones), salida / "grabaciones.csv")
+    guardar(pd.DataFrame(intervalos), salida / "intervalos.parquet")
+    guardar(pd.DataFrame(hablantes), salida / "hablantes.csv")
+    guardar(pd.DataFrame(extractos, columns=[
+        "recording_id", "archivo", "inicio_s", "duracion_s", "metodo"
+    ]), salida / "extractos.csv")
+    (salida / "procedencia.json").write_text(json.dumps({
+        "origen": "figshare:22647313:v2", "licencia_declarada": cfg["licencia_declarada"],
+        "originales": {nombre: lock["archivos"][f"uba_games/figshare-v2/{nombre}"] for nombre in sorted(rutas)},
+        "auxiliares": auxiliares, "grabaciones_con_anomalias": anomalías,
+        "tolerancia_terminal_figshare_s": TOLERANCIA_FIN_FIGSHARE_S,
+        "grabaciones_aceptadas_por_precision": por_precision,
+        "max_exceso_terminal_observado_s": max(
+            (f["exceso_terminal_max_s"] for f in grabaciones), default=0.0
+        ),
+        "criterio_extractos": "Primera tarea de cada sesión, primeros 30 segundos, solo pares válidos",
+        "politica_segmentos": "Conservar # y etiquetas originales; no generar RTTM sin decidir política de puntuación",
+    }, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    return {"sesiones": len(primeras), "grabaciones": len(grabaciones),
+            "anotaciones": len(intervalos), "extractos": len(extractos),
+            "grabaciones_con_anomalias": len(anomalías),
+            "grabaciones_aceptadas_por_precision": len(por_precision)}
+
+
+def armar_normalizado() -> dict:
+    """Regenera las fuentes seleccionadas y publica el contrato común."""
+    import os
+    import sys
+
+    scripts_dir = str(Path(__file__).resolve().parent)
+    if scripts_dir not in sys.path:
+        sys.path.insert(0, scripts_dir)
+
+    from normalizar_muestra import materializar
+
+    # Todos los originales utilizados deben coincidir con el lock.
+    lock = json.loads(
+        (HITO / "fuentes.lock.json").read_text(encoding="utf-8")
+    )
+    prefijos = (
+        "common_voice/",
+        "callhome/",
+        "uba_games/figshare-v2/",
+        "slr61/",
+        "cordeba/",
+    )
+    elegidos = {p: {} for p in prefijos}
+
+    for nombre, ficha in lock["archivos"].items():
+        for prefijo in prefijos:
+            if nombre.startswith(prefijo):
+                ruta = CACHE / nombre
+                if (
+                    not ruta.is_file()
+                    or ruta.stat().st_size != ficha["bytes"]
+                    or sha256(ruta) != ficha["sha256"]
+                ):
+                    raise ValueError(
+                        "Original no coincide con fuentes.lock.json: "
+                        f"{nombre}"
+                    )
+                elegidos[prefijo][nombre] = ficha
+
+    if not all(elegidos.values()):
+        raise ValueError(
+            "Faltan originales fijados para una o más fuentes principales"
+        )
+
+    # Los inventarios se comparan sin confundir informes auxiliares
+    # de verificación con originales publicados.
+    extensiones = {
+        "common_voice/": (".tar.gz",),
+        "callhome/": (".parquet",),
+        "uba_games/figshare-v2/": (".rar",),
+    }
+
+    for prefijo, sufijos in extensiones.items():
+        encontrados = {
+            f.relative_to(CACHE).as_posix()
+            for f in (CACHE / prefijo).rglob("*")
+            if f.is_file() and f.name.endswith(sufijos)
+        }
+        if encontrados != set(elegidos[prefijo]):
+            raise ValueError(
+                f"Inventario local diferente del lock: {prefijo}"
+            )
+
+    # Reutilizamos los adaptadores existentes.
+    armar_slr61()
+    armar_cordeba()
+    armar_uba_games_figshare()
+
+    print("[normalizado]")
+    resultado = materializar(
+        OUT,
+        CACHE,
+        OUT / "normalizado",
+    )
+
+    # Ampliamos el manifiesto conservando los resultados históricos.
+    ruta = OUT / "MANIFIESTO.json"
+    previo = (
+        json.loads(ruta.read_text(encoding="utf-8"))
+        if ruta.is_file()
+        else {}
+    )
+    previo["normalizado"] = {
+        **resultado,
+        "originales": {
+            k: elegidos[k] for k in prefijos
+        },
+    }
+
+    with tempfile.NamedTemporaryFile(
+        mode="w",
+        encoding="utf-8",
+        dir=ruta.parent,
+        prefix=".manifiesto-",
+        suffix=".tmp",
+        delete=False,
+    ) as f:
+        json.dump(
+            previo,
+            f,
+            ensure_ascii=False,
+            indent=2,
+            sort_keys=True,
+        )
+        f.write("\n")
+        temporal = Path(f.name)
+
+    try:
+        os.replace(temporal, ruta)
+    finally:
+        temporal.unlink(missing_ok=True)
+
+    print(
+        "Muestra normalizada validada:",
+        {
+            nombre: datos["filas"]
+            for nombre, datos in resultado["tablas"].items()
+        },
+    )
+    return resultado
+
+
+def main(argv: list[str] | None = None) -> None:
+    # El modo por fuente nunca sobrescribe el manifiesto histórico general.
+    # El modo completo conserva el comportamiento previo y agrega Figshare.
+    argv = [] if argv is None else argv
+    acciones = {
+        "normalizado": armar_normalizado,
+        "uba_games_figshare": armar_uba_games_figshare,
+        "slr61": armar_slr61,
+        "cordeba": armar_cordeba,
+        "humyn": armar_humyn,
+    }
+    if len(argv) == 1 and argv[0] in acciones:
+        print("Resultado:", json.dumps({argv[0]: acciones[argv[0]]()}, ensure_ascii=False))
+        return
+    if argv:
+        raise SystemExit("Uso: armar_muestra.py [normalizado|uba_games_figshare|slr61|cordeba|humyn]")
+
     indice = json.loads((CACHE / "audio" / "indice.json").read_text())
     plan = json.loads((CACHE / "audio" / "extractos" / "plan.json").read_text())
     resumen = {"ami": armar_ami(indice["ami"], plan), "icsi": armar_icsi(indice["icsi"], plan),
                "voxconverse": armar_voxconverse(indice["voxconverse"]),
-               "slr61": armar_slr61(), "humyn": armar_humyn(), "cordeba": armar_cordeba()}
+               "slr61": armar_slr61(), "humyn": armar_humyn(), "cordeba": armar_cordeba(),
+               "uba_games_figshare": armar_uba_games_figshare()}
     crudos = {str(f.relative_to(CACHE)): {"bytes": f.stat().st_size, "sha256": sha256(f)}
-              for f in sorted(CACHE.rglob("*")) if f.is_file() and f.suffix in {".zip", ".txt", ".json", ".wav", ".parquet", ".csv", ".tsv", ".mp3", ".wma"}}
+              for f in sorted(CACHE.rglob("*")) if f.is_file() and f.suffix in {".zip", ".txt", ".json", ".wav", ".parquet", ".csv", ".tsv", ".mp3", ".wma", ".rar"}}
     (OUT / "MANIFIESTO.json").write_text(json.dumps({
         "generado": date.today().isoformat(), "semilla": SEMILLA, "por_fuente": resumen, "archivos_crudos": crudos,
     }, ensure_ascii=False, indent=1))
@@ -549,4 +1011,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    main(sys.argv[1:])
