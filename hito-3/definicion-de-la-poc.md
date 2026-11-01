@@ -36,15 +36,22 @@ Describe qué hace la PoC, para quién, y con qué datos cuenta para construirse
 - El producto es una aplicación ejectuada de manera local que transforma grabaciones de reuniones en minutas con los temas relevantes y acccionables pensado para organizaciones con terminologías complejas y e información confidencial.
 - La PoC captura el micrófono y el audio del sistema (usuario y resto de los participantes), adapta el audio a un formato genérico, identifica quién hablo en cada momento, transcribe la reunión entera, y genera una minuta con temas importantes y acciones concretas.
 - Contamos con los siguientes datos para evaluar cada uno de los módulos:
+
       1. Diarización: AMI, ICSI y VoxConverse. Las métricas de evaluación son DER y JER.
+
       2. Transcripción: OpenSLR, CORdeBA, Humyn y Common Voice. La métrica de evaluación WER y RTF.
+
       3. Minuta: AMI (previa traducción a español). Las métricas de evaluación son distancia coseno de los embeddings y un LLM as a judge.
+      
 - Para la PoC no vamos a utilizar los datos para optimizar hiperparámetros ni comparar modelos/pipelines, si no para tener una idea de su funcionamiento. 
 - Queda por fuera:
-1. el sistema de personalización de lenguaje/terminología específica
-2. evaluación cualitativa de la minuta/rúbrica
-3. especificaicones no funcionales (tiempos de inferencia)
-4. adaptacion/evaluacion en bajos recursos de hardware
+      1. el sistema de personalización de lenguaje/terminología específica
+
+      2. evaluación cualitativa de la minuta/rúbrica
+
+      3. especificaicones no funcionales (tiempos de inferencia)
+      
+      4. adaptacion/evaluacion en bajos recursos de hardware
 
 ### 1.2 Objetivo
 
