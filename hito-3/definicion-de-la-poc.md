@@ -1,29 +1,14 @@
 # Definición de la PoC - Generación automática de minutas
 
-**Documento del [Hito 3](README.md) · en equipo · se entrega en el repo del equipo como `definicion-de-la-poc.md`, con el tag `hito-3`**
+**Documento del Hito 3 · Luisa, Bruno, Matías y Felipe · se entrega con el tag `hito-3`**
 
-El documento tiene cuatro partes, que siguen las de un cambio en OpenSpec: la propuesta (por qué y hasta dónde; `proposal.md`), la spec (cómo se comporta el sistema y cuándo está terminado; `specs/`), el diseño (las decisiones de diseño y la arquitectura; `design.md`) y el plan (las tres semanas de construcción; `tasks.md`). Los datos y el plan del pipeline vienen del Hito 2; el código se escribe en el Módulo 4.
-
-| # | Parte | Secciones | Cuándo se completan |
-|---|---|---|---|
-| 1 | Propuesta | 1.1 Overview; 1.2 Objetivo; 1.3 Fuera de alcance; 1.4 Riesgos | 1.1 y 1.2 en la Clase 5; 1.3 y 1.4 en la Clase 6 |
-| 2 | Spec | 2.1 Escenarios; 2.2 User experience; 2.3 Criterios de aceptación | Clase 6 |
-| 3 | Diseño | 3.1 Decisiones de diseño, un registro por decisión; 3.2 Arquitectura | El registro del modelo en la Clase 5; los demás y 3.2 en la Clase 6 |
-| 4 | Plan | 4.1 Plan de construcción | Clase 6 |
-
-**Extensión.** No más de 3.000 palabras.
-
-**Agente de código.** Pueden usar cualquier agente disponible. En la materia recomendamos OpenSpec, que parte el documento en esos cuatro archivos, pero también pueden hacerlo completamente manual, en este archivo.
-
-**Incógnitas.** Lo que el equipo no sepa o no pueda responder se escribe como **No sabemos**. Dejar una sección o una celda en blanco no distingue lo que no se sabe de lo que no se analizó.
+Insumos: [`canvas.md`](../canvas.md) (Hito 1) y [`4-veredicto.md`](../hito-2/4-veredicto.md) (Hito 2).
 
 ## Historial de versiones
 
 | Versión | Fecha | Qué cambió |
 |---|---|---|
-| 1, Hito 3 | 2026-11-01 | Definición del alcance, criterios de aceptación, decisiones de diseño, arquitectura y plan de construcción. |
-
-Si el documento vive en varios archivos, indicar acá dónde está cada parte.
+| 1, Hito 3 | 2026-11-01 | Primera versión completa |
 
 ---
 
@@ -31,55 +16,27 @@ Si el documento vive en varios archivos, indicar acá dónde está cada parte.
 
 ### 1.1 Overview
 
-Describe qué hace la PoC, para quién, y con qué datos cuenta para construirse (el veredicto del Hito 2, y si los datos son reales, sintéticos o los dos). La descripción va en un párrafo, y dice qué entra en este alcance y qué del producto queda afuera por ahora. Remite a los fundamentos del veredicto del Hito 2 con la cifra del EDA que sostiene ese alcance, sin reescribirlos; si el veredicto fue ajustar, dice el alcance nuevo.
-
-**En nuestro caso:**
-
-La PoC consiste en una aplicación de ejecución local que captura el audio del micrófono y del sistema, identifica hablantes, transcribe las intervenciones y genera minutas con temas relevantes y acciones concretas. Está orientada a organizaciones que manejan terminología especializada e información confidencial. Para comprobar el funcionamiento de sus módulos se utilizarán datos reales relevados en el Hito 2: OpenSLR, CORdeBA, Humyn y Common Voice para transcripción; UBA Games Figshare y, complementariamente, CALLHOME para diarización; y AMI para minutas, con traducciones derivadas al castellano. El veredicto del Hito 2 ajustó el alcance porque el EDA registró V5 = 0/10 reuniones con referencias integrales en castellano. Por ello, se comprobará el funcionamiento de cada módulo y se demostrará el workflow completo con grabaciones propias, sin considerar validada todavía su calidad integral. La PoC no contempla entrenamiento, optimización de hiperparámetros, comparación de modelos ni personalización terminológica.
+La PoC es una aplicación de ejecución local que captura el audio del micrófono y del sistema, identifica hablantes, transcribe las intervenciones y genera minutas con temas y acciones. Está orientada a organizaciones con terminología especializada e información confidencial. Sus módulos se comprueban con datos reales del Hito 2: OpenSLR, CORdeBA, Humyn y Common Voice para transcripción; Figshare (UBA Games) y CALLHOME para diarización, y AMI para minutas, con traducciones sintéticas al castellano. El veredicto del Hito 2 ajustó el alcance porque el EDA registró V5 = 0/10 reuniones con referencias integrales en castellano: se comprueba cada módulo y se demuestra el workflow completo con grabaciones propias, sin dar por validada su calidad integral. Quedan afuera el entrenamiento, la optimización, la comparación de modelos y la personalización terminológica.
 
 ### 1.2 Objetivo
 
-La PoC es un recorte arbitrario del producto con el objetivo de validar algún supuesto real del problema. Es una instancia de decisión (GO / NO GO). En esta sección detallar:
-
-1. Qué supuesto(s) del producto pone a prueba la PoC y qué riesgos mitiga (revisar Módulo 1).
-2. Qué resultado efectivamente valida el supuesto.
-3. Qué decisión habilita el resultado: seguir con el producto, cambiar el enfoque o parar.
-
-**En nuestro caso:**
-
-1. **Supuesto:** es técnicamente viable integrar la captura de audio, la diarización, la transcripción y la generación de minutas en una aplicación ejecutada localmente, utilizando herramientas preentrenadas y el hardware disponible.
-
-2. **Resultado que lo valida:** procesar de punta a punta una reunión real en castellano, desde su grabación hasta la generación de una minuta que refleje los temas y acciones discutidos. Comprobar que cada módulo produzca una salida utilizable por el siguiente y revisar manualmente los errores de contenido. Los criterios verificables se establecen en 2.3.
-
-3. **Decisión:** se establece **GO** si el workflow completo cumple los criterios de aceptación; **ajustar** si existen problemas corregibles en alguno de los módulos; **NO GO** si no se consigue una minuta utilizable y los problemas impiden sostener el enfoque elegido.
+1. **Supuesto y riesgo.** De **factibilidad**: es viable integrar captura, diarización, transcripción y generación de minutas en una aplicación local, con modelos preentrenados y el hardware disponible. Valor, usabilidad y viabilidad no se prueban: la PoC no sale a usuarios externos al equipo.
+2. **Qué lo valida.** Los criterios de 2.3: una reunión real en castellano procesada de la grabación a la minuta, con cada módulo entregando una salida que el siguiente puede usar.
+3. **Qué decisión habilita.** **GO** si se cumplen todos los criterios de 2.3: se congela el alcance en la semana 10 y se sigue con el producto. **Ajustar** si falla alguno, pero la minuta de la reunión de prueba recupera al menos 1 tema y 1 acción sin inventar ninguna: se corrige el módulo responsable y se vuelve a medir. **NO GO** si, agotados los planes B de 1.4, la minuta no recupera ninguna acción o inventa alguna: se abandona el enfoque local con modelos preentrenados.
 
 ### 1.3 Fuera de alcance
 
-Lista lo que la PoC no construye, para que el recorte se decida ahora y no de apuro durante la construcción. Va un ítem por cada cosa, con su motivo, y al menos uno; entra lo que se resigna en las consecuencias de cada registro de decisión (3.1). Si cuesta llenarla, la pregunta que la destraba es cuál de las cosas que quieren hacer sacarían primero si perdieran una semana. El motivo está bien cuando dice por qué la PoC puede demostrar lo suyo sin esa pieza.
-
-**En nuestro caso:**
-
-1. **Personalización terminológica:** no se implementarán mecanismos para adaptar los modelos al vocabulario de cada organización. La PoC utilizará modelos preentrenados para comprobar el funcionamiento general.
-
-2. **Evaluación exhaustiva de minutas:** no se implementarán rúbricas automatizadas ni evaluaciones sistemáticas mediante LLM-as-a-Judge o embeddings. Se realizará una revisión manual básica para comprobar que la minuta representa lo discutido.
-
-3. **Optimización del rendimiento:** no se optimizarán los tiempos de inferencia ni se realizarán pruebas de carga. El objetivo es demostrar el funcionamiento del workflow, aunque se podrá registrar su tiempo de ejecución.
-
-4. **Adaptación a hardware de bajos recursos:** la PoC se ejecutará sobre el hardware disponible del equipo, sin desarrollar variantes optimizadas para dispositivos con menores capacidades.
-
-5. **Comparación de modelos:** no se implementarán distintas alternativas para compararlas experimentalmente. Las herramientas se seleccionarán según criterios técnicos y prácticos, como compatibilidad, facilidad de integración y recursos disponibles.
+1. **Personalización terminológica:** el funcionamiento general se demuestra con modelos preentrenados, sin adaptarlos al vocabulario de cada organización.
+2. **Evaluación sistemática de minutas** (LLM-as-a-Judge, embeddings): la revisión manual contra notas de referencia alcanza para la reunión de prueba.
+3. **Optimización del rendimiento y pruebas de carga:** la PoC demuestra el workflow; la latencia solo se registra (2.3).
+4. **Hardware de bajos recursos:** la PoC corre en la máquina de desarrollo, sin variantes para equipos con menos capacidad.
+5. **Comparación de modelos:** se elige una herramienta por módulo según compatibilidad, integración y memoria (3.1.1); comparar alternativas no cambia lo que la PoC demuestra.
 
 ### 1.4 Riesgos
 
-Anticipa lo que puede impedir que la PoC funcione y deja decidido qué hacer si ocurre. Van los 2 o 3 más probables, entre los riesgos estimados del veredicto del Hito 2 que sigan abiertos y lo que se asume en las consecuencias de cada registro de decisión (3.1). Por cada riesgo, en un párrafo: cuál es, de dónde sale (el veredicto o la decisión técnica), la cifra del veredicto o el motivo por el que es probable, y el plan B, que tiene que ser algo que el equipo pueda ejecutar.
-
-**En nuestro caso:**
-
-1. **Limitaciones técnicas:** los recursos de hardware, la captura simultánea de audio o la ventana de contexto del LLM podrían impedir procesar reuniones completas. Se contempla utilizar grabaciones WAV existentes, modelos menos exigentes o procesamiento por fragmentos, según el problema detectado.
-
-2. **Confidencialidad:** el almacenamiento de grabaciones, transcripciones y minutas podría exponer información sensible. La PoC utilizará reuniones consentidas sin información sensible para las pruebas y procesará los datos localmente, conservándolos en el directorio seleccionado.
-
-3. **Errores acumulados:** el Hito 2 registró V5 = 0/10 reuniones con referencias integrales en castellano, por lo que no se dispone de evidencia previa de la calidad conjunta de los módulos. Se revisarán las salidas intermedias para identificar fallos y ajustar los componentes responsables.
+1. **La memoria de la GPU no alcanza.** Sale de la decisión 3.1.1: la máquina de desarrollo tiene una RTX 3050 Laptop con 6 GB de VRAM y 31 GB de RAM; Whisper `medium` requiere unos 5 GB y `qwen2.5:7b` cuantizado 4,7 GB: no entran juntos. Plan B: etapas en secuencia liberando memoria; si una sola no entra, Whisper `small` (unos 2 GB), `qwen2.5:3b` (1,9 GB) o CPU, registrando el cambio y su latencia.
+2. **Errores acumulados entre módulos.** Sale del veredicto: V5 = 0/10, sin evidencia previa de la calidad conjunta. Señal: la minuta no cumple la fila de calidad de 2.3. Plan B: generar la minuta desde la transcripción corregida a mano; si así cumple, se cambia el modelo de diarización o de ASR; si no, se ajusta el prompt.
+3. **Referencias de diarización no puntuables.** Sale del veredicto: en CALLHOME, 2/15 audios tienen anotaciones que exceden su duración (159/3.168 segmentos), y F3 y M3 siguen sin medir. Plan B: excluir con trazabilidad esos segmentos, como indica el plan del veredicto; si la muestra queda sin sentido, medir la diarización solo sobre las nueve sesiones de Figshare.
 
 ---
 
@@ -87,131 +44,79 @@ Anticipa lo que puede impedir que la PoC funcione y deja decidido qué hacer si 
 
 ### 2.1 Escenarios
 
-Cuenta qué hace el sistema en el *happy path*, en 3 a 5 casos borde y cuando se equivoca. Cada escenario se escribe como en OpenSpec: un **Dado** (el estado de partida), un **Cuando** (lo que pasa) y un **Entonces** (lo que el sistema hace), con un **Y** por cada paso que sigue. La prueba es que un tercero pueda decir, con el escenario a la vista, si el sistema hizo lo que dice.
-
 #### Happy path
 
-El recorrido de un input típico de punta a punta sin que nada falle. Es un solo escenario, con tantos «Y» como pasos tenga.
-
-- Dado
-- Cuando
-- Entonces
-- Y
-
-**En nuestro caso:**
-
-- **Dado:** el usuario abrió la aplicación, seleccionó los dispositivos de audio y configuró el directorio de salida.
-- **Cuando:** inicia la grabación, participa de la reunión y la detiene al finalizar.
-- **Entonces:** la aplicación guarda el audio registrado.
-- **Y:** el usuario solicita procesar la reunión.
-- **Y:** se ejecutan la diarización, la transcripción y la generación de la minuta.
-- **Y:** la minuta queda disponible en el directorio seleccionado.
-
+- **Dado:** la reunión de prueba de 2.3 y sus notas de referencia, escritas antes de procesar; el usuario eligió el micrófono, el audio del sistema y el directorio de salida.
+- **Cuando:** inicia la grabación al empezar la reunión y la detiene al terminar.
+- **Entonces:** la aplicación guarda la grabación en el directorio elegido.
+- **Y:** el usuario pide procesarla y ve el avance de cada etapa.
+- **Y:** quedan la transcripción, con hablante y marca temporal por intervención, y la minuta, con temas, decisiones y acciones con responsable, cada una con su marca temporal.
+- **Y:** la minuta recupera los 2 temas y la acción de las notas, sin acciones que no estén en la grabación.
+- **Y:** la misma reunión, cargada como varios archivos en orden, produce una sola transcripción y una sola minuta.
 
 #### Casos borde
 
-Un escenario por caso, numerado (2.1.1, 2.1.2, ...). Los casos borde salen de los límites conocidos del sistema y de los usos que se apartan del recorrido esperado. Cada uno cierra con una línea que diga qué le cuesta al usuario si sale mal; el que más le cuesta es el peor caso borde, y la *user experience* lo retoma.
-
-##### 2.1.1
-
-- Dado
-- Cuando
-- Entonces
-- Le cuesta al usuario
-
-**En nuestro caso:**
+##### 2.1.1 Terminología especializada
 
 - **Dado:** la reunión incluye terminología especializada y anglicismos.
 - **Cuando:** el ASR transcribe las intervenciones.
-- **Entonces:** genera la transcripción sin adaptación terminológica y conserva el audio para su revisión.
-- **Le cuesta al usuario:** identificar y corregir manualmente los términos transcritos incorrectamente.
+- **Entonces:** transcribe sin adaptación terminológica y conserva el audio.
+- **Le cuesta al usuario:** encontrar y corregir a mano los términos mal transcritos.
 
-##### 2.1.2
+##### 2.1.2 Voces similares y habla superpuesta
 
-- **Dado:** participan personas con voces similares y se producen intervenciones superpuestas.
-- **Cuando:** el sistema ejecuta la diarización.
-- **Entonces:** conserva las etiquetas e intervalos estimados, incluidos los solapamientos detectados, sin garantizar una atribución perfecta.
-- **Le cuesta al usuario:** revisar posibles confusiones entre hablantes, especialmente al atribuir decisiones y responsabilidades.
-
-##### 2.1.3
-
-- **Dado:** una reunión tiene una cantidad elevada de hablantes diferentes.
+- **Dado:** participan personas con voces similares y hay intervenciones superpuestas.
 - **Cuando:** se ejecuta la diarización.
-- **Entonces:** el sistema intenta identificar sus intervenciones y conserva los resultados o informa si no puede completar el procesamiento.
-- **Le cuesta al usuario:** revisar más atribuciones potencialmente incorrectas y afrontar posibles limitaciones de procesamiento.
+- **Entonces:** conserva etiquetas, intervalos y solapamientos, y marca las intervenciones de hablante ambiguo.
+- **Le cuesta al usuario:** revisar confusiones al atribuir decisiones y responsables.
 
-##### 2.1.4
+##### 2.1.3 Seis o más hablantes
 
-- **Dado:** una reunión presenta ruido ambiental o interferencias del micrófono.
-- **Cuando:** el sistema procesa la grabación.
-- **Entonces:** conserva el audio y los resultados obtenidos, aunque no pueda garantizar una transcripción o diarización correcta.
-- **Le cuesta al usuario:** puede perder información imposible de recuperar y tener que completar la minuta mediante notas o consultas a los participantes. Es el peor caso borde.
+- **Dado:** una reunión con 6 o más hablantes, como 57 de las 75 de ICSI del Hito 2.
+- **Cuando:** se ejecuta la diarización.
+- **Entonces:** etiqueta a cada hablante detectado y marca como ambiguas las intervenciones que no puede atribuir; si no termina, lo informa y conserva el audio.
+- **Le cuesta al usuario:** revisar más atribuciones dudosas.
 
-##### 2.1.5
+##### 2.1.4 Ruido o interferencias
 
-- **Dado:** una reunión produce una transcripción que supera la capacidad de entrada del LLM.
-- **Cuando:** se intenta generar la minuta.
-- **Entonces:** se procesa la transcripción por fragmentos y se consolidan los resultados; si no puede completarse, se informa el problema y se conserva la transcripción.
-- **Le cuesta al usuario:** no obtener una minuta completa y necesitar procesar nuevamente la información.
+- **Dado:** la grabación tiene ruido ambiental o interferencias del micrófono.
+- **Cuando:** el sistema la procesa.
+- **Entonces:** conserva el audio y los resultados, sin garantizarlos, e informa si alguna etapa falla.
+- **Le cuesta al usuario:** perder lo que no se entiende y completar la minuta con notas o consultas. Es el peor caso borde.
+
+##### 2.1.5 Transcripción más larga que el contexto del LLM
+
+- **Dado:** la transcripción supera la capacidad de entrada del LLM.
+- **Cuando:** se genera la minuta.
+- **Entonces:** la procesa por fragmentos y consolida; si no puede, lo informa y conserva la transcripción.
+- **Le cuesta al usuario:** quedarse sin minuta completa y volver a procesar.
 
 #### Error del sistema
 
-El escenario de cuando el sistema se equivoca o no puede responder. El «Entonces» dice qué hace el sistema para reconocer el límite y qué camino le deja al usuario para seguir.
-
-- Dado
-- Cuando
-- Entonces
-- Y
-
-**En nuestro caso:**
-
-- **Dado:** el usuario está grabando una reunión y la aplicación guarda el audio incrementalmente por fragmentos.
-- **Cuando:** la aplicación falla inesperadamente durante la grabación.
-- **Entonces:** al reiniciarla, se intenta recuperar los fragmentos correctamente guardados, sin garantizar la recuperación del fragmento en curso.
-- **Y:** el usuario puede procesar el audio recuperado e iniciar una nueva grabación. Se pierde la información que no llegó a guardarse y la correspondiente al intervalo entre el fallo y la reanudación.
+- **Dado:** el usuario está grabando y la aplicación escribe el audio en disco mientras graba.
+- **Cuando:** la aplicación se cierra inesperadamente.
+- **Entonces:** queda en el directorio un archivo procesable con lo grabado hasta el corte, salvo como máximo los últimos 5 segundos, marcado como interrumpido.
+- **Y:** al reiniciar, la aplicación lista la grabación interrumpida y ofrece procesarla. Se pierde lo dicho hasta la nueva grabación.
 
 ### 2.2 User experience
 
-Dice qué ve el usuario y qué control conserva sobre lo que hace el modelo, en esta interfaz y con este modelo. Cada punto es una decisión de diseño del equipo, y el último retoma el peor caso borde desde el lado del usuario. Se lee bien cuando alguien que no vio la demo puede decir qué hace el usuario en cada paso. En un párrafo por punto:
-
-1. Interacción y control: cómo se interactúa con la PoC y qué control le queda al usuario sobre lo que hace el modelo.
-2. Señal de confianza: cómo se le indica al usuario el grado de seguridad del sistema.
-3. Corrección o aviso: si el usuario puede corregir la salida o avisar que está mal.
-4. Peor caso borde: lo que ve el usuario en el peor caso borde de los escenarios y su camino para seguir.
-
-**En nuestro caso:**
-
-1. **Interacción y control:** la interfaz permitirá seleccionar los dispositivos de audio y el directorio de salida, iniciar y detener grabaciones, y procesar uno o varios archivos. Cuando se seleccionen múltiples grabaciones, el usuario establecerá su orden y el sistema las tratará como una única reunión, generando una transcripción y una minuta integradas. También podrá consultar el estado del procesamiento y abrir el directorio de resultados.
-
-2. **Señal de confianza:** la aplicación mostrará el estado de cada etapa y los errores de procesamiento. Se conservarán el audio, la transcripción y las etiquetas de hablantes para facilitar su revisión. La finalización correcta del procesamiento no implica que el contenido generado sea necesariamente correcto.
-
-3. **Corrección o aviso:** el usuario podrá consultar la transcripción y corregir la minuta fuera de la aplicación mediante un formato editable. También podrá volver a ejecutar el procesamiento. La PoC no incluirá edición interactiva de transcripciones o etiquetas de hablantes ni mecanismos automáticos para detectar todos los errores de contenido.
-
-4. **Peor caso borde:** ante una grabación con ruido intenso, el sistema conservará el audio original e informará si el procesamiento falla técnicamente. Si logra generar resultados, el usuario podrá revisarlos, aunque no se garantice la detección automática de errores. Si se pierde información, el usuario podrá complementar la minuta manualmente mediante notas o consultas a los participantes, reconociendo que el contenido no grabado no puede recuperarse.
+1. **Interacción y control.** El usuario elige dispositivos y directorio, graba, y procesa uno o varios archivos; si son varios, fija su orden y se tratan como una reunión. Ve el estado de cada etapa y abre el directorio de resultados.
+2. **Señal de confianza.** No se muestra un puntaje del modelo, sino evidencia verificable: la transcripción marca los tramos con habla superpuesta y las intervenciones de hablante ambiguo (las que caen sobre más de un turno o sobre ninguno), y en la minuta cada decisión y acción cita la marca temporal que la respalda, para comprobarla en el audio.
+3. **Corrección o aviso.** El usuario corrige la minuta fuera de la aplicación, en un formato editable, y puede volver a procesar. No hay edición interactiva de transcripciones ni de hablantes.
+4. **Peor caso borde (2.1.4).** Con ruido intenso, el sistema conserva el audio e informa la etapa que falló; si hay resultados, el usuario los revisa con las marcas del punto 2 y completa lo que no se entiende con notas o consultas.
 
 ### 2.3 Criterios de aceptación
 
-Define con qué números se decide que la PoC está terminada, y son los que se miden en el checkpoint de la semana 9. Cada criterio lleva su métrica, su umbral, el conjunto sobre el que se mide y cómo se chequea; el conjunto es el congelado en el veredicto, salvo que el criterio use otro. Un criterio está bien cuando un tercero puede chequearlo con un sí o un no, sin interpretar.
-
-| Criterio | Métrica (qué cuenta como respuesta aceptable) | Umbral (uno por tipo de error, si un error cuesta más que el otro) | Conjunto de evaluación | Cómo se chequea |
-|---|---|---|---|---|
-| Calidad de la respuesta | | | | |
-| Latencia (con el percentil) | | | | |
-| Cobertura de los casos borde | | | | |
-| Ventaja sobre el *baseline* (solo si lo que se construye no es el *baseline*) | | | | |
-
-**En nuestro caso:**
-
 | Criterio | Métrica | Umbral | Conjunto de evaluación | Cómo se chequea |
 |---|---|---|---|---|
-| Calidad de la respuesta | Generación de transcripción con hablantes y minuta fiel a lo discutido | 2/2 modalidades (archivo único y múltiples archivos ordenados); al menos 2 temas y 1 acción recuperados; 0 acciones inventadas | Una reunión propia en castellano, de al menos 5 minutos, con 2 temas y 1 acción explícita, procesada completa y dividida en fragmentos | Contrastar ambas salidas con la grabación y notas de referencia de la reunión |
-| Funcionamiento modular | Módulos que producen una salida utilizable por el siguiente | 3/3 módulos: diarización, transcripción y generación de minutas | Muestras fijas de los conjuntos del Hito 2 correspondientes a cada módulo | Ejecutar cada módulo y verificar los archivos y formatos producidos |
-| Latencia (con el percentil) | Percentil 90 del tiempo total de procesamiento | p90 ≤ 30 minutos para 5 minutos de audio | Cinco ejecuciones de una misma grabación de 5 minutos en el hardware disponible | Medir el tiempo desde el inicio del procesamiento hasta la generación de la minuta |
-| Cobertura de los casos borde | Escenarios ejecutados con salida o error informado, conservando la entrada | 5/5 escenarios definidos en 2.1 | Muestras reales o preparadas para reproducir cada caso | Ejecutar los escenarios y registrar las salidas y los errores observados |
-| Recuperación ante interrupciones | Recuperación de fragmentos guardados antes de un fallo | 1/1 prueba con recuperación de los fragmentos persistidos | Una grabación propia interrumpida deliberadamente después de guardar fragmentos | Reiniciar la aplicación y comprobar que los fragmentos recuperados pueden procesarse |
-| Ventaja sobre el *baseline* | No aplica: la PoC implementa el baseline | No aplica | No aplica | No se realiza comparación de alternativas |
+| Calidad de la respuesta | Temas y acciones de las notas de referencia que la minuta recupera (nombrados aunque sea con otras palabras; las acciones, con su responsable) y acciones inventadas (sin respaldo en la marca temporal que citan ni en las notas) | 2/2 temas y 1/1 acción recuperados, y 0 inventadas, en las 2 modalidades (un archivo y varios ordenados) | Reunión de prueba: propia, consentida, en castellano, de al menos 5 minutos, con 2 temas y 1 acción explícita; completa y dividida en 2 o más archivos | Un integrante que no ejecuta el procesamiento escribe antes las notas (temas, acciones, responsables y marcas temporales) y marca sí o no por ítem |
+| Funcionamiento modular | Salidas dentro del contrato del módulo siguiente. Diarización: segmentos con hablante, inicio menor que fin y dentro del audio. Transcripción: segmentos con texto y tiempos. Minuta: secciones de temas, decisiones y acciones | 3/3 módulos con el 100 % de sus salidas dentro del contrato | Muestra congelada en la semana 7, con su SHA-256 en un manifiesto: 5 clips de OpenSLR y Common Voice, 3 sesiones de Figshare y 3 reuniones de AMI traducidas | Script de contratos |
+| Latencia (máximo, p100) | Tiempo desde que se pide procesar hasta que la minuta queda escrita | Las 5 corridas en 30 minutos o menos para 5 minutos de audio | La reunión de prueba, 5 corridas en la máquina de desarrollo (RTX 3050 Laptop, 6 GB de VRAM, 31 GB de RAM) | Tiempo registrado en cada corrida |
+| Cobertura de los casos borde | Escenarios de 2.1 que hacen lo que dice su «Entonces», con la entrada conservada | 7/7: happy path, 2.1.1 a 2.1.5 y error del sistema | Un input real o preparado por escenario, fijado antes de la semana 9 (2.1.3: una reunión de ICSI con 6 o más hablantes) | Un tercero recorre los escenarios con la aplicación abierta y marca sí o no |
+| Recuperación ante interrupciones | Tiempo grabado hasta un corte forzado menos la duración del archivo que queda | 1/1 prueba con 5 s perdidos o menos, el archivo procesable y listado como interrumpido al reiniciar | Una grabación propia de al menos 2 minutos, cortada cerrando el proceso a la fuerza | Comparar las duraciones, reiniciar la aplicación y procesar el archivo |
+| Ventaja sobre el *baseline* | No aplica: lo construido es el *baseline* (3.1.1) | — | — | — |
 
-Las pruebas utilizarán entradas identificadas y fijas. Se registrarán las versiones de las herramientas, el orden de los archivos, las notas de referencia y los resultados para permitir su reproducción. Las métricas del Hito 2 podrán utilizarse como diagnóstico de cada módulo, sin establecer umbrales de rendimiento comparativo.
+Se registran versiones, orden de los archivos, notas y resultados. WER, DER y JER no tienen umbral: sin un *baseline* con que comparar, sería arbitrario.
 
 ---
 
@@ -219,156 +124,76 @@ Las pruebas utilizarán entradas identificadas y fijas. Se registrarán las vers
 
 ### 3.1 Decisiones de diseño
 
-Diseñar la PoC es tomar las decisiones que fijan qué se construye, antes de escribir código, y documentar cada una en un registro de decisión, en prosa, para que un lector externo pueda seguir el razonamiento y discutirlo con los mismos criterios. Hasta acá son hipótesis; si alguna alternativa se probó, se dice qué se probó y qué dio. Cada registro sigue la forma de un *Architecture Decision Record* (Nygard, 2011), en cuatro partes:
-
-- **Contexto.** Qué pide el problema y con qué cuenta el equipo, en un párrafo, con los datos que dejó el veredicto del Hito 2 y las restricciones que hay (tiempo, costo, integración con algo existente).
-- **Alternativas evaluadas.** Al menos dos, una por párrafo numerado. En cada una: qué es, qué la hacía atractiva, qué riesgos y costos tiene con lo que el equipo sabe hoy, y por qué se descartó o por qué sigue en pie. Las preguntas que guían cada argumento son qué queda demostrado si funciona, si entra en las tres semanas de construcción, qué puede impedir que funcione y cuánto cuesta.
-- **Decisión.** Cuál de las alternativas se construye y qué la inclinó frente a las otras.
-- **Consecuencias.** Qué se asume al elegirla y qué se resigna. Lo que se asume y puede fallar va a los riesgos (1.4); lo que se resigna va al fuera de alcance (1.3).
-
-Las cinco decisiones de abajo las tiene toda PoC; si el proyecto tiene otra que importe, se agrega con la misma forma. La del modelo se escribe en la Clase 5; las demás, en la Clase 6.
-
 #### 3.1.1 El modelo
 
-Qué hace el modelo (predecir una categoría o un número, o generar texto), de dónde sale (lo entrena el equipo, ajusta uno existente o llama uno de fundación por API) y con qué datos. Una de las alternativas es siempre la más simple que podría funcionar, el *baseline*, porque es la vara contra la que se mide lo demás.
+**Contexto.** Identificar hablantes, transcribir en castellano y generar minutas con modelos preentrenados, en local y con 6 GB de VRAM.
 
-- Contexto
-- Alternativas evaluadas (3.1.1.1, 3.1.1.2, ...)
-- Decisión
-- Consecuencias
+**Alternativas evaluadas.**
 
-**En nuestro caso:**
+1. **Locales: pyannote, Whisper y Qwen2.5 con Ollama.** Intervalos por hablante, transcripción en castellano con marcas temporales y texto estructurado, sin sacar datos de la máquina. Riesgo: la memoria. Sigue en pie.
+2. **Locales configurables: NVIDIA NeMo y Kaldi.** Flexibles, pero exigen más configuración e integración. Descartadas: no entran en tres semanas.
+3. **APIs: ElevenLabs Scribe, AWS Bedrock y Groq Cloud.** Sin límite de memoria local, pero sacan audio y transcripciones de la máquina y agregan cuotas y costos. Descartadas por confidencialidad.
 
-**Contexto:** la PoC requiere identificar hablantes, transcribir intervenciones en castellano y generar minutas mediante modelos preentrenados. Se priorizan la integración, la ejecución local y los recursos disponibles, sin entrenamiento ni comparación experimental de modelos.
+**Decisión.** La 1: pyannote `speaker-diarization-community-1`, Whisper `medium` y `qwen2.5:7b`, que es a la vez el *baseline*: lo más simple que podría funcionar ya incluye diarización, porque sin hablantes la minuta no puede asignar responsables. Inclinó la memoria: Whisper `medium` (unos 5 GB) es el multilingüe más grande que entra (`large` pide unos 10 GB y `turbo` unos 6 GB, toda la GPU), y `qwen2.5:7b` cuantizado (4,7 GB) es el Qwen2.5 más grande que entra y admite castellano. `community-1` es el pipeline abierto de pyannote y pide aceptar sus condiciones en Hugging Face. **No sabemos** cuánto rinden los tres en castellano rioplatense: se prueban en la semana 7 con la muestra de 2.3.
 
-**Alternativas evaluadas:**
-
-1. **Diarización — pyannote.audio:** ofrece un pipeline preentrenado con intervalos por hablante e integración Python. Requiere aceptar condiciones de acceso al modelo, pero simplifica la integración.
-2. **Diarización — NVIDIA NeMo:** dispone de modelos y pipelines configurables, pero requiere mayor selección y configuración. Se descarta por la complejidad adicional.
-3. **Diarización — Kaldi:** proporciona herramientas consolidadas, pero exige mayor esfuerzo de integración. Se descarta por el tiempo disponible.
-4. **Transcripción — Whisper:** admite castellano, ejecución local y marcas temporales. Requiere recursos de cómputo y puede cometer errores de transcripción, pero facilita la integración.
-5. **Transcripción — NVIDIA NeMo:** permite utilizar modelos locales, aunque requiere seleccionar y configurar uno apropiado para castellano. Se descarta por el trabajo adicional.
-6. **Transcripción — ElevenLabs Scribe:** ofrece transcripción administrada mediante API, pero requiere enviar el audio a un servicio externo. Se descarta por confidencialidad y dependencia externa.
-7. **Minutas — Qwen2.5 mediante Ollama:** permite generación local de texto estructurado. Depende de la memoria y del contexto disponible, pero evita transferir las transcripciones a servicios externos.
-8. **Minutas — AWS Bedrock:** ofrece modelos administrados, pero requiere permisos, costos y procesamiento externo. Se descarta para esta PoC.
-9. **Minutas — Groq Cloud:** proporciona inferencia mediante API, pero introduce cuotas y dependencia externa. Se descarta por los mismos motivos.
-
-**Decisión:** implementar como baseline pyannote `speaker-diarization-community-1`, Whisper `medium` multilingüe y Qwen2.5:7b mediante Ollama.
-
-**Consecuencias:** los tres modelos se ejecutarán localmente, por etapas, para limitar el uso simultáneo de memoria. Se asumen posibles errores de diarización, transcripción y generación, sin considerar demostrada su calidad integral.
+**Consecuencias.** Se asume correr por etapas (riesgo 1) y que los errores pueden acumularse (riesgo 2). Se resignan modelos más grandes y APIs.
 
 #### 3.1.2 Los datos
 
-Qué entra al sistema y cómo se prepara, a partir del plan del pipeline del veredicto del Hito 2, diciendo qué de ese plan se mantiene y qué cambia para la PoC.
+**Contexto.** El Hito 2 dejó datos para evaluar módulos, pero ninguna reunión integral en castellano (V5 = 0/10).
 
-- Contexto
-- Alternativas evaluadas
-- Decisión
-- Consecuencias
+**Alternativas evaluadas.**
 
-**En nuestro caso:**
+1. **Solo los conjuntos del Hito 2:** tienen referencias, pero no demuestran el workflow en castellano. Descartada.
+2. **Solo grabaciones propias:** representan el uso, pero sin referencias por módulo. Descartada.
+3. **Combinar ambas:** comprueba módulos e integración sin un corpus nuevo. Sigue en pie.
 
-**Contexto:** el Hito 2 identificó datos adecuados para evaluar módulos individuales, pero no reuniones con referencias integrales en castellano. La PoC también necesita grabaciones representativas de su uso real.
+**Decisión.** La 3. Del plan del veredicto se mantienen la obtención con originales, permisos y hashes, la exclusión trazable de tramos inválidos, la distinción de las traducciones sintéticas y los conjuntos separados por módulo, de los que se congela la muestra de 2.3. Cambia la evaluación integral: una reunión de prueba con notas de referencia en lugar de diez reuniones anotadas, porque la PoC demuestra el funcionamiento integral y no lo valida. Varios archivos ordenados forman una reunión.
 
-**Alternativas evaluadas:**
-
-1. **Utilizar únicamente los conjuntos del Hito 2:** permite evaluación modular con referencias existentes, pero no demuestra el workflow completo sobre reuniones propias en castellano.
-2. **Utilizar únicamente grabaciones propias:** representa el uso previsto, pero carece de referencias suficientes para evaluar formalmente todos los módulos.
-3. **Combinar ambas fuentes:** requiere preparar entradas diferentes para cada prueba, pero permite comprobar módulos e integración sin crear un nuevo corpus.
-
-**Decisión:** reutilizar los conjuntos congelados del Hito 2 para evaluación modular y grabaciones propias consentidas para evaluación integral. La aplicación recibirá audio grabado o archivos cargados, que se adaptarán a un formato común. Varios archivos ordenados se tratarán como una única reunión.
-
-**Consecuencias:** no se entrenarán modelos ni se considerará validada la calidad integral por los resultados modulares. Se conservarán los audios originales, su orden y la correspondencia temporal con el audio procesado.
+**Consecuencias.** Se conservan los originales, su orden y la correspondencia temporal con el audio procesado. Se resigna validar la calidad integral hasta reunir las diez reuniones anotadas.
 
 #### 3.1.3 Workflow o agente
 
-Cómo se compone el sistema, que puede ser una llamada, un workflow con los pasos fijados por el equipo, o un agente en el que el modelo decide el camino.
+**Contexto.** Las etapas son conocidas: preparar el audio, diarizar, transcribir, asociar los resultados y generar la minuta.
 
-- Contexto
-- Alternativas evaluadas
-- Decisión
-- Consecuencias
+**Alternativas evaluadas.**
 
-**En nuestro caso:**
+1. **Agente** que decide qué herramientas usar: agrega decisiones y puntos de falla que este recorrido fijo no necesita. Descartada.
+2. **Workflow fijo:** controla las etapas, verifica sus contratos y localiza los errores. Sigue en pie.
 
-**Contexto:** las etapas necesarias son conocidas: preparar el audio, diarizar, transcribir, asociar los resultados y generar la minuta.
+**Decisión.** La 2, posterior a la grabación: la diarización y el ASR procesan por separado el mismo audio normalizado, sus resultados se asocian por marcas temporales y la transcripción estructurada alimenta al LLM, por fragmentos si excede su contexto.
 
-**Alternativas evaluadas:**
-
-1. **Agente:** permitiría decidir dinámicamente qué herramientas utilizar, pero introduce decisiones y complejidad innecesarias para este recorrido.
-2. **Workflow fijo:** permite controlar las etapas, verificar sus contratos y localizar errores. Es suficiente para demostrar la integración prevista.
-
-**Decisión:** implementar un workflow fijo, posterior a la grabación. Diarización y ASR procesarán independientemente el mismo audio normalizado; sus resultados se asociarán mediante las marcas temporales. La transcripción estructurada alimentará al LLM. Las entradas que excedan su contexto se procesarán por fragmentos.
-
-**Consecuencias:** el recorrido será reproducible y permitirá conservar resultados parciales ante fallos. Las atribuciones ambiguas no se presentarán como identificaciones seguras y no se inferirán identidades reales de los hablantes.
+**Consecuencias.** Recorrido reproducible, con resultados parciales conservados; las atribuciones ambiguas no se presentan como seguras. Se resigna la flexibilidad de un agente.
 
 #### 3.1.4 Construir o usar hecho
 
-De cada pieza de la arquitectura (3.2), qué se construye y qué se usa hecho, con la API, el modelo preentrenado o la librería.
+**Contexto.** Hay un grabador en Python (sounddevice) para micrófono y audio del sistema, modelos preentrenados y tres semanas.
 
-- Contexto
-- Alternativas evaluadas
-- Decisión
-- Consecuencias
+**Alternativas evaluadas.**
 
-**En nuestro caso:**
+1. **Solución integral (WhisperX, que integra Whisper con la diarización de pyannote):** ahorra integración, pero deja dentro de la herramienta la asociación entre turnos y texto, que la PoC tiene que controlar y evaluar por módulo. Descartada.
+2. **Integrar componentes existentes:** exige adaptadores y orquestación, pero reutiliza el grabador, los modelos y el trabajo del Hito 2. Sigue en pie.
 
-**Contexto:** el equipo dispone de un grabador y de bibliotecas y modelos preentrenados. La construcción debe limitarse a lo necesario para demostrar la PoC en tres semanas.
+**Decisión.** La 2, porque conserva el control de cada módulo. Hechos: grabador, FFmpeg, pyannote, Whisper y Ollama. Construidos: escritura incremental del audio, preparación de entradas, asociación de resultados, orquestación e interfaz, con el procesamiento independiente de la GUI.
 
-**Alternativas evaluadas:**
-
-1. **Adoptar una solución integral existente:** reduciría el desarrollo de integración, pero limitaría el control sobre los módulos y su evaluación independiente.
-2. **Integrar componentes existentes:** requiere desarrollar adaptadores y orquestación, pero permite reutilizar el grabador, los modelos y el trabajo del Hito 2.
-
-**Decisión:** reutilizar el grabador, FFmpeg, pyannote, Whisper y Ollama. Desarrollar la preparación de entradas, asociación de resultados, orquestación, generación de archivos e integración con la interfaz. El procesamiento se expondrá mediante una función reutilizable, independiente de la GUI.
-
-**Consecuencias:** se asume el mantenimiento de las integraciones, pero se evita desarrollar modelos o duplicar funcionalidades existentes. Cada módulo podrá ejecutarse y probarse individualmente.
+**Consecuencias.** Se asume mantener las integraciones; se resigna la integración ya resuelta de WhisperX.
 
 #### 3.1.5 Requerimientos no funcionales
 
-Qué requerimientos priman y qué nivel fija la PoC para cada propiedad del sistema (confiable, escalable, mantenible). Lo que queda afuera a sabiendas pasa al fuera de alcance.
+**Contexto.** Reuniones potencialmente confidenciales, fallos que hay que poder revisar y hardware fijo.
 
-- Contexto
-- Alternativas evaluadas
-- Decisión
-- Consecuencias
+**Alternativas evaluadas.**
 
-**En nuestro caso:**
+1. **Rendimiento y hardware variado:** exige optimización y pruebas de carga fuera de alcance. Descartada.
+2. **Ejecución local y trazabilidad:** permite diagnosticar errores. Sigue en pie.
 
-**Contexto:** la PoC debe procesar reuniones potencialmente confidenciales, permitir revisar fallos y ejecutarse sobre el hardware disponible.
+**Decisión.** La 2. **Confiable:** 5 s perdidos o menos ante un corte, resultados intermedios conservados y versiones y configuración registradas en cada corrida. **Escalable:** una reunión a la vez y una persona por máquina, sin exigir más. **Mantenible:** cada módulo se ejecuta por separado y se valida contra su contrato de 2.3. Por confidencialidad, las pruebas usan reuniones consentidas sin información sensible, y todo queda en el directorio local elegido.
 
-**Alternativas evaluadas:**
-
-1. **Priorizar rendimiento y compatibilidad con hardware variado:** requeriría optimización, pruebas de carga y variantes de ejecución que exceden el alcance disponible.
-2. **Priorizar funcionamiento local y trazabilidad:** permite demostrar el workflow, conservar resultados y diagnosticar errores sin desarrollar optimizaciones adicionales.
-
-**Decisión:** priorizar inferencia local, conservación de resultados intermedios, persistencia incremental del audio y registro de versiones y configuración. La latencia se medirá según 2.3, sin optimizar el sistema para otros equipos.
-
-**Consecuencias:** no se garantiza escalabilidad ni rendimiento en hardware de bajos recursos. La recuperación ante fallos se limita a la información efectivamente guardada.
+**Consecuencias.** No se garantiza escalabilidad ni rendimiento en hardware de bajos recursos; la recuperación se limita a lo que llegó a escribirse.
 
 ### 3.2 Arquitectura
 
-Dice qué es cada una de las cinco piezas en este proyecto y cuáles se construyen y cuáles se usan hechas, según la decisión 3.1.4, que es lo que decide cuánto hay que construir en las tres semanas. El diagrama de las cinco piezas de punta a punta reemplaza al esquema de abajo; en Ingesta, Procesamiento y Evaluación se escribe solo lo que cambió respecto del veredicto del Hito 2, que ya trae el plan del pipeline. La sección está bien cuando la columna «Con qué» nombra la API, el modelo o la librería de cada pieza que se usa hecha.
-
-```
-[ingesta] -> [procesamiento] -> [modelo o agente] -> [interfaz]
-                                       |
-                                 [evaluación]
-```
-
-| Pieza | Qué es en este proyecto | Se construye o se usa hecha | Con qué (API, modelo preentrenado, librería) |
-|---|---|---|---|
-| Ingesta (la Obtención del plan del pipeline del veredicto) | | | |
-| Procesamiento (la limpieza, las transformaciones y la estructura final del plan del pipeline del veredicto; completas si el veredicto fue pivotar) | | | |
-| Modelo o agente | | | |
-| Interfaz (la demo por donde la usa un tercero) | | | |
-| Evaluación (contra los criterios de aceptación, sobre el conjunto de evaluación congelado del veredicto) | | | |
-
-Herramientas del agente (si hay un agente):
-
-**En nuestro caso:**
-
-No se utiliza un agente, sino un workflow fijo.
+Workflow fijo, sin agente.
 
 ```mermaid
 flowchart LR
@@ -382,11 +207,11 @@ flowchart LR
 
 | Pieza | Qué es en este proyecto | Se construye o se usa hecha | Con qué |
 |---|---|---|---|
-| Ingesta | Captura de micrófono y sistema o carga ordenada de archivos | Se reutiliza y amplía | Grabador existente e importación de archivos |
-| Procesamiento | Adaptación de audio, unión de grabaciones, asociación temporal y preparación de resultados | Se construye, reutilizando lo pertinente del Hito 2 | FFmpeg y Python |
-| Modelo o agente | Diarización, transcripción y generación de minutas | Se usan modelos preentrenados | pyannote `community-1`, Whisper `medium` y Qwen2.5:7b mediante Ollama |
-| Interfaz | Grabación, selección de archivos, ejecución y consulta de resultados | Se amplía la GUI existente | Interfaz del proyecto |
-| Evaluación | Comprobación modular e integral contra 2.3 | Se reutiliza y amplía | Datos y scripts del Hito 2, grabaciones propias y pruebas del Hito 3 |
+| Ingesta | Grabación con escritura incremental o carga ordenada de archivos | Se reutiliza y amplía | sounddevice y soundfile (grabación); FFmpeg (archivos cargados) |
+| Procesamiento | Normalización y unión de audio, asociación temporal | Se construye, con lo pertinente del Hito 2 | FFmpeg y Python |
+| Modelo o agente | Diarización, transcripción y generación de minutas | Se usan modelos preentrenados | pyannote `speaker-diarization-community-1`, Whisper `medium` y `qwen2.5:7b` mediante Ollama |
+| Interfaz | Grabar, cargar, procesar y revisar resultados | Se amplía la GUI existente | PySide6 (Qt) |
+| Evaluación | Comprobación modular e integral contra 2.3 | Se reutiliza y amplía | Scripts del Hito 2, manifiesto SHA-256 y script de contratos |
 
 ---
 
@@ -394,22 +219,8 @@ flowchart LR
 
 ### 4.1 Plan de construcción
 
-Reparte las semanas 7, 8 y 9 del Módulo 4 en metas, cada una con su responsable y con lo que se muestra al cierre. El plan del pipeline y el conjunto de evaluación congelado son los del veredicto del Hito 2, y el *baseline* de punta a punta va en la semana 8. El docente lo lee como una prueba de que el trabajo entra en tres semanas con este equipo, y cada fila tiene que decir qué se va a poder demostrar.
-
 | Semana | Meta | Qué se construye | Quién | Qué se muestra al cierre |
 |---|---|---|---|---|
-| 7, Workshop 1 | Datos listos | | | |
-| 8, Workshop 2 | *Baseline* de punta a punta | | | |
-| 9, Workshop 3 | Evaluación contra los criterios de aceptación | | | |
-
-**En nuestro caso:**
-
-| Semana | Meta | Qué se construye | Quién | Qué se muestra al cierre |
-|---|---|---|---|---|
-| 7, Workshop 1 | Datos listos | Preparación de entradas, unión de grabaciones, reutilización de muestras del Hito 2 y pruebas individuales de los módulos | Equipo | Audio procesable y ejecución independiente de diarización, ASR y generación de minutas |
-| 8, Workshop 2 | Baseline de punta a punta | Asociación temporal, orquestación, generación de minutas e integración con la interfaz | Equipo | Procesamiento completo de una reunión desde uno o varios archivos ordenados |
-| 9, Workshop 3 | Evaluación y cierre | Pruebas de los criterios de 2.3, casos borde, recuperación ante fallos y documentación de resultados | Equipo | Resultados verificables y decisión GO, ajustar o NO GO |
-
----
-
-*Para el detalle de cada parte: [El alcance de la PoC](../../03-diseno-poc/conceptos/el-alcance-de-la-poc.md), [El enfoque técnico](../../03-diseno-poc/conceptos/el-enfoque-tecnico.md), [El *baseline*](../../03-diseno-poc/conceptos/el-baseline.md), [Workflows y agentes](../../03-diseno-poc/conceptos/workflows-y-agentes.md), [La experiencia frente al error](../../03-diseno-poc/conceptos/la-experiencia-frente-al-error.md) y [La definición de la PoC](../../03-diseno-poc/conceptos/la-definicion-de-la-poc.md).*
+| 7, Workshop 1 | Datos listos | Muestra congelada con SHA-256; reunión de prueba y sus notas; escritura incremental; preparación y unión de audio; prueba de los tres modelos | **A completar** | Manifiesto, reunión de prueba con notas y cada módulo corriendo por separado |
+| 8, Workshop 2 | *Baseline* de punta a punta | Asociación temporal, marcas de solapamiento y ambigüedad, minuta con marcas temporales, orquestación, recuperación e interfaz | **A completar** | El happy path con la reunión de prueba, en un archivo y en varios |
+| 9, Workshop 3 | Evaluación y cierre | Criterios de 2.3, casos borde y recuperación | **A completar** | La tabla de 2.3 con sí o no por fila y la decisión |
