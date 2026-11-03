@@ -29,12 +29,12 @@ La PoC es una aplicación de ejecución local que captura el audio del micrófon
 1. **Personalización terminológica:** el funcionamiento general se demuestra con modelos preentrenados, sin adaptarlos al vocabulario de cada organización.
 2. **Evaluación sistemática de minutas** (LLM-as-a-Judge, embeddings): la revisión manual contra notas de referencia alcanza para la reunión de prueba.
 3. **Optimización del rendimiento y pruebas de carga:** la PoC demuestra el workflow; la latencia solo se registra (2.3).
-4. **Hardware de bajos recursos:** la PoC corre en la máquina de desarrollo, sin variantes para equipos con menos capacidad.
+4. **Hardware de bajos recursos:** la PoC corre en las máquinas de Matías y Bruno, de iguales prestaciones, sin variantes para equipos con menos capacidad.
 5. **Comparación de modelos:** se elige una herramienta por módulo según compatibilidad, integración y memoria (3.1.1); comparar alternativas no cambia lo que la PoC demuestra.
 
 ### 1.4 Riesgos
 
-1. **La memoria de la GPU no alcanza.** Sale de la decisión 3.1.1: la máquina de desarrollo tiene una RTX 3050 Laptop con 6 GB de VRAM y 31 GB de RAM; Whisper `medium` requiere unos 5 GB y `qwen2.5:7b` cuantizado 4,7 GB: no entran juntos. Plan B: etapas en secuencia liberando memoria; si una sola no entra, Whisper `small` (unos 2 GB), `qwen2.5:3b` (1,9 GB) o CPU, registrando el cambio y su latencia.
+1. **La memoria de la GPU no alcanza.** Sale de la decisión 3.1.1: las máquinas de Matías y Bruno, iguales, tienen una RTX 3050 Laptop con 6 GB de VRAM y 31 GB de RAM; Whisper `medium` requiere unos 5 GB y `qwen2.5:7b` cuantizado 4,7 GB: no entran juntos. Plan B: etapas en secuencia liberando memoria; si una sola no entra, Whisper `small` (unos 2 GB), `qwen2.5:3b` (1,9 GB) o CPU, registrando el cambio y su latencia.
 2. **Errores acumulados entre módulos.** Sale del veredicto: V5 = 0/10, sin evidencia previa de la calidad conjunta. Señal: la minuta no cumple la fila de calidad de 2.3. Plan B: generar la minuta desde la transcripción corregida a mano; si así cumple, se cambia el modelo de diarización o de ASR; si no, se ajusta el prompt.
 3. **Referencias de diarización no puntuables.** Sale del veredicto: en CALLHOME, 2/15 audios tienen anotaciones que exceden su duración (159/3.168 segmentos), y F3 y M3 siguen sin medir. Plan B: excluir con trazabilidad esos segmentos, como indica el plan del veredicto; si la muestra queda sin sentido, medir la diarización solo sobre las nueve sesiones de Figshare.
 
@@ -111,7 +111,7 @@ La PoC es una aplicación de ejecución local que captura el audio del micrófon
 |---|---|---|---|---|
 | Calidad de la respuesta | Temas y acciones de las notas de referencia que la minuta recupera (nombrados aunque sea con otras palabras; las acciones, con su responsable) y acciones inventadas (sin respaldo en la marca temporal que citan ni en las notas) | 2/2 temas y 1/1 acción recuperados, y 0 inventadas, en las 2 modalidades (un archivo y varios ordenados) | Reunión de prueba: propia, consentida, en castellano, de al menos 5 minutos, con 2 temas y 1 acción explícita; completa y dividida en 2 o más archivos | Un integrante que no ejecuta el procesamiento escribe antes las notas (temas, acciones, responsables y marcas temporales) y marca sí o no por ítem |
 | Funcionamiento modular | Salidas dentro del contrato del módulo siguiente. Diarización: segmentos con hablante, inicio menor que fin y dentro del audio. Transcripción: segmentos con texto y tiempos. Minuta: secciones de temas, decisiones y acciones | 3/3 módulos con el 100 % de sus salidas dentro del contrato | Muestra congelada en la semana 7, con su SHA-256 en un manifiesto: 5 clips de OpenSLR y Common Voice, 3 sesiones de Figshare y 3 reuniones de AMI traducidas | Script de contratos |
-| Latencia (máximo, p100) | Tiempo desde que se pide procesar hasta que la minuta queda escrita | Las 5 corridas en 30 minutos o menos para 5 minutos de audio | La reunión de prueba, 5 corridas en la máquina de desarrollo (RTX 3050 Laptop, 6 GB de VRAM, 31 GB de RAM) | Tiempo registrado en cada corrida |
+| Latencia (máximo, p100) | Tiempo desde que se pide procesar hasta que la minuta queda escrita | Las 5 corridas en 30 minutos o menos para 5 minutos de audio | La reunión de prueba, 5 corridas en la máquina de Matías (RTX 3050 Laptop, 6 GB de VRAM, 31 GB de RAM) | Tiempo registrado en cada corrida |
 | Cobertura de los casos borde | Escenarios de 2.1 que hacen lo que dice su «Entonces», con la entrada conservada | 7/7: happy path, 2.1.1 a 2.1.5 y error del sistema | Un input real o preparado por escenario, fijado antes de la semana 9 (2.1.3: una reunión de ICSI con 6 o más hablantes) | Un tercero recorre los escenarios con la aplicación abierta y marca sí o no |
 | Recuperación ante interrupciones | Tiempo grabado hasta un corte forzado menos la duración del archivo que queda | 1/1 prueba con 5 s perdidos o menos, el archivo procesable y listado como interrumpido al reiniciar | Una grabación propia de al menos 2 minutos, cortada cerrando el proceso a la fuerza | Comparar las duraciones, reiniciar la aplicación y procesar el archivo |
 | Ventaja sobre el *baseline* | No aplica: lo construido es el *baseline* (3.1.1) | — | — | — |
@@ -221,6 +221,6 @@ flowchart LR
 
 | Semana | Meta | Qué se construye | Quién | Qué se muestra al cierre |
 |---|---|---|---|---|
-| 7, Workshop 1 | Datos listos | Muestra congelada con SHA-256; reunión de prueba y sus notas; escritura incremental; preparación y unión de audio; prueba de los tres modelos | **A completar** | Manifiesto, reunión de prueba con notas y cada módulo corriendo por separado |
-| 8, Workshop 2 | *Baseline* de punta a punta | Asociación temporal, marcas de solapamiento y ambigüedad, minuta con marcas temporales, orquestación, recuperación e interfaz | **A completar** | El happy path con la reunión de prueba, en un archivo y en varios |
-| 9, Workshop 3 | Evaluación y cierre | Criterios de 2.3, casos borde y recuperación | **A completar** | La tabla de 2.3 con sí o no por fila y la decisión |
+| 7, Workshop 1 | Datos listos | Muestra congelada con SHA-256; reunión de prueba y sus notas; escritura incremental; preparación y unión de audio; prueba de los tres modelos | Matías y Felipe | Manifiesto, reunión de prueba con notas y cada módulo corriendo por separado |
+| 8, Workshop 2 | *Baseline* de punta a punta | Asociación temporal, marcas de solapamiento y ambigüedad, minuta con marcas temporales, orquestación, recuperación e interfaz | Bruno | El happy path con la reunión de prueba, en un archivo y en varios |
+| 9, Workshop 3 | Evaluación y cierre | Criterios de 2.3, casos borde y recuperación | Luisa | La tabla de 2.3 con sí o no por fila y la decisión |
