@@ -9,6 +9,7 @@ Insumos: [`canvas.md`](../canvas.md) (Hito 1) y [`4-veredicto.md`](../hito-2/4-v
 | Versión | Fecha | Qué cambió |
 |---|---|---|
 | 1, Hito 3 | 2026-11-01 | Primera versión completa |
+| 2, Hito 3 | 2026-11-03 | Etapa de asociación y etiquetado de hablantes: el usuario nombra a cada hablante antes de generar la minuta (2.1, 2.2, 2.3, 3.1.3, 3.1.4, 3.2 y 4.1) |
 
 ---
 
@@ -50,7 +51,8 @@ La PoC es una aplicación de ejecución local que captura el audio del micrófon
 - **Cuando:** inicia la grabación al empezar la reunión y la detiene al terminar.
 - **Entonces:** la aplicación guarda la grabación en el directorio elegido.
 - **Y:** el usuario pide procesarla y ve el avance de cada etapa.
-- **Y:** quedan la transcripción, con hablante y marca temporal por intervención, y la minuta, con temas, decisiones y acciones con responsable, cada una con su marca temporal.
+- **Y:** al terminar la diarización y la transcripción, ve una ficha por hablante con un fragmento de su audio y el texto correspondiente, lo escucha y escribe su nombre (2.2, punto 5).
+- **Y:** quedan la transcripción, con el nombre del hablante y la marca temporal de cada intervención, y la minuta, con temas, decisiones y acciones con responsable por su nombre, cada una con su marca temporal.
 - **Y:** la minuta recupera los 2 temas y la acción de las notas, sin acciones que no estén en la grabación.
 - **Y:** la misma reunión, cargada como varios archivos en orden, produce una sola transcripción y una sola minuta.
 
@@ -68,6 +70,7 @@ La PoC es una aplicación de ejecución local que captura el audio del micrófon
 - **Dado:** participan personas con voces similares y hay intervenciones superpuestas.
 - **Cuando:** se ejecuta la diarización.
 - **Entonces:** conserva etiquetas, intervalos y solapamientos, y marca las intervenciones de hablante ambiguo.
+- **Y:** si separa a una persona en dos etiquetas, el usuario les pone el mismo nombre al etiquetar y se tratan como una sola.
 - **Le cuesta al usuario:** revisar confusiones al atribuir decisiones y responsables.
 
 ##### 2.1.3 Seis o más hablantes
@@ -75,7 +78,7 @@ La PoC es una aplicación de ejecución local que captura el audio del micrófon
 - **Dado:** una reunión con 6 o más hablantes, como 57 de las 75 de ICSI del Hito 2.
 - **Cuando:** se ejecuta la diarización.
 - **Entonces:** etiqueta a cada hablante detectado y marca como ambiguas las intervenciones que no puede atribuir; si no termina, lo informa y conserva el audio.
-- **Le cuesta al usuario:** revisar más atribuciones dudosas.
+- **Le cuesta al usuario:** revisar más atribuciones dudosas y nombrar más hablantes.
 
 ##### 2.1.4 Ruido o interferencias
 
@@ -102,16 +105,17 @@ La PoC es una aplicación de ejecución local que captura el audio del micrófon
 
 1. **Interacción y control.** El usuario elige dispositivos y directorio, graba, y procesa uno o varios archivos; si son varios, fija su orden y se tratan como una reunión. Ve el estado de cada etapa y abre el directorio de resultados.
 2. **Señal de confianza.** No se muestra un puntaje del modelo, sino evidencia verificable: la transcripción marca los tramos con habla superpuesta y las intervenciones de hablante ambiguo (las que caen sobre más de un turno o sobre ninguno), y en la minuta cada decisión y acción cita la marca temporal que la respalda, para comprobarla en el audio.
-3. **Corrección o aviso.** El usuario corrige la minuta fuera de la aplicación, en un formato editable, y puede volver a procesar. No hay edición interactiva de transcripciones ni de hablantes.
+3. **Corrección o aviso.** El usuario corrige la minuta fuera de la aplicación, en un formato editable, y puede volver a procesar. Dentro de la aplicación solo se editan los nombres de los hablantes (punto 5); no se editan transcripciones ni turnos.
 4. **Peor caso borde (2.1.4).** Con ruido intenso, el sistema conserva el audio e informa la etapa que falló; si hay resultados, el usuario los revisa con las marcas del punto 2 y completa lo que no se entiende con notas o consultas.
+5. **Etiquetado de hablantes.** Al terminar la diarización y la transcripción, el procesamiento se detiene y muestra una ficha por hablante detectado, ordenadas por tiempo de habla: su etiqueta (por ejemplo, `SPEAKER_00`), un fragmento de 5 a 15 s en que habla solo, con botón para reproducirlo, el texto de ese fragmento y un campo para el nombre. El usuario puede pedir otro fragmento si no reconoce la voz. Un nombre vacío deja la etiqueta, y dos etiquetas con el mismo nombre se tratan como una persona. Al confirmar, la transcripción y la minuta usan los nombres y el procesamiento sigue. Por línea de comandos, sin interfaz, el paso se saltea y quedan las etiquetas.
 
 ### 2.3 Criterios de aceptación
 
 | Criterio | Métrica | Umbral | Conjunto de evaluación | Cómo se chequea |
 |---|---|---|---|---|
 | Calidad de la respuesta | Temas y acciones de las notas de referencia que la minuta recupera (nombrados aunque sea con otras palabras; las acciones, con su responsable) y acciones inventadas (sin respaldo en la marca temporal que citan ni en las notas) | 2/2 temas y 1/1 acción recuperados, y 0 inventadas, en las 2 modalidades (un archivo y varios ordenados) | Reunión de prueba: propia, consentida, en castellano, de al menos 5 minutos, con 2 temas y 1 acción explícita; completa y dividida en 2 o más archivos | Un integrante que no ejecuta el procesamiento escribe antes las notas (temas, acciones, responsables y marcas temporales) y marca sí o no por ítem |
-| Funcionamiento modular | Salidas dentro del contrato del módulo siguiente. Diarización: segmentos con hablante, inicio menor que fin y dentro del audio. Transcripción: segmentos con texto y tiempos. Minuta: secciones de temas, decisiones y acciones | 3/3 módulos con el 100 % de sus salidas dentro del contrato | Muestra congelada en la semana 7, con su SHA-256 en un manifiesto: 5 clips de OpenSLR y Common Voice, 3 sesiones de Figshare y 3 reuniones de AMI traducidas | Script de contratos |
-| Latencia (máximo, p100) | Tiempo desde que se pide procesar hasta que la minuta queda escrita | Las 5 corridas en 30 minutos o menos para 5 minutos de audio | La reunión de prueba, 5 corridas en la máquina de Matías (RTX 3050 Laptop, 6 GB de VRAM, 31 GB de RAM) | Tiempo registrado en cada corrida |
+| Funcionamiento modular | Salidas dentro del contrato del módulo siguiente. Diarización: segmentos con hablante, inicio menor que fin y dentro del audio. Transcripción: segmentos con texto y tiempos. Asociación: intervenciones con etiqueta de hablante, nombre o vacío, texto, tiempos y marcas de solapamiento y ambigüedad. Minuta: secciones de temas, decisiones y acciones | 4/4 módulos con el 100 % de sus salidas dentro del contrato | Muestra congelada en la semana 7, con su SHA-256 en un manifiesto: 5 clips de OpenSLR y Common Voice, 3 sesiones de Figshare y 3 reuniones de AMI traducidas | Script de contratos |
+| Latencia (máximo, p100) | Tiempo desde que se pide procesar hasta que la minuta queda escrita, sin contar el que el usuario tarda en nombrar a los hablantes | Las 5 corridas en 30 minutos o menos para 5 minutos de audio | La reunión de prueba, 5 corridas en la máquina de Matías (RTX 3050 Laptop, 6 GB de VRAM, 31 GB de RAM) | Tiempo registrado en cada corrida |
 | Cobertura de los casos borde | Escenarios de 2.1 que hacen lo que dice su «Entonces», con la entrada conservada | 7/7: happy path, 2.1.1 a 2.1.5 y error del sistema | Un input real o preparado por escenario, fijado antes de la semana 9 (2.1.3: una reunión de ICSI con 6 o más hablantes) | Un tercero recorre los escenarios con la aplicación abierta y marca sí o no |
 | Recuperación ante interrupciones | Tiempo grabado hasta un corte forzado menos la duración del archivo que queda | 1/1 prueba con 5 s perdidos o menos, el archivo procesable y listado como interrumpido al reiniciar | Una grabación propia de al menos 2 minutos, cortada cerrando el proceso a la fuerza | Comparar las duraciones, reiniciar la aplicación y procesar el archivo |
 | Ventaja sobre el *baseline* | No aplica: lo construido es el *baseline* (3.1.1) | — | — | — |
@@ -161,9 +165,9 @@ Se registran versiones, orden de los archivos, notas y resultados. WER, DER y JE
 1. **Agente** que decide qué herramientas usar: agrega decisiones y puntos de falla que este recorrido fijo no necesita. Descartada.
 2. **Workflow fijo:** controla las etapas, verifica sus contratos y localiza los errores. Sigue en pie.
 
-**Decisión.** La 2, posterior a la grabación: la diarización y el ASR procesan por separado el mismo audio normalizado, sus resultados se asocian por marcas temporales y la transcripción estructurada alimenta al LLM, por fragmentos si excede su contexto.
+**Decisión.** La 2, posterior a la grabación: la diarización y el ASR procesan por separado el mismo audio normalizado, sus resultados se asocian por marcas temporales, el usuario nombra a cada hablante (2.2, punto 5) y la transcripción estructurada alimenta al LLM, por fragmentos si excede su contexto.
 
-**Consecuencias.** Recorrido reproducible, con resultados parciales conservados; las atribuciones ambiguas no se presentan como seguras. Se resigna la flexibilidad de un agente.
+**Consecuencias.** Recorrido reproducible, con resultados parciales conservados; las atribuciones ambiguas no se presentan como seguras. El recorrido se detiene una vez, para el etiquetado. Se resigna la flexibilidad de un agente.
 
 #### 3.1.4 Construir o usar hecho
 
@@ -174,7 +178,7 @@ Se registran versiones, orden de los archivos, notas y resultados. WER, DER y JE
 1. **Solución integral (WhisperX, que integra Whisper con la diarización de pyannote):** ahorra integración, pero deja dentro de la herramienta la asociación entre turnos y texto, que la PoC tiene que controlar y evaluar por módulo. Descartada.
 2. **Integrar componentes existentes:** exige adaptadores y orquestación, pero reutiliza el grabador, los modelos y el trabajo del Hito 2. Sigue en pie.
 
-**Decisión.** La 2, porque conserva el control de cada módulo. Hechos: grabador, FFmpeg, pyannote, Whisper y Ollama. Construidos: escritura incremental del audio, preparación de entradas, asociación de resultados, orquestación e interfaz, con el procesamiento independiente de la GUI.
+**Decisión.** La 2, porque conserva el control de cada módulo. Hechos: grabador, FFmpeg, pyannote, Whisper y Ollama. Construidos: escritura incremental del audio, preparación de entradas, asociación de resultados, etiquetado de hablantes, orquestación e interfaz, con el procesamiento independiente de la GUI.
 
 **Consecuencias.** Se asume mantener las integraciones; se resigna la integración ya resuelta de WhisperX.
 
@@ -208,9 +212,9 @@ flowchart LR
 | Pieza | Qué es en este proyecto | Se construye o se usa hecha | Con qué |
 |---|---|---|---|
 | Ingesta | Grabación con escritura incremental o carga ordenada de archivos | Se reutiliza y amplía | sounddevice y soundfile (grabación); FFmpeg (archivos cargados) |
-| Procesamiento | Normalización y unión de audio, asociación temporal | Se construye, con lo pertinente del Hito 2 | FFmpeg y Python |
+| Procesamiento | Normalización y unión de audio, asociación temporal de hablantes y texto | Se construye, con lo pertinente del Hito 2 | FFmpeg y Python |
 | Modelo o agente | Diarización, transcripción y generación de minutas | Se usan modelos preentrenados | pyannote `speaker-diarization-community-1`, Whisper `medium` y `qwen2.5:7b` mediante Ollama |
-| Interfaz | Grabar, cargar, procesar y revisar resultados | Se amplía la GUI existente | PySide6 (Qt) |
+| Interfaz | Grabar, cargar, procesar, nombrar a los hablantes y revisar resultados | Se amplía la GUI existente | PySide6 (Qt); sounddevice para reproducir los fragmentos |
 | Evaluación | Comprobación modular e integral contra 2.3 | Se reutiliza y amplía | Scripts del Hito 2, manifiesto SHA-256 y script de contratos |
 
 ---
@@ -222,5 +226,5 @@ flowchart LR
 | Semana | Meta | Qué se construye | Quién | Qué se muestra al cierre |
 |---|---|---|---|---|
 | 7, Workshop 1 | Datos listos | Muestra congelada con SHA-256; reunión de prueba y sus notas; escritura incremental; preparación y unión de audio; prueba de los tres modelos | Matías y Felipe | Manifiesto, reunión de prueba con notas y cada módulo corriendo por separado |
-| 8, Workshop 2 | *Baseline* de punta a punta | Asociación temporal, marcas de solapamiento y ambigüedad, minuta con marcas temporales, orquestación, recuperación e interfaz | Bruno | El happy path con la reunión de prueba, en un archivo y en varios |
+| 8, Workshop 2 | *Baseline* de punta a punta | Asociación temporal con marcas de solapamiento y ambigüedad, y etiquetado de hablantes (Matías); minuta con marcas temporales, orquestación, recuperación e interfaz (Bruno) | Matías y Bruno | El happy path con la reunión de prueba, en un archivo y en varios |
 | 9, Workshop 3 | Evaluación y cierre | Criterios de 2.3, casos borde y recuperación | Luisa | La tabla de 2.3 con sí o no por fila y la decisión |
