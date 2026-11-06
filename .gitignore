@@ -38,7 +38,7 @@ node_modules/
 # Entorno local y credenciales
 .env
 .env.*
-
+!.env.example
 # Archivos temporales
 *.tmp
 *.bak
