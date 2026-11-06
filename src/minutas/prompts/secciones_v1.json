@@ -1,0 +1,7 @@
+{
+  "resumen": "Síntesis ejecutiva breve y fiel de los asuntos relevantes. Debe poder comprenderla alguien que no asistió a la reunión.",
+  "temas": "Asuntos sustantivos efectivamente tratados, aun cuando no se haya adoptado una decisión sobre ellos.",
+  "decisiones": "Acuerdos o resoluciones efectivamente adoptados, incluyendo propuestas posteriormente aceptadas o confirmadas de manera explícita. Una propuesta, preferencia, duda o intención sin aceptación o confirmación no es una decisión. Identificá la intervención que confirma el acuerdo.",
+  "problemas": "Dificultades, riesgos o cuestiones pendientes expresamente planteadas; no deduzcas problemas que no hayan sido mencionados.",
+  "acciones": "Tareas o compromisos concretos expresados en la reunión. El responsable y el plazo solo se consignan si constan explícitamente; de lo contrario, son nulos. No asumas que el responsable es quien habló."
+}
