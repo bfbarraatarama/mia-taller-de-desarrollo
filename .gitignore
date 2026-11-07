@@ -66,3 +66,6 @@ hito-2/muestra/uba_games_figshare/
 PoC/*
 !PoC/paso1_captura/
 PoC/paso1_captura/grabaciones/
+# Pruebas de concepto locales
+PoC/
+feli.md
