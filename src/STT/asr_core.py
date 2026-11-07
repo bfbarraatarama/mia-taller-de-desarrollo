@@ -318,7 +318,7 @@ def process_asr(
     audio_path: str | Path,
     diarization_path: str | Path,
     output_path: str | Path,
-    model_size: str = "base",
+    model_size: str = "large-v2",
     verbose: bool = False,
     dry_run: bool = False,
     words_path: str | Path | None = None
