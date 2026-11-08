@@ -1,0 +1,14 @@
+# Etapa 2 (diarización): dependencias directas. Python 3.12.
+#
+# Instalar SIEMPRE con las restricciones (versiones verificadas de todo el árbol):
+#   pip install -r PoC/paso2_diarizacion/requirements.txt -c PoC/paso2_diarizacion/constraints.txt
+#
+# PyTorch NO va acá: se instala ANTES, con la variante de cada máquina (ver README, Instalación):
+#   CPU: pip install torch==2.8.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+#   GPU: pip install torch==2.8.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128
+# FFmpeg 7.1.1 shared y 7-Zip son herramientas del sistema, no paquetes de pip.
+pyannote.audio==4.0.7
+pyannote.metrics==4.2.0
+torchcodec==0.7.0
+python-dotenv==1.2.4
+pytest==9.2.0
