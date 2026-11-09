@@ -90,6 +90,10 @@ El sistema SHALL asignar a cada palabra de `asr.json` un hablante de `diarizatio
 - **WHEN** dos hablantes alternan turnos sin superponerse y cada palabra cae dentro de un turno
 - **THEN** cada intervención tiene el `speaker` del turno de sus palabras, `overlap: false` y `ambiguous: false`, y la concatenación de los textos de todas las intervenciones contiene todas las palabras de `asr.json` en orden
 
+
+#### Scenario: Ejemplo ideal
+- **WHEN** se procesa el ejemplo ideal de D10 (`design.md`)
+- **THEN** el 100 % de las palabras tiene el hablante de `referencia.json` y todas las intervenciones tienen `overlap: false` y `ambiguous: false`
 ### Requirement: Habla superpuesta y hablante dudoso (2.1.2)
 El sistema SHALL conservar todas las palabras aunque caigan en tramos con dos o más hablantes. SHALL marcar `overlap: true` si la intervención tiene 0,2 s o más con dos o más hablantes activos. SHALL marcar `ambiguous: true` si `speaker` es `null`, si otra etiqueta cubre el 30 % o más de su duración, o si los turnos de su propia etiqueta cubren menos del 50 %. Los cálculos SHALL hacerse en milisegundos enteros.
 
@@ -167,3 +171,14 @@ Por línea de comandos, el sistema SHALL terminar con código 0 si tuvo éxito y
 #### Scenario: Fallo con resultado anterior presente
 - **WHEN** una ejecución falla y queda un `transcription.json` válido de una ejecución anterior
 - **THEN** el comando termina con código 1 y la función lanza la excepción
+
+### Requirement: Rutas de entrada y salida
+Por defecto, el sistema SHALL leer `audio.wav`, `diarization.json` y `asr.json` de la carpeta de la reunión y SHALL escribir sus resultados en ella. SHALL aceptar rutas explícitas para cada entrada y una carpeta de salida, que reemplazan a las de por defecto.
+
+#### Scenario: Carpeta de la reunión
+- **WHEN** se ejecuta con solo la carpeta de una reunión que contiene los tres archivos
+- **THEN** los lee de ahí y escribe `transcription.json` y `transcription.meta.json` en esa carpeta
+
+#### Scenario: Rutas explícitas
+- **WHEN** se ejecuta con `figshare_v2_S26_objects_01.json` como diarización, un `asr.json` de otra carpeta y una carpeta de salida
+- **THEN** usa esos archivos sin copiarlos ni renombrarlos y escribe solo en la carpeta de salida

@@ -93,3 +93,47 @@ Si una etiqueta no tiene candidatos, el sistema SHALL usar su tramo solo más la
 #### Scenario: Otro fragmento sin repetir
 - **WHEN** `SPEAKER_00` tiene 3 candidatos y el usuario pide «Otro fragmento» dos veces
 - **THEN** ve los 3 candidatos, cada uno una sola vez
+
+### Requirement: Etiquetado entre dos corridas del orquestador
+Con interfaz, el panel de procesamiento SHALL lanzar el orquestador hasta la transcripción, correr la asociación y las fichas en el proceso de la interfaz y, al confirmar, lanzar el orquestador desde la minuta. La latencia registrada SHALL ser la suma de las dos corridas, sin el tiempo de etiquetado.
+
+#### Scenario: Happy path con interfaz
+- **WHEN** el usuario procesa una reunión, nombra a los hablantes y confirma
+- **THEN** la segunda corrida del orquestador empieza después de que existen `speakers.json` y `transcription.json` con los nombres
+
+#### Scenario: Latencia sin el etiquetado
+- **WHEN** la primera corrida dura 4 min, el usuario tarda 3 min en las fichas y la segunda corrida dura 2 min
+- **THEN** la latencia informada es de 6 min
+
+#### Scenario: Volver a etiquetar sin repetir la GPU
+- **WHEN** en la carpeta de una reunión ya existen `diarization.json` y `asr.json` válidos y el usuario pide etiquetarla
+- **THEN** se muestran las fichas sin volver a correr las Etapas 2 y 3
+
+### Requirement: Diálogo modal
+Las fichas SHALL mostrarse en un diálogo modal sobre la ventana principal. Mientras esté abierto, SHALL NOT poder iniciarse una grabación ni otro procesamiento.
+
+#### Scenario: Grabar durante el etiquetado
+- **WHEN** las fichas están abiertas
+- **THEN** el botón de grabar y el de procesar de la ventana principal no responden
+
+### Requirement: Reproducción del fragmento
+El sistema SHALL leer del audio solo el fragmento y reproducirlo con sounddevice. SHALL sonar una sola reproducción a la vez, y el botón de reproducir SHALL alternar con detener.
+
+#### Scenario: Una reproducción a la vez
+- **WHEN** suena el fragmento de `SPEAKER_00` y el usuario reproduce el de `SPEAKER_01`
+- **THEN** el de `SPEAKER_00` se detiene y suena solo el de `SPEAKER_01`
+
+#### Scenario: Detener
+- **WHEN** el usuario presiona el botón mientras suena el fragmento
+- **THEN** la reproducción se detiene y el botón vuelve a «Reproducir»
+
+### Requirement: Ayudas para nombrar
+El campo de nombre SHALL ofrecer como autocompletado los nombres ya escritos en otras fichas. Cada ficha SHALL mostrar qué fragmento se ve y cuántos candidatos hay.
+
+#### Scenario: Autocompletado
+- **WHEN** el usuario escribió `Luisa` en una ficha y escribe `Lu` en otra
+- **THEN** se ofrece `Luisa`
+
+#### Scenario: Contador de fragmentos
+- **WHEN** `SPEAKER_00` tiene 5 candidatos y el usuario pidió «Otro fragmento» una vez
+- **THEN** la ficha muestra «fragmento 2 de 5»

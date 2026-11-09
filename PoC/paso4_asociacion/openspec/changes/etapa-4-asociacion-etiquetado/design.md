@@ -105,3 +105,77 @@ Motivo: conserva el azar, la representatividad, el tope y el recorte, respeta lo
 | Semilla | Primeros 8 bytes del SHA-256 de `diarization.json`; se registra en `transcription.meta.json` |
 | «Otro fragmento» | Siguiente candidato de una permutación con esa semilla, sin repetir; agotados los candidatos, siguen los respaldos y vuelve a empezar |
 | Texto del fragmento | Palabras de `asr.json` cuyo punto medio cae dentro del fragmento |
+
+### D7. Integración con el pipeline
+
+A acordar con Bruno: el orquestador `procesar.py` es suyo (plan 4.1). Entornos: interfaz y Etapa 4 en Python 3.14 (`.venv` de la raíz); Etapas 2 y 3 en 3.12 con PyTorch; Etapa 5 en 3.12 con Ollama.
+
+**Pausa para etiquetar**
+
+| Alternativa | Descripción | Resultado |
+|---|---|---|
+| A | Un proceso del orquestador que espera la confirmación de la interfaz | Descartada: el proceso conserva el contexto CUDA de PyTorch durante el etiquetado (no medido; suele ser de cientos de MB, con 6 GB y Qwen en 4,7 GB); si la interfaz se cierra, queda colgado |
+| B | Dos corridas; el orquestador asocia y escribe un archivo intermedio para las fichas | Descartada: agrega un contrato nuevo |
+| **C** | **Dos corridas; la interfaz corre la Etapa 4: `procesar.py --hasta transcribir` → `asociar()` + fichas + `escribir()` → `procesar.py --desde minuta`** | **Elegida** |
+
+Motivo: usa solo archivos que ya tienen contrato, el proceso con GPU termina antes de las fichas, se puede volver a etiquetar sin repetir las Etapas 2 y 3, y la latencia de 2.3 es la suma de las dos corridas (la segunda con `--t-pedido` al confirmar). Sin interfaz, el orquestador corre la Etapa 4 por CLI, sin nombres. Pedido a Bruno: las opciones `--hasta transcribir` y `--desde minuta` (nombres a acordar).
+
+**API**
+
+| Función | Entrada | Salida |
+|---|---|---|
+| `asociar(carpeta, audio=None, diarizacion=None, asr=None)` | Carpeta de la reunión y rutas opcionales | Intervenciones, fichas con candidatos de fragmento, meta parcial. No escribe nada |
+| `escribir(asociacion, nombres, salida=None)` | Resultado de `asociar`, `{etiqueta: nombre o None}` o `None` (sin etiquetado), fragmento en pantalla por etiqueta | `transcription.json`, `transcription.meta.json` y, si hubo etiquetado, `speakers.json` |
+
+**Rutas**
+
+| Alternativa | Descripción | Resultado |
+|---|---|---|
+| A | Siempre rutas explícitas | Descartada: el orquestador repite 4 rutas con nombres fijos |
+| B | Carpeta de la reunión con nombres fijos | Descartada: obliga a copiar o renombrar los archivos de S26 y de la Etapa 3 para evaluar |
+| **C** | **Carpeta por defecto (`audio.wav`, `diarization.json`, `asr.json`) y rutas explícitas opcionales; salida en la carpeta o en `--salida`** | **Elegida** |
+
+### D8. Interfaz de las fichas
+
+Verificado en la máquina de referencia: el `.venv` de la interfaz no tiene QtMultimedia (`pyside6-essentials` no lo incluye); sounddevice tiene salida de audio.
+
+| Decisión | Alternativas | Elegida | Motivo |
+|---|---|---|---|
+| Dónde | A diálogo modal · B dentro del panel · C ventana no modal | **A: `QDialog` modal con `QScrollArea`** | Bloquea grabar y procesar mientras se etiqueta (3.1.5) sin código extra; el cierre es el lugar de la pregunta de 3.3. B no tiene lugar para 8 fichas (2.1.3); C deja grabar a mitad del etiquetado |
+| Reproducción | A sounddevice · B QtMultimedia · C reproductor del sistema | **A: `soundfile.read(start=, stop=)` + `sd.play`; ▶/■ alterna; una reproducción a la vez** | Sin dependencias nuevas, como prevé el pipeline; lee solo el fragmento. B exige `pyside6-addons`; C no se puede detener |
+| Ayudas | A mínimo · B + autocompletado, contador y aviso · C + todas las intervenciones | **B** | El autocompletado evita los errores de tipeo que la unificación (2.4) no cubre; el contador avisa cuando «Otro fragmento» empieza a repetir (D6); el aviso de superposición lo exige D6. C alarga las fichas en el caso de 8 hablantes |
+
+La lógica de las fichas (orden, candidatos, nombres, unificación, opciones de cierre) vive en un modelo sin Qt; el diálogo solo la muestra.
+
+### D9. Pruebas
+
+Verificado en la máquina de referencia: no están Figshare (S26) ni los `asr.json` de la Etapa 3 (`data/`); sí Humyn, 4 grabaciones propias de la Etapa 1 y la GPU. `pytest` no está en el `.venv` de la interfaz.
+
+| Decisión | Alternativas | Elegida | Motivo |
+|---|---|---|---|
+| Niveles | A solo unitarias · B tres niveles · C B + error de atribución por palabra contra Figshare | **B: 1 unitarias (un test por escenario) · 2 integración con las Etapas 2 y 3 reales en la GPU sobre grabaciones propias, lectura por la Etapa 5 y proporción de marcas y empates · 3 contrato sobre la muestra congelada de 2.3** | El nivel 2 cubre además las tareas 7.3, 7.4 y 7.5 de la Etapa 2 y mide lo pendiente de D2 y D5. El nivel 3 depende de la muestra congelada (semana 7). C no entra en la semana y 2.3 no le pone umbral |
+| Interfaz | A lista manual · B `pytest-qt` · C modelo sin Qt + lista manual | **C** | Los escenarios de etiquetado son lógica; lo visual y el audio se comprueban escuchando, como en la cobertura de 2.3 |
+| Orden | A de abajo hacia arriba · B esqueleto de punta a punta primero · C interfaz primero | **B** | Meta de la semana 8: *baseline* de punta a punta; destraba a la Etapa 5 y la tarea 7.5 de la Etapa 2 |
+
+`pytest` va en `requirements-dev.txt` del módulo. Cada test lleva el nombre de su escenario.
+
+### D10. Ejemplo ideal
+
+Entradas perfectas y consistentes entre sí para desarrollar y probar sin las Etapas 2 y 3 («para probar sola» del documento del pipeline). Verificado: espeak-ng 1.51 con `es-419` y variantes distinguibles (`+f3`, `+m3`); genera 22 050 Hz, mono, PCM16.
+
+| Alternativa | Descripción | Resultado |
+|---|---|---|
+| A | Un tono por hablante con NumPy y JSON a mano | Descartada: sin voces para la lista manual ni contenido para la Etapa 5 |
+| B | Guion grabado por el equipo y JSON con tiempos marcados de oído | Descartada: el marcado agrega errores, requiere consentimiento y deja voces reales en el repo |
+| **C** | **Guion sintetizado con espeak-ng por un script; turnos y palabras exactos por construcción** | **Elegida** |
+
+Motivo: tiempos sin error de marcado, así que el happy path exige el 100 % de atribución correcta; voces que se escuchan en las fichas; reproducible y sin datos personales (se versionan el script y el guion, no el WAV); da a la Etapa 5 un `transcription.json` con 2 temas y 1 acción.
+
+| Detalle | Valor |
+|---|---|
+| Guion | ≈ 60 a 75 s; Ana (`es-419+f3`) abre y presenta el presupuesto del trimestre en una intervención de más de 15 s; Carlos (`es-419+m3`) discute la fecha de la demo y toma la acción «Yo mando el informe el viernes»; Sofía (`es-419+f1`) cierra y confirma la decisión. Nombres ficticios |
+| Audio | Intervenciones concatenadas sin superposición, con 0,6 s de silencio entre ellas; remuestreo a 16 kHz con `scipy.signal.resample_poly` |
+| `diarization.json` | Un turno por intervención, con los tiempos de la concatenación y etiquetas `SPEAKER_00` a `SPEAKER_02` |
+| `asr.json` | Un segmento por intervención; tiempos de palabra repartidos en proporción a sus letras dentro de la intervención |
+| `referencia.json` | Hablante y nombre esperados por palabra, para comparar |
+| Fuera del ejemplo | Solapamientos, huecos y empates: se prueban con JSON chicos a mano (tareas 3.x) y con datos reales (nivel 2) |

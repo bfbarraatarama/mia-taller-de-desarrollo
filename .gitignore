@@ -69,3 +69,4 @@ PoC/paso1_captura/grabaciones/
 # Paso 4 (asociación y etiquetado): se versiona el módulo; resultados de pruebas quedan locales
 !PoC/paso4_asociacion/
 PoC/paso4_asociacion/**/*.wav
+PoC/paso4_asociacion/ejemplo_ideal/generado/
