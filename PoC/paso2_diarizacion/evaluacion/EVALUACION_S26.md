@@ -1,6 +1,13 @@
 # Evaluación de calidad de la diarización: UBA Games, sesión S26
 
-Este documento reúne la metodología y los resultados de la evaluación de la Etapa 2 sobre las 25 grabaciones de la sesión S26 de UBA Games (Figshare v2). Todas las cifras salen de `evaluacion/resultados/calidad_S26.json`, `evaluacion/resultados/calidad_total.json` y `evaluacion/figshare_test.manifest.json`, que están versionados. La evaluación se corrió el 08/11/2026 en CPU.
+Este documento reúne la metodología y los resultados de la evaluación de la Etapa 2 sobre las 25 grabaciones de la sesión S26 de UBA Games (Figshare v2). Hay dos corridas:
+
+| Corrida | Fecha y equipo | Origen de las cifras | ¿Reproducible desde el repo? |
+|---|---|---|---|
+| **CPU** (principal de este documento) | 08/11/2026, máquina de desarrollo de la Etapa 2 (Windows 11) | `evaluacion/resultados/calidad_S26.json`, `calidad_total.json`, `hipotesis_S26/*.json` y `evaluacion/figshare_test.manifest.json`, todos versionados | **Sí**: `pytest -k resultados_publicados` recalcula las métricas sin el modelo |
+| **GPU (CUDA)** | informada el 09/11/2026 por **una compañera**, desde su equipo (Ubuntu 24.04, RTX 4060 Ti) | su informe, transcripto en `openspec/changes/etapa-2-diarizacion/registro-pruebas.md` | **No**: sus reportes y sus hipótesis no están en el repositorio |
+
+Salvo donde se indique GPU, todas las cifras son de la corrida en CPU.
 
 > **Alcance.** Los valores son una **línea de base** de la PoC, sin umbral de aceptación. Las 25 grabaciones son de **una misma sesión**, con los mismos dos participantes y el mismo juego. No representan otras voces, otros micrófonos ni reuniones (ver [Limitaciones](#limitaciones)).
 
@@ -60,11 +67,12 @@ La integridad se verifica sin extraer ni modificar nada:
 | | |
 |---|---|
 | Modelo | `pyannote/speaker-diarization-community-1`, con pyannote.audio 4.0.7, torch 2.8.0+cpu y Python 3.12.10 |
-| Dispositivo | `device="auto"`, que en esta máquina sin GPU resolvió **CPU** |
+| Dispositivo | `device="auto"`, que en la máquina de desarrollo, sin GPU, resolvió **CPU**. En el equipo de la compañera resolvió **CUDA** (ver [Resultados en GPU](#resultados-en-gpu-informados-por-una-compañera)) |
 | Cantidad de hablantes | **detección automática** (`num_speakers` sin fijar). La corrida diagnóstica con `num_speakers=2` **no se ejecutó** |
 | Salida | `diarization.json` de la Etapa 2, normalizado y validado con `contrato.py` en las 25 grabaciones |
 | Reutilización | `s26.objects.04` reutilizó su corrida anterior, que es compatible: mismo SHA-256 del WAV mono, modelo, versiones, `num_speakers` y dispositivo |
-| Tiempo | 2260,4 s (37,7 min) de inferencia nueva para 24 grabaciones, más 73,1 s de la 04. Son 2333,6 s para 1821,2 s de audio, unos 1,28 s de cómputo por segundo de audio |
+| Tiempo (CPU) | 2260,4 s (37,7 min) de inferencia nueva para 24 grabaciones, más 73,1 s de la 04. Son 2333,6 s para 1821,2 s de audio, unos 1,28 s de cómputo por segundo de audio |
+| Tiempo (GPU, informado) | 79,146 s para 1821,246 s de audio, las 25 grabaciones sin reutilizar: unas 23 veces más rápido que el tiempo real |
 
 ## Métricas
 
@@ -84,13 +92,37 @@ Las tres métricas son de `pyannote.metrics` 4.2.0, **incluyen el habla superpue
 
 | Métrica | Valor global | Falsa alarma | Habla perdida | Confusión | Habla de referencia evaluada |
 |---|---|---|---|---|---|
-| DER estricto | **23,1 %** | 116,16 s (7,2 %) | 60,25 s (3,7 %) | 196,15 s (12,2 %) | 1609,5 s |
-| DER NIST (±0,25 s) | **12,3 %** | 3,54 s (0,4 %) | 17,20 s (1,8 %) | 97,23 s (10,2 %) | 957,7 s (59,5 %) |
-| JER | **40,0 %** | | | | |
+| DER estricto | **23,15 %** | 116,16 s (7,2 %) | 60,25 s (3,7 %) | 196,15 s (12,2 %) | 1609,5 s |
+| DER NIST (±0,25 s) | **12,32 %** | 3,54 s (0,4 %) | 17,20 s (1,8 %) | 97,23 s (10,2 %) | 957,7 s (59,5 %) |
+| JER | **40,02 %** | | | | |
 
 El habla de referencia evaluada (1609,5 s) es mayor que los 1457,6 s de habla, porque el habla superpuesta cuenta una vez por cada hablante.
 
 **Cantidad de hablantes:** coincide en 24 de 25 grabaciones (96 %). En la tarea 02 se detectó 1 hablante en lugar de 2.
+
+### Resultados en GPU (informados por una compañera)
+
+> **Evidencia informada, no versionada.** Una compañera del equipo repitió la evaluación con `pytest -m calidad` en su equipo y la informó en su revisión del PR #8. Sus `calidad_*.json`, sus hipótesis y la salida de `verificar_entorno.py` **no están en el repositorio**: estos valores no se pueden recalcular desde los JSON versionados, que son los de CPU.
+
+| | CPU (versionado) | GPU (informado) |
+|---|---|---|
+| Equipo | Windows 11, Python 3.12.10, `torch 2.8.0+cpu` | Ubuntu 24.04, Python 3.12.3, RTX 4060 Ti 16 GB, `torch 2.8.0+cu128`, pyannote.audio 4.0.7 |
+| Grabaciones | 25/25 (la 04 reutilizada de una corrida compatible) | 25/25 en CUDA, sin reutilizar |
+| WAV mono y RTTM | coinciden con el manifiesto | coinciden con el manifiesto publicado |
+| DER estricto | 23,15 % | 23,15 % |
+| DER NIST (±0,25 s) | 12,32 % | 12,32 % |
+| JER | 40,02 % | 40,02 % |
+| Cantidad de hablantes correcta | 24/25 | 24/25 |
+| Tiempo de inferencia | 2333,6 s | 79,146 s |
+
+- **Comparación:** las métricas globales coinciden con 2 decimales. Las métricas por grabación y las hipótesis segmento a segmento **no se compararon**, porque las de GPU no están disponibles. Coincidir en lo global no prueba que las salidas sean idénticas.
+- **Memoria, medición manual de la compañera sobre un WAV de 30 s:**
+  - 2 hablantes, 13 segmentos y 0 violaciones del contrato;
+  - pico de memoria asignada de 1628,5 MiB;
+  - incremento residual de 8,12 MiB después de `diarizar()`, por debajo del límite de 64 MiB.
+
+  El test automatizado de memoria (tarea 7.3) todavía no existe.
+- **Advertencias no bloqueantes informadas:** TF32 y `std(): degrees of freedom is <= 0`; esta última también aparece en CPU.
 
 ### Dispersión por grabación (sin ponderar)
 
@@ -160,7 +192,7 @@ Para separar el error se fija el emparejamiento global de cada grabación y se c
 - **Sin solapamiento** está toda la confusión y la falsa alarma. Es decir, la atribución errónea ocurre cuando habla **una sola persona**, no en el habla superpuesta.
 
 ### Bordes y tolerancia NIST
-- **La diferencia entre el DER estricto (23,1 %) y el NIST (12,3 %) viene sobre todo de la falsa alarma**, que baja de 116,2 s a 3,5 s. También baja la habla perdida, de 60,2 s a 17,2 s. Son, sobre todo, bordes de frases y pausas cortas que la referencia no marca como habla.
+- **La diferencia entre el DER estricto (23,15 %) y el NIST (12,32 %) viene sobre todo de la falsa alarma**, que baja de 116,2 s a 3,5 s. También baja la habla perdida, de 60,2 s a 17,2 s. Son, sobre todo, bordes de frases y pausas cortas que la referencia no marca como habla.
 - **Limitación de la tolerancia NIST:** solo evalúa el **59,5 %** del habla de referencia (957,7 de 1609,5 s); por grabación, entre el 53,4 % y el 70,0 %. La referencia tiene muchas frases cortas, y la zona de ±0,25 s alrededor de cada borde queda fuera de la evaluación. Por eso `der_tolerancia` mide sobre un subconjunto del habla y conviene leerlo junto con el estricto. El 0,0 % de la tarea 06 sale de una grabación con 14 segmentos de referencia, de la que se evaluó el 70 %.
 
 ## Limitaciones
@@ -170,7 +202,10 @@ Para separar el error se fija el emparejamiento global de cada grabación y se c
 3. **Transcripción posiblemente incompleta:** el README de origen indica que S26–S30 vienen de `annotations_incompleto`. El indicador de cobertura no encontró habla sin anotar relevante (2,78 s en total), pero es solo un indicio.
 4. **Sin acuerdo entre anotadores** y con **2 hablantes por grabación**: no se evalúa el caso de 3 o más.
 5. **La tolerancia NIST** deja afuera el 40,5 % del habla de referencia (ver arriba). `der_tolerancia` no es comparable de forma directa con resultados de `md-eval` ni con DER publicados de otros corpus.
-6. **Solo CPU y solo la corrida principal:** no se evaluó la GPU (tareas 7.3 y 7.4, pendientes) ni la corrida diagnóstica con `num_speakers=2`.
+6. **CPU reproducible, GPU solo informada, y solo la corrida principal:**
+   - la corrida en GPU de la compañera dio las mismas métricas globales, pero sus archivos no están versionados, así que no se puede verificar grabación por grabación;
+   - el test automatizado de memoria de CUDA (tarea 7.3) sigue pendiente;
+   - la corrida diagnóstica con `num_speakers=2` no se ejecutó en ningún dispositivo.
 
 ## Cómo reproducir
 
@@ -181,7 +216,7 @@ $py = "PoC/paso2_diarizacion/.venv/Scripts/python.exe"
 $sel = 1..25 | ForEach-Object { '{0:D2}' -f $_ }
 & $py -X utf8 PoC/paso2_diarizacion/evaluacion/preparar_figshare.py --preparar --seleccion $sel   # mono, RTTM y manifiesto
 & $py -X utf8 PoC/paso2_diarizacion/evaluacion/preparar_figshare.py --verificar                  # mismos SHA-256 que el manifiesto
-& $py -X utf8 -m pytest PoC/paso2_diarizacion -m calidad -rs                                    # pyannote en CPU/GPU y métricas (~40 min en CPU)
+& $py -X utf8 -m pytest PoC/paso2_diarizacion -m calidad -rs                                    # pyannote y métricas (~39 min en CPU; ~80 s informados en GPU)
 & $py -X utf8 PoC/paso2_diarizacion/evaluacion/publicar_resultados.py                           # copia los reportes a evaluacion/resultados/
 ```
 
@@ -198,3 +233,5 @@ $sel = 1..25 | ForEach-Object { '{0:D2}' -f $_ }
 | `evaluacion/resultados/`: `calidad_S26.json`, `calidad_total.json` y `hipotesis_S26/*.json`, sin audio ni rutas locales | `tests/reportes/`: reportes de trabajo y salidas de pyannote con su meta, que incluye rutas absolutas |
 | Este documento, los README y `openspec/` del módulo | `hito-2/.cache/`: RAR y extraídos de Figshare |
 | `.env.example`, sin valores | `.env`, con el token de Hugging Face; el modelo descargado queda en la caché de Hugging Face del usuario, fuera del repo |
+
+Los resultados en GPU **no están en ninguna de las dos columnas**: quedaron en el equipo de la compañera, y en el repositorio solo figuran los valores que informó (en este documento y en `registro-pruebas.md`). Si los publicara con `publicar_resultados.py`, reemplazaría los JSON de CPU, porque los nombres no incluyen el dispositivo.

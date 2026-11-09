@@ -144,6 +144,28 @@ Si una ejecución falla, el sistema SHALL NOT sobrescribir ni eliminar un `diari
 - **WHEN** falla la primera ejecución de una reunión
 - **THEN** no existe `diarization.json` ni `diarization.meta.json` en su carpeta de resultados
 
+### Requirement: Publicación consistente del par
+El sistema SHALL publicar `diarization.json` y `diarization.meta.json` de modo que un fallo durante la publicación deje el par anterior byte a byte o ningún par. Antes de reemplazar, SHALL respaldar el par vigente. Si falla un reemplazo, SHALL restaurar lo publicado, o borrarlo si no había par anterior, e informar la etapa `escritura`. Si la restauración falla, SHALL conservar los respaldos.
+
+#### Scenario: Falla la publicación del meta con un resultado anterior
+- **WHEN** existe un par válido y, en una nueva ejecución, `diarization.json` se publica pero falla la publicación de `diarization.meta.json`
+- **THEN** el par queda byte a byte igual al anterior, pasa `validar_par`, no quedan `.tmp` ni `.bak`, y `diarization.error.json` registra la etapa `escritura` con `resultado_anterior_conservado: true`
+
+#### Scenario: Falla la publicación del meta sin resultado anterior
+- **WHEN** en la primera ejecución de una reunión falla la publicación de `diarization.meta.json`
+- **THEN** no existe `diarization.json` ni `diarization.meta.json`, y no quedan `.tmp` ni `.bak`
+
+#### Scenario: Falla la restauración
+- **WHEN** falla la publicación del meta y también la restauración de `diarization.json` desde su respaldo
+- **THEN** se informa el fallo original con una nota sobre la restauración, los `.bak` del par anterior se conservan con su contenido completo y el par inconsistente no se considera vigente
+
+### Requirement: Par vigente verificado
+El sistema SHALL considerar vigente un par solo si el `diarization_sha256` de su meta coincide con el SHA-256 de su `diarization.json`. Un par inconsistente SHALL NOT informarse como resultado anterior conservado.
+
+#### Scenario: Par inconsistente en la carpeta
+- **WHEN** la carpeta tiene un `diarization.json` cuyo SHA-256 no coincide con el `diarization_sha256` del meta, por ejemplo tras una interrupción abrupta entre los dos reemplazos
+- **THEN** no se considera un resultado vigente: un error posterior registra `resultado_anterior_conservado: false` y `validar_par` informa la inconsistencia
+
 ### Requirement: Registro separado del error
 Si una ejecución falla después de validar que el audio existe, el sistema SHALL escribir `diarization.error.json` en la carpeta de resultados con: identificador de la ejecución, fecha, etapa en que falló, tipo y mensaje del error, dispositivo pedido y si existe un resultado válido anterior. Una ejecución exitosa posterior SHALL eliminar ese archivo.
 

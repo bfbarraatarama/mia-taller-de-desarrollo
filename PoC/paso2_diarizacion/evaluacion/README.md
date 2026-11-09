@@ -14,7 +14,7 @@ Contiene la preparación del dataset de test de UBA Games (sesión S26, 25 graba
 | `publicar_resultados.py` | ✅ | Copia los reportes de `tests/reportes/` y las hipótesis a `resultados/`, verificando SHA-256 y que no haya rutas absolutas |
 | `politica_etiquetas.json` | versionado | `-?` y `?-` = `habla` (decisión del 08/11/2026) |
 | `figshare_test.manifest.json` | versionado | `contenido`, que es determinista e incluye su `contenido_sha256`, y `ejecucion`, que varía. No incluye el texto de las anotaciones |
-| `resultados/` | versionado | `calidad_S26.json`, `calidad_total.json` y `hipotesis_S26/<recording_id>.json` (las 25 salidas de la corrida principal) |
+| `resultados/` | versionado | `calidad_S26.json`, `calidad_total.json` y `hipotesis_S26/<recording_id>.json` (las 25 salidas de la corrida principal en CPU). Además, `nivel2/integracion_*.json`: los tres reportes del nivel 2, evidencia de la tarea 5.5 (ver "Verificación básica del nivel 2" en el README del módulo) |
 | `EVALUACION_S26.md` | versionado | Documentación de la evaluación de S26 |
 
 Los derivados (WAV mono y RTTM) se escriben en `PoC/paso2_diarizacion/datos/figshare_test/S26/`, que git ignora.

@@ -68,7 +68,7 @@ PoC/paso2_diarizacion/
 - **Decodificación:** pyannote recibe la **ruta** del WAV y lo decodifica con `torchcodec`, que usa FFmpeg. Un fallo de importación o de decodificación se informa como "FFmpeg no disponible o incompatible".
 - **Supuesto 2, resuelto:** FFmpeg es una **dependencia del sistema que comparten las etapas 1 a 3**. No se instala con pip. `torchcodec` carga las **bibliotecas compartidas** de FFmpeg, no `ffmpeg.exe`, así que hace falta una build *shared*. Con `torchcodec 0.7` (la serie de torch 2.8) solo sirven las versiones **4 a 7**; la versión verificada es **FFmpeg 7.1.1 *shared*** (§8).
   - **Windows:** poner la carpeta `bin` en `PATH` **no funciona**: desde Python 3.8, las DLL de las que depende una extensión no se buscan en `PATH`. Se registra con `os.add_dll_directory` desde un `ffmpeg_dll_dir.pth` en `site-packages` del venv. Así no se modifica el `PATH` del sistema y puede convivir otra FFmpeg (por ejemplo, la 9.x de la consola).
-  - **Linux:** la FFmpeg de la distribución, si es de la serie 4 a 7, o una build *shared* 7.1 expuesta con `LD_LIBRARY_PATH` solo en la sesión. Está **pendiente de verificar** en las máquinas con GPU.
+  - **Linux:** la FFmpeg de la distribución, si es de la serie 4 a 7, o una build *shared* 7.1 expuesta con `LD_LIBRARY_PATH` solo en la sesión. Una compañera pasó `verificar_entorno.py`, decodificación incluida, en Ubuntu 24.04 (09/11/2026), sin informar cuál de las dos opciones usó. Falta verificarlo en las RTX 3050.
 - **Verificación:** `verificar_entorno.py` comprueba las versiones contra `constraints.txt`, las importaciones (sin el aviso de torchcodec), CPU/GPU, la carpeta de DLL en Windows y que TorchCodec decodifique un WAV completo (sintético y, con `--wav`, uno real). La prueba de nivel 2 lo confirma con grabaciones de la interfaz.
 - **Por qué no `soundfile`:** lo decidió el equipo. Si FFmpeg resulta inviable en Windows, se vuelve a discutir **antes** de cambiar.
 
@@ -149,14 +149,27 @@ Carpeta de la reunión: por defecto `<carpeta del audio>/<nombre del audio sin e
 | `diarization.meta.json` | Solo en un éxito, después del JSON | `run_id`, audio (ruta, duración, `sha256`), `modo_dispositivo`, `dispositivo`, `gpu`, modelo, versiones, `num_speakers`, `tolerancia_fin_s` (heredado, sin efecto en los descartes), `exceso_fin_max_s`, `hablantes`, `segmentos`, `segmentos_corregidos`, `segmentos_descartados`, `tiempo_s`, `inicio`, `diarization_sha256` y, en GPU, `vram_pico_mib` |
 | `diarization.error.json` | Solo en un fallo | `run_id`, `inicio`, `etapa`, `tipo`, `mensaje`, `modo_dispositivo`, `resultado_anterior_conservado`, `run_id_anterior` |
 
-Escritura del par:
+Escritura del par (`resultados.escribir_par`), con respaldo y reversión (revisión del PR #8, 09/11/2026):
 
-1. Se serializa el JSON y se calcula su SHA-256.
-2. Se escriben los dos `.tmp`.
-3. `os.replace` del JSON y después del meta.
-4. Se borra `diarization.error.json`.
+1. Se serializa el JSON y se calcula su SHA-256, que va al meta como `diarization_sha256`.
+2. **Preparación:**
+   - se escriben los dos `.tmp`, con `fsync`;
+   - si hay un par vigente, se copia cada archivo a `diarization.json.<marca>.bak` y `diarization.meta.json.<marca>.bak`, también con `fsync`. La marca es aleatoria por ejecución, así que un respaldo de una reversión fallida nunca se pisa;
+   - si algo falla acá, se borra lo creado: el par vigente no se tocó.
+3. **Publicación:** `os.replace` del JSON y después del meta.
+4. **Reversión, si falla cualquiera de los dos `os.replace`:**
+   - se deshace lo publicado, del último al primero: con respaldo, `os.replace(.bak → destino)`; sin respaldo, es decir sin par anterior, se borra lo publicado;
+   - se borran los `.tmp` y los `.bak` y se relanza el `OSError`, que `diarizar` registra en la etapa `escritura`;
+   - si una restauración falla, se agrega una nota al error y **no se borra ningún `.bak`**, para recuperar el par a mano.
+5. **Éxito:** se borran los `.bak` y `diarization.error.json`.
 
-Si el proceso muere entre los dos `os.replace`, `validar_par` detecta el par inconsistente.
+**Par vigente:** `par_vigente()` y `run_id_vigente()` solo cuentan un par si el `diarization_sha256` del meta coincide con el SHA-256 del JSON, la misma comprobación que `validar_par`. Así un par inconsistente no se informa como `resultado_anterior_conservado`.
+
+**Por qué no un reemplazo atómico de los dos archivos:** el sistema de archivos no lo ofrece para dos archivos. Las alternativas cambian el contrato:
+- intercambiar una carpeta entera obligaría a reorganizar la carpeta de la reunión, que también guarda `diarization.error.json`;
+- un solo archivo rompería el par JSON/meta.
+
+**Límite:** si el proceso muere de golpe entre los dos `os.replace` (corte de energía o `kill -9`), o si falla la restauración, el par puede quedar inconsistente. **Se detecta**, porque el par no cuenta como vigente y `validar_par` informa la diferencia de SHA-256. Pero no se repara solo: después de una interrupción abrupta pueden quedar `.bak` en la carpeta, que se usan para recuperar a mano.
 
 **Supuesto 5, resuelto:** una ejecución exitosa borra el `diarization.error.json` de un intento anterior. Así, en la carpeta, un resultado vigente nunca convive con un error que ya no lo describe. El error anterior no se archiva: la evidencia de un fallo es el código de salida y la excepción del momento.
 
@@ -440,7 +453,9 @@ Lo que no cumple queda `excluida`, con un motivo legible.
   - La corrida **`principal`**, sin `num_speakers`, es como funciona el producto, y siempre se ejecuta.
   - La corrida **`diagnostico_num_speakers`**, con `num_speakers=2`, se ejecuta **solo si se pide** (`--diagnostico`). Separa el error de **estimar la cantidad** del de **segmentar y asignar**, y nunca se informa como resultado del producto.
   - La **primera evaluación** (`s26.objects.04`, en CPU) usa solo la principal. La diagnóstica duplica el tiempo de cómputo, por lo que se autoriza aparte.
-- **Dispositivo:** la evaluación de calidad (marker `calidad`) corre en **CPU o GPU** con el mismo código, y registra `dispositivo` y `tiempo_s`. Las métricas no dependen del dispositivo, como ya probó la compatibilidad funcional. Las comprobaciones propias de CUDA (memoria y `dispositivo: cuda`) quedan en `tests/test_evaluacion_gpu.py` (marker `gpu`), pendientes para un integrante con GPU.
+- **Dispositivo:** la evaluación de calidad (marker `calidad`) corre en **CPU o GPU** con el mismo código, y registra `dispositivo` y `tiempo_s`.
+  - **Comparación entre dispositivos (09/11/2026):** en S26, la corrida en CPU, versionada, y la de CUDA, informada por una compañera en la tarea 7.7, dieron las mismas métricas globales con 2 decimales. Las hipótesis de GPU no están versionadas, así que no se compararon grabación por grabación.
+  - **Pendiente:** las comprobaciones propias de CUDA (memoria, `dispositivo: cuda` y compatibilidad funcional) quedan en `tests/test_evaluacion_gpu.py` (marker `gpu`, tarea 7.3), que todavía no existe. La memoria solo se midió a mano.
 - **Criterios de interpretación** (sin umbral, como dice la PoC en §2.3):
   1. **La confusión con tolerancia** es lo más informativo: mide si se atribuye bien quién habla, que es lo que usan la Etapa 4 y la minuta.
   2. Si la habla perdida y la falsa alarma son mucho mayores en el DER estricto que con tolerancia, la diferencia viene de los bordes y de la granularidad de la referencia, no del modelo.
@@ -482,7 +497,8 @@ Lo que no cumple queda `excluida`, con un motivo legible.
 - [La CPU es lenta en el nivel 2] → Grabaciones de 30 a 60 s.
 - [CPU y GPU dan segmentos distintos] → Se exige el mismo contrato, no igualdad.
 - [Conflicto de PyTorch con la Etapa 3] → `torch==2.8.0` fijo y coordinación con Felipe.
-- [Par inconsistente si el proceso muere entre los dos `os.replace`] → `diarization_sha256` y `validar_par`.
+- [Par inconsistente si falla la publicación] → respaldo `.bak` y reversión en `escribir_par`: queda el par anterior o ninguno (sección 5).
+- [Par inconsistente si el proceso muere entre los dos `os.replace`, o si falla la restauración] → no se repara solo; se detecta con `diarization_sha256` (`par_vigente`, `validar_par`) y los `.bak` permiten recuperarlo.
 - [Eco del paso 1 con parlantes] → No se corrige aquí. Se registra en el nivel 2.
 - [Falta de memoria en 6 GB] → Error explícito, liberación en el `finally` y `vram_pico_mib`.
 - [La liberación de la GPU no se puede probar sin GPU] → Solo la cubre el nivel 3, y la tarea lo dice.

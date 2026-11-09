@@ -1,6 +1,10 @@
 # Tasks
 
-> **Dónde se ejecuta cada grupo.** Los grupos 1 a 6 se hacen y se verifican en la máquina de desarrollo (Windows, sin GPU). El grupo 7 se prepara en esa máquina, pero se verifica en un equipo con RTX 3050.
+> **Dónde se ejecuta cada grupo.** Los grupos 1 a 6 se hacen y se verifican en la máquina de desarrollo (Windows, sin GPU). El grupo 7 se prepara en esa máquina, pero sus pruebas de GPU se verifican en un equipo con GPU NVIDIA.
+>
+> **Hasta el 09/11/2026:**
+> - la evaluación de calidad en GPU la hizo una compañera en una RTX 4060 Ti (tarea 7.7, informada, sin archivos versionados);
+> - las RTX 3050 de referencia todavía no se verificaron.
 
 ## 1. Estructura y entorno
 
@@ -48,6 +52,24 @@
 - [x] 4.3 Implementar `diarizar(audio, salida=None, device="auto", num_speakers=None)` con imports diferidos, siguiendo la sección 3 del diseño (ruta del audio a pyannote y `out.speaker_diarization`); verificar con un pipeline falso que el par se escribe, que `num_speakers` llega al pipeline y queda en el meta, y que el contrato es igual con y sin el parámetro
 - [x] 4.4 Implementar el `finally` de liberación (sección 7 del diseño) y la conversión de fallos en `DiarizacionError` con su etapa: falta de memoria en CUDA con sugerencia de `--device cpu`, y error de FFmpeg con remisión al README. Verificar con un pipeline falso que lanza `RuntimeError`, un `OutOfMemoryError` simulado y un error de decodificación, comprobando el archivo de error, el par anterior intacto, el SHA-256 del audio sin cambios y que `empty_cache` simulado se llama solo en `cuda`
 - [x] 4.5 Implementar la CLI (`diarizar.py AUDIO [--salida DIR] [--device auto|cpu|cuda] [--num-speakers N]`, con códigos 0, 1 y 2) y el resumen por hablante; verificar con tests de `subprocess` sobre un audio inválido, `--device cuda` sin GPU y un fallo con resultado anterior presente (código distinto de 0), y comprobar que `--help` no importa torch
+- [x] 4.6 **(Revisión del PR #8, 09/11/2026.)** Hacer consistente la publicación del par en `resultados.escribir_par`:
+  - respaldar el par vigente en `.<marca>.bak` antes de publicar;
+  - si falla cualquiera de los dos `os.replace`, restaurar desde el respaldo, o borrar lo publicado si no había par anterior;
+  - si falla la restauración, conservar los respaldos;
+  - `par_vigente()` y `run_id_vigente()` solo cuentan un par si `diarization_sha256` coincide con el SHA-256 del JSON.
+
+  Sin cambiar el contrato de `diarization.json` ni del meta. Verificar con tests de nivel 1 que simulan fallos de `os.replace`:
+  - la segunda publicación con par anterior: par byte a byte igual, `validar_par` sin violaciones, sin `.tmp` ni `.bak`;
+  - la segunda publicación sin par anterior: no queda ningún archivo;
+  - la primera publicación;
+  - la restauración: error original con nota y `.bak` completos;
+  - una ejecución posterior que no pisa esos respaldos;
+  - el fallo al preparar el respaldo;
+  - un par inconsistente que no cuenta como vigente;
+  - un meta que no es un objeto;
+  - `diarizar` con pipeline falso: etapa `escritura` y `resultado_anterior_conservado: true`.
+
+  Correr además todo el nivel 1
 
 ## 5. Integración Etapa 1 → Etapa 2 en CPU (máquina Windows sin GPU)
 
@@ -170,10 +192,40 @@
 
   Verificar en la máquina de desarrollo que `pytest -m gpu -rs` se saltea con el motivo "sin CUDA"
 
-  > **Pendiente (08/11/2026).** La responsable de la Etapa 2 no tiene GPU en su máquina. La prueba la tienen que escribir y ejecutar integrantes con GPU NVIDIA. No hay resultados de GPU, ni reales ni simulados.
+  > **Pendiente (08/11/2026).** La responsable de la Etapa 2 no tiene GPU en su máquina. La prueba la tienen que escribir y ejecutar integrantes con GPU NVIDIA.
+  >
+  > **Actualización (09/11/2026): sigue sin marcar.**
+  > - Una compañera midió **a mano**, en una RTX 4060 Ti, un incremento residual de 8,12 MiB después de `diarizar()` (límite de 64 MiB) y un pico de 1628,5 MiB.
+  > - Esa medición **no reemplaza** el test automatizado: `tests/test_evaluacion_gpu.py` todavía no existe, y tampoco el reporte `gpu_<sesion>.json` ni la compatibilidad funcional CPU/GPU dentro del test.
+  > - Detalle en `registro-pruebas.md`, sección "Pruebas en GPU".
 - [ ] 7.4 **(Pendiente para un integrante con GPU NVIDIA.)** Instalar el wheel cu128, FFmpeg (serie 4 a 7, idealmente 7.1.1 *shared*) y 7-Zip siguiendo el README, pasar `verificar_entorno.py --gpu` sin fallas, preparar o copiar el dataset y pasar `--verificar` con los mismos SHA-256, y correr `pytest PoC/paso2_diarizacion` y `pytest PoC/paso2_diarizacion -m gpu`. Verificar que los reportes de la selección de S26 tienen `dispositivo: "cuda"`, la memoria dentro del margen y `vram_pico_mib`, y que la compatibilidad CPU/GPU cumple el contrato. Registrar en el README las versiones, la GPU y los tiempos
 
   > **Pendiente (08/11/2026).** Sin GPU en la máquina de desarrollo, la ejecutan compañeros del equipo. Puede servir también para cerrar la verificación desde un entorno nuevo de la tarea 6.9.
+  >
+  > **Actualización (09/11/2026): avance parcial, sigue sin marcar.** Una compañera, en su equipo (Ubuntu 24.04, Python 3.12.3, RTX 4060 Ti de 16 GB, torch 2.8.0+cu128, pyannote.audio 4.0.7), informó:
+  > - `verificar_entorno.py` sin fallas;
+  > - los derivados con los mismos SHA-256 del manifiesto;
+  > - `pytest -m calidad` en CUDA con 25/25 grabaciones (tarea 7.7);
+  > - la medición manual de memoria.
+  >
+  > **Falta:**
+  > - `pytest -m gpu`, que depende de la 7.3;
+  > - la compatibilidad CPU/GPU dentro de ese test;
+  > - informar el nivel 1 en su equipo;
+  > - registrar en el README las versiones, la GPU y los tiempos.
+  >
+  > No consta que la instalación haya seguido solo el README desde un entorno nuevo, así que tampoco cierra la 6.9.
+- [x] 7.7 **(Registrada el 09/11/2026; la ejecutó una compañera en su equipo.)** Evaluación de calidad de las 25 grabaciones de S26 en **CUDA** con `pytest -m calidad`, con la corrida principal sin `num_speakers` y sin reutilizar resultados.
+
+  Verificado según su informe:
+  - las 25/25 grabaciones se procesaron en CUDA;
+  - los WAV mono y los RTTM coinciden con el manifiesto publicado;
+  - el test terminó satisfactorio;
+  - DER estricto 23,15 %, DER NIST 12,32 % y JER 40,02 %, iguales a los de CPU con 2 decimales;
+  - la cantidad de hablantes es correcta en 24/25;
+  - la inferencia tardó 79,146 s para 1821,246 s de audio.
+
+  **Evidencia:** el informe de la compañera, transcripto en `registro-pruebas.md`, sección "Pruebas en GPU". Sus reportes `calidad_*.json` y sus hipótesis **no están versionados**. Para que la comparación CPU/GPU por grabación sea reproducible, falta publicarlos (ver `evaluacion/publicar_resultados.py`).
 - [x] 7.6 **(Autorizada el 08/11/2026.)** Ampliar la preparación y la evaluación de calidad a las 25 tareas de S26, en CPU, solo con la corrida principal (sin `num_speakers`):
   - admitir 1 cuadro de más al final en los WAV separados, registrando la diferencia;
   - clasificar `-?` y `?-` como `habla` en `politica_etiquetas.json`;

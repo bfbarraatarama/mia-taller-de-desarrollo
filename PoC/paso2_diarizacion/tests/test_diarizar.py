@@ -148,6 +148,23 @@ def _verificar_fallo(e, carpeta, antes, audio, sha_audio, etapa):
     return error
 
 
+def test_fallo_al_publicar_conserva_el_par_y_registra_escritura(entorno, wav, monkeypatch):
+    """Tarea 4.6: si falla la publicación del meta, diarizar() restaura el par y registra la etapa escritura."""
+    from test_resultados import replace_que_falla
+
+    entorno.preparar(cuda=False)
+    audio = wav("a.wav", segundos=10)
+    carpeta, antes = _par_previo(entorno, audio)
+    sha_audio = _sha(audio)
+    replace_que_falla(monkeypatch, {2})  # 1: JSON publicado; 2: falla el meta; 3: se restaura el JSON
+    with pytest.raises(DiarizacionError) as e:
+        modulo.diarizar(audio)
+    error = _verificar_fallo(e.value, carpeta, antes, audio, sha_audio, "escritura")
+    assert error["tipo"] == "OSError" and "#2" in error["mensaje"]
+    assert validar_par(carpeta / NOMBRE_JSON, carpeta / NOMBRE_META) == []
+    assert not list(carpeta.glob("*.tmp")) and not list(carpeta.glob("*.bak"))
+
+
 def test_runtime_error_en_cpu(entorno, wav):
     entorno.preparar(cuda=False)
     audio = wav("a.wav", segundos=10)

@@ -1,0 +1,52 @@
+{
+  "grabacion": "2026_11_08_09_35_54.wav",
+  "estado_etapa1": "completa",
+  "interrumpida": false,
+  "duracion_s": 45.08,
+  "run_id": "20261108T192837-964c08",
+  "dispositivo": "cpu",
+  "tiempo_s": 82.821,
+  "hablantes": 2,
+  "segmentos": 9,
+  "segmentos_corregidos": 0,
+  "segmentos_descartados": 0,
+  "por_hablante": {
+    "SPEAKER_00": {
+      "segmentos": 7,
+      "habla_s": 28.047,
+      "primeros_segmentos": [
+        {
+          "start": 0.47,
+          "end": 9.11,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "start": 9.447,
+          "end": 11.219,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "start": 11.405,
+          "end": 13.042,
+          "speaker": "SPEAKER_00"
+        }
+      ]
+    },
+    "SPEAKER_01": {
+      "segmentos": 2,
+      "habla_s": 11.525,
+      "primeros_segmentos": [
+        {
+          "start": 18.29,
+          "end": 26.744,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "start": 27.335,
+          "end": 30.406,
+          "speaker": "SPEAKER_01"
+        }
+      ]
+    }
+  }
+}

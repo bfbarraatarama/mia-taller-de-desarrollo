@@ -10,6 +10,8 @@ Pruebas manuales de la Etapa 2 sobre grabaciones reales de la Etapa 1, hechas an
 | 4 | `2026_11_08_09_35_54.wav` | **parlantes** de la notebook, sin auriculares | **ejecutado y documentado, con incidencias de captura de la Etapa 1** |
 | 5 | `2026_11_08_11_41_26.wav` | **cierre forzado** del proceso de la interfaz durante la captura | **ejecutado y documentado**; reveló un defecto de normalización, corregido en la tarea 2.4 |
 
+Las **pruebas en GPU** (tareas 7.3, 7.4 y 7.7) se registran en su propia sección, "Pruebas en GPU — equipo de una compañera". Las hizo otra integrante en su equipo, y sus archivos no están versionados.
+
 Los tres escenarios de la tarea 5.2 están grabados, documentados y verificados. **La tarea 5.2 está completada**, con la excepción de una sola voz en la prueba 5 y la salvedad sobre el consentimiento del video. Ver "Estado de la tarea 5.2" al final. Las tareas 5.3 (test automático de nivel 2, `tests/test_integracion_cpu.py`) y 5.4 (pruebas sintéticas, sección "Tarea 5.4") también están completadas. La 5.5 se completó como verificación automática básica (sección "Tarea 5.5").
 
 ## Entorno común
@@ -356,6 +358,71 @@ Cada caso negativo comprueba con `pytest.raises(..., match=...)` que el rechazo 
 - no se miden DER, JER, confusión ni 3 o más hablantes.
 
 **Conclusión:** la tarea 5.5 queda cumplida con su redacción nueva. **El nivel 2 queda cerrado como validación técnica más verificación básica**, no como evaluación de calidad.
+
+## Pruebas en GPU — equipo de una compañera (tareas 7.3, 7.4 y 7.7)
+
+> **Origen de los datos.** Estas pruebas **no** se corrieron en la máquina de desarrollo, que no tiene GPU. Las ejecutó una compañera del equipo en su propio equipo y las informó en su revisión del PR #8; se registran el 09/11/2026 tal como fueron informadas.
+>
+> **Sus artefactos no están en el repositorio:**
+> - los reportes `tests/reportes/calidad_*.json` de GPU;
+> - las hipótesis `diarization.json` en CUDA;
+> - la salida de `verificar_entorno.py`.
+>
+> Los valores de esta sección vienen del informe, no de archivos versionados.
+
+**Entorno**
+
+| Elemento | Valor |
+|---|---|
+| Sistema | Ubuntu 24.04 |
+| Python | 3.12.3 |
+| GPU | NVIDIA GeForce RTX 4060 Ti, 16 GB |
+| PyTorch | 2.8.0+cu128 |
+| pyannote.audio | 4.0.7 |
+| `verificar_entorno.py` | completo, sin fallas |
+
+**Inferencia CUDA sobre un WAV de 30 s (medición manual)**
+
+| Medida | Valor |
+|---|---|
+| Hablantes · segmentos | 2 · 13 |
+| Violaciones del contrato | 0 |
+| Pico de memoria asignada | 1628,5 MiB |
+| Incremento residual de memoria asignada después de `diarizar()` | 8,12 MiB, por debajo del límite de 64 MiB del diseño (§7) |
+
+Es una **medición manual**, no el test automatizado de la tarea 7.3 (`tests/test_evaluacion_gpu.py`), que todavía no existe.
+
+**Evaluación de calidad S26 en CUDA (`pytest -m calidad`)**
+
+| Medida | GPU (compañera) | CPU (máquina de desarrollo, 08/11/2026) |
+|---|---|---|
+| Grabaciones | 25/25 en CUDA, **sin reutilizar** resultados | 25/25 en CPU (la 04 reutilizada de una corrida compatible) |
+| WAV mono y RTTM | coinciden con el manifiesto publicado | coinciden (`--verificar`) |
+| DER estricto | 23,15 % | 23,15 % (0,231476) |
+| DER NIST (±0,25 s) | 12,32 % | 12,32 % (0,123177) |
+| JER | 40,02 % | 40,02 % (0,400229) |
+| Cantidad de hablantes correcta | 24/25 | 24/25 |
+| Tiempo de inferencia (1821,246 s de audio) | 79,146 s, unas 23 veces más rápido que el tiempo real | 2333,6 s, unos 1,28 s por segundo de audio |
+| Resultado del test | satisfactorio | satisfactorio |
+
+- **Comparación CPU y GPU:** las métricas globales coinciden con la precisión informada, 2 decimales en porcentaje.
+- **Lo que no se comparó:** las métricas por grabación ni las hipótesis segmento a segmento, porque los archivos de GPU no están en el repositorio. Coincidir en lo global no prueba que las salidas sean idénticas.
+- **Advertencias no bloqueantes informadas:**
+  - TF32: aviso de PyTorch/pyannote sobre la precisión de las multiplicaciones de matrices en GPU Ampere o posteriores;
+  - `std(): degrees of freedom is <= 0` en `pyannote/audio/models/blocks/pooling.py`, que también aparece en CPU.
+
+**Qué cubre y qué no**
+
+| Verificación | Estado |
+|---|---|
+| Entorno cu128 instalado y `verificar_entorno.py` sin fallas | informado |
+| Derivados del dataset con los mismos SHA-256 del manifiesto | informado |
+| `pytest -m calidad` en CUDA, 25/25 grabaciones con `dispositivo: cuda` | informado (tarea 7.7) |
+| Memoria residual de CUDA dentro de 64 MiB | medición manual informada; **falta el test automatizado** (7.3) |
+| `tests/test_evaluacion_gpu.py`, `pytest -m gpu` y la compatibilidad funcional CPU/GPU dentro de ese test | **pendiente** (7.3) |
+| `pytest PoC/paso2_diarizacion` (nivel 1) en el equipo con GPU | no informado |
+| Versiones, GPU y tiempos registrados en el README | pendiente |
+| Reportes de GPU versionados (`calidad_*.json` y las hipótesis) | **no están en el repositorio** |
 
 ## Conclusiones
 
