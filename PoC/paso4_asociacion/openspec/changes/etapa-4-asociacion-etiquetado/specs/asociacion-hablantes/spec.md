@@ -47,16 +47,34 @@ El sistema SHALL aplicar las reglas de `validate_asr_contract` de la Etapa 3: `l
 - **WHEN** un segmento de `asr.json` tiene `words: []`
 - **THEN** la validación pasa
 
-### Requirement: Contrato de transcription.json
-El sistema SHALL escribir `transcription.json` con raíz `{"segments": [...]}` y cada intervención con exactamente `start`, `end`, `speaker`, `name`, `text`, `overlap` y `ambiguous`. SHALL cumplirse: tiempos redondeados a 3 decimales con `0 <= start < end <= duración`; intervenciones ordenadas por `start`; `speaker` una etiqueta presente en `diarization.json` o `null`; `name` texto no vacío o `null`; `text` texto no vacío sin espacios en los extremos; `overlap` y `ambiguous` booleanos. Antes de escribir, el sistema SHALL validar su propia salida contra este contrato.
+### Requirement: Estructura de transcription.json
+El sistema SHALL escribir `transcription.json` con raíz `{"segments": [...]}` y cada intervención con exactamente `start`, `end`, `speaker`, `name`, `text`, `overlap` y `ambiguous`, sin otros campos.
 
-#### Scenario: Salida dentro del contrato
+#### Scenario: Campos exactos
 - **WHEN** se procesan una diarización y una transcripción válidas con al menos una palabra
-- **THEN** `transcription.json` cumple todas las reglas del contrato
+- **THEN** la raíz tiene solo `segments` y cada intervención tiene exactamente los 7 campos
 
 #### Scenario: Lectura por la Etapa 5
 - **WHEN** la Etapa 5 lee el `transcription.json` producido con `leer_transcripcion` de `src/minutas/entrada.py`
 - **THEN** lo acepta sin errores
+
+### Requirement: Valores de las intervenciones
+Cada intervención SHALL cumplir: tiempos redondeados a 3 decimales con `0 <= start < end <= duración`; orden por `start`; `speaker` una etiqueta presente en `diarization.json` o `null`; `name` texto no vacío o `null`; `text` no vacío y sin espacios en los extremos; `overlap` y `ambiguous` booleanos.
+
+#### Scenario: Salida dentro del contrato
+- **WHEN** se procesan una diarización y una transcripción válidas con al menos una palabra
+- **THEN** cada intervención cumple todas las reglas de valores
+
+#### Scenario: Redondeo y texto
+- **WHEN** la primera palabra de una intervención empieza en 1,23456 s y su texto llega como `" hola"`
+- **THEN** la intervención tiene `start: 1.235` y su texto empieza con `hola`, sin espacio inicial
+
+### Requirement: Validación de la propia salida
+Antes de escribir, el sistema SHALL validar `transcription.json` contra su estructura y sus valores. Si no cumple, SHALL fallar sin escribirlo.
+
+#### Scenario: Salida inválida detectada
+- **WHEN** por un error interno se arma una intervención con `end <= start`
+- **THEN** la ejecución falla nombrando la intervención y la regla, y no se escribe `transcription.json`
 
 ### Requirement: Metadatos de la ejecución
 Junto a `transcription.json`, el sistema SHALL escribir `transcription.meta.json` con: versión del módulo, fecha, SHA-256 de `audio.wav`, `diarization.json`, `asr.json` y `transcription.json`, umbrales usados, si hubo etiquetado, tiempos y palabras recortados o descartados en la validación, y conteos de palabras sin hablante e intervenciones con `overlap` y con `ambiguous`.

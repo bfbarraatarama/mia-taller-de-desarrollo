@@ -58,16 +58,26 @@ Si el usuario cierra la ventana de fichas sin confirmar, el sistema SHALL pregun
 - **WHEN** el usuario elige «Cancelar»
 - **THEN** no se escriben `transcription.json` ni `speakers.json`, el procesamiento se detiene y `diarization.json` y `asr.json` quedan intactos
 
-### Requirement: Selección del fragmento por hablante
-Para cada etiqueta, el sistema SHALL elegir el fragmento con la regla D6 de `design.md`: al azar, con semilla derivada de `diarization.json`, entre los tramos en que habla solo con duración ≥ máx(media de sus tramos solos, 5 s); un tramo de más de 15 s SHALL recortarse a sus 15 s centrales. Si no hay candidatos, SHALL usar su tramo solo más largo; si no habla nunca solo, SHALL usar su turno más largo y la ficha SHALL avisar que se superpone con otra voz. «Otro fragmento» SHALL mostrar el siguiente candidato sin repetir hasta agotarlos.
+### Requirement: Candidatos al azar de al menos la media
+Para cada etiqueta, el sistema SHALL elegir el fragmento al azar entre los tramos en que habla solo con duración ≥ máx(media de sus tramos solos, 5 s), con una semilla derivada de `diarization.json` (D6 de `design.md`).
+
+#### Scenario: Candidatos de al menos la media
+- **WHEN** `SPEAKER_00` tiene tramos solos de 2, 4, 6, 8 y 30 s (media 10 s)
+- **THEN** el fragmento sale solo del tramo de 30 s, recortado a sus 15 s centrales
+
+#### Scenario: Misma entrada, mismo fragmento
+- **WHEN** se procesa dos veces el mismo `diarization.json`
+- **THEN** cada etiqueta recibe el mismo primer fragmento y la misma secuencia de «Otro fragmento»
+
+### Requirement: Recorte a 15 s
+Un tramo elegido de más de 15 s SHALL recortarse a sus 15 s centrales.
 
 #### Scenario: Tramo de más de 15 s
 - **WHEN** el único candidato de `SPEAKER_00` es un tramo solo de 40,0 a 70,0 s
 - **THEN** el fragmento es de 47,5 a 62,5 s
 
-#### Scenario: Candidatos de al menos la media
-- **WHEN** `SPEAKER_00` tiene tramos solos de 2, 4, 6, 8 y 30 s (media 10 s)
-- **THEN** el fragmento sale solo del tramo de 30 s, recortado a sus 15 s centrales
+### Requirement: Respaldos del fragmento
+Si una etiqueta no tiene candidatos, el sistema SHALL usar su tramo solo más largo. Si no habla nunca sola, SHALL usar su turno más largo y la ficha SHALL avisar que se superpone con otra voz.
 
 #### Scenario: Sin tramo de 5 s
 - **WHEN** los tramos solos de `SPEAKER_01` duran 1,2, 2,8 y 3,5 s
@@ -77,9 +87,8 @@ Para cada etiqueta, el sistema SHALL elegir el fragmento con la regla D6 de `des
 - **WHEN** todos los turnos de `SPEAKER_01` caen dentro de turnos de `SPEAKER_00`
 - **THEN** el fragmento es su turno más largo y la ficha avisa que se superpone con otra voz
 
-#### Scenario: Misma entrada, mismo fragmento
-- **WHEN** se procesa dos veces el mismo `diarization.json`
-- **THEN** cada etiqueta recibe el mismo primer fragmento y la misma secuencia de «Otro fragmento»
+### Requirement: Otro fragmento
+«Otro fragmento» SHALL mostrar el siguiente candidato de la permutación sin repetir hasta agotarlos; después SHALL seguir con los respaldos y volver a empezar.
 
 #### Scenario: Otro fragmento sin repetir
 - **WHEN** `SPEAKER_00` tiene 3 candidatos y el usuario pide «Otro fragmento» dos veces
