@@ -1,27 +1,25 @@
 """
-Stage 3: Automatic Speech Recognition (ASR).
+Stage 3: Speech-to-text (STT).
 
-Convert audio + diarization → transcription.json.
+Convert audio.wav -> asr.json. Speaker association is Stage 4.
 """
 
 from .asr_core import (
-    associate_speakers,
+    build_asr,
+    free_gpu_memory,
     get_device,
     load_whisper_model,
     process_asr,
     transcribe_audio,
-    validate_diarization_contract,
-    validate_transcription_contract,
+    validate_asr_contract,
 )
-from .humyn_adapter import humyn_turns_to_diarization
 
 __all__ = [
-    "associate_speakers",
+    "build_asr",
+    "free_gpu_memory",
     "get_device",
     "load_whisper_model",
     "process_asr",
     "transcribe_audio",
-    "validate_diarization_contract",
-    "validate_transcription_contract",
-    "humyn_turns_to_diarization",
+    "validate_asr_contract",
 ]

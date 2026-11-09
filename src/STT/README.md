@@ -1,90 +1,69 @@
-# STT (Stage 3: ASR)
+# STT (Stage 3)
 
-Converts audio and a diarization into a speaker-attributed transcription.
+Converts audio into text with timestamps per segment and per word. Responsible: Felipe.
 
-- **Input:** a normalized WAV file and a `diarization.json`.
-- **Output:** a `transcription.json` with the text of each diarized segment.
+- **Input:** a normalized WAV file (`audio.wav`).
+- **Output:** `asr.json`.
 
-Diarization defines the timestamp grid. Whisper provides the words. Whisper timestamps only decide which segment each word belongs to.
+This stage does **not** use the diarization and does not assign speakers. Associating `asr.json` with `diarization.json` to produce `transcription.json` is Stage 4. See `hito-3/pipeline-etapas-y-herramientas.md`.
+
+The whole audio is transcribed once with Whisper (`language="es"`); it is not split by diarization segment.
 
 ## Setup
 
-From the repository root:
+From the repository root (PyTorch as in Stage 2, FFmpeg on the system):
 
 ```bash
 pip install -r src/STT/requirements_asr.txt
 ```
 
-## Contracts
+## Contract
 
-**diarization.json**
+**asr.json**
 
 ```json
 {
+  "language": "es",
   "segments": [
-    {"start": 0.0, "end": 4.2, "speaker": "Speaker A"},
-    {"start": 4.2, "end": 9.8, "speaker": "Speaker B"}
+    {
+      "start": 0.5,
+      "end": 4.2,
+      "text": "Vamos a revisar los resultados.",
+      "words": [
+        {"word": "Vamos", "start": 0.5, "end": 0.8},
+        {"word": "a", "start": 0.8, "end": 0.9}
+      ]
+    }
   ]
 }
 ```
 
-- `segments` must be a non-empty list.
-- Each segment needs `start`, `end` (seconds), and `speaker`.
-- `start` must be less than `end`.
-
-**transcription.json**
-
-```json
-{
-  "segments": [
-    {"start": 0.0, "end": 4.2, "speaker": "Speaker A", "text": "hola a todos"}
-  ]
-}
-```
-
-Only diarization segments that receive at least one word are emitted. `process_asr` also returns a metadata dict (`model`, `device`, `duration`, `segments_count`).
-
-## Matching algorithm
-
-1. Transcribe the WAV with Whisper (`language="es"`), producing words with `start`/`end`.
-2. Drop words with empty text or `start >= end`.
-3. For each word, find the diarization segment where `segment.start <= word.start < segment.end`.
-4. Join each segment's words with spaces to produce its `text`.
-
-Words whose start falls outside every segment are not assigned.
+- Segments with empty text are dropped; words with empty text or `start >= end` are dropped.
+- Every segment and word has `start < end`, and ends do not exceed the audio duration (1 s tolerance).
 
 ## Usage
 
 ```python
-from src.STT import process_asr
+from STT import process_asr
 
 meta = process_asr(
-    audio_path="data/ASR/tmp/example/audio.wav",
-    diarization_path="data/ASR/tmp/example/diarization.json",
-    output_path="data/ASR/tmp/example/transcription.json",
-    model_size="base",
-    words_path="data/ASR/tmp/example/whisper_words.json",  # optional: raw Whisper words
+    audio_path="audio.wav",
+    output_path="asr.json",
+    model_size="medium",  # default
 )
 print(meta["segments_count"])
 ```
 
-To build a diarization from Humyn LATAM turns:
-
-```python
-from src.STT import humyn_turns_to_diarization
-
-diarization = humyn_turns_to_diarization(turns_df, recording_id="PER-1")
-```
-
-`turns_df` needs the columns `archivo`, `hablante`, `inicio`, and `fin`. Turns with zero duration are skipped.
-
-## Test runner
-
-`test_humyn_latam.py` runs the pipeline on two Humyn LATAM Peruvian recordings (`PER-1`, `PER-2`). It expects the preprocessed Humyn data under `hito-2/`.
+Like the other modules, it runs with `PYTHONPATH=src`; the default output name (`asr.json`) is `ARCHIVO_ASR` in [`src/rutas.py`](../rutas.py). From the command line:
 
 ```bash
-python -m src.STT.test_humyn_latam --dry-run   # validate contracts, no Whisper
-python -m src.STT.test_humyn_latam -v          # full run
+PYTHONPATH=src python -m STT audio.wav -o asr.json -v
 ```
 
-Outputs go to `data/ASR/tmp/test_asr/<ID>/`.
+**Memory fallback (risk 1.4.1):** use `model_size="small"` (~2 GB) or `device="cpu"` (`--model small`, `--device cpu`), and record the change. The `medium` model needs ~5 GB of VRAM. The model is not cached: `process_asr` holds the only reference and releases it (also on errors) before returning, then calls `free_gpu_memory()`, so the GPU is free for the next sequential stage. If you use `load_whisper_model` directly, `del` the model and call `free_gpu_memory()` yourself.
+
+## Tests
+
+```bash
+PYTHONPATH=src pytest src/STT/test_asr_core.py
+```

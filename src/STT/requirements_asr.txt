@@ -1,5 +1,8 @@
-# Stage 3 (ASR) dependencies
-openai-whisper>=20240930
+# Stage 3 (STT) dependencies
+# PyTorch: same environment as Stage 2 (2.8.0, CUDA 12.8). FFmpeg is required on the system.
+openai-whisper
 torch>=2.0
+
+# Only for src/STT/ejemplos_peru.py when audio.wav must be extracted from the Humyn parquet
 pandas>=2.0
 pyarrow>=14.0

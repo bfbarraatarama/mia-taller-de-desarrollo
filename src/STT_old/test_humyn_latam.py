@@ -21,8 +21,8 @@ import pandas as pd
 # Add src to path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
-from src.STT.asr_core import process_asr, validate_diarization_contract
-from src.STT.humyn_adapter import humyn_turns_to_diarization
+from src.STT_old.asr_core import process_asr, validate_diarization_contract
+from src.STT_old.humyn_adapter import humyn_turns_to_diarization
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
