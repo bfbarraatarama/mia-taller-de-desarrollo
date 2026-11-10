@@ -15,6 +15,7 @@ from pathlib import Path
 from asociacion import UMBRALES, Asociacion
 from contrato import validar_transcripcion
 from errores import AsociacionError
+from fragmentos import semilla
 
 VERSION = "0.2.0"
 TRANSCRIPCION = "transcription.json"
@@ -71,6 +72,7 @@ def escribir(asociacion: Asociacion, salida: str | Path | None = None) -> Path:
         "sha256": {**asociacion.sha256, TRANSCRIPCION: hashlib.sha256(contenido).hexdigest()},
         "etiquetado": False,
         "umbrales": UMBRALES,
+        "semilla_fragmentos": semilla(asociacion.sha256["diarization.json"]),
         "reglas": REGLAS,
         "recortes_asr": asociacion.recortes_asr,
         "conteos": asociacion.conteos,

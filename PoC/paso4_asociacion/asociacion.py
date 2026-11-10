@@ -68,6 +68,7 @@ class Asociacion:
     sha256: dict[str, str]
     recortes_asr: dict[str, int]
     conteos: dict[str, int] = field(default_factory=dict)
+    asr: dict = field(default_factory=dict)  # asr.json validado, redondeado y recortado (texto de los fragmentos)
 
 
 def resolver_rutas(carpeta=None, *, audio=None, diarizacion=None, asr=None, salida=None) -> Rutas:
@@ -125,6 +126,10 @@ class Turnos:
         self.etiquetas = tuple(sorted(por_etiqueta))
         self._inicios = {e: [i for i, _ in v] for e, v in por_etiqueta.items()}
         self._fines = {e: [f for _, f in v] for e, v in por_etiqueta.items()}
+
+    def intervalos(self, etiqueta: str) -> list[tuple[int, int]]:
+        """Turnos unidos de `etiqueta`, en milisegundos y ordenados."""
+        return list(zip(self._inicios[etiqueta], self._fines[etiqueta]))
 
     def cobertura(self, etiqueta: str, ini: int, fin: int) -> int:
         """Milisegundos de [ini, fin) cubiertos por los turnos de `etiqueta`."""
@@ -263,5 +268,5 @@ def asociar(carpeta=None, *, audio=None, diarizacion=None, asr=None, salida=None
         rutas=rutas, duracion=duracion, etiquetas=turnos.etiquetas, turnos=datos_diar["segments"],
         intervenciones=intervenciones,
         sha256={"audio.wav": _sha256_archivo(rutas.audio), "diarization.json": sha_diar, "asr.json": sha_asr},
-        recortes_asr=recortes, conteos=conteos,
+        recortes_asr=recortes, conteos=conteos, asr=asr_normal,
     )

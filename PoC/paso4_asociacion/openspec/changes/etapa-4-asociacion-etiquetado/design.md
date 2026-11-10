@@ -108,6 +108,8 @@ Motivo: conserva el azar, la representatividad, el tope y el recorte, respeta lo
 | «Otro fragmento» | Siguiente candidato de una permutación con esa semilla, sin repetir; agotados los candidatos, siguen los respaldos y vuelve a empezar |
 | Texto del fragmento | Palabras de `asr.json` cuyo punto medio cae dentro del fragmento |
 
+Precisiones de la implementación: si hay candidatos, el tramo solo más largo siempre está entre ellos, así que los respaldos solo se usan cuando no hay ninguno; un respaldo de más de 15 s también se recorta a sus 15 s centrales; el punto medio de una palabra cuenta si cae en `[start, end)`.
+
 ### D7. Integración con el pipeline
 
 A acordar con Bruno: el orquestador `procesar.py` es suyo (plan 4.1). Entornos: interfaz y Etapa 4 en Python 3.14 (`.venv` de la raíz); Etapas 2 y 3 en 3.12 con PyTorch; Etapa 5 en 3.12 con Ollama.

@@ -28,9 +28,9 @@ Orden de D9: esqueleto de punta a punta primero. En cada tarea, primero los test
 
 ## 4. Fragmentos (D6)
 
-- [ ] 4.1 Tramos solos, candidatos de al menos la media, semilla y permutación · escenarios: Candidatos de al menos la media, Misma entrada mismo fragmento, Otro fragmento sin repetir
-- [ ] 4.2 Recorte central y respaldos · escenarios: Tramo de más de 15 s, Sin tramo de 5 s, Nunca habla solo
-- [ ] 4.3 Texto del fragmento por punto medio de las palabras
+- [x] 4.1 Tramos solos, candidatos de al menos la media, semilla y permutación · escenarios: Candidatos de al menos la media, Misma entrada mismo fragmento, Otro fragmento sin repetir
+- [x] 4.2 Recorte central y respaldos · escenarios: Tramo de más de 15 s, Sin tramo de 5 s, Nunca habla solo
+- [x] 4.3 Texto del fragmento por punto medio de las palabras
 
 ## 5. Modelo de fichas, sin Qt (D8)
 
