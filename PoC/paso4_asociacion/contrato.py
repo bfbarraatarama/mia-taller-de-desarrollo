@@ -1,9 +1,10 @@
-"""Contratos de la Etapa 4 (solo biblioteca estándar): entradas y `transcription.json`.
+"""Contratos de la Etapa 4 (solo biblioteca estándar): entradas, `transcription.json` y `speakers.json`.
 
 - `validar_audio`: WAV 16 kHz, mono, PCM16; devuelve la duración de la cabecera.
 - `validar_diarizacion`: mismas reglas y mensajes que `validar_diarizacion` de la Etapa 2 (PR #8, `contrato.py`).
 - `validar_asr`: reglas de `validate_asr_contract` de la Etapa 3 (PR #9), con su margen de 1,0 s; devuelve una
   copia recortada a la duración del audio y los conteos de lo recortado o descartado.
+- `validar_speakers`: contrato de speakers.json (spec «Contrato de speakers.json»).
 - `validar_transcripcion`: contrato de salida (spec «Estructura de transcription.json» y «Valores de las
   intervenciones»).
 """
@@ -243,4 +244,38 @@ def validar_transcripcion(datos, duracion: float, etiquetas) -> list[str]:
         for marca in ("overlap", "ambiguous"):
             if marca in s and not isinstance(s[marca], bool):
                 violaciones.append(f"{lugar}: '{marca}' no es booleano ({s[marca]!r})")
+    return violaciones
+
+
+# ---------- speakers.json ----------
+
+CAMPOS_SPEAKER = ("name", "clip_start", "clip_end")
+
+
+def validar_speakers(datos, duracion: float, etiquetas) -> list[str]:
+    """Una entrada por etiqueta de diarization.json con exactamente name, clip_start y clip_end."""
+    if not isinstance(datos, dict):
+        return ["raíz: no es un objeto JSON"]
+    violaciones = [f"raíz: falta la etiqueta '{e}'" for e in etiquetas if e not in datos]
+    violaciones += [f"raíz: la etiqueta '{e}' no está en diarization.json" for e in datos if e not in etiquetas]
+    for etiqueta, v in datos.items():
+        if not isinstance(v, dict):
+            violaciones.append(f"{etiqueta}: no es un objeto")
+            continue
+        violaciones += [f"{etiqueta}: campo no permitido '{c}'" for c in sorted(set(v) - set(CAMPOS_SPEAKER))]
+        violaciones += [f"{etiqueta}: falta el campo '{c}'" for c in CAMPOS_SPEAKER if c not in v]
+        if "name" in v and v["name"] is not None and not (isinstance(v["name"], str) and v["name"].strip()):
+            violaciones.append(f"{etiqueta}: 'name' vacío o no es texto ({v['name']!r})")
+        inicio, fin = v.get("clip_start"), v.get("clip_end")
+        for nombre, valor in (("clip_start", inicio), ("clip_end", fin)):
+            if not _es_numero(valor):
+                violaciones.append(f"{etiqueta}: '{nombre}' no es un número finito ({valor!r})")
+            elif round(valor, 3) != valor:
+                violaciones.append(f"{etiqueta}: '{nombre}'={valor} tiene más de 3 decimales")
+        if _es_numero(inicio) and _es_numero(fin):
+            if inicio < 0 or not inicio < fin:
+                violaciones.append(f"{etiqueta}: no cumple 0 <= clip_start < clip_end "
+                                   f"(clip_start={inicio}, clip_end={fin})")
+            if fin > duracion:
+                violaciones.append(f"{etiqueta}: clip_end={fin} supera la duración del audio ({duracion} s)")
     return violaciones

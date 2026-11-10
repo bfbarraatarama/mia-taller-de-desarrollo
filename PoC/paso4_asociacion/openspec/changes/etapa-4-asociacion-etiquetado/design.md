@@ -131,6 +131,8 @@ Motivo: usa solo archivos que ya tienen contrato, el proceso con GPU termina ant
 | `asociar(carpeta, audio=None, diarizacion=None, asr=None)` | Carpeta de la reunión y rutas opcionales | Intervenciones, fichas con candidatos de fragmento, meta parcial. No escribe nada |
 | `escribir(asociacion, nombres, salida=None)` | Resultado de `asociar`, `{etiqueta: nombre o None}` o `None` (sin etiquetado), fragmento en pantalla por etiqueta | `transcription.json`, `transcription.meta.json` y, si hubo etiquetado, `speakers.json` |
 
+Precisiones de la implementación: los nombres y el fragmento en pantalla viajan juntos en un `Etiquetado` que arma el modelo de las fichas (`escribir(asociacion, etiquetado=None, salida=None)`); una escritura sin etiquetado borra el `speakers.json` de un etiquetado anterior, para que no contradiga los `name: null` de la transcripción.
+
 **Rutas**
 
 | Alternativa | Descripción | Resultado |

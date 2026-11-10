@@ -1,7 +1,7 @@
 """Paso 2 de la API de la Etapa 4 (D7): valida y escribe los resultados, y registra los errores.
 
-`transcription.json` y `transcription.meta.json` se escriben primero en `.tmp` y se reemplazan con `os.replace`
-solo si todo salió bien: ante un fallo, el resultado anterior queda intacto y sin restos.
+`transcription.json`, `transcription.meta.json` y, si hubo etiquetado, `speakers.json` se escriben primero en
+`.tmp` y se reemplazan con `os.replace` solo si todo salió bien: ante un fallo, el resultado anterior queda intacto y sin restos.
 """
 
 from __future__ import annotations
@@ -13,13 +13,14 @@ from datetime import datetime
 from pathlib import Path
 
 from asociacion import UMBRALES, Asociacion
-from contrato import validar_transcripcion
+from contrato import validar_speakers, validar_transcripcion
 from errores import AsociacionError
 from fragmentos import semilla
 
-VERSION = "0.2.0"
+VERSION = "0.3.0"
 TRANSCRIPCION = "transcription.json"
 META = "transcription.meta.json"
+SPEAKERS = "speakers.json"
 ERROR = "transcription.error.json"
 
 REGLAS = ["D1 máxima superposición", "D2 empates por continuidad", "D3 huecos de hasta 0,25 s",
@@ -54,30 +55,54 @@ def escribir_juntos(carpeta: Path, archivos: dict[str, bytes]) -> None:
         os.replace(tmp, destino)
 
 
-def escribir(asociacion: Asociacion, salida: str | Path | None = None) -> Path:
-    """Sin etiquetado: todas las intervenciones con `name: null` y sin `speakers.json`."""
+def _violacion(archivo: str, violaciones: list[str]) -> AsociacionError:
+    return AsociacionError("contrato", f"{archivo} no cumple el contrato ({len(violaciones)} violaciones; "
+                                       f"primera: {violaciones[0]})", violaciones=violaciones)
+
+
+def escribir(asociacion: Asociacion, etiquetado=None, salida: str | Path | None = None) -> Path:
+    """Sin etiquetado (`None`, CLI o «Seguir sin nombres»): `name: null` en todas las intervenciones, sin
+    `speakers.json`, y se borra el de un etiquetado anterior para que no contradiga a la transcripción.
+    Con etiquetado (`etiquetado.Etiquetado`): nombres por etiqueta y `speakers.json` con el fragmento en pantalla.
+    """
     carpeta = Path(salida) if salida is not None else asociacion.rutas.salida
-    datos = {"segments": [i.a_dict() for i in asociacion.intervenciones]}
+    nombres = etiquetado.nombres if etiquetado is not None else {}
+    segmentos = []
+    for i in asociacion.intervenciones:
+        d = i.a_dict()
+        d["name"] = nombres.get(i.speaker) if i.speaker is not None else None
+        segmentos.append(d)
+    datos = {"segments": segmentos}
     violaciones = validar_transcripcion(datos, asociacion.duracion, asociacion.etiquetas)
     if violaciones:
-        raise AsociacionError("contrato", f"transcription.json no cumple el contrato ({len(violaciones)} "
-                              f"violaciones; primera: {violaciones[0]})", violaciones=violaciones)
-    contenido = serializar(datos)
+        raise _violacion(TRANSCRIPCION, violaciones)
+    archivos = {TRANSCRIPCION: serializar(datos)}
+
+    if etiquetado is not None:
+        speakers = {e: {"name": nombres.get(e), "clip_start": etiquetado.clips[e][0],
+                        "clip_end": etiquetado.clips[e][1]} for e in asociacion.etiquetas}
+        violaciones = validar_speakers(speakers, asociacion.duracion, asociacion.etiquetas)
+        if violaciones:
+            raise _violacion(SPEAKERS, violaciones)
+        archivos[SPEAKERS] = serializar(speakers)
+
     r = asociacion.rutas
     meta = {
         "version": VERSION,
         "fecha": ahora(),
         "entradas": {"audio": str(r.audio), "diarizacion": str(r.diarizacion), "asr": str(r.asr)},
         "duracion_audio_s": asociacion.duracion,
-        "sha256": {**asociacion.sha256, TRANSCRIPCION: hashlib.sha256(contenido).hexdigest()},
-        "etiquetado": False,
+        "sha256": {**asociacion.sha256, **{n: hashlib.sha256(c).hexdigest() for n, c in archivos.items()}},
+        "etiquetado": etiquetado is not None,
         "umbrales": UMBRALES,
         "semilla_fragmentos": semilla(asociacion.sha256["diarization.json"]),
         "reglas": REGLAS,
         "recortes_asr": asociacion.recortes_asr,
         "conteos": asociacion.conteos,
     }
-    escribir_juntos(carpeta, {TRANSCRIPCION: contenido, META: serializar(meta)})
+    escribir_juntos(carpeta, {**archivos, META: serializar(meta)})
+    if etiquetado is None:
+        (carpeta / SPEAKERS).unlink(missing_ok=True)
     (carpeta / ERROR).unlink(missing_ok=True)
     return carpeta / TRANSCRIPCION
 

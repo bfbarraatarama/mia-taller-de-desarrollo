@@ -34,10 +34,10 @@ Orden de D9: esqueleto de punta a punta primero. En cada tarea, primero los test
 
 ## 5. Modelo de fichas, sin Qt (D8)
 
-- [ ] 5.1 Orden por tiempo de habla · escenario: Orden por tiempo de habla
-- [ ] 5.2 Normalización y unificación de nombres, aviso de tildes · escenarios: Misma persona en dos etiquetas, Nombres que difieren solo en tildes, Nombre vacío
-- [ ] 5.3 Autocompletado y contador · escenarios: Autocompletado, Contador de fragmentos
-- [ ] 5.4 Opciones de cierre y `speakers.json` con el fragmento en pantalla · escenarios: Volver a las fichas, Seguir sin nombres, Cancelar, Fragmento en pantalla al confirmar
+- [x] 5.1 Orden por tiempo de habla · escenario: Orden por tiempo de habla
+- [x] 5.2 Normalización y unificación de nombres, aviso de tildes · escenarios: Misma persona en dos etiquetas, Nombres que difieren solo en tildes, Nombre vacío
+- [x] 5.3 Autocompletado y contador · escenarios: Autocompletado, Contador de fragmentos
+- [x] 5.4 Opciones de cierre y `speakers.json` con el fragmento en pantalla · escenarios: Volver a las fichas, Seguir sin nombres, Cancelar, Fragmento en pantalla al confirmar
 
 ## 6. Diálogo y reproducción (PySide6, sounddevice)
 
