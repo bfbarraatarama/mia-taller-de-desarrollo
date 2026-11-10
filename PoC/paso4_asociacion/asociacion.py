@@ -1,11 +1,17 @@
 """Paso 1 de la API de la Etapa 4 (D7): valida las entradas y asocia palabras con hablantes. No escribe nada.
 
-Implementado (tareas 2.x): D1, asignación por máxima superposición, y D4, intervenciones cortadas por cambio de
-hablante y por segmento de Whisper. Pendiente: D2 (empates por continuidad) y D3 (palabras en huecos), tarea 3.1;
-D5 (marcas `overlap` y `ambiguous` por cobertura), tarea 3.2. Mientras tanto, un empate se resuelve por la
-etiqueta menor, una palabra sin turno queda con `speaker: null` y `ambiguous` solo marca esos casos.
+Reglas de `design.md`:
+- D1: cada palabra va al hablante con más milisegundos de turno dentro de ella.
+- D2: empate de cobertura: el hablante de la palabra anterior (en todo asr.json) si está entre los empatados; si no,
+  el del turno más largo; si persiste, la etiqueta menor.
+- D3: palabra sin turno: el turno más cercano si está a 0,25 s o menos (empate de distancia: misma regla que D2);
+  si no, `speaker: null`.
+- D4: intervenciones cortadas por cambio de hablante y en cada segmento de Whisper.
+- D5: `overlap` si hay 0,2 s o más con dos o más hablantes; `ambiguous` si no hay hablante, si otra etiqueta cubre
+  el 30 % o más, o si la propia cubre menos del 50 %.
 
-Los tiempos se comparan en milisegundos enteros.
+Los tiempos se comparan en milisegundos enteros, y los porcentajes como productos de enteros, para que los valores
+límite no dependan del redondeo en coma flotante. Un «turno» es la unión de los turnos que se tocan de una etiqueta.
 """
 
 from __future__ import annotations
@@ -20,6 +26,13 @@ from contrato import CAMPOS_INTERVENCION, validar_asr, validar_audio, validar_di
 from errores import AsociacionError
 
 NOMBRES_ENTRADA = {"audio": "audio.wav", "diarizacion": "diarization.json", "asr": "asr.json"}
+
+HUECO_MAX_MS = 250          # D3
+OVERLAP_MIN_MS = 200        # D5
+SEGUNDO_HABLANTE_PCT = 30   # D5: otra etiqueta con este porcentaje o más → ambiguous
+PROPIO_PCT = 50             # D5: la propia etiqueta con menos de este porcentaje → ambiguous
+UMBRALES = {"hueco_max_s": HUECO_MAX_MS / 1000, "overlap_min_s": OVERLAP_MIN_MS / 1000,
+            "segundo_hablante_min": SEGUNDO_HABLANTE_PCT / 100, "propio_min": PROPIO_PCT / 100}
 
 
 @dataclass
@@ -123,40 +136,98 @@ class Turnos:
             total += min(fines[k], fin) - max(inicios[k], ini)
         return total
 
-    def asignar(self, ini: int, fin: int) -> str | None:
-        """D1: la etiqueta con más cobertura. Empate: la etiqueta menor (D2 llega en la tarea 3.1)."""
-        mejor, mejor_cobertura = None, 0
-        for etiqueta in self.etiquetas:
-            c = self.cobertura(etiqueta, ini, fin)
-            if c > mejor_cobertura:
-                mejor, mejor_cobertura = etiqueta, c
+    def _cercano(self, etiqueta: str, ini: int, fin: int) -> tuple[int, int]:
+        """(distancia, −largo) del turno de `etiqueta` más cercano a [ini, fin); entre los que se superponen
+        (distancia 0), el más largo."""
+        inicios, fines = self._inicios[etiqueta], self._fines[etiqueta]
+        mejor = None
+        for k in range(max(bisect.bisect_right(fines, ini) - 1, 0), len(inicios)):
+            candidato = (max(0, inicios[k] - fin, ini - fines[k]), inicios[k] - fines[k])
+            mejor = candidato if mejor is None else min(mejor, candidato)
+            if inicios[k] >= fin:
+                break
         return mejor
 
+    def _desempatar(self, candidatos: list[str], ini: int, fin: int, anterior: str | None) -> str:
+        """D2: continuidad con la palabra anterior; si no, el turno más largo; si no, la etiqueta menor."""
+        if len(candidatos) == 1:
+            return candidatos[0]
+        if anterior in candidatos:
+            return anterior
+        return min(candidatos, key=lambda e: (self._cercano(e, ini, fin)[1], e))
 
-def _cerrar(grupo: list[dict], speaker: str | None) -> Intervencion:
-    return Intervencion(start=grupo[0]["start"], end=grupo[-1]["end"], speaker=speaker, name=None,
-                        text=" ".join(w["word"].strip() for w in grupo), overlap=False,
-                        ambiguous=speaker is None)
+    def asignar(self, ini: int, fin: int, anterior: str | None = None) -> tuple[str | None, str]:
+        """Devuelve (etiqueta o None, regla que decidió: "D1", "D2", "D3" o "sin_turno")."""
+        coberturas = {e: self.cobertura(e, ini, fin) for e in self.etiquetas}
+        maxima = max(coberturas.values(), default=0)
+        if maxima > 0:
+            candidatos = [e for e, c in coberturas.items() if c == maxima]
+            return self._desempatar(candidatos, ini, fin, anterior), "D1" if len(candidatos) == 1 else "D2"
+        distancias = {e: self._cercano(e, ini, fin)[0] for e in self.etiquetas}
+        minima = min(distancias.values(), default=None)
+        if minima is None or minima > HUECO_MAX_MS:
+            return None, "sin_turno"
+        candidatos = [e for e, d in distancias.items() if d == minima]
+        return self._desempatar(candidatos, ini, fin, anterior), "D3"
+
+    def superpuesto(self, ini: int, fin: int) -> int:
+        """Milisegundos de [ini, fin) con dos o más etiquetas activas a la vez."""
+        eventos = []
+        for e in self.etiquetas:
+            inicios, fines = self._inicios[e], self._fines[e]
+            for k in range(bisect.bisect_right(fines, ini), len(inicios)):
+                if inicios[k] >= fin:
+                    break
+                eventos += [(max(inicios[k], ini), 1), (min(fines[k], fin), -1)]
+        eventos.sort()  # en el mismo instante, los fines (−1) van antes: un roce no cuenta
+        total, activos, previo = 0, 0, ini
+        for t, delta in eventos:
+            if activos >= 2:
+                total += t - previo
+            activos, previo = activos + delta, t
+        return total
+
+    def marcas(self, ini: int, fin: int, speaker: str | None) -> tuple[bool, bool]:
+        """D5: (overlap, ambiguous) de la intervención [ini, fin)."""
+        duracion = fin - ini
+        overlap = self.superpuesto(ini, fin) >= OVERLAP_MIN_MS
+        if speaker is None:
+            return overlap, True
+        propia = self.cobertura(speaker, ini, fin)
+        otra = max((self.cobertura(e, ini, fin) for e in self.etiquetas if e != speaker), default=0)
+        ambiguous = propia * 100 < PROPIO_PCT * duracion or otra * 100 >= SEGUNDO_HABLANTE_PCT * duracion
+        return overlap, ambiguous
+
+
+def _cerrar(grupo: list[dict], speaker: str | None, turnos: Turnos) -> Intervencion:
+    start, end = grupo[0]["start"], grupo[-1]["end"]
+    overlap, ambiguous = turnos.marcas(ms(start), ms(end), speaker)
+    return Intervencion(start=start, end=end, speaker=speaker, name=None,
+                        text=" ".join(w["word"].strip() for w in grupo), overlap=overlap, ambiguous=ambiguous)
 
 
 def armar_intervenciones(asr: dict, turnos: Turnos) -> tuple[list[Intervencion], dict[str, int]]:
     """D4: corta por cambio de hablante y en cada segmento de Whisper. Devuelve (intervenciones, conteos)."""
-    intervenciones, conteos = [], {"palabras": 0, "palabras_sin_hablante": 0}
+    intervenciones = []
+    conteos = {"palabras": 0, "palabras_por_empate": 0, "palabras_por_hueco": 0, "palabras_sin_hablante": 0}
+    anterior = None  # hablante de la palabra anterior en todo asr.json (D2)
     for seg in asr["segments"]:
         palabras = seg["words"] or [{"word": seg["text"], "start": seg["start"], "end": seg["end"]}]
-        grupo, actual = [], None
+        grupo = []
         for w in palabras:
             ini, fin = ms(w["start"]), ms(w["end"])
-            hablante = turnos.asignar(ini, max(fin, ini + 1))
-            if grupo and hablante != actual:
-                intervenciones.append(_cerrar(grupo, actual))
+            hablante, regla = turnos.asignar(ini, max(fin, ini + 1), anterior)
+            if grupo and hablante != anterior:
+                intervenciones.append(_cerrar(grupo, anterior, turnos))
                 grupo = []
             grupo.append(w)
-            actual = hablante
+            anterior = hablante
             conteos["palabras"] += 1
+            conteos["palabras_por_empate"] += regla == "D2"
+            conteos["palabras_por_hueco"] += regla == "D3"
             conteos["palabras_sin_hablante"] += hablante is None
         if grupo:
-            intervenciones.append(_cerrar(grupo, actual))
+            intervenciones.append(_cerrar(grupo, anterior, turnos))
     intervenciones.sort(key=lambda i: i.start)  # estable: respeta el orden de Whisper en empates
     return intervenciones, conteos
 
@@ -174,6 +245,11 @@ def asociar(carpeta=None, *, audio=None, diarizacion=None, asr=None, salida=None
 
     datos_asr, sha_asr = _leer_json(rutas.asr, "asr")
     asr_normal, recortes = validar_asr(datos_asr, duracion, archivo=rutas.asr)
+    if not asr_normal["segments"]:
+        descartados = recortes["segmentos_descartados"]
+        detalle = f" ({descartados} segmentos descartados por empezar después del audio)" if descartados else ""
+        raise AsociacionError("asr", f"{rutas.asr}: sin habla transcrita, no hay ningún segmento con texto "
+                                     f"dentro del audio{detalle}", archivo=rutas.asr)
 
     turnos = Turnos(datos_diar["segments"])
     intervenciones, conteos = armar_intervenciones(asr_normal, turnos)

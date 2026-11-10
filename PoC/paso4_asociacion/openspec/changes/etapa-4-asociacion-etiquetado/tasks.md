@@ -4,27 +4,27 @@ Orden de D9: esqueleto de punta a punta primero. En cada tarea, primero los test
 
 ## 1. Preparación
 
-- [ ] 1.1 Estructura de `PoC/paso4_asociacion/` (paquete, `tests/`, `evaluacion/`) y `requirements-dev.txt` con `pytest`
-- [ ] 1.2 Ejemplo ideal (D10): guion, script con espeak-ng que genera `audio.wav`, `diarization.json`, `asr.json` y `referencia.json` · escenario: Ejemplo ideal
+- [x] 1.1 Estructura de `PoC/paso4_asociacion/` (paquete, `tests/`, `evaluacion/`) y `requirements-dev.txt` con `pytest`
+- [x] 1.2 Ejemplo ideal (D10): guion, script con espeak-ng que genera `audio.wav`, `diarization.json`, `asr.json` y `referencia.json` · escenario: Ejemplo ideal
 
 ## 2. Esqueleto de punta a punta
 
-- [ ] 2.1 Validación del audio · escenarios: Audio normalizado, Audio no normalizado
-- [ ] 2.2 Validación de `diarization.json` · escenarios: Diarización de la Etapa 2, Segmento después del audio
-- [ ] 2.3 Validación de `asr.json` con margen de 1,0 s y recortes · escenarios: Fin dentro del margen de la Etapa 3, Palabra que queda vacía tras el recorte, Fin fuera del margen de la Etapa 3, Segmento sin palabras
-- [ ] 2.4 Asignación por máxima superposición (D1) y armado de intervenciones (D4) · escenario: Happy path con dos hablantes
-- [ ] 2.5 Estructura, valores y validación de la propia salida · escenarios: Campos exactos, Salida dentro del contrato, Redondeo y texto, Salida inválida detectada
-- [ ] 2.6 Escritura con `.tmp` + `os.replace`, `transcription.meta.json` y `transcription.error.json` · escenarios: Metadatos coherentes con el resultado, Falla con un resultado anterior, Entradas intactas, Error registrado, Éxito posterior
-- [ ] 2.7 CLI con códigos 0/1, rutas por defecto y explícitas, sin etiquetado · escenarios: Fallo con resultado anterior presente, Carpeta de la reunión, Rutas explícitas, Sin interfaz
-- [ ] 2.8 Lectura por la Etapa 5 (`leer_transcripcion` de `src/minutas/entrada.py`, en su entorno) · escenario: Lectura por la Etapa 5
+- [x] 2.1 Validación del audio · escenarios: Audio normalizado, Audio no normalizado
+- [x] 2.2 Validación de `diarization.json` · escenarios: Diarización de la Etapa 2, Segmento después del audio
+- [x] 2.3 Validación de `asr.json` con margen de 1,0 s y recortes · escenarios: Fin dentro del margen de la Etapa 3, Palabra que queda vacía tras el recorte, Fin fuera del margen de la Etapa 3, Segmento sin palabras
+- [x] 2.4 Asignación por máxima superposición (D1) y armado de intervenciones (D4) · escenario: Happy path con dos hablantes
+- [x] 2.5 Estructura, valores y validación de la propia salida · escenarios: Campos exactos, Salida dentro del contrato, Redondeo y texto, Salida inválida detectada
+- [x] 2.6 Escritura con `.tmp` + `os.replace`, `transcription.meta.json` y `transcription.error.json` · escenarios: Metadatos coherentes con el resultado, Falla con un resultado anterior, Entradas intactas, Error registrado, Éxito posterior
+- [x] 2.7 CLI con códigos 0/1, rutas por defecto y explícitas, sin etiquetado · escenarios: Fallo con resultado anterior presente, Carpeta de la reunión, Rutas explícitas, Sin interfaz
+- [x] 2.8 Lectura por la Etapa 5 (`leer_transcripcion` de `src/minutas/entrada.py`, en su entorno) · escenario: Lectura por la Etapa 5
 - [ ] 2.9 Avisar a Bruno y a Luisa: hay `transcription.json` para integrar y para la tarea 7.5
 
 ## 3. Atribución completa
 
-- [ ] 3.1 Empates por continuidad (D2) y palabras en huecos con margen de 0,25 s (D3)
-- [ ] 3.2 Marcas `overlap` y `ambiguous` en milisegundos enteros (D5) · escenarios: Dos personas hablan a la vez, Interrupción breve, Roce de bordes, Segundo hablante en el 30 %, Texto sin respaldo en la diarización, Valores límite, Sin hablante
-- [ ] 3.3 Entradas sin habla · escenarios: Sin habla transcrita, Diarización vacía con texto
-- [ ] 3.4 Cualquier cantidad de hablantes · escenario: Seis o más hablantes
+- [x] 3.1 Empates por continuidad (D2) y palabras en huecos con margen de 0,25 s (D3)
+- [x] 3.2 Marcas `overlap` y `ambiguous` en milisegundos enteros (D5) · escenarios: Dos personas hablan a la vez, Interrupción breve, Roce de bordes, Segundo hablante en el 30 %, Texto sin respaldo en la diarización, Valores límite, Sin hablante
+- [x] 3.3 Entradas sin habla · escenarios: Sin habla transcrita, Diarización vacía con texto
+- [x] 3.4 Cualquier cantidad de hablantes · escenario: Seis o más hablantes
 
 ## 4. Fragmentos (D6)
 

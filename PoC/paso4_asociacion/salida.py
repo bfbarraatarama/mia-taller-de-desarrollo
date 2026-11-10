@@ -12,18 +12,17 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-from asociacion import Asociacion
+from asociacion import UMBRALES, Asociacion
 from contrato import validar_transcripcion
 from errores import AsociacionError
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 TRANSCRIPCION = "transcription.json"
 META = "transcription.meta.json"
 ERROR = "transcription.error.json"
 
-IMPLEMENTADO = ["D1 asignación por máxima superposición", "D4 intervenciones por hablante y segmento de Whisper"]
-PENDIENTE = ["D2 empates por continuidad (tarea 3.1)", "D3 palabras en huecos (tarea 3.1)",
-             "D5 marcas overlap y ambiguous por cobertura (tarea 3.2)"]
+REGLAS = ["D1 máxima superposición", "D2 empates por continuidad", "D3 huecos de hasta 0,25 s",
+          "D4 cortes por hablante y segmento de Whisper", "D5 marcas overlap y ambiguous"]
 
 
 def serializar(datos) -> bytes:
@@ -71,9 +70,8 @@ def escribir(asociacion: Asociacion, salida: str | Path | None = None) -> Path:
         "duracion_audio_s": asociacion.duracion,
         "sha256": {**asociacion.sha256, TRANSCRIPCION: hashlib.sha256(contenido).hexdigest()},
         "etiquetado": False,
-        "umbrales": {},
-        "implementado": IMPLEMENTADO,
-        "pendiente": PENDIENTE,
+        "umbrales": UMBRALES,
+        "reglas": REGLAS,
         "recortes_asr": asociacion.recortes_asr,
         "conteos": asociacion.conteos,
     }

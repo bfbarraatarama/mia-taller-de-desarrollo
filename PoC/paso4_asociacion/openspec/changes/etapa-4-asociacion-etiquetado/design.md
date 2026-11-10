@@ -39,6 +39,8 @@ Motivo: es la regla del documento del pipeline y usa toda la duración de la pal
 
 Motivo: en las interrupciones cortas (23 % de los turnos), Whisper tiende a transcribir la voz dominante; la B no parte la intervención del que tiene la palabra. No medido: tasa de acierto, a medir con `asr.json` reales. La intervención queda marcada con `overlap` (D5).
 
+Precisiones de la implementación: la palabra anterior es la anterior en todo `asr.json`, aunque esté en otro segmento de Whisper; el largo de un turno es el de la unión de los turnos de esa etiqueta que se tocan o se superponen.
+
 ### D3. Palabra sin turno que la cubra
 
 | Alternativa | Descripción | Resultado |
