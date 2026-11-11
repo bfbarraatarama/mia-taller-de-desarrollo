@@ -29,6 +29,10 @@ from estilo import fuente, icono_estado, icono_pendiente
 
 DIR_PROCESAMIENTO = Path(__file__).resolve().parent.parent / "paso2_procesamiento"
 PYTHON_PROCESAMIENTO = DIR_PROCESAMIENTO / ".venv" / "bin" / "python"
+# Archivos de resultados con los nombres del contrato del Hito 3 (Etapas 4 y 5)
+MINUTA = "minutes.md"
+TRANSCRIPCION = "transcription.json"
+
 ETAPAS = [("preparar", "Preparación del audio"), ("diarizar", "Diarización (pyannote)"),
           ("transcribir", "Transcripción (Whisper)"), ("asociar", "Asociación temporal"),
           ("minuta", "Minuta (Qwen2.5)")]
@@ -129,9 +133,9 @@ class PanelProcesamiento(QGroupBox):
         self.lbl = QLabel("Elegí los archivos y presioná Procesar.", objectName="secundario")
         self.lbl.setSizePolicy(QSizePolicy.Policy.Ignored, QSizePolicy.Policy.Preferred)
         self.btn_minuta = QPushButton("Ver minuta")
-        self.btn_minuta.clicked.connect(lambda: self._abrir("minuta.md"))
+        self.btn_minuta.clicked.connect(lambda: self._abrir(MINUTA))
         self.btn_transcripcion = QPushButton("Ver transcripción")
-        self.btn_transcripcion.clicked.connect(lambda: self._abrir("transcripcion.md"))
+        self.btn_transcripcion.clicked.connect(lambda: self._abrir(TRANSCRIPCION))
         self.btn_carpeta = QPushButton("Abrir resultados")
         self.btn_carpeta.clicked.connect(lambda: self._abrir(None))
         self.btn_procesar = QPushButton("Procesar")
@@ -369,5 +373,5 @@ class PanelProcesamiento(QGroupBox):
         self.lista.setEnabled(not procesando)
         r = self.resultados
         self.btn_carpeta.setEnabled(r is not None and r.exists())
-        self.btn_minuta.setEnabled(r is not None and (r / "minuta.md").exists())
-        self.btn_transcripcion.setEnabled(r is not None and (r / "transcripcion.md").exists())
+        self.btn_minuta.setEnabled(r is not None and (r / MINUTA).exists())
+        self.btn_transcripcion.setEnabled(r is not None and (r / TRANSCRIPCION).exists())
