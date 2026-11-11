@@ -17,6 +17,7 @@ Orden de D9: esqueleto de punta a punta primero. En cada tarea, primero los test
 - [x] 2.6 Escritura con `.tmp` + `os.replace`, `transcription.meta.json` y `transcription.error.json` · escenarios: Metadatos coherentes con el resultado, Falla con un resultado anterior, Entradas intactas, Error registrado, Éxito posterior
 - [x] 2.7 CLI con códigos 0/1, rutas por defecto y explícitas, sin etiquetado · escenarios: Fallo con resultado anterior presente, Carpeta de la reunión, Rutas explícitas, Sin interfaz
 - [x] 2.8 Lectura por la Etapa 5 (`leer_transcripcion` de `src/minutas/entrada.py`, en su entorno) · escenario: Lectura por la Etapa 5
+- [x] 2.10 Publicación con respaldo y reversión, y resultado anterior verificado por SHA-256 (observación de Bruno en #8, mismo criterio que la Etapa 2) · escenarios: Falla la publicación del meta con un resultado anterior, Falla la publicación sin resultado anterior, Falla la restauración, Resultado inconsistente en la carpeta
 - [ ] 2.9 Avisar a Bruno y a Luisa: hay `transcription.json` para integrar y para la tarea 7.5
 
 ## 3. Atribución completa

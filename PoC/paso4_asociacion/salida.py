@@ -1,7 +1,8 @@
 """Paso 2 de la API de la Etapa 4 (D7): valida y escribe los resultados, y registra los errores.
 
 `transcription.json`, `transcription.meta.json` y, si hubo etiquetado, `speakers.json` se escriben primero en
-`.tmp` y se reemplazan con `os.replace` solo si todo salió bien: ante un fallo, el resultado anterior queda intacto y sin restos.
+`.tmp` y se publican con respaldo y reversión (`escribir_juntos`): ante un fallo, el resultado anterior queda intacto
+y sin restos.
 """
 
 from __future__ import annotations
@@ -9,6 +10,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import uuid
 from datetime import datetime
 from pathlib import Path
 
@@ -17,7 +19,7 @@ from contrato import validar_speakers, validar_transcripcion
 from errores import AsociacionError
 from fragmentos import semilla
 
-VERSION = "0.3.0"
+VERSION = "0.3.1"
 TRANSCRIPCION = "transcription.json"
 META = "transcription.meta.json"
 SPEAKERS = "speakers.json"
@@ -35,24 +37,92 @@ def ahora() -> str:
     return datetime.now().astimezone().isoformat(timespec="seconds")
 
 
-def escribir_juntos(carpeta: Path, archivos: dict[str, bytes]) -> None:
-    """Escribe todos en `.tmp` y recién después los reemplaza; si algo falla antes, borra los `.tmp`."""
+_reemplazar = os.replace  # las pruebas los reemplazan para simular un fallo a mitad de la publicación
+
+
+def _borrar(ruta: Path) -> None:
+    ruta.unlink()
+
+
+def _escribir_sincronizado(ruta: Path, contenido: bytes) -> Path:
+    with open(ruta, "wb") as f:
+        f.write(contenido)
+        f.flush()
+        os.fsync(f.fileno())
+    return ruta
+
+
+def _revertir(hechos: list[Path], respaldos: dict[Path, Path]) -> list[str]:
+    """Deshace lo publicado, del último al primero: restaura el respaldo o, si no había, borra lo publicado.
+    Devuelve las notas de lo que no se pudo restaurar (vacía si se restauró todo)."""
+    notas = []
+    for destino in reversed(hechos):
+        try:
+            if destino in respaldos:
+                _reemplazar(respaldos[destino], destino)
+            else:
+                destino.unlink(missing_ok=True)
+        except OSError as e:
+            notas.append(f"no se pudo restaurar {destino.name} ({e.strerror or e}); "
+                         f"el respaldo queda en {respaldos[destino].name if destino in respaldos else '(no había)'}")
+    return notas
+
+
+def escribir_juntos(carpeta: Path, archivos: dict[str, bytes], borrar: tuple[str, ...] = ()) -> None:
+    """Publica `archivos` y borra `borrar` como una unidad: todo o, ante un fallo, lo anterior byte a byte.
+
+    1. Escribe cada `.tmp` y respalda en `.<marca>.bak` lo vigente que se va a reemplazar o borrar. Si algo falla
+       acá, borra lo creado: lo vigente no se tocó.
+    2. Publica con `os.replace` y después borra. Si algo falla, revierte (ver `_revertir`); si la reversión no se
+       completa, conserva todos los `.bak` para recuperar a mano.
+    Mismo criterio que `escribir_par` de la Etapa 2. Límite: si el proceso muere entre dos reemplazos, el resultado
+    puede quedar inconsistente; `resultado_vigente` lo detecta por el SHA-256 del meta.
+    """
     carpeta.mkdir(parents=True, exist_ok=True)
-    temporales = []
+    marca = uuid.uuid4().hex[:12]  # un respaldo de una reversión fallida nunca se pisa
+    a_borrar = [carpeta / n for n in borrar if (carpeta / n).is_file()]
+    tmps: dict[Path, Path] = {}
+    respaldos: dict[Path, Path] = {}
     try:
         for nombre, contenido in archivos.items():
-            tmp = carpeta / f"{nombre}.tmp"
-            with open(tmp, "wb") as f:
-                f.write(contenido)
-                f.flush()
-                os.fsync(f.fileno())
-            temporales.append((tmp, carpeta / nombre))
+            tmps[carpeta / nombre] = _escribir_sincronizado(carpeta / f"{nombre}.tmp", contenido)
+        for destino in [*tmps, *a_borrar]:
+            if destino.is_file():
+                respaldos[destino] = _escribir_sincronizado(destino.with_name(f"{destino.name}.{marca}.bak"),
+                                                            destino.read_bytes())
     except OSError as e:
-        for tmp, _ in temporales:
-            tmp.unlink(missing_ok=True)
+        for creado in [*tmps.values(), *respaldos.values()]:
+            creado.unlink(missing_ok=True)
         raise AsociacionError("escritura", f"{carpeta}: no se pudo escribir ({e.strerror or e})") from e
-    for tmp, destino in temporales:
-        os.replace(tmp, destino)
+
+    hechos: list[Path] = []
+    try:
+        for destino, tmp in tmps.items():
+            _reemplazar(tmp, destino)
+            hechos.append(destino)
+        for destino in a_borrar:
+            _borrar(destino)
+            hechos.append(destino)
+    except OSError as e:
+        notas = _revertir(hechos, respaldos)
+        for tmp in tmps.values():
+            tmp.unlink(missing_ok=True)
+        if not notas:
+            for respaldo in respaldos.values():
+                respaldo.unlink(missing_ok=True)
+        detalle = f"; {'; '.join(notas)}" if notas else "; se conservó el resultado anterior"
+        raise AsociacionError("escritura", f"{carpeta}: no se pudo publicar ({e.strerror or e}){detalle}") from e
+    for respaldo in respaldos.values():
+        respaldo.unlink(missing_ok=True)
+
+
+def resultado_vigente(carpeta: Path) -> bool:
+    """Hay un resultado anterior válido si el SHA-256 de transcription.json coincide con el de su meta."""
+    try:
+        meta = json.loads((carpeta / META).read_bytes())
+        return meta["sha256"][TRANSCRIPCION] == hashlib.sha256((carpeta / TRANSCRIPCION).read_bytes()).hexdigest()
+    except (OSError, ValueError, KeyError, TypeError):
+        return False
 
 
 def _violacion(archivo: str, violaciones: list[str]) -> AsociacionError:
@@ -100,9 +170,8 @@ def escribir(asociacion: Asociacion, etiquetado=None, salida: str | Path | None 
         "recortes_asr": asociacion.recortes_asr,
         "conteos": asociacion.conteos,
     }
-    escribir_juntos(carpeta, {**archivos, META: serializar(meta)})
-    if etiquetado is None:
-        (carpeta / SPEAKERS).unlink(missing_ok=True)
+    escribir_juntos(carpeta, {**archivos, META: serializar(meta)},
+                    borrar=(SPEAKERS,) if etiquetado is None else ())
     (carpeta / ERROR).unlink(missing_ok=True)
     return carpeta / TRANSCRIPCION
 
@@ -116,7 +185,7 @@ def registrar_error(carpeta: Path, error: AsociacionError) -> Path | None:
         "archivo": error.archivo,
         "violaciones": error.violaciones,
         "causa": type(error.__cause__).__name__ if error.__cause__ else None,
-        "resultado_anterior": (carpeta / TRANSCRIPCION).is_file(),
+        "resultado_anterior": resultado_vigente(carpeta),
     }
     try:
         escribir_juntos(carpeta, {ERROR: serializar(datos)})

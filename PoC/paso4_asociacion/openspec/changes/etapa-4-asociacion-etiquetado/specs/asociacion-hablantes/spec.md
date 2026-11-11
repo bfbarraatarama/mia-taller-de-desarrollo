@@ -154,6 +154,28 @@ Si una ejecución falla, el sistema SHALL NOT sobrescribir ni eliminar `transcri
 - **WHEN** termina una ejecución, con éxito o con error
 - **THEN** el SHA-256 de `audio.wav`, `diarization.json` y `asr.json` es igual al de antes
 
+### Requirement: Publicación consistente de los resultados
+El sistema SHALL publicar `transcription.json`, `transcription.meta.json` y, si corresponde, `speakers.json` de modo que un fallo durante la publicación deje los resultados anteriores byte a byte o ningún resultado. Antes de reemplazar, SHALL respaldar los vigentes; si falla un reemplazo, SHALL restaurarlos, o borrar lo publicado si no había, e informar el paso `escritura`. Si la restauración falla, SHALL conservar los respaldos.
+
+#### Scenario: Falla la publicación del meta con un resultado anterior
+- **WHEN** existe un resultado etiquetado y, en una nueva ejecución, `transcription.json` se publica pero falla la publicación de `transcription.meta.json`
+- **THEN** los tres archivos quedan byte a byte iguales a los anteriores, no quedan `.tmp` ni `.bak`, y la ejecución falla en el paso `escritura`
+
+#### Scenario: Falla la publicación sin resultado anterior
+- **WHEN** en la primera ejecución de una reunión falla la publicación de `transcription.meta.json`
+- **THEN** no existen `transcription.json` ni `transcription.meta.json`, y no quedan `.tmp` ni `.bak`
+
+#### Scenario: Falla la restauración
+- **WHEN** falla la publicación del meta y también la restauración de `transcription.json` desde su respaldo
+- **THEN** el error nombra el respaldo, y los `.bak` de los resultados anteriores se conservan con su contenido completo
+
+### Requirement: Resultado anterior verificado
+El sistema SHALL considerar válido un resultado anterior solo si el SHA-256 de `transcription.json` registrado en su meta coincide con el del archivo. Un resultado inconsistente SHALL NOT informarse como resultado anterior en `transcription.error.json`.
+
+#### Scenario: Resultado inconsistente en la carpeta
+- **WHEN** la carpeta tiene un `transcription.json` cuyo SHA-256 no coincide con el de su meta, por ejemplo tras una interrupción entre dos reemplazos, y una nueva ejecución falla
+- **THEN** `transcription.error.json` registra `resultado_anterior: false`
+
 ### Requirement: Registro separado del error
 Si una ejecución falla, el sistema SHALL escribir `transcription.error.json` con fecha, paso en que falló, tipo, mensaje y si existe un resultado válido anterior. Una ejecución exitosa posterior SHALL eliminarlo.
 

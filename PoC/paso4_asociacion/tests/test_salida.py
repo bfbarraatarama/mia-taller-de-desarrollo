@@ -80,6 +80,124 @@ def test_exito_posterior(reunion):
     assert not (reunion / "transcription.error.json").exists()
 
 
+# ---------- 2.10 publicación con respaldo y reversión ----------
+
+TRES = ("transcription.json", "transcription.meta.json", "speakers.json")
+
+
+def etiquetar(carpeta: Path, nombre: str):
+    """Asocia y confirma con `nombre` para SPEAKER_00; devuelve (asociación, modelo) para volver a escribir."""
+    from asociacion import asociar
+    from etiquetado import ModeloFichas, aplicar
+
+    a = asociar(carpeta)
+    m = ModeloFichas(a)
+    m.escribir_nombre("SPEAKER_00", nombre)
+    aplicar(a, m.confirmar())
+    return a, m
+
+
+def fallar(monkeypatch, *, reemplazo=lambda origen, destino: False, borrado=lambda ruta: False):
+    """Simula un disco lleno en los reemplazos o borrados de salida.py que cumplan la condición."""
+    import salida
+
+    def reemplazar(origen, destino):
+        if reemplazo(Path(origen), Path(destino)):
+            raise OSError(28, "No queda espacio en el dispositivo")
+        os.replace(origen, destino)
+
+    def borrar(ruta):
+        if borrado(Path(ruta)):
+            raise OSError(28, "No queda espacio en el dispositivo")
+        Path(ruta).unlink()
+
+    monkeypatch.setattr(salida, "_reemplazar", reemplazar)
+    monkeypatch.setattr(salida, "_borrar", borrar)
+
+
+def restos(carpeta: Path) -> list[str]:
+    return sorted(p.name for p in carpeta.iterdir() if p.suffix in (".tmp", ".bak"))
+
+
+def test_falla_la_publicacion_del_meta_con_un_resultado_anterior(reunion, monkeypatch):
+    from etiquetado import aplicar
+
+    a, m = etiquetar(reunion, "Luisa")
+    antes = {n: (reunion / n).read_bytes() for n in TRES}
+    m.escribir_nombre("SPEAKER_00", "Ana")
+    fallar(monkeypatch, reemplazo=lambda o, d: d.name == "transcription.meta.json")
+    with pytest.raises(AsociacionError) as e:
+        aplicar(a, m.confirmar())
+    assert e.value.paso == "escritura"
+    assert {n: (reunion / n).read_bytes() for n in TRES} == antes
+    assert restos(reunion) == []
+
+
+def test_falla_la_publicacion_sin_resultado_anterior(reunion, monkeypatch):
+    fallar(monkeypatch, reemplazo=lambda o, d: d.name == "transcription.meta.json")
+    with pytest.raises(AsociacionError):
+        procesar(reunion)
+    assert not (reunion / "transcription.json").exists() and not (reunion / "transcription.meta.json").exists()
+    assert restos(reunion) == []
+    error = leer(reunion / "transcription.error.json")
+    assert error["paso"] == "escritura" and error["resultado_anterior"] is False
+
+
+def test_falla_la_restauracion(reunion, monkeypatch):
+    from etiquetado import aplicar
+
+    a, m = etiquetar(reunion, "Luisa")
+    antes = {n: (reunion / n).read_bytes() for n in TRES}
+    m.escribir_nombre("SPEAKER_00", "Ana")
+    fallar(monkeypatch, reemplazo=lambda o, d: d.name == "transcription.meta.json"
+           or (o.suffix == ".bak" and d.name == "transcription.json"))
+    with pytest.raises(AsociacionError) as e:
+        aplicar(a, m.confirmar())
+    [respaldo] = reunion.glob("transcription.json.*.bak")
+    assert respaldo.name in e.value.mensaje
+    assert respaldo.read_bytes() == antes["transcription.json"]
+    [respaldo_meta] = reunion.glob("transcription.meta.json.*.bak")
+    assert respaldo_meta.read_bytes() == antes["transcription.meta.json"]
+    assert not list(reunion.glob("*.tmp"))
+
+
+def test_falla_al_borrar_el_speakers_anterior(reunion, monkeypatch):
+    """«Seguir sin nombres» después de etiquetar: si no se puede borrar speakers.json, se vuelve atrás todo."""
+    from etiquetado import Cierre, ModeloFichas, aplicar
+
+    a, _ = etiquetar(reunion, "Luisa")
+    antes = {n: (reunion / n).read_bytes() for n in TRES}
+    fallar(monkeypatch, borrado=lambda ruta: ruta.name == "speakers.json")
+    with pytest.raises(AsociacionError):
+        aplicar(a, ModeloFichas(a).cerrar_sin_confirmar(Cierre.SIN_NOMBRES))
+    assert {n: (reunion / n).read_bytes() for n in TRES} == antes
+    assert restos(reunion) == []
+
+
+def test_publicacion_sin_restos(reunion):
+    etiquetar(reunion, "Luisa")
+    etiquetar(reunion, "Ana")
+    procesar(reunion)
+    assert restos(reunion) == []
+
+
+def test_resultado_inconsistente_en_la_carpeta(reunion):
+    procesar(reunion)
+    original = (reunion / "diarization.json").read_bytes()
+    romper_diarizacion(reunion)
+    with pytest.raises(AsociacionError):
+        procesar(reunion)
+    assert leer(reunion / "transcription.error.json")["resultado_anterior"] is True  # control: par coherente
+    (reunion / "diarization.json").write_bytes(original)
+    procesar(reunion)
+    with open(reunion / "transcription.json", "ab") as f:  # simula una interrupción entre dos reemplazos
+        f.write(b" ")
+    romper_diarizacion(reunion)
+    with pytest.raises(AsociacionError):
+        procesar(reunion)
+    assert leer(reunion / "transcription.error.json")["resultado_anterior"] is False
+
+
 # ---------- 2.7 CLI y rutas ----------
 
 
