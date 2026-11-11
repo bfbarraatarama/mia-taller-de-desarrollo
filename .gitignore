@@ -63,6 +63,7 @@ hito-2/muestra/**/*.flac
 hito-2/muestra/normalizado/
 hito-2/muestra/uba_games_figshare/
 # Pruebas de concepto: se versiona la captura (paso 1); grabaciones y el resto quedan locales
-PoC/*
 !PoC/paso1_captura/
 PoC/paso1_captura/grabaciones/
+# Pruebas de concepto locales
+feli.md

@@ -16,6 +16,9 @@ DEFINICIONES_SECCIONES_MINUTAS = DIRECTORIO_PROMPTS_MINUTAS / "secciones_v1.json
 
 ARCHIVO_ENTORNO_PROYECTO = DIRECTORIO_PROYECTO / ".env"
 
+# Salida de la etapa 3 (STT) y entrada de la etapa 4.
+ARCHIVO_ASR = "asr.json"
+
 
 @dataclass(frozen=True)
 class RutasResultadoMinutas:
