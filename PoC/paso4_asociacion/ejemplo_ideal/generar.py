@@ -6,8 +6,12 @@ Sintetiza cada intervención de `guion.json` con espeak-ng, las concatena con si
   asr.json          un segmento por intervención; tiempos de palabra en proporción a sus letras
   referencia.json   hablante y nombre esperados por palabra, y con qué se generó
 
+Una intervención con `"encima_de_anterior": s` no se concatena: se mezcla sobre la intervención anterior, s
+segundos después de que esta empieza (habla superpuesta). `guion_manual.json` la usa para la lista de chequeo
+manual (tarea 10.1): 8 hablantes, uno de los cuales solo interrumpe y nunca habla solo.
+
 Uso (desde PoC/paso4_asociacion/):
-    python ejemplo_ideal/generar.py [--salida CARPETA]
+    python ejemplo_ideal/generar.py [--guion GUION] [--salida CARPETA]
 """
 
 from __future__ import annotations
@@ -27,6 +31,7 @@ from scipy.signal import resample_poly
 
 DIRECTORIO = Path(__file__).resolve().parent
 GUION = DIRECTORIO / "guion.json"
+GUION_MANUAL = DIRECTORIO / "guion_manual.json"
 SALIDA = DIRECTORIO / "generado"
 
 FS = 16000
@@ -82,29 +87,37 @@ def generar(salida: str | Path = SALIDA, guion: str | Path = GUION) -> Path:
     for interv in datos["intervenciones"]:
         etiquetas.setdefault(interv["hablante"], f"SPEAKER_{len(etiquetas):02d}")
 
-    silencio_bordes = np.zeros(round(SILENCIO_BORDES_S * FS))
-    silencio_entre = np.zeros(round(SILENCIO_ENTRE_S * FS))
-    piezas, turnos, segmentos, palabras_ref = [silencio_bordes], [], [], []
-    posicion = silencio_bordes.size
+    bordes, entre = round(SILENCIO_BORDES_S * FS), round(SILENCIO_ENTRE_S * FS)
+    pistas, turnos, segmentos, palabras_ref = [], [], [], []
+    cursor = bordes            # fin de la última intervención concatenada, en muestras
+    inicio_anterior = None     # inicio de la última intervención concatenada
     for i, interv in enumerate(datos["intervenciones"]):
-        if i:
-            piezas.append(silencio_entre)
-            posicion += silencio_entre.size
         voz = sintetizar(interv["texto"], datos["voces"][interv["hablante"]], velocidad)
-        inicio, fin = round(posicion / FS, 3), round((posicion + voz.size) / FS, 3)
-        piezas.append(voz)
-        posicion += voz.size
+        encima = interv.get("encima_de_anterior")
+        if encima is None:
+            muestra = cursor + (entre if i else 0)
+            inicio_anterior = muestra
+        else:
+            muestra = inicio_anterior + round(encima * FS)
+        cursor = max(cursor, muestra + voz.size)
+        pistas.append((muestra, voz))
+        inicio, fin = round(muestra / FS, 3), round((muestra + voz.size) / FS, 3)
 
         etiqueta = etiquetas[interv["hablante"]]
         palabras = repartir_palabras(interv["texto"], inicio, fin)
         turnos.append({"start": inicio, "end": fin, "speaker": etiqueta})
         segmentos.append({"start": inicio, "end": fin, "text": interv["texto"], "words": palabras})
         palabras_ref += [{**p, "speaker": etiqueta, "name": interv["hablante"]} for p in palabras]
-    piezas.append(silencio_bordes)
+    # Los contratos piden turnos ordenados por inicio; una intervención superpuesta puede empezar antes que otra
+    for lista in (turnos, segmentos, palabras_ref):
+        lista.sort(key=lambda x: x["start"])
+
+    audio = np.zeros(cursor + bordes)
+    for muestra, voz in pistas:
+        audio[muestra:muestra + voz.size] += voz
 
     salida.mkdir(parents=True, exist_ok=True)
-    audio = np.clip(np.concatenate(piezas), -1.0, 1.0)
-    sf.write(salida / "audio.wav", audio, FS, subtype="PCM_16")
+    sf.write(salida / "audio.wav", np.clip(audio, -1.0, 1.0), FS, subtype="PCM_16")
     escribir_json(salida / "diarization.json", {"segments": turnos})
     escribir_json(salida / "asr.json", {"language": "es", "segments": segmentos})
     escribir_json(salida / "referencia.json", {
@@ -118,9 +131,10 @@ def generar(salida: str | Path = SALIDA, guion: str | Path = GUION) -> Path:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Genera el ejemplo ideal de la Etapa 4 (D10).")
+    parser.add_argument("--guion", type=Path, default=GUION, help=f"guion (por defecto {GUION.name})")
     parser.add_argument("--salida", type=Path, default=SALIDA, help=f"carpeta de salida (por defecto {SALIDA})")
     args = parser.parse_args(argv)
-    carpeta = generar(args.salida)
+    carpeta = generar(args.salida, args.guion)
     duracion = sf.info(carpeta / "audio.wav").duration
     turnos = json.loads((carpeta / "diarization.json").read_text(encoding="utf-8"))["segments"]
     print(f"{carpeta} · {duracion:.1f} s · {len(turnos)} turnos")

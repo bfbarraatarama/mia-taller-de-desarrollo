@@ -109,3 +109,38 @@ def test_reproducible(ejemplo, tmp_path):
     generar(tmp_path)
     for nombre in ARCHIVOS:
         assert (tmp_path / nombre).read_bytes() == (ejemplo / nombre).read_bytes(), nombre
+
+
+# ---------- guion de la lista de chequeo manual (tarea 10.1) ----------
+
+
+@pytest.fixture(scope="module")
+def manual(tmp_path_factory) -> Path:
+    from ejemplo_ideal.generar import GUION_MANUAL, generar
+
+    return generar(tmp_path_factory.mktemp("manual"), GUION_MANUAL)
+
+
+def test_intervencion_encima_de_la_anterior(manual):
+    """El que interrumpe tiene un solo turno, contenido en el turno anterior; las entradas siguen ordenadas."""
+    turnos = leer(manual, "diarization.json")["segments"]
+    assert [t["start"] for t in turnos] == sorted(t["start"] for t in turnos)
+    assert [s["start"] for s in leer(manual, "asr.json")["segments"]] == [t["start"] for t in turnos]
+    por_etiqueta = {}
+    for t in turnos:
+        por_etiqueta.setdefault(t["speaker"], []).append(t)
+    contenidos = [e for e, ts in por_etiqueta.items()
+                  if all(any(o["speaker"] != e and o["start"] < t["start"] and t["end"] < o["end"] for o in turnos)
+                         for t in ts)]
+    assert len(contenidos) == 1
+
+
+def test_guion_manual_ocho_fichas_y_un_aviso(manual):
+    from asociacion import asociar
+    from etiquetado import ModeloFichas
+
+    a = asociar(manual)
+    m = ModeloFichas(a)
+    assert len(m.fichas) == 8
+    assert sum(f.aviso_superposicion for f in m.fichas) == 1
+    assert any(i.overlap for i in a.intervenciones)

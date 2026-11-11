@@ -51,7 +51,7 @@ Orden de D9: esqueleto de punta a punta primero. En cada tarea, primero los test
 - [ ] 7.1 Acordar con Bruno `--hasta transcribir` y `--desde minuta`
 - [ ] 7.2 Dos corridas con las fichas en el medio y latencia sumada · escenarios: Happy path con interfaz, Latencia sin el etiquetado
 - [ ] 7.3 Volver a etiquetar sin repetir la GPU · escenario: Volver a etiquetar sin repetir la GPU
-- [ ] 7.4 Nombres del contrato en los botones: `minutes.md` y `transcription.json`
+- [x] 7.4 Nombres del contrato en los botones: `minutes.md` y `transcription.json`
 
 ## 8. Integración con datos reales (nivel 2)
 
@@ -67,4 +67,4 @@ Orden de D9: esqueleto de punta a punta primero. En cada tarea, primero los test
 ## 10. Cierre
 
 - [ ] 10.1 Lista de chequeo manual: audio, diálogo modal, 8 fichas, aviso de superposición
-- [ ] 10.2 `README.md` del módulo: instalación, uso, contratos y resultados
+- [x] 10.2 `README.md` del módulo: instalación, uso, contratos y resultados
