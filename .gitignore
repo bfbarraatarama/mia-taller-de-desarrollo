@@ -64,7 +64,6 @@ hito-2/muestra/**/*.flac
 hito-2/muestra/normalizado/
 hito-2/muestra/uba_games_figshare/
 # Pruebas de concepto: se versiona la captura (paso 1); grabaciones y el resto quedan locales
-PoC/*
 !PoC/paso1_captura/
 PoC/paso1_captura/grabaciones/
 # Paso 2 (diarización): se versiona el módulo; datos derivados y reportes de pruebas quedan locales
@@ -74,3 +73,5 @@ PoC/paso2_diarizacion/tests/reportes/
 # Red de seguridad: ningún audio ni referencia derivada dentro del módulo
 PoC/paso2_diarizacion/**/*.wav
 PoC/paso2_diarizacion/**/*.rttm
+# Pruebas de concepto locales
+feli.md
