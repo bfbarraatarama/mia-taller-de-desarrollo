@@ -1,0 +1,3354 @@
+{
+  "contenido": {
+    "carpeta_derivados": "datos/figshare_test/S26",
+    "cobertura_parametros": {
+      "energia": "suma de cuadrados int64 por ventana; ventana asignada por su centro",
+      "excluye_habla_del_otro_canal": true,
+      "margen_db": 12.0,
+      "paso_s": 0.01,
+      "percentil_piso": 20,
+      "tramo_minimo_s": 0.3,
+      "ventana_s": 0.03
+    },
+    "formula_mono": "int16(floor_divide(int32(izquierda) + int32(derecha), 2))",
+    "grabaciones": [
+      {
+        "ajustes_fin": [
+          {
+            "canal": 1,
+            "fin_ajustado_cuadros": 776367,
+            "fin_ajustado_s": 48.5229375,
+            "fin_original_s": 48.53,
+            "fin_original_texto": "48.53",
+            "linea": 28
+          }
+        ],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "C265202C",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.01.channel1.phrases",
+            "sha256": "086ba0eda7d7101cbbd3ac7a3c9c7c76d187d70b2cb8220bdcead8b1bffb3d8d",
+            "tamano": 1137
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "57E557EC",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.01.channel1.wav",
+            "sha256": "b4da7676420210219cfc75227e07b1fbffbbd6ef4ce10f3d51b34aa953154de0",
+            "tamano": 1552778
+          },
+          {
+            "clave": "channel2",
+            "crc32": "5C672E72",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.01.channel2.phrases",
+            "sha256": "b7ca525af789fc7288ce71958855d5247e4db68e73b7f462474259921d2dd422",
+            "tamano": 588
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "FC4E0867",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.01.channel2.wav",
+            "sha256": "76710758fc5ad6ca1c9ca929355a1ed80a37a802b13c67759a90c53f9191220c",
+            "tamano": 1552778
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "A48B3EA2",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.01.wav",
+            "sha256": "56624e7e215562d2cb37d585342cf165d608190e2e9ad4f85bb44f48c7f1faa5",
+            "tamano": 3105512
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0866,
+            "habla_anotada_energia_baja_ventanas": 302,
+            "habla_anotada_ventanas": 3488,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -78.05,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -66.05
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0437,
+            "habla_anotada_energia_baja_ventanas": 53,
+            "habla_anotada_ventanas": 1212,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -74.14,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -62.14
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 14,
+            "excluidos_por_etiqueta": {},
+            "habla": 14,
+            "intervalos": 28,
+            "segmentos_referencia": 14,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 10,
+            "excluidos_por_etiqueta": {},
+            "habla": 9,
+            "intervalos": 19,
+            "segmentos_referencia": 9,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": 0.014549,
+            "con_su_canal": 0.99998,
+            "cuadros_separado": 776367,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": 0.014544,
+            "con_su_canal": 0.999985,
+            "cuadros_separado": 776367,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 776367,
+        "cuadros_mono": 776367,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_01.rttm",
+            "sha256": "b6191b2662e0b4ee9caf0c8fc854d412abcde108bdf553cb5fb65e8bdf2b4472"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_01.wav",
+            "sha256": "0d9b6f233f51cbc922af3bc2e72f2b4b78c3a92105e2f1b1663d81b0e517d4b1"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.007063,
+          "channel2": 0.007063
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_01",
+        "segmentos_referencia": 23,
+        "tarea": "01",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "64148E9C",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.02.channel1.phrases",
+            "sha256": "18896ef4c361e0fa53e6357d54d3566456c9404014100535a10c0024a289b107",
+            "tamano": 448
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "0EC0DAA9",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.02.channel1.wav",
+            "sha256": "0cc55a6791e7e968152a5f999b72e384e65447463549ad7dae0901a5940f9075",
+            "tamano": 1135668
+          },
+          {
+            "clave": "channel2",
+            "crc32": "23ABF3AC",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.02.channel2.phrases",
+            "sha256": "56be721d33f8657f6ad7b844b2c1efa3150416347c2127ddaf91b561a3f738ab",
+            "tamano": 736
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "B88F1F42",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.02.channel2.wav",
+            "sha256": "b052e24dcc3a63212b84d90a6b5fc13f3553741660a69c52fd1eb8fcb0d72ddc",
+            "tamano": 1135668
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "4EA7DB8B",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.02.wav",
+            "sha256": "7151ff4e33382f7d3fe27469faddc7c5ace87f91d6349872b66369825b042847",
+            "tamano": 2271292
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.1902,
+            "habla_anotada_energia_baja_ventanas": 116,
+            "habla_anotada_ventanas": 610,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -77.71,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -65.71
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.1113,
+            "habla_anotada_energia_baja_ventanas": 220,
+            "habla_anotada_ventanas": 1977,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -76.77,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -64.77
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 9,
+            "excluidos_por_etiqueta": {},
+            "habla": 8,
+            "intervalos": 17,
+            "segmentos_referencia": 8,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 11,
+            "excluidos_por_etiqueta": {},
+            "habla": 10,
+            "intervalos": 21,
+            "segmentos_referencia": 10,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.001468,
+            "con_su_canal": 0.999931,
+            "cuadros_separado": 567812,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.001474,
+            "con_su_canal": 0.999982,
+            "cuadros_separado": 567812,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 567812,
+        "cuadros_mono": 567812,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_02.rttm",
+            "sha256": "b44cccdac0f2504d6f1c57c5c2d1bf2a1cff23e10ce22db3e1cee87ae3cbd1bd"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_02.wav",
+            "sha256": "9503c090eb3413fdf3a3d8ac3502623a1b840a3db4abc45db50d4dd4c99ecd9d"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.00175,
+          "channel2": 0.00175
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_02",
+        "segmentos_referencia": 18,
+        "tarea": "02",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "F9B8790B",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.03.channel1.phrases",
+            "sha256": "ce52552895da8d03e9134e1c9a98e49045e9cfb251fc8b372c5a6be4d2297408",
+            "tamano": 724
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "048EFD52",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.03.channel1.wav",
+            "sha256": "b315a2237bfa4ce2862ae86d9e2e2808d1c9c2e9c3c02422b2abcda3cd43a3df",
+            "tamano": 1085852
+          },
+          {
+            "clave": "channel2",
+            "crc32": "8A6D4A93",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.03.channel2.phrases",
+            "sha256": "05b89a1f2efa0198125b5fc9bf82e9b79bbceaaaa7f7111a73637e27cd3c52b3",
+            "tamano": 507
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "11EE0036",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.03.channel2.wav",
+            "sha256": "de9ac7118f0155be41c3e11de4239116c76cba2268f7d90343425946b0e9ad76",
+            "tamano": 1085852
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "27FEBF81",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.03.wav",
+            "sha256": "0f383757fce3877d6f63384ab0128c34456b519a0c4d1b31c2e310781efb7df5",
+            "tamano": 2171660
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0951,
+            "habla_anotada_energia_baja_ventanas": 149,
+            "habla_anotada_ventanas": 1567,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -79.95,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -67.95
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.3038,
+            "habla_anotada_energia_baja_ventanas": 315,
+            "habla_anotada_ventanas": 1037,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -76.84,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -64.84
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 12,
+            "excluidos_por_etiqueta": {},
+            "habla": 11,
+            "intervalos": 23,
+            "segmentos_referencia": 11,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 10,
+            "excluidos_por_etiqueta": {},
+            "habla": 9,
+            "intervalos": 19,
+            "segmentos_referencia": 9,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.008065,
+            "con_su_canal": 0.999985,
+            "cuadros_separado": 542904,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.008089,
+            "con_su_canal": 0.999976,
+            "cuadros_separado": 542904,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 542904,
+        "cuadros_mono": 542904,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_03.rttm",
+            "sha256": "30c5fac7586c5137f11a60cdb8d5afa8ebb3104877ebb993dbfd78691f035448"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_03.wav",
+            "sha256": "b43f30fb0e04b81b0c8a7af82940535e27b83f59231fec9ea4d95d62c6798e34"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.0085,
+          "channel2": 0.0085
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_03",
+        "segmentos_referencia": 20,
+        "tarea": "03",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "DD5AD3C7",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.04.channel1.phrases",
+            "sha256": "8399dc9e6fdeb22383eae1dba332b2dcefd639bf820eb246ea0fd5d29047d2f4",
+            "tamano": 867
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "8E362942",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.04.channel1.wav",
+            "sha256": "403494dcd290b15a80a3a353ea08ad82a5ca3d058c344b261c4c1c43dd38912a",
+            "tamano": 1672710
+          },
+          {
+            "clave": "channel2",
+            "crc32": "9BFFB659",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.04.channel2.phrases",
+            "sha256": "1752b36933039b83066b824bbad88fafa7f15ad971fdd43278b36a7d4e9dc606",
+            "tamano": 1372
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "35E39250",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.04.channel2.wav",
+            "sha256": "f0ab56f737f0323f4e34345620466115c1ddda61359841f3541b534681dd870b",
+            "tamano": 1672710
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "73C10A1B",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.04.wav",
+            "sha256": "7aeb92b5950cb246fab2b59031c79d5f4f21e7e3702bec840a445cf461cb07c9",
+            "tamano": 3345376
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0862,
+            "habla_anotada_energia_baja_ventanas": 132,
+            "habla_anotada_ventanas": 1532,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -76.69,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -64.69
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0662,
+            "habla_anotada_energia_baja_ventanas": 221,
+            "habla_anotada_ventanas": 3336,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -76.58,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -64.58
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 16,
+            "excluidos_por_etiqueta": {},
+            "habla": 15,
+            "intervalos": 31,
+            "segmentos_referencia": 15,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 19,
+            "excluidos_por_etiqueta": {},
+            "habla": 18,
+            "intervalos": 37,
+            "segmentos_referencia": 18,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": 0.014647,
+            "con_su_canal": 0.999963,
+            "cuadros_separado": 836333,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": 0.014653,
+            "con_su_canal": 0.999987,
+            "cuadros_separado": 836333,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 836333,
+        "cuadros_mono": 836333,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_04.rttm",
+            "sha256": "46bc4ce8c82407222835d41265a1c6c35443b3146fb30e7220f3801e4bc6e7b1"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_04.wav",
+            "sha256": "ead1afa6229bc4a53ca7d926d9f4edf85d3f75af8edfc7fc9e92f92bde1c8638"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.009188,
+          "channel2": 0.009188
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_04",
+        "segmentos_referencia": 33,
+        "tarea": "04",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "8BF33E6D",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.05.channel1.phrases",
+            "sha256": "1ffe77f634f47f7efa21623fff9918bbd713fb1a9e8237e9e66643357bd62a33",
+            "tamano": 1693
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "AA94122D",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.05.channel1.wav",
+            "sha256": "4877493928ac8fe8cdcd45f3c2a01bec56452ccd7e001d2e20158c4d343bb30e",
+            "tamano": 2021564
+          },
+          {
+            "clave": "channel2",
+            "crc32": "1787ACB8",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.05.channel2.phrases",
+            "sha256": "35ed5cd125abc86f21e60f986a0b9616548ee604f5e399274c44bf5db4daea95",
+            "tamano": 814
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "AD6E7A18",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.05.channel2.wav",
+            "sha256": "a4afbcd35c8d31ba1d1f8a77bdd5bbde08eab2e4273a210a5696700ce78cd27a",
+            "tamano": 2021564
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "6290C35C",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.05.wav",
+            "sha256": "435dd89180d1ea238f5e4dd299b5096b09625d9ee0f7d796da4c14786fe30954",
+            "tamano": 4043084
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0363,
+            "habla_anotada_energia_baja_ventanas": 160,
+            "habla_anotada_ventanas": 4409,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -79.24,
+            "posible_habla_sin_anotar_s": 0.35,
+            "posible_habla_sin_anotar_tramos": [
+              [
+                1.42,
+                1.77
+              ]
+            ],
+            "umbral_dbfs": -67.24
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0791,
+            "habla_anotada_energia_baja_ventanas": 129,
+            "habla_anotada_ventanas": 1631,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -74.4,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -62.4
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 25,
+            "excluidos_por_etiqueta": {},
+            "habla": 20,
+            "intervalos": 45,
+            "segmentos_referencia": 20,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 16,
+            "excluidos_por_etiqueta": {},
+            "habla": 13,
+            "intervalos": 29,
+            "segmentos_referencia": 13,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": 0.016308,
+            "con_su_canal": 0.999986,
+            "cuadros_separado": 1010760,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": 0.016305,
+            "con_su_canal": 0.999987,
+            "cuadros_separado": 1010760,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 1010760,
+        "cuadros_mono": 1010760,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_05.rttm",
+            "sha256": "73222d14b1f624029cdcf700e2bd700139af2a4dc27843887d38f9992d2355f9"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_05.wav",
+            "sha256": "21d0b2198b342d31e7710dd79058fe22be6489d8a19c2d327022b2440bd3f610"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.0075,
+          "channel2": 0.0075
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_05",
+        "segmentos_referencia": 33,
+        "tarea": "05",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "23220A10",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.06.channel1.phrases",
+            "sha256": "f354a979e026db4df2143502e94b832918c397edf1c9aa9e13ec069f3e44fd62",
+            "tamano": 245
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "E1569D48",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.06.channel1.wav",
+            "sha256": "0f06b28ea09bcf9d0fd6f08b1ddfee84eb29d4c42471814715f31e3935f3f030",
+            "tamano": 1003984
+          },
+          {
+            "clave": "channel2",
+            "crc32": "237B9C4B",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.06.channel2.phrases",
+            "sha256": "a8c82fbf0e3ea0d3c3b0d87eb78f2c948bd5a2271a81db6dd1df4194e2c07da0",
+            "tamano": 672
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "701F29D5",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.06.channel2.wav",
+            "sha256": "2bf505c90e70681249eca0200b38345471905ca8073457ea8bd80240e8debe45",
+            "tamano": 1003984
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "7CA64CD7",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.06.wav",
+            "sha256": "c434a116b550c4ca72443cfb6e3e442f128844aab8039fa63b200fd4ebb756f0",
+            "tamano": 2007920
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.1243,
+            "habla_anotada_energia_baja_ventanas": 22,
+            "habla_anotada_ventanas": 177,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -79.27,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -67.27
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0463,
+            "habla_anotada_energia_baja_ventanas": 82,
+            "habla_anotada_ventanas": 1772,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -78.5,
+            "posible_habla_sin_anotar_s": 0.38,
+            "posible_habla_sin_anotar_tramos": [
+              [
+                2.46,
+                2.84
+              ]
+            ],
+            "umbral_dbfs": -66.5
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 6,
+            "excluidos_por_etiqueta": {},
+            "habla": 5,
+            "intervalos": 11,
+            "segmentos_referencia": 5,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 10,
+            "excluidos_por_etiqueta": {},
+            "habla": 9,
+            "intervalos": 19,
+            "segmentos_referencia": 9,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": 0.074388,
+            "con_su_canal": 0.999879,
+            "cuadros_separado": 501970,
+            "diferencia_cuadros": 1
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": 0.074403,
+            "con_su_canal": 0.999992,
+            "cuadros_separado": 501970,
+            "diferencia_cuadros": 1
+          }
+        },
+        "cuadros_estereo": 501969,
+        "cuadros_mono": 501969,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_06.rttm",
+            "sha256": "cf53e8e77f53271f7ea69950d6cee2876a6800bac49a0314fe9f19043089feee"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_06.wav",
+            "sha256": "667d339aab5fdb881d29d83642a4f3756678fc93a45f575d4dad30a9e78ec15f"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.006937,
+          "channel2": 0.006937
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_06",
+        "segmentos_referencia": 14,
+        "tarea": "06",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "04B6426F",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.07.channel1.phrases",
+            "sha256": "13692162b04e869e055b161641940d03a221858004bc807c75305ac0ad5f9fe4",
+            "tamano": 1340
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "9ADCBBDE",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.07.channel1.wav",
+            "sha256": "ebd67efcc531c7b0c2193a853f19ed618ea449cd7f947d1533a2218fec3502c3",
+            "tamano": 1707910
+          },
+          {
+            "clave": "channel2",
+            "crc32": "97EF8A1F",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.07.channel2.phrases",
+            "sha256": "20a38f12bd69692fb929b57c26a183db0804623d9d0122555bdd461ec1c27a6a",
+            "tamano": 621
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "742376D4",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.07.channel2.wav",
+            "sha256": "611df85222a986e68e283cecc8880ba5f985b0864bbb77759ce83b497c82c8fd",
+            "tamano": 1707910
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "1153AFB6",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.07.wav",
+            "sha256": "7ad714a4b1c8f1f79b40c8262f67e993fca639d379f83f3f78d892ccff69989a",
+            "tamano": 3415772
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0471,
+            "habla_anotada_energia_baja_ventanas": 157,
+            "habla_anotada_ventanas": 3336,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -80.17,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -68.17
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.2496,
+            "habla_anotada_energia_baja_ventanas": 302,
+            "habla_anotada_ventanas": 1210,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -74.07,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -62.07
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 20,
+            "excluidos_por_etiqueta": {},
+            "habla": 19,
+            "intervalos": 39,
+            "segmentos_referencia": 19,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 13,
+            "excluidos_por_etiqueta": {},
+            "habla": 12,
+            "intervalos": 25,
+            "segmentos_referencia": 12,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.027626,
+            "con_su_canal": 0.999979,
+            "cuadros_separado": 853933,
+            "diferencia_cuadros": 1
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.027622,
+            "con_su_canal": 0.999928,
+            "cuadros_separado": 853933,
+            "diferencia_cuadros": 1
+          }
+        },
+        "cuadros_estereo": 853932,
+        "cuadros_mono": 853932,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_07.rttm",
+            "sha256": "6ef9de6102879f205dd90708221f56216e17ff1d14285c119bf3a18e093a6ca2"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_07.wav",
+            "sha256": "15645c7b4f160c8e91661c91e26f8722d11b95a6dbecbdf2810433f5718099da"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.00925,
+          "channel2": 0.00925
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_07",
+        "segmentos_referencia": 31,
+        "tarea": "07",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [
+          {
+            "canal": 1,
+            "fin_ajustado_cuadros": 470150,
+            "fin_ajustado_s": 29.384375,
+            "fin_original_s": 29.39,
+            "fin_original_texto": "29.39",
+            "linea": 16
+          }
+        ],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "C4A5991D",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.08.channel1.phrases",
+            "sha256": "443b09e9b87c94c525d9b37927192ad39afee7292602cc3b25257d9dc39284ef",
+            "tamano": 405
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "0A8AA0E8",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.08.channel1.wav",
+            "sha256": "4c4b01bfdf8a9fb0160d58ad08954358cc9f98584ed139812eb62361d335bbdb",
+            "tamano": 940344
+          },
+          {
+            "clave": "channel2",
+            "crc32": "B1C4F56A",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.08.channel2.phrases",
+            "sha256": "9b82d9dc51fdbcc9fca36befa0075f439288a752d2fc8db7c93d8910193fb7c5",
+            "tamano": 595
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "5B63F53F",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.08.channel2.wav",
+            "sha256": "73ae9de851d5ddc338644783600d199a335765780aa6068cf4218e097996b7fe",
+            "tamano": 940344
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "B0C5EBF2",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.08.wav",
+            "sha256": "44c5860eed474c47113136166ab9a700521ba4a6067ca95bb26e406b112a3ba2",
+            "tamano": 1880644
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.1095,
+            "habla_anotada_energia_baja_ventanas": 53,
+            "habla_anotada_ventanas": 484,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -79.28,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -67.28
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0478,
+            "habla_anotada_energia_baja_ventanas": 87,
+            "habla_anotada_ventanas": 1819,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -78.68,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -66.68
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 8,
+            "excluidos_por_etiqueta": {},
+            "habla": 8,
+            "intervalos": 16,
+            "segmentos_referencia": 8,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 8,
+            "excluidos_por_etiqueta": {},
+            "habla": 7,
+            "intervalos": 15,
+            "segmentos_referencia": 7,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.009823,
+            "con_su_canal": 0.999966,
+            "cuadros_separado": 470150,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.009832,
+            "con_su_canal": 0.99999,
+            "cuadros_separado": 470150,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 470150,
+        "cuadros_mono": 470150,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_08.rttm",
+            "sha256": "6dcc0a2f9c434731fc4c56a58fb0a025ca803c33b4ee4f61d4984626105610ef"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_08.wav",
+            "sha256": "fe24e4abffb5cb4802e77ae3df285d9922ca0384e77eae5c83a5292b53ea838c"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.005625,
+          "channel2": 0.005625
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_08",
+        "segmentos_referencia": 15,
+        "tarea": "08",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "47336813",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.09.channel1.phrases",
+            "sha256": "a1cab3c4fd217b5919d3df25788bacab5194f89e517b02b694020db6e0827c3b",
+            "tamano": 2952
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "CEC17600",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.09.channel1.wav",
+            "sha256": "816a6ad84f708f2228f8730856cb384b667bb649412f0f6ec8fd4413cd971d8b",
+            "tamano": 3820204
+          },
+          {
+            "clave": "channel2",
+            "crc32": "E0937B36",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.09.channel2.phrases",
+            "sha256": "f074d097581d42b7b1a6057d41921f608fcf35fd6401c9d8d9f6b19bdc8afc7d",
+            "tamano": 2136
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "2E06BBC6",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.09.channel2.wav",
+            "sha256": "3e061e75341c243fb28da59127e2ef6b1a3726a57bbe7a9f9a6636bf788ef0a8",
+            "tamano": 3820204
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "04179F72",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.09.wav",
+            "sha256": "9d86582ff8dadf5d6150dbe6463dc7ad45d9e20c86fe3ff6ae34f7b12b993c3c",
+            "tamano": 7640364
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0908,
+            "habla_anotada_energia_baja_ventanas": 742,
+            "habla_anotada_ventanas": 8176,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -75.3,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -63.3
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.1495,
+            "habla_anotada_energia_baja_ventanas": 687,
+            "habla_anotada_ventanas": 4596,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -69.94,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -57.94
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 39,
+            "excluidos_por_etiqueta": {},
+            "habla": 38,
+            "intervalos": 77,
+            "segmentos_referencia": 38,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 32,
+            "excluidos_por_etiqueta": {},
+            "habla": 31,
+            "intervalos": 63,
+            "segmentos_referencia": 31,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.028034,
+            "con_su_canal": 0.999986,
+            "cuadros_separado": 1910080,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.028035,
+            "con_su_canal": 0.999989,
+            "cuadros_separado": 1910080,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 1910080,
+        "cuadros_mono": 1910080,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_09.rttm",
+            "sha256": "b8cf4c13edf2b65aa17563cd6a8ce4994758d7c13cd44478ef1856bd91c42f77"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_09.wav",
+            "sha256": "db3c778f0b1d0338044bb162bb63cdbcee855d4e062733af4f35b0a6827ca7e8"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.0,
+          "channel2": 0.0
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_09",
+        "segmentos_referencia": 69,
+        "tarea": "09",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "65CBCF17",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.10.channel1.phrases",
+            "sha256": "221d7c2446a2dd4672c54e4cec2a2194af19424d71ed9c821a7d8fdc651c172c",
+            "tamano": 722
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "5E2A24D7",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.10.channel1.wav",
+            "sha256": "23d4e7213ebc01ca77328613b9b170bbd14627c9510e3f8ef4e1e714ee2e8f53",
+            "tamano": 2455034
+          },
+          {
+            "clave": "channel2",
+            "crc32": "8979C31F",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.10.channel2.phrases",
+            "sha256": "046bd9baea415a1998f8c401a584be8175a204c8db73b5877cea2f298b236806",
+            "tamano": 2159
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "746C774A",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.10.channel2.wav",
+            "sha256": "a89c80fe1a9d31e030e431d73b555d2eae4d7a47ea0c2c4e203ec38978db7a0d",
+            "tamano": 2455034
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "95478458",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.10.wav",
+            "sha256": "9e7ad4966643b488c1ecd14a6a0c0a432b3be3243320bc4699b4e5ceb7ce4bcc",
+            "tamano": 4910020
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.1125,
+            "habla_anotada_energia_baja_ventanas": 137,
+            "habla_anotada_ventanas": 1218,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -77.25,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -65.25
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0525,
+            "habla_anotada_energia_baja_ventanas": 279,
+            "habla_anotada_ventanas": 5316,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -77.2,
+            "posible_habla_sin_anotar_s": 0.35,
+            "posible_habla_sin_anotar_tramos": [
+              [
+                49.29,
+                49.64
+              ]
+            ],
+            "umbral_dbfs": -65.2
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 13,
+            "excluidos_por_etiqueta": {},
+            "habla": 12,
+            "intervalos": 25,
+            "segmentos_referencia": 12,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 31,
+            "excluidos_por_etiqueta": {},
+            "habla": 30,
+            "intervalos": 61,
+            "segmentos_referencia": 30,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": 0.008469,
+            "con_su_canal": 0.999969,
+            "cuadros_separado": 1227495,
+            "diferencia_cuadros": 1
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": 0.008469,
+            "con_su_canal": 0.999985,
+            "cuadros_separado": 1227495,
+            "diferencia_cuadros": 1
+          }
+        },
+        "cuadros_estereo": 1227494,
+        "cuadros_mono": 1227494,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_10.rttm",
+            "sha256": "d736ef83163583b170eb2f12e13d5f25385ab21fc4e70580243f0361d9a24d06"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_10.wav",
+            "sha256": "614d122817282c60db472f7f56f767f1dec8a1199cd335ced864b612fbf8c756"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.001625,
+          "channel2": 0.001625
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_10",
+        "segmentos_referencia": 42,
+        "tarea": "10",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "4BBA26BD",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.11.channel1.phrases",
+            "sha256": "7c2daea70cdb7493d96fa57c0b28864384b8eeb4cd27ab473774f5e38967624f",
+            "tamano": 818
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "B67009B1",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.11.channel1.wav",
+            "sha256": "741af4a8e1db0e1c342f67c37ac7d48c28fa0ca469de25d4edf8f77e0c0fd7c8",
+            "tamano": 1032308
+          },
+          {
+            "clave": "channel2",
+            "crc32": "5B778F1C",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.11.channel2.phrases",
+            "sha256": "22091e34d00b40e44b19ba6bfe44d1b0bdc178180730094fa969e93abeb3ce8e",
+            "tamano": 335
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "5A9B092C",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.11.channel2.wav",
+            "sha256": "f2a0857d119ac2356a37247b4ac907eaade2c6c117183df98709156111285877",
+            "tamano": 1032308
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "193CB742",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.11.wav",
+            "sha256": "aae089432e2b5a0dd86883b5506f8683e60e842aa5890d7e8343069801c03360",
+            "tamano": 2064568
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0369,
+            "habla_anotada_energia_baja_ventanas": 92,
+            "habla_anotada_ventanas": 2494,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -79.01,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -67.01
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.1727,
+            "habla_anotada_energia_baja_ventanas": 120,
+            "habla_anotada_ventanas": 695,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -71.5,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -59.5
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 12,
+            "excluidos_por_etiqueta": {},
+            "habla": 11,
+            "intervalos": 23,
+            "segmentos_referencia": 11,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 7,
+            "excluidos_por_etiqueta": {},
+            "habla": 6,
+            "intervalos": 13,
+            "segmentos_referencia": 6,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.002772,
+            "con_su_canal": 0.999967,
+            "cuadros_separado": 516132,
+            "diferencia_cuadros": 1
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.002777,
+            "con_su_canal": 0.999969,
+            "cuadros_separado": 516132,
+            "diferencia_cuadros": 1
+          }
+        },
+        "cuadros_estereo": 516131,
+        "cuadros_mono": 516131,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_11.rttm",
+            "sha256": "228e3e4555450b3257a14d60df7221c22ce5e52bd8c88991d951363b72f3f18b"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_11.wav",
+            "sha256": "8bf47540e6cbc4998ed9b275f7a01dd33a2c9a44ed311ed35643c68d8e79d23f"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.001812,
+          "channel2": 0.001812
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_11",
+        "segmentos_referencia": 17,
+        "tarea": "11",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "049D166D",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.12.channel1.phrases",
+            "sha256": "28c9910e751f115d27d7d8954febf814b5ac62582cddfc300242b1d86d2bf652",
+            "tamano": 1649
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "BED5E5E9",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.12.channel1.wav",
+            "sha256": "976d76cf75f969688553f98178d4d60745d11715bc10905ce9a0cd3265c8908c",
+            "tamano": 3061400
+          },
+          {
+            "clave": "channel2",
+            "crc32": "AEEA2E09",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.12.channel2.phrases",
+            "sha256": "2d20ec53cbe2f187a7d4535ad22c1211a89ff7fdec12ab4a3130b79927e86a39",
+            "tamano": 2155
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "933ED323",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.12.channel2.wav",
+            "sha256": "389877bd64ad449416329101555533133c1c21b96223965d6bfc095fb48a31ff",
+            "tamano": 3061400
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "C88DCC07",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.12.wav",
+            "sha256": "1fdcac5eb432ffa55dea33c2c71684f6c5dbf44c305da6e067be0eb9926afe27",
+            "tamano": 6122756
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0494,
+            "habla_anotada_energia_baja_ventanas": 165,
+            "habla_anotada_ventanas": 3339,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -78.57,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -66.57
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0589,
+            "habla_anotada_energia_baja_ventanas": 268,
+            "habla_anotada_ventanas": 4548,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -75.07,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -63.07
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 28,
+            "excluidos_por_etiqueta": {},
+            "habla": 27,
+            "intervalos": 55,
+            "segmentos_referencia": 27,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 34,
+            "excluidos_por_etiqueta": {},
+            "habla": 33,
+            "intervalos": 67,
+            "segmentos_referencia": 33,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": 0.009935,
+            "con_su_canal": 0.999987,
+            "cuadros_separado": 1530678,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": 0.009939,
+            "con_su_canal": 0.999985,
+            "cuadros_separado": 1530678,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 1530678,
+        "cuadros_mono": 1530678,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_12.rttm",
+            "sha256": "0027b8c97b17262b4ced8952afcd3b118c3c0f27bd0ffd8e96d76c5ab0cc2768"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_12.wav",
+            "sha256": "3c97bfe7f17a9d892b78c231d60f64e42af4e62832cde6b424290e77d23d1df0"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.002625,
+          "channel2": 0.002625
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_12",
+        "segmentos_referencia": 60,
+        "tarea": "12",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "98C127EC",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.13.channel1.phrases",
+            "sha256": "8e277d27709dfb5fbc3ba37e83c4b24dfd9b203f8d15d5529ccad9bdc5d0fd65",
+            "tamano": 1551
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "C3027CBC",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.13.channel1.wav",
+            "sha256": "38ffa38da6209d9f5b0060c7a91a640af9efe94f72bb7b3ce65a0f08e0688129",
+            "tamano": 1691730
+          },
+          {
+            "clave": "channel2",
+            "crc32": "6D0260B3",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.13.channel2.phrases",
+            "sha256": "037298bfa1859b261412528aaba2c0523fd8d270abd110c81e123d095c88d149",
+            "tamano": 357
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "DDC5E6A4",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.13.channel2.wav",
+            "sha256": "1127f5fe4669a83533e3c30d1c31174a6e0f7500540dd30da53b1651732efba7",
+            "tamano": 1691730
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "ABE865F7",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.13.wav",
+            "sha256": "d7c2e2e4856838456c5b8b96fb91bf6563e1201f188b117d17479f873126625d",
+            "tamano": 3383416
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0554,
+            "habla_anotada_energia_baja_ventanas": 226,
+            "habla_anotada_ventanas": 4083,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -79.27,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -67.27
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0536,
+            "habla_anotada_energia_baja_ventanas": 17,
+            "habla_anotada_ventanas": 317,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -73.56,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -61.56
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 24,
+            "excluidos_por_etiqueta": {},
+            "habla": 23,
+            "intervalos": 47,
+            "segmentos_referencia": 23,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 8,
+            "excluidos_por_etiqueta": {},
+            "habla": 7,
+            "intervalos": 15,
+            "segmentos_referencia": 7,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.113965,
+            "con_su_canal": 0.999992,
+            "cuadros_separado": 845843,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.113958,
+            "con_su_canal": 0.999925,
+            "cuadros_separado": 845843,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 845843,
+        "cuadros_mono": 845843,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_13.rttm",
+            "sha256": "ace1a78b3740d84e5599e648b00d7cb3b1b8db7118649ba1beae15aeb2cb539e"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_13.wav",
+            "sha256": "9e79f0621d3e1a58619e4ee6f147318ef979b70c816d47d67c86c154edd89b30"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.004812,
+          "channel2": 0.004812
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_13",
+        "segmentos_referencia": 30,
+        "tarea": "13",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "082933F9",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.14.channel1.phrases",
+            "sha256": "7d3f204c2c02770f17e1b4ec152707ef9168a8c9a42bedfede3bec96214be9e5",
+            "tamano": 714
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "4DDC9B2B",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.14.channel1.wav",
+            "sha256": "6434fdd31ddd2dba03da71d82d285fc74e6aa86232a871db2f90c5a447c8c8cc",
+            "tamano": 2397778
+          },
+          {
+            "clave": "channel2",
+            "crc32": "094CA98A",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.14.channel2.phrases",
+            "sha256": "b6a056510cd06de2a4a8ac40a788336f4fd374ac056cd9e126e76c371fd0fdcf",
+            "tamano": 2085
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "BCDDD507",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.14.channel2.wav",
+            "sha256": "98cd464eb2bc4037d52d01bcf8efef599b5db7dd114f3b465c278ea593a61168",
+            "tamano": 2397778
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "813C32E8",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.14.wav",
+            "sha256": "327a4da3c1a3b7285ecb7782905c166012ca28e18f444dd37a981b435fc68548",
+            "tamano": 4795508
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.1734,
+            "habla_anotada_energia_baja_ventanas": 163,
+            "habla_anotada_ventanas": 940,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -75.99,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -63.99
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0356,
+            "habla_anotada_energia_baja_ventanas": 178,
+            "habla_anotada_ventanas": 4997,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -76.56,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -64.56
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 15,
+            "excluidos_por_etiqueta": {},
+            "habla": 14,
+            "intervalos": 29,
+            "segmentos_referencia": 14,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 28,
+            "excluidos_por_etiqueta": {},
+            "habla": 27,
+            "intervalos": 55,
+            "segmentos_referencia": 27,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": 0.057606,
+            "con_su_canal": 0.999921,
+            "cuadros_separado": 1198867,
+            "diferencia_cuadros": 1
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": 0.057596,
+            "con_su_canal": 0.999986,
+            "cuadros_separado": 1198867,
+            "diferencia_cuadros": 1
+          }
+        },
+        "cuadros_estereo": 1198866,
+        "cuadros_mono": 1198866,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_14.rttm",
+            "sha256": "7214099dd9146b2779d66a211190e0d563fde3e9e084597fa26c358f8e12322d"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_14.wav",
+            "sha256": "e171c6434afcef106085a609e7dd9a0f9484d56a36bd2a39d870ad23ec991e68"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.000875,
+          "channel2": 0.000875
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_14",
+        "segmentos_referencia": 41,
+        "tarea": "14",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "27BC29C2",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.15.channel1.phrases",
+            "sha256": "236b7b4e0f4c11e421d75009c0b1bd5af85aa63242d6cf5cd22d46e2de23247b",
+            "tamano": 3453
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "B64B16A6",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.15.channel1.wav",
+            "sha256": "1fce9d3c2dbcc94e6603c0a79f432d524589aa45ee5094a4e3f8aebdcbb0eabf",
+            "tamano": 4370052
+          },
+          {
+            "clave": "channel2",
+            "crc32": "1ED58C1B",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.15.channel2.phrases",
+            "sha256": "9dbe5d47e72ec8c33735113744a8682a3c2961f0347a5cc427e2978756c03f71",
+            "tamano": 2723
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "26A51946",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.15.channel2.wav",
+            "sha256": "e69f337774f4968b0928175a5c9837d59aa4e945c6dfbb91ea2a2ef9420d3fb7",
+            "tamano": 4370052
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "B77B3926",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.15.wav",
+            "sha256": "ada22eb93c7f720593a8ce94f53c0512773959de4c7309c658958abf7bd61900",
+            "tamano": 8740056
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.057,
+            "habla_anotada_energia_baja_ventanas": 496,
+            "habla_anotada_ventanas": 8697,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -76.96,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -64.96
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.1405,
+            "habla_anotada_energia_baja_ventanas": 651,
+            "habla_anotada_ventanas": 4635,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -71.59,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -59.59
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 45,
+            "excluidos_por_etiqueta": {},
+            "habla": 46,
+            "intervalos": 91,
+            "segmentos_referencia": 44,
+            "uniones": 2
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 46,
+            "excluidos_por_etiqueta": {},
+            "habla": 41,
+            "intervalos": 87,
+            "segmentos_referencia": 41,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.039665,
+            "con_su_canal": 0.999986,
+            "cuadros_separado": 2185004,
+            "diferencia_cuadros": 1
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.039668,
+            "con_su_canal": 0.999983,
+            "cuadros_separado": 2185004,
+            "diferencia_cuadros": 1
+          }
+        },
+        "cuadros_estereo": 2185003,
+        "cuadros_mono": 2185003,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_15.rttm",
+            "sha256": "c2abf314be46bd817998892ed4f7674f3d3a49dabfd696e0da86f671f1f7a435"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_15.wav",
+            "sha256": "ed890c9bcad39c9ab503641f629a3ece651ab078a238b8b04124498d34615564"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.007312,
+          "channel2": 0.007312
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_15",
+        "segmentos_referencia": 85,
+        "tarea": "15",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "B4D671B8",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.16.channel1.phrases",
+            "sha256": "8c07e6eb99d57b5d621d83390a3e9423c6cc1af66bba323486ce6bd2dc4c5a41",
+            "tamano": 1216
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "27C79177",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.16.channel1.wav",
+            "sha256": "191f9b1aa1010e7835749e23c1612f5bc928e6a15f43ee6a0d6fb3d46de1e002",
+            "tamano": 2926764
+          },
+          {
+            "clave": "channel2",
+            "crc32": "AEEDA2A5",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.16.channel2.phrases",
+            "sha256": "2c5e19ea2a61d1f7d4361ab323687647c84c3a1dfd79a21ed20e5ccdc7f7d972",
+            "tamano": 2096
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "9DBD3521",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.16.channel2.wav",
+            "sha256": "88f85f1429a7eaf13d7c58807b048333035266a00446c296726a32da8a3fdf31",
+            "tamano": 2926764
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "3DA55530",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.16.wav",
+            "sha256": "d70fefd23cf5bd5b858fd08638e565f7140395e03d3c7ada2563c9c7a7aa24e0",
+            "tamano": 5853484
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0746,
+            "habla_anotada_energia_baja_ventanas": 157,
+            "habla_anotada_ventanas": 2105,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -79.6,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -67.6
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.08,
+            "habla_anotada_energia_baja_ventanas": 429,
+            "habla_anotada_ventanas": 5360,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -76.48,
+            "posible_habla_sin_anotar_s": 0.41,
+            "posible_habla_sin_anotar_tramos": [
+              [
+                84.93,
+                85.34
+              ]
+            ],
+            "umbral_dbfs": -64.48
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 21,
+            "excluidos_por_etiqueta": {},
+            "habla": 20,
+            "intervalos": 41,
+            "segmentos_referencia": 20,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 32,
+            "excluidos_por_etiqueta": {},
+            "habla": 31,
+            "intervalos": 63,
+            "segmentos_referencia": 31,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.004641,
+            "con_su_canal": 0.99998,
+            "cuadros_separado": 1463360,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.004646,
+            "con_su_canal": 0.999976,
+            "cuadros_separado": 1463360,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 1463360,
+        "cuadros_mono": 1463360,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_16.rttm",
+            "sha256": "f8a6b6e6b559943f4ae05aa98ccb8e3622e19403ae8174be152673f9f806a1e1"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_16.wav",
+            "sha256": "b5e0e8c33fcb24ce2790c4ed6f3b94382319b4e1f9b7d5f578baec7e44ed2a56"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.0,
+          "channel2": 0.0
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_16",
+        "segmentos_referencia": 51,
+        "tarea": "16",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "541A6908",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.17.channel1.phrases",
+            "sha256": "322d0a464f3f1cd7951248bf9bfbde1de7e04c95cb274ad6291c74169f3e1892",
+            "tamano": 1014
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "276A2968",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.17.channel1.wav",
+            "sha256": "c84f753c4c77906ed1ad43bb575b89085f335610e5c116932971bd91d9d5fda1",
+            "tamano": 1786462
+          },
+          {
+            "clave": "channel2",
+            "crc32": "2024BCE3",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.17.channel2.phrases",
+            "sha256": "f69d20ff6642da49bb14f1b415a01400ba3f962b0bda6b4fd0b19550fe5e4fec",
+            "tamano": 1032
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "8D565D07",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.17.channel2.wav",
+            "sha256": "614b0106c915cd799130c612feccb20a84000bda3024075c0274ca4d8d2840c8",
+            "tamano": 1786462
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "3BA63D3A",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.17.wav",
+            "sha256": "abba7a7d211b6e17ee496116e9e0e854c3030ec575f254ee156e46f04f227c9f",
+            "tamano": 3572876
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0494,
+            "habla_anotada_energia_baja_ventanas": 155,
+            "habla_anotada_ventanas": 3139,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -78.37,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -66.37
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0894,
+            "habla_anotada_energia_baja_ventanas": 184,
+            "habla_anotada_ventanas": 2058,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -73.81,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -61.81
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 14,
+            "excluidos_por_etiqueta": {},
+            "habla": 11,
+            "intervalos": 25,
+            "segmentos_referencia": 11,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 18,
+            "excluidos_por_etiqueta": {},
+            "habla": 15,
+            "intervalos": 33,
+            "segmentos_referencia": 15,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.037929,
+            "con_su_canal": 0.999995,
+            "cuadros_separado": 893209,
+            "diferencia_cuadros": 1
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.03793,
+            "con_su_canal": 0.999984,
+            "cuadros_separado": 893209,
+            "diferencia_cuadros": 1
+          }
+        },
+        "cuadros_estereo": 893208,
+        "cuadros_mono": 893208,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_17.rttm",
+            "sha256": "62aa08b9210952a23e7183589310f8ea17427c418d0082553fcc41f08c313cb9"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_17.wav",
+            "sha256": "b51ea12cd2391b777d767d36b67bbf43099c87f448081cc489c33031b0aa5a21"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.0045,
+          "channel2": 0.0045
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_17",
+        "segmentos_referencia": 26,
+        "tarea": "17",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "2B79073C",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.18.channel1.phrases",
+            "sha256": "b8fb03d465b2a2144e5ed9b34f72871a63ab9e5650a81697ea9e834a15278a24",
+            "tamano": 345
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "6E8F397C",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.18.channel1.wav",
+            "sha256": "df65dfa7fc0e93cbc26ab89873fff6a01f2d2af4bde1a7598420c2c74a861c70",
+            "tamano": 1283252
+          },
+          {
+            "clave": "channel2",
+            "crc32": "FED4C89D",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.18.channel2.phrases",
+            "sha256": "aba89ab2dfd8bba611cec9a3ae5798116b3c18a00a0c9916772eb801bfbfed40",
+            "tamano": 1076
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "2F0C99FB",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.18.channel2.wav",
+            "sha256": "a9244505e8bba0a542ff4f19c78bcbff2acf9afb79754149c0243ca577d63eba",
+            "tamano": 1283252
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "FCDDE2BA",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.18.wav",
+            "sha256": "78a2877c790fa4850f2e822edf56ca909f68f426b8685b8cbea9ade4328585d8",
+            "tamano": 2566460
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.1083,
+            "habla_anotada_energia_baja_ventanas": 60,
+            "habla_anotada_ventanas": 554,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -74.75,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -62.75
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0706,
+            "habla_anotada_energia_baja_ventanas": 196,
+            "habla_anotada_ventanas": 2777,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -75.57,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -63.57
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 7,
+            "excluidos_por_etiqueta": {},
+            "habla": 6,
+            "intervalos": 13,
+            "segmentos_referencia": 6,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 15,
+            "excluidos_por_etiqueta": {},
+            "habla": 14,
+            "intervalos": 29,
+            "segmentos_referencia": 14,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": 0.006788,
+            "con_su_canal": 0.99996,
+            "cuadros_separado": 641604,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": 0.006792,
+            "con_su_canal": 0.999988,
+            "cuadros_separado": 641604,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 641604,
+        "cuadros_mono": 641604,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_18.rttm",
+            "sha256": "5ca2422157704f49ea0ca2a36db1dfea4ae466ec9ee5f5df4eba33548aa9710a"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_18.wav",
+            "sha256": "8c1d4ee64ca6fa917ce56d21f37587a82d1783d8ffdcb45a620e7f44e755d584"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.00975,
+          "channel2": 0.00975
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_18",
+        "segmentos_referencia": 20,
+        "tarea": "18",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "D068322B",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.19.channel1.phrases",
+            "sha256": "c7d6e0256d913c90f28ef23cd38f4f9dbb235816608d9e8ccca517e1b9a5790a",
+            "tamano": 2852
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "E83A16A6",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.19.channel1.wav",
+            "sha256": "6be90772c58c70b9cea5d86e6ebe57659bb67761b1bf8a6eb77ec1be6604e594",
+            "tamano": 3514254
+          },
+          {
+            "clave": "channel2",
+            "crc32": "6ADB6000",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.19.channel2.phrases",
+            "sha256": "e8a4c234decd26fd9502ae86c95a3a8835e807f7b930f792d53b3195da1380fe",
+            "tamano": 1957
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "BA83F2B2",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.19.channel2.wav",
+            "sha256": "d7d880e5348d8b8b772ef5b28cebf882b4e814a09d3a4c624b2600fc1000300c",
+            "tamano": 3514254
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "EEADB1D7",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.19.wav",
+            "sha256": "b5dcd3db54e3a818170059bd5b3c0b17ad9a8b3c5ecb567a0e7e7f4cf4f59832",
+            "tamano": 7028464
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0636,
+            "habla_anotada_energia_baja_ventanas": 452,
+            "habla_anotada_ventanas": 7103,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -75.62,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -63.62
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.115,
+            "habla_anotada_energia_baja_ventanas": 452,
+            "habla_anotada_ventanas": 3930,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -71.9,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -59.9
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 40,
+            "excluidos_por_etiqueta": {},
+            "habla": 39,
+            "intervalos": 79,
+            "segmentos_referencia": 39,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 32,
+            "excluidos_por_etiqueta": {},
+            "habla": 31,
+            "intervalos": 63,
+            "segmentos_referencia": 31,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.042925,
+            "con_su_canal": 0.999991,
+            "cuadros_separado": 1757105,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.042921,
+            "con_su_canal": 0.999986,
+            "cuadros_separado": 1757105,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 1757105,
+        "cuadros_mono": 1757105,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_19.rttm",
+            "sha256": "9fbf4efdea25231e25f3ca1be84dd0de63f038a296820763cf5f0b5fa368fd37"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_19.wav",
+            "sha256": "7c257a26c5d884f8e7799e1b259feb97ec160e04bad08aa693a9714ce28c1876"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.000937,
+          "channel2": 0.000937
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_19",
+        "segmentos_referencia": 70,
+        "tarea": "19",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "154B0FD7",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.20.channel1.phrases",
+            "sha256": "aed113ea9fd67e4962efcdb91828f4a9918ed9490db9acf0c5bbbcee6dcfffa4",
+            "tamano": 875
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "64F570DF",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.20.channel1.wav",
+            "sha256": "9df638217ea1c56e1d302058e9b7be75c1ececc88b022f596a359b034731d69d",
+            "tamano": 2190428
+          },
+          {
+            "clave": "channel2",
+            "crc32": "06FC4F32",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.20.channel2.phrases",
+            "sha256": "642b3c22642d83954e96bd456a721605e8a913e19fbb97f9b37344f6b79433cb",
+            "tamano": 1893
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "4A3828F9",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.20.channel2.wav",
+            "sha256": "64ddb9f81802bd1ec16b3cd3b5040bbba297c55afd2d849bc35b18649ace93e9",
+            "tamano": 2190428
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "179A32B3",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.20.wav",
+            "sha256": "32f79aa17fab2081b0012c9f0989dd87bb3220e0c97eb223c4355370b23131f5",
+            "tamano": 4380808
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0962,
+            "habla_anotada_energia_baja_ventanas": 161,
+            "habla_anotada_ventanas": 1674,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -75.72,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -63.72
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0473,
+            "habla_anotada_energia_baja_ventanas": 201,
+            "habla_anotada_ventanas": 4246,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -76.18,
+            "posible_habla_sin_anotar_s": 0.93,
+            "posible_habla_sin_anotar_tramos": [
+              [
+                26.0,
+                26.62
+              ],
+              [
+                37.36,
+                37.67
+              ]
+            ],
+            "umbral_dbfs": -64.18
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 15,
+            "excluidos_por_etiqueta": {},
+            "habla": 14,
+            "intervalos": 29,
+            "segmentos_referencia": 14,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 28,
+            "excluidos_por_etiqueta": {},
+            "habla": 27,
+            "intervalos": 55,
+            "segmentos_referencia": 27,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": 0.012098,
+            "con_su_canal": 0.999992,
+            "cuadros_separado": 1095192,
+            "diferencia_cuadros": 1
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": 0.012096,
+            "con_su_canal": 0.99998,
+            "cuadros_separado": 1095192,
+            "diferencia_cuadros": 1
+          }
+        },
+        "cuadros_estereo": 1095191,
+        "cuadros_mono": 1095191,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_20.rttm",
+            "sha256": "64dc8b505a56bac67f502cc7ff493cf57fc1633d469fdfda33fa569b7cc62446"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_20.wav",
+            "sha256": "2ec9ae5df7e816cce91bb7fd759853170700ec887929e6ae4d99cfa7f04ea8a1"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.000563,
+          "channel2": 0.000563
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_20",
+        "segmentos_referencia": 41,
+        "tarea": "20",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "6561E30C",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.21.channel1.phrases",
+            "sha256": "06709526b8dccf5f38399746cfbbc46d257037d16b8cd428640d2d5a211dbd6e",
+            "tamano": 2763
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "8FD48FD5",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.21.channel1.wav",
+            "sha256": "d88df55fcfa689eb366fb8c3b47c815c225321a6dcba2da01aace1afdc31be79",
+            "tamano": 3726904
+          },
+          {
+            "clave": "channel2",
+            "crc32": "5CD64F83",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.21.channel2.phrases",
+            "sha256": "4800d2060f19a6de8177f53bb629d8d880eda1daf23911fee15c2ae263645c51",
+            "tamano": 1442
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "000185AB",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.21.channel2.wav",
+            "sha256": "82835a60ead912a82bdb1f1a83033b55a8586a50848532914f6d689c1ea4dbf4",
+            "tamano": 3726904
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "8BF05CE1",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.21.wav",
+            "sha256": "3d10c51364bbf26561926d5abec5b8bf58ba447e9a9165803ed24b7f40b7c84e",
+            "tamano": 7453764
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0529,
+            "habla_anotada_energia_baja_ventanas": 392,
+            "habla_anotada_ventanas": 7417,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -79.15,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -67.15
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.1181,
+            "habla_anotada_energia_baja_ventanas": 274,
+            "habla_anotada_ventanas": 2321,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -75.04,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -63.04
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 38,
+            "excluidos_por_etiqueta": {},
+            "habla": 37,
+            "intervalos": 75,
+            "segmentos_referencia": 37,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 28,
+            "excluidos_por_etiqueta": {},
+            "habla": 27,
+            "intervalos": 55,
+            "segmentos_referencia": 27,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.034906,
+            "con_su_canal": 0.999987,
+            "cuadros_separado": 1863430,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.034907,
+            "con_su_canal": 0.999971,
+            "cuadros_separado": 1863430,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 1863430,
+        "cuadros_mono": 1863430,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_21.rttm",
+            "sha256": "7e219e8e914fa88bafd96eec3a17719a039a5d1e063c36b3dd33239d75998b7c"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_21.wav",
+            "sha256": "13711f4f5d45679139846ceedb2313152169e2f7c646c79d3692bdec9a2023ed"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.005625,
+          "channel2": 0.005625
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_21",
+        "segmentos_referencia": 64,
+        "tarea": "21",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "87AF5F7D",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.22.channel1.phrases",
+            "sha256": "5dd65ceda2319c46b72751acd88c1fa75671500721ec63deb926f75bb788a6b0",
+            "tamano": 1004
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "80976A89",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.22.channel1.wav",
+            "sha256": "fea8a5cf9add61890ac76803d665d5501af3f6d29cbcb451e3dea1a736273f0e",
+            "tamano": 2363542
+          },
+          {
+            "clave": "channel2",
+            "crc32": "54D38736",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.22.channel2.phrases",
+            "sha256": "791b1f56a7a15e9e44d7f61e15a46d76c1492711790f18f8ecf095cc5d1eaccf",
+            "tamano": 1505
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "B1F298E4",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.22.channel2.wav",
+            "sha256": "2f0dff821a0e9b2e378a9908237bcb084a3c1f5437fd6cc59549cd4d8d499dc9",
+            "tamano": 2363542
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "4A9B7D7D",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.22.wav",
+            "sha256": "c7f37792e260972dbcafa101cb221bf6a444cfb21ae961b2e5f5a5e255eda894",
+            "tamano": 4727040
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.1662,
+            "habla_anotada_energia_baja_ventanas": 346,
+            "habla_anotada_ventanas": 2082,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -77.57,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -65.57
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0468,
+            "habla_anotada_energia_baja_ventanas": 168,
+            "habla_anotada_ventanas": 3590,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -77.68,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -65.68
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 16,
+            "excluidos_por_etiqueta": {},
+            "habla": 15,
+            "intervalos": 31,
+            "segmentos_referencia": 15,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 23,
+            "excluidos_por_etiqueta": {},
+            "habla": 21,
+            "intervalos": 44,
+            "segmentos_referencia": 21,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.012779,
+            "con_su_canal": 0.999962,
+            "cuadros_separado": 1181749,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.012785,
+            "con_su_canal": 0.999987,
+            "cuadros_separado": 1181749,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 1181749,
+        "cuadros_mono": 1181749,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_22.rttm",
+            "sha256": "06c0f3d54ab199f071602efb1d0da8f7063dcbb02bef2165c0418e2acc30059d"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_22.wav",
+            "sha256": "696914fb3ccd6aef970434e02c371b87a73af664d704b2630a8c28dac03fe3e3"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.000687,
+          "channel2": 0.000687
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_22",
+        "segmentos_referencia": 36,
+        "tarea": "22",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "0C36787F",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.23.channel1.phrases",
+            "sha256": "b071758848ecb1040d6fd118d94d222f6d5095273edf101dbda60de644ec7eca",
+            "tamano": 2680
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "EFF4C0F3",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.23.channel1.wav",
+            "sha256": "0c6c1fe7918c7c830ab11f5f49a478ce3f0187c4d4aa84dd9ca057a58739839d",
+            "tamano": 3428046
+          },
+          {
+            "clave": "channel2",
+            "crc32": "58C1A082",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.23.channel2.phrases",
+            "sha256": "dd046190a356558a28e4bced5b3f5608a81bd4821068509807f489e03bafdc29",
+            "tamano": 1664
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "B0C7CA8F",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.23.channel2.wav",
+            "sha256": "87dbe4191fef86e6f82ac7188eeac11ef3411b93d6fb0017b3ef9d62c8928b30",
+            "tamano": 3428046
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "E5685167",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.23.wav",
+            "sha256": "94df3f0ba9f27c8e9fb95d142adb4870b6dfe5cda2822f08527403f8f1e58591",
+            "tamano": 6856048
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0694,
+            "habla_anotada_energia_baja_ventanas": 416,
+            "habla_anotada_ventanas": 5998,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -77.84,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -65.84
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.1155,
+            "habla_anotada_energia_baja_ventanas": 425,
+            "habla_anotada_ventanas": 3679,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -75.73,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -63.73
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 40,
+            "excluidos_por_etiqueta": {},
+            "habla": 41,
+            "intervalos": 81,
+            "segmentos_referencia": 39,
+            "uniones": 2
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 27,
+            "excluidos_por_etiqueta": {},
+            "habla": 24,
+            "intervalos": 51,
+            "segmentos_referencia": 24,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.03003,
+            "con_su_canal": 0.999991,
+            "cuadros_separado": 1714001,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.030027,
+            "con_su_canal": 0.999985,
+            "cuadros_separado": 1714001,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 1714001,
+        "cuadros_mono": 1714001,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_23.rttm",
+            "sha256": "e95ef63702622d216a3a5139cb6bd307255c5dc41b5b406e48ceda7617a2143e"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_23.wav",
+            "sha256": "f4165d5e66e97f184a0fcca646b069396c41ef9d4657e147c104fa7a28efe7d6"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.004937,
+          "channel2": 0.004937
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_23",
+        "segmentos_referencia": 63,
+        "tarea": "23",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "4571A7FE",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.24.channel1.phrases",
+            "sha256": "4e299506a8bbcab02c6ef300e5d7ab77554d4ca304580db7da4961b1587657b5",
+            "tamano": 1786
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "F9DCF334",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.24.channel1.wav",
+            "sha256": "420ca9ce643d46309579d60c52e0772661c8708687c4aa5481e1acf1eadc4afd",
+            "tamano": 3660498
+          },
+          {
+            "clave": "channel2",
+            "crc32": "0DEFD905",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.24.channel2.phrases",
+            "sha256": "d1b9d328c1c81f94a1c4423212dc057b348aafba8b75bf5c344701cf59e79ac6",
+            "tamano": 2862
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "F5B0D9FA",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.24.channel2.wav",
+            "sha256": "c86168f1ecd3d9de4cfec780a2f98832169bc3fe8d75be6627f83e4deb4ca7da",
+            "tamano": 3660498
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "34450E99",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.24.wav",
+            "sha256": "e21667e689eef1227d93d0d6e3ceb079ed0fad2b9e627ba66da82352644ce4e6",
+            "tamano": 7320948
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.1136,
+            "habla_anotada_energia_baja_ventanas": 409,
+            "habla_anotada_ventanas": 3600,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -74.97,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -62.97
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0759,
+            "habla_anotada_energia_baja_ventanas": 500,
+            "habla_anotada_ventanas": 6585,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -74.37,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -62.37
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 29,
+            "excluidos_por_etiqueta": {},
+            "habla": 28,
+            "intervalos": 57,
+            "segmentos_referencia": 28,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 42,
+            "excluidos_por_etiqueta": {},
+            "habla": 41,
+            "intervalos": 83,
+            "segmentos_referencia": 41,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.013034,
+            "con_su_canal": 0.999982,
+            "cuadros_separado": 1830227,
+            "diferencia_cuadros": 1
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.013032,
+            "con_su_canal": 0.999987,
+            "cuadros_separado": 1830227,
+            "diferencia_cuadros": 1
+          }
+        },
+        "cuadros_estereo": 1830226,
+        "cuadros_mono": 1830226,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_24.rttm",
+            "sha256": "d674a20f2e17dcff15835ad7073317487d894141b92508495db779b3bdad735d"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_24.wav",
+            "sha256": "a205f873893783063ee793719785106a37a22490c1f3b551b7ef804abb9a9c88"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.000875,
+          "channel2": 0.000875
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_24",
+        "segmentos_referencia": 69,
+        "tarea": "24",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      },
+      {
+        "ajustes_fin": [],
+        "archivos": [
+          {
+            "clave": "channel1",
+            "crc32": "D644F1E3",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.25.channel1.phrases",
+            "sha256": "d603f8820dac16d4accf53b4a348fb32116631d7583d94b59cba48c54bdcf937",
+            "tamano": 2991
+          },
+          {
+            "clave": "channel1_separado",
+            "crc32": "12FC808E",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.25.channel1.wav",
+            "sha256": "be0139c3fc21d8a8e71e63265ce74a2d35fa31509b75b38bd3d0a2efc633468c",
+            "tamano": 3451534
+          },
+          {
+            "clave": "channel2",
+            "crc32": "ADC358FC",
+            "rar": "phrases.rar",
+            "ruta": "phrases/S26/s26.objects.25.channel2.phrases",
+            "sha256": "a2cecca7819db253452fc1a513d467f78123f4409f70ff319dae80c53a7f14ab",
+            "tamano": 1193
+          },
+          {
+            "clave": "channel2_separado",
+            "crc32": "8D649316",
+            "rar": "wavs.rar",
+            "ruta": "wavs/S26/s26.objects.25.channel2.wav",
+            "sha256": "bb6128183323a4d4e938da2fef063520ed5f38b08207728f395aee452cfb696e",
+            "tamano": 3451534
+          },
+          {
+            "clave": "wav_completo",
+            "crc32": "7E4D149F",
+            "rar": "wavs.rar",
+            "ruta": "wavs/Sin separar canales/S26_falta_separar_canales/s26.objects.25.wav",
+            "sha256": "eee03f0ad8c6db18fd2c6426bbbc893a8f79a0343aa0329742ac1bd6672f005c",
+            "tamano": 6903024
+          }
+        ],
+        "cobertura": {
+          "channel1": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.0717,
+            "habla_anotada_energia_baja_ventanas": 503,
+            "habla_anotada_ventanas": 7020,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -79.87,
+            "posible_habla_sin_anotar_s": 0.36,
+            "posible_habla_sin_anotar_tramos": [
+              [
+                59.19,
+                59.55
+              ]
+            ],
+            "umbral_dbfs": -67.87
+          },
+          "channel2": {
+            "calculable": true,
+            "habla_anotada_energia_baja_proporcion": 0.17,
+            "habla_anotada_energia_baja_ventanas": 349,
+            "habla_anotada_ventanas": 2053,
+            "indicio": "solo indicio a revisar; no cambia la referencia",
+            "piso_dbfs": -75.66,
+            "posible_habla_sin_anotar_s": 0,
+            "posible_habla_sin_anotar_tramos": [],
+            "umbral_dbfs": -63.66
+          }
+        },
+        "conteos": {
+          "channel1": {
+            "excluidos_por_almohadilla": 43,
+            "excluidos_por_etiqueta": {},
+            "habla": 42,
+            "intervalos": 85,
+            "segmentos_referencia": 42,
+            "uniones": 0
+          },
+          "channel2": {
+            "excluidos_por_almohadilla": 23,
+            "excluidos_por_etiqueta": {},
+            "habla": 18,
+            "intervalos": 41,
+            "segmentos_referencia": 18,
+            "uniones": 0
+          }
+        },
+        "correspondencia": {
+          "channel1": {
+            "canal_estereo": "izquierdo",
+            "con_el_otro": -0.017354,
+            "con_su_canal": 0.999989,
+            "cuadros_separado": 1725745,
+            "diferencia_cuadros": 0
+          },
+          "channel2": {
+            "canal_estereo": "derecho",
+            "con_el_otro": -0.017344,
+            "con_su_canal": 0.999974,
+            "cuadros_separado": 1725745,
+            "diferencia_cuadros": 0
+          }
+        },
+        "cuadros_estereo": 1725745,
+        "cuadros_mono": 1725745,
+        "derivados": {
+          "rttm": {
+            "ruta": "figshare_v2_S26_objects_25.rttm",
+            "sha256": "6a35fec9fa1057d3e69b61512d00145777bc09671ed9788fb0f4c0d360acc886"
+          },
+          "wav_mono": {
+            "ruta": "figshare_v2_S26_objects_25.wav",
+            "sha256": "36001ad5d99afa20f3e308d12f6b66e7de63de602dea5dd5240ffd16b15f464a"
+          }
+        },
+        "estado": "valida",
+        "exceso_terminal_s": {
+          "channel1": 0.000938,
+          "channel2": 0.000938
+        },
+        "fs": 16000,
+        "motivo": null,
+        "recording_id": "figshare_v2_S26_objects_25",
+        "segmentos_referencia": 60,
+        "tarea": "25",
+        "validacion_referencia": {
+          "motivo": null,
+          "utilizable": true
+        }
+      }
+    ],
+    "licencia": "CC BY 4.0",
+    "origen": "figshare:22647313:v2",
+    "originales": [
+      {
+        "bytes": 347152,
+        "md5": "31f429c6a43ac7411e0cfacf22726ac6",
+        "nombre": "phrases.rar",
+        "sha256": "687d1a6c1db8cda12c5ca8a6d50051966a2d638dd0daafb82803162ebf2c3e8b"
+      },
+      {
+        "bytes": 721854279,
+        "md5": "5ddfe4d3bca45b1a70d3dd95fc3f18ad",
+        "nombre": "wavs.rar",
+        "sha256": "6cd828e4c80006aedbf328035166824f042b59af03796dafdc6b2e785870233b"
+      }
+    ],
+    "politica_etiquetas_sha256": "ee1394b3e53d4e4237cf8ff737e216d73614e4309c6575db4a432edfdffc2bfb",
+    "seleccion": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "24",
+      "25"
+    ],
+    "sesion": "S26",
+    "tolerancias": {
+      "fin_s": 0.01,
+      "orden_s": 0.0001
+    }
+  },
+  "contenido_sha256": "47bfcccc5190d7f556d349648a4f26c7265d46015435e5933bba4afd7bfd4a7e",
+  "ejecucion": {
+    "commit": "e005926aca6c06c955aa6bedaedeeb37490d8bb1",
+    "fecha_hora_utc": "2026-11-08T21:36:36Z",
+    "python": "3.12.10",
+    "ruta_cache": "hito-2/.cache/uba_games/figshare-v2",
+    "siete_zip": "7-Zip 22.01 (x64) : Copyright (c) 1999-2022 Igor Pavlov : 2022-07-15",
+    "sistema": "Windows-11-10.0.26200-SP0",
+    "tiempo_preparacion_s": 15.11,
+    "version_script": "1"
+  }
+}

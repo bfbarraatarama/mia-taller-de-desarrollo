@@ -1,0 +1,1412 @@
+{
+  "sesiones": [
+    "S26"
+  ],
+  "parametros": {
+    "device": "auto",
+    "corridas": {
+      "principal": {
+        "num_speakers": null
+      },
+      "diagnostico_num_speakers": {
+        "num_speakers": 2
+      }
+    },
+    "reutilizacion": "se reutiliza una corrida anterior si es compatible (mismo WAV mono, modelo, versiones, num_speakers y dispositivo); --rehacer obliga a diarizar otra vez",
+    "dispersion": "estadísticos por grabación, sin ponderar; los acumulados están ponderados por el tiempo",
+    "solapamiento": "componentes del DER estricto en las regiones con 2 hablantes o más en la referencia y en el resto de [0, duración], con el emparejamiento global fijo",
+    "corridas_ejecutadas": [
+      "principal"
+    ],
+    "uem": "[0, cuadros / 16000] por grabación",
+    "metricas": {
+      "der_estricto": {
+        "metrica": "DER",
+        "criterio": "estricto",
+        "collar_pyannote_s": 0.0,
+        "tolerancia_por_lado_s": 0.0,
+        "herramienta": "pyannote.metrics 4.2.0",
+        "incluye_solapamiento": true
+      },
+      "der_tolerancia": {
+        "metrica": "DER",
+        "criterio": "NIST",
+        "collar_pyannote_s": 0.5,
+        "tolerancia_por_lado_s": 0.25,
+        "herramienta": "pyannote.metrics 4.2.0",
+        "incluye_solapamiento": true
+      },
+      "jer": {
+        "metrica": "JER",
+        "criterio": "estricto",
+        "collar_pyannote_s": 0.0,
+        "tolerancia_por_lado_s": 0.0,
+        "herramienta": "pyannote.metrics 4.2.0",
+        "incluye_solapamiento": true
+      }
+    },
+    "manifiesto": {
+      "ruta": "evaluacion/figshare_test.manifest.json",
+      "contenido_sha256": "47bfcccc5190d7f556d349648a4f26c7265d46015435e5933bba4afd7bfd4a7e"
+    },
+    "sistema": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.10"
+  },
+  "acumulado_total": {
+    "principal": {
+      "der_estricto": {
+        "metrica": "DER",
+        "criterio": "estricto",
+        "collar_pyannote_s": 0.0,
+        "tolerancia_por_lado_s": 0.0,
+        "herramienta": "pyannote.metrics 4.2.0",
+        "incluye_solapamiento": true,
+        "valor": 0.231476,
+        "falsa_alarma_s": 116.164,
+        "habla_perdida_s": 60.249,
+        "confusion_s": 196.152,
+        "total_referencia_s": 1609.519,
+        "proporciones": {
+          "falsa_alarma": 0.072173,
+          "habla_perdida": 0.037433,
+          "confusion": 0.12187
+        },
+        "agregacion": "suma de componentes / suma de total_referencia_s (ponderado por el tiempo)"
+      },
+      "der_tolerancia": {
+        "metrica": "DER",
+        "criterio": "NIST",
+        "collar_pyannote_s": 0.5,
+        "tolerancia_por_lado_s": 0.25,
+        "herramienta": "pyannote.metrics 4.2.0",
+        "incluye_solapamiento": true,
+        "valor": 0.123177,
+        "falsa_alarma_s": 3.537,
+        "habla_perdida_s": 17.201,
+        "confusion_s": 97.228,
+        "total_referencia_s": 957.696,
+        "proporciones": {
+          "falsa_alarma": 0.003693,
+          "habla_perdida": 0.017961,
+          "confusion": 0.101523
+        },
+        "agregacion": "suma de componentes / suma de total_referencia_s (ponderado por el tiempo)"
+      },
+      "jer": {
+        "metrica": "JER",
+        "criterio": "estricto",
+        "collar_pyannote_s": 0.0,
+        "tolerancia_por_lado_s": 0.0,
+        "herramienta": "pyannote.metrics 4.2.0",
+        "incluye_solapamiento": true,
+        "valor": 0.400229,
+        "grabaciones": 25,
+        "agregacion": "media del error de todos los hablantes de referencia de todas las grabaciones (abs(JaccardErrorRate) de pyannote.metrics)"
+      },
+      "cobertura_nist": {
+        "total_referencia_estricto_s": 1609.519,
+        "total_referencia_nist_s": 957.696,
+        "proporcion_evaluada": 0.59502
+      },
+      "solapamiento": {
+        "con_solapamiento": {
+          "duracion_s": 151.944,
+          "total_referencia_s": 303.888,
+          "falsa_alarma_s": 0.0,
+          "habla_perdida_s": 31.67,
+          "confusion_s": 0.0,
+          "der": 0.104216
+        },
+        "sin_solapamiento": {
+          "duracion_s": 1669.302314,
+          "total_referencia_s": 1305.631,
+          "falsa_alarma_s": 116.164,
+          "habla_perdida_s": 28.579,
+          "confusion_s": 196.152,
+          "der": 0.261096
+        }
+      }
+    },
+    "diagnostico_num_speakers": null
+  },
+  "dispersion": {
+    "principal": {
+      "der_estricto": {
+        "n": 25,
+        "media": 0.230659,
+        "mediana": 0.233811,
+        "q1": 0.1743,
+        "q3": 0.284185,
+        "minimo": 0.127499,
+        "maximo": 0.34375,
+        "desviacion_estandar": 0.068711,
+        "mejor": {
+          "recording_id": "figshare_v2_S26_objects_13",
+          "valor": 0.127499
+        },
+        "peor": {
+          "recording_id": "figshare_v2_S26_objects_07",
+          "valor": 0.34375
+        },
+        "motivo": null
+      },
+      "der_tolerancia": {
+        "n": 25,
+        "media": 0.119067,
+        "mediana": 0.120301,
+        "q1": 0.065647,
+        "q3": 0.172392,
+        "minimo": 0.0,
+        "maximo": 0.287495,
+        "desviacion_estandar": 0.079508,
+        "mejor": {
+          "recording_id": "figshare_v2_S26_objects_06",
+          "valor": 0.0
+        },
+        "peor": {
+          "recording_id": "figshare_v2_S26_objects_17",
+          "valor": 0.287495
+        },
+        "motivo": null
+      },
+      "jer": {
+        "n": 25,
+        "media": 0.400229,
+        "mediana": 0.449358,
+        "q1": 0.329579,
+        "q3": 0.487509,
+        "minimo": 0.151342,
+        "maximo": 0.644277,
+        "desviacion_estandar": 0.127038,
+        "mejor": {
+          "recording_id": "figshare_v2_S26_objects_22",
+          "valor": 0.151342
+        },
+        "peor": {
+          "recording_id": "figshare_v2_S26_objects_02",
+          "valor": 0.644277
+        },
+        "motivo": null
+      }
+    },
+    "diagnostico_num_speakers": null
+  },
+  "cantidad_hablantes": {
+    "principal": {
+      "grabaciones": 25,
+      "coinciden": 24,
+      "proporcion": 0.96
+    },
+    "diagnostico_num_speakers": null
+  },
+  "dispositivos": [
+    "cpu"
+  ],
+  "tiempo_inferencia_s": {
+    "total": 2333.556,
+    "ejecutada_en_esta_corrida": 2260.415,
+    "reutilizada": 73.141,
+    "duracion_audio_total_s": 1821.246
+  },
+  "excluidas": {},
+  "por_grabacion_ordenadas_por_der_estricto": {
+    "principal": [
+      {
+        "recording_id": "figshare_v2_S26_objects_13",
+        "duracion_s": 52.865,
+        "habla_referencia_s": 42.907,
+        "habla_superpuesta_s": 1.109,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.127499,
+        "der_tolerancia": 0.004235,
+        "jer": 0.355972,
+        "estricto_falsa_alarma_s": 3.832,
+        "estricto_habla_perdida_s": 0.11,
+        "estricto_confusion_s": 1.67,
+        "nist_falsa_alarma_s": 0.0,
+        "nist_habla_perdida_s": 0.0,
+        "nist_confusion_s": 0.121,
+        "nist_proporcion_evaluada": 0.649105,
+        "der_con_solapamiento": 0.034265,
+        "der_sin_solapamiento": 0.132447,
+        "tiempo_s": 58.32,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_22",
+        "duracion_s": 73.859,
+        "habla_referencia_s": 53.827,
+        "habla_superpuesta_s": 2.893,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.129196,
+        "der_tolerancia": 0.019292,
+        "jer": 0.151342,
+        "estricto_falsa_alarma_s": 3.835,
+        "estricto_habla_perdida_s": 2.473,
+        "estricto_confusion_s": 1.02,
+        "nist_falsa_alarma_s": 0.0,
+        "nist_habla_perdida_s": 0.697,
+        "nist_confusion_s": 0.0,
+        "nist_proporcion_evaluada": 0.636971,
+        "der_con_solapamiento": 0.169029,
+        "der_sin_solapamiento": 0.124671,
+        "tiempo_s": 73.358,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_06",
+        "duracion_s": 31.373,
+        "habla_referencia_s": 19.33,
+        "habla_superpuesta_s": 0.159,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.135204,
+        "der_tolerancia": 0.0,
+        "jer": 0.471817,
+        "estricto_falsa_alarma_s": 1.09,
+        "estricto_habla_perdida_s": 0.426,
+        "estricto_confusion_s": 1.119,
+        "nist_falsa_alarma_s": 0.0,
+        "nist_habla_perdida_s": 0.0,
+        "nist_confusion_s": 0.0,
+        "nist_proporcion_evaluada": 0.700087,
+        "der_con_solapamiento": 0.0,
+        "der_sin_solapamiento": 0.137447,
+        "tiempo_s": 50.061,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_09",
+        "duracion_s": 119.38,
+        "habla_referencia_s": 107.609,
+        "habla_superpuesta_s": 20.097,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.167737,
+        "der_tolerancia": 0.061508,
+        "jer": 0.199218,
+        "estricto_falsa_alarma_s": 10.511,
+        "estricto_habla_perdida_s": 4.705,
+        "estricto_confusion_s": 6.205,
+        "nist_falsa_alarma_s": 0.449,
+        "nist_habla_perdida_s": 1.136,
+        "nist_confusion_s": 2.61,
+        "nist_proporcion_evaluada": 0.534055,
+        "der_con_solapamiento": 0.081281,
+        "der_sin_solapamiento": 0.207446,
+        "tiempo_s": 157.445,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_19",
+        "duracion_s": 109.819,
+        "habla_referencia_s": 95.285,
+        "habla_superpuesta_s": 15.09,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.171316,
+        "der_tolerancia": 0.059277,
+        "jer": 0.23674,
+        "estricto_falsa_alarma_s": 7.335,
+        "estricto_habla_perdida_s": 3.313,
+        "estricto_confusion_s": 8.261,
+        "nist_falsa_alarma_s": 0.007,
+        "nist_habla_perdida_s": 0.161,
+        "nist_confusion_s": 3.477,
+        "nist_proporcion_evaluada": 0.55711,
+        "der_con_solapamiento": 0.081776,
+        "der_sin_solapamiento": 0.205013,
+        "tiempo_s": 118.499,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_25",
+        "duracion_s": 107.859,
+        "habla_referencia_s": 85.253,
+        "habla_superpuesta_s": 5.482,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.173296,
+        "der_tolerancia": 0.0259,
+        "jer": 0.224779,
+        "estricto_falsa_alarma_s": 9.083,
+        "estricto_habla_perdida_s": 3.833,
+        "estricto_confusion_s": 2.808,
+        "nist_falsa_alarma_s": 0.292,
+        "nist_habla_perdida_s": 0.939,
+        "nist_confusion_s": 0.205,
+        "nist_proporcion_evaluada": 0.611065,
+        "der_con_solapamiento": 0.127417,
+        "der_sin_solapamiento": 0.179602,
+        "tiempo_s": 105.547,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_18",
+        "duracion_s": 40.1,
+        "habla_referencia_s": 31.689,
+        "habla_superpuesta_s": 1.61,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.1743,
+        "der_tolerancia": 0.089926,
+        "jer": 0.467246,
+        "estricto_falsa_alarma_s": 1.356,
+        "estricto_habla_perdida_s": 0.653,
+        "estricto_confusion_s": 3.795,
+        "nist_falsa_alarma_s": 0.0,
+        "nist_habla_perdida_s": 0.0,
+        "nist_confusion_s": 2.029,
+        "nist_proporcion_evaluada": 0.677588,
+        "der_con_solapamiento": 0.113665,
+        "der_sin_solapamiento": 0.180791,
+        "tiempo_s": 35.005,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_10",
+        "duracion_s": 76.718,
+        "habla_referencia_s": 60.269,
+        "habla_superpuesta_s": 5.085,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.177495,
+        "der_tolerancia": 0.07034,
+        "jer": 0.388267,
+        "estricto_falsa_alarma_s": 2.847,
+        "estricto_habla_perdida_s": 2.978,
+        "estricto_confusion_s": 5.775,
+        "nist_falsa_alarma_s": 0.0,
+        "nist_habla_perdida_s": 0.832,
+        "nist_confusion_s": 2.066,
+        "nist_proporcion_evaluada": 0.630413,
+        "der_con_solapamiento": 0.102163,
+        "der_sin_solapamiento": 0.191378,
+        "tiempo_s": 93.768,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_11",
+        "duracion_s": 32.258,
+        "habla_referencia_s": 28.355,
+        "habla_superpuesta_s": 3.557,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.180904,
+        "der_tolerancia": 0.067204,
+        "jer": 0.343576,
+        "estricto_falsa_alarma_s": 2.32,
+        "estricto_habla_perdida_s": 0.399,
+        "estricto_confusion_s": 3.054,
+        "nist_falsa_alarma_s": 0.113,
+        "nist_habla_perdida_s": 0.0,
+        "nist_confusion_s": 1.262,
+        "nist_proporcion_evaluada": 0.641138,
+        "der_con_solapamiento": 0.053416,
+        "der_sin_solapamiento": 0.217477,
+        "tiempo_s": 48.717,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_16",
+        "duracion_s": 91.46,
+        "habla_referencia_s": 67.724,
+        "habla_superpuesta_s": 6.948,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.182237,
+        "der_tolerancia": 0.072823,
+        "jer": 0.203399,
+        "estricto_falsa_alarma_s": 5.389,
+        "estricto_habla_perdida_s": 5.945,
+        "estricto_confusion_s": 2.274,
+        "nist_falsa_alarma_s": 0.0,
+        "nist_habla_perdida_s": 2.927,
+        "nist_confusion_s": 0.338,
+        "nist_proporcion_evaluada": 0.600426,
+        "der_con_solapamiento": 0.040947,
+        "der_sin_solapamiento": 0.214542,
+        "tiempo_s": 101.282,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_14",
+        "duracion_s": 74.929,
+        "habla_referencia_s": 57.492,
+        "habla_superpuesta_s": 1.882,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.193704,
+        "der_tolerancia": 0.065647,
+        "jer": 0.499931,
+        "estricto_falsa_alarma_s": 3.673,
+        "estricto_habla_perdida_s": 0.778,
+        "estricto_confusion_s": 7.05,
+        "nist_falsa_alarma_s": 0.0,
+        "nist_habla_perdida_s": 0.071,
+        "nist_confusion_s": 2.422,
+        "nist_proporcion_evaluada": 0.639607,
+        "der_con_solapamiento": 0.110786,
+        "der_sin_solapamiento": 0.199317,
+        "tiempo_s": 83.905,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_23",
+        "duracion_s": 107.125,
+        "habla_referencia_s": 85.042,
+        "habla_superpuesta_s": 11.742,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.221597,
+        "der_tolerancia": 0.120301,
+        "jer": 0.272059,
+        "estricto_falsa_alarma_s": 7.236,
+        "estricto_habla_perdida_s": 5.908,
+        "estricto_confusion_s": 8.303,
+        "nist_falsa_alarma_s": 0.036,
+        "nist_habla_perdida_s": 1.917,
+        "nist_confusion_s": 4.569,
+        "nist_proporcion_evaluada": 0.560155,
+        "der_con_solapamiento": 0.142352,
+        "der_sin_solapamiento": 0.246985,
+        "tiempo_s": 103.619,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_21",
+        "duracion_s": 116.464,
+        "habla_referencia_s": 88.512,
+        "habla_superpuesta_s": 8.913,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.233811,
+        "der_tolerancia": 0.126238,
+        "jer": 0.47001,
+        "estricto_falsa_alarma_s": 5.019,
+        "estricto_habla_perdida_s": 4.738,
+        "estricto_confusion_s": 13.022,
+        "nist_falsa_alarma_s": 0.0,
+        "nist_habla_perdida_s": 0.937,
+        "nist_confusion_s": 6.061,
+        "nist_proporcion_evaluada": 0.569002,
+        "der_con_solapamiento": 0.217828,
+        "der_sin_solapamiento": 0.23739,
+        "tiempo_s": 125.082,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_01",
+        "duracion_s": 48.523,
+        "habla_referencia_s": 42.454,
+        "habla_superpuesta_s": 4.537,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.239173,
+        "der_tolerancia": 0.183941,
+        "jer": 0.447808,
+        "estricto_falsa_alarma_s": 3.24,
+        "estricto_habla_perdida_s": 0.762,
+        "estricto_confusion_s": 7.237,
+        "nist_falsa_alarma_s": 0.327,
+        "nist_habla_perdida_s": 0.0,
+        "nist_confusion_s": 5.038,
+        "nist_proporcion_evaluada": 0.620693,
+        "der_con_solapamiento": 0.082984,
+        "der_sin_solapamiento": 0.276551,
+        "tiempo_s": 102.078,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_08",
+        "duracion_s": 29.384,
+        "habla_referencia_s": 21.907,
+        "habla_superpuesta_s": 1.137,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.248959,
+        "der_tolerancia": 0.066362,
+        "jer": 0.497333,
+        "estricto_falsa_alarma_s": 1.779,
+        "estricto_habla_perdida_s": 0.727,
+        "estricto_confusion_s": 3.231,
+        "nist_falsa_alarma_s": 0.037,
+        "nist_habla_perdida_s": 0.169,
+        "nist_confusion_s": 0.766,
+        "nist_proporcion_evaluada": 0.63561,
+        "der_con_solapamiento": 0.029024,
+        "der_sin_solapamiento": 0.273038,
+        "tiempo_s": 29.214,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_20",
+        "duracion_s": 68.449,
+        "habla_referencia_s": 53.34,
+        "habla_superpuesta_s": 5.883,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.249346,
+        "der_tolerancia": 0.15825,
+        "jer": 0.453432,
+        "estricto_falsa_alarma_s": 3.56,
+        "estricto_habla_perdida_s": 1.221,
+        "estricto_confusion_s": 9.986,
+        "nist_falsa_alarma_s": 0.0,
+        "nist_habla_perdida_s": 0.0,
+        "nist_confusion_s": 5.869,
+        "nist_proporcion_evaluada": 0.626226,
+        "der_con_solapamiento": 0.079806,
+        "der_sin_solapamiento": 0.29138,
+        "tiempo_s": 67.701,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_05",
+        "duracion_s": 63.172,
+        "habla_referencia_s": 52.471,
+        "habla_superpuesta_s": 7.888,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.262049,
+        "der_tolerancia": 0.132777,
+        "jer": 0.449358,
+        "estricto_falsa_alarma_s": 4.831,
+        "estricto_habla_perdida_s": 2.804,
+        "estricto_confusion_s": 8.182,
+        "nist_falsa_alarma_s": 0.259,
+        "nist_habla_perdida_s": 1.219,
+        "nist_confusion_s": 3.665,
+        "nist_proporcion_evaluada": 0.641727,
+        "der_con_solapamiento": 0.169054,
+        "der_sin_solapamiento": 0.294955,
+        "tiempo_s": 219.305,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_12",
+        "duracion_s": 95.667,
+        "habla_referencia_s": 73.573,
+        "habla_superpuesta_s": 5.278,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.272336,
+        "der_tolerancia": 0.165818,
+        "jer": 0.3709,
+        "estricto_falsa_alarma_s": 4.451,
+        "estricto_habla_perdida_s": 2.606,
+        "estricto_confusion_s": 14.417,
+        "nist_falsa_alarma_s": 0.0,
+        "nist_habla_perdida_s": 0.221,
+        "nist_confusion_s": 7.333,
+        "nist_proporcion_evaluada": 0.577748,
+        "der_con_solapamiento": 0.187571,
+        "der_sin_solapamiento": 0.285438,
+        "tiempo_s": 130.108,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_04",
+        "duracion_s": 52.271,
+        "habla_referencia_s": 43.555,
+        "habla_superpuesta_s": 5.128,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.284185,
+        "der_tolerancia": 0.181825,
+        "jer": 0.491142,
+        "estricto_falsa_alarma_s": 2.804,
+        "estricto_habla_perdida_s": 1.437,
+        "estricto_confusion_s": 9.594,
+        "nist_falsa_alarma_s": 0.0,
+        "nist_habla_perdida_s": 0.041,
+        "nist_confusion_s": 4.757,
+        "nist_proporcion_evaluada": 0.542037,
+        "der_con_solapamiento": 0.105889,
+        "der_sin_solapamiento": 0.331772,
+        "tiempo_s": 73.141,
+        "reutilizada": true
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_03",
+        "duracion_s": 33.931,
+        "habla_referencia_s": 25.14,
+        "habla_superpuesta_s": 0.899,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.293675,
+        "der_tolerancia": 0.148968,
+        "jer": 0.329579,
+        "estricto_falsa_alarma_s": 3.155,
+        "estricto_habla_perdida_s": 1.724,
+        "estricto_confusion_s": 2.768,
+        "nist_falsa_alarma_s": 0.15,
+        "nist_habla_perdida_s": 1.249,
+        "nist_confusion_s": 0.924,
+        "nist_proporcion_evaluada": 0.598871,
+        "der_con_solapamiento": 0.186874,
+        "der_sin_solapamiento": 0.301596,
+        "tiempo_s": 86.22,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_02",
+        "duracion_s": 35.488,
+        "habla_referencia_s": 25.729,
+        "habla_superpuesta_s": 0.116,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 1,
+        "der_estricto": 0.312091,
+        "der_tolerancia": 0.172392,
+        "jer": 0.644277,
+        "estricto_falsa_alarma_s": 1.625,
+        "estricto_habla_perdida_s": 0.556,
+        "estricto_confusion_s": 5.885,
+        "nist_falsa_alarma_s": 0.022,
+        "nist_habla_perdida_s": 0.051,
+        "nist_confusion_s": 2.963,
+        "nist_proporcion_evaluada": 0.681408,
+        "der_con_solapamiento": 0.5,
+        "der_sin_solapamiento": 0.310389,
+        "tiempo_s": 54.346,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_15",
+        "duracion_s": 136.563,
+        "habla_referencia_s": 116.647,
+        "habla_superpuesta_s": 16.642,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.315787,
+        "der_tolerancia": 0.223786,
+        "jer": 0.476965,
+        "estricto_falsa_alarma_s": 11.737,
+        "estricto_habla_perdida_s": 3.106,
+        "estricto_confusion_s": 27.248,
+        "nist_falsa_alarma_s": 0.404,
+        "nist_habla_perdida_s": 1.198,
+        "nist_confusion_s": 15.459,
+        "nist_proporcion_evaluada": 0.571975,
+        "der_con_solapamiento": 0.049754,
+        "der_sin_solapamiento": 0.40433,
+        "tiempo_s": 190.151,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_17",
+        "duracion_s": 55.825,
+        "habla_referencia_s": 44.935,
+        "habla_superpuesta_s": 7.078,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.337416,
+        "der_tolerancia": 0.287495,
+        "jer": 0.511217,
+        "estricto_falsa_alarma_s": 3.427,
+        "estricto_habla_perdida_s": 0.899,
+        "estricto_confusion_s": 13.224,
+        "nist_falsa_alarma_s": 0.212,
+        "nist_habla_perdida_s": 0.388,
+        "nist_confusion_s": 8.808,
+        "nist_proporcion_evaluada": 0.62915,
+        "der_con_solapamiento": 0.028398,
+        "der_sin_solapamiento": 0.452968,
+        "tiempo_s": 59.557,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_24",
+        "duracion_s": 114.389,
+        "habla_referencia_s": 92.929,
+        "habla_superpuesta_s": 8.92,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.339424,
+        "der_tolerancia": 0.271769,
+        "jer": 0.561847,
+        "estricto_falsa_alarma_s": 5.058,
+        "estricto_habla_perdida_s": 4.188,
+        "estricto_confusion_s": 25.324,
+        "nist_falsa_alarma_s": 0.0,
+        "nist_habla_perdida_s": 0.159,
+        "nist_confusion_s": 14.947,
+        "nist_proporcion_evaluada": 0.545749,
+        "der_con_solapamiento": 0.156334,
+        "der_sin_solapamiento": 0.378305,
+        "tiempo_s": 107.732,
+        "reutilizada": false
+      },
+      {
+        "recording_id": "figshare_v2_S26_objects_07",
+        "duracion_s": 53.371,
+        "habla_referencia_s": 41.601,
+        "habla_superpuesta_s": 3.871,
+        "hablantes_referencia": 2,
+        "hablantes_detectados": 2,
+        "der_estricto": 0.34375,
+        "der_tolerancia": 0.200596,
+        "jer": 0.487509,
+        "estricto_falsa_alarma_s": 6.971,
+        "estricto_habla_perdida_s": 3.96,
+        "estricto_confusion_s": 4.7,
+        "nist_falsa_alarma_s": 1.229,
+        "nist_habla_perdida_s": 2.889,
+        "nist_confusion_s": 1.539,
+        "nist_proporcion_evaluada": 0.620184,
+        "der_con_solapamiento": 0.090028,
+        "der_sin_solapamiento": 0.395812,
+        "tiempo_s": 59.395,
+        "reutilizada": false
+      }
+    ],
+    "diagnostico_num_speakers": null
+  },
+  "limitaciones": {
+    "referencia": "frases transcritas por canal, no turnos de habla: puede incluir pausas internas y omitir expresiones breves no transcritas",
+    "acuerdo_entre_anotadores": "no medido",
+    "transcripcion_incompleta": "la transcripción de S26 puede estar incompleta: el README de wavs/ indica que S26-S30 vienen de annotations_incompleto",
+    "hablantes_por_sesion": "2; no evalúa el caso de 3 o más",
+    "dominio": "juego colaborativo (UBA Games), no reuniones",
+    "interpretacion": "sin umbral: los valores son una línea de base de la PoC; la comparación con DER publicados es solo orientativa",
+    "der_tolerancia": "DER de pyannote.metrics con tolerancia NIST de ±0,25 s por borde (no es md-eval)",
+    "indicador_cobertura": {
+      "figshare_v2_S26_objects_01": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0866,
+          "habla_anotada_energia_baja_ventanas": 302,
+          "habla_anotada_ventanas": 3488,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -78.05,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -66.05
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0437,
+          "habla_anotada_energia_baja_ventanas": 53,
+          "habla_anotada_ventanas": 1212,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -74.14,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -62.14
+        }
+      },
+      "figshare_v2_S26_objects_02": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.1902,
+          "habla_anotada_energia_baja_ventanas": 116,
+          "habla_anotada_ventanas": 610,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -77.71,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -65.71
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.1113,
+          "habla_anotada_energia_baja_ventanas": 220,
+          "habla_anotada_ventanas": 1977,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -76.77,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -64.77
+        }
+      },
+      "figshare_v2_S26_objects_03": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0951,
+          "habla_anotada_energia_baja_ventanas": 149,
+          "habla_anotada_ventanas": 1567,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -79.95,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -67.95
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.3038,
+          "habla_anotada_energia_baja_ventanas": 315,
+          "habla_anotada_ventanas": 1037,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -76.84,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -64.84
+        }
+      },
+      "figshare_v2_S26_objects_04": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0862,
+          "habla_anotada_energia_baja_ventanas": 132,
+          "habla_anotada_ventanas": 1532,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -76.69,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -64.69
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0662,
+          "habla_anotada_energia_baja_ventanas": 221,
+          "habla_anotada_ventanas": 3336,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -76.58,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -64.58
+        }
+      },
+      "figshare_v2_S26_objects_05": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0363,
+          "habla_anotada_energia_baja_ventanas": 160,
+          "habla_anotada_ventanas": 4409,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -79.24,
+          "posible_habla_sin_anotar_s": 0.35,
+          "posible_habla_sin_anotar_tramos": [
+            [
+              1.42,
+              1.77
+            ]
+          ],
+          "umbral_dbfs": -67.24
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0791,
+          "habla_anotada_energia_baja_ventanas": 129,
+          "habla_anotada_ventanas": 1631,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -74.4,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -62.4
+        }
+      },
+      "figshare_v2_S26_objects_06": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.1243,
+          "habla_anotada_energia_baja_ventanas": 22,
+          "habla_anotada_ventanas": 177,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -79.27,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -67.27
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0463,
+          "habla_anotada_energia_baja_ventanas": 82,
+          "habla_anotada_ventanas": 1772,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -78.5,
+          "posible_habla_sin_anotar_s": 0.38,
+          "posible_habla_sin_anotar_tramos": [
+            [
+              2.46,
+              2.84
+            ]
+          ],
+          "umbral_dbfs": -66.5
+        }
+      },
+      "figshare_v2_S26_objects_07": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0471,
+          "habla_anotada_energia_baja_ventanas": 157,
+          "habla_anotada_ventanas": 3336,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -80.17,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -68.17
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.2496,
+          "habla_anotada_energia_baja_ventanas": 302,
+          "habla_anotada_ventanas": 1210,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -74.07,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -62.07
+        }
+      },
+      "figshare_v2_S26_objects_08": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.1095,
+          "habla_anotada_energia_baja_ventanas": 53,
+          "habla_anotada_ventanas": 484,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -79.28,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -67.28
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0478,
+          "habla_anotada_energia_baja_ventanas": 87,
+          "habla_anotada_ventanas": 1819,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -78.68,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -66.68
+        }
+      },
+      "figshare_v2_S26_objects_09": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0908,
+          "habla_anotada_energia_baja_ventanas": 742,
+          "habla_anotada_ventanas": 8176,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -75.3,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -63.3
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.1495,
+          "habla_anotada_energia_baja_ventanas": 687,
+          "habla_anotada_ventanas": 4596,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -69.94,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -57.94
+        }
+      },
+      "figshare_v2_S26_objects_10": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.1125,
+          "habla_anotada_energia_baja_ventanas": 137,
+          "habla_anotada_ventanas": 1218,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -77.25,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -65.25
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0525,
+          "habla_anotada_energia_baja_ventanas": 279,
+          "habla_anotada_ventanas": 5316,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -77.2,
+          "posible_habla_sin_anotar_s": 0.35,
+          "posible_habla_sin_anotar_tramos": [
+            [
+              49.29,
+              49.64
+            ]
+          ],
+          "umbral_dbfs": -65.2
+        }
+      },
+      "figshare_v2_S26_objects_11": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0369,
+          "habla_anotada_energia_baja_ventanas": 92,
+          "habla_anotada_ventanas": 2494,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -79.01,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -67.01
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.1727,
+          "habla_anotada_energia_baja_ventanas": 120,
+          "habla_anotada_ventanas": 695,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -71.5,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -59.5
+        }
+      },
+      "figshare_v2_S26_objects_12": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0494,
+          "habla_anotada_energia_baja_ventanas": 165,
+          "habla_anotada_ventanas": 3339,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -78.57,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -66.57
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0589,
+          "habla_anotada_energia_baja_ventanas": 268,
+          "habla_anotada_ventanas": 4548,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -75.07,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -63.07
+        }
+      },
+      "figshare_v2_S26_objects_13": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0554,
+          "habla_anotada_energia_baja_ventanas": 226,
+          "habla_anotada_ventanas": 4083,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -79.27,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -67.27
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0536,
+          "habla_anotada_energia_baja_ventanas": 17,
+          "habla_anotada_ventanas": 317,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -73.56,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -61.56
+        }
+      },
+      "figshare_v2_S26_objects_14": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.1734,
+          "habla_anotada_energia_baja_ventanas": 163,
+          "habla_anotada_ventanas": 940,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -75.99,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -63.99
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0356,
+          "habla_anotada_energia_baja_ventanas": 178,
+          "habla_anotada_ventanas": 4997,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -76.56,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -64.56
+        }
+      },
+      "figshare_v2_S26_objects_15": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.057,
+          "habla_anotada_energia_baja_ventanas": 496,
+          "habla_anotada_ventanas": 8697,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -76.96,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -64.96
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.1405,
+          "habla_anotada_energia_baja_ventanas": 651,
+          "habla_anotada_ventanas": 4635,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -71.59,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -59.59
+        }
+      },
+      "figshare_v2_S26_objects_16": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0746,
+          "habla_anotada_energia_baja_ventanas": 157,
+          "habla_anotada_ventanas": 2105,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -79.6,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -67.6
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.08,
+          "habla_anotada_energia_baja_ventanas": 429,
+          "habla_anotada_ventanas": 5360,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -76.48,
+          "posible_habla_sin_anotar_s": 0.41,
+          "posible_habla_sin_anotar_tramos": [
+            [
+              84.93,
+              85.34
+            ]
+          ],
+          "umbral_dbfs": -64.48
+        }
+      },
+      "figshare_v2_S26_objects_17": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0494,
+          "habla_anotada_energia_baja_ventanas": 155,
+          "habla_anotada_ventanas": 3139,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -78.37,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -66.37
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0894,
+          "habla_anotada_energia_baja_ventanas": 184,
+          "habla_anotada_ventanas": 2058,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -73.81,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -61.81
+        }
+      },
+      "figshare_v2_S26_objects_18": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.1083,
+          "habla_anotada_energia_baja_ventanas": 60,
+          "habla_anotada_ventanas": 554,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -74.75,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -62.75
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0706,
+          "habla_anotada_energia_baja_ventanas": 196,
+          "habla_anotada_ventanas": 2777,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -75.57,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -63.57
+        }
+      },
+      "figshare_v2_S26_objects_19": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0636,
+          "habla_anotada_energia_baja_ventanas": 452,
+          "habla_anotada_ventanas": 7103,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -75.62,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -63.62
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.115,
+          "habla_anotada_energia_baja_ventanas": 452,
+          "habla_anotada_ventanas": 3930,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -71.9,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -59.9
+        }
+      },
+      "figshare_v2_S26_objects_20": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0962,
+          "habla_anotada_energia_baja_ventanas": 161,
+          "habla_anotada_ventanas": 1674,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -75.72,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -63.72
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0473,
+          "habla_anotada_energia_baja_ventanas": 201,
+          "habla_anotada_ventanas": 4246,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -76.18,
+          "posible_habla_sin_anotar_s": 0.93,
+          "posible_habla_sin_anotar_tramos": [
+            [
+              26.0,
+              26.62
+            ],
+            [
+              37.36,
+              37.67
+            ]
+          ],
+          "umbral_dbfs": -64.18
+        }
+      },
+      "figshare_v2_S26_objects_21": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0529,
+          "habla_anotada_energia_baja_ventanas": 392,
+          "habla_anotada_ventanas": 7417,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -79.15,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -67.15
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.1181,
+          "habla_anotada_energia_baja_ventanas": 274,
+          "habla_anotada_ventanas": 2321,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -75.04,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -63.04
+        }
+      },
+      "figshare_v2_S26_objects_22": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.1662,
+          "habla_anotada_energia_baja_ventanas": 346,
+          "habla_anotada_ventanas": 2082,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -77.57,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -65.57
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0468,
+          "habla_anotada_energia_baja_ventanas": 168,
+          "habla_anotada_ventanas": 3590,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -77.68,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -65.68
+        }
+      },
+      "figshare_v2_S26_objects_23": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0694,
+          "habla_anotada_energia_baja_ventanas": 416,
+          "habla_anotada_ventanas": 5998,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -77.84,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -65.84
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.1155,
+          "habla_anotada_energia_baja_ventanas": 425,
+          "habla_anotada_ventanas": 3679,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -75.73,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -63.73
+        }
+      },
+      "figshare_v2_S26_objects_24": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.1136,
+          "habla_anotada_energia_baja_ventanas": 409,
+          "habla_anotada_ventanas": 3600,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -74.97,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -62.97
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0759,
+          "habla_anotada_energia_baja_ventanas": 500,
+          "habla_anotada_ventanas": 6585,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -74.37,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -62.37
+        }
+      },
+      "figshare_v2_S26_objects_25": {
+        "channel1": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.0717,
+          "habla_anotada_energia_baja_ventanas": 503,
+          "habla_anotada_ventanas": 7020,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -79.87,
+          "posible_habla_sin_anotar_s": 0.36,
+          "posible_habla_sin_anotar_tramos": [
+            [
+              59.19,
+              59.55
+            ]
+          ],
+          "umbral_dbfs": -67.87
+        },
+        "channel2": {
+          "calculable": true,
+          "habla_anotada_energia_baja_proporcion": 0.17,
+          "habla_anotada_energia_baja_ventanas": 349,
+          "habla_anotada_ventanas": 2053,
+          "indicio": "solo indicio a revisar; no cambia la referencia",
+          "piso_dbfs": -75.66,
+          "posible_habla_sin_anotar_s": 0,
+          "posible_habla_sin_anotar_tramos": [],
+          "umbral_dbfs": -63.66
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "descripcion": "Clasificación de las etiquetas sin letras (distintas de '#') de las anotaciones de UBA Games para la referencia de evaluación: 'habla' o 'excluir'. Una etiqueta sin clasificar hace fallar la preparación. Cambiar una clasificación cambia 'contenido' del manifiesto y requiere aprobación.",
+  "decisiones": {
+    "2026-11-08": "'-?' (S26 tareas 09 y 18) y '?-' (S26 tarea 12), vocalizaciones breves sin transcribir del participante del canal, se clasifican como 'habla' (aprobado por la responsable de la Etapa 2)."
+  },
+  "etiquetas": {
+    "-?": "habla",
+    "?-": "habla"
+  }
+}

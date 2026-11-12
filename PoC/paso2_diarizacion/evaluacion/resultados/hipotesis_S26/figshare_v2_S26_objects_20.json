@@ -1,0 +1,129 @@
+{
+  "segments": [
+    {
+      "start": 0.959,
+      "end": 8.148,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 8.401,
+      "end": 8.62,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 8.873,
+      "end": 10.747,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 11.877,
+      "end": 15.05,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 15.775,
+      "end": 26.069,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 18.34,
+      "end": 21.952,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 26.558,
+      "end": 32.735,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 27.419,
+      "end": 27.976,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 31.013,
+      "end": 32.06,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 32.903,
+      "end": 33.308,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 33.393,
+      "end": 33.815,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 34.237,
+      "end": 36.025,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 36.194,
+      "end": 36.852,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 36.228,
+      "end": 36.683,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 37.848,
+      "end": 43.906,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 37.932,
+      "end": 38.152,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 44.716,
+      "end": 49.458,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 52.664,
+      "end": 53.66,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 54.588,
+      "end": 58.942,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 59.313,
+      "end": 60.308,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 60.697,
+      "end": 61.287,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 61.608,
+      "end": 65.371,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 65.523,
+      "end": 66.485,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 67.075,
+      "end": 67.649,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 67.7,
+      "end": 68.138,
+      "speaker": "SPEAKER_00"
+    }
+  ]
+}
