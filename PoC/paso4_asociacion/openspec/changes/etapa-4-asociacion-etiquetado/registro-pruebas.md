@@ -76,7 +76,67 @@ El guion manual tiene 8 hablantes. Hugo (`SPEAKER_04`) solo dice «Sí, totalmen
 
 ## Nivel 2 · integración con datos reales (grupo 8)
 
-Pendiente. El 11/11/2026 la GPU de la máquina de referencia (RTX 3050 de 6 GB) estaba ocupada por otro proceso (4,2 GB), así que no se corrieron las Etapas 2 y 3 sobre las 4 grabaciones propias. La Etapa 2 ya tiene resultados en GPU de otra máquina (RTX 4060 Ti, comentario de Bruno en #8), así que la tarea 8.1 se reduce a obtener `diarization.json` y `asr.json` de las grabaciones propias.
+Corrida del 11/11/2026 en la máquina de referencia, con la GPU libre. Las 4 grabaciones propias de la Etapa 1 (`PoC/paso1_captura/grabaciones/`, 16 kHz, mono, PCM16; no se versionan) se copiaron como `audio.wav` en una carpeta por reunión, fuera del repositorio. Las salidas son derivados de esas grabaciones y tampoco se versionan.
+
+| Entorno | Versiones |
+|---|---|
+| GPU | NVIDIA RTX 3050 Laptop 6 GB, driver 580.178.04 |
+| Etapas 2 y 3 (venv propio, Python 3.12.13) | torch 2.8.0+cu128, torchaudio 2.8.0, torchcodec 0.7.0, pyannote.audio 4.0.7, openai-whisper 20250625, FFmpeg 7.1.5 del sistema; instalado con `requirements.txt` + `constraints.txt` de la Etapa 2 y `openai-whisper` con las mismas restricciones |
+| Etapa 4 | `.venv` de la interfaz (Python 3.14.8) |
+| Etapa 5 (solo lectura) | `uv run --python 3.12` con pydantic |
+
+| Etapa | Código | Comando por reunión |
+|---|---|---|
+| 2 | `feature/etapa-2-diarizacion` · `81d8563` | `python diarizar.py CARPETA/audio.wav --salida CARPETA --device cuda` |
+| 3 | `main` · `ac567e2` (`src/STT`, modelo por defecto `medium`) | `python -m STT CARPETA/audio.wav -o CARPETA/asr.json --device cuda` |
+| 4 | `feature/etapa-4-asociacion` · `e1ec0c1` | `python asociar.py CARPETA` |
+| 5 | `main` · `ac567e2` | `minutas.entrada.leer_transcripcion(CARPETA/transcription.json)` |
+
+`verificar_entorno.py --gpu` de la Etapa 2: 0 fallas, 1 aviso (paquetes de Whisper fuera de su lock).
+
+### 8.1 · Etapas 2 y 3 en CUDA
+
+| Reunión | Duración (s) | Etapa 2: hablantes | Etapa 2: segmentos | Etapa 2: tiempo (s) | Etapa 2: VRAM pico (MiB) | Etapa 3: segmentos | Etapa 3: tiempo de proceso (s) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 2026_10_29_20_33_46 | 6,0 | 2 | 3 | 6,9 | 190,9 | 1 | 167,2 * |
+| 2026_10_29_21_19_59 | 30,4 | 2 | 13 | 6,2 | 1628,5 | 9 | 12,7 |
+| 2026_11_03_19_53_47 | 212,5 | 3 | 115 | 18,7 | 1628,8 | 99 | 37,6 |
+| 2026_11_03_19_58_10 | 50,7 | 3 | 34 | 7,5 | 1628,8 | 11 | 13,5 |
+
+\* Incluye la descarga del modelo `medium`. Tiempo de la Etapa 2: `tiempo_s` de `diarization.meta.json`. Tiempo de la Etapa 3: reloj del proceso completo (carga del modelo incluida).
+
+Pruebas de la Etapa 2 en este entorno, para sus tareas 7.3 y 7.4:
+
+| Suite | Resultado |
+|---|---|
+| Nivel 1 | 244 pasan, 2 omitidas (un caso solo para máquinas sin GPU; resultados publicados sin la referencia local de Figshare) |
+| Nivel 2 (`-m slow`, `DIARIZACION_AUDIOS_CPU` con las grabaciones de 30,4 s y 50,7 s y sus reportes de la Etapa 1) | 5 pasan |
+| `-m gpu` | 1 omitida: falta el dataset de Figshare preparado; el test de memoria de su tarea 7.3 todavía no existe |
+
+### 8.2 · Etapa 4 y lectura por la Etapa 5
+
+| Reunión | `asociar.py` | Violaciones de `validar_transcripcion` | Recortes de `asr.json` | Intervenciones leídas por la Etapa 5 |
+|---|---|---:|---:|---:|
+| 2026_10_29_20_33_46 | código 0 | 0 | 0 | 1 |
+| 2026_10_29_21_19_59 | código 0 | 0 | 0 | 9 |
+| 2026_11_03_19_53_47 | código 0 | 0 | 0 | 117 |
+| 2026_11_03_19_58_10 | código 0 | 0 | 0 | 11 |
+
+Contrato al 100 % en las 4 reuniones. La Etapa 5 solo leyó la entrada; no se generaron minutas.
+
+### 8.3 · Marcas y reglas de decisión
+
+Umbrales sin cambiar (`transcription.meta.json`: `hueco_max_s` 0,25 · `overlap_min_s` 0,2 · `segundo_hablante_min` 0,3 · `propio_min` 0,5). Conteos de `conteos` del meta.
+
+| Reunión | Intervenciones | Con `overlap` | Con `ambiguous` | Sin hablante | Palabras | Por D2 (empate) | Por D3 (hueco) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 2026_10_29_20_33_46 | 1 | 1 (100 %) | 0 (0 %) | 0 | 10 | 0 (0 %) | 0 (0 %) |
+| 2026_10_29_21_19_59 | 9 | 1 (11 %) | 1 (11 %) | 0 | 46 | 2 (4,3 %) | 1 (2,2 %) |
+| 2026_11_03_19_53_47 | 117 | 47 (40 %) | 53 (45 %) | 2 | 443 | 104 (23,5 %) | 4 (0,9 %) |
+| 2026_11_03_19_58_10 | 11 | 2 (18 %) | 2 (18 %) | 1 | 72 | 1 (1,4 %) | 1 (1,4 %) |
+| **Total** | **138** | **51 (37 %)** | **56 (41 %)** | **3** | **571** | **107 (18,7 %)** | **6 (1,1 %)** |
+
+La reunión de 212,5 s concentra el 92 % de las marcas `overlap` y el 97 % de las palabras decididas por D2. Sin referencia anotada de estas grabaciones, no se mide si esas decisiones aciertan.
 
 ## Nivel 3 · muestra congelada (grupo 9)
 

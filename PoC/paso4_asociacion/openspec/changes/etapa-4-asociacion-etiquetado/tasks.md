@@ -55,9 +55,9 @@ Orden de D9: esqueleto de punta a punta primero. En cada tarea, primero los test
 
 ## 8. Integración con datos reales (nivel 2)
 
-- [ ] 8.1 Correr las Etapas 2 (#8) y 3 (#9) en la GPU sobre las 4 grabaciones propias; resultados de GPU para las tareas 7.3 y 7.4 de la Etapa 2
-- [ ] 8.2 Etapa 4 sobre esas salidas: contrato al 100 % y lectura por la Etapa 5
-- [ ] 8.3 Medir proporción de intervenciones con `overlap`, con `ambiguous` y de palabras decididas por D2 y D3, sin cambiar umbrales
+- [x] 8.1 Correr las Etapas 2 (#8) y 3 (#9) en la GPU sobre las 4 grabaciones propias; resultados de GPU para las tareas 7.3 y 7.4 de la Etapa 2
+- [x] 8.2 Etapa 4 sobre esas salidas: contrato al 100 % y lectura por la Etapa 5
+- [x] 8.3 Medir proporción de intervenciones con `overlap`, con `ambiguous` y de palabras decididas por D2 y D3, sin cambiar umbrales
 - [ ] 8.4 Validación 7.5 con Luisa
 
 ## 9. Muestra congelada (nivel 3)
