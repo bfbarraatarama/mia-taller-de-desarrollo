@@ -69,10 +69,12 @@ El guion manual tiene 8 hablantes. Hugo (`SPEAKER_04`) solo dice «Sí, totalmen
 | 7 | Autocompletado | Escribir «Ana» en una ficha y «A» en otra | Se ofrece «Ana» | |
 | 8 | Nombres que difieren solo en tildes | «Martín» y «Martin» en dos fichas, y Confirmar | Avisa; con «Volver a las fichas» no se cierra | |
 | 9 | Volver a las fichas | Cerrar con la X y presionar Enter | Vuelven las fichas con los nombres escritos | |
-| 10 | Seguir sin nombres | Cerrar con la X y elegir esa opción | Código de salida 0; `transcription.json` con `name: null` y sin `speakers.json` | |
-| 11 | Cancelar | Cerrar con la X y elegir «Cancelar» | Código de salida 2; no se escribe nada | |
-| 12 | Fragmento en pantalla al confirmar | «Otro fragmento» dos veces en `SPEAKER_00`, nombres y Confirmar | `speakers.json` tiene el tercer fragmento de `SPEAKER_00` y los nombres en `transcription.json` | |
+| 10 | Seguir sin nombres | Cerrar con la X y elegir esa opción | Código de salida 0; `transcription.json` con `name: null` y sin `speakers.json` | Pasa (11/11): código 0, los 9 `name` en `null`, `etiquetado: false` en el meta y se borró el `speakers.json` de la corrida anterior |
+| 11 | Cancelar | Cerrar con la X y elegir «Cancelar» | Código de salida 2; no se escribe nada | Pasa (11/11): código 2; los archivos conservan la hora de la corrida anterior y el SHA-256 de `transcription.json` coincide con el del meta |
+| 12 | Fragmento en pantalla al confirmar | «Otro fragmento» dos veces en `SPEAKER_00`, nombres y Confirmar | `speakers.json` tiene el tercer fragmento de `SPEAKER_00` y los nombres en `transcription.json` | A repetir: la corrida del 11/11 terminó con código 0, pero la del escenario 10 sobrescribió su salida antes de revisarla |
 | 13 | Grabar durante el etiquetado | Desde el panel del paso 1, con las fichas abiertas | Grabar y Procesar no responden | Pendiente: grupo 7 |
+
+Salida del guion manual: 9 intervenciones de 7 etiquetas. La frase de Hugo queda en `SPEAKER_03` (Diego) con `overlap` y `ambiguous`: Hugo tiene ficha pero ninguna intervención propia, porque nunca habla solo.
 
 ## Nivel 2 · integración con datos reales (grupo 8)
 
