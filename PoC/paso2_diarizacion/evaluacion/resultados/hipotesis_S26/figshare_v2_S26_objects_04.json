@@ -1,0 +1,119 @@
+{
+  "segments": [
+    {
+      "start": 0.031,
+      "end": 3.541,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 1.533,
+      "end": 2.208,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 2.984,
+      "end": 3.389,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 4.098,
+      "end": 5.363,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 4.132,
+      "end": 4.402,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 6.342,
+      "end": 6.73,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 6.967,
+      "end": 9.16,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 9.346,
+      "end": 11.962,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 12.097,
+      "end": 13.295,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 14.088,
+      "end": 15.269,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 15.792,
+      "end": 16.771,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 17.092,
+      "end": 19.235,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 19.403,
+      "end": 19.741,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 20.281,
+      "end": 22.643,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 21.175,
+      "end": 22.137,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 22.913,
+      "end": 31.722,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 32.363,
+      "end": 35.165,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 33.73,
+      "end": 35.063,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 35.857,
+      "end": 43.383,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 41.797,
+      "end": 42.286,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 43.501,
+      "end": 45.222,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 46.049,
+      "end": 51.938,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 50.318,
+      "end": 51.314,
+      "speaker": "SPEAKER_01"
+    }
+  ]
+}
