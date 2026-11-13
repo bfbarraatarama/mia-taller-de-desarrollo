@@ -115,12 +115,13 @@ La publicación es todo o nada: si algo falla a mitad, la carpeta vuelve al resu
 "$PY" -m pytest tests -q
 ```
 
-En el `.venv` de la interfaz se saltean 4 pruebas cruzadas: las que usan el código de las Etapas 2 y 5, que todavía no está en `main`. Para correrlas en el entorno 3.12, con esas ramas extraídas en otra carpeta:
+Las pruebas cruzadas usan el código de las Etapas 2 (`PoC/paso2_diarizacion/`) y 5 (`src/minutas/`) del mismo repositorio. En el `.venv` de la interfaz se saltean las 2 de la Etapa 5, porque necesitan `pydantic`. Para correrlas, en el entorno 3.12 (ahí se saltea la de las fichas, porque necesita PySide6):
 
 ```bash
-ETAPA2_DIR=.../PoC/paso2_diarizacion ETAPA5_SRC=.../src \
-  uv run --no-project --python 3.12 --with pytest --with pydantic --with numpy --with scipy --with soundfile \
+uv run --no-project --python 3.12 --with pytest --with pydantic --with numpy --with scipy --with soundfile \
   python -m pytest tests -q
 ```
+
+Para probar contra otra copia de esas etapas: `ETAPA2_DIR=.../PoC/paso2_diarizacion` y `ETAPA5_SRC=.../src`.
 
 Resultados medidos y lista de chequeo manual: `openspec/changes/etapa-4-asociacion-etiquetado/registro-pruebas.md`.
