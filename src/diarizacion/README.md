@@ -1,4 +1,4 @@
-> **Integración:** los módulos actuales se importan como `src.diarizacion` y se invocan con `python -m src.diarizacion.diarizar`; usar un solo `.venv` raíz como indica el README principal. Las instrucciones históricas de instalación individual se conservan como referencia de versiones.
+> **Integración:** los módulos actuales se importan como `src.diarizacion` y se invocan con `python -m src.diarizacion.diarizar`; usar un solo `.venv` raíz como indica el README principal. La instalación general del repositorio sustituye las instalaciones individuales; se preservan los registros históricos de evaluación.
 
 # PoC · Paso 2: diarización (Etapa 2)
 
@@ -33,11 +33,11 @@ Las RTX 3050 de 6 GB del equipo, que son las máquinas de referencia del Hito 3,
 | TorchCodec | 0.7.0 (serie 0.7, la de torch 2.8; carga FFmpeg **4 a 7**) | `requirements.txt` + `constraints.txt` |
 | pyannote.audio | 4.0.7 | `requirements.txt` + `constraints.txt` |
 | pyannote.metrics | 4.2.0 | `requirements.txt` + `constraints.txt` |
-| Resto del árbol (98 paquetes) | versiones exactas | `constraints.txt` |
+| Resto del árbol integrado | restricciones comunes | [`constraints.txt`](../../constraints.txt) |
 | FFmpeg | 7.1.1 *shared* (gyan.dev, Windows) | instalación local (ver abajo) |
 | 7-Zip | 22.01 o posterior | solo para el dataset de Figshare (grupo 6) |
 
-**Por qué hay dos archivos.** `requirements.txt` lista las dependencias directas, sin PyTorch, para que cada máquina elija su wheel (CPU o CUDA). `constraints.txt` fija todo el árbol verificado **sin instalar nada**. Sin él, pip reemplaza PyTorch 2.8 por uno más nuevo de PyPI, porque `pytorch-metric-learning` 3.x pide `torch>=2.14`. `==2.8.0` acepta tanto `2.8.0+cpu` como `2.8.0+cu128`. No cambiar estas versiones sin acuerdo del equipo.
+Las versiones y perfiles se definen en `pyproject.toml` y `constraints.txt` de la raíz; el procedimiento general instala también el resto del proyecto.
 
 ## Instalación desde cero
 
@@ -48,48 +48,19 @@ evaluación que siguen siguen siendo específicos de la etapa.
 
 ### 1. Requisitos del sistema
 
-| | Windows | Linux |
-|---|---|---|
-| Python 3.12 | [python.org](https://www.python.org/downloads/) (incluye el lanzador `py`) | `sudo apt install python3.12 python3.12-venv` · `sudo dnf install python3.12` |
-| FFmpeg 7.1.1 *shared* | paso 4 de esta guía | paso 4 de esta guía |
-| GPU (solo máquinas con GPU) | driver NVIDIA reciente; `nvidia-smi` tiene que responder | ídem |
-| 7-Zip (grupo 6) | [7-zip.org](https://www.7-zip.org/) | `sudo apt install 7zip` · `sudo dnf install p7zip-plugins` |
+Utilizar las dependencias del sistema del [README raíz](../../README.md#entorno-único-para-todo-el-repositorio). El paso 4 de esta guía conserva el procedimiento específico de las bibliotecas compartidas de FFmpeg.
 
-### 2. Crear el entorno
+### 2 y 3. Preparar e instalar el entorno general
+
+Seguir el [README raíz](../../README.md#entorno-único-para-todo-el-repositorio) y elegir el perfil CPU o cu128. En los comandos siguientes, `$py` representa su intérprete (en PowerShell se antepone `&`).
 
 ```powershell
-# Windows (PowerShell)
-py -3.12 -m venv .venv
 $py = ".venv/Scripts/python.exe"
-& $py -m pip install --upgrade pip
 ```
 
 ```bash
-# Linux
-python3.12 -m venv .venv
 py=.venv/bin/python
-$py -m pip install --upgrade pip
 ```
-
-En los comandos de abajo, `$py` es ese Python (en PowerShell se antepone `&`: `& $py ...`).
-
-### 3. Instalar PyTorch (elegir UNA variante) y el resto
-
-```powershell
-# a) Máquina SIN GPU (CPU):
-& $py -m pip install torch==2.8.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cpu
-
-# b) Máquina CON GPU NVIDIA (CUDA 12.8):
-& $py -m pip install torch==2.8.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128
-
-# Después, en las dos, SIEMPRE con -c:
-& $py -m pip install -e . -c src/diarizacion/constraints.txt
-& $py -m pip check                                   # "No broken requirements found."
-& $py -c "import torch; print(torch.__version__, torch.cuda.is_available())"
-#   a) 2.8.0+cpu False        b) 2.8.0+cu128 True
-```
-
-Si `torch.__version__` da algo distinto de `2.8.0+cpu` o `2.8.0+cu128`, pip reemplazó PyTorch: probablemente se instaló sin `-c`. Hay que repetir el paso 3 completo.
 
 ### 4. FFmpeg 7.1.1 *shared*, sin modificar el PATH del sistema
 
@@ -162,14 +133,14 @@ El paso 6 confirma cuál de las dos funcionó.
 | Comprobación | Qué mira |
 |---|---|
 | Python | que sea 3.12.x |
-| Versiones | las dependencias directas y los 98 paquetes del lock contra `constraints.txt`; avisa si hay paquetes fuera del lock |
+| Versiones | dependencias directas y versiones instaladas frente a `constraints.txt` de la raíz; `pip check`; avisos por paquetes adicionales |
 | Importaciones | `torch`, `torchaudio`, `torchcodec`, `pyannote.audio`, `pyannote.metrics`, `dotenv`, `numpy` y `pandas`, sin el aviso "torchcodec is not installed correctly" |
 | CPU/GPU | variante del wheel (`+cpu`/`+cu128`), `torch.cuda.is_available()`, nombre de la GPU; con `--gpu`, falla si no hay CUDA |
 | FFmpeg | la FFmpeg de la consola (informativo); en Windows, que exista `ffmpeg_dll_dir.pth` y que la carpeta tenga `avcodec-*.dll` |
 | Decodificación | TorchCodec decodifica un WAV sintético (y el de `--wav`) y la cantidad de muestras coincide con la cabecera |
 | Token | que haya `HF_TOKEN` en el entorno o en `.env`, sin mostrarlo |
 
-> El entorno de las etapas 2 y 3 se va a compartir con la Etapa 3 (Whisper); su ubicación definitiva está pendiente de acordar con Felipe.
+> El verificador de Etapa 2 conserva una entrada de compatibilidad y ejecuta el verificador general del repositorio, `src.verificar_entorno`. Comprueba también las dependencias de captura, STT, asociación, minutas, datos y notebooks.
 
 ## Uso
 
@@ -481,7 +452,7 @@ La 6.9 se marca completa recién cuando se cumpla la última fila.
 | `segmentos.py` | normalización y acotado de los tiempos |
 | `resultados.py` | carpeta de la reunión, escritura del par, registro del error |
 | `errores.py` | `DiarizacionError` con la etapa del fallo |
-| `requirements.txt` · `constraints.txt` | dependencias directas, exactas y sin PyTorch · *lock* de las 98 versiones verificadas (no instala nada) |
+| `requirements.txt` | referencia al entorno general de la raíz; las restricciones se mantienen en `../../constraints.txt` |
 | `verificar_entorno.py` | comprobación del entorno: versiones, importaciones, CPU/GPU, FFmpeg, decodificación y token |
 | `../../.env.example` | plantilla del `.env` con el token personal de Hugging Face (sin valores reales) |
 | `evaluacion/` | dataset de Figshare (`rar7z.py`, `preparar_figshare.py`, `referencia.py`, `politica_etiquetas.json`, `figshare_test.manifest.json`) y, en el grupo 7, las métricas (`der.py`) |

@@ -1,5 +1,2 @@
-# Dependencias exclusivas de adquisición de datasets.
-# Las dependencias del EDA están en requirements.txt.
-
-huggingface_hub>=0.35,<2
-datacollective>=0.5,<1
+# Dependencias centralizadas. Instalación desde la raíz según README.md.
+-r ../requirements.txt

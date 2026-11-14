@@ -1,5 +1,2 @@
-sounddevice>=0.5
-soundfile>=0.12
-numpy>=1.26
-scipy>=1.13
-pyside6-essentials>=6.8
+# Dependencias centralizadas. Instalación desde la raíz según README.md.
+-r ../../requirements.txt

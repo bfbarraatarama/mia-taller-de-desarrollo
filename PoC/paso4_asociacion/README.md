@@ -18,16 +18,7 @@ Especificación, diseño y tareas: `openspec/changes/etapa-4-asociacion-etiqueta
 
 ## Instalación
 
-| Uso | Necesita |
-|---|---|
-| Asociación por línea de comandos (`asociar.py`) | Python ≥ 3.12, solo biblioteca estándar. Corre en el entorno del orquestador sin instalar nada |
-| Fichas (`fichas.py`) y ejemplo ideal | El `.venv` de la interfaz (`PoC/paso1_captura/requirements.txt`: PySide6, sounddevice, soundfile, NumPy, SciPy). El ejemplo ideal necesita además `espeak-ng` (`sudo dnf install espeak-ng` · `sudo apt install espeak-ng`) |
-| Pruebas | `pytest` (`requirements-dev.txt`) |
-
-```bash
-# desde la raíz del repo, con el .venv de la interfaz ya creado
-uv pip install --python .venv/bin/python -r PoC/paso4_asociacion/requirements-dev.txt
-```
+Utilizar el entorno general del [README raíz](../../README.md#entorno-único-para-todo-el-repositorio), que incluye las pruebas y eSpeak NG para el ejemplo ideal.
 
 ## Uso
 
@@ -40,8 +31,8 @@ PY="$(git rev-parse --show-toplevel)/.venv/bin/python"
 **Sin interfaz** (orquestador): escribe `transcription.json` con `name: null` y no escribe `speakers.json`.
 
 ```bash
-"$PY" asociar.py CARPETA_DE_LA_REUNION
-"$PY" asociar.py --audio A.wav --diarizacion D.json --asr ASR.json --salida CARPETA
+"$PY" -m src.asociacion.asociar CARPETA_DE_LA_REUNION
+"$PY" -m src.asociacion.asociar --audio A.wav --diarizacion D.json --asr ASR.json --salida CARPETA
 ```
 
 | Código de salida | Significado |
@@ -52,15 +43,15 @@ PY="$(git rev-parse --show-toplevel)/.venv/bin/python"
 **Con fichas** (prueba manual; el panel del paso 1 las va a abrir en el grupo 7):
 
 ```bash
-"$PY" fichas.py CARPETA_DE_LA_REUNION   # 0 escribió · 1 falló · 2 cancelado, no escribió nada
+"$PY" -m src.interfaz.fichas CARPETA_DE_LA_REUNION   # 0 escribió · 1 falló · 2 cancelado, no escribió nada
 ```
 
 **Desde Python** (API de D7):
 
 ```python
-from asociacion import asociar
-from etiquetado import aplicar
-from fichas import etiquetar
+from src.asociacion.asociacion import asociar
+from src.asociacion.etiquetado import aplicar
+from src.interfaz.fichas import etiquetar
 
 a = asociar("CARPETA")         # valida y asocia; no escribe nada; lanza AsociacionError
 aplicar(a, etiquetar(a))       # muestra las fichas y escribe según la decisión del usuario
@@ -117,13 +108,6 @@ La publicación es todo o nada: si algo falla a mitad, la carpeta vuelve al resu
 "$PY" -m pytest tests -q
 ```
 
-Las pruebas cruzadas usan el código de las Etapas 2 (`PoC/paso2_diarizacion/`) y 5 (`src/minutas/`) del mismo repositorio. En el `.venv` de la interfaz se saltean las 2 de la Etapa 5, porque necesitan `pydantic`. Para correrlas, en el entorno 3.12 (ahí se saltea la de las fichas, porque necesita PySide6):
-
-```bash
-uv run --no-project --python 3.12 --with pytest --with pydantic --with numpy --with scipy --with soundfile \
-  python -m pytest tests -q
-```
-
-Para probar contra otra copia de esas etapas: `ETAPA2_DIR=.../PoC/paso2_diarizacion` y `ETAPA5_SRC=.../src`.
+Las pruebas cruzadas utilizan `src.diarizacion` y `src.minutas` desde el entorno general. El ejemplo ideal requiere eSpeak NG; las fichas necesitan Qt y PortAudio.
 
 Resultados medidos y lista de chequeo manual: `openspec/changes/etapa-4-asociacion-etiquetado/registro-pruebas.md`.

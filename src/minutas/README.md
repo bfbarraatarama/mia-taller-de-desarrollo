@@ -4,12 +4,7 @@ Módulo independiente de la interfaz y de los modelos de diarización y transcri
 
 ## Dependencias
 
-Python 3.12. Desde la raíz del repositorio, sin `uv`:
-
-```bash
-python3.12 -m venv .venv
-.venv/bin/python -m pip install -r src/minutas/requirements.txt
-```
+Usar el entorno general de Python 3.12 del [README raíz](../../README.md#entorno-único-para-todo-el-repositorio), que incluye los adaptadores y las pruebas de minutas.
 
 Para Ollama, instalar el servicio local y descargar previamente el modelo: `ollama pull qwen2.5:7b`. Para Bedrock, configurar las credenciales habituales de `boto3` y `AWS_REGION` en el entorno o en el `.env` de la raíz; no guardar credenciales en Git. También se admite `MINUTAS_ENV_FILE` para indicar otro `.env`. Una referencia sin resolver `op://` no se carga como credencial.
 

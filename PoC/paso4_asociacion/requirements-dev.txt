@@ -1,1 +1,2 @@
-pytest>=8
+# Dependencias centralizadas. Instalación desde la raíz según README.md.
+-r ../../requirements.txt

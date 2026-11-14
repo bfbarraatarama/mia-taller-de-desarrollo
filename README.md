@@ -12,29 +12,124 @@ se conservaron al migrar captura a `src/captura`, diarización a `src/diarizacio
 Whisper a `src/stt`, asociación a `src/asociacion` y minutas a `src/minutas`.
 Los contenidos históricos del Hito 2 y los documentos de diseño continúan separados.
 
-### Entorno único
+### Entorno único para todo el repositorio
 
-Se requiere **Python 3.12**, FFmpeg en `PATH` (con bibliotecas compartidas disponibles
-para TorchCodec) y, para la diarización real, acceso aceptado al modelo
-`pyannote/speaker-diarization-community-1` en Hugging Face. La variante CUDA debe
-ser compatible con el controlador instalado. No se usa `uv`.
+Python 3.12 y un solo `.venv` en la raíz. La instalación incluye la PoC, las
+pruebas, las evaluaciones, los notebooks y la adquisición y procesamiento de datos.
+`pyproject.toml` declara las dependencias directas, `constraints.txt` fija las
+versiones conocidas y `requirements.txt` reúne la instalación completa. Elegir
+un único perfil (`requirements-cpu.txt` o `requirements-cu128.txt`), según el equipo.
+Los archivos de requisitos de las etapas remiten al requisito general; no crear
+entornos adicionales ni utilizar `uv`.
+
+#### Ubuntu 24.04 (escritorio con PipeWire)
+
+Desde la raíz del repositorio. Habilitar los repositorios Universe y Multiverse
+si no están disponibles (el complemento RAR de 7-Zip está en Multiverse).
 
 ```bash
-python3.12 -m venv .venv
-.venv/bin/python -m pip install --upgrade pip setuptools wheel
-# Elegir SOLO una variante de PyTorch 2.8 y TorchAudio 2.8:
-.venv/bin/python -m pip install torch==2.8.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cpu
-# Para CUDA 12.8, sustituir el índice anterior por https://download.pytorch.org/whl/cu128
-.venv/bin/python -m pip install -e '.[test]' -c src/diarizacion/constraints.txt
-.venv/bin/python -m pip check
-.venv/bin/python -m src.diarizacion.verificar_entorno
-.venv/bin/python -m src.interfaz
+sudo apt install --no-remove python3.12 python3.12-venv ffmpeg libportaudio2 \
+    pulseaudio-utils pipewire-bin pipewire-jack espeak-ng 7zip 7zip-rar \
+    libarchive13t64 libxcb-cursor0
+
+test -d .venv || python3.12 -m venv .venv
+.venv/bin/python --version
 ```
 
-En Windows crear con `py -3.12 -m venv .venv` y utilizar `.venv\Scripts\python.exe`
-en lugar de `.venv/bin/python`. Para la salida Qt en un escritorio Linux se necesita
-un servidor gráfico, dispositivo de audio y bibliotecas de PortAudio. El grabador
-mezcla micrófono y sistema en una pista; la integración no crea un sistema multitrack.
+Elegir **uno** de estos comandos (CUDA 12.8 requiere NVIDIA y un controlador compatible):
+
+```bash
+.venv/bin/python -m pip install -r requirements-cpu.txt
+```
+
+```bash
+.venv/bin/python -m pip install -r requirements-cu128.txt
+```
+
+`ffmpeg` y `ffprobe` procesan audio; TorchCodec 0.7 requiere FFmpeg compartido
+4 a 7 (Ubuntu 24.04 incluye 6.1). PortAudio y PipeWire/JACK permiten la captura y
+reproducción. eSpeak NG genera el ejemplo sintético de asociación; 7-Zip con RAR y
+libarchive permiten verificar y preparar los datos de evaluación y del Hito 2.
+No reemplazar una instalación de audio operativa por otro servidor de sonido.
+
+`pw-jack` expone JACK al proceso sin cambiar la configuración global. La captura
+automática necesita una sesión PipeWire activa y fuentes disponibles; no basta
+con instalar las bibliotecas.
+
+#### Windows 11 (PowerShell)
+
+Instalar Python 3.12 de 64 bits, [7-Zip](https://www.7-zip.org/) y
+[eSpeak NG](https://github.com/espeak-ng/espeak-ng/releases), con sus ejecutables
+accesibles en PATH (7-Zip también admite `SIETE_ZIP` o su ubicación estándar).
+Preparar FFmpeg compartido 7.1.1 y registrar sus DLL según el
+[procedimiento de diarización](src/diarizacion/README.md#4-ffmpeg-711-shared-sin-modificar-el-path-del-sistema),
+además de exponer `ffmpeg` y `ffprobe` al PATH de la sesión. Para libarchive,
+instalar [MSYS2](https://www.msys2.org/) y, desde su terminal UCRT64, ejecutar
+`pacman -S mingw-w64-ucrt-x86_64-libarchive`. En PowerShell, si MSYS2 se instaló
+en `C:\msys64`, agregar `$env:Path += ";C:\msys64\ucrt64\bin"` para esa sesión.
+El cargador reconoce `archive`, `libarchive` y `libarchive-13` en Windows;
+`src.verificar_entorno` comprueba que la biblioteca pueda cargarse.
+La instalación nativa de libarchive y la reproducción completa del Hito 2 en
+Windows todavía requieren validación. La captura utiliza fuentes manuales de
+micrófono y loopback; configurar un dispositivo de retorno de audio del sistema.
+
+```powershell
+if (-not (Test-Path .venv)) { py -3.12 -m venv .venv }
+.venv\Scripts\python.exe --version
+```
+
+Elegir **uno** de estos comandos:
+
+```powershell
+.venv\Scripts\python.exe -m pip install -r requirements-cpu.txt
+```
+
+```powershell
+.venv\Scripts\python.exe -m pip install -r requirements-cu128.txt
+```
+
+Completar el procedimiento de DLL de FFmpeg después de crear el entorno y antes de verificarlo.
+
+El entorno integrado se basa en las versiones verificadas en Linux CUDA; las
+restricciones no constituyen un lock multiplataforma exhaustivo ni una garantía
+de instalación limpia en Windows. Los wheels de PyTorch fijan sus dependencias
+específicas de plataforma; el verificador informa distribuciones adicionales.
+
+#### Modelos, credenciales y datos
+
+- Instalar [Ollama](https://ollama.com/download), iniciar el servicio local y ejecutar
+  `ollama pull qwen2.5:7b`. Comprobar el modelo con `ollama list` en el servidor local.
+- Aceptar las condiciones de `pyannote/speaker-diarization-community-1` en Hugging Face
+  y completar `HF_TOKEN` en una copia local de `.env.example` llamada `.env` (no
+  sobrescribir una configuración existente). Pyannote y Whisper descargan sus pesos
+  al primer uso cuando no están en caché.
+- Para los experimentos autorizados con Bedrock, seguir
+  [la configuración de la Etapa 5](src/minutas/README.md); no versionar credenciales.
+- Para reproducir el EDA y las evaluaciones con datos reales, seguir las instrucciones
+  de [Hito 2](hito-2/README.md) y [diarización](src/diarizacion/README.md). Los originales
+  restringidos y las autorizaciones individuales no se obtienen por instalar paquetes.
+- Abrir notebooks desde el entorno raíz mediante `.venv/bin/python -m jupyter lab`
+  (Windows: `.venv\Scripts\python.exe -m jupyter lab`). Usar el kernel de ese entorno.
+
+#### Verificación y ejecución
+
+Después de instalar los paquetes y preparar las herramientas de sistema y los modelos:
+
+```bash
+# Linux (agregar --gpu al verificador si se eligió cu128):
+pw-jack .venv/bin/python -m src.verificar_entorno
+pw-jack .venv/bin/python -m src.interfaz
+```
+
+```powershell
+# Windows (agregar --gpu al verificador si se eligió cu128):
+.venv\Scripts\python.exe -m src.verificar_entorno
+.venv\Scripts\python.exe -m src.interfaz
+```
+
+El verificador comprueba versiones, `pip check`, importaciones, bibliotecas, herramientas
+locales y la plataforma gráfica de Qt cuando hay sesión; no descarga modelos ni ejecuta
+inferencias ni solicita credenciales remotas. No sustituye las pruebas funcionales.
 
 ### Ejecución programática
 
@@ -104,6 +199,7 @@ reales, credenciales, WAV personales y cachés no deben versionarse.
 .venv/bin/python -m pytest -q PoC/paso4_asociacion/tests
 .venv/bin/python -m pytest -q src/minutas/tests src/stt/test_asr_core.py
 .venv/bin/python -m pytest -q tests/integracion
+.venv/bin/python -m pytest -q hito-2/tests
 ```
 
 Las pruebas de diarización marcadas `slow`, `calidad` o `gpu` deben invocarse

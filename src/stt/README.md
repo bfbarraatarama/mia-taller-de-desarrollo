@@ -11,11 +11,7 @@ The whole audio is transcribed once with Whisper (`language="es"`); it is not sp
 
 ## Setup
 
-From the repository root (PyTorch as in Stage 2, FFmpeg on the system):
-
-```bash
-pip install -r src/stt/requirements_asr.txt
-```
+Use the complete repository environment (CPU or cu128) described in the [root README](../../README.md#entorno-único-para-todo-el-repositorio). It includes Whisper, the data dependencies and tests. FFmpeg is a system dependency.
 
 ## Contract
 

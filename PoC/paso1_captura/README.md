@@ -1,4 +1,4 @@
-> **Nota de integración (posterior a Hito 3):** el código de producción se encuentra ahora bajo `src/`. Las rutas y comandos de este documento describen la etapa histórica antes de su integración. Consultar el README raíz para ejecutar la PoC actual.
+> **Nota de integración:** el código de producción se encuentra bajo `src/`. Los registros de diseño y evaluación históricos se conservan; para la instalación se utiliza el entorno general del README raíz.
 
 # PoC · Paso 1: captura de reuniones
 
@@ -6,21 +6,16 @@ Graba el micrófono y el audio del sistema (la voz de los demás participantes) 
 
 ## Instalación
 
-Desde la raíz del repo, con [uv](https://docs.astral.sh/uv/) y Python 3.14:
-
-```bash
-uv venv --python 3.14 .venv          # solo si no existe
-uv pip install --python .venv/bin/python -r PoC/paso1_captura/requirements.txt
-```
+Utilizar el entorno general de Python 3.12 descrito en el [README raíz](../../README.md#entorno-único-para-todo-el-repositorio). Allí se incluyen las dependencias de captura y los requisitos de PipeWire/JACK.
 
 ## Uso
 
 ```bash
-.venv/bin/python PoC/paso1_captura/interfaz.py                         # interfaz gráfica
-.venv/bin/python PoC/paso1_captura/captura.py --listar                 # ver dispositivos y detección
-.venv/bin/python PoC/paso1_captura/captura.py --duracion 10 --tono     # prueba de 10 s con tono de 1 kHz
-.venv/bin/python PoC/paso1_captura/captura.py                          # grabar hasta Ctrl+C
-.venv/bin/python PoC/paso1_captura/captura.py --mic "USB:0" --sistema "CABLE Output:0,1"   # modo manual
+pw-jack .venv/bin/python -m src.interfaz
+pw-jack .venv/bin/python -m src.captura.captura --listar
+pw-jack .venv/bin/python -m src.captura.captura --duracion 10 --tono
+pw-jack .venv/bin/python -m src.captura.captura
+.venv/bin/python -m src.captura.captura --mic "USB:0" --sistema "CABLE Output:0,1"
 ```
 
 | Modo | Cómo elige las fuentes | Sistemas |
@@ -32,7 +27,7 @@ En la interfaz: elegir las fuentes (Automático → Detectar, o Manual), presion
 
 ## Salida
 
-En `PoC/paso1_captura/grabaciones/` (configurable), con el nombre del momento en que empezó la grabación:
+En `resultados/grabaciones/` (configurable), con el nombre del momento en que empezó la grabación:
 
 | Archivo | Contenido |
 |---|---|
