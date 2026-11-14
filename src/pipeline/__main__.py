@@ -5,9 +5,11 @@ import argparse
 import json
 import signal
 import sys
+import wave
 from pathlib import Path
 
 from ..asociacion.etiquetado import Decision, Etiquetado
+from ..asociacion.errores import AsociacionError
 from ..minutas.contratos import SECCIONES_MINUTA
 from ..minutas.generacion import ConfiguracionMinutas
 from ..minutas.modelos import MODELO_PREDETERMINADO, listar_modelos
@@ -83,7 +85,7 @@ def main(argv: list[str] | None = None) -> int:
             procesar_reunion(solicitud, emisor=_emisor)
     except Cancelado:
         return 130
-    except (ValueError, OSError, RuntimeError, PermissionError, KeyError, TypeError) as error:
+    except (ValueError, OSError, RuntimeError, KeyError, TypeError, AsociacionError, wave.Error, EOFError) as error:
         print(f'{type(error).__name__}: {error}', file=sys.stderr)
         return 1
     return 0

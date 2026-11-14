@@ -316,6 +316,10 @@ class PanelProcesamiento(QGroupBox):
             else:
                 barra.setRange(0, 1000)
                 barra.setValue(int(fraccion * 1000))
+        elif estado == "esperando_identificacion":
+            ico.setPixmap(icono_estado(None, 18).pixmap(18, 18))
+            barra.setRange(0, 1000)
+            barra.setValue(0)
         elif estado in ("ok", "error"):
             ico.setPixmap(icono_estado(estado == "ok", 18).pixmap(18, 18))
             barra.setRange(0, 1000)
@@ -411,6 +415,9 @@ class PanelProcesamiento(QGroupBox):
                 self._mostrar_error('No se puede autorizar la continuación.', str(error))
                 return
         try:
+            consulta = consultar_reunion(self.resultados)
+            if not {'diarization.json', 'asr.json'} <= consulta['artefactos'].keys():
+                raise ValueError('Los insumos para identificación no están vigentes.')
             decision = etiquetar(asociar(self.resultados), self)
         except Exception as error:
             self._mostrar_error("No se pudieron abrir las fichas.", str(error))
@@ -435,7 +442,7 @@ class PanelProcesamiento(QGroupBox):
         self.resultados = Path(elegida)
         self.ed_resultados.setText(elegida)
         if consulta['estado'] in ('esperando_identificacion', 'cancelado', 'fallido') and \
-           (self.resultados / 'diarization.json').exists() and (self.resultados / 'asr.json').exists():
+           {'diarization.json', 'asr.json'} <= consulta['artefactos'].keys():
             self._continuar_con_fichas()
         else:
             self.lbl.setText(f"Reunión abierta: {consulta['estado']}.")
@@ -504,10 +511,10 @@ class PanelProcesamiento(QGroupBox):
             self._actualizar()
             QTimer.singleShot(0, lambda: self._continuar_con_fichas(reconfirmar=False))
             return
-        if fin.get("estado") == "completa" and codigo == 0:
+        if fin.get("estado") == "completado" and codigo == 0:
             self.lbl.setText("Minuta lista.")
             self.mensaje.emit(f"Minuta lista → {self.resultados}")
-        elif self.estado.get("cancelado"):
+        elif fin.get("estado") == "cancelado" or self.estado.get("cancelado"):
             self.lbl.setText("Procesamiento cancelado; quedan los resultados de las etapas terminadas.")
             self.mensaje.emit("Procesamiento cancelado.")
         else:
@@ -524,8 +531,12 @@ class PanelProcesamiento(QGroupBox):
     def _ver(self, nombre: str):
         if self.resultados is None:
             return
-        consulta = consultar_reunion(self.resultados)
-        if nombre not in consulta['artefactos']:
+        try:
+            consulta = consultar_reunion(self.resultados)
+        except (OSError, ValueError, KeyError) as error:
+            self._mostrar_error("No se pudo verificar este resultado.", str(error))
+            return
+        if self.procesando or nombre not in consulta['artefactos']:
             self._mostrar_error("Este resultado no está vigente.", "Comprobá el estado de la reunión.")
             return
         ventana = QDialog(self)
@@ -543,6 +554,15 @@ class PanelProcesamiento(QGroupBox):
 
     def _abrir(self, nombre: str | None):
         if self.resultados is not None:
+            if nombre:
+                try:
+                    artefactos = consultar_reunion(self.resultados)['artefactos']
+                except (OSError, ValueError, KeyError) as error:
+                    self._mostrar_error("No se pudo verificar este resultado.", str(error))
+                    return
+                if self.procesando or nombre not in artefactos:
+                    self._mostrar_error("Este resultado no está vigente.", "Comprobá el estado de la reunión.")
+                    return
             destino = self.resultados / nombre if nombre else self.resultados
             if destino.exists():
                 QDesktopServices.openUrl(QUrl.fromLocalFile(str(destino)))
@@ -569,8 +589,8 @@ class PanelProcesamiento(QGroupBox):
                 archivos_validos = consultar_reunion(r)['artefactos']
             except (OSError, ValueError, KeyError):
                 pass
-        self.btn_minuta.setEnabled(MINUTA in archivos_validos)
-        self.btn_transcripcion.setEnabled(TRANSCRIPCION in archivos_validos)
+        self.btn_minuta.setEnabled(not procesando and MINUTA in archivos_validos)
+        self.btn_transcripcion.setEnabled(not procesando and TRANSCRIPCION in archivos_validos)
         self.btn_abrir_reunion.setEnabled(not procesando and self.puede_procesar)
         self.btn_fichas.setEnabled(not procesando and self.puede_procesar and
             'diarization.json' in archivos_validos and 'asr.json' in archivos_validos)

@@ -167,7 +167,8 @@ def _guardar_resultados(
 
         for numero, (destino, contenido) in enumerate(contenidos):
             preparado = carpeta / f"nuevo-{numero}"
-            preparado.write_text(contenido, encoding="utf-8")
+            # El SHA-256 del JSON se calcula sobre UTF-8 con saltos LF.
+            preparado.write_text(contenido, encoding="utf-8", newline="\n")
             preparado.chmod(0o600)
             preparados[destino] = preparado
             if destino.exists():

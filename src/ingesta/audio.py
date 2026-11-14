@@ -59,7 +59,8 @@ def _publicar_json(ruta: Path, contenido: dict) -> None:
         temporal.unlink(missing_ok=True)
 
 
-def ingestar(fuentes: Sequence[str | Path], reunion: str | Path) -> dict:
+def ingestar(fuentes: Sequence[str | Path], reunion: str | Path, *,
+             identidades: Sequence[Path] | None = None, hashes: Sequence[str] | None = None) -> dict:
     """Crea un solo audio.wav y manifiesto, conservando el orden recibido.
 
     No modifica la fuente. Si la fuente ya se encuentra en el directorio de reunión,
@@ -69,6 +70,9 @@ def ingestar(fuentes: Sequence[str | Path], reunion: str | Path) -> dict:
         raise ValueError('La reunión requiere al menos un archivo de audio.')
     carpeta = Path(reunion).resolve()
     fuentes_absolutas = [Path(x).expanduser().resolve(strict=True) for x in fuentes]
+    identidades = list(identidades) if identidades is not None else fuentes_absolutas
+    if len(identidades) != len(fuentes_absolutas) or (hashes is not None and len(hashes) != len(fuentes_absolutas)):
+        raise ValueError('Las identidades y hashes deben corresponder a todas las fuentes.')
     if any(not f.is_file() for f in fuentes_absolutas):
         raise ValueError('Todas las entradas deben ser archivos.')
     if any(f == carpeta / ARCHIVO_AUDIO for f in fuentes_absolutas):
@@ -81,11 +85,17 @@ def ingestar(fuentes: Sequence[str | Path], reunion: str | Path) -> dict:
     acumulado = 0
     with tempfile.TemporaryDirectory(dir=carpeta, prefix='.ingesta-') as temporal:
         for i, original in enumerate(fuentes_absolutas, start=1):
+            identidad = identidades[i - 1]
             hash_original = sha256(original)
+            if hashes is not None and hash_original != hashes[i - 1]:
+                raise IOError(f'Cambió la fuente antes de normalizar: {identidad.name}')
             if original.is_relative_to(carpeta):
                 fuente = original
             else:
-                fuente = directorio_fuentes / f'{i:03d}-{original.name}'
+                fuente = directorio_fuentes / f'{i:03d}-{identidad.name}'
+                # No destruir una copia que aún puede ser necesaria para recuperar otro orden.
+                if fuente.exists() and sha256(fuente) != hash_original:
+                    fuente = directorio_fuentes / f'{i:03d}-{hash_original}{identidad.suffix}'
                 if not fuente.exists() or sha256(fuente) != hash_original:
                     parcial = Path(temporal) / f'{i:03d}.fuente'
                     shutil.copyfile(original, parcial)
@@ -101,9 +111,11 @@ def ingestar(fuentes: Sequence[str | Path], reunion: str | Path) -> dict:
                 raise RuntimeError('FFmpeg no está instalado o no figura en PATH.') from exc
             if resultado.returncode:
                 raise ValueError(f'No se pudo normalizar {fuente.name}: {resultado.stderr[-1600:]}')
+            if sha256(fuente) != hash_original:
+                raise IOError(f'Cambió la fuente durante la normalización: {identidad.name}')
             muestras = verificar_wav(normalizado)
             partes.append(normalizado)
-            audios.append({'orden': i, 'fuente': str(fuente.relative_to(carpeta)), 'nombre_original': original.name,
+            audios.append({'orden': i, 'fuente': str(fuente.relative_to(carpeta)), 'nombre_original': identidad.name, 'ruta_original': str(identidad),
                            'sha256_fuente': hash_original, 'muestras': muestras,
                            'inicio_muestra': acumulado, 'fin_muestra': acumulado + muestras,
                            'inicio_s': acumulado / FS, 'fin_s': (acumulado + muestras) / FS})

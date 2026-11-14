@@ -185,7 +185,12 @@ Una ruta de reunión explícita por API o GUI tiene precedencia.
 Cada reunión mantiene un solo `workflow.json` sobrescrito al
 cambiar de etapa, `ingesta.json`, los originales necesarios y los artefactos
 con sus nombres contractuales. Los eventos de progreso son transitorios.
-Los resultados previos solo se reutilizan si coinciden sus hashes y parámetros.
+Los resultados previos se reutilizan si son íntegros, coinciden sus parámetros
+pertinentes y sus dependencias están vigentes. La consulta distingue la ejecución
+activa, los checkpoints vigentes y la duración del audio. En `tiempos` se registra
+la latencia activa de la solicitud y, cuando se puede medir, la espera humana;
+los tiempos desconocidos se representan con `null`. Los detalles y la
+fundamentación del diseño se encuentran en [Orquestación de reuniones](docs/orquestacion.md).
 Las salidas están excluidas de Git. El mecanismo de publicación por archivo no
 promete transacciones atómicas de varios archivos ante un corte eléctrico.
 

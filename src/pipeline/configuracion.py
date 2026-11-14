@@ -31,5 +31,5 @@ class SolicitudReunion:
             raise ValueError('Dispositivo STT inválido.')
         if not self.modelo_stt or not self.modelo_stt.strip():
             raise ValueError('El modelo Whisper debe ser no vacío.')
-        if self.num_speakers is not None and (isinstance(self.num_speakers, bool) or self.num_speakers < 1):
+        if self.num_speakers is not None and (type(self.num_speakers) is not int or self.num_speakers < 1):
             raise ValueError('num_speakers debe ser entero positivo.')
