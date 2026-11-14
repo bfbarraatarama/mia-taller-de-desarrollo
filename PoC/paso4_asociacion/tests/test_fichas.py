@@ -15,10 +15,10 @@ import pytest
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 QtWidgets = pytest.importorskip("PySide6.QtWidgets", reason="falta PySide6 (entorno de la interfaz)")
 
-from asociacion import asociar  # noqa: E402
+from src.asociacion.asociacion import asociar  # noqa: E402
 from conftest import crear_reunion, segmento  # noqa: E402
-from etiquetado import Cierre, ModeloFichas  # noqa: E402
-from fichas import DialogoFichas, Reproductor, tiempo_legible  # noqa: E402
+from src.asociacion.etiquetado import Cierre, ModeloFichas  # noqa: E402
+from src.interfaz.fichas import DialogoFichas, Reproductor, tiempo_legible  # noqa: E402
 
 
 @pytest.fixture(scope="module")

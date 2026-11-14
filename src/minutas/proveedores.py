@@ -6,8 +6,9 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Protocol
+from urllib.parse import urlparse
 
-from rutas import rutas_entorno
+from ..rutas import rutas_entorno
 from .modelos import obtener_modelo
 
 
@@ -57,6 +58,31 @@ def _cargar_entorno() -> None:
                 valor = valor[1:-1]
             if not valor.startswith("op://"):
                 os.environ.setdefault(clave, valor)
+
+
+def destino_modelo(modelo: str) -> str:
+    """Destino efectivo: no confundir cliente Ollama con servidor local."""
+    definicion = obtener_modelo(modelo)
+    if definicion.proveedor == 'bedrock':
+        return 'bedrock'
+    _cargar_entorno()
+    host = os.environ.get('OLLAMA_HOST', 'http://localhost:11434')
+    url = urlparse(host if '://' in host else f'http://{host}')
+    return 'ollama_local' if url.hostname in {'localhost', '127.0.0.1', '::1'} else 'ollama_externo'
+
+
+def liberar_modelo_ollama(nombre: str) -> None:
+    """Al finalizar una minuta completa, solicitar descarga sin demorar el cierre.
+
+    No interfiere con otras cargas de Ollama. Es best effort y no invalida
+    una minuta publicada si el servidor se desconectó tras responder.
+    """
+    try:
+        import ollama
+        cliente = ollama.Client(host=os.environ.get('OLLAMA_HOST', 'http://localhost:11434'), timeout=2)
+        cliente.generate(model=nombre, prompt='', keep_alive=0)
+    except Exception:
+        pass
 
 
 class ClienteOllama:
@@ -171,6 +197,8 @@ def construir_cliente(
         raise ValueError("El uso de Bedrock requiere permitir_remoto=True.")
 
     _cargar_entorno()
+    if destino_modelo(modelo) == 'ollama_externo' and not permitir_remoto:
+        raise ValueError("Ollama en servidor externo requiere permitir_remoto=True.")
 
     if definicion.proveedor == "bedrock":
         return ClienteBedrock(

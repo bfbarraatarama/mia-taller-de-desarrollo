@@ -79,3 +79,6 @@ PoC/paso4_asociacion/**/*.wav
 PoC/paso4_asociacion/ejemplo_ideal/generado/
 # Pruebas de concepto locales
 feli.md
+
+# Resultados locales de reuniones (no versionar audios, transcripciones ni minutas privadas)
+resultados/

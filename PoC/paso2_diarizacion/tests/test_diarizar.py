@@ -9,10 +9,10 @@ import weakref
 
 import pytest
 
-import diarizar as modulo
-from contrato import validar_diarizacion, validar_par
-from errores import DiarizacionError
-from resultados import NOMBRE_ERROR, NOMBRE_JSON, NOMBRE_META
+from src.diarizacion import diarizar as modulo
+from src.diarizacion.contrato import validar_diarizacion, validar_par
+from src.diarizacion.errores import DiarizacionError
+from src.diarizacion.resultados import NOMBRE_ERROR, NOMBRE_JSON, NOMBRE_META
 
 TURNOS = [(0.5, 4.2, "SPEAKER_00"), (3.9, 8.1, "SPEAKER_01"), (8.5, 9.9999, "SPEAKER_00")]
 

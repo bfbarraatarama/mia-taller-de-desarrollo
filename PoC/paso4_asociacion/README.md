@@ -1,3 +1,5 @@
+> **Nota de integración (posterior a Hito 3):** el código de producción se encuentra ahora bajo `src/`. Las rutas y comandos de este documento describen la etapa histórica antes de su integración. Consultar el README raíz para ejecutar la PoC actual.
+
 # PoC · Etapa 4: asociación y etiquetado de hablantes
 
 Une `diarization.json` (Etapa 2) y `asr.json` (Etapa 3) sobre el mismo `audio.wav` en `transcription.json`: una lista de intervenciones con hablante, nombre, texto, tiempos y marcas de confianza, que la Etapa 5 lee sin transformaciones. Con interfaz, muestra una ficha por hablante para escuchar un fragmento y escribir su nombre.

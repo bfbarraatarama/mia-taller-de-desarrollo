@@ -142,6 +142,18 @@ Se registran versiones, orden de los archivos, notas y resultados. WER, DER y JE
 
 **Consecuencias.** Se asume correr por etapas (riesgo 1) y que los errores pueden acumularse (riesgo 2). Se resignan modelos más grandes y APIs.
 
+> **Actualización posterior (13/11/2026; integración de la PoC, sin modificar el tag de Hito 3).**
+> La exclusión histórica de APIs remotas se mantiene aquí como decisión documentada
+> en la definición original. Para la implementación experimental se acordó habilitar
+> modelos de minutas de Ollama y Bedrock. **Todos** se emplean como sustitutos
+> experimentales y no como modelos definitivos del producto. Bedrock permite ensayar
+> modelos cuyo requerimiento de cómputo excede el hardware disponible. No se evalúa
+> equivalencia de calidad, velocidad o requisitos locales de esa sustitución; la
+> motivación de confidencialidad del producto no cambia. Cada transferencia de
+> transcripción a un destino externo requiere consentimiento explícito y se realiza
+> únicamente con datos apropiados para esta PoC. La evaluación debe registrar qué
+> modelo y modalidad se usaron, sin atribuir al hardware local las latencias remotas.
+
 #### 3.1.2 Los datos
 
 **Contexto.** El Hito 2 dejó datos para evaluar módulos, pero ninguna reunión integral en castellano (V5 = 0/10).

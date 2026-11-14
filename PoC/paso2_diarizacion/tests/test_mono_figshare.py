@@ -6,7 +6,7 @@ import wave
 import numpy as np
 import pytest
 
-from entrada import validar_audio
+from src.diarizacion.entrada import validar_audio
 from evaluacion.preparar_figshare import FORMULA_MONO, convertir_a_mono, mezclar_mono
 from figshare_sintetico import escribir_wav
 

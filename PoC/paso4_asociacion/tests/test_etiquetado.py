@@ -4,11 +4,11 @@ from __future__ import annotations
 
 import pytest
 
-from asociacion import asociar
+from src.asociacion.asociacion import asociar
 from conftest import crear_reunion, leer, segmento, sha256
-from contrato import validar_speakers
-from etiquetado import CIERRE_POR_DEFECTO, Cierre, ModeloFichas, aplicar, normalizar
-from fragmentos import fragmentos
+from src.asociacion.contrato import validar_speakers
+from src.asociacion.etiquetado import CIERRE_POR_DEFECTO, Cierre, ModeloFichas, aplicar, normalizar
+from src.asociacion.fragmentos import fragmentos
 from test_salida import _lector_etapa5
 
 ENTRADAS = ("audio.wav", "diarization.json", "asr.json")

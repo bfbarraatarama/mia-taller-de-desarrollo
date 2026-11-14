@@ -20,7 +20,7 @@ import numpy as np
 
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from segmentos import acotar, techo_3_decimales  # noqa: E402
+from src.diarizacion.segmentos import acotar, techo_3_decimales  # noqa: E402
 
 POLITICA_JSON = Path(__file__).resolve().parent / "politica_etiquetas.json"
 CLASES = ("habla", "excluir")

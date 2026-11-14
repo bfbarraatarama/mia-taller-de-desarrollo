@@ -2,8 +2,8 @@
 
 import pytest
 
-from dispositivo import elegir_dispositivo
-from errores import DiarizacionError
+from src.diarizacion.dispositivo import elegir_dispositivo
+from src.diarizacion.errores import DiarizacionError
 
 
 def test_auto_sin_gpu_usa_cpu(torch_falso):

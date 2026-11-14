@@ -5,9 +5,9 @@ import os
 
 import pytest
 
-import resultados
-from contrato import validar_par
-from resultados import (NOMBRE_ERROR, NOMBRE_JSON, NOMBRE_META, carpeta_reunion, escribir_par, par_vigente,
+from src.diarizacion import resultados
+from src.diarizacion.contrato import validar_par
+from src.diarizacion.resultados import (NOMBRE_ERROR, NOMBRE_JSON, NOMBRE_META, carpeta_reunion, escribir_par, par_vigente,
                         registrar_error, run_id_vigente)
 
 SEGS = [{"start": 0.0, "end": 1.5, "speaker": "SPEAKER_00"}]

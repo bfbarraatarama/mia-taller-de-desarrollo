@@ -11,8 +11,8 @@ from pathlib import Path
 import pytest
 
 from conftest import MODULO, escribir_wav, segmento
-from contrato import MARGEN_ASR_S, validar_asr, validar_audio, validar_diarizacion
-from errores import AsociacionError
+from src.asociacion.contrato import MARGEN_ASR_S, validar_asr, validar_audio, validar_diarizacion
+from src.asociacion.errores import AsociacionError
 
 # ---------- 2.1 audio ----------
 
@@ -76,16 +76,14 @@ def test_diarizacion_valida_y_vacia():
 
 
 def _etapa2() -> Path:
-    return Path(os.environ.get("ETAPA2_DIR", MODULO.parent / "paso2_diarizacion"))
+    return Path(os.environ.get("ETAPA2_DIR", MODULO.parent / "diarizacion"))
 
 
 @pytest.mark.skipif(not (_etapa2() / "contrato.py").is_file(),
                     reason="falta la Etapa 2 (PR #8); se puede indicar con ETAPA2_DIR")
 def test_diarizacion_de_la_etapa_2():
-    spec = importlib.util.spec_from_file_location("contrato_etapa2", _etapa2() / "contrato.py")
-    etapa2 = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(etapa2)
-    archivos = sorted((_etapa2() / "evaluacion/resultados/hipotesis_S26").glob("*.json"))
+    from src.diarizacion import contrato as etapa2
+    archivos = sorted((Path(__file__).resolve().parents[1].parent / "paso2_diarizacion/evaluacion/resultados/hipotesis_S26").glob("*.json"))
     assert len(archivos) == 25
     casos = [json.loads(a.read_text(encoding="utf-8")) for a in archivos]
     # Variantes inválidas, para comparar también los rechazos

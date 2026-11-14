@@ -15,8 +15,8 @@ import wave
 from dataclasses import dataclass
 from pathlib import Path
 
-from entrada import validar_audio
-from resultados import NOMBRE_JSON, NOMBRE_META, carpeta_reunion
+from src.diarizacion.entrada import validar_audio
+from src.diarizacion.resultados import NOMBRE_JSON, NOMBRE_META, carpeta_reunion
 
 DURACION_MIN_S = 30.0
 DURACION_MAX_S = 60.0

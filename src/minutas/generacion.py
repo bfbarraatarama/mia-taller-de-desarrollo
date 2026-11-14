@@ -15,7 +15,7 @@ from typing import Any
 
 from pydantic import BaseModel, ValidationError
 
-from rutas import (
+from ..rutas import (
     DEFINICIONES_SECCIONES_MINUTAS,
     PROMPT_CONSOLIDACION_MINUTAS,
     PROMPT_EXTRACCION_MINUTAS,

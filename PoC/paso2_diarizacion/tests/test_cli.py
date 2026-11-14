@@ -7,13 +7,13 @@ import sys
 import pytest
 
 from conftest import MODULO
-from resultados import NOMBRE_ERROR, NOMBRE_JSON, NOMBRE_META, escribir_par
+from src.diarizacion.resultados import NOMBRE_ERROR, NOMBRE_JSON, NOMBRE_META, escribir_par
 
 SCRIPT = MODULO / "diarizar.py"
 
 
 def _correr(*args, cwd=None):
-    return subprocess.run([sys.executable, str(SCRIPT), *map(str, args)], capture_output=True, text=True,
+    return subprocess.run([sys.executable, "-m", "src.diarizacion.diarizar", *map(str, args)], capture_output=True, text=True,
                           encoding="utf-8", cwd=cwd)
 
 
@@ -69,10 +69,9 @@ def test_fallo_con_resultado_anterior_presente(wav):
 def test_help_no_importa_torch():
     codigo = (
         "import sys, runpy\n"
-        f"sys.path.insert(0, {str(MODULO)!r})\n"
-        f"sys.argv = [{str(SCRIPT)!r}, '--help']\n"
+        "sys.argv = ['src.diarizacion.diarizar', '--help']\n"
         "try:\n"
-        f"    runpy.run_path({str(SCRIPT)!r}, run_name='__main__')\n"
+        "    runpy.run_module('src.diarizacion.diarizar', run_name='__main__')\n"
         "except SystemExit:\n"
         "    pass\n"
         "print('TORCH_IMPORTADO' if 'torch' in sys.modules or 'pyannote' in sys.modules else 'SIN_TORCH')\n"

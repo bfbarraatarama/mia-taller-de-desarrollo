@@ -11,10 +11,10 @@ from pathlib import Path
 
 import pytest
 
-from asociacion import Turnos, asociar
+from src.asociacion.asociacion import Turnos, asociar
 from conftest import MODULO, crear_reunion, leer, segmento
-from fragmentos import fragmentos, tramos_solos
-from salida import escribir
+from src.asociacion.fragmentos import fragmentos, tramos_solos
+from src.asociacion.salida import escribir
 
 
 def reunion_con(tmp_path, duracion, turnos, segmentos=None):
@@ -75,8 +75,8 @@ def test_misma_secuencia_en_otro_proceso(tmp_path):
     """La permutación no depende de la semilla de hash de Python (PYTHONHASHSEED) ni del proceso."""
     turnos, fin = separados_por("SPEAKER_00", "SPEAKER_01", [6, 7, 8, 9, 10, 6, 7, 8])
     carpeta = reunion_con(tmp_path, fin, turnos)
-    codigo = ("import sys; sys.path.insert(0, sys.argv[1]); from asociacion import asociar; "
-              "from fragmentos import fragmentos; "
+    codigo = ("import sys; sys.path.insert(0, sys.argv[1]); from src.asociacion.asociacion import asociar; "
+              "from src.asociacion.fragmentos import fragmentos; "
               "print([(x.start, x.end) for x in fragmentos(asociar(sys.argv[2]))['SPEAKER_00'].secuencia])")
     salidas = {subprocess.run([sys.executable, "-c", codigo, str(MODULO), str(carpeta)], capture_output=True,
                               text=True, check=True, env={**os.environ, "PYTHONHASHSEED": h}).stdout
@@ -158,8 +158,8 @@ def test_diarizacion_vacia_sin_fragmentos(tmp_path):
 
 
 def _hipotesis_s26() -> Path:
-    raiz = Path(os.environ.get("ETAPA2_DIR", MODULO.parent / "paso2_diarizacion"))
-    return raiz / "evaluacion/resultados/hipotesis_S26"
+    raiz = Path(os.environ.get("ETAPA2_DIR", MODULO.parent / "diarizacion"))
+    return Path(__file__).resolve().parents[1].parent / "paso2_diarizacion/evaluacion/resultados/hipotesis_S26"
 
 
 @pytest.mark.skipif(not _hipotesis_s26().is_dir(), reason="faltan las hipótesis de S26 de la Etapa 2 (PR #8)")

@@ -11,8 +11,8 @@ from unittest.mock import patch
 
 from botocore.exceptions import ClientError
 
-from minutas import generar_minuta
-from minutas.proveedores import (
+from src.minutas import generar_minuta
+from src.minutas.proveedores import (
     RespuestaEstructuradaAusente, RespuestaModelo, construir_cliente,
 )
 
@@ -66,7 +66,7 @@ class RegresionesRevision(unittest.TestCase):
             return reemplazo_real(origen, destino)
 
         with tempfile.TemporaryDirectory() as carpeta:
-            with patch("minutas.generacion.os.replace", side_effect=fallar_segundo):
+            with patch("src.minutas.generacion.os.replace", side_effect=fallar_segundo):
                 with self.assertRaisesRegex(OSError, "Fallo de disco"):
                     generar_minuta(_transcripcion(), carpeta, cliente=_Cliente())
             self.assertFalse((Path(carpeta) / "minutes.json").exists())
@@ -85,7 +85,7 @@ class RegresionesRevision(unittest.TestCase):
         with tempfile.TemporaryDirectory() as carpeta:
             generar_minuta(_transcripcion(), carpeta, cliente=_Cliente())
             antes = {f.name: f.read_bytes() for f in Path(carpeta).iterdir()}
-            with patch("minutas.generacion.os.replace", side_effect=fallar_segundo):
+            with patch("src.minutas.generacion.os.replace", side_effect=fallar_segundo):
                 with self.assertRaisesRegex(OSError, "Fallo de disco"):
                     generar_minuta(_transcripcion(), carpeta, cliente=_Cliente(), sobrescribir=True)
             despues = {f.name: f.read_bytes() for f in Path(carpeta).iterdir()}

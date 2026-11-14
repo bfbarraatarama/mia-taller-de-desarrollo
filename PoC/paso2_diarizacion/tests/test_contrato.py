@@ -5,8 +5,8 @@ import subprocess
 import sys
 
 from conftest import MODULO
-from contrato import validar_diarizacion, validar_par
-from resultados import escribir_par
+from src.diarizacion.contrato import validar_diarizacion, validar_par
+from src.diarizacion.resultados import escribir_par
 
 
 def _meta(segmentos, run_id="r1"):
@@ -85,7 +85,7 @@ def test_linea_de_comandos(tmp_path, wav):
     malo.write_text(json.dumps({"segments": [{"start": 0.0, "end": 9.0, "speaker": "SPEAKER_00"}]}), encoding="utf-8")
 
     def correr(*args):
-        return subprocess.run([sys.executable, str(MODULO / "contrato.py"), *map(str, args)],
+        return subprocess.run([sys.executable, "-m", "src.diarizacion.contrato", *map(str, args)],
                               capture_output=True, text=True, encoding="utf-8")
 
     ok = correr(bueno / "diarization.json", audio, "--meta", bueno / "diarization.meta.json")

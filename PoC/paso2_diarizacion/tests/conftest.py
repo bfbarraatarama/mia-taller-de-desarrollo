@@ -17,11 +17,14 @@ from pathlib import Path
 
 import pytest
 
-MODULO = Path(__file__).resolve().parents[1]
+MODULO = Path(__file__).resolve().parents[3] / "src" / "diarizacion"
+HISTORICO = Path(__file__).resolve().parents[1]
+if str(HISTORICO) not in sys.path:
+    sys.path.insert(0, str(HISTORICO))
 if str(MODULO) not in sys.path:
     sys.path.insert(0, str(MODULO))
 
-DATASET_POR_DEFECTO = MODULO / "datos" / "figshare_test"
+DATASET_POR_DEFECTO = Path(__file__).resolve().parents[1] / "datos" / "figshare_test"
 
 
 PESADOS = ("slow", "calidad", "gpu")
@@ -124,7 +127,7 @@ def torch_falso(monkeypatch):
 
 @pytest.fixture
 def token_hf():
-    from entrada import obtener_token
+    from src.diarizacion.entrada import obtener_token
     token = obtener_token()
     if not token:
         pytest.skip("falta HF_TOKEN (en el entorno o en un .env de la carpeta actual)")

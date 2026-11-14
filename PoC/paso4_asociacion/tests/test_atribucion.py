@@ -8,12 +8,12 @@ from __future__ import annotations
 
 import pytest
 
-from asociacion import asociar
-from asociar import main
+from src.asociacion.asociacion import asociar
+from src.asociacion.asociar import main
 from conftest import crear_reunion, leer, segmento
-from contrato import validar_transcripcion
-from errores import AsociacionError
-from salida import escribir
+from src.asociacion.contrato import validar_transcripcion
+from src.asociacion.errores import AsociacionError
+from src.asociacion.salida import escribir
 
 
 def resumen(carpeta):

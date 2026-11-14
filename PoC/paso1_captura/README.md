@@ -1,3 +1,5 @@
+> **Nota de integración (posterior a Hito 3):** el código de producción se encuentra ahora bajo `src/`. Las rutas y comandos de este documento describen la etapa histórica antes de su integración. Consultar el README raíz para ejecutar la PoC actual.
+
 # PoC · Paso 1: captura de reuniones
 
 Graba el micrófono y el audio del sistema (la voz de los demás participantes) en un solo WAV mono de 16 kHz, listo para diarizar y transcribir. El archivo se escribe mientras se graba: si la aplicación se corta, queda válido hasta los últimos ~0,3 s.

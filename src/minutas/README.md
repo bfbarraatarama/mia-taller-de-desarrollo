@@ -18,7 +18,7 @@ Para Ollama, instalar el servicio local y descargar previamente el modelo: `olla
 Desde la raíz del repositorio:
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m minutas \
+.venv/bin/python -m src.minutas \
     --entrada resultados/transcription.json \
     --salida resultados/reunion_01 \
     --modelo qwen2.5-7b
@@ -27,7 +27,7 @@ PYTHONPATH=src .venv/bin/python -m minutas \
 Para pruebas explícitamente autorizadas con Bedrock:
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m minutas \
+.venv/bin/python -m src.minutas \
     --entrada datos_autorizados/transcription.json \
     --salida resultados/prueba_bedrock \
     --modelo nova-lite \
@@ -37,7 +37,7 @@ PYTHONPATH=src .venv/bin/python -m minutas \
 También se puede invocar desde Python:
 
 ```python
-from minutas import generar_minuta
+from src.minutas import generar_minuta
 
 resultado = generar_minuta(
     "resultados/transcription.json",
@@ -74,7 +74,7 @@ La minuta puede incluir cualquier combinación no vacía de las secciones `resum
 Desde la terminal, `--secciones` recibe los nombres separados por comas:
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m minutas \
+.venv/bin/python -m src.minutas \
     --entrada resultados/transcription.json \
     --salida resultados/reunion_01 \
     --secciones resumen,decisiones,problemas,acciones
@@ -83,7 +83,7 @@ PYTHONPATH=src .venv/bin/python -m minutas \
 Desde Python:
 
 ```python
-from minutas import generar_minuta
+from src.minutas import generar_minuta
 
 resultado = generar_minuta(
     "resultados/transcription.json",
@@ -102,7 +102,7 @@ Las cuatro categorías `resumen`, `decisiones`, `problemas` y `acciones` permite
 
 `src/rutas.py` es la fuente central de las ubicaciones de los prompts, las definiciones y los nombres de los archivos de salida. El directorio de resultados lo proporciona quien invoque el módulo; el paquete no impone una ubicación global.
 
-La importación requiere que `src/` esté disponible en `PYTHONPATH` o que el proyecto se empaquete al integrar los módulos. No es necesario instalar el proyecto de agentes anterior.
+La implementación integrada importa `src` como paquete desde la raíz o tras instalar el proyecto en modo editable. No es necesario instalar el proyecto de agentes anterior.
 
 ## Contratos
 
@@ -133,10 +133,10 @@ No se reemplazan archivos existentes de manera predeterminada; `--sobrescribir` 
 ## Pruebas técnicas
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m unittest discover -s src/minutas/tests -v
-PYTHONPATH=src .venv/bin/python -m minutas --help
+.venv/bin/python -m unittest discover -s src/minutas/tests -v
+.venv/bin/python -m src.minutas --help
 ```
 
 Las pruebas automatizadas utilizan un proveedor simulado: validan contratos, salida, referencias, reintentos, fragmentación, consolidación y construcción de solicitudes para ambos adaptadores sin enviar datos. No sustituyen pruebas de inferencia real, integración con Matías ni evaluación de calidad con AMI o reuniones propias, que se realizarán cuando corresponda.
 
-La GUI actual abre `minuta.md`, mientras que el contrato del Hito 3 exige `minutes.md`. Esa diferencia deberá resolverse al integrar la etapa 5, sin generar archivos duplicados para compensarla.
+La GUI integrada consulta y abre `minutes.md`, conforme al contrato del Hito 3; no se genera ningún alias `minuta.md`.

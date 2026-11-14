@@ -6,8 +6,8 @@ import random
 
 import pytest
 
-from contrato import validar_diarizacion
-from segmentos import TOLERANCIA_FIN_S, acotar, normalizar, techo_3_decimales
+from src.diarizacion.contrato import validar_diarizacion
+from src.diarizacion.segmentos import TOLERANCIA_FIN_S, acotar, normalizar, techo_3_decimales
 
 D = 197531 / 16000  # 12,3456875 s: más de 3 decimales
 

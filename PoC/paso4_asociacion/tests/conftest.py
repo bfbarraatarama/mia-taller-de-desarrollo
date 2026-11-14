@@ -14,7 +14,10 @@ from pathlib import Path
 
 import pytest
 
-MODULO = Path(__file__).resolve().parents[1]
+MODULO = Path(__file__).resolve().parents[3] / "src" / "asociacion"
+HISTORICO = Path(__file__).resolve().parents[1]
+if str(HISTORICO) not in sys.path:
+    sys.path.insert(0, str(HISTORICO))
 if str(MODULO) not in sys.path:
     sys.path.insert(0, str(MODULO))
 

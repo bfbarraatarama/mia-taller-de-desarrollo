@@ -9,10 +9,10 @@ import unittest
 from contextlib import redirect_stderr
 from unittest.mock import patch
 
-from minutas import ConfiguracionMinutas, MODELO_PREDETERMINADO, listar_modelos
-from minutas.__main__ import main
-from minutas.modelos import obtener_modelo
-from minutas.proveedores import construir_cliente
+from src.minutas import ConfiguracionMinutas, MODELO_PREDETERMINADO, listar_modelos
+from src.minutas.__main__ import main
+from src.minutas.modelos import obtener_modelo
+from src.minutas.proveedores import construir_cliente
 
 
 class CatalogoModelos(unittest.TestCase):

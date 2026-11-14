@@ -8,12 +8,12 @@ import unittest
 from itertools import combinations
 from pathlib import Path
 
-from minutas import ConfiguracionMinutas, SECCIONES_MINUTA, generar_minuta
-from minutas.__main__ import _secciones_cli
-from minutas.contratos import modelo_minuta
-from minutas.generacion import _preparar_prompts
-from minutas.proveedores import RespuestaModelo
-from rutas import (
+from src.minutas import ConfiguracionMinutas, SECCIONES_MINUTA, generar_minuta
+from src.minutas.__main__ import _secciones_cli
+from src.minutas.contratos import modelo_minuta
+from src.minutas.generacion import _preparar_prompts
+from src.minutas.proveedores import RespuestaModelo
+from src.rutas import (
     DEFINICIONES_SECCIONES_MINUTAS, PROMPT_CONSOLIDACION_MINUTAS,
     PROMPT_EXTRACCION_MINUTAS, rutas_resultado_minutas,
 )

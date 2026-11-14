@@ -7,11 +7,11 @@ import shutil
 
 import pytest
 
-from asociacion import Intervencion, asociar
+from src.asociacion.asociacion import Intervencion, asociar
 from conftest import crear_reunion, leer, segmento
-from contrato import CAMPOS_INTERVENCION, validar_transcripcion
-from errores import AsociacionError
-from salida import escribir
+from src.asociacion.contrato import CAMPOS_INTERVENCION, validar_transcripcion
+from src.asociacion.errores import AsociacionError
+from src.asociacion.salida import escribir
 
 
 def test_happy_path_con_dos_hablantes(reunion):

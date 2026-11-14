@@ -4,8 +4,8 @@ import os
 
 import pytest
 
-from entrada import MENSAJE_TOKEN_AUSENTE, obtener_token, ocultar_token, validar_audio, validar_num_speakers
-from errores import DiarizacionError
+from src.diarizacion.entrada import MENSAJE_TOKEN_AUSENTE, obtener_token, ocultar_token, validar_audio, validar_num_speakers
+from src.diarizacion.errores import DiarizacionError
 
 
 def _error(ruta):

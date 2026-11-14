@@ -1,4 +1,4 @@
-"""Invocación autónoma: PYTHONPATH=src python -m minutas ..."""
+"""Invocación autónoma: python -m src.minutas ..."""
 
 from __future__ import annotations
 
@@ -9,7 +9,8 @@ from dataclasses import asdict
 
 from .contratos import SECCIONES_MINUTA, validar_secciones
 from .generacion import ConfiguracionMinutas, generar_minuta
-from .modelos import MODELO_PREDETERMINADO, listar_modelos
+from .modelos import MODELO_PREDETERMINADO, listar_modelos, obtener_modelo
+from .proveedores import liberar_modelo_ollama
 
 
 def _secciones_cli(valor: str) -> tuple[str, ...]:
@@ -39,18 +40,27 @@ def main(argv: list[str] | None = None) -> int:
                    metavar="NOMBRES", help="Secciones, separadas por comas: " + ", ".join(SECCIONES_MINUTA))
     p.add_argument("--permitir-remoto", action="store_true")
     p.add_argument("--sobrescribir", action="store_true")
+    p.add_argument("--temperatura", type=float, default=0.0)
+    p.add_argument("--max-tokens-salida", type=int, default=4096)
+    p.add_argument("--reintentos-formato", type=int, default=2)
     p.add_argument("--num-ctx", type=int, default=16384)
     p.add_argument("--max-caracteres-bloque", type=int, default=12000)
     args = p.parse_args(argv)
     try:
         config = ConfiguracionMinutas(
             modelo=args.modelo, permitir_remoto=args.permitir_remoto,
+            temperatura=args.temperatura, max_tokens_salida=args.max_tokens_salida,
+            reintentos_formato=args.reintentos_formato,
             num_ctx=args.num_ctx, max_caracteres_bloque=args.max_caracteres_bloque,
             secciones=args.secciones,
         )
-        resultado = generar_minuta(
-            args.entrada, args.salida, configuracion=config, sobrescribir=args.sobrescribir
-        )
+        try:
+            resultado = generar_minuta(
+                args.entrada, args.salida, configuracion=config, sobrescribir=args.sobrescribir
+            )
+        finally:
+            if obtener_modelo(config.modelo).proveedor == 'ollama':
+                liberar_modelo_ollama(obtener_modelo(config.modelo).identificador)
     except (ValueError, OSError, RuntimeError) as exc:
         print(f"Error al generar la minuta: {exc}", file=sys.stderr)
         return 1

@@ -10,11 +10,11 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from minutas import ConfiguracionMinutas, generar_minuta
-from minutas.contratos import MinutaEstructurada, validar_evidencias
-from minutas.entrada import leer_transcripcion
-from minutas.formato import a_markdown
-from minutas.proveedores import RespuestaModelo, construir_cliente
+from src.minutas import ConfiguracionMinutas, generar_minuta
+from src.minutas.contratos import MinutaEstructurada, validar_evidencias
+from src.minutas.entrada import leer_transcripcion
+from src.minutas.formato import a_markdown
+from src.minutas.proveedores import RespuestaModelo, construir_cliente
 
 
 def transcripcion(cantidad: int = 2) -> dict:

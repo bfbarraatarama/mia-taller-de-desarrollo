@@ -5,7 +5,7 @@ import re
 import pytest
 
 from conftest import MODULO
-from verificar_entorno import DIRECTAS, cumple, leer_restricciones, normalizar_nombre
+from src.diarizacion.verificar_entorno import DIRECTAS, cumple, leer_restricciones, normalizar_nombre
 
 VERSIONES_VERIFICADAS = {"torch": "==2.8.0", "torchaudio": "==2.8.0", "torchcodec": "==0.7.0",
                          "pyannote-audio": "==4.0.7"}

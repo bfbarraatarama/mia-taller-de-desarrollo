@@ -21,7 +21,7 @@ from pathlib import Path
 import pytest
 
 from conftest import MODULO
-from contrato import validar_diarizacion, validar_par
+from src.diarizacion.contrato import validar_diarizacion, validar_par
 from evaluacion import der, referencia as ref
 from evaluacion.preparar_figshare import DATOS, MANIFIESTO, ErrorPreparacion, verificar_dataset
 
@@ -73,7 +73,7 @@ def dataset():
 
 @pytest.mark.calidad
 def test_calidad_figshare(dataset, token_hf, ffmpeg, request):
-    from diarizar import diarizar
+    from src.diarizacion.diarizar import diarizar
 
     manifiesto, DATOS = dataset
     contenido = manifiesto["contenido"]
@@ -220,7 +220,7 @@ def reutilizable(carpeta: Path, sha_mono: str, num_speakers) -> str | None:
     import torch
     from importlib.metadata import version
 
-    from diarizar import MODELO
+    from src.diarizacion.diarizar import MODELO
     js, mt = carpeta / "diarization.json", carpeta / "diarization.meta.json"
     if not (js.is_file() and mt.is_file()) or validar_par(js, mt):
         return None

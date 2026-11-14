@@ -11,9 +11,9 @@ from pathlib import Path
 
 import pytest
 
-from asociar import main, procesar
+from src.asociacion.asociar import main, procesar
 from conftest import MODULO, leer, sha256
-from errores import AsociacionError
+from src.asociacion.errores import AsociacionError
 
 ENTRADAS = ("audio.wav", "diarization.json", "asr.json")
 SALIDAS = ("transcription.json", "transcription.meta.json")
@@ -87,8 +87,8 @@ TRES = ("transcription.json", "transcription.meta.json", "speakers.json")
 
 def etiquetar(carpeta: Path, nombre: str):
     """Asocia y confirma con `nombre` para SPEAKER_00; devuelve (asociación, modelo) para volver a escribir."""
-    from asociacion import asociar
-    from etiquetado import ModeloFichas, aplicar
+    from src.asociacion.asociacion import asociar
+    from src.asociacion.etiquetado import ModeloFichas, aplicar
 
     a = asociar(carpeta)
     m = ModeloFichas(a)
@@ -99,7 +99,7 @@ def etiquetar(carpeta: Path, nombre: str):
 
 def fallar(monkeypatch, *, reemplazo=lambda origen, destino: False, borrado=lambda ruta: False):
     """Simula un disco lleno en los reemplazos o borrados de salida.py que cumplan la condición."""
-    import salida
+    from src.asociacion import salida
 
     def reemplazar(origen, destino):
         if reemplazo(Path(origen), Path(destino)):
@@ -120,7 +120,7 @@ def restos(carpeta: Path) -> list[str]:
 
 
 def test_falla_la_publicacion_del_meta_con_un_resultado_anterior(reunion, monkeypatch):
-    from etiquetado import aplicar
+    from src.asociacion.etiquetado import aplicar
 
     a, m = etiquetar(reunion, "Luisa")
     antes = {n: (reunion / n).read_bytes() for n in TRES}
@@ -144,7 +144,7 @@ def test_falla_la_publicacion_sin_resultado_anterior(reunion, monkeypatch):
 
 
 def test_falla_la_restauracion(reunion, monkeypatch):
-    from etiquetado import aplicar
+    from src.asociacion.etiquetado import aplicar
 
     a, m = etiquetar(reunion, "Luisa")
     antes = {n: (reunion / n).read_bytes() for n in TRES}
@@ -163,7 +163,7 @@ def test_falla_la_restauracion(reunion, monkeypatch):
 
 def test_falla_al_borrar_el_speakers_anterior(reunion, monkeypatch):
     """«Seguir sin nombres» después de etiquetar: si no se puede borrar speakers.json, se vuelve atrás todo."""
-    from etiquetado import Cierre, ModeloFichas, aplicar
+    from src.asociacion.etiquetado import Cierre, ModeloFichas, aplicar
 
     a, _ = etiquetar(reunion, "Luisa")
     antes = {n: (reunion / n).read_bytes() for n in TRES}
@@ -244,23 +244,11 @@ def test_sin_interfaz(reunion):
 # ---------- 2.8 lectura por la Etapa 5 ----------
 
 
-def _etapa5() -> Path:
-    return Path(os.environ.get("ETAPA5_SRC", MODULO.parents[1] / "src")) / "minutas"
-
-
 def _lector_etapa5():
-    """Carga solo entrada.py y contratos.py de la Etapa 5, sin su __init__ (que importa Ollama y boto3)."""
+    """Lector público real de la Etapa 5 integrada (sin módulos ficticios)."""
     pytest.importorskip("pydantic", reason="falta pydantic (entorno de la Etapa 5)")
-    if not (_etapa5() / "entrada.py").is_file():
-        pytest.skip("falta la Etapa 5 (PR #6); se puede indicar con ETAPA5_SRC")
-    paquete = types.ModuleType("minutas")
-    paquete.__path__ = [str(_etapa5())]
-    sys.modules["minutas"] = paquete
-    try:
-        return importlib.import_module("minutas.entrada")
-    finally:
-        for nombre in [n for n in sys.modules if n == "minutas" or n.startswith("minutas.")]:
-            del sys.modules[nombre]
+    from src.minutas import entrada
+    return entrada
 
 
 def test_lectura_por_la_etapa_5(reunion):

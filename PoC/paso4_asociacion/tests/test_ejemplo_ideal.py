@@ -136,8 +136,8 @@ def test_intervencion_encima_de_la_anterior(manual):
 
 
 def test_guion_manual_ocho_fichas_y_un_aviso(manual):
-    from asociacion import asociar
-    from etiquetado import ModeloFichas
+    from src.asociacion.asociacion import asociar
+    from src.asociacion.etiquetado import ModeloFichas
 
     a = asociar(manual)
     m = ModeloFichas(a)

@@ -19,9 +19,9 @@ import pytest
 
 import integracion
 from conftest import MODULO
-from contrato import validar_diarizacion, validar_par
-from diarizar import diarizar
-from resultados import NOMBRE_JSON, NOMBRE_META, carpeta_reunion
+from src.diarizacion.contrato import validar_diarizacion, validar_par
+from src.diarizacion.diarizar import diarizar
+from src.diarizacion.resultados import NOMBRE_JSON, NOMBRE_META, carpeta_reunion
 
 REPORTES = MODULO / "tests" / "reportes"
 ETIQUETA = re.compile(r"SPEAKER_\d{2}")

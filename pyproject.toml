@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mia104-poc"
+version = "0.1.0"
+description = "Workflow reproducible para minutas de reuniones (PoC MIA104)"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy>=2,<3", "scipy>=1.13", "sounddevice>=0.5", "soundfile>=0.12",
+  "PySide6-Essentials>=6.8", "pyannote.audio==4.0.7", "pyannote.metrics==4.2.0",
+  "torch==2.8.0", "torchaudio==2.8.0", "torchcodec==0.7.0", "openai-whisper", "python-dotenv>=1",
+  "pydantic>=2.9,<3", "ollama>=0.5,<1", "boto3>=1.34,<2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=9,<10", "pyarrow>=14"]
+
+[tool.setuptools]
+packages = ["src", "src.captura", "src.ingesta", "src.diarizacion", "src.stt", "src.asociacion", "src.minutas", "src.pipeline", "src.interfaz"]
+
+[tool.setuptools.package-data]
+"src.minutas" = ["prompts/*.md", "prompts/*.json"]
