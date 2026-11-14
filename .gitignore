@@ -63,22 +63,22 @@ hito-2/muestra/**/*.flac
 # Hito 2: derivados con redistribución restringida o pendiente
 hito-2/muestra/normalizado/
 hito-2/muestra/uba_games_figshare/
-# Pruebas de concepto: se versiona la captura (paso 1); grabaciones y el resto quedan locales
-!PoC/paso1_captura/
-PoC/paso1_captura/grabaciones/
-# Paso 2 (diarización): se versiona el módulo; datos derivados y reportes de pruebas quedan locales
-!PoC/paso2_diarizacion/
-PoC/paso2_diarizacion/datos/
-PoC/paso2_diarizacion/tests/reportes/
-# Red de seguridad: ningún audio ni referencia derivada dentro del módulo
-PoC/paso2_diarizacion/**/*.wav
-PoC/paso2_diarizacion/**/*.rttm
-# Paso 4 (asociación y etiquetado): se versiona el módulo; resultados de pruebas quedan locales
-!PoC/paso4_asociacion/
-PoC/paso4_asociacion/**/*.wav
-PoC/paso4_asociacion/ejemplo_ideal/generado/
+# Evaluaciones: originales derivados y reportes de ejecución locales
+/evaluacion/diarizacion/datos/
+/evaluacion/diarizacion/reportes/
+/evaluacion/diarizacion/**/*.wav
+/evaluacion/diarizacion/**/*.rttm
+/evaluacion/asociacion/ejemplo_ideal/generado/
+/evaluacion/asociacion/**/*.wav
+/evaluacion/stt/generado/
+# Protección frente a residuos locales de la arquitectura anterior.
+/PoC/
+/src/STT_old/
+/src/diarizacion/tests/
+/src/minutas/tests/
 # Pruebas de concepto locales
 feli.md
 
 # Resultados locales de reuniones (no versionar audios, transcripciones ni minutas privadas)
 resultados/
+!/evaluacion/diarizacion/resultados/

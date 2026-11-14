@@ -176,7 +176,7 @@ def verificar_comando(ejecutable: str, argumentos: tuple[str, ...], *, tema: str
 def verificar_sistema() -> None:
     verificar_comando("ffprobe", ("-version",))
     verificar_comando("espeak-ng", ("--version",))
-    from PoC.paso2_diarizacion.evaluacion.rar7z import ErrorVerificacion, localizar_7zip
+    from .rar7z import ErrorVerificacion, localizar_7zip
     try:
         siete = localizar_7zip()
         r = subprocess.run([str(siete), "i"], capture_output=True, text=True, errors="replace", timeout=20)

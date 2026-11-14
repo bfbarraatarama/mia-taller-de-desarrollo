@@ -128,7 +128,7 @@ No se reemplazan archivos existentes de manera predeterminada; `--sobrescribir` 
 ## Pruebas técnicas
 
 ```bash
-.venv/bin/python -m unittest discover -s src/minutas/tests -v
+.venv/bin/python -m unittest discover -s tests/minutas -v
 .venv/bin/python -m src.minutas --help
 ```
 

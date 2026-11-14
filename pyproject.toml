@@ -26,3 +26,6 @@ packages = ["src", "src.captura", "src.ingesta", "src.diarizacion", "src.stt", "
 
 [tool.setuptools.package-data]
 "src.minutas" = ["prompts/*.md", "prompts/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "hito-2/tests"]

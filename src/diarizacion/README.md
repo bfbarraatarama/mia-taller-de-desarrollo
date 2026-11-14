@@ -4,15 +4,15 @@
 
 Recibe el `audio.wav` normalizado de la Etapa 1 (16 kHz, mono, PCM16) y escribe `diarization.json`: quién habla y cuándo, con el modelo [`pyannote/speaker-diarization-community-1`](https://huggingface.co/pyannote/speaker-diarization-community-1). Corre igual en CPU y en GPU; elige el dispositivo al ejecutarse.
 
-> **Estado (09/11/2026).** Las tareas están en [`openspec/changes/etapa-2-diarizacion/tasks.md`](openspec/changes/etapa-2-diarizacion/tasks.md).
+> **Estado (09/11/2026).** Las tareas están en [`docs/diarizacion/openspec/changes/etapa-2-diarizacion/tasks.md`](../../docs/diarizacion/openspec/changes/etapa-2-diarizacion/tasks.md).
 > - **Hecho:**
 >   - el módulo y las pruebas de nivel 1;
 >   - la integración con la Etapa 1 (nivel 2, en CPU);
 >   - la preparación del dataset de Figshare (S26, 25 grabaciones);
->   - la evaluación de calidad **en CPU**, reproducible con los JSON versionados: DER estricto 23,15 %, DER NIST 12,32 % y JER 40,02 %. Ver [`evaluacion/EVALUACION_S26.md`](evaluacion/EVALUACION_S26.md);
+>   - la evaluación de calidad **en CPU**, reproducible con los JSON versionados: DER estricto 23,15 %, DER NIST 12,32 % y JER 40,02 %. Ver [`evaluacion/diarizacion/EVALUACION_S26.md`](../../evaluacion/diarizacion/EVALUACION_S26.md);
 >   - la misma evaluación **en GPU (CUDA)**, informada por una compañera desde su equipo, con las mismas métricas globales (tarea 7.7). Sus archivos no están en el repositorio (ver [Pruebas en GPU](#pruebas-en-gpu-tareas-73-74-y-77)).
 > - **Pendiente:**
->   - **7.3:** el test automatizado de CUDA (`tests/test_evaluacion_gpu.py`). La memoria se midió solo a mano.
+>   - **7.3:** el test automatizado de CUDA (`tests/diarizacion/test_evaluacion_gpu.py`). La memoria se midió solo a mano.
 >   - **7.4:** completar la verificación en GPU: `-m gpu`, el nivel 1 en el equipo con GPU y el registro de las versiones.
 >   - **7.5:** revisión y validación del equipo con la Etapa 4.
 >   - **6.9:** falta la verificación desde una instalación nueva (ver [Estado de la tarea 6.9](#estado-de-la-tarea-69)).
@@ -28,11 +28,11 @@ Las RTX 3050 de 6 GB del equipo, que son las máquinas de referencia del Hito 3,
 
 | Componente | Versión | Dónde se fija |
 |---|---|---|
-| Python | 3.12.x (verificado 3.12.10) | `verificar_entorno.py` |
+| Python | 3.12.x (verificado 3.12.10) | `src/verificar_entorno.py` |
 | PyTorch / torchaudio | 2.8.0 (`+cpu` o `+cu128`) | comando de instalación + `constraints.txt` |
-| TorchCodec | 0.7.0 (serie 0.7, la de torch 2.8; carga FFmpeg **4 a 7**) | `requirements.txt` + `constraints.txt` |
-| pyannote.audio | 4.0.7 | `requirements.txt` + `constraints.txt` |
-| pyannote.metrics | 4.2.0 | `requirements.txt` + `constraints.txt` |
+| TorchCodec | 0.7.0 (serie 0.7, la de torch 2.8; carga FFmpeg **4 a 7**) | archivos de dependencias de la raíz |
+| pyannote.audio | 4.0.7 | archivos de dependencias de la raíz |
+| pyannote.metrics | 4.2.0 | archivos de dependencias de la raíz |
 | Resto del árbol integrado | restricciones comunes | [`constraints.txt`](../../constraints.txt) |
 | FFmpeg | 7.1.1 *shared* (gyan.dev, Windows) | instalación local (ver abajo) |
 | 7-Zip | 22.01 o posterior | solo para el dataset de Figshare (grupo 6) |
@@ -122,10 +122,10 @@ El paso 6 confirma cuál de las dos funcionó.
 ### 6. Verificar el entorno
 
 ```powershell
-& $py -m src.diarizacion.verificar_entorno                      # CPU
-& $py -m src.diarizacion.verificar_entorno --gpu                # máquinas con GPU: exige CUDA
-& $py -m src.diarizacion.verificar_entorno --wav ruta\audio.wav # además, decodificar un WAV real
-& $py -m pytest PoC/paso2_diarizacion                                 # pruebas de nivel 1
+& $py -m src.verificar_entorno                      # CPU
+& $py -m src.verificar_entorno --gpu                # máquinas con GPU: exige CUDA
+& $py -m src.verificar_entorno --wav ruta\audio.wav # además, decodificar un WAV real
+& $py -m pytest tests/diarizacion                                 # pruebas de nivel 1
 ```
 
 `verificar_entorno.py` imprime OK, AVISO o FALLA por cada punto y termina con `0` si no hay fallas:
@@ -140,14 +140,14 @@ El paso 6 confirma cuál de las dos funcionó.
 | Decodificación | TorchCodec decodifica un WAV sintético (y el de `--wav`) y la cantidad de muestras coincide con la cabecera |
 | Token | que haya `HF_TOKEN` en el entorno o en `.env`, sin mostrarlo |
 
-> El verificador de Etapa 2 conserva una entrada de compatibilidad y ejecuta el verificador general del repositorio, `src.verificar_entorno`. Comprueba también las dependencias de captura, STT, asociación, minutas, datos y notebooks.
+> El verificador general del repositorio es `src.verificar_entorno`. Comprueba también las dependencias de captura, STT, asociación, minutas, datos y notebooks.
 
 ## Uso
 
 Línea de comandos (desde la raíz del repo):
 
 ```powershell
-& $py -m src.diarizacion.diarizar PoC/paso1_captura/grabaciones/2026_11_07_10_00_00.wav
+& $py -m src.diarizacion.diarizar resultados/grabaciones/2026_11_07_10_00_00.wav
 & $py -m src.diarizacion.diarizar audio.wav --device cpu --num-speakers 2 --salida resultados/reunion1
 ```
 
@@ -234,28 +234,28 @@ Informa cada violación con su ubicación (`segments[3]: end=... supera la durac
 ## Pruebas
 
 ```powershell
-& $py -m pytest PoC/paso2_diarizacion            # nivel 1: sin modelo ni GPU, en cualquier máquina
-& $py -m pytest PoC/paso2_diarizacion -m "slow or gpu" -rs   # qué falta para los niveles 2 y 3
-& $py -m pytest PoC/paso2_diarizacion -k integracion         # bloque A con archivos sintéticos (nivel 1)
+& $py -m pytest tests/diarizacion            # nivel 1: sin modelo ni GPU, en cualquier máquina
+& $py -m pytest tests/diarizacion -m "slow or gpu" -rs   # qué falta para los niveles 2 y 3
+& $py -m pytest tests/diarizacion -k integracion         # bloque A con archivos sintéticos (nivel 1)
 ```
 
 | Nivel | Marker | Dónde corre |
 |---|---|---|
 | 1. Unitarias (contrato, normalización, entrada, token, dispositivo, resultados, errores, CLI, bloque A sintético) | ninguno | cualquier máquina, también sin GPU |
-| 2. Integración Etapa 1 → Etapa 2 en CPU | `slow` | máquina de desarrollo sin GPU (grupo 5). Requiere `$env:DIARIZACION_AUDIOS_CPU = (Resolve-Path PoC/paso1_captura/grabaciones/nivel2).Path` |
+| 2. Integración Etapa 1 → Etapa 2 en CPU | `slow` | máquina de desarrollo sin GPU (grupo 5). Requiere `$env:DIARIZACION_AUDIOS_CPU = (Resolve-Path resultados/grabaciones/nivel2).Path` |
 | 3a. Calidad con Figshare (DER, JER, cantidad de hablantes) | `calidad` | **CPU o GPU**. Requiere el dataset preparado (`--preparar`); si falta, se saltea con el motivo |
 | 3b. Pruebas propias de CUDA (memoria, `dispositivo: cuda`, compatibilidad CPU/GPU) | `gpu` (pendiente, tarea 7.3) | equipo con GPU NVIDIA (otro integrante) |
 
 ### Verificación básica del nivel 2 (tarea 5.5)
 
-Verificación **automática** sobre las tres grabaciones de `PoC/paso1_captura/grabaciones/nivel2/`. Los datos salen de `tests/reportes/integracion_*.json` y de los `diarization.json` de `nivel2/<nombre>/`. No hay revisión auditiva obligatoria.
+Verificación **automática** sobre las tres grabaciones de `resultados/grabaciones/nivel2/`. Los datos salen de `evaluacion/diarizacion/reportes/integracion_*.json` y de los `diarization.json` de `nivel2/<nombre>/`. No hay revisión auditiva obligatoria.
 
-**Evidencia versionada:** [`evaluacion/resultados/nivel2/`](evaluacion/resultados/nivel2/) guarda copias de los tres reportes, `integracion_<grabacion>.json`. Cada uno tiene:
+**Evidencia versionada:** [`evaluacion/diarizacion/resultados/nivel2/`](../../evaluacion/diarizacion/resultados/nivel2/) guarda copias de los tres reportes, `integracion_<grabacion>.json`. Cada uno tiene:
 - la grabación, el estado de la Etapa 1, la duración y el dispositivo;
 - el `tiempo_s`, los hablantes y los segmentos (corregidos y descartados);
 - por hablante, la cantidad de segmentos, el tiempo de habla y los primeros segmentos.
 
-No tienen audio ni rutas locales, y se revisó que no incluyan datos personales. `tests/reportes/` sigue fuera de git; estas copias se hacen a mano.
+No tienen audio ni rutas locales, y se revisó que no incluyan datos personales. `evaluacion/diarizacion/reportes/` sigue fuera de git; estas copias se hacen a mano.
 
 > **Corrida de origen.** Las copias son de la **re-ejecución del nivel 2 del 08/11/2026** (19:27–19:30, `run_id` `20261108T192726-26f561`, `20261108T192837-964c08` y `20261108T193009-3d0ea3`), hecha para verificar la tarea 6.9. Esa corrida reemplazó a los reportes originales de la tarea 5.3.
 > - **Coinciden con la tabla:** sus `diarization.json` son **byte a byte idénticos** a los de la corrida original, así que los hablantes, los segmentos y el contenido de la tabla de abajo coinciden.
@@ -306,14 +306,14 @@ Desde la raíz del repo (`-X utf8` evita problemas de consola en Windows):
 
 ```powershell
 $py = ".venv/Scripts/python.exe"
-& $py -X utf8 PoC/paso2_diarizacion/evaluacion/preparar_figshare.py --verificar-entradas  # RAR y extraídos (solo lectura)
-& $py -X utf8 PoC/paso2_diarizacion/evaluacion/preparar_figshare.py --validar             # + validez de cada grabación
-& $py -X utf8 PoC/paso2_diarizacion/evaluacion/preparar_figshare.py --inventario          # etiquetas sin letras y su clase
-& $py -X utf8 PoC/paso2_diarizacion/evaluacion/preparar_figshare.py --preparar            # escribe mono, RTTM y manifiesto
-& $py -X utf8 PoC/paso2_diarizacion/evaluacion/preparar_figshare.py --verificar           # derivados contra el manifiesto
+& $py -X utf8 -m evaluacion.diarizacion.preparar_figshare --verificar-entradas  # RAR y extraídos (solo lectura)
+& $py -X utf8 -m evaluacion.diarizacion.preparar_figshare --validar             # + validez de cada grabación
+& $py -X utf8 -m evaluacion.diarizacion.preparar_figshare --inventario          # etiquetas sin letras y su clase
+& $py -X utf8 -m evaluacion.diarizacion.preparar_figshare --preparar            # escribe mono, RTTM y manifiesto
+& $py -X utf8 -m evaluacion.diarizacion.preparar_figshare --verificar           # derivados contra el manifiesto
 ```
 
-Todas aceptan `--seleccion 04 05 …`. Ampliar la selección cambia el manifiesto y **requiere autorización**. Además, las etiquetas `-?` (tarea 09) y `?-` (tarea 12) tienen que estar clasificadas en `evaluacion/politica_etiquetas.json`, con aprobación del equipo.
+Todas aceptan `--seleccion 04 05 …`. Ampliar la selección cambia el manifiesto y **requiere autorización**. Además, las etiquetas `-?` (tarea 09) y `?-` (tarea 12) tienen que estar clasificadas en `evaluacion/diarizacion/politica_etiquetas.json`, con aprobación del equipo.
 
 **Pasos de `--preparar`.** Si algo falla, no se escribe nada.
 1. Verifica `phrases.rar` y `wavs.rar` contra `hito-2/fuentes.toml` (bytes y MD5) y `fuentes.lock.json` (SHA-256).
@@ -323,7 +323,7 @@ Todas aceptan `--seleccion 04 05 …`. Ampliar la selección cambia el manifiest
    - anotaciones de los dos canales bien formadas;
    - exceso terminal de 0,01 s o menos;
    - correspondencia canal ↔ hablante: cada canal se correlaciona más con su `wavs/S26/…channelN.wav` que con el otro.
-4. Escribe en `PoC/paso2_diarizacion/datos/figshare_test/S26/`, que git ignora:
+4. Escribe en `evaluacion/diarizacion/datos/figshare_test/S26/`, que git ignora:
    - `<recording_id>.wav`, el mono `(izquierda + derecha) // 2`, de 16 kHz, PCM16 y con los mismos cuadros, que es la entrada de pyannote;
    - `<recording_id>.rttm`, con los hablantes `figshare_v2_S26_canal1` y `figshare_v2_S26_canal2`:
      - `#` se excluye y el texto con letras es habla;
@@ -334,7 +334,7 @@ Todas aceptan `--seleccion 04 05 …`. Ampliar la selección cambia el manifiest
 5. Calcula el **indicador de cobertura** por canal. Es solo un indicio y no cambia la referencia. Busca dos cosas:
    - energía alta dentro de un `#` y fuera de la habla del otro canal, en tramos de 0,3 s o más;
    - habla anotada con energía baja.
-6. Escribe `evaluacion/figshare_test.manifest.json`, que se versiona y no contiene el texto de las anotaciones. Tiene dos secciones:
+6. Escribe `evaluacion/diarizacion/figshare_test.manifest.json`, que se versiona y no contiene el texto de las anotaciones. Tiene dos secciones:
    - `contenido`: determinista, con su `contenido_sha256`;
    - `ejecucion`: fecha, sistema, Python, 7-Zip y commit, que no se comparan.
 
@@ -351,8 +351,8 @@ Todas aceptan `--seleccion 04 05 …`. Ampliar la selección cambia el manifiest
 ## Evaluación de calidad (nivel 3a)
 
 ```powershell
-& $py -m pytest PoC/paso2_diarizacion -m calidad -rs                 # corrida principal (sin num_speakers)
-& $py -m pytest PoC/paso2_diarizacion -m calidad -rs --diagnostico   # además, la diagnóstica con num_speakers=2
+& $py -m pytest tests/diarizacion -m calidad -rs                 # corrida principal (sin num_speakers)
+& $py -m pytest tests/diarizacion -m calidad -rs --diagnostico   # además, la diagnóstica con num_speakers=2
 ```
 
 Primero ejecuta `--verificar`. Después diariza con `device="auto"` el WAV mono de cada grabación válida del manifiesto y compara la salida con el RTTM. La región evaluada (UEM) es `[0, duración]`, y el habla superpuesta se incluye en las tres métricas.
@@ -366,21 +366,21 @@ Primero ejecuta `--verificar`. Después diariza con `device="auto"` el WAV mono 
 Cada DER trae sus componentes en segundos y como proporción de `total_referencia_s`: `falsa_alarma_s`, `habla_perdida_s` y `confusion_s`. El reporte trae además la cantidad de hablantes (referencia, detectados y si coinciden) y, con dos grabaciones o más, la dispersión: mediana, cuartiles y peor grabación. No hay umbral; los valores son la línea de base de la PoC.
 
 Reportes, ignorados por git:
-- `tests/reportes/calidad_S26.json`: por grabación y acumulado de la sesión;
-- `tests/reportes/calidad_total.json`: acumulado, dispersión, cantidad de hablantes y `limitaciones`, que incluye el indicador de cobertura.
+- `evaluacion/diarizacion/reportes/calidad_S26.json`: por grabación y acumulado de la sesión;
+- `evaluacion/diarizacion/reportes/calidad_total.json`: acumulado, dispersión, cantidad de hablantes y `limitaciones`, que incluye el indicador de cobertura.
 
-Las salidas de pyannote quedan en `tests/reportes/calidad/<recording_id>/<corrida>/`.
+Las salidas de pyannote quedan en `evaluacion/diarizacion/reportes/calidad/<recording_id>/<corrida>/`.
 
-**Resultados de S26** (25 grabaciones, detección automática de hablantes): metodología, tabla por grabación, análisis de errores y limitaciones en [`evaluacion/EVALUACION_S26.md`](evaluacion/EVALUACION_S26.md).
-- **CPU, reproducible:** los reportes y las hipótesis versionados en `evaluacion/resultados/` son de la corrida en CPU. Se generan con `evaluacion/publicar_resultados.py`, y la prueba `-k resultados_publicados` recalcula las métricas desde esos archivos sin correr el modelo.
+**Resultados de S26** (25 grabaciones, detección automática de hablantes): metodología, tabla por grabación, análisis de errores y limitaciones en [`evaluacion/diarizacion/EVALUACION_S26.md`](../../evaluacion/diarizacion/EVALUACION_S26.md).
+- **CPU, reproducible:** los reportes y las hipótesis versionados en `evaluacion/diarizacion/resultados/` son de la corrida en CPU. Se generan con `python -m evaluacion.diarizacion.publicar_resultados`, y la prueba `-k resultados_publicados` recalcula las métricas desde esos archivos sin correr el modelo.
 - **GPU, informado:** una compañera repitió la evaluación en CUDA y obtuvo las mismas métricas globales. Sus reportes no están versionados, así que no se pueden recalcular desde el repositorio (ver [Pruebas en GPU](#pruebas-en-gpu-tareas-73-74-y-77)).
 
 ## Qué corre sin GPU y qué en el equipo con GPU
 
 | Qué | Sin GPU (máquina de desarrollo) | Con GPU NVIDIA |
 |---|---|---|
-| Instalación (`requirements.txt` + `constraints.txt`) | PyTorch `2.8.0+cpu` | PyTorch `2.8.0+cu128` |
-| `verificar_entorno.py` | sí | sí, con `--gpu` |
+| Instalación (archivos de dependencias de la raíz) | PyTorch `2.8.0+cpu` | PyTorch `2.8.0+cu128` |
+| `src/verificar_entorno.py` | sí | sí, con `--gpu` |
 | Nivel 1 (unitarias, sin modelo) | sí | sí |
 | Nivel 2 (Etapa 1 → Etapa 2, `-m slow`) | sí (verificado) | sí |
 | Preparación y `--verificar` del dataset de Figshare | sí (verificado; no usa el modelo) | sí |
@@ -389,7 +389,7 @@ Las salidas de pyannote quedan en `tests/reportes/calidad/<recording_id>/<corrid
 
 ### Pruebas en GPU (tareas 7.3, 7.4 y 7.7)
 
-La máquina de desarrollo de la Etapa 2 solo tiene CPU. Las pruebas en GPU las hizo **una compañera en su equipo** y las informó en su revisión del PR #8. **Sus archivos (reportes de calidad, hipótesis y salida de `verificar_entorno.py`) no están en el repositorio**, así que estos valores son evidencia informada, no reproducible desde los JSON versionados. El detalle está en [`registro-pruebas.md`](openspec/changes/etapa-2-diarizacion/registro-pruebas.md), sección "Pruebas en GPU".
+La máquina de desarrollo de la Etapa 2 solo tiene CPU. Las pruebas en GPU las hizo **una compañera en su equipo** y las informó en su revisión del PR #8. **Sus archivos (reportes de calidad, hipótesis y salida de `verificar_entorno.py`) no están en el repositorio**, así que estos valores son evidencia informada, no reproducible desde los JSON versionados. El detalle está en [`registro-pruebas.md`](../../docs/diarizacion/openspec/changes/etapa-2-diarizacion/registro-pruebas.md), sección "Pruebas en GPU".
 
 | Medida | CPU (máquina de desarrollo, reproducible) | GPU (compañera, informado) |
 |---|---|---|
@@ -412,7 +412,7 @@ Las métricas coinciden con 2 decimales. Las hipótesis de GPU no se compararon 
 También informó dos advertencias no bloqueantes: TF32 y `std(): degrees of freedom is <= 0`, que también aparece en CPU.
 
 **Qué falta:**
-- **7.3:** escribir `tests/test_evaluacion_gpu.py` (marker `gpu`). Debe medir la memoria de CUDA de forma **automatizada** (la medición de arriba fue manual), comprobar `dispositivo: "cuda"` y la compatibilidad funcional CPU/GPU sobre la primera grabación válida, y escribir `tests/reportes/gpu_S26.json`.
+- **7.3:** escribir `tests/diarizacion/test_evaluacion_gpu.py` (marker `gpu`). Debe medir la memoria de CUDA de forma **automatizada** (la medición de arriba fue manual), comprobar `dispositivo: "cuda"` y la compatibilidad funcional CPU/GPU sobre la primera grabación válida, y escribir `evaluacion/diarizacion/reportes/gpu_S26.json`.
 - **7.4:** en el equipo con GPU, falta:
   1. correr el nivel 1;
   2. correr `-m gpu`, una vez que exista la 7.3;
@@ -452,22 +452,21 @@ La 6.9 se marca completa recién cuando se cumpla la última fila.
 | `segmentos.py` | normalización y acotado de los tiempos |
 | `resultados.py` | carpeta de la reunión, escritura del par, registro del error |
 | `errores.py` | `DiarizacionError` con la etapa del fallo |
-| `requirements.txt` | referencia al entorno general de la raíz; las restricciones se mantienen en `../../constraints.txt` |
-| `verificar_entorno.py` | comprobación del entorno: versiones, importaciones, CPU/GPU, FFmpeg, decodificación y token |
+| `src/verificar_entorno.py` | comprobación del entorno: versiones, importaciones, CPU/GPU, FFmpeg, decodificación y token |
 | `../../.env.example` | plantilla del `.env` con el token personal de Hugging Face (sin valores reales) |
-| `evaluacion/` | dataset de Figshare (`rar7z.py`, `preparar_figshare.py`, `referencia.py`, `politica_etiquetas.json`, `figshare_test.manifest.json`) y, en el grupo 7, las métricas (`der.py`) |
-| `datos/` | derivados locales, ignorados por git (`datos/figshare_test/S26/`) |
-| `openspec/` | especificaciones de la Etapa 2 (OpenSpec): `changes/etapa-2-diarizacion/` con propuesta, diseño, specs, tareas y registro de pruebas. Se usa desde esta carpeta (ver "Especificaciones") |
+| `evaluacion/diarizacion/` | dataset de Figshare (`src/rar7z.py`, `preparar_figshare.py`, `referencia.py`, `politica_etiquetas.json`, `figshare_test.manifest.json`) y, en el grupo 7, las métricas (`der.py`) |
+| `evaluacion/diarizacion/datos/` | derivados locales, ignorados por git (`evaluacion/diarizacion/datos/figshare_test/S26/`) |
+| `docs/diarizacion/openspec/` | especificaciones de la Etapa 2 (OpenSpec): `changes/etapa-2-diarizacion/` con propuesta, diseño, specs, tareas y registro de pruebas. Se usa desde esta carpeta (ver "Especificaciones") |
 
 ## Especificaciones (OpenSpec)
 
-Las especificaciones de esta etapa están en `PoC/paso2_diarizacion/openspec/`, separadas de las de otras etapas. El CLI de OpenSpec busca la carpeta `openspec/` más cercana subiendo desde la carpeta actual, así que hay que ejecutarlo **desde el módulo**:
+Las especificaciones de esta etapa están en `docs/diarizacion/openspec/`, separadas de las de otras etapas. El CLI de OpenSpec busca la carpeta `openspec/` más cercana subiendo desde la carpeta actual, así que hay que ejecutarlo **desde `docs/diarizacion/`**:
 
 ```powershell
-cd PoC/paso2_diarizacion
+cd docs/diarizacion
 openspec list                                       # etapa-2-diarizacion y su avance
 openspec validate etapa-2-diarizacion --strict
 openspec instructions apply --change etapa-2-diarizacion --json
 ```
 
-Si otra etapa adopta OpenSpec, puede crear su propio `PoC/<su-paso>/openspec/` con `openspec init` desde su carpeta, sin interferir con esta.
+Si otra etapa adopta OpenSpec, puede crear su propio `docs/<componente>/openspec/` con `openspec init` desde su carpeta, sin interferir con esta.

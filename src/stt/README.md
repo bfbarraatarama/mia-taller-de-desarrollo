@@ -58,8 +58,12 @@ python -m src.stt audio.wav -o asr.json -v
 
 **Memory fallback (risk 1.4.1):** use `model_size="small"` (~2 GB) or `device="cpu"` (`--model small`, `--device cpu`), and record the change. The `medium` model needs ~5 GB of VRAM. The model is not cached: `process_asr` holds the only reference and releases it (also on errors) before returning, then calls `free_gpu_memory()`, so the GPU is free for the next sequential stage. If you use `load_whisper_model` directly, `del` the model and call `free_gpu_memory()` yourself.
 
+## Reproducible example
+
+From the root, `python -m evaluacion.stt.ejemplos_peru` produces the current `asr.json` for PER-1 and PER-2 in `evaluacion/stt/generado/`. Use `notebooks/stt_asr_peru.ipynb` to inspect those outputs. The previous validation notebook in `notebooks/historicos/` is retained as historical evidence; its original inputs are not outputs of the current STT contract.
+
 ## Tests
 
 ```bash
-pytest src/stt/test_asr_core.py
+python -m pytest tests/stt
 ```
