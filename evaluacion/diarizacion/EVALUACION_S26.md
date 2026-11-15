@@ -209,20 +209,7 @@ Para separar el error se fija el emparejamiento global de cada grabación y se c
 
 ## Cómo reproducir
 
-Desde la raíz del repo, con el entorno de la Etapa 2 instalado según el [README](../../src/diarizacion/README.md), con 7-Zip y con los RAR del Hito 2 en `hito-2/.cache/uba_games/figshare-v2/`:
-
-```powershell
-$py = ".venv/Scripts/python.exe"
-$sel = 1..25 | ForEach-Object { '{0:D2}' -f $_ }
-& $py -X utf8 -m evaluacion.diarizacion.preparar_figshare --preparar --seleccion $sel   # mono, RTTM y manifiesto
-& $py -X utf8 -m evaluacion.diarizacion.preparar_figshare --verificar                  # mismos SHA-256 que el manifiesto
-& $py -X utf8 -m pytest tests/diarizacion -m calidad -rs                                    # pyannote y métricas (~39 min en CPU; ~80 s informados en GPU)
-& $py -X utf8 -m evaluacion.diarizacion.publicar_resultados                           # copia los reportes a evaluacion/diarizacion/resultados/
-```
-
-- **Repetir la preparación:** si se repite con los mismos originales, `contenido_sha256` tiene que coincidir con el del manifiesto versionado.
-- **Recalcular las métricas sin el modelo:** `pytest tests/diarizacion -k resultados_publicados` recalcula las métricas desde las hipótesis versionadas y el RTTM local, y las compara con el reporte. Comprobado: coinciden exactamente.
-- **Reutilización de la inferencia:** la evaluación de calidad reutiliza una corrida compatible si ya existe en `evaluacion/diarizacion/reportes/calidad/`. `--rehacer` obliga a diarizar otra vez.
+Seguir el [procedimiento vigente de preparación y evaluación](README.md), con la selección completa de 25 grabaciones y la política versionada. Allí se distinguen la verificación de derivados, el recálculo de las métricas sin inferencia, una nueva inferencia y la publicación deliberada de nuevos resultados. Las hipótesis y reportes que sustentan las cifras de este documento corresponden a la corrida original en CPU; una nueva corrida no debe reemplazarlos como parte de la verificación ordinaria.
 
 ## Qué se versiona y qué queda local
 

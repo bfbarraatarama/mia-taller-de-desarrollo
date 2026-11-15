@@ -4,7 +4,7 @@ from importlib.metadata import version
 
 import pytest
 
-from src.rutas import DIRECTORIO_SRC
+from src.rutas import DIRECTORIO_PROYECTO
 from evaluacion.diarizacion import der
 
 A, B = "figshare_v2_S26_canal1", "figshare_v2_S26_canal2"
@@ -68,7 +68,7 @@ def test_bloques_del_reporte():
         assert b["herramienta"] == herramienta and b["incluye_solapamiento"] is True
     assert "der" not in r
     assert der.COLLAR_NIST_PYANNOTE_S == 2 * der.TOLERANCIA_NIST_POR_LADO_S == 0.5
-    readme = (DIRECTORIO_SRC / "diarizacion" / "README.md").read_text(encoding="utf-8")
+    readme = (DIRECTORIO_PROYECTO / "evaluacion" / "diarizacion" / "README.md").read_text(encoding="utf-8")
     assert "DER de pyannote.metrics con tolerancia NIST" in readme
 
 

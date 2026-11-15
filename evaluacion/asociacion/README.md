@@ -1,6 +1,6 @@
 # Evaluación de asociación
 
-El [README de asociación](../../src/asociacion/README.md) describe los contratos y el ejemplo ideal. Desde la raíz del repositorio, con el entorno general instalado:
+El [README de asociación](../../docs/asociacion/README.md) describe los contratos y el ejemplo ideal. Desde la raíz del repositorio, con el entorno general instalado:
 
 ```bash
 .venv/bin/python -m evaluacion.asociacion.ejemplo_ideal.generar

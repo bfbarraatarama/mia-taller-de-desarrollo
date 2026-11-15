@@ -10,14 +10,14 @@ La aplicación comparte **un único núcleo Python** (`src.pipeline`) entre inte
 notebooks, evaluación y una entrada de terminal mínima. Las implementaciones originales
 se conservaron al migrar captura a `src/captura`, diarización a `src/diarizacion`,
 Whisper a `src/stt`, asociación a `src/asociacion` y minutas a `src/minutas`.
-Los contenidos históricos del Hito 2 y los documentos de diseño continúan separados.
+La [documentación técnica y de decisiones de diseño](docs/README.md) reúne la arquitectura, los contratos, las guías por componente y la evidencia de integración. Los entregables históricos se mantienen separados.
 
 ### Organización del repositorio
 
-- `src/`: implementación integrada, con los README de cada etapa.
+- `src/`: implementación integrada; los README de cada componente remiten a su guía técnica.
 - `tests/`: pruebas automatizadas de las etapas e integración.
 - `evaluacion/`: herramientas y evidencias reproducibles por componente (diarización, asociación y STT). Ejecutar los módulos desde la raíz.
-- `docs/`: notas técnicas y especificaciones OpenSpec originales. Sus registros históricos no se reescriben.
+- `docs/`: documentación técnica canónica, fundamentos de diseño y especificaciones OpenSpec originales.
 - `notebooks/`: clientes y análisis del flujo actual; `notebooks/historicos/` conserva evidencia de contratos anteriores.
 - `hito-2/` y `hito-3/`: entregables académicos; los scripts, datos y pruebas del Hito 2 se mantienen juntos para reproducir ese entregable.
 
@@ -73,7 +73,7 @@ Instalar Python 3.12 de 64 bits, [7-Zip](https://www.7-zip.org/) y
 [eSpeak NG](https://github.com/espeak-ng/espeak-ng/releases), con sus ejecutables
 accesibles en PATH (7-Zip también admite `SIETE_ZIP` o su ubicación estándar).
 Preparar FFmpeg compartido 7.1.1 y registrar sus DLL según el
-[procedimiento de diarización](src/diarizacion/README.md#4-ffmpeg-711-shared-sin-modificar-el-path-del-sistema),
+[procedimiento de diarización](docs/diarizacion/README.md#ffmpeg-711-shared-sin-modificar-el-path-del-sistema),
 además de exponer `ffmpeg` y `ffprobe` al PATH de la sesión. Para libarchive,
 instalar [MSYS2](https://www.msys2.org/) y, desde su terminal UCRT64, ejecutar
 `pacman -S mingw-w64-ucrt-x86_64-libarchive`. En PowerShell, si MSYS2 se instaló
@@ -115,9 +115,9 @@ específicas de plataforma; el verificador informa distribuciones adicionales.
   sobrescribir una configuración existente). Pyannote y Whisper descargan sus pesos
   al primer uso cuando no están en caché.
 - Para los experimentos autorizados con Bedrock, seguir
-  [la configuración de la Etapa 5](src/minutas/README.md); no versionar credenciales.
+  [la configuración de la Etapa 5](docs/minutas/README.md); no versionar credenciales.
 - Para reproducir el EDA y las evaluaciones con datos reales, seguir las instrucciones
-  de [Hito 2](hito-2/README.md) y [diarización](src/diarizacion/README.md). Los originales
+  de [Hito 2](hito-2/README.md) y [evaluación de diarización](evaluacion/diarizacion/README.md). Los originales
   restringidos y las autorizaciones individuales no se obtienen por instalar paquetes.
 - Abrir notebooks desde el entorno raíz mediante `.venv/bin/python -m jupyter lab`
   (Windows: `.venv\Scripts\python.exe -m jupyter lab`). Usar el kernel de ese entorno.
@@ -160,12 +160,13 @@ solicitud = SolicitudReunion(
     salida=Path('resultados/reunion_ejemplo'),
     minutas=ConfiguracionMinutas(modelo='qwen2.5-7b', secciones=('resumen', 'temas', 'acciones')),
 )
-resultado = procesar_reunion(solicitud)  # API sin Qt, identifica hablantes con etiquetas
+resultado = procesar_reunion(solicitud)  # API sin Qt, conserva las etiquetas de hablante
 print(resultado['estado'], resultado['artefactos'])
 ```
 
 La API ofrece también `preparar_reunion`, `continuar_reunion`, `consultar_reunion`,
-`reetiquetar_reunion` y `cancelar_reunion`. En modalidad GUI, el trabajador detiene
+`reetiquetar_reunion`, `cancelar_reunion`, `consultar_identificacion`,
+`requiere_autorizacion_minutas` y `leer_resultado_texto`. En modalidad GUI, el trabajador detiene
 la inferencia antes de las fichas de hablantes. La identificación admite nombres
 repetidos o vacíos y puede modificarse sin repetir diarización ni STT válidos.
 Desde «Abrir reunión» se restituye su configuración y se comprueban los resultados
@@ -185,8 +186,7 @@ cuando cambiaron. «Nueva reunión» vuelve a los valores predeterminados.
 Para continuar una reunión preparada, `.venv/bin/python -m src.pipeline continuar --reunion resultados/reunion_ejemplo` recupera su identificación y configuración de minutas. `--modelo` y `--secciones` permiten actualizar esta última. Cualquier permiso externo necesario se indica de nuevo mediante `--permitir-remoto`.
 
 La CLI corresponde a la modalidad no gráfica de la especificación del Hito 3;
-**no** se deriva de la consigna del pipeline de datos de la Clase 7. El notebook
-`notebooks/workflow_poc.ipynb` es cliente de la misma API, nunca un segundo pipeline.
+**no** se deriva de la consigna del pipeline de datos de la Clase 7. El [notebook integral](notebooks/workflow_poc.ipynb) es cliente de la misma API, nunca un segundo pipeline.
 
 ### Persistencia, privacidad y límites de validación
 

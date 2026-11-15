@@ -1,6 +1,6 @@
 # Captura · notas técnicas
 
-Detalle de [`README.md`](README.md): escritura a prueba de cortes, pruebas del reporte, mediciones y problema conocido de eco.
+Registro de desarrollo de captura (29/10/2026). Complementa la [guía vigente](README.md); las siguientes mediciones y alternativas pertenecen al entorno original y no son un procedimiento general de instalación. Detalle: escritura a prueba de cortes, pruebas del reporte, mediciones y problema conocido de eco.
 
 ## Escritura a prueba de cortes
 
@@ -22,7 +22,7 @@ Detalle de [`README.md`](README.md): escritura a prueba de cortes, pruebas del r
 | Costo de la cabecera automática | 13,1 µs vs 12,8 µs por bloque |
 | Remuestreo por bloques vs señal entera (48; 44,1; 22,05; 8 kHz, 7 s de ruido) | diferencia máxima 0,0 |
 
-`kill -9` no pierde lo ya escrito (queda en la caché del sistema operativo); ante un corte de luz se pierden como máximo los últimos 5 s (`SYNC_SEG`).
+`kill -9` no pierde lo ya escrito (queda en la caché del sistema operativo); `fsync` se solicita cada 5 s (`SYNC_SEG`). Ese intervalo es una decisión de diseño, no una garantía ante cualquier corte eléctrico o fallo de almacenamiento. No se midió un corte eléctrico.
 
 ## Pruebas del reporte
 
