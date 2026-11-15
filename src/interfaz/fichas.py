@@ -25,7 +25,7 @@ from PySide6.QtWidgets import (QApplication, QCompleter, QDialog, QGroupBox, QHB
 from ..asociacion.asociacion import asociar
 from ..asociacion.contrato import FS
 from ..asociacion.errores import AsociacionError
-from ..asociacion.etiquetado import Cierre, Decision, ModeloFichas, aplicar
+from ..asociacion.etiquetado import Cierre, Decision, Etiquetado, ModeloFichas, aplicar
 from ..asociacion.salida import registrar_error
 
 MARGEN_FIN_MS = 200  # espera extra antes de dar por terminado un fragmento
@@ -150,6 +150,7 @@ class TarjetaFicha(QGroupBox):
 
         self.nombre = QLineEdit()
         self.nombre.setPlaceholderText("Nombre (opcional)")
+        self.nombre.setText(ficha.nombre)
         self.sugeridos = QStringListModel(self)  # con padre: si no, Python lo libera y el completer queda vacío
         self.completer = QCompleter(self.sugeridos, self)
         self.completer.setCaseSensitivity(Qt.CaseSensitivity.CaseInsensitive)
@@ -297,9 +298,17 @@ class DialogoFichas(QDialog):
         return caja.clickedButton() is not volver
 
 
-def etiquetar(asociacion, parent: QWidget | None = None) -> Decision:
-    """Muestra las fichas y devuelve la decisión. Sin etiquetas (diarización vacía), saltea el etiquetado."""
+def etiquetar(asociacion, parent: QWidget | None = None, *, anterior: Etiquetado | None = None) -> Decision:
+    """Muestra las fichas, restaurando nombres y fragmentos cuando la identificación es vigente."""
     modelo = ModeloFichas(asociacion)
+    if anterior is not None:
+        for ficha in modelo.fichas:
+            ficha.nombre = anterior.nombres.get(ficha.etiqueta) or ""
+            clip = anterior.clips.get(ficha.etiqueta)
+            for i, fragmento in enumerate(ficha.fragmentos.secuencia):
+                if clip == (fragmento.start, fragmento.end):
+                    ficha.indice = i
+                    break
     if not modelo.hay_fichas:
         return Decision("escribir")
     dialogo = DialogoFichas(modelo, Reproductor(asociacion.rutas.audio), parent)

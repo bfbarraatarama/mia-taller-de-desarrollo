@@ -91,6 +91,10 @@ class CatalogoModelos(unittest.TestCase):
                 solicitudes.append(("ollama", kwargs))
 
         class BotoFalso:
+            @classmethod
+            def Session(cls, **kwargs):
+                return cls
+
             @staticmethod
             def client(*args, **kwargs):
                 solicitudes.append(("bedrock", args, kwargs))

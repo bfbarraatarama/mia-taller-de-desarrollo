@@ -9,8 +9,7 @@ from dataclasses import asdict
 
 from .contratos import SECCIONES_MINUTA, validar_secciones
 from .generacion import ConfiguracionMinutas, generar_minuta
-from .modelos import MODELO_PREDETERMINADO, listar_modelos, obtener_modelo
-from .proveedores import liberar_modelo_ollama
+from .modelos import MODELO_PREDETERMINADO, listar_modelos
 
 
 def _secciones_cli(valor: str) -> tuple[str, ...]:
@@ -39,6 +38,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--secciones", type=_secciones_cli, default=SECCIONES_MINUTA,
                    metavar="NOMBRES", help="Secciones, separadas por comas: " + ", ".join(SECCIONES_MINUTA))
     p.add_argument("--permitir-remoto", action="store_true")
+    p.add_argument("--destino-autorizado", help=argparse.SUPPRESS)
     p.add_argument("--sobrescribir", action="store_true")
     p.add_argument("--temperatura", type=float, default=0.0)
     p.add_argument("--max-tokens-salida", type=int, default=4096)
@@ -52,15 +52,11 @@ def main(argv: list[str] | None = None) -> int:
             temperatura=args.temperatura, max_tokens_salida=args.max_tokens_salida,
             reintentos_formato=args.reintentos_formato,
             num_ctx=args.num_ctx, max_caracteres_bloque=args.max_caracteres_bloque,
-            secciones=args.secciones,
+            secciones=args.secciones, destino_autorizado=args.destino_autorizado,
         )
-        try:
-            resultado = generar_minuta(
-                args.entrada, args.salida, configuracion=config, sobrescribir=args.sobrescribir
-            )
-        finally:
-            if obtener_modelo(config.modelo).proveedor == 'ollama':
-                liberar_modelo_ollama(obtener_modelo(config.modelo).identificador)
+        resultado = generar_minuta(
+            args.entrada, args.salida, configuracion=config, sobrescribir=args.sobrescribir
+        )
     except (ValueError, OSError, RuntimeError) as exc:
         print(f"Error al generar la minuta: {exc}", file=sys.stderr)
         return 1

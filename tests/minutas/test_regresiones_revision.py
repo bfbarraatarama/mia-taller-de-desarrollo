@@ -127,7 +127,7 @@ class RegresionesRevision(unittest.TestCase):
                     {"Error": {"Code": "AccessDeniedException", "Message": "Sin permiso"}},
                     "Converse",
                 )
-        with patch("boto3.client", return_value=_Falso()):
+        with patch("boto3.Session.client", return_value=_Falso()):
             cliente = construir_cliente(
                 "nova-lite", permitir_remoto=True, temperatura=0,
                 num_ctx=16384, max_tokens=4096,

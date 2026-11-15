@@ -56,6 +56,10 @@ def leer(carpeta: Path) -> dict:
             or ('solicitud' in datos and not isinstance(datos['solicitud'], dict))
             or (datos['etapas'] and not datos.get('solicitud'))):
         raise ValueError(f'Formato de workflow.json no admitido en {carpeta}.')
+    # Los permisos de una solicitud anterior no constituyen autorización para la siguiente.
+    if datos.get('solicitud') and isinstance(datos['solicitud'].get('minutas'), dict):
+        datos['solicitud']['minutas'].pop('permitir_remoto', None)
+        datos['solicitud']['minutas'].pop('destino_autorizado', None)
     return datos
 
 

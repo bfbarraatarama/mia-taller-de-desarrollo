@@ -14,9 +14,8 @@ import sys
 from time import monotonic
 import wave
 from contextvars import ContextVar
-from urllib.parse import urlsplit
 from contextlib import contextmanager
-from dataclasses import asdict
+from dataclasses import asdict, replace
 from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
 from typing import Callable, Mapping
@@ -24,12 +23,12 @@ from typing import Callable, Mapping
 from ..asociacion.asociacion import asociar
 from ..asociacion.contrato import validar_asr, validar_diarizacion, validar_transcripcion, validar_speakers
 from ..asociacion.errores import AsociacionError
-from ..asociacion.etiquetado import Decision, ModeloFichas, aplicar
+from ..asociacion.etiquetado import Decision, Etiquetado, ModeloFichas, aplicar
 from ..asociacion.salida import resultado_vigente
 from ..ingesta.audio import ingestar, sha256, verificar_wav
 from ..minutas.generacion import ConfiguracionMinutas, _preparar_prompts
 from ..minutas.modelos import obtener_modelo
-from ..minutas.proveedores import destino_modelo, _cargar_entorno
+from ..minutas.proveedores import resolver_destino, comprobar_autorizacion
 from ..rutas import (
     ARCHIVO_ASR, ARCHIVO_AUDIO, ARCHIVO_DIARIZACION, ARCHIVO_DIARIZACION_META,
     ARCHIVO_HABLANTES, ARCHIVO_TRANSCRIPCION, ARCHIVO_TRANSCRIPCION_META,
@@ -39,7 +38,7 @@ from .configuracion import SolicitudReunion
 from .estado import (ARCHIVOS, artefactos_vigentes, etapas_vigentes, huella, invalidar,
                      leer, publicar, registrar, vigente)
 from .fuentes import (clave_ingesta, comprobar_identidades, conservar_fuentes, resolver_fuentes, validar_ingesta)
-from .temporalidad import Medicion
+from .temporalidad import Medicion, ahora
 
 Emisor = Callable[[dict], None]
 ERRORES_CHECKPOINT = (OSError, ValueError, KeyError, TypeError, AttributeError, wave.Error, EOFError, AsociacionError)
@@ -51,6 +50,10 @@ class Cancelado(RuntimeError):
 
 class ReunionOcupada(RuntimeError):
     pass
+
+
+class AutorizacionRechazada(PermissionError):
+    """Rechazo previo a publicar cambios de una continuación."""
 
 
 _descriptor_lock: ContextVar[int | None] = ContextVar('descriptor_lock', default=None)
@@ -73,10 +76,9 @@ def _paquetes(*nombres):
 
 def _consentimiento(config: ConfiguracionMinutas) -> str:
     """No transmitir información a proveedores externos sin autorización."""
-    destino = destino_modelo(config.modelo)
-    if destino != 'ollama_local' and not config.permitir_remoto:
-        raise PermissionError(f'{destino} requiere autorización explícita para esta ejecución.')
-    return destino
+    destino = resolver_destino(config.modelo)
+    comprobar_autorizacion(destino, config.permitir_remoto, config.destino_autorizado)
+    return destino.tipo
 
 
 @contextmanager
@@ -153,7 +155,7 @@ def _trabajador(modulo: str, args: list[str], *, emisor: Emisor | None):
     if proceso.returncode:
         detalle = stderr.strip()[-1500:] or stdout.strip()[-1500:]
         # Secretos comunes nunca aparecen en los errores persistidos.
-        for nombre in ('HF_TOKEN', 'AWS_SECRET_ACCESS_KEY', 'AWS_ACCESS_KEY_ID', 'AWS_SESSION_TOKEN'):
+        for nombre in ('HF_TOKEN', 'AWS_SECRET_ACCESS_KEY', 'AWS_ACCESS_KEY_ID', 'AWS_SESSION_TOKEN', 'OLLAMA_API_KEY'):
             secreto = os.getenv(nombre)
             if secreto:
                 detalle = detalle.replace(secreto, '[REDACTED]')
@@ -256,7 +258,7 @@ def _validar_transcripcion(carpeta):
         raise ValueError('Transcripción fuera de contrato.')
 
 
-def _validar_minutas(carpeta, config=None, *, prompts_actuales=False):
+def _validar_minutas(carpeta, config=None, *, prompts_actuales=False, destino=None):
     meta = json.loads((carpeta / 'ejecucion_minutas.json').read_text(encoding='utf-8'))
     if meta['sha256_entrada'] != sha256(carpeta / ARCHIVO_TRANSCRIPCION):
         raise ValueError('La minuta no corresponde a la transcripción vigente.')
@@ -278,19 +280,24 @@ def _validar_minutas(carpeta, config=None, *, prompts_actuales=False):
         datos = _config_serializada(config)
         guardados = dict(meta['configuracion'])
         # Una autorización histórica no forma parte de la identidad de la salida.
-        datos.pop('permitir_remoto')
         guardados.pop('permitir_remoto', None)
+        guardados.pop('destino_autorizado', None)
         if (secciones != tuple(config.secciones) or meta['modelo'] != modelo.identificador
                 or meta['proveedor'] != modelo.proveedor or guardados != datos):
             raise ValueError('La minuta no corresponde a su configuración.')
         if prompts_actuales and meta['prompts'] != _preparar_prompts(config.secciones)[2]:
             raise ValueError('La minuta no corresponde a los prompts vigentes.')
+        if destino is not None and 'huella_destino' in meta and (
+                meta['huella_destino'] != destino.huella or meta.get('destino') != destino.tipo):
+            raise ValueError('La minuta no corresponde al destino configurado.')
 
 
 def _config_serializada(config: ConfiguracionMinutas) -> dict:
     """Forma estable en memoria y en JSON (sin diferencias tupla/lista)."""
     datos = asdict(config)
     datos['secciones'] = list(datos['secciones'])
+    datos.pop('permitir_remoto')
+    datos.pop('destino_autorizado')
     return datos
 
 
@@ -319,39 +326,30 @@ def _config_desde_estado(estado: dict) -> ConfiguracionMinutas:
     if not estado.get('solicitud'):
         raise ValueError('La reunión no tiene una solicitud de procesamiento.')
     datos = estado['solicitud']['minutas']
-    return ConfiguracionMinutas(**{**datos, 'secciones': tuple(datos['secciones'])})
+    return ConfiguracionMinutas(**{**datos, 'secciones': tuple(datos['secciones']),
+                                  'permitir_remoto': False, 'destino_autorizado': None})
 
 
-def _clave_minutas(carpeta: Path, config: ConfiguracionMinutas) -> str:
+def _clave_minutas(carpeta: Path, config: ConfiguracionMinutas, destino=None) -> str:
     # La autorización no altera el resultado de una inferencia. Unidad de identidad: modelo y destino.
     modelo = obtener_modelo(config.modelo)
-    _cargar_entorno()
-    if modelo.proveedor == 'ollama':
-        host = os.environ.get('OLLAMA_HOST', 'http://localhost:11434')
-        url = urlsplit(host if '://' in host else f'http://{host}')
-        destino = (url.scheme, url.hostname, url.port, url.path.rstrip('/'))
-    else:
-        destino = (os.environ.get('AWS_REGION') or os.environ.get('AWS_DEFAULT_REGION') or 'us-east-1',
-                   os.environ.get('AWS_ENDPOINT_URL_BEDROCK_RUNTIME') or os.environ.get('AWS_ENDPOINT_URL'),
-                   os.environ.get('AWS_PROFILE') or os.environ.get('AWS_DEFAULT_PROFILE'))
+    destino = (destino or resolver_destino(config.modelo)).identidad[1:]
     datos = _config_serializada(config)
-    datos.pop('permitir_remoto')
     return huella(sha256(carpeta / ARCHIVO_TRANSCRIPCION), datos, modelo.identificador, destino,
                   [(p.name, sha256(p)) for p in (PROMPT_EXTRACCION_MINUTAS,
                    PROMPT_CONSOLIDACION_MINUTAS, DEFINICIONES_SECCIONES_MINUTAS)],
                   _paquetes('ollama', 'boto3', 'pydantic'))
 
 
-def _actualizar_minutas(carpeta: Path, estado: dict, config: ConfiguracionMinutas):
+def _actualizar_minutas(carpeta: Path, estado: dict, config: ConfiguracionMinutas, destino=None):
     if 'asociar' not in etapas_vigentes(carpeta, estado) or not vigente(
-            carpeta, estado, 'minuta', _clave_minutas(carpeta, config)):
+            carpeta, estado, 'minuta', _clave_minutas(carpeta, config, destino)):
         invalidar(estado, 'minuta')
     estado['solicitud']['minutas'] = _config_serializada(config)
 
 
 def _preparar(s: SolicitudReunion, estado: dict, medicion: Medicion, emisor: Emisor | None):
     carpeta = Path(s.salida).resolve()
-    _consentimiento(s.minutas)
     nueva = _solicitud_serializada(s)
     conservar_fuentes(carpeta, estado)
     identidades = [Path(p) for p in nueva['fuentes']]
@@ -496,6 +494,42 @@ def _validar_preparada(carpeta, estado, medicion):
             medicion.etapa(etapa, 'reutilizada', 0.0)
 
 
+def _clave_asociacion(carpeta: Path, decision: Decision) -> str:
+    hashes = {n: sha256(carpeta / n) for n in (ARCHIVO_AUDIO, ARCHIVO_DIARIZACION, ARCHIVO_ASR)}
+    return huella(hashes, asdict(decision.etiquetado) if decision.etiquetado else None)
+
+
+def _reutilizable_minuta(carpeta, estado, clave_asociacion, config, destino) -> bool:
+    validas = _consulta(carpeta, estado)['etapas_vigentes']
+    if not ('asociar' in validas and 'minuta' in validas
+            and vigente(carpeta, estado, 'asociar', clave_asociacion)
+            and vigente(carpeta, estado, 'minuta', _clave_minutas(carpeta, config, destino))):
+        return False
+    try:
+        _validar_minutas(carpeta, config, prompts_actuales=True, destino=destino)
+    except ERRORES_CHECKPOINT:
+        return False
+    return True
+
+
+def requiere_autorizacion_minutas(reunion: str | Path, decision: Decision,
+                                   configuracion: ConfiguracionMinutas, *, huella_fichas: str) -> bool:
+    """Consulta sin transferencia; la ejecución comprueba otra vez bajo su propio bloqueo."""
+    carpeta = Path(reunion).resolve()
+    with _exclusivo(carpeta):
+        estado = leer(carpeta)
+        _comprobar_fichas(carpeta, estado, huella_fichas)
+        if decision.accion == 'cancelar':
+            return False
+        if decision.accion != 'escribir':
+            raise ValueError('La decisión de fichas no es ejecutable.')
+        destino = resolver_destino(configuracion.modelo)
+        if configuracion.destino_autorizado not in (None, destino.huella):
+            raise ValueError('El destino configurado cambió; revisá la configuración.')
+        return destino.tipo != 'ollama_local' and not _reutilizable_minuta(
+            carpeta, estado, _clave_asociacion(carpeta, decision), configuracion, destino)
+
+
 def _continuar(carpeta: Path, estado: dict, decision: Decision, config: ConfiguracionMinutas,
                medicion: Medicion, emisor: Emisor | None, *, nombres=None):
     _validar_preparada(carpeta, estado, medicion)
@@ -504,11 +538,6 @@ def _continuar(carpeta: Path, estado: dict, decision: Decision, config: Configur
     if decision.accion == 'cancelar':
         _fin(carpeta, estado, medicion, emisor, 'cancelado', 'asociar')
         return
-    destino = _consentimiento(config)
-    _actualizar_minutas(carpeta, estado, config)
-    estado['destino_minutas'] = destino
-    estado['estado'], estado['etapa'], estado['error'] = 'procesando', 'asociar', None
-    publicar(carpeta, estado)
     asociacion = None
     if nombres is not None:
         inicio = monotonic()
@@ -521,31 +550,54 @@ def _continuar(carpeta: Path, estado: dict, decision: Decision, config: Configur
             fichas.escribir_nombre(ficha.etiqueta, nombres.get(ficha.etiqueta, ''))
         decision = fichas.confirmar()
         medicion.datos['preparacion_identificacion_s'] = round(monotonic() - inicio, 3)
-    hashes = {n: sha256(carpeta / n) for n in (ARCHIVO_AUDIO, ARCHIVO_DIARIZACION, ARCHIVO_ASR)}
-    clave = huella(hashes, asdict(decision.etiquetado) if decision.etiquetado else None)
+    clave = _clave_asociacion(carpeta, decision)
+    destino = resolver_destino(config.modelo)
+    if not _reutilizable_minuta(carpeta, estado, clave, config, destino):
+        try:
+            comprobar_autorizacion(destino, config.permitir_remoto, config.destino_autorizado)
+        except PermissionError as exc:
+            raise AutorizacionRechazada(str(exc)) from None
+    _actualizar_minutas(carpeta, estado, config, destino)
+    estado['estado'], estado['etapa'], estado['error'] = 'procesando', 'asociar', None
+    publicar(carpeta, estado)
     archivos = ARCHIVOS['asociar']
     if decision.etiquetado is not None:
         archivos += (ARCHIVO_HABLANTES,)
     _fase(carpeta, estado, 'asociar', clave, archivos,
           lambda: aplicar(asociacion or asociar(carpeta), decision, salida=carpeta),
           emisor=emisor, medicion=medicion, validar=lambda: _validar_transcripcion(carpeta))
-    _generar(carpeta, estado, config, medicion, emisor)
+    _generar(carpeta, estado, config, medicion, emisor, destino)
 
 
-def _generar(carpeta: Path, estado: dict, config: ConfiguracionMinutas, medicion: Medicion, emisor: Emisor | None):
-    clave = _clave_minutas(carpeta, config)
+def _generar(carpeta: Path, estado: dict, config: ConfiguracionMinutas, medicion: Medicion, emisor: Emisor | None, destino):
+    clave = _clave_minutas(carpeta, config, destino)
     args = ['--entrada', str(carpeta / ARCHIVO_TRANSCRIPCION), '--salida', str(carpeta),
             '--modelo', config.modelo, '--secciones', ','.join(config.secciones),
             '--temperatura', str(config.temperatura),
             '--max-tokens-salida', str(config.max_tokens_salida),
             '--reintentos-formato', str(config.reintentos_formato),
             '--num-ctx', str(config.num_ctx), '--max-caracteres-bloque', str(config.max_caracteres_bloque),
-            '--sobrescribir']
+            '--sobrescribir', '--destino-autorizado', destino.huella]
     if config.permitir_remoto:
         args.append('--permitir-remoto')
+    def generar():
+        comprobar_autorizacion(resolver_destino(config.modelo), config.permitir_remoto, destino.huella)
+        comprobar_autorizacion(destino, config.permitir_remoto, config.destino_autorizado)
+        estado['ultima_solicitud_minutas'] = {
+            'modelo': config.modelo, 'destino': destino.tipo, 'huella_destino': destino.huella,
+            'autorizacion_externa': destino.tipo != 'ollama_local' and config.permitir_remoto,
+            'inicio_utc': ahora(),
+        }
+        estado['destino_minutas'] = destino.tipo
+        publicar(carpeta, estado)
+        _trabajador('src.minutas', args, emisor=emisor)
+        meta = json.loads((carpeta / 'ejecucion_minutas.json').read_text(encoding='utf-8'))
+        if meta.get('huella_destino') != destino.huella or meta.get('destino') != destino.tipo:
+            raise ValueError('La ejecución no acredita el destino configurado.')
+
     _fase(carpeta, estado, 'minuta', clave, ARCHIVOS['minuta'],
-          lambda: _trabajador('src.minutas', args, emisor=emisor),
-          emisor=emisor, medicion=medicion, validar=lambda: _validar_minutas(carpeta, config, prompts_actuales=True))
+          generar,
+          emisor=emisor, medicion=medicion, validar=lambda: _validar_minutas(carpeta, config, prompts_actuales=True, destino=destino))
     _fin(carpeta, estado, medicion, emisor, 'completado')
 
 
@@ -576,10 +628,41 @@ def _consulta(carpeta, estado):
             'duracion_audio_s': duracion, 'tiempos': estado.get('tiempos')}
 
 
+def _solicitud_reutilizable(carpeta, estado, solicitud, destino) -> bool:
+    """Verifica una solicitud completa sin publicar ni iniciar inferencias."""
+    try:
+        nueva = _solicitud_serializada(solicitud)
+        conservar_fuentes(carpeta, estado)
+        fuentes = [Path(p) for p in nueva['fuentes']]
+        _, hashes = resolver_fuentes(carpeta, estado, fuentes)
+        if not vigente(carpeta, estado, 'preparar', clave_ingesta(nueva['fuentes'], hashes)):
+            return False
+        digest = sha256(carpeta / ARCHIVO_AUDIO)
+        if not (vigente(carpeta, estado, 'diarizar', _clave_diar(digest, nueva)) and
+                vigente(carpeta, estado, 'transcribir', _clave_stt(digest, nueva))):
+            return False
+        return _reutilizable_minuta(carpeta, estado, _clave_asociacion(carpeta, Decision('escribir')),
+                                    solicitud.minutas, destino)
+    except ERRORES_CHECKPOINT:
+        return False
+
+
 def _ejecutar(solicitud: SolicitudReunion, *, pausa: bool, emisor: Emisor | None) -> dict:
     carpeta = Path(solicitud.salida).resolve()
     with _exclusivo(carpeta):
         estado = leer(carpeta)
+        if not pausa:
+            destino = resolver_destino(solicitud.minutas.modelo)
+            config = solicitud.minutas
+            if config.destino_autorizado is None:
+                config = replace(config, destino_autorizado=destino.huella)
+                solicitud = replace(solicitud, minutas=config)
+            # Sin permiso para inferencia nueva solo se admite reutilización completa.
+            try:
+                comprobar_autorizacion(destino, config.permitir_remoto, config.destino_autorizado)
+            except PermissionError:
+                if not _solicitud_reutilizable(carpeta, estado, solicitud, destino):
+                    raise
         estado.pop('inicio_s', None)
         medicion = Medicion(estado)
         try:
@@ -602,14 +685,63 @@ def procesar_reunion(solicitud: SolicitudReunion, *, emisor: Emisor | None = Non
     return _ejecutar(solicitud, pausa=solicitud.identificacion == 'pausa', emisor=emisor)
 
 
-def _retomar(carpeta, decision, configuracion, emisor, nombres=None):
+def _decision_anterior(carpeta: Path, estado: dict) -> Decision:
+    if 'asociar' not in etapas_vigentes(carpeta, estado):
+        return Decision('escribir')
+    try:
+        _validar_checkpoint(carpeta, estado, 'asociar')
+    except ERRORES_CHECKPOINT:
+        return Decision('escribir')
+    if ARCHIVO_HABLANTES not in estado['etapas']['asociar']['archivos']:
+        return Decision('escribir')
+    datos = json.loads((carpeta / ARCHIVO_HABLANTES).read_text(encoding='utf-8'))
+    return Decision('escribir', Etiquetado(
+        nombres={k: v['name'] for k, v in datos.items()},
+        clips={k: (v['clip_start'], v['clip_end']) for k, v in datos.items()}))
+
+
+def _huella_identificacion(estado: dict) -> str:
+    return huella({e: estado['etapas'].get(e) for e in ('preparar', 'diarizar', 'transcribir', 'asociar')})
+
+
+def consultar_identificacion(reunion: str | Path):
+    """Instantánea de fichas y decisión previa, bajo el bloqueo de la reunión."""
+    carpeta = Path(reunion).resolve()
     with _exclusivo(carpeta):
         estado = leer(carpeta)
+        consulta = _consulta(carpeta, estado)
+        if not {'preparar', 'diarizar', 'transcribir'} <= set(consulta['etapas_vigentes']):
+            raise ValueError('Los insumos para identificación no están vigentes.')
+        return asociar(carpeta), _decision_anterior(carpeta, estado).etiquetado, _huella_identificacion(estado), consulta
+
+
+def _comprobar_fichas(carpeta, estado, huella_fichas):
+    if (huella_fichas != _huella_identificacion(estado) or
+            not {'preparar', 'diarizar', 'transcribir'} <= set(_consulta(carpeta, estado)['etapas_vigentes'])):
+        raise ValueError('Los insumos de las fichas cambiaron; volvé a abrirlas.')
+
+
+def _retomar(carpeta, decision, configuracion, emisor, nombres=None, huella_fichas=None, cambios_minutas=None):
+    with _exclusivo(carpeta):
+        estado = leer(carpeta)
+        if huella_fichas is not None:
+            _comprobar_fichas(carpeta, estado, huella_fichas)
+        if decision is not None and decision.accion == 'cancelar' and estado['estado'] != 'esperando_identificacion':
+            return _consulta(carpeta, estado)
         estado.pop('inicio_s', None)
         medicion = Medicion(estado, continuar=True)
         try:
+            if configuracion is not None and cambios_minutas is not None:
+                raise ValueError('Indicá una configuración completa o cambios parciales, no ambos.')
             cfg = configuracion or _config_desde_estado(estado)
-            _continuar(carpeta, estado, decision or Decision('escribir'), cfg, medicion, emisor, nombres=nombres)
+            if cambios_minutas is not None:
+                cfg = replace(cfg, **cambios_minutas)
+            if cfg.destino_autorizado is None and not (decision and decision.accion == 'cancelar'):
+                cfg = replace(cfg, destino_autorizado=resolver_destino(cfg.modelo).huella)
+            _continuar(carpeta, estado, decision or _decision_anterior(carpeta, estado), cfg, medicion, emisor, nombres=nombres)
+        except AutorizacionRechazada:
+            # Todavía no se publicó ninguna transición de esta solicitud.
+            raise
         except BaseException as exc:
             _fallo(carpeta, estado, medicion, exc, emisor)
             raise
@@ -617,17 +749,46 @@ def _retomar(carpeta, decision, configuracion, emisor, nombres=None):
 
 
 def continuar_reunion(reunion: str | Path, decision: Decision | None = None, *,
-                      configuracion: ConfiguracionMinutas | None = None, emisor: Emisor | None = None) -> dict:
-    return _retomar(Path(reunion).resolve(), decision, configuracion, emisor)
+                      configuracion: ConfiguracionMinutas | None = None, emisor: Emisor | None = None,
+                      huella_fichas: str | None = None, cambios_minutas: Mapping | None = None) -> dict:
+    """Continúa con configuración explícita o cambios sobre la guardada, bajo bloqueo."""
+    return _retomar(Path(reunion).resolve(), decision, configuracion, emisor,
+                    huella_fichas=huella_fichas, cambios_minutas=cambios_minutas)
 
 
-def consultar_reunion(reunion: str | Path) -> dict:
+def consultar_reunion(reunion: str | Path, *, incluir_fuentes: bool = False) -> dict:
     carpeta = Path(reunion).resolve()
     if not carpeta.exists():
         return _consulta(carpeta, leer(carpeta))
     try:
         with _exclusivo(carpeta):
-            return _consulta(carpeta, leer(carpeta))
+            estado = leer(carpeta)
+            consulta = _consulta(carpeta, estado)
+            if incluir_fuentes and estado.get('solicitud'):
+                conservar_fuentes(carpeta, estado)
+                consulta['fuentes_disponibles'] = []
+                for original in estado['solicitud']['fuentes']:
+                    ruta, situacion = None, 'no_disponible'
+                    try:
+                        rutas, hashes = resolver_fuentes(carpeta, estado, [Path(original)])
+                        ruta = str(rutas[0])
+                        conservadas = estado.get('fuentes_conservadas')
+                        guardados = {f['sha256'] for f in (conservadas if isinstance(conservadas, list) else [])
+                                     if isinstance(f, dict) and f.get('original') == original
+                                     and isinstance(f.get('sha256'), str)}
+                        if ruta != original:
+                            situacion = 'copia'
+                        elif not guardados:
+                            situacion = 'no_verificada'
+                        elif guardados == {hashes[0]}:
+                            situacion = 'original'
+                        else:
+                            situacion = 'modificada'
+                    except ERRORES_CHECKPOINT:
+                        pass
+                    consulta['fuentes_disponibles'].append({'original': original, 'disponible': ruta,
+                                                            'situacion': situacion})
+            return consulta
     except ReunionOcupada:
         # Una lectura activa no adquiere un bloqueo compartido ni expone archivos
         # sujetos a sustitución. El lector puede volver a consultar al terminar.
@@ -635,6 +796,20 @@ def consultar_reunion(reunion: str | Path) -> dict:
         return {'carpeta': str(carpeta), 'estado': 'procesando', 'etapa': estado.get('etapa'),
                 'error': None, 'artefactos': {}, 'solicitud': estado.get('solicitud'), 'activa': True,
                 'etapas_vigentes': None, 'duracion_audio_s': None, 'tiempos': estado.get('tiempos')}
+
+
+def leer_resultado_texto(reunion: str | Path, nombre: str) -> str:
+    """Lee una instantánea vigente bajo el mismo bloqueo que su validación."""
+    if nombre not in {ARCHIVO_TRANSCRIPCION, 'minutes.md'}:
+        raise ValueError('El archivo no corresponde a un resultado de texto del visor.')
+    carpeta = Path(reunion).resolve()
+    if not carpeta.is_dir():
+        raise ValueError('La reunión no existe.')
+    with _exclusivo(carpeta):
+        consulta = _consulta(carpeta, leer(carpeta))
+        if nombre not in consulta['artefactos']:
+            raise ValueError('El resultado no está vigente.')
+        return Path(consulta['artefactos'][nombre]).read_text(encoding='utf-8')
 
 
 def reetiquetar_reunion(reunion: str | Path, nombres: Mapping[str, str | None], *,

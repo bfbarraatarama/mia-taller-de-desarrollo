@@ -30,7 +30,8 @@ from .estilo import _flechas, fuente, hoja_estilo, icono_estado
 from .panel_procesamiento import PanelProcesamiento
 from .widgets import BarraTransporte, Encabezado, Medidor, Orbe
 from ..rutas import DIRECTORIO_GRABACIONES_PREDETERMINADO
-from ..captura.recuperacion import grabaciones_interrumpidas
+from ..captura.recuperacion import (consultar_grabaciones_interrumpidas, aceptar_recuperacion,
+                                    omitir_aviso_recuperacion)
 
 # ---------------------------------------------------------------------------
 # Ventana principal
@@ -75,21 +76,46 @@ class Ventana(QMainWindow):
     # --- armado -----------------------------------------------------------
 
     def _ofrecer_grabaciones_interrumpidas(self):
-        archivos = grabaciones_interrumpidas(Path(self.ed_salida.text()))
+        grabaciones = consultar_grabaciones_interrumpidas(Path(self.ed_salida.text()))
+        archivos = [g.audio for g in grabaciones]
         if not archivos:
             return
         nombres = "\n".join(f"• {f.name}" for f in archivos[:8])
         if len(archivos) > 8:
             nombres += f"\n… y {len(archivos) - 8} más"
-        respuesta = QMessageBox.question(
-            self, "Recuperar grabaciones",
-            "Se encontraron grabaciones interrumpidas cuyos WAV son legibles:\n" + nombres +
-            "\n¿Agregarlas a la lista de la reunión?",
-            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
-            QMessageBox.StandardButton.No)
-        if respuesta == QMessageBox.StandardButton.Yes:
-            presentes = set(self.panel.archivos())
-            self.panel._poner_archivos(self.panel.archivos() + [str(p) for p in archivos if str(p) not in presentes])
+        aviso = QMessageBox(self)
+        aviso.setWindowTitle("Recuperar grabaciones")
+        aviso.setIcon(QMessageBox.Icon.Question)
+        aviso.setText("Se encontraron grabaciones interrumpidas con WAV legibles.\n" + nombres)
+        aviso.setInformativeText(
+            "Elegí qué hacer con estas grabaciones. No volver a avisar se aplica solo a las indicadas. "
+            "Ninguna opción elimina archivos; podés cargarlos manualmente en cualquier momento.")
+        if len(archivos) > 8:
+            aviso.setDetailedText("\n".join(f.name for f in archivos))
+        agregar = aviso.addButton("Agregar a la reunión", QMessageBox.ButtonRole.AcceptRole)
+        posponer = aviso.addButton("Recordar más tarde", QMessageBox.ButtonRole.RejectRole)
+        omitir = aviso.addButton("No volver a avisar", QMessageBox.ButtonRole.ActionRole)
+        aviso.setDefaultButton(posponer)
+        aviso.setEscapeButton(posponer)
+        aviso.exec()
+        respuesta = aviso.clickedButton()
+        if respuesta not in (agregar, omitir):
+            return
+        rutas = self.panel.archivos() if respuesta == agregar else None
+        registrar = aceptar_recuperacion if respuesta == agregar else omitir_aviso_recuperacion
+        errores = []
+        for grabacion in grabaciones:
+            try:
+                ruta = str(registrar(grabacion))
+            except (OSError, ValueError) as error:
+                errores.append(f"{grabacion.audio.name}: {error}")
+                continue
+            if rutas is not None and ruta not in rutas:
+                rutas.append(ruta)
+        if rutas is not None:
+            self.panel._poner_archivos(rutas)
+        if errores:
+            QMessageBox.warning(self, "Recuperar grabaciones", "No se registró la decisión para algunas grabaciones.\n" + "\n".join(errores))
 
     def _icono_app(self) -> QIcon:
         o = Orbe()

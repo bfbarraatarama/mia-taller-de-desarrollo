@@ -162,6 +162,10 @@ La API ofrece también `preparar_reunion`, `continuar_reunion`, `consultar_reuni
 `reetiquetar_reunion` y `cancelar_reunion`. En modalidad GUI, el trabajador detiene
 la inferencia antes de las fichas de hablantes. La identificación admite nombres
 repetidos o vacíos y puede modificarse sin repetir diarización ni STT válidos.
+Desde «Abrir reunión» se restituye su configuración y se comprueban los resultados
+vigentes, sin iniciar procesamiento. «Continuar» permite confirmar la identificación
+y la configuración de minutas seleccionada; «Procesar» actualiza también los insumos
+cuando cambiaron. «Nueva reunión» vuelve a los valores predeterminados.
 
 **CLI mínima de la PoC:**
 
@@ -171,6 +175,8 @@ repetidos o vacíos y puede modificarse sin repetir diarización ni STT válidos
     --secciones resumen,temas,acciones
 .venv/bin/python -m src.pipeline estado --reunion resultados/reunion_ejemplo
 ```
+
+Para continuar una reunión preparada, `.venv/bin/python -m src.pipeline continuar --reunion resultados/reunion_ejemplo` recupera su identificación y configuración de minutas. `--modelo` y `--secciones` permiten actualizar esta última. Cualquier permiso externo necesario se indica de nuevo mediante `--permitir-remoto`.
 
 La CLI corresponde a la modalidad no gráfica de la especificación del Hito 3;
 **no** se deriva de la consigna del pipeline de datos de la Clase 7. El notebook
@@ -200,7 +206,13 @@ experimentar con capacidades que no caben en el hardware de la PoC, sin afirmar
 ninguna equivalencia con su eventual ejecución local. Los destinos externos
 (AWS Bedrock o `OLLAMA_HOST` no local) exigen autorización explícita por solicitud;
 se envía la transcripción y el prompt, **no el WAV** desde minutas. El uso
-remoto no redefine la motivación de confidencialidad del producto.
+remoto no redefine la motivación de confidencialidad del producto. La autorización
+no se restaura desde una reunión anterior. Una minuta vigente puede reutilizarse
+sin un nuevo permiso, al no enviar datos. Las grabaciones interrumpidas aceptadas
+u omitidas no vuelven a ofrecerse para la misma identidad, sin cambiar su reporte
+de captura. Consultar
+[Reanudación y confidencialidad](docs/continuidad-y-confidencialidad.md) para la
+fundamentación de estas decisiones.
 
 Los tests sin GPU comprueban contratos y conexiones; **no demuestran** calidad de
 minutas, compatibilidad de VRAM de 6 GB o cumplimiento de los umbrales de Hito 3 §2.3.

@@ -193,3 +193,23 @@ def test_remuestreo_si_la_salida_no_acepta_16_khz(app, dos):
 @pytest.mark.parametrize("segundos, texto", [(18.0, "18 s"), (65.4, "1 min 05 s"), (3600.0, "60 min 00 s")])
 def test_tiempo_legible(segundos, texto):
     assert tiempo_legible(segundos) == texto
+
+
+@pytest.mark.parametrize('nombres', [('Ana', 'Ana'), ('Ana', '')])
+def test_reapertura_de_fichas_restaura_nombres_y_fragmentos(app, dos, monkeypatch, nombres):
+    from src.interfaz.fichas import etiquetar
+    a = asociar(dos)
+    m = ModeloFichas(a)
+    for f, nombre in zip(m.fichas, nombres, strict=True):
+        m.escribir_nombre(f.etiqueta, nombre)
+    m.otro_fragmento('SPEAKER_00')
+    anterior = m.confirmar().etiquetado
+
+    def confirmar(dialogo):
+        assert [t.nombre.text() for t in dialogo.tarjetas] == list(nombres)
+        assert dialogo.tarjetas[0].contador.text().startswith('fragmento 2 de 3')
+        dialogo.decision = dialogo.modelo.confirmar()
+        return 1
+
+    monkeypatch.setattr(DialogoFichas, 'exec', confirmar)
+    assert etiquetar(a, anterior=anterior).etiquetado == anterior

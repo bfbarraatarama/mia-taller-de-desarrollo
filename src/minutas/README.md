@@ -52,15 +52,15 @@ Opciones iniciales:
 
 | Clave | Nombre visible | Proveedor |
 |---|---|---|
-| `qwen2.5-7b` | Qwen 2.5 (7B) — local | Ollama |
+| `qwen2.5-7b` | Qwen 2.5 (7B) — Ollama | Ollama |
 | `nova-lite` | Amazon Nova Lite — Bedrock | AWS Bedrock |
 | `claude-opus-4.5` | Claude Opus 4.5 — Bedrock | AWS Bedrock |
 
-Qwen es la opción predeterminada. Las opciones Bedrock requieren `permitir_remoto=True` en la API o `--permitir-remoto` en la CLI, además de credenciales y permisos AWS válidos.
+Qwen es la opción predeterminada. Bedrock y Ollama externo requieren `permitir_remoto=True` en la API o `--permitir-remoto` en la CLI para cada nueva generación; Bedrock requiere además credenciales y permisos AWS válidos. No se hereda la autorización entre solicitudes.
 
 La API y la CLI rechazan identificadores arbitrarios. Los identificadores técnicos pertenecen al catálogo y no deben solicitarse al usuario final. La disponibilidad efectiva de un modelo depende del servidor Ollama o del acceso a Bedrock; el catálogo declara opciones admitidas, no comprueba automáticamente su disponibilidad.
 
-El procesamiento de Qwen es local siempre que `OLLAMA_HOST` apunte a un servidor local. Un servidor Ollama externo también puede implicar transferencia de transcripciones.
+El procesamiento de Qwen es local siempre que `OLLAMA_HOST` apunte a un servidor local. Un servidor Ollama externo implica transferencia de transcripciones. La política de autorización y sus límites se fundamentan en [Reanudación y confidencialidad](../../docs/continuidad-y-confidencialidad.md).
 
 ## Selección del contenido
 

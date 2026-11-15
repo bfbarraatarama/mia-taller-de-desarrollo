@@ -276,7 +276,8 @@ class Proveedores(unittest.TestCase):
                     "stopReason": "tool_use",
                 }
 
-        falso_boto = types.SimpleNamespace(client=lambda *args, **kwargs: ClienteFalso())
+        falso_boto = types.SimpleNamespace(Session=lambda **kw: types.SimpleNamespace(
+            client=lambda *args, **kwargs: ClienteFalso()))
         with patch.dict(sys.modules, {"boto3": falso_boto}):
             cliente = construir_cliente("nova-lite", permitir_remoto=True,
                                         temperatura=0, num_ctx=16384, max_tokens=4096)

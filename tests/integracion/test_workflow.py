@@ -68,6 +68,7 @@ def modelos_falsos(monkeypatch):
 
             cfg = ConfiguracionMinutas(modelo=arg('--modelo'),
                 permitir_remoto='--permitir-remoto' in argumentos,
+                destino_autorizado=arg('--destino-autorizado') if '--destino-autorizado' in argumentos else None,
                 secciones=tuple(arg('--secciones').split(',')), temperatura=float(arg('--temperatura')),
                 max_tokens_salida=int(arg('--max-tokens-salida')), reintentos_formato=int(arg('--reintentos-formato')),
                 num_ctx=int(arg('--num-ctx')), max_caracteres_bloque=int(arg('--max-caracteres-bloque')))
@@ -766,3 +767,272 @@ def test_diferentes_reuniones_no_comparten_lock(tmp_path):
         with ejecucion._exclusivo(tmp_path / 'b'):
             assert consultar_reunion(tmp_path / 'a')['activa']
             assert consultar_reunion(tmp_path / 'b')['activa']
+
+
+# Reapertura, autorización por solicitud y confirmación sobre la misma instantánea.
+
+@pytest.fixture
+def destino_controlado(monkeypatch, tmp_path):
+    monkeypatch.setenv('MINUTAS_ENV_FILE', str(tmp_path / 'sin.env'))
+    monkeypatch.setenv('OLLAMA_HOST', 'http://127.0.0.1:11434')
+    monkeypatch.setenv('AWS_CONFIG_FILE', str(tmp_path / 'sin.aws'))
+    monkeypatch.setenv('AWS_SHARED_CREDENTIALS_FILE', str(tmp_path / 'sin.credentials'))
+    for k in ('AWS_PROFILE', 'AWS_DEFAULT_PROFILE', 'AWS_ENDPOINT_URL', 'AWS_ENDPOINT_URL_BEDROCK_RUNTIME'):
+        monkeypatch.delenv(k, raising=False)
+
+
+@pytest.mark.parametrize('modelo', ['nova-lite', 'qwen2.5-7b'])
+def test_permiso_externo_no_se_reconstruye_ni_es_necesario_para_reusar(
+        tmp_path, modelos_falsos, destino_controlado, monkeypatch, modelo):
+    from dataclasses import replace
+    monkeypatch.setenv('OLLAMA_HOST', 'http://servidor.example:11434')
+    cfg = ConfiguracionMinutas(modelo=modelo, secciones=('resumen',), permitir_remoto=True)
+    s = replace(solicitud(tmp_path, modo='pausa'), minutas=cfg)
+    assert preparar_reunion(s)['estado'] == 'esperando_identificacion'
+    assert tuple(modelos_falsos.values()) == (1, 1, 0)
+    m = manifiesto(s.salida)
+    assert 'permitir_remoto' not in m['solicitud']['minutas']
+    assert 'destino_autorizado' not in m['solicitud']['minutas']
+    # Un manifiesto anterior podría haber persistido el permiso: no lo rehabilita.
+    m['solicitud']['minutas']['permitir_remoto'] = True
+    guardar_manifiesto(s.salida, m)
+    with pytest.raises(PermissionError, match='autorización'):
+        continuar_reunion(s.salida)
+    assert tuple(modelos_falsos.values()) == (1, 1, 0)
+    assert continuar_reunion(s.salida, configuracion=cfg)['estado'] == 'completado'
+    m = manifiesto(s.salida)
+    assert 'permitir_remoto' not in m['solicitud']['minutas']
+    assert m['ultima_solicitud_minutas']['autorizacion_externa'] is True
+    evidencia = instantanea(s.salida, consultar_reunion(s.salida)['artefactos'])
+    assert continuar_reunion(s.salida)['estado'] == 'completado'
+    assert procesar_reunion(replace(s, identificacion='omitir', minutas=replace(cfg, permitir_remoto=False)))['estado'] == 'completado'
+    assert instantanea(s.salida, evidencia) == evidencia
+    assert tuple(modelos_falsos.values()) == (1, 1, 1)
+    with pytest.raises(PermissionError, match='autorización'):
+        continuar_reunion(s.salida, configuracion=replace(cfg, secciones=('acciones',), permitir_remoto=False))
+    assert instantanea(s.salida, evidencia) == evidencia
+    assert tuple(modelos_falsos.values()) == (1, 1, 1)
+    with pytest.raises(PermissionError, match='autorización'):
+        reetiquetar_reunion(s.salida, {'SPEAKER_00': 'Ana'})
+    assert instantanea(s.salida, evidencia) == evidencia
+    assert reetiquetar_reunion(s.salida, {'SPEAKER_00': 'Ana'}, configuracion=cfg)['estado'] == 'completado'
+    assert tuple(modelos_falsos.values()) == (1, 1, 2)
+    assert continuar_reunion(s.salida)['estado'] == 'completado'
+    assert tuple(modelos_falsos.values()) == (1, 1, 2)
+
+
+def test_cambio_destino_rechaza_huella_anterior_y_regenera_solo_minutas(tmp_path, modelos_falsos,
+                                                              destino_controlado, monkeypatch):
+    from dataclasses import replace
+    from src.minutas.proveedores import resolver_destino
+    s = solicitud(tmp_path)
+    procesar_reunion(s)
+    previo = instantanea(s.salida, ('audio.wav', 'diarization.json', 'asr.json', 'transcription.json'))
+    cfg = replace(s.minutas, permitir_remoto=True, destino_autorizado=resolver_destino(s.minutas.modelo).huella)
+    monkeypatch.setenv('OLLAMA_HOST', 'http://servidor.example:11434')
+    with pytest.raises(PermissionError, match='destino configurado cambió'):
+        continuar_reunion(s.salida, configuracion=cfg)
+    with pytest.raises(PermissionError, match='autorización'):
+        continuar_reunion(s.salida)
+    assert tuple(modelos_falsos.values()) == (1, 1, 1)
+    continuar_reunion(s.salida, configuracion=replace(cfg, destino_autorizado=resolver_destino(cfg.modelo).huella))
+    assert tuple(modelos_falsos.values()) == (1, 1, 2)
+    assert instantanea(s.salida, previo) == previo
+
+
+def test_cambio_destino_durante_preparacion_no_transfiere(tmp_path, modelos_falsos, destino_controlado, monkeypatch):
+    from dataclasses import replace
+    s = replace(solicitud(tmp_path), minutas=ConfiguracionMinutas(permitir_remoto=True))
+    worker = ejecucion._trabajador
+    def cambiar(modulo, args, *, emisor):
+        resultado = worker(modulo, args, emisor=emisor)
+        if modulo == 'src.stt':
+            monkeypatch.setenv('OLLAMA_HOST', 'http://otro.example:11434')
+        return resultado
+    monkeypatch.setattr(ejecucion, '_trabajador', cambiar)
+    with pytest.raises(PermissionError, match='destino configurado cambió'):
+        procesar_reunion(s)
+    assert tuple(modelos_falsos.values()) == (1, 1, 0)
+    assert consultar_reunion(s.salida)['etapas_vigentes'] == ['preparar', 'diarizar', 'transcribir']
+
+
+def test_cli_continuar_configuracion_actual_y_permiso_nuevo(tmp_path, modelos_falsos, destino_controlado, monkeypatch):
+    from dataclasses import replace
+    from src.pipeline.__main__ import main
+    s = replace(solicitud(tmp_path, modo='pausa'), minutas=ConfiguracionMinutas(
+        modelo='nova-lite', secciones=('resumen',), temperatura=.25, num_ctx=4096, max_tokens_salida=1024,
+        max_caracteres_bloque=3000, reintentos_formato=3))
+    preparar_reunion(s)
+    args = ['continuar', '--reunion', str(s.salida)]
+    assert main(args) == 1
+    assert tuple(modelos_falsos.values()) == (1, 1, 0)
+    assert main(args + ['--permitir-remoto']) == 0
+    assert main(args) == 0  # salida vigente, sin llamada nueva
+    assert main(args + ['--secciones', 'acciones,temas']) == 1
+    assert main(args + ['--secciones', 'acciones,temas', '--permitir-remoto']) == 0
+    datos = manifiesto(s.salida)['solicitud']['minutas']
+    assert datos['secciones'] == ['acciones', 'temas']
+    assert datos['temperatura'] == .25 and datos['num_ctx'] == 4096
+    assert datos['reintentos_formato'] == 3 and datos['max_caracteres_bloque'] == 3000
+    assert main(args + ['--modelo', 'qwen2.5-7b']) == 0
+    assert tuple(modelos_falsos.values()) == (1, 1, 3)
+
+
+def test_consultas_de_fichas_y_autorizacion_no_mutan_ni_transfieren(tmp_path, modelos_falsos, destino_controlado):
+    from dataclasses import replace
+    from src.pipeline import consultar_identificacion, requiere_autorizacion_minutas
+    s = solicitud(tmp_path, modo='pausa')
+    preparar_reunion(s)
+    previo = instantanea(s.salida, ('workflow.json', 'asr.json', 'diarization.json'))
+    a, anterior, h, consulta = consultar_identificacion(s.salida)
+    assert anterior is None and consulta['estado'] == 'esperando_identificacion'
+    fichas = ModeloFichas(a)
+    fichas.escribir_nombre('SPEAKER_00', 'Ana')
+    decision = fichas.confirmar()
+    assert not requiere_autorizacion_minutas(s.salida, decision, s.minutas, huella_fichas=h)
+    remoto = replace(s.minutas, modelo='nova-lite')
+    assert requiere_autorizacion_minutas(s.salida, decision, remoto, huella_fichas=h)
+    assert not requiere_autorizacion_minutas(s.salida, Decision('cancelar'), remoto, huella_fichas=h)
+    assert instantanea(s.salida, previo) == previo
+    assert tuple(modelos_falsos.values()) == (1, 1, 0)
+    continuar_reunion(s.salida, decision, huella_fichas=h)
+    _, anterior, h2, _ = consultar_identificacion(s.salida)
+    assert anterior == decision.etiquetado and h2 != h
+    previo = instantanea(s.salida, ['workflow.json', 'speakers.json', 'transcription.json'])
+    with pytest.raises(ValueError, match='insumos de las fichas cambiaron'):
+        continuar_reunion(s.salida, Decision('escribir'), huella_fichas=h)
+    assert instantanea(s.salida, previo) == previo
+    continuar_reunion(s.salida)
+    assert instantanea(s.salida, ('speakers.json', 'transcription.json')) == {k: previo[k] for k in ('speakers.json', 'transcription.json')}
+    assert tuple(modelos_falsos.values()) == (1, 1, 1)
+    continuar_reunion(s.salida, Decision('escribir'), huella_fichas=h2)
+    assert 'speakers.json' not in consultar_reunion(s.salida)['artefactos']
+    assert tuple(modelos_falsos.values()) == (1, 1, 2)
+
+
+def test_fichas_rechazan_checkpoint_corrupto_y_recuperan_copias(tmp_path, modelos_falsos, destino_controlado):
+    from src.pipeline import consultar_identificacion
+    s = solicitud(tmp_path, modo='pausa')
+    preparar_reunion(s)
+    _, _, h, _ = consultar_identificacion(s.salida)
+    originales = [str(p.resolve()) for p in s.fuentes]
+    consulta = consultar_reunion(s.salida, incluir_fuentes=True)
+    assert consulta['fuentes_disponibles'] == [{'original': p, 'disponible': p, 'situacion': 'original'} for p in originales]
+    Path(s.fuentes[0]).unlink()
+    consulta = consultar_reunion(s.salida, incluir_fuentes=True)
+    copia = Path(consulta['fuentes_disponibles'][0]['disponible'])
+    assert copia.is_relative_to(s.salida / 'fuentes')
+    assert consulta['fuentes_disponibles'][1]['disponible'] == originales[1]
+    copia.write_bytes(b'invalido')
+    assert consultar_reunion(s.salida, incluir_fuentes=True)['fuentes_disponibles'][0]['disponible'] is None
+    (s.salida / 'asr.json').write_text('{}')
+    with pytest.raises(ValueError, match='no están vigentes'):
+        consultar_identificacion(s.salida)
+    with pytest.raises(ValueError, match='insumos de las fichas cambiaron'):
+        continuar_reunion(s.salida, Decision('escribir'), huella_fichas=h)
+    assert tuple(modelos_falsos.values()) == (1, 1, 0)
+
+
+def test_cancelar_identificacion_remota_sin_permiso(tmp_path, modelos_falsos, destino_controlado):
+    from dataclasses import replace
+    s = replace(solicitud(tmp_path, modo='pausa'), minutas=ConfiguracionMinutas(modelo='nova-lite'))
+    preparar_reunion(s)
+    r = continuar_reunion(s.salida, Decision('cancelar'))
+    assert r['estado'] == 'cancelado'
+    assert r['etapas_vigentes'] == ['preparar', 'diarizar', 'transcribir']
+    assert tuple(modelos_falsos.values()) == (1, 1, 0)
+
+
+@pytest.mark.parametrize('cambio', ['modelo', 'secciones', 'fuentes', 'stt', 'diarizacion', 'asr_corrupto'])
+def test_solicitud_externa_denegada_no_invalida_checkpoints(tmp_path, modelos_falsos, destino_controlado, cambio):
+    from dataclasses import replace
+    cfg = ConfiguracionMinutas(modelo='nova-lite', secciones=('resumen',), permitir_remoto=True)
+    s = replace(solicitud(tmp_path), minutas=cfg)
+    procesar_reunion(s)
+    nueva = replace(s, minutas=replace(cfg, permitir_remoto=False))
+    if cambio == 'modelo':
+        nueva = replace(nueva, minutas=replace(nueva.minutas, modelo='claude-opus-4.5'))
+    elif cambio == 'secciones':
+        nueva = replace(nueva, minutas=replace(nueva.minutas, secciones=('acciones',)))
+    elif cambio == 'fuentes':
+        nueva = replace(nueva, fuentes=tuple(reversed(nueva.fuentes)))
+    elif cambio == 'stt':
+        nueva = replace(nueva, modelo_stt='tiny')
+    elif cambio == 'diarizacion':
+        nueva = replace(nueva, num_speakers=2)
+    else:
+        (s.salida / 'asr.json').write_text('{}', encoding='utf-8')
+    previo = instantanea(s.salida, [p.name for p in s.salida.iterdir() if p.is_file()])
+    with pytest.raises(PermissionError, match='autorización'):
+        procesar_reunion(nueva)
+    assert instantanea(s.salida, previo) == previo
+    assert tuple(modelos_falsos.values()) == (1, 1, 1)
+
+
+@pytest.mark.parametrize('estado_inicial', ['esperando_identificacion', 'completado'])
+def test_continuacion_denegada_preserva_estado_y_medicion(tmp_path, modelos_falsos, destino_controlado, estado_inicial):
+    from dataclasses import replace
+    s = solicitud(tmp_path, modo='pausa')
+    preparar_reunion(s)
+    if estado_inicial == 'completado':
+        continuar_reunion(s.salida)
+    previo = instantanea(s.salida, [p.name for p in s.salida.iterdir() if p.is_file()])
+    conteo = dict(modelos_falsos)
+    with pytest.raises(PermissionError, match='autorización'):
+        continuar_reunion(s.salida, configuracion=replace(s.minutas, modelo='nova-lite'))
+    assert instantanea(s.salida, previo) == previo
+    assert consultar_reunion(s.salida)['estado'] == estado_inicial
+    assert modelos_falsos == conteo
+
+
+def test_abandonar_reetiquetado_no_cancela_reunion_completada(tmp_path, modelos_falsos, destino_controlado):
+    s = solicitud(tmp_path)
+    procesar_reunion(s)
+    previo = instantanea(s.salida, [p.name for p in s.salida.iterdir() if p.is_file()])
+    assert continuar_reunion(s.salida, Decision('cancelar'))['estado'] == 'completado'
+    assert instantanea(s.salida, previo) == previo
+    assert tuple(modelos_falsos.values()) == (1, 1, 1)
+
+
+def test_visor_lee_solo_resultados_vigentes_y_sin_escritor(tmp_path, modelos_falsos, destino_controlado, monkeypatch):
+    from src.pipeline import leer_resultado_texto
+    from src.pipeline.ejecucion import ReunionOcupada, _exclusivo
+    s = solicitud(tmp_path)
+    procesar_reunion(s)
+    assert leer_resultado_texto(s.salida, 'minutes.md') == (s.salida / 'minutes.md').read_text()
+    assert leer_resultado_texto(s.salida, 'transcription.json') == (s.salida / 'transcription.json').read_text()
+    with _exclusivo(s.salida):
+        with pytest.raises(ReunionOcupada):
+            leer_resultado_texto(s.salida, 'minutes.md')
+    original = Path.read_text
+    def comprobar_bloqueo(self, *a, **k):
+        if self == s.salida / 'minutes.md':
+            with pytest.raises(ReunionOcupada):
+                with _exclusivo(s.salida):
+                    pass
+        return original(self, *a, **k)
+    monkeypatch.setattr(Path, 'read_text', comprobar_bloqueo)
+    assert leer_resultado_texto(s.salida, 'minutes.md')
+    (s.salida / 'asr.json').write_text('{}')
+    with pytest.raises(ValueError, match='no está vigente'):
+        leer_resultado_texto(s.salida, 'minutes.md')
+    with pytest.raises(ValueError, match='no corresponde'):
+        leer_resultado_texto(s.salida, '../otro.txt')
+
+
+def test_consulta_distingue_original_modificado_de_checkpoint_vigente(tmp_path, modelos_falsos, destino_controlado):
+    s = solicitud(tmp_path)
+    procesar_reunion(s)
+    previo = instantanea(s.salida, ('workflow.json', 'audio.wav', 'minutes.json'))
+    archivo_wav(s.fuentes[0], muestras=48000)
+    consulta = consultar_reunion(s.salida, incluir_fuentes=True)
+    assert consulta['estado'] == 'completado'
+    assert consulta['fuentes_disponibles'][0] == {'original': str(s.fuentes[0]),
+        'disponible': str(s.fuentes[0]), 'situacion': 'modificada'}
+    assert consulta['fuentes_disponibles'][1]['situacion'] == 'original'
+    assert instantanea(s.salida, previo) == previo
+    continuar_reunion(s.salida)
+    assert tuple(modelos_falsos.values()) == (1, 1, 1)
+    procesar_reunion(s)
+    assert tuple(modelos_falsos.values()) == (2, 2, 2)
+    assert consultar_reunion(s.salida, incluir_fuentes=True)['fuentes_disponibles'][0]['situacion'] == 'original'

@@ -17,7 +17,7 @@ from __future__ import annotations
 import json
 import time
 from pathlib import Path
-from dataclasses import asdict
+from dataclasses import asdict, replace
 from typing import Callable
 import sys
 
@@ -25,17 +25,18 @@ from PySide6.QtCore import QProcess, Qt, QTimer, QUrl, Signal
 from PySide6.QtGui import QDesktopServices
 from PySide6.QtWidgets import (QAbstractItemView, QFileDialog, QGridLayout, QGroupBox, QHBoxLayout, QLabel,
                                QListWidget, QListWidgetItem, QMessageBox, QProgressBar, QPushButton, QSizePolicy,
-                               QVBoxLayout, QComboBox, QCheckBox, QLineEdit, QPlainTextEdit, QDialog)
+                               QVBoxLayout, QComboBox, QCheckBox, QLineEdit, QPlainTextEdit, QDialog, QSpinBox)
 
 from .estilo import fuente, icono_estado, icono_pendiente
 
 from ..minutas.contratos import SECCIONES_MINUTA
 from ..minutas.generacion import ConfiguracionMinutas
 from ..minutas.modelos import listar_modelos
-from ..pipeline import consultar_reunion
-from ..pipeline.ejecucion import _consentimiento
-from ..asociacion.asociacion import asociar
-from ..rutas import DIRECTORIO_PROYECTO, DIRECTORIO_RESULTADOS_PREDETERMINADO
+from ..minutas.proveedores import resolver_destino
+from ..pipeline import (SolicitudReunion, consultar_reunion, consultar_identificacion,
+                        requiere_autorizacion_minutas, leer_resultado_texto)
+from ..asociacion.etiquetado import Decision
+from ..rutas import DIRECTORIO_PROYECTO, DIRECTORIO_RESULTADOS_PREDETERMINADO, directorio_reunion
 from .fichas import etiquetar
 
 DIR_PROCESAMIENTO = DIRECTORIO_PROYECTO
@@ -69,14 +70,26 @@ class PanelProcesamiento(QGroupBox):
         self.resultados: Path | None = None
         self.ultima_grabacion: Path | None = None
         self._continuacion = False
+        self._revision = 0
+        self._restaurando = False
+        self._cerrando = False
+        self._minutas_base = ConfiguracionMinutas()
+        self._fuentes_disponibles = {}
+        self._texto_destino_modelo = ""
         self.puede_procesar = True
         self.t0 = 0.0
         self.reloj = QTimer(self)
         self.reloj.setInterval(500)
         self.reloj.timeout.connect(self._tick)
         self._armar()
+        for combo in (self.cb_modelo, self.cb_whisper, self.cb_dispositivo, self.cb_dispositivo_stt):
+            combo.currentIndexChanged.connect(self._opciones_cambiaron)
+        self.sp_hablantes.valueChanged.connect(self._opciones_cambiaron)
+        self.ed_resultados.textChanged.connect(self._opciones_cambiaron)
+        for check in self.secciones.values():
+            check.toggled.connect(self._opciones_cambiaron)
         self._reiniciar_etapas()
-        self._actualizar()
+        self._opciones_cambiaron()
 
     @property
     def procesando(self) -> bool:
@@ -102,7 +115,7 @@ class PanelProcesamiento(QGroupBox):
         self.lista.setDragDropMode(QAbstractItemView.DragDropMode.InternalMove)
         self.lista.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
         self.lista.setMinimumHeight(4 * 30 + 6)
-        self.lista.model().rowsMoved.connect(self._numerar)
+        self.lista.model().rowsMoved.connect(self._orden_cambiado)
         fila.addWidget(self.lista, 1)
         botones = QVBoxLayout()
         botones.setSpacing(5)
@@ -114,6 +127,9 @@ class PanelProcesamiento(QGroupBox):
             b.clicked.connect(fn)
             botones.addWidget(b)
             self.botones_archivos.append(b)
+        self.btn_nueva = QPushButton("Nueva reunión")
+        self.btn_nueva.clicked.connect(self._nueva_reunion)
+        botones.addWidget(self.btn_nueva)
         botones.addStretch()
         fila.addLayout(botones)
         return fila
@@ -141,7 +157,18 @@ class PanelProcesamiento(QGroupBox):
         g.addWidget(self.cb_modelo, 1, 1)
         g.addWidget(QLabel("Whisper:"), 1, 2)
         g.addWidget(self.cb_whisper, 1, 3)
-        g.addWidget(self.cb_dispositivo, 1, 4)
+        self.cb_dispositivo_stt = QComboBox()
+        for nombre in ("auto", "cpu", "cuda"):
+            self.cb_dispositivo_stt.addItem(nombre, nombre)
+        self.sp_hablantes = QSpinBox()
+        self.sp_hablantes.setRange(0, 2147483647)
+        self.sp_hablantes.setSpecialValueText("auto")
+        g.addWidget(QLabel("Diarización:"), 2, 0)
+        g.addWidget(self.cb_dispositivo, 2, 1)
+        g.addWidget(QLabel("Dispositivo STT:"), 2, 2)
+        g.addWidget(self.cb_dispositivo_stt, 2, 3)
+        g.addWidget(QLabel("Hablantes:"), 3, 0)
+        g.addWidget(self.sp_hablantes, 3, 1)
         self.secciones = {}
         opciones = QHBoxLayout()
         opciones.addWidget(QLabel("Secciones:"))
@@ -151,36 +178,65 @@ class PanelProcesamiento(QGroupBox):
             self.secciones[clave] = check
             opciones.addWidget(check)
         opciones.addStretch()
-        g.addLayout(opciones, 2, 0, 1, 5)
+        g.addLayout(opciones, 4, 0, 1, 5)
         aviso = QLabel("Modelos experimentales de esta PoC; no determinan los modelos del producto definitivo.")
         aviso.setWordWrap(True)
         aviso.setObjectName("secundario")
-        g.addWidget(aviso, 3, 0, 1, 5)
+        g.addWidget(aviso, 5, 0, 1, 5)
+        self.lbl_destino_modelo = QLabel(objectName="secundario")
+        self.lbl_destino_modelo.setTextFormat(Qt.TextFormat.PlainText)
+        self.lbl_destino_modelo.setWordWrap(True)
+        g.addWidget(self.lbl_destino_modelo, 6, 0, 1, 5)
         self.controles_opciones = [destino, self.ed_resultados, self.cb_modelo, self.cb_whisper,
-                                   self.cb_dispositivo, *self.secciones.values()]
+                                   self.cb_dispositivo, self.cb_dispositivo_stt, self.sp_hablantes,
+                                   *self.secciones.values()]
         return caja
 
     def _elegir_destino(self):
+        self._revision += 1
         elegida = QFileDialog.getExistingDirectory(self, "Carpeta de la reunión", self.ed_resultados.text())
         if elegida:
             self.ed_resultados.setText(elegida)
 
-    def _autorizacion_remota(self) -> bool:
-        config = ConfiguracionMinutas(modelo=self.cb_modelo.currentData(), permitir_remoto=True,
-                        secciones=tuple(k for k, c in self.secciones.items() if c.isChecked()))
-        destino = _consentimiento(config)
-        if destino == "ollama_local":
-            return False
+    def _config_minutas(self) -> ConfiguracionMinutas:
+        orden = tuple(dict.fromkeys((*self._minutas_base.secciones, *SECCIONES_MINUTA)))
+        return replace(self._minutas_base, modelo=self.cb_modelo.currentData(),
+                       secciones=tuple(k for k in orden if self.secciones[k].isChecked()),
+                       permitir_remoto=False, destino_autorizado=None)
+
+    @staticmethod
+    def _args_minutas(config: ConfiguracionMinutas) -> list[str]:
+        args = ["--modelo", config.modelo, "--secciones", ",".join(config.secciones)]
+        for clave in ("temperatura", "max_tokens_salida", "reintentos_formato", "num_ctx", "max_caracteres_bloque"):
+            args.extend(["--" + clave.replace("_", "-"), str(getattr(config, clave))])
+        if config.permitir_remoto:
+            args.append("--permitir-remoto")
+        if config.destino_autorizado is not None:
+            args.extend(["--destino-autorizado", config.destino_autorizado])
+        return args
+
+    def _opciones_cambiaron(self, *_):
+        if self._restaurando:
+            return
+        self._revision += 1
+        try:
+            destino = resolver_destino(self.cb_modelo.currentData())
+            modo = "ejecución local" if destino.tipo == "ollama_local" else "servicio externo"
+            self._texto_destino_modelo = f"Destino del modelo: {modo} mediante {destino.descripcion}"
+        except (OSError, ValueError) as error:
+            self._texto_destino_modelo = f"Configuración del modelo no válida · {error}"
+        self._actualizar()
+
+    def _autorizacion_remota(self, destino) -> bool:
         respuesta = QMessageBox.question(
             self, "Modelo experimental externo",
-            "El modelo elegido procesa la minuta en un servicio externo. Se enviarán la transcripción, "
-            "los nombres identificados y las referencias temporales en los prompts; no se enviará el WAV "
-            "desde el módulo de minutas. ¿Autorizar esta ejecución?",
+            f"Destino de esta operación: servicio externo mediante {destino.descripcion}. "
+            "Se enviarán la transcripción, los nombres identificados y las referencias temporales "
+            "en los prompts y las respuestas necesarias para reintentos o consolidación; no se enviará "
+            "el WAV desde el módulo de minutas. ¿Autorizar esta generación?",
             QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
             QMessageBox.StandardButton.No)
-        if respuesta != QMessageBox.StandardButton.Yes:
-            raise PermissionError("No se autorizó enviar datos a un servicio externo.")
-        return True
+        return respuesta == QMessageBox.StandardButton.Yes
 
     def _armar_etapas(self) -> QGridLayout:
         grilla = QGridLayout()
@@ -240,14 +296,67 @@ class PanelProcesamiento(QGroupBox):
 
     def confirmar_cierre(self) -> bool:
         if not self.procesando:
+            self._cerrando = True
+            self._revision += 1
             return True
         r = QMessageBox.question(self, "Procesar reunión", "Hay un procesamiento en curso. ¿Cancelarlo y salir? "
                                  "Los resultados de las etapas terminadas quedan guardados.")
         if r != QMessageBox.StandardButton.Yes:
             return False
+        self._cerrando = True
+        proc = self.proc
         self._cancelar()
-        self.proc and self.proc.waitForFinished(3000)
+        if self.proc is proc and not proc.waitForFinished(3000):
+            self._forzar_cancelacion(proc)
+            if self.proc is proc and not proc.waitForFinished(1000):
+                self._cerrando = False
+                return False
         return True
+
+    def _nueva_reunion(self):
+        if self.procesando or not self.puede_procesar:
+            return
+        self._restaurando = True
+        try:
+            self.resultados = None
+            self.estado = {}
+            self._fuentes_disponibles = {}
+            self._minutas_base = ConfiguracionMinutas()
+            self._poner_archivos([])
+            self.ed_resultados.setText(str(DIRECTORIO_RESULTADOS_PREDETERMINADO))
+            self.cb_modelo.setCurrentIndex(self.cb_modelo.findData(self._minutas_base.modelo))
+            self.cb_whisper.setCurrentIndex(self.cb_whisper.findData("medium"))
+            self.cb_dispositivo.setCurrentIndex(self.cb_dispositivo.findData("auto"))
+            self.cb_dispositivo_stt.setCurrentIndex(self.cb_dispositivo_stt.findData("auto"))
+            self.sp_hablantes.setValue(0)
+            for clave, check in self.secciones.items():
+                check.setChecked(clave in self._minutas_base.secciones)
+            self._reiniciar_etapas()
+            self.lbl.setText("Elegí los archivos de la nueva reunión.")
+        finally:
+            self._restaurando = False
+        self._opciones_cambiaron()
+
+    def _destino_reunion(self) -> Path:
+        if not self.ed_resultados.text().strip():
+            raise ValueError('Elegí una carpeta de resultados.')
+        return directorio_reunion(self.ed_resultados.text(), fuentes=tuple(self.archivos()))
+
+    def _insumos_seleccionados(self) -> dict:
+        dispositivo_stt = self.cb_dispositivo_stt.currentData()
+        return {'fuentes': [str(Path(p).expanduser().resolve()) for p in self.archivos()],
+                'modelo_stt': self.cb_whisper.currentData(),
+                'dispositivo_stt': None if dispositivo_stt == 'auto' else dispositivo_stt,
+                'dispositivo_diarizacion': self.cb_dispositivo.currentData(),
+                'num_speakers': self.sp_hablantes.value() or None}
+
+    def _coinciden_insumos(self, consulta: dict) -> bool:
+        solicitud = consulta.get('solicitud') or {}
+        try:
+            return (self._destino_reunion() == Path(consulta['carpeta']).resolve()
+                    and all(solicitud.get(k) == v for k, v in self._insumos_seleccionados().items()))
+        except (KeyError, ValueError, OSError):
+            return False
 
     # --- lista de archivos ----------------------------------------------------
 
@@ -262,13 +371,30 @@ class PanelProcesamiento(QGroupBox):
             it.setToolTip(r)
             self.lista.addItem(it)
         self._numerar()
+        self._opciones_cambiaron()
+
+    def _orden_cambiado(self, *_):
+        self._numerar()
+        self._opciones_cambiaron()
 
     def _numerar(self, *_):
         for i in range(self.lista.count()):
             it = self.lista.item(i)
-            it.setText(f"{i + 1}. {Path(it.data(Qt.ItemDataRole.UserRole)).name}")
+            ruta = it.data(Qt.ItemDataRole.UserRole)
+            fuente = self._fuentes_disponibles.get(ruta, {})
+            disponible = fuente.get('disponible', ruta)
+            situacion = fuente.get('situacion')
+            sufijo = {None: "", 'original': "", 'copia': " · copia conservada",
+                      'no_disponible': " · fuente no disponible", 'modificada': " · original modificado",
+                      'no_verificada': " · sin ingesta verificada"}.get(situacion, "")
+            it.setText(f"{i + 1}. {Path(ruta).name}{sufijo}")
+            detalle = f"\nCopia verificada: {disponible}" if disponible and disponible != ruta else ""
+            if situacion == 'modificada':
+                detalle = "\nEl original cambió. Continuar conserva el audio normalizado; Procesar incorpora el cambio."
+            it.setToolTip(ruta + detalle)
 
     def _agregar(self):
+        self._revision += 1
         rutas, _ = QFileDialog.getOpenFileNames(self, "Archivos de la reunión", str(self.carpeta_grabaciones()),
                                                 EXTENSIONES_AUDIO)
         if rutas:
@@ -338,35 +464,50 @@ class PanelProcesamiento(QGroupBox):
             if r == QMessageBox.StandardButton.Yes:
                 self._cancelar()
             return
-        if not self.archivos():
-            self._agregar_ultima()
+        self._revision += 1
         archivos = self.archivos()
         if not archivos:
+            self.lbl.setText("Elegí primero los archivos de la reunión.")
             return
-        if not any(c.isChecked() for c in self.secciones.values()):
-            self._mostrar_error("Seleccioná al menos una sección de minuta.", "")
+        if not self.puede_procesar:
             return
         try:
-            permitir_remoto = self._autorizacion_remota()
-        except (ValueError, PermissionError) as e:
-            self.lbl.setText(str(e))
-            return
-        self._iniciar(archivos, permitir_remoto)
+            config = self._config_minutas()
+            destino = self._destino_reunion()
+            consulta = consultar_reunion(destino) if (destino / 'workflow.json').exists() else None
+            if consulta and consulta['activa']:
+                raise ValueError('Hay una ejecución activa en esta reunión.')
+            anterior = consulta and consulta.get('solicitud')
+            if anterior and anterior['fuentes'] != self._insumos_seleccionados()['fuentes']:
+                if QMessageBox.question(self, "Modificar reunión",
+                        "La carpeta ya corresponde a una reunión con fuentes distintas. ¿Reprocesarla con la nueva lista?",
+                        QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+                        QMessageBox.StandardButton.No) != QMessageBox.StandardButton.Yes:
+                    return
+            elif self.resultados is not None and self.resultados != destino:
+                if QMessageBox.question(self, "Otro destino",
+                        "Se utilizarán las opciones actuales para otra carpeta. ¿Procesar con estas opciones?",
+                        QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+                        QMessageBox.StandardButton.No) != QMessageBox.StandardButton.Yes:
+                    return
+            self._iniciar(archivos, destino, config)
+        except (OSError, ValueError, KeyError, TypeError) as error:
+            self._mostrar_error("No se puede iniciar el procesamiento.", str(error))
 
-    def _iniciar(self, archivos: list[str], permitir_remoto: bool):
-        destino = Path(self.ed_resultados.text()).expanduser().resolve()
+    def _iniciar(self, archivos: list[str], destino: Path, config: ConfiguracionMinutas):
+        insumos = self._insumos_seleccionados()
         args = ["-u", "-m", "src.pipeline", "ejecutar", *archivos,
                 "--salida", str(destino), "--esperar-identificacion",
-                "--modelo", self.cb_modelo.currentData(),
-                "--modelo-stt", self.cb_whisper.currentData(),
-                "--dispositivo-diarizacion", self.cb_dispositivo.currentData(),
-                "--secciones", ",".join(k for k, c in self.secciones.items() if c.isChecked())]
-        if self.cb_dispositivo.currentData() != "auto":
-            args.extend(["--dispositivo-stt", self.cb_dispositivo.currentData()])
-        if permitir_remoto:
-            args.append("--permitir-remoto")
+                "--modelo-stt", insumos['modelo_stt'],
+                "--dispositivo-diarizacion", insumos['dispositivo_diarizacion'],
+                *self._args_minutas(config)]
+        if insumos['dispositivo_stt'] is not None:
+            args.extend(["--dispositivo-stt", insumos['dispositivo_stt']])
+        if insumos['num_speakers'] is not None:
+            args.extend(["--num-speakers", str(insumos['num_speakers'])])
         self._lanzar(args, destino, continuacion=False)
-        self.mensaje.emit(f"Procesando {len(archivos)} archivo(s)…")
+        if self.procesando:
+            self.mensaje.emit(f"Procesando {len(archivos)} archivo(s)…")
 
     def _lanzar(self, args: list[str], destino: Path, *, continuacion: bool, stdin: str | None = None):
         if not continuacion:
@@ -374,89 +515,167 @@ class PanelProcesamiento(QGroupBox):
         self.buffer, self.errores, self.estado = b"", "", {}
         self.resultados = destino
         self._continuacion = continuacion
-        self.proc = QProcess(self)
-        self.proc.setWorkingDirectory(str(DIR_PROCESAMIENTO))
-        self.proc.readyReadStandardOutput.connect(self._leer_eventos)
-        self.proc.readyReadStandardError.connect(self._leer_errores)
-        self.proc.finished.connect(self._terminado)
+        self._revision += 1
+        proc = self.proc = QProcess(self)
+        proc.setWorkingDirectory(str(DIR_PROCESAMIENTO))
+        proc.readyReadStandardOutput.connect(lambda: self._leer_eventos() if self.proc is proc else None)
+        proc.readyReadStandardError.connect(lambda: self._leer_errores() if self.proc is proc else None)
+        proc.finished.connect(lambda codigo, estado: self._terminado(codigo, estado, proc))
         self.t0 = time.monotonic()
-        self.proc.start(str(PYTHON_PROCESAMIENTO), args)
-        if not self.proc.waitForStarted(1500):
-            self.proc = None
-            self._mostrar_error("No se pudo iniciar el procesador.", str(PYTHON_PROCESAMIENTO))
+        proc.start(str(PYTHON_PROCESAMIENTO), args)
+        if not proc.waitForStarted(1500):
+            if self.proc is proc:
+                self.proc = None
+                proc.kill()
+                proc.waitForFinished(3000)
+                proc.deleteLater()
+                self._actualizar()
+                self._mostrar_error("No se pudo iniciar el procesador.", str(PYTHON_PROCESAMIENTO))
+            return
+        if self.proc is not proc:
             return
         if stdin is not None:
-            self.proc.write(stdin.encode('utf-8'))
-            self.proc.closeWriteChannel()
+            proc.write(stdin.encode('utf-8'))
+            proc.closeWriteChannel()
         self.reloj.start()
         self._tick()
         self._actualizar()
         self.ocupado.emit(True)
 
-    def _continuar_con_fichas(self, _=False, *, reconfirmar=True):
-        if self.resultados is None:
+    def _continuar_con_fichas(self, _=False):
+        if self.resultados is None or self.procesando or not self.puede_procesar or self._cerrando:
             return
-        # Una reanudación tras cerrar la aplicación o un reetiquetado posterior
-        # no reutiliza silenciosamente una autorización remota anterior.
-        if reconfirmar:
-            try:
-                anterior = consultar_reunion(self.resultados)['solicitud']['minutas']
-                config = ConfiguracionMinutas(**{**anterior, 'secciones': tuple(anterior['secciones'])})
-                if _consentimiento(config) != 'ollama_local':
-                    respuesta = QMessageBox.question(
-                        self, 'Confirmar modelo externo',
-                        'Esta continuación puede volver a enviar la transcripción al proveedor externo. '
-                        '¿Autorizar esta ejecución?',
-                        QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
-                        QMessageBox.StandardButton.No)
-                    if respuesta != QMessageBox.StandardButton.Yes:
-                        return
-            except (ValueError, PermissionError, KeyError, TypeError) as error:
-                self._mostrar_error('No se puede autorizar la continuación.', str(error))
-                return
+        self._revision += 1
+        revision = self._revision
+        carpeta = self.resultados
         try:
-            consulta = consultar_reunion(self.resultados)
-            if not {'diarization.json', 'asr.json'} <= consulta['artefactos'].keys():
-                raise ValueError('Los insumos para identificación no están vigentes.')
-            decision = etiquetar(asociar(self.resultados), self)
+            config = self._config_minutas()
+            asociacion, anterior, huella, consulta = consultar_identificacion(carpeta)
+            if not self._coinciden_insumos(consulta):
+                raise ValueError('Las fuentes o los parámetros de inferencia cambiaron. Usá Procesar para actualizar los insumos.')
+            decision = etiquetar(asociacion, self, anterior=anterior)
+            if self._cerrando or self.procesando or self._revision != revision or self.resultados != carpeta:
+                return
+            if decision.accion == "cancelar":
+                if consulta['estado'] == 'esperando_identificacion':
+                    # Cierra la espera sin publicar otra transcripción. Un reetiquetado
+                    # abandonado de una reunión completada no altera su estado anterior.
+                    self._lanzar_continuacion(carpeta, decision, config, huella)
+                else:
+                    self.lbl.setText("Identificación cancelada; se conservan los resultados anteriores.")
+                return
+            destino = resolver_destino(config.modelo)
+            config = replace(config, destino_autorizado=destino.huella)
+            if requiere_autorizacion_minutas(carpeta, decision, config, huella_fichas=huella):
+                if not self._autorizacion_remota(destino):
+                    self.lbl.setText("No se autorizó generar la minuta externa; podés continuar después.")
+                    return
+                config = replace(config, permitir_remoto=True)
+            if self._cerrando or self.procesando or self._revision != revision or self.resultados != carpeta:
+                return
+            self._lanzar_continuacion(carpeta, decision, config, huella)
         except Exception as error:
-            self._mostrar_error("No se pudieron abrir las fichas.", str(error))
-            return
-        if decision.accion == "cancelar":
-            self.lbl.setText("Identificación cancelada. Podés reabrir la reunión para continuar.")
-            return
+            self._mostrar_error("No se pudo continuar la reunión.", str(error))
+
+    def _lanzar_continuacion(self, carpeta, decision, config, huella):
         datos = json.dumps(asdict(decision), ensure_ascii=False)
-        self._lanzar(["-u", "-m", "src.pipeline", "continuar", "--reunion",
-                      str(self.resultados), "--decision-json", "-"], self.resultados,
-                     continuacion=True, stdin=datos)
+        self._lanzar(["-u", "-m", "src.pipeline", "continuar", "--reunion", str(carpeta),
+                      "--decision-json", "-", "--huella-fichas", huella, *self._args_minutas(config)],
+                     carpeta, continuacion=True, stdin=datos)
+
+    def _restaurar_reunion(self, consulta: dict):
+        solicitud = consulta.get('solicitud')
+        if not solicitud:
+            raise ValueError('La carpeta no contiene una solicitud de reunión registrada.')
+        datos = solicitud['minutas']
+        config = ConfiguracionMinutas(**{**datos, 'secciones': tuple(datos['secciones']),
+                                        'permitir_remoto': False, 'destino_autorizado': None})
+        # Validar antes de tocar los controles; las opciones restauradas pueden
+        # provenir de la API, no necesariamente de una reunión creada en Qt.
+        if not isinstance(solicitud['fuentes'], list) or not all(isinstance(p, str) for p in solicitud['fuentes']):
+            raise ValueError('La lista de fuentes guardada no es válida.')
+        SolicitudReunion(fuentes=tuple(solicitud['fuentes']), salida=consulta['carpeta'],
+                         minutas=config, modelo_stt=solicitud['modelo_stt'],
+                         dispositivo_stt=solicitud['dispositivo_stt'],
+                         dispositivo_diarizacion=solicitud['dispositivo_diarizacion'],
+                         num_speakers=solicitud['num_speakers'], identificacion=solicitud['identificacion'])
+        hablantes = solicitud['num_speakers'] or 0
+        if not 0 <= hablantes <= self.sp_hablantes.maximum():
+            raise ValueError('El número de hablantes guardado excede el rango de la interfaz.')
+        self._restaurando = True
+        try:
+            self.resultados = Path(consulta['carpeta'])
+            self.ed_resultados.setText(str(self.resultados))
+            self._fuentes_disponibles = {f['original']: f for f in consulta.get('fuentes_disponibles', [])}
+            self._poner_archivos(solicitud['fuentes'])
+            self._minutas_base = config
+            self.cb_modelo.setCurrentIndex(self.cb_modelo.findData(config.modelo))
+            whisper = solicitud['modelo_stt']
+            if self.cb_whisper.findData(whisper) < 0:
+                self.cb_whisper.addItem(whisper, whisper)
+            self.cb_whisper.setCurrentIndex(self.cb_whisper.findData(whisper))
+            self.cb_dispositivo.setCurrentIndex(self.cb_dispositivo.findData(solicitud['dispositivo_diarizacion']))
+            self.cb_dispositivo_stt.setCurrentIndex(self.cb_dispositivo_stt.findData(solicitud['dispositivo_stt'] or 'auto'))
+            self.sp_hablantes.setValue(hablantes)
+            for clave, check in self.secciones.items():
+                check.setChecked(clave in config.secciones)
+            self._restaurar_etapas(consulta)
+            estados = {
+                'completado': 'Reunión completada. Podés consultar sus resultados.',
+                'esperando_identificacion': 'Identificación pendiente. Presioná Continuar.',
+                'fallido': 'Procesamiento incompleto o fallido. Podés retomarlo.',
+                'cancelado': 'Procesamiento cancelado. Podés retomarlo.',
+                'pendiente': 'Reunión pendiente. Presioná Procesar.',
+                'procesando': 'Hay una ejecución activa en otra instancia. Volvé a abrir la reunión para actualizar.',
+            }
+            self.lbl.setText(estados[consulta['estado']])
+        finally:
+            self._restaurando = False
+        self._opciones_cambiaron()
+
+    def _restaurar_etapas(self, consulta: dict):
+        self._reiniciar_etapas()
+        vigentes = set(consulta.get('etapas_vigentes') or [])
+        for etapa in vigentes:
+            self._poner_etapa(etapa, "ok", "Vigente")
+        etapa = consulta.get('etapa')
+        if etapa in self.filas and etapa not in vigentes:
+            if consulta.get('activa'):
+                self._poner_etapa(etapa, "en curso", "Otra ejecución")
+            elif consulta['estado'] == 'esperando_identificacion':
+                self._poner_etapa(etapa, "esperando_identificacion", "Identificación pendiente")
+            elif consulta['estado'] == 'fallido':
+                self._poner_etapa(etapa, "error", "No vigente")
+            elif consulta['estado'] == 'cancelado':
+                self._poner_etapa(etapa, "pendiente", "Cancelada")
 
     def _abrir_reunion(self):
+        self._revision += 1
         elegida = QFileDialog.getExistingDirectory(self, "Abrir reunión existente", self.ed_resultados.text())
         if not elegida:
             return
         try:
-            consulta = consultar_reunion(elegida)
+            if not (Path(elegida) / 'workflow.json').is_file():
+                raise ValueError('No existe workflow.json en la carpeta elegida.')
+            self._restaurar_reunion(consultar_reunion(elegida, incluir_fuentes=True))
         except Exception as exc:
             self._mostrar_error("No se puede abrir esta reunión.", str(exc))
-            return
-        self.resultados = Path(elegida)
-        self.ed_resultados.setText(elegida)
-        if consulta['estado'] in ('esperando_identificacion', 'cancelado', 'fallido') and \
-           {'diarization.json', 'asr.json'} <= consulta['artefactos'].keys():
-            self._continuar_con_fichas()
-        else:
-            self.lbl.setText(f"Reunión abierta: {consulta['estado']}.")
-        self._actualizar()
 
     def _cancelar(self):
-        if self.proc is not None:
+        proc = self.proc
+        if proc is not None:
             self.estado["cancelado"] = True
-            self.proc.terminate()  # el padre detiene los procesos de inferencia descendientes
-            QTimer.singleShot(3000, self._forzar_cancelacion)
+            proc.terminate()
+            QTimer.singleShot(3000, self, lambda: self._forzar_cancelacion(proc))
 
-    def _forzar_cancelacion(self):
-        if self.proc is not None and self.proc.state() != QProcess.ProcessState.NotRunning:
-            self.proc.kill()
+    def _forzar_cancelacion(self, proc):
+        if self.proc is proc and proc.state() != QProcess.ProcessState.NotRunning:
+            proc.kill()
+
+    def _fichas_pendientes(self, revision, carpeta):
+        if (not self._cerrando and self.proc is None and self.puede_procesar
+                and self._revision == revision and self.resultados == carpeta):
+            self._continuar_con_fichas()
 
     def _tick(self):
         if self.procesando:
@@ -499,30 +718,46 @@ class PanelProcesamiento(QGroupBox):
         elif tipo == "fin":
             self.estado["fin"] = ev
 
-    def _terminado(self, codigo: int, _estado):
+    def _terminado(self, codigo: int, _estado, proc):
+        if self.proc is not proc:
+            return
         self._leer_eventos()
         self._leer_errores()
         self.reloj.stop()
         self.proc = None
+        proc.deleteLater()
         fin = self.estado.get("fin") or {}
-        if fin.get("estado") == "esperando_identificacion" and codigo == 0:
+        consulta = {}
+        try:
+            consulta = consultar_reunion(self.resultados, incluir_fuentes=True)
+            self._fuentes_disponibles = {f['original']: f for f in consulta.get('fuentes_disponibles', [])}
+            self._numerar()
+            self._restaurar_etapas(consulta)
+        except (OSError, ValueError, KeyError, TypeError):
+            pass
+        efectivo = consulta.get('estado')
+        if efectivo == "esperando_identificacion" and fin.get("estado") == efectivo and codigo == 0:
             self.lbl.setText("Audio transcrito. Corresponde identificar los hablantes.")
             self.ocupado.emit(False)
             self._actualizar()
-            QTimer.singleShot(0, lambda: self._continuar_con_fichas(reconfirmar=False))
+            revision, carpeta = self._revision, self.resultados
+            QTimer.singleShot(0, self, lambda: self._fichas_pendientes(revision, carpeta))
             return
-        if fin.get("estado") == "completado" and codigo == 0:
+        if efectivo == "completado" and fin.get("estado") == efectivo and codigo == 0:
             self.lbl.setText("Minuta lista.")
             self.mensaje.emit(f"Minuta lista → {self.resultados}")
-        elif fin.get("estado") == "cancelado" or self.estado.get("cancelado"):
+        elif efectivo == "cancelado":
             self.lbl.setText("Procesamiento cancelado; quedan los resultados de las etapas terminadas.")
             self.mensaje.emit("Procesamiento cancelado.")
+        elif consulta.get('activa'):
+            self.lbl.setText("Todavía hay una ejecución activa. Volvé a abrir la reunión para actualizar.")
         else:
-            error = self.estado.get("error") or f"El proceso terminó con código {codigo}."
-            self.lbl.setText("Error: " + error.splitlines()[0])
-            self.mensaje.emit("Error en el procesamiento: " + error.splitlines()[0])
-            self._mostrar_error("El procesamiento no terminó. El audio y los resultados de las etapas "
-                                "terminadas quedan guardados.", error, self.errores[-4000:])
+            error = consulta.get('error') or self.estado.get("error") or f"El proceso terminó con código {codigo}."
+            self.lbl.setText("Error · " + error.splitlines()[0])
+            self.mensaje.emit("Error en el procesamiento · " + error.splitlines()[0])
+            if not self._cerrando:
+                self._mostrar_error("El procesamiento no terminó. El audio y los resultados de las etapas "
+                                    "terminadas quedan guardados cuando son íntegros.", error, self.errores[-4000:])
         self._actualizar()
         self.ocupado.emit(False)
 
@@ -531,13 +766,12 @@ class PanelProcesamiento(QGroupBox):
     def _ver(self, nombre: str):
         if self.resultados is None:
             return
-        try:
-            consulta = consultar_reunion(self.resultados)
-        except (OSError, ValueError, KeyError) as error:
-            self._mostrar_error("No se pudo verificar este resultado.", str(error))
+        if self.procesando:
             return
-        if self.procesando or nombre not in consulta['artefactos']:
-            self._mostrar_error("Este resultado no está vigente.", "Comprobá el estado de la reunión.")
+        try:
+            contenido = leer_resultado_texto(self.resultados, nombre)
+        except (OSError, ValueError, RuntimeError, KeyError, TypeError) as error:
+            self._mostrar_error("No se pudo verificar este resultado.", str(error))
             return
         ventana = QDialog(self)
         ventana.setWindowTitle("Minuta" if nombre == MINUTA else "Transcripción")
@@ -545,7 +779,7 @@ class PanelProcesamiento(QGroupBox):
         lay = QVBoxLayout(ventana)
         texto = QPlainTextEdit(ventana)
         texto.setReadOnly(True)
-        texto.setPlainText(Path(consulta['artefactos'][nombre]).read_text(encoding='utf-8'))
+        texto.setPlainText(contenido)
         lay.addWidget(texto)
         cerrar = QPushButton("Cerrar")
         cerrar.clicked.connect(ventana.accept)
@@ -576,23 +810,43 @@ class PanelProcesamiento(QGroupBox):
 
     def _actualizar(self):
         procesando = self.procesando
-        self.btn_procesar.setText("Cancelar" if procesando else "Procesar")
-        self.btn_procesar.setEnabled(procesando or self.puede_procesar)
-        for b in self.botones_archivos:
-            b.setEnabled(not procesando)
-        self.lista.setEnabled(not procesando)
         r = self.resultados
-        self.btn_carpeta.setEnabled(r is not None and r.exists())
-        archivos_validos = {}
-        if r is not None and (r / "workflow.json").exists():
+        consulta = {}
+        if not procesando and r is not None and (r / "workflow.json").exists():
             try:
-                archivos_validos = consultar_reunion(r)['artefactos']
-            except (OSError, ValueError, KeyError):
+                consulta = consultar_reunion(r)
+            except (OSError, ValueError, KeyError, TypeError):
                 pass
+        activa = bool(consulta.get('activa'))
+        pendiente = False
+        guardada = consulta.get('solicitud')
+        if guardada and not activa:
+            try:
+                datos = guardada['minutas']
+                config_guardada = ConfiguracionMinutas(**{**datos, 'secciones': tuple(datos['secciones']),
+                                                           'permitir_remoto': False, 'destino_autorizado': None})
+                pendiente = not self._coinciden_insumos(consulta) or self._config_minutas() != config_guardada
+            except (ValueError, KeyError, TypeError):
+                pendiente = True
+        aviso = "\nLa selección aún no se aplicó; los resultados corresponden a la configuración guardada." if pendiente else ""
+        self.lbl_destino_modelo.setText(self._texto_destino_modelo + aviso)
+        editable = not (procesando or activa) and self.puede_procesar
+        self.btn_procesar.setText("Cancelar" if procesando else "Procesar")
+        self.btn_procesar.setEnabled(procesando or editable)
+        for b in self.botones_archivos:
+            b.setEnabled(editable)
+        self.btn_nueva.setEnabled(not procesando and self.puede_procesar)
+        self.lista.setEnabled(editable)
+        self.btn_carpeta.setEnabled(r is not None and r.exists())
+        archivos_validos = consulta.get('artefactos', {})
         self.btn_minuta.setEnabled(not procesando and MINUTA in archivos_validos)
         self.btn_transcripcion.setEnabled(not procesando and TRANSCRIPCION in archivos_validos)
         self.btn_abrir_reunion.setEnabled(not procesando and self.puede_procesar)
-        self.btn_fichas.setEnabled(not procesando and self.puede_procesar and
-            'diarization.json' in archivos_validos and 'asr.json' in archivos_validos)
+        insumos = {'diarization.json', 'asr.json'} <= archivos_validos.keys()
+        self.btn_fichas.setText("Identificar de nuevo" if TRANSCRIPCION in archivos_validos and
+                                consulta.get('estado') == 'completado' else "Continuar")
+        self.btn_fichas.setEnabled(editable and insumos and self._coinciden_insumos(consulta))
+        self.btn_fichas.setToolTip("" if self.btn_fichas.isEnabled() else
+                                   "Usá Procesar si faltan insumos vigentes o cambiaste sus opciones.")
         for c in self.controles_opciones:
-            c.setEnabled(not procesando)
+            c.setEnabled(editable)

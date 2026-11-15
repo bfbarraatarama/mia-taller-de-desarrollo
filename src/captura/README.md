@@ -34,6 +34,8 @@ En `resultados/grabaciones/` (configurable), con el nombre del momento en que em
 | `AAAA_MM_DD_HH_MM_SS.wav` | Micrófono + sistema, mono, 16 kHz, PCM 16 |
 | `AAAA_MM_DD_HH_MM_SS.json` | Dispositivos, mediciones y 5 pruebas (señal en ambas fuentes, sin pérdidas, sin desincronización, salida procesable y tono). `"estado": "completa"`, o `"grabando…"` si se interrumpió |
 
+Si la grabación se interrumpe, la interfaz ofrece los WAV recuperables al iniciar. Agregarlos a la reunión o elegir no volver a avisar registra una decisión junto a cada grabación, sin alterar el reporte ni el WAV. Posponer el aviso no registra una decisión definitiva. Todas las grabaciones conservadas pueden cargarse manualmente. Véase [Reanudación y confidencialidad](../../docs/continuidad-y-confidencialidad.md#recuperación-de-grabaciones-interrumpidas).
+
 ## Archivos
 
 | Archivo | Qué hace |

@@ -23,10 +23,10 @@ class ModeloMinutas:
 MODELOS_DISPONIBLES: tuple[ModeloMinutas, ...] = (
     ModeloMinutas(
         clave="qwen2.5-7b",
-        nombre="Qwen 2.5 (7B) — local",
+        nombre="Qwen 2.5 (7B) — Ollama",
         proveedor="ollama",
         identificador="qwen2.5:7b",
-        descripcion="Inferencia mediante Ollama en el equipo local.",
+        descripcion="Inferencia mediante Ollama, local si el servidor es local.",
         requiere_remoto=False,
     ),
     ModeloMinutas(

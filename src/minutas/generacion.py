@@ -29,7 +29,8 @@ from .entrada import leer_transcripcion, representar_intervenciones
 from .formato import a_markdown
 from .modelos import MODELO_PREDETERMINADO, obtener_modelo
 from .proveedores import (
-    ClienteModelo, RespuestaEstructuradaAusente, construir_cliente,
+    ClienteModelo, ClienteOllama, RespuestaEstructuradaAusente, construir_cliente,
+    resolver_destino, comprobar_autorizacion, liberar_modelo_ollama,
 )
 
 
@@ -43,9 +44,12 @@ class ConfiguracionMinutas:
     max_caracteres_bloque: int = 12000
     reintentos_formato: int = 2
     secciones: tuple[str, ...] = SECCIONES_MINUTA
+    destino_autorizado: str | None = None  # solo para la solicitud actual
 
     def __post_init__(self) -> None:
         obtener_modelo(self.modelo)
+        if type(self.permitir_remoto) is not bool:
+            raise ValueError("permitir_remoto debe ser booleano.")
         if not 0 <= self.temperatura <= 1:
             raise ValueError("La temperatura debe estar entre 0 y 1.")
         if self.num_ctx < 2048 or self.max_tokens_salida < 256:
@@ -303,10 +307,15 @@ def generar_minuta(
         raise FileExistsError("Ya existe un resultado de minutas. Elegí otra carpeta o sobrescribir=True.")
     intervenciones, bytes_origen = leer_transcripcion(entrada)
     extraccion, consolidacion, hashes_prompts = _preparar_prompts(config.secciones)
+    destino = resolver_destino(config.modelo)
+    try:
+        comprobar_autorizacion(destino, config.permitir_remoto, config.destino_autorizado)
+    except PermissionError as exc:
+        raise ValueError(str(exc)) from None
     llm = cliente or construir_cliente(
         config.modelo, permitir_remoto=config.permitir_remoto,
         temperatura=config.temperatura, num_ctx=config.num_ctx,
-        max_tokens=config.max_tokens_salida,
+        max_tokens=config.max_tokens_salida, destino_autorizado=destino.huella,
     )
     if llm.proveedor != "ollama" and not config.permitir_remoto:
         raise ValueError("El proveedor remoto no está habilitado.")
@@ -382,57 +391,63 @@ def generar_minuta(
             f"tras {config.reintentos_formato + 1} intentos: {ultimo_error}"
         )
 
-    grupos = _fragmentar_intervenciones(intervenciones, config.max_caracteres_bloque)
-    parciales = [
-        pedir(extraccion, representar_intervenciones(grupo), grupo)
-        for grupo in grupos
-    ]
-    while len(parciales) > 1:
-        grupos_minutas = _agrupar_minutas(parciales, config.max_caracteres_bloque)
-        if len(grupos_minutas) == len(parciales):
-            raise ValueError("La consolidación no puede avanzar con el presupuesto actual.")
-        siguientes: list[BaseModel] = []
-        for grupo in grupos_minutas:
-            if len(grupo) == 1:
-                siguientes.append(grupo[0])
-            else:
-                datos = json.dumps(
-                    {"minutas_parciales": [item.model_dump() for item in grupo]},
-                    ensure_ascii=False, separators=(",", ":"),
-                )
-                siguientes.append(pedir(consolidacion, datos, intervenciones))
-        parciales = siguientes
-    minuta_final = parciales[0]
-    validar_evidencias(minuta_final, intervenciones)
-    texto_json = minuta_final.model_dump_json(indent=2) + "\n"
-    texto_markdown = a_markdown(minuta_final, intervenciones)
-    manifiesto = {
-        "version_esquema": 1,
-        "creado_utc": datetime.now(timezone.utc).isoformat(),
-        "sha256_entrada": hashlib.sha256(bytes_origen).hexdigest(),
-        "modelo": llm.nombre,
-        "proveedor": llm.proveedor,
-        "secciones": list(config.secciones),
-        "configuracion": asdict(config),
-        "prompts": hashes_prompts,
-        "intervenciones": len(intervenciones),
-        "bloques_extraccion": len(grupos),
-        "llamadas_modelo": llamadas,
-        "normalizaciones_ancla": normalizaciones_ancla,
-        "tokens_entrada": tokens_entrada if medido_entrada else None,
-        "tokens_salida": tokens_salida if medido_salida else None,
-        "duracion_s": round(time.monotonic() - inicio, 3),
-        "sha256_minuta_json": hashlib.sha256(texto_json.encode("utf-8")).hexdigest(),
-    }
-    _guardar_resultados(
-        (
-            (rutas.json, texto_json),
-            (rutas.markdown, texto_markdown),
-            (rutas.manifiesto, json.dumps(manifiesto, ensure_ascii=False, indent=2) + "\n"),
-        ),
-        sobrescribir=sobrescribir,
-    )
-    return ResultadoMinutas(
-        json=rutas.json, markdown=rutas.markdown, manifiesto=rutas.manifiesto,
-        llamadas_modelo=llamadas, duracion_s=manifiesto["duracion_s"],
-    )
+    try:
+        grupos = _fragmentar_intervenciones(intervenciones, config.max_caracteres_bloque)
+        parciales = [
+            pedir(extraccion, representar_intervenciones(grupo), grupo)
+            for grupo in grupos
+        ]
+        while len(parciales) > 1:
+            grupos_minutas = _agrupar_minutas(parciales, config.max_caracteres_bloque)
+            if len(grupos_minutas) == len(parciales):
+                raise ValueError("La consolidación no puede avanzar con el presupuesto actual.")
+            siguientes: list[BaseModel] = []
+            for grupo in grupos_minutas:
+                if len(grupo) == 1:
+                    siguientes.append(grupo[0])
+                else:
+                    datos = json.dumps(
+                        {"minutas_parciales": [item.model_dump() for item in grupo]},
+                        ensure_ascii=False, separators=(",", ":"),
+                    )
+                    siguientes.append(pedir(consolidacion, datos, intervenciones))
+            parciales = siguientes
+        minuta_final = parciales[0]
+        validar_evidencias(minuta_final, intervenciones)
+        texto_json = minuta_final.model_dump_json(indent=2) + "\n"
+        texto_markdown = a_markdown(minuta_final, intervenciones)
+        manifiesto = {
+            "version_esquema": 1,
+            "creado_utc": datetime.now(timezone.utc).isoformat(),
+            "sha256_entrada": hashlib.sha256(bytes_origen).hexdigest(),
+            "modelo": llm.nombre,
+            "proveedor": llm.proveedor,
+            "secciones": list(config.secciones),
+            "configuracion": {k: v for k, v in asdict(config).items() if k != "destino_autorizado"},
+            "destino": destino.tipo,
+            "huella_destino": destino.huella,
+            "prompts": hashes_prompts,
+            "intervenciones": len(intervenciones),
+            "bloques_extraccion": len(grupos),
+            "llamadas_modelo": llamadas,
+            "normalizaciones_ancla": normalizaciones_ancla,
+            "tokens_entrada": tokens_entrada if medido_entrada else None,
+            "tokens_salida": tokens_salida if medido_salida else None,
+            "duracion_s": round(time.monotonic() - inicio, 3),
+            "sha256_minuta_json": hashlib.sha256(texto_json.encode("utf-8")).hexdigest(),
+        }
+        _guardar_resultados(
+            (
+                (rutas.json, texto_json),
+                (rutas.markdown, texto_markdown),
+                (rutas.manifiesto, json.dumps(manifiesto, ensure_ascii=False, indent=2) + "\n"),
+            ),
+            sobrescribir=sobrescribir,
+        )
+        return ResultadoMinutas(
+            json=rutas.json, markdown=rutas.markdown, manifiesto=rutas.manifiesto,
+            llamadas_modelo=llamadas, duracion_s=manifiesto["duracion_s"],
+        )
+    finally:
+        if llamadas and cliente is None and isinstance(llm, ClienteOllama):
+            liberar_modelo_ollama(llm.nombre, destino=llm.destino)
