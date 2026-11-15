@@ -142,6 +142,12 @@ El verificador comprueba versiones, `pip check`, importaciones, bibliotecas, her
 locales y la plataforma gráfica de Qt cuando hay sesión; no descarga modelos ni ejecuta
 inferencias ni solicita credenciales remotas. No sustituye las pruebas funcionales.
 
+La interfaz separa captura y procesamiento en dos columnas ajustables cuando hay espacio
+suficiente. El selector de tema de la barra de estado permite usar el esquema del sistema,
+claro u oscuro y recuerda la elección. Los visores permiten alternar entre una representación de lectura y el original
+verificado. La agrupación visual de transcripciones no altera el JSON canónico. Véanse las
+[decisiones de diseño de la interfaz](docs/interfaz-y-presentacion.md).
+
 ### Ejecución programática
 
 ```python

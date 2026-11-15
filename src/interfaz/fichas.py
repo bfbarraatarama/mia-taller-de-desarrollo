@@ -142,9 +142,11 @@ class TarjetaFicha(QGroupBox):
         fila.addStretch()
 
         self.aviso = QLabel("⚠ En este fragmento se oye otra voz: este hablante nunca habla solo.")
-        self.aviso.setStyleSheet("color: #9c5700;")
+        self.aviso.setObjectName("aviso")
+        self.aviso.setWordWrap(True)
         self.texto = QLabel()
         self.texto.setWordWrap(True)
+        self.texto.setTextFormat(Qt.TextFormat.PlainText)
         self.texto.setObjectName("secundario")
         self.texto.setTextInteractionFlags(Qt.TextInteractionFlag.TextSelectableByMouse)
 
@@ -233,7 +235,11 @@ class DialogoFichas(QDialog):
         try:
             self.reproductor.alternar(t.etiqueta, f.start, f.end)
         except Exception as e:  # dispositivo de audio ocupado o ausente, WAV ilegible
-            QMessageBox.warning(self, "Nombrar a los hablantes", f"No se pudo reproducir el fragmento:\n{e}")
+            caja = QMessageBox(QMessageBox.Icon.Warning, "Nombrar a los hablantes",
+                               "No se pudo reproducir el fragmento.", QMessageBox.StandardButton.Ok, self)
+            caja.setTextFormat(Qt.TextFormat.PlainText)
+            caja.setInformativeText(str(e))
+            caja.exec()
 
     def _otro(self, t: TarjetaFicha) -> None:
         if self.reproductor.sonando == t.etiqueta:
@@ -289,6 +295,7 @@ class DialogoFichas(QDialog):
         caja = QMessageBox(QMessageBox.Icon.Warning, "Nombrar a los hablantes",
                            "Estos nombres difieren solo en tildes y van a quedar como personas distintas:",
                            parent=self)
+        caja.setTextFormat(Qt.TextFormat.PlainText)
         caja.setInformativeText(lista)
         volver = caja.addButton(Cierre.VOLVER.value, QMessageBox.ButtonRole.RejectRole)
         caja.addButton("Confirmar igual", QMessageBox.ButtonRole.AcceptRole)
@@ -319,12 +326,8 @@ def etiquetar(asociacion, parent: QWidget | None = None, *, anterior: Etiquetado
 def _crear_app() -> QApplication:
     """Para el uso manual: con la estética del paso 1 si está disponible."""
     app = QApplication.instance() or QApplication(sys.argv)
-    from PySide6.QtCore import QTemporaryDir
-    from .estilo import _flechas, fuente, hoja_estilo
-    app.setStyle("Fusion")
-    app.setFont(fuente(9.5))
-    app._tmp = QTemporaryDir()  # las flechas de la hoja de estilo viven ahí
-    app.setStyleSheet(hoja_estilo(_flechas(Path(app._tmp.path()))))
+    from .estilo import aplicar_estilo
+    aplicar_estilo(app)
     return app
 
 
@@ -334,7 +337,7 @@ def main(argv: list[str] | None = None) -> int:
         print("Uso: python -m src.interfaz.fichas CARPETA_DE_LA_REUNION", file=sys.stderr)
         return 1
     carpeta = Path(argv[0])
-    _crear_app()
+    app = _crear_app()
     try:
         a = asociar(carpeta)
         ruta = aplicar(a, etiquetar(a))

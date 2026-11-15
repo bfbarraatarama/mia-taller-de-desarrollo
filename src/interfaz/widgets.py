@@ -18,7 +18,10 @@ class Encabezado(QWidget):
     def __init__(self, titulo: str, subtitulo: str):
         super().__init__()
         self.titulo, self.subtitulo = titulo, subtitulo
-        self.setFixedHeight(92)
+        self.setFixedHeight(82)
+        self.setToolTip(f"{titulo}\n{subtitulo}")
+        self.setAccessibleName(titulo)
+        self.setAccessibleDescription(subtitulo)
 
     def paintEvent(self, _):
         p = QPainter(self)
@@ -72,9 +75,10 @@ class Encabezado(QWidget):
         p.drawEllipse(brillo)
 
         # textos con sombra suave
-        for texto, f, y, color in [(self.titulo, fuente(16, QFont.Weight.DemiBold), 43, "#ffffff"),
-                                    (self.subtitulo, fuente(9.5), 70, "#cfe8ff")]:
+        for texto, f, y, color in [(self.titulo, fuente(16, QFont.Weight.DemiBold), 37, "#ffffff"),
+                                    (self.subtitulo, fuente(9.5), 61, "#cfe8ff")]:
             p.setFont(f)
+            texto = p.fontMetrics().elidedText(texto, Qt.TextElideMode.ElideRight, max(0, w - 94))
             p.setPen(QColor(0, 0, 0, 90))
             p.drawText(QPointF(83, y + 1), texto)
             p.setPen(QColor(color))
@@ -89,6 +93,8 @@ class Orbe(QAbstractButton):
         self.setFixedSize(74, 74)
         self.setCursor(Qt.CursorShape.PointingHandCursor)
         self.setAttribute(Qt.WidgetAttribute.WA_Hover)
+        self.setAccessibleName("Grabar o detener")
+        self.setFocusPolicy(Qt.FocusPolicy.StrongFocus)
         self.grabando = False
 
     def paintEvent(self, _):
@@ -140,6 +146,10 @@ class Orbe(QAbstractButton):
         if self.isDown():
             p.setBrush(QColor(0, 0, 0, 55))
             p.drawEllipse(c)
+        if self.hasFocus():
+            p.setBrush(Qt.BrushStyle.NoBrush)
+            p.setPen(QPen(QColor("#ffffff"), 2, Qt.PenStyle.DashLine))
+            p.drawEllipse(r.adjusted(2, 2, -2, -2))
 
 
 class Medidor(QWidget):
@@ -155,7 +165,7 @@ class Medidor(QWidget):
     def __init__(self):
         super().__init__()
         self.setMinimumHeight(24)
-        self.setMinimumWidth(200)
+        self.setMinimumWidth(100)
         self.reiniciar()
 
     def reiniciar(self):

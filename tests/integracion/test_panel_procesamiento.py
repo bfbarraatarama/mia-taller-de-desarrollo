@@ -209,3 +209,310 @@ def test_aviso_de_seleccion_pendiente_y_original_modificado(panel, tmp_path, mod
     assert panel.btn_minuta.isEnabled() and panel.btn_fichas.isEnabled()
     panel.cb_modelo.setCurrentIndex(panel.cb_modelo.findData('qwen2.5-7b'))
     assert 'aún no se aplicó' not in panel.lbl_destino_modelo.text()
+
+
+@pytest.mark.parametrize('oscuro', [False, True])
+def test_paleta_y_controles_de_panel(app, tmp_path, destino_controlado, oscuro):
+    from PySide6.QtCore import QCoreApplication, QEvent
+    from PySide6.QtGui import QPalette
+    from shiboken6 import Shiboken
+    from src.interfaz.estilo import aplicar_estilo, PALETAS
+
+    pal, hoja, font = app.palette(), app.styleSheet(), app.font()
+    panel = None
+    try:
+        # Reproducir el inicio real: configurar el estilo antes de crear widgets.
+        app.setStyleSheet('')
+        aplicar_estilo(app, oscuro=oscuro)
+        panel = interfaz.PanelProcesamiento(lambda: tmp_path)
+        panel.resize(650, 850)
+        panel.show()
+        panel.lbl.setText('La reunión está completada. Los resultados corresponden a la configuración guardada.')
+        app.processEvents()
+        roles = QPalette.ColorRole
+        assert app.palette().color(roles.Window).name() == PALETAS[oscuro]['ventana']
+        assert panel.cb_modelo.palette().color(roles.Text).name() == PALETAS[oscuro]['texto']
+        assert panel.cb_modelo.palette().color(roles.ButtonText).name() == PALETAS[oscuro]['texto']
+        assert panel.ed_resultados.palette().color(roles.Text).name() == PALETAS[oscuro]['texto']
+        assert panel.secciones['resumen'].isChecked()
+        assert panel.lbl.wordWrap()
+        assert panel.lbl.height() >= max(panel.lbl.fontMetrics().height(), panel.lbl.heightForWidth(panel.lbl.width()))
+        assert panel.lbl.geometry().bottom() < panel.btn_abrir_reunion.geometry().top()
+        assert panel.btn_procesar.geometry().top() < panel.btn_minuta.geometry().top()
+        assert panel.lbl.width() > panel.btn_abrir_reunion.width()
+    finally:
+        if panel is not None:
+            panel.reloj.stop()
+            panel.close()
+            panel.deleteLater()
+            QCoreApplication.sendPostedEvents(panel, QEvent.Type.DeferredDelete)
+            assert not Shiboken.isValid(panel)
+        app.setStyleSheet('')
+        app.setPalette(pal)
+        app.setFont(font)
+        app.setStyleSheet(hoja)
+
+
+def test_visor_de_resultado_consulta_instantanea_verificada(panel, tmp_path, modelos_falsos, monkeypatch):
+    s = solicitud(tmp_path)
+    procesar_reunion(s)
+    panel._restaurar_reunion(consultar_reunion(s.salida, incluir_fuentes=True))
+    vistos = []
+    def inspeccionar(ventana):
+        assert ventana.original.isReadOnly()
+        assert ventana.lectura.isReadOnly()
+        assert not ventana.lectura.openLinks() and not ventana.lectura.openExternalLinks()
+        vistos.append((ventana.original.toPlainText(), ventana.lectura.toPlainText()))
+        return 0
+    monkeypatch.setattr(interfaz.DialogoResultado, 'exec', inspeccionar)
+    previo = instantanea(s.salida, ['workflow.json', 'transcription.json', 'minutes.md'])
+    panel._ver(interfaz.TRANSCRIPCION)
+    panel._ver(interfaz.MINUTA)
+    assert len(vistos) == 2 and not panel.errores_prueba
+    assert vistos[0][0] == (s.salida / 'transcription.json').read_text(encoding='utf-8')
+    assert 'Transcripción de la reunión' in vistos[0][1]
+    assert vistos[1][0] == (s.salida / 'minutes.md').read_text(encoding='utf-8')
+    assert 'Minuta de reunión' in vistos[1][1]
+    assert instantanea(s.salida, previo) == previo
+    (s.salida / 'asr.json').write_text('{}', encoding='utf-8')
+    panel._ver(interfaz.MINUTA)
+    assert len(vistos) == 2 and panel.errores_prueba
+
+
+@pytest.mark.parametrize('oscuro', [False, True])
+def test_visor_muestra_contenido_inerte_y_original(app, panel, oscuro):
+    from PySide6.QtCore import QCoreApplication, QEvent, QUrl
+    from shiboken6 import Shiboken
+    from src.interfaz.estilo import aplicar_estilo
+    from src.interfaz.visores import DialogoResultado
+    from .test_presentacion import datos, fila
+
+    pal, hoja, font = app.palette(), app.styleSheet(), app.font()
+    aplicar_estilo(app, oscuro=oscuro)
+    ataque = '<img src="https://ejemplo.invalid/privado">'
+    original = datos(fila(0, 1, ataque), fila(1, 2, 'texto siguiente.'))
+    v = DialogoResultado('Transcripción', original, minuta=False, parent=panel)
+    try:
+        assert ataque in v.lectura.toPlainText()
+        assert v.original.toPlainText() == original
+        assert v.lectura.loadResource(2, QUrl('file:///tmp/no-leer')) is None
+        assert v.lectura.loadResource(2, QUrl('https://ejemplo.invalid/privado')) is None
+        assert not v.lectura.openLinks() and not v.lectura.openExternalLinks()
+        assert v.pestanas.count() == 2
+    finally:
+        v.close()
+        v.deleteLater()
+        QCoreApplication.sendPostedEvents(v, QEvent.Type.DeferredDelete)
+        assert not Shiboken.isValid(v)
+        app.setPalette(pal)
+        app.setStyleSheet(hoja)
+        app.setFont(font)
+
+
+@pytest.mark.parametrize('oscuro', [False, True])
+def test_ventana_en_columnas_y_detalles_de_captura(app, tmp_path, monkeypatch, destino_controlado, oscuro):
+    from PySide6.QtCore import QCoreApplication, QEvent, Qt
+    from shiboken6 import Shiboken
+    from src.interfaz.estilo import aplicar_estilo
+    from src.interfaz.interfaz import Ventana
+
+    # No depende de dispositivos, archivos privados ni preferencias del equipo.
+    monkeypatch.setattr(Ventana, '_cargar_dispositivos', lambda *a, **k: None)
+    def configurar(v):
+        v.rb_auto.setChecked(True)
+        v.ed_salida.setText(str(tmp_path))
+    monkeypatch.setattr(Ventana, '_cargar_config', configurar)
+    monkeypatch.setattr(Ventana, '_ofrecer_grabaciones_interrumpidas', lambda self: None)
+    monkeypatch.setattr(Ventana, '_guardar_config', lambda self: None)
+    pal, hoja, font = app.palette(), app.styleSheet(), app.font()
+    aplicar_estilo(app, oscuro=oscuro)
+    v = Ventana()
+    try:
+        v.resize(1440, 920)
+        v.show()
+        app.processEvents()
+        assert v.divisor.orientation() == Qt.Orientation.Horizontal
+        assert v.divisor.widget(0).geometry().right() < v.panel.geometry().left()
+        assert v.desplazable.horizontalScrollBar().maximum() == 0
+        assert v.desplazable.verticalScrollBar().maximum() == 0
+        assert not v.btn_detalles.isEnabled()
+        assert not v.lista.isVisible() and not v.tabla.isVisible()
+        v._mostrar_reporte({'archivo': 'prueba.wav', 'duracion_total_s': 3., 'modo': 'auto',
+                           'pruebas': [{'prueba': 'audio válido', 'ok': True, 'detalle': {}}], 'fuentes': {}})
+        assert v.btn_detalles.isEnabled() and not v.lista.isVisible()
+        v.btn_detalles.click()
+        app.processEvents()
+        assert v.lista.isVisible() and v.tabla.isVisible()
+        assert v.lista.count() == 1 and v.tabla.columnCount() == 8
+        v.btn_detalles.click()
+        v.resize(660, 740)
+        app.processEvents()
+        assert v.divisor.orientation() == Qt.Orientation.Vertical
+        assert v.desplazable.verticalScrollBar().maximum() > 0
+        v.desplazable.ensureWidgetVisible(v.panel.btn_procesar)
+        assert v.panel.btn_procesar.isVisible()
+        v.resize(1440, 920)
+        app.processEvents()
+        assert v.divisor.orientation() == Qt.Orientation.Horizontal
+    finally:
+        v.panel.reloj.stop()
+        v.reloj.stop()
+        v.close()
+        monkeypatch.undo()
+        v.deleteLater()
+        QCoreApplication.sendPostedEvents(v, QEvent.Type.DeferredDelete)
+        assert not Shiboken.isValid(v)
+        app.setPalette(pal)
+        app.setStyleSheet(hoja)
+        app.setFont(font)
+
+
+@pytest.mark.parametrize('permiso', [False, True])
+def test_dialogo_de_consentimiento_con_texto_literal(panel, monkeypatch, permiso):
+    from PySide6.QtCore import Qt
+    caja_tipo = interfaz.QMessageBox
+    boton = caja_tipo.StandardButton.Yes if permiso else caja_tipo.StandardButton.No
+    ataque = '<img src="https://ejemplo.invalid/recurso">'
+    def resolver(caja):
+        assert caja.textFormat() == Qt.TextFormat.PlainText
+        assert ataque in caja.text()
+        assert caja.defaultButton() is caja.button(caja_tipo.StandardButton.No)
+        assert caja.escapeButton() is caja.button(caja_tipo.StandardButton.No)
+        caja.button(boton).click()
+        return 0
+    monkeypatch.setattr(caja_tipo, 'exec', resolver)
+    assert panel._autorizacion_remota(SimpleNamespace(descripcion=ataque)) is permiso
+
+
+
+def test_tema_guardado_y_referencia_del_sistema(app, tmp_path):
+    from PySide6.QtCore import QSettings, Qt
+    from PySide6.QtGui import QColor, QPalette
+    from src.interfaz.estilo import tema_guardado, oscuro_sistema
+
+    c = QSettings(str(tmp_path / 'tema.ini'), QSettings.Format.IniFormat)
+    assert tema_guardado(c) == 'sistema'
+    for tema in ('claro', 'oscuro', 'sistema', 'invalido'):
+        c.setValue('tema', tema)
+        c.sync()
+        assert tema_guardado(QSettings(c.fileName(), QSettings.Format.IniFormat)) == (
+            'sistema' if tema == 'invalido' else tema)
+
+    # Emular una plataforma que no informa el esquema de color. La referencia
+    # de sistema no debe cambiar al aplicar manualmente otra paleta.
+    pal = QPalette()
+    pal.setColor(QPalette.ColorRole.Window, QColor('#111111'))
+    esquema = [Qt.ColorScheme.Unknown]
+    props = {}
+    sim = SimpleNamespace(styleHints=lambda: SimpleNamespace(colorScheme=lambda: esquema[0]),
+                          property=props.get, setProperty=props.__setitem__, palette=lambda: pal)
+    assert oscuro_sistema(sim) is True
+    pal.setColor(QPalette.ColorRole.Window, QColor('#ffffff'))
+    assert oscuro_sistema(sim) is True
+    esquema[0] = Qt.ColorScheme.Light
+    assert oscuro_sistema(sim) is False
+    esquema[0] = Qt.ColorScheme.Unknown
+    assert oscuro_sistema(sim) is False
+
+
+def test_selector_de_tema_en_vivo_conserva_reunion_y_visores(app, tmp_path, monkeypatch,
+                                                          destino_controlado, modelos_falsos):
+    from PySide6.QtCore import QCoreApplication, QEvent, QSettings, Qt
+    from PySide6.QtGui import QPalette, QTextCursor
+    from shiboken6 import Shiboken
+    from src.interfaz import estilo
+    from src.interfaz import interfaz as principal
+    from src.interfaz.visores import DialogoResultado
+
+    ini = str(tmp_path / 'tema.ini')
+    def config(*args):
+        return QSettings(ini, QSettings.Format.IniFormat)
+    c = config()
+    c.setValue('tema', 'claro')
+    c.setValue('salida', str(tmp_path))
+    c.sync()
+    monkeypatch.setattr(principal, 'QSettings', config)
+    monkeypatch.setattr(principal.Ventana, '_cargar_dispositivos', lambda *a, **k: None)
+    monkeypatch.setattr(principal.Ventana, '_ofrecer_grabaciones_interrumpidas', lambda self: None)
+    sistema = [False]
+    monkeypatch.setattr(estilo, 'oscuro_sistema', lambda app: sistema[0])
+    pal, hoja, font = app.palette(), app.styleSheet(), app.font()
+    v = visor = reabierta = None
+    def destruir(w):
+        w.panel.reloj.stop()
+        w.reloj.stop()
+        w.close()
+        w.deleteLater()
+        QCoreApplication.sendPostedEvents(w, QEvent.Type.DeferredDelete)
+        assert not Shiboken.isValid(w)
+    try:
+        estilo.aplicar_tema(app, estilo.tema_guardado(config()))
+        v = principal.Ventana()
+        v.resize(1440, 920)
+        v.show()
+        s = solicitud(tmp_path)
+        procesar_reunion(s)
+        v.panel._restaurar_reunion(consultar_reunion(s.salida, incluir_fuentes=True))
+        previo = instantanea(s.salida, ['workflow.json', 'transcription.json', 'minutes.md'])
+        fuentes = v.panel.archivos()
+        original = (s.salida / 'minutes.md').read_text(encoding='utf-8')
+        visor = DialogoResultado('Minuta', original, minuta=True, parent=v)
+        visor.show()
+        app.processEvents()
+        assert v.cb_tema.currentData() == 'claro'
+        roles = QPalette.ColorRole
+        def comprobar(oscuro):
+            c = estilo.PALETAS[oscuro]
+            assert app.palette().color(roles.Window).name() == c['ventana']
+            assert v.panel.cb_modelo.palette().color(roles.ButtonText).name() == c['texto']
+            assert v.panel.ed_resultados.palette().color(roles.Text).name() == c['texto']
+            assert v.panel.lbl.palette().color(v.panel.lbl.foregroundRole()).name() == c['secundario']
+            assert visor.lectura.palette().color(roles.Text).name() == c['texto']
+            # El texto hereda el color de pintura; ningún fragmento fija el
+            # color del tema anterior en el documento enriquecido.
+            cursor = QTextCursor(visor.lectura.document())
+            while cursor.movePosition(QTextCursor.MoveOperation.NextCharacter):
+                assert cursor.charFormat().foreground().style() == Qt.BrushStyle.NoBrush
+            assert visor.original.palette().color(roles.Text).name() == c['texto']
+            assert visor.original.toPlainText() == original
+        comprobar(False)
+        for tema, oscuro in (('oscuro', True), ('claro', False), ('oscuro', True), ('sistema', False)):
+            v.cb_tema.setCurrentIndex(v.cb_tema.findData(tema))
+            app.processEvents()
+            comprobar(oscuro)
+            assert estilo.tema_guardado(config()) == tema
+        sistema[0] = True
+        v._cambio_esquema_sistema(Qt.ColorScheme.Dark)
+        app.processEvents()
+        comprobar(True)
+        v.cb_tema.setCurrentIndex(v.cb_tema.findData('claro'))
+        v._cambio_esquema_sistema(Qt.ColorScheme.Dark)
+        app.processEvents()
+        comprobar(False)
+        assert v.panel.archivos() == fuentes and v.panel.btn_minuta.isEnabled()
+        assert instantanea(s.salida, previo) == previo
+        assert tuple(modelos_falsos.values()) == (1, 1, 1)
+        visor.close()
+        visor.deleteLater()
+        QCoreApplication.sendPostedEvents(visor, QEvent.Type.DeferredDelete)
+        assert not Shiboken.isValid(visor)
+        visor = None
+        destruir(v)
+        v = None
+        estilo.aplicar_tema(app, estilo.tema_guardado(config()))
+        reabierta = principal.Ventana()
+        assert reabierta.cb_tema.currentData() == 'claro'
+        assert app.palette().color(roles.Window).name() == estilo.PALETAS[False]['ventana']
+    finally:
+        if visor is not None and Shiboken.isValid(visor):
+            visor.close()
+            visor.deleteLater()
+            QCoreApplication.sendPostedEvents(visor, QEvent.Type.DeferredDelete)
+        for w in (v, reabierta):
+            if w is not None and Shiboken.isValid(w):
+                destruir(w)
+        monkeypatch.undo()
+        app.setStyleSheet('')
+        app.setPalette(pal)
+        app.setFont(font)
+        app.setStyleSheet(hoja)

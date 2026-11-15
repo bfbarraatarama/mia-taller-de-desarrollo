@@ -17,16 +17,16 @@ import time
 from pathlib import Path
 
 import sounddevice as sd
-from PySide6.QtCore import QObject, QSettings, QSize, Qt, QTemporaryDir, QTimer, QUrl, Signal
-from PySide6.QtGui import QColor, QDesktopServices, QFont, QIcon, QPalette
+from PySide6.QtCore import QObject, QSettings, QSize, Qt, QTimer, QUrl, Signal
+from PySide6.QtGui import QDesktopServices, QFont, QIcon
 from PySide6.QtWidgets import (QAbstractItemView, QApplication, QButtonGroup, QCheckBox, QComboBox, QDoubleSpinBox,
                                QFileDialog, QFrame, QGridLayout, QGroupBox, QHBoxLayout, QHeaderView, QLabel,
                                QLineEdit, QListWidget, QListWidgetItem, QMainWindow, QMessageBox, QPushButton,
                                QRadioButton, QScrollArea, QSizePolicy, QSpinBox, QStatusBar, QTableWidget,
-                               QTableWidgetItem, QVBoxLayout, QWidget)
+                               QTableWidgetItem, QVBoxLayout, QWidget, QSplitter, QToolButton)
 
 from ..captura import captura as cap
-from .estilo import _flechas, fuente, hoja_estilo, icono_estado
+from .estilo import TEMAS, aplicar_tema, tema_guardado, fuente, icono_estado, tooltip_literal
 from .panel_procesamiento import PanelProcesamiento
 from .widgets import BarraTransporte, Encabezado, Medidor, Orbe
 from ..rutas import DIRECTORIO_GRABACIONES_PREDETERMINADO
@@ -71,7 +71,7 @@ class Ventana(QMainWindow):
         self._poner_estado("listo")
         QTimer.singleShot(0, self._ofrecer_grabaciones_interrumpidas)
         pantalla = QApplication.primaryScreen().availableGeometry()
-        self.resize(min(960, pantalla.width()), min(1240, pantalla.height() - 90))
+        self.resize(min(1440, pantalla.width()), min(920, pantalla.height() - 50))
 
     # --- armado -----------------------------------------------------------
 
@@ -86,6 +86,7 @@ class Ventana(QMainWindow):
         aviso = QMessageBox(self)
         aviso.setWindowTitle("Recuperar grabaciones")
         aviso.setIcon(QMessageBox.Icon.Question)
+        aviso.setTextFormat(Qt.TextFormat.PlainText)
         aviso.setText("Se encontraron grabaciones interrumpidas con WAV legibles.\n" + nombres)
         aviso.setInformativeText(
             "Elegí qué hacer con estas grabaciones. No volver a avisar se aplica solo a las indicadas. "
@@ -115,7 +116,12 @@ class Ventana(QMainWindow):
         if rutas is not None:
             self.panel._poner_archivos(rutas)
         if errores:
-            QMessageBox.warning(self, "Recuperar grabaciones", "No se registró la decisión para algunas grabaciones.\n" + "\n".join(errores))
+            caja = QMessageBox(QMessageBox.Icon.Warning, "Recuperar grabaciones",
+                               "No se registró la decisión para algunas grabaciones.",
+                               QMessageBox.StandardButton.Ok, self)
+            caja.setTextFormat(Qt.TextFormat.PlainText)
+            caja.setDetailedText("\n".join(errores))
+            caja.exec()
 
     def _icono_app(self) -> QIcon:
         o = Orbe()
@@ -131,38 +137,94 @@ class Ventana(QMainWindow):
 
         cuerpo = QWidget(objectName="cuerpo")
         lay = QVBoxLayout(cuerpo)
-        lay.setContentsMargins(16, 10, 16, 10)
-        lay.setSpacing(8)
-        instr = QLabel("Elegí las fuentes y presioná el botón para grabar.", objectName="instruccion")
-        instr.setFont(fuente(12))
-        lay.addWidget(instr)
+        lay.setContentsMargins(10, 8, 10, 8)
+        self.divisor = QSplitter(Qt.Orientation.Horizontal)
+        self.divisor.setChildrenCollapsible(False)
+        self.divisor.setHandleWidth(6)
 
-        fila = QHBoxLayout()
-        fila.setSpacing(10)
-        fila.addWidget(self._grupo_fuentes(), 4)
-        fila.addWidget(self._grupo_opciones(), 3)
-        lay.addLayout(fila)
-        lay.addWidget(self._grupo_niveles())
-        lay.addWidget(self._transporte())
-        lay.addWidget(self._grupo_resultado())
+        captura = QWidget()
+        captura.setObjectName('columna_captura')
+        columna = QVBoxLayout(captura)
+        columna.setContentsMargins(0, 0, 6, 0)
+        columna.setSpacing(5)
+        instr = QLabel("Elegí las fuentes y presioná el botón para grabar.", objectName="instruccion")
+        instr.setFont(fuente(10))
+        instr.setWordWrap(True)
+        columna.addWidget(instr)
+        columna.addWidget(self._grupo_fuentes())
+        columna.addWidget(self._grupo_opciones())
+        columna.addWidget(self._grupo_niveles())
+        columna.addWidget(self._transporte())
+        columna.addWidget(self._grupo_resultado())
+        columna.addStretch()
         self.panel = PanelProcesamiento(lambda: Path(self.ed_salida.text() or DIRECTORIO_GRABACIONES_PREDETERMINADO))
         self.panel.ocupado.connect(lambda _: self._poner_estado(self.estado))
         self.panel.mensaje.connect(self._mostrar_mensaje)
-        lay.addWidget(self.panel, 1)
-        desplazable = QScrollArea()
-        desplazable.setWidget(cuerpo)
-        desplazable.setWidgetResizable(True)
-        desplazable.setFrameShape(QFrame.Shape.NoFrame)
-        desplazable.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        raiz.addWidget(desplazable, 1)
+        self.divisor.addWidget(captura)
+        self.divisor.addWidget(self.panel)
+        self.divisor.setStretchFactor(0, 1)
+        self.divisor.setStretchFactor(1, 1)
+        self.divisor.setSizes([650, 700])
+        lay.addWidget(self.divisor, 1)
+        self.desplazable = QScrollArea()
+        self.desplazable.setWidget(cuerpo)
+        self.desplazable.setWidgetResizable(True)
+        self.desplazable.setFrameShape(QFrame.Shape.NoFrame)
+        raiz.addWidget(self.desplazable, 1)
         self.setCentralWidget(central)
 
         barra = QStatusBar()
         self.lbl_estado = QLabel()
+        self.lbl_estado.setTextFormat(Qt.TextFormat.PlainText)
         self.lbl_estado.setSizePolicy(QSizePolicy.Policy.Ignored, QSizePolicy.Policy.Preferred)
         barra.addWidget(self.lbl_estado, 1)
-        barra.addPermanentWidget(QLabel(f"sounddevice {sd.__version__} · {sd.get_portaudio_version()[1].split(',')[0]}"))
+        audio = QLabel(f"sounddevice {sd.__version__}")
+        audio.setToolTip(tooltip_literal(sd.get_portaudio_version()[1]))
+        barra.addPermanentWidget(QLabel("Tema:"))
+        self.cb_tema = QComboBox()
+        self.cb_tema.setAccessibleName("Tema de la aplicación")
+        self.cb_tema.setToolTip("Elegí el esquema de color de la aplicación")
+        for etiqueta, clave in TEMAS:
+            self.cb_tema.addItem(etiqueta, clave)
+        self.cb_tema.setCurrentIndex(self.cb_tema.findData(tema_guardado(self.config)))
+        self.cb_tema.currentIndexChanged.connect(self._cambiar_tema)
+        barra.addPermanentWidget(self.cb_tema)
+        barra.addPermanentWidget(audio)
         self.setStatusBar(barra)
+        QApplication.instance().styleHints().colorSchemeChanged.connect(self._cambio_esquema_sistema)
+
+    def _cambiar_tema(self, indice):
+        tema = self.cb_tema.itemData(indice)
+        if tema is None:
+            return
+        self.config.setValue('tema', tema)
+        self.config.sync()
+        # Repulir los widgets una vez terminado el evento del selector.
+        QTimer.singleShot(0, self, self._aplicar_tema_seleccionado)
+
+    def _aplicar_tema_seleccionado(self):
+        aplicar_tema(QApplication.instance(), self.cb_tema.currentData())
+
+    def _cambio_esquema_sistema(self, _esquema):
+        # Qt emite la señal antes de actualizar la paleta de la plataforma.
+        if self.cb_tema.currentData() == 'sistema':
+            QTimer.singleShot(0, self, self._actualizar_tema_sistema)
+
+    def _actualizar_tema_sistema(self):
+        if self.cb_tema.currentData() == 'sistema':
+            self._aplicar_tema_seleccionado()
+
+    def resizeEvent(self, evento):
+        super().resizeEvent(evento)
+        if not hasattr(self, 'divisor'):
+            return
+        ancho_minimo = sum(self.divisor.widget(i).minimumSizeHint().width() for i in range(2))
+        ancho_minimo += self.divisor.handleWidth() + 40  # márgenes y barra de desplazamiento
+        orientacion = (Qt.Orientation.Horizontal if self.width() >= ancho_minimo
+                       else Qt.Orientation.Vertical)
+        if self.divisor.orientation() != orientacion:
+            self.divisor.setOrientation(orientacion)
+            self.divisor.setSizes([650, 700])
 
     def _grupo_fuentes(self) -> QGroupBox:
         g = QGroupBox("Fuentes de audio")
@@ -178,7 +240,7 @@ class Ventana(QMainWindow):
         self.btn_detectar = QPushButton("Detectar")
         self.btn_detectar.clicked.connect(self._detectar)
         modo = QHBoxLayout()
-        modo.setSpacing(18)
+        modo.setSpacing(6)
         modo.addWidget(self.rb_auto)
         modo.addWidget(self.rb_manual)
         modo.addStretch()
@@ -189,18 +251,19 @@ class Ventana(QMainWindow):
         self.ed_can_mic, self.ed_can_sis = QLineEdit(), QLineEdit()
         for i, (nombre, cb, ed) in enumerate([("Micrófono", self.cb_mic, self.ed_can_mic),
                                               ("Sistema", self.cb_sis, self.ed_can_sis)]):
-            cb.setMinimumWidth(220)
+            cb.setMinimumWidth(120)
             cb.setSizeAdjustPolicy(QComboBox.SizeAdjustPolicy.AdjustToMinimumContentsLengthWithIcon)
-            cb.setMinimumContentsLength(18)
+            cb.setMinimumContentsLength(12)
             ed.setPlaceholderText("0,1")
-            ed.setFixedWidth(76)
+            ed.setFixedWidth(62)
             ed.setToolTip("Canales del dispositivo, separados por coma")
-            cb.currentTextChanged.connect(cb.setToolTip)
+            cb.currentTextChanged.connect(lambda texto, combo=cb: combo.setToolTip(tooltip_literal(texto)))
             lay.addWidget(QLabel(f"{nombre}:"), 1 + i, 0)
             lay.addWidget(cb, 1 + i, 1)
             lay.addWidget(ed, 1 + i, 2)
         self.lbl_deteccion = QLabel(objectName="secundario")
         self.lbl_deteccion.setWordWrap(True)
+        self.lbl_deteccion.setTextFormat(Qt.TextFormat.PlainText)
         self.lbl_deteccion.setFont(fuente(8.5))
         lay.addWidget(self.lbl_deteccion, 3, 0, 1, 3)
         lay.setColumnStretch(1, 1)
@@ -227,7 +290,7 @@ class Ventana(QMainWindow):
         self.ck_tono = QCheckBox("Tono de prueba (1 kHz)")
         self.ck_tono.setToolTip("Reproduce un tono a 1 s para verificar que se captura el audio del sistema")
         self.ed_salida = QLineEdit()
-        self.ed_salida.textChanged.connect(self.ed_salida.setToolTip)
+        self.ed_salida.textChanged.connect(lambda texto: self.ed_salida.setToolTip(tooltip_literal(texto)))
         btn_examinar = QPushButton("Examinar…")
         btn_examinar.clicked.connect(self._examinar)
         self._btn_examinar = btn_examinar
@@ -263,12 +326,13 @@ class Ventana(QMainWindow):
             lay.addWidget(self.lbl_db[clave], i, 2)
         escala = QHBoxLayout()
         for texto, alineacion in [("−60 dBFS", Qt.AlignmentFlag.AlignLeft),
-                                  ("RMS con caída · la marca oscura es el pico de los últimos 1,5 s",
+                                  ("RMS · pico retenido",
                                    Qt.AlignmentFlag.AlignHCenter),
                                   ("0 dBFS", Qt.AlignmentFlag.AlignRight)]:
             lbl = QLabel(texto, objectName="secundario")
             lbl.setFont(fuente(8))
             lbl.setAlignment(alineacion)
+            lbl.setToolTip("RMS con caída; la marca indica el pico de los últimos 1,5 s.")
             escala.addWidget(lbl, 1 if alineacion == Qt.AlignmentFlag.AlignHCenter else 0)
         lay.addLayout(escala, 2, 1)
         lay.setColumnStretch(1, 1)
@@ -276,7 +340,8 @@ class Ventana(QMainWindow):
 
     def _transporte(self) -> QWidget:
         barra = BarraTransporte()
-        barra.setFixedHeight(100)
+        barra.setMinimumHeight(100)
+        barra.setSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Minimum)
         lay = QHBoxLayout(barra)
         lay.setContentsMargins(14, 8, 16, 8)
         lay.setSpacing(16)
@@ -290,6 +355,9 @@ class Ventana(QMainWindow):
         self.lbl_tiempo.setStyleSheet("color: #9fe3ff; background: transparent;")
         self.lbl_transporte = QLabel()
         self.lbl_transporte.setFont(fuente(9))
+        self.lbl_transporte.setWordWrap(True)
+        self.lbl_transporte.setTextFormat(Qt.TextFormat.PlainText)
+        self.lbl_transporte.setSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Preferred)
         self.lbl_transporte.setStyleSheet("color: #c9d3dc; background: transparent;")
         textos.addStretch()
         textos.addWidget(self.lbl_tiempo)
@@ -305,26 +373,44 @@ class Ventana(QMainWindow):
         g = QGroupBox("Resultado de la última grabación")
         lay = QVBoxLayout(g)
         self.lbl_resumen = QLabel("Todavía no hay grabaciones en esta sesión.", objectName="secundario")
+        self.lbl_resumen.setWordWrap(True)
+        self.lbl_resumen.setTextFormat(Qt.TextFormat.PlainText)
         lay.addWidget(self.lbl_resumen)
+        self.btn_detalles = QToolButton()
+        self.btn_detalles.setText("Detalles técnicos")
+        self.btn_detalles.setCheckable(True)
+        self.btn_detalles.setArrowType(Qt.ArrowType.RightArrow)
+        self.btn_detalles.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
+        self.btn_detalles.setEnabled(False)
+        lay.addWidget(self.btn_detalles)
+        detalles = QWidget()
+        caja_detalles = QVBoxLayout(detalles)
+        caja_detalles.setContentsMargins(0, 0, 0, 0)
         self.lista = QListWidget()
         self.lista.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
         self.lista.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
         self.lista.setMinimumHeight(3 * 34 + 4)
         self.lista.setIconSize(QSize(22, 22))
-        lay.addWidget(self.lista, 3)
+        caja_detalles.addWidget(self.lista, 3)
         self.tabla = QTableWidget(0, 8)
         self.tabla.setHorizontalHeaderLabels(["Fuente", "fs (Hz)", "Duración (s)", "Overflows",
                                               "Faltante (s)", "Desfase (s)", "RMS (dBFS)", "Pico (dBFS)"])
         self.tabla.verticalHeader().setVisible(False)
-        self.tabla.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+        self.tabla.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.ResizeToContents)
         self.tabla.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
         self.tabla.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
         self.tabla.setShowGrid(False)
         self.tabla.verticalHeader().setDefaultSectionSize(34)
-        self.tabla.setFixedHeight(38 + 2 * 34 + 4)
-        self.tabla.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.tabla.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        lay.addWidget(self.tabla)
+        self.tabla.setMinimumHeight(38 + 2 * 34 + 24)
+        self.tabla.setMaximumHeight(170)
+        self.tabla.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
+        self.tabla.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAsNeeded)
+        caja_detalles.addWidget(self.tabla)
+        lay.addWidget(detalles)
+        detalles.hide()
+        self.btn_detalles.toggled.connect(detalles.setVisible)
+        self.btn_detalles.toggled.connect(lambda abierto: self.btn_detalles.setArrowType(
+            Qt.ArrowType.DownArrow if abierto else Qt.ArrowType.RightArrow))
         return g
 
     # --- dispositivos y configuración -------------------------------------
@@ -418,9 +504,9 @@ class Ventana(QMainWindow):
         for f in fuentes:
             nombre = "Micrófono" if f.nombre == "mic" else "Sistema"
             puertos = ", ".join(sorted({p.split(":")[0] for p in f.origen.values()})) if f.origen else ""
-            lineas.append(f"<b>{nombre}</b>: disp. {f.dispositivo}, can. {','.join(map(str, f.canales))}"
+            lineas.append(f"{nombre}: disp. {f.dispositivo}, can. {','.join(map(str, f.canales))}"
                           + (f" ← {puertos}" if puertos else ""))
-        self.lbl_deteccion.setText("<br>".join(lineas))
+        self.lbl_deteccion.setText("\n".join(lineas))
 
     def _alternar(self):
         if self.estado == "listo":
@@ -466,6 +552,7 @@ class Ventana(QMainWindow):
         self._poner_estado("grabando", f"Escribiendo {sesion.archivo} · " + " | ".join(sesion.descripcion()))
         self.lbl_transporte.setText(f"● Grabando → {sesion.archivo.name}"
                                     + (f" · se detiene a los {self.sp_duracion.value()} s" if self.sp_duracion.value() else ""))
+        self.lbl_transporte.setToolTip(tooltip_literal(self.lbl_transporte.text()))
 
     def _tick(self):
         s = self.sesion
@@ -519,6 +606,7 @@ class Ventana(QMainWindow):
         self._poner_estado("listo", "Error: " + mensaje.splitlines()[0])
         caja = QMessageBox(QMessageBox.Icon.Warning, "Captura de reuniones", "No se pudo completar la operación.",
                            QMessageBox.StandardButton.Ok, self)
+        caja.setTextFormat(Qt.TextFormat.PlainText)
         caja.setInformativeText(mensaje)
         caja.exec()
         self.cerrar_al_terminar = False
@@ -528,7 +616,7 @@ class Ventana(QMainWindow):
         for p in rep["pruebas"]:
             texto = p["prueba"][0].upper() + p["prueba"][1:]
             item = QListWidgetItem(icono_estado(p["ok"], 22), texto)
-            item.setToolTip(json.dumps(p["detalle"], indent=2, ensure_ascii=False))
+            item.setToolTip(tooltip_literal(json.dumps(p["detalle"], indent=2, ensure_ascii=False)))
             self.lista.addItem(item)
         self.tabla.setRowCount(len(rep["fuentes"]))
         for fila, (nombre, v) in enumerate(rep["fuentes"].items()):
@@ -538,12 +626,13 @@ class Ventana(QMainWindow):
             for col, val in enumerate(valores):
                 it = QTableWidgetItem(str(val).replace("-inf", "−∞"))
                 it.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
-                it.setToolTip(v["dispositivo"])
+                it.setToolTip(tooltip_literal(v["dispositivo"]))
                 self.tabla.setItem(fila, col, it)
         ok = sum(p["ok"] for p in rep["pruebas"])
-        self.lbl_resumen.setText(f"<b>{rep['archivo']}</b> · {rep['duracion_total_s']:.1f} s · "
+        self.btn_detalles.setEnabled(True)
+        self.lbl_resumen.setText(f"{rep['archivo']} · {rep['duracion_total_s']:.1f} s · "
                                  f"{ok}/{len(rep['pruebas'])} pruebas OK · modo {rep['modo']} · "
-                                 f"pasá el mouse sobre una prueba para ver el detalle")
+                                 f"consultá los detalles técnicos para ver las pruebas")
 
     def _examinar(self):
         d = QFileDialog.getExistingDirectory(self, "Carpeta de grabaciones", self.ed_salida.text())
@@ -559,7 +648,7 @@ class Ventana(QMainWindow):
 
     def _mostrar_mensaje(self, mensaje: str):
         self.lbl_estado.setText(mensaje)
-        self.lbl_estado.setToolTip(mensaje)
+        self.lbl_estado.setToolTip(tooltip_literal(mensaje))
 
     def _poner_estado(self, estado: str, mensaje: str | None = None):
         self.estado = estado if estado != "detectando" else "listo"
@@ -585,8 +674,9 @@ class Ventana(QMainWindow):
             "procesando": "Procesando: remuestreo, mezcla y pruebas…",
         }
         self.lbl_transporte.setText(textos[estado])
+        self.lbl_transporte.setToolTip(tooltip_literal(textos[estado]))
         self.lbl_estado.setText(mensaje or textos[estado])
-        self.lbl_estado.setToolTip(mensaje or textos[estado])
+        self.lbl_estado.setToolTip(tooltip_literal(mensaje or textos[estado]))
         if estado == "detectando":
             self.btn_detectar.setEnabled(False)
             self.orbe.setEnabled(False)
@@ -611,24 +701,16 @@ class Ventana(QMainWindow):
         e.accept()
 
 
-def crear_app() -> tuple[QApplication, QTemporaryDir]:
+def crear_app() -> QApplication:
     app = QApplication(sys.argv)
     app.setApplicationName("Captura de reuniones")
     app.setDesktopFileName("captura-reuniones")
-    app.setStyle("Fusion")
-    pal = app.palette()
-    pal.setColor(QPalette.ColorRole.Window, QColor("#ffffff"))
-    pal.setColor(QPalette.ColorRole.Highlight, QColor("#3399ff"))
-    pal.setColor(QPalette.ColorRole.ToolTipBase, QColor("#ffffff"))
-    app.setPalette(pal)
-    app.setFont(fuente(9.5))
-    tmp = QTemporaryDir()
-    app.setStyleSheet(hoja_estilo(_flechas(Path(tmp.path()))))
-    return app, tmp
+    aplicar_tema(app, tema_guardado(QSettings("UdeSA-MIA", "captura-minutas")))
+    return app
 
 
 def main():
-    app, _tmp = crear_app()
+    app = crear_app()
     v = Ventana()
     v.show()
     sys.exit(app.exec())

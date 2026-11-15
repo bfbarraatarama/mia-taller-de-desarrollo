@@ -23,11 +23,11 @@ import sys
 
 from PySide6.QtCore import QProcess, Qt, QTimer, QUrl, Signal
 from PySide6.QtGui import QDesktopServices
-from PySide6.QtWidgets import (QAbstractItemView, QFileDialog, QGridLayout, QGroupBox, QHBoxLayout, QLabel,
+from PySide6.QtWidgets import (QAbstractItemView, QFileDialog, QGridLayout, QGroupBox, QLabel,
                                QListWidget, QListWidgetItem, QMessageBox, QProgressBar, QPushButton, QSizePolicy,
-                               QVBoxLayout, QComboBox, QCheckBox, QLineEdit, QPlainTextEdit, QDialog, QSpinBox)
+                               QVBoxLayout, QComboBox, QCheckBox, QLineEdit, QSpinBox)
 
-from .estilo import fuente, icono_estado, icono_pendiente
+from .estilo import fuente, icono_estado, icono_pendiente, tooltip_literal
 
 from ..minutas.contratos import SECCIONES_MINUTA
 from ..minutas.generacion import ConfiguracionMinutas
@@ -38,6 +38,7 @@ from ..pipeline import (SolicitudReunion, consultar_reunion, consultar_identific
 from ..asociacion.etiquetado import Decision
 from ..rutas import DIRECTORIO_PROYECTO, DIRECTORIO_RESULTADOS_PREDETERMINADO, directorio_reunion
 from .fichas import etiquetar
+from .visores import DialogoResultado
 
 DIR_PROCESAMIENTO = DIRECTORIO_PROYECTO
 PYTHON_PROCESAMIENTO = Path(sys.executable)
@@ -53,7 +54,8 @@ PATRON_GRABACION = "????_??_??_??_??_??.wav"
 
 
 def mmss(segundos: float) -> str:
-    return time.strftime("%M:%S", time.gmtime(segundos))
+    minutos, segundos = divmod(int(segundos), 60)
+    return f"{minutos:02d}:{segundos:02d}"
 
 
 class PanelProcesamiento(QGroupBox):
@@ -104,35 +106,34 @@ class PanelProcesamiento(QGroupBox):
                      "(arrastrá para reordenar).", objectName="secundario")
         lbl.setWordWrap(True)
         lay.addWidget(lbl)
-        lay.addLayout(self._armar_archivos())
+        lay.addLayout(self._armar_archivos(), 1)
         lay.addWidget(self._armar_opciones())
         lay.addLayout(self._armar_etapas())
         lay.addLayout(self._armar_acciones())
 
-    def _armar_archivos(self) -> QHBoxLayout:
-        fila = QHBoxLayout()
+    def _armar_archivos(self) -> QVBoxLayout:
+        caja = QVBoxLayout()
         self.lista = QListWidget()
         self.lista.setDragDropMode(QAbstractItemView.DragDropMode.InternalMove)
         self.lista.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
-        self.lista.setMinimumHeight(4 * 30 + 6)
+        self.lista.setMinimumHeight(62)
         self.lista.model().rowsMoved.connect(self._orden_cambiado)
-        fila.addWidget(self.lista, 1)
-        botones = QVBoxLayout()
-        botones.setSpacing(5)
+        caja.addWidget(self.lista, 1)
+        botones = QGridLayout()
         self.botones_archivos = []
-        for texto, fn in [("Agregar…", self._agregar), ("Última grabación", self._agregar_ultima),
-                          ("Subir", lambda: self._mover(-1)), ("Bajar", lambda: self._mover(1)),
-                          ("Quitar", self._quitar)]:
+        for i, (texto, fn) in enumerate([("Agregar…", self._agregar), ("Última grabación", self._agregar_ultima),
+                                         ("Nueva reunión", self._nueva_reunion),
+                                         ("Subir", lambda: self._mover(-1)), ("Bajar", lambda: self._mover(1)),
+                                         ("Quitar", self._quitar)]):
             b = QPushButton(texto)
             b.clicked.connect(fn)
-            botones.addWidget(b)
-            self.botones_archivos.append(b)
-        self.btn_nueva = QPushButton("Nueva reunión")
-        self.btn_nueva.clicked.connect(self._nueva_reunion)
-        botones.addWidget(self.btn_nueva)
-        botones.addStretch()
-        fila.addLayout(botones)
-        return fila
+            botones.addWidget(b, i // 3, i % 3)
+            if i == 2:
+                self.btn_nueva = b
+            else:
+                self.botones_archivos.append(b)
+        caja.addLayout(botones)
+        return caja
 
     def _armar_opciones(self) -> QGroupBox:
         caja = QGroupBox("Opciones de procesamiento")
@@ -141,11 +142,15 @@ class PanelProcesamiento(QGroupBox):
         destino = QPushButton("Destino…")
         destino.clicked.connect(self._elegir_destino)
         g.addWidget(QLabel("Reunión:"), 0, 0)
-        g.addWidget(self.ed_resultados, 0, 1, 1, 3)
-        g.addWidget(destino, 0, 4)
+        g.addWidget(self.ed_resultados, 0, 1, 1, 2)
+        g.addWidget(destino, 0, 3)
+        self.ed_resultados.textChanged.connect(lambda texto: self.ed_resultados.setToolTip(tooltip_literal(texto)))
+        self.ed_resultados.setToolTip(tooltip_literal(self.ed_resultados.text()))
         self.cb_modelo = QComboBox()
         for modelo in listar_modelos():
             self.cb_modelo.addItem(modelo.nombre, modelo.clave)
+        self.cb_modelo.currentTextChanged.connect(lambda texto: self.cb_modelo.setToolTip(tooltip_literal(texto)))
+        self.cb_modelo.setToolTip(tooltip_literal(self.cb_modelo.currentText()))
         self.cb_whisper = QComboBox()
         for modelo in ("tiny", "base", "small", "medium", "large"):
             self.cb_whisper.addItem(modelo, modelo)
@@ -154,39 +159,40 @@ class PanelProcesamiento(QGroupBox):
         for nombre in ("auto", "cpu", "cuda"):
             self.cb_dispositivo.addItem(nombre, nombre)
         g.addWidget(QLabel("Minutas:"), 1, 0)
-        g.addWidget(self.cb_modelo, 1, 1)
-        g.addWidget(QLabel("Whisper:"), 1, 2)
-        g.addWidget(self.cb_whisper, 1, 3)
+        g.addWidget(self.cb_modelo, 1, 1, 1, 3)
+        g.addWidget(QLabel("Whisper:"), 2, 0)
+        g.addWidget(self.cb_whisper, 2, 1)
         self.cb_dispositivo_stt = QComboBox()
         for nombre in ("auto", "cpu", "cuda"):
             self.cb_dispositivo_stt.addItem(nombre, nombre)
         self.sp_hablantes = QSpinBox()
         self.sp_hablantes.setRange(0, 2147483647)
         self.sp_hablantes.setSpecialValueText("auto")
-        g.addWidget(QLabel("Diarización:"), 2, 0)
-        g.addWidget(self.cb_dispositivo, 2, 1)
+        g.addWidget(QLabel("Diarización:"), 3, 0)
+        g.addWidget(self.cb_dispositivo, 3, 1)
         g.addWidget(QLabel("Dispositivo STT:"), 2, 2)
         g.addWidget(self.cb_dispositivo_stt, 2, 3)
-        g.addWidget(QLabel("Hablantes:"), 3, 0)
-        g.addWidget(self.sp_hablantes, 3, 1)
+        g.addWidget(QLabel("Hablantes:"), 3, 2)
+        g.addWidget(self.sp_hablantes, 3, 3)
+        g.setColumnStretch(1, 1)
+        g.setColumnStretch(3, 1)
         self.secciones = {}
-        opciones = QHBoxLayout()
-        opciones.addWidget(QLabel("Secciones:"))
-        for clave in SECCIONES_MINUTA:
+        opciones = QGridLayout()
+        opciones.addWidget(QLabel("Secciones:"), 0, 0)
+        for i, clave in enumerate(SECCIONES_MINUTA, 1):
             check = QCheckBox(clave.capitalize())
             check.setChecked(True)
             self.secciones[clave] = check
-            opciones.addWidget(check)
-        opciones.addStretch()
-        g.addLayout(opciones, 4, 0, 1, 5)
+            opciones.addWidget(check, i // 3, i % 3)
+        g.addLayout(opciones, 4, 0, 1, 4)
         aviso = QLabel("Modelos experimentales de esta PoC; no determinan los modelos del producto definitivo.")
         aviso.setWordWrap(True)
         aviso.setObjectName("secundario")
-        g.addWidget(aviso, 5, 0, 1, 5)
+        g.addWidget(aviso, 5, 0, 1, 4)
         self.lbl_destino_modelo = QLabel(objectName="secundario")
         self.lbl_destino_modelo.setTextFormat(Qt.TextFormat.PlainText)
         self.lbl_destino_modelo.setWordWrap(True)
-        g.addWidget(self.lbl_destino_modelo, 6, 0, 1, 5)
+        g.addWidget(self.lbl_destino_modelo, 6, 0, 1, 4)
         self.controles_opciones = [destino, self.ed_resultados, self.cb_modelo, self.cb_whisper,
                                    self.cb_dispositivo, self.cb_dispositivo_stt, self.sp_hablantes,
                                    *self.secciones.values()]
@@ -228,15 +234,17 @@ class PanelProcesamiento(QGroupBox):
         self._actualizar()
 
     def _autorizacion_remota(self, destino) -> bool:
-        respuesta = QMessageBox.question(
-            self, "Modelo experimental externo",
-            f"Destino de esta operación: servicio externo mediante {destino.descripcion}. "
-            "Se enviarán la transcripción, los nombres identificados y las referencias temporales "
-            "en los prompts y las respuestas necesarias para reintentos o consolidación; no se enviará "
-            "el WAV desde el módulo de minutas. ¿Autorizar esta generación?",
-            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
-            QMessageBox.StandardButton.No)
-        return respuesta == QMessageBox.StandardButton.Yes
+        caja = QMessageBox(QMessageBox.Icon.Question, "Modelo experimental externo", "",
+                           QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No, self)
+        caja.setTextFormat(Qt.TextFormat.PlainText)
+        caja.setText(f"Destino de esta operación: servicio externo mediante {destino.descripcion}. "
+                     "Se enviarán la transcripción, los nombres identificados y las referencias temporales "
+                     "en los prompts y las respuestas necesarias para reintentos o consolidación; no se enviará "
+                     "el WAV desde el módulo de minutas. ¿Autorizar esta generación?")
+        caja.setDefaultButton(QMessageBox.StandardButton.No)
+        caja.setEscapeButton(QMessageBox.StandardButton.No)
+        caja.exec()
+        return caja.clickedButton() is caja.button(QMessageBox.StandardButton.Yes)
 
     def _armar_etapas(self) -> QGridLayout:
         grilla = QGridLayout()
@@ -251,25 +259,31 @@ class PanelProcesamiento(QGroupBox):
             barra.setFixedHeight(15)
             det = QLabel(objectName="secundario")
             det.setFont(fuente(8.5))
-            det.setSizePolicy(QSizePolicy.Policy.Ignored, QSizePolicy.Policy.Preferred)
+            det.setWordWrap(True)
+            det.setTextFormat(Qt.TextFormat.PlainText)
+            det.setMinimumWidth(84)
+            barra.setMinimumWidth(56)
             grilla.addWidget(ico, i, 0)
             grilla.addWidget(QLabel(nombre), i, 1)
             grilla.addWidget(barra, i, 2)
             grilla.addWidget(det, i, 3)
             self.filas[clave] = (ico, barra, det)
         grilla.setColumnStretch(2, 2)
-        grilla.setColumnStretch(3, 3)
+        grilla.setColumnStretch(3, 2)
         return grilla
 
-    def _armar_acciones(self) -> QHBoxLayout:
-        fila = QHBoxLayout()
+    def _armar_acciones(self) -> QVBoxLayout:
+        fila = QVBoxLayout()
         self.lbl = QLabel("Elegí los archivos y presioná Procesar.", objectName="secundario")
-        self.lbl.setSizePolicy(QSizePolicy.Policy.Ignored, QSizePolicy.Policy.Preferred)
+        self.lbl.setWordWrap(True)
+        self.lbl.setTextFormat(Qt.TextFormat.PlainText)
+        self.lbl.setSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Minimum)
         self.btn_minuta = QPushButton("Ver minuta")
         self.btn_minuta.clicked.connect(lambda: self._ver(MINUTA))
         self.btn_transcripcion = QPushButton("Ver transcripción")
         self.btn_transcripcion.clicked.connect(lambda: self._ver(TRANSCRIPCION))
         self.btn_fichas = QPushButton("Identificar de nuevo")
+        self.btn_fichas.setMinimumWidth(self.btn_fichas.sizeHint().width())
         self.btn_fichas.clicked.connect(self._continuar_con_fichas)
         self.btn_abrir_reunion = QPushButton("Abrir reunión…")
         self.btn_abrir_reunion.clicked.connect(self._abrir_reunion)
@@ -277,10 +291,12 @@ class PanelProcesamiento(QGroupBox):
         self.btn_carpeta.clicked.connect(lambda: self._abrir(None))
         self.btn_procesar = QPushButton("Procesar")
         self.btn_procesar.clicked.connect(self._alternar)
-        fila.addWidget(self.lbl, 1)
-        for b in (self.btn_abrir_reunion, self.btn_fichas, self.btn_minuta, self.btn_transcripcion,
-                  self.btn_carpeta, self.btn_procesar):
-            fila.addWidget(b)
+        fila.addWidget(self.lbl)
+        botones = QGridLayout()
+        for i, b in enumerate((self.btn_abrir_reunion, self.btn_fichas, self.btn_procesar,
+                               self.btn_minuta, self.btn_transcripcion, self.btn_carpeta)):
+            botones.addWidget(b, i // 3, i % 3)
+        fila.addLayout(botones)
         return fila
 
     # --- interfaz con la ventana principal ----------------------------------
@@ -368,7 +384,7 @@ class PanelProcesamiento(QGroupBox):
         for r in rutas:
             it = QListWidgetItem()
             it.setData(Qt.ItemDataRole.UserRole, r)
-            it.setToolTip(r)
+            it.setToolTip(tooltip_literal(r))
             self.lista.addItem(it)
         self._numerar()
         self._opciones_cambiaron()
@@ -391,7 +407,7 @@ class PanelProcesamiento(QGroupBox):
             detalle = f"\nCopia verificada: {disponible}" if disponible and disponible != ruta else ""
             if situacion == 'modificada':
                 detalle = "\nEl original cambió. Continuar conserva el audio normalizado; Procesar incorpora el cambio."
-            it.setToolTip(ruta + detalle)
+            it.setToolTip(tooltip_literal(ruta + detalle))
 
     def _agregar(self):
         self._revision += 1
@@ -453,7 +469,7 @@ class PanelProcesamiento(QGroupBox):
                 barra.setValue(1000)
         if detalle is not None:
             det.setText(detalle)
-            det.setToolTip(detalle)
+            det.setToolTip(tooltip_literal(detalle))
 
     # --- proceso externo ------------------------------------------------------
 
@@ -773,18 +789,16 @@ class PanelProcesamiento(QGroupBox):
         except (OSError, ValueError, RuntimeError, KeyError, TypeError) as error:
             self._mostrar_error("No se pudo verificar este resultado.", str(error))
             return
-        ventana = QDialog(self)
-        ventana.setWindowTitle("Minuta" if nombre == MINUTA else "Transcripción")
-        ventana.resize(850, 640)
-        lay = QVBoxLayout(ventana)
-        texto = QPlainTextEdit(ventana)
-        texto.setReadOnly(True)
-        texto.setPlainText(contenido)
-        lay.addWidget(texto)
-        cerrar = QPushButton("Cerrar")
-        cerrar.clicked.connect(ventana.accept)
-        lay.addWidget(cerrar)
-        ventana.exec()
+        try:
+            ventana = DialogoResultado("Minuta" if nombre == MINUTA else "Transcripción",
+                                       contenido, minuta=nombre == MINUTA, parent=self)
+        except (ValueError, KeyError, TypeError) as error:
+            self._mostrar_error("No se pudo presentar este resultado.", str(error))
+            return
+        try:
+            ventana.exec()
+        finally:
+            ventana.deleteLater()
 
     def _abrir(self, nombre: str | None):
         if self.resultados is not None:
@@ -803,6 +817,7 @@ class PanelProcesamiento(QGroupBox):
 
     def _mostrar_error(self, texto: str, informativo: str, detalle: str = ""):
         caja = QMessageBox(QMessageBox.Icon.Warning, "Procesar reunión", texto, QMessageBox.StandardButton.Ok, self)
+        caja.setTextFormat(Qt.TextFormat.PlainText)
         caja.setInformativeText(informativo)
         if detalle:
             caja.setDetailedText(detalle)
