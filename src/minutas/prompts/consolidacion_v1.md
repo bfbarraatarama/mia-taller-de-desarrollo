@@ -10,6 +10,7 @@ Reglas:
 - Conservá todos los elementos distintos respaldados por las minutas parciales, pero combiná duplicados semánticos sin perder evidencias.
 - No transformes propuestas en decisiones ni atribuyas responsables o plazos desconocidos.
 - Un acuerdo puede aparecer en un fragmento posterior a su discusión; elegí como `id_ancla` la intervención que lo confirme.
+- Utilizá únicamente identificadores presentes en las minutas parciales recibidas, nunca de otros bloques.
 - Preservá los identificadores originales de intervenciones y elegí el `id_ancla` entre los `ids_intervenciones` de cada elemento.
 - Si hay datos contradictorios o incompletos, no los presentes como certezas.
 - Si está seleccionada la sección de resumen, redactá una síntesis global fiel, sin inventar datos nuevos.

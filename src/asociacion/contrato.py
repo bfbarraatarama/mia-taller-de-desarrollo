@@ -16,6 +16,7 @@ import math
 import wave
 from pathlib import Path
 
+from ..tiempos import cuantizar_intervalo, techo_3_decimales
 from .errores import AsociacionError
 
 FS = 16000
@@ -27,14 +28,6 @@ CAMPOS_INTERVENCION = ("start", "end", "speaker", "name", "text", "overlap", "am
 
 def _es_numero(x) -> bool:
     return isinstance(x, (int, float)) and not isinstance(x, bool) and math.isfinite(x)
-
-
-def techo_3_decimales(duracion: float) -> float:
-    """Mayor valor con 3 decimales que no supera `duracion` (mismo criterio que la Etapa 2)."""
-    d3 = math.floor(duracion * 1000) / 1000
-    if d3 > duracion:
-        d3 = (math.floor(duracion * 1000) - 1) / 1000
-    return max(d3, 0.0)
 
 
 # ---------- audio.wav ----------
@@ -177,10 +170,11 @@ def validar_asr(datos, duracion: float, archivo: str | Path | None = None) -> tu
 
     def acotar(item: dict, tipo: str) -> bool:
         """Redondea y recorta `item` en el lugar; devuelve False si queda vacío."""
-        inicio, fin = round(item["start"], 3), min(round(item["end"], 3), d3)
+        inicio, fin = item["start"], min(item["end"], d3)
         if inicio >= fin:
             recortes[f"{tipo}_descartadas" if tipo == "palabras" else f"{tipo}_descartados"] += 1
             return False
+        inicio, fin = cuantizar_intervalo(inicio, fin)
         if item["end"] > duracion:
             recortes[f"{tipo}_recortadas" if tipo == "palabras" else f"{tipo}_recortados"] += 1
         item["start"], item["end"] = inicio, fin

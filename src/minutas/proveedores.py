@@ -21,8 +21,20 @@ class RespuestaModelo:
     tokens_salida: int | None = None
 
 
-class RespuestaEstructuradaAusente(ValueError):
+class _RespuestaIncompleta(ValueError):
+    def __init__(self, mensaje: str, tokens_entrada: int | None = None,
+                 tokens_salida: int | None = None):
+        super().__init__(mensaje)
+        self.tokens_entrada = tokens_entrada
+        self.tokens_salida = tokens_salida
+
+
+class RespuestaEstructuradaAusente(_RespuestaIncompleta):
     """El proveedor respondió sin la salida estructurada requerida."""
+
+
+class LimiteModelo(_RespuestaIncompleta):
+    """Límite de contexto o generación reconocido, susceptible de subdivisión."""
 
 
 class ClienteModelo(Protocol):
@@ -198,16 +210,18 @@ class ClienteOllama:
         except self._errores_proveedor as exc:
             raise RuntimeError(f"Error al invocar Ollama ({self.nombre}): {type(exc).__name__}") from None
         razon = _campo(resultado, "done_reason")
-        if razon in ("length", "max_tokens"):
-            raise ValueError("Ollama interrumpió la respuesta por límite de generación.")
         entrada = _campo(resultado, "prompt_eval_count")
-        if entrada is not None and entrada >= self._num_ctx - 512:
-            raise ValueError("La entrada se aproximó al límite de contexto de Ollama.")
+        salida = _campo(resultado, "eval_count")
+        if razon in ("length", "max_tokens"):
+            raise LimiteModelo("Ollama interrumpió la respuesta por límite de generación.", entrada, salida)
+        if entrada is not None and (entrada >= self._num_ctx - 512
+                                    or entrada + self._max_tokens > self._num_ctx):
+            raise LimiteModelo("La entrada se aproximó al límite de contexto de Ollama.", entrada, salida)
         mensaje = _campo(resultado, "message")
         contenido = _campo(mensaje, "content") if mensaje is not None else None
         if not contenido:
-            raise RespuestaEstructuradaAusente("Ollama no devolvió contenido.")
-        return RespuestaModelo(contenido, entrada, _campo(resultado, "eval_count"))
+            raise RespuestaEstructuradaAusente("Ollama no devolvió contenido.", entrada, salida)
+        return RespuestaModelo(contenido, entrada, salida)
 
 
 class ClienteBedrock:
@@ -253,19 +267,23 @@ class ClienteBedrock:
             )
         except (BotoCoreError, ClientError) as exc:
             raise RuntimeError(f"Error al invocar AWS Bedrock ({self.nombre}): {type(exc).__name__}") from None
-        if respuesta.get("stopReason") == "max_tokens":
-            raise ValueError("Bedrock interrumpió la respuesta por límite de generación.")
+        uso = respuesta.get("usage") or {}
+        entrada, salida = uso.get("inputTokens"), uso.get("outputTokens")
+        if respuesta.get("stopReason") in {"max_tokens", "model_context_window_exceeded"}:
+            raise LimiteModelo("Bedrock interrumpió la respuesta por límite de generación o contexto.", entrada, salida)
+        razon = respuesta.get("stopReason")
+        if razon in {"guardrail_intervened", "content_filtered"}:
+            raise RuntimeError("Bedrock bloqueó la generación por sus controles de contenido.")
         bloques = respuesta.get("output", {}).get("message", {}).get("content", [])
         llamadas = [bloque["toolUse"] for bloque in bloques if "toolUse" in bloque]
-        llamada = next((c for c in llamadas if c.get("name") == nombre_herramienta), None)
-        if llamada is None or not isinstance(llamada.get("input"), dict):
+        llamada = llamadas[0] if len(llamadas) == 1 else None
+        if (razon in {"malformed_model_output", "malformed_tool_use"}
+                or llamada is None or llamada.get("name") != nombre_herramienta
+                or not isinstance(llamada.get("input"), dict)):
             raise RespuestaEstructuradaAusente(
-                "Bedrock no devolvió la herramienta estructurada solicitada."
+                "Bedrock no devolvió la herramienta estructurada solicitada.", entrada, salida
             )
-        uso = respuesta.get("usage") or {}
-        return RespuestaModelo(
-            llamada["input"], uso.get("inputTokens"), uso.get("outputTokens")
-        )
+        return RespuestaModelo(llamada["input"], entrada, salida)
 
 
 def construir_cliente(

@@ -116,3 +116,37 @@ def test_transcripcion_invalida(cambio, regla):
     cambio(s)
     violaciones = validar_transcripcion({"segments": [s]}, 10.0, {"SPEAKER_00"})
     assert violaciones and regla in " ".join(violaciones)
+
+
+@pytest.mark.parametrize('palabras,esperado', [
+    ([('primero', 2.0, 2.5), ('segundo', 1.0, 1.5)], (1.0, 2.5)),
+    ([('primero', 1.0, 3.0), ('segundo', 1.5, 2.0)], (1.0, 3.0)),
+    ([('primero', 2.0, 3.0), ('segundo', 1.0, 4.0), ('tercero', 2.5, 3.5)], (1.0, 4.0)),
+])
+def test_d4_intervalo_envuelve_todas_las_palabras_sin_reordenarlas(tmp_path, palabras, esperado):
+    seg = segmento(*palabras)
+    seg.update(start=min(p[1] for p in palabras), end=max(p[2] for p in palabras))
+    carpeta = crear_reunion(tmp_path, 5.0, [(0.0, 5.0, 'SPEAKER_00')], [seg])
+    a = asociar(carpeta)
+    [i] = a.intervenciones
+    assert (i.start, i.end) == esperado
+    assert i.text == ' '.join(p[0] for p in palabras)
+    assert i.speaker == 'SPEAKER_00' and not i.ambiguous
+    escribir(a)
+    assert validar_transcripcion(leer(carpeta / 'transcription.json'), a.duracion, a.etiquetas) == []
+
+
+def test_stt_asociacion_intervalos_submilisegundo(tmp_path):
+    from src.stt import build_asr, validate_asr_contract
+
+    datos = build_asr({'segments': [{'start': 0.2, 'end': 0.4, 'text': 'Sí claro.', 'words': [
+        {'word': 'Sí', 'start': 0.2001, 'end': 0.2002},
+        {'word': 'claro.', 'start': 0.21, 'end': 0.4}]}]})
+    validate_asr_contract(datos, 1.0)
+    carpeta = crear_reunion(tmp_path, 1.0, [(0.0, 1.0, 'SPEAKER_00')], datos['segments'])
+    a = asociar(carpeta)
+    [i] = a.intervenciones
+    assert (i.start, i.end, i.text) == (0.2, 0.4, 'Sí claro.')
+    assert a.conteos['palabras'] == 2
+    escribir(a)
+    assert validar_transcripcion(leer(carpeta / 'transcription.json'), a.duracion, a.etiquetas) == []

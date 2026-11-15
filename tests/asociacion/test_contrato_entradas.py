@@ -137,3 +137,34 @@ def test_segmento_sin_palabras():
 def test_asr_invalido(datos):
     with pytest.raises(AsociacionError):
         validar_asr(datos, 10.0)
+
+
+@pytest.mark.parametrize('inicio,fin,esperado', [
+    (0.2001, 0.2002, (0.2, 0.201)),
+    (0.1996, 0.2004, (0.199, 0.201)),
+    (9.9999, 10.0002, (9.999, 10.0)),
+])
+def test_asr_externo_intervalo_positivo_no_colapsa(inicio, fin, esperado):
+    datos = asr(segmento(('sí', inicio, fin)))
+    original = copy.deepcopy(datos)
+    normal, recortes = validar_asr(datos, 10.0)
+    [seg] = normal['segments']
+    [w] = seg['words']
+    assert (seg['start'], seg['end']) == (w['start'], w['end']) == esperado
+    assert w['word'] == 'sí'
+    assert recortes['segmentos_descartados'] == recortes['palabras_descartadas'] == 0
+    assert datos == original
+
+
+def test_asr_fuera_de_grilla_final_no_se_retrotrae():
+    # El audio tiene una fracción de ms final sin intervalo representable.
+    normal, recortes = validar_asr(asr(segmento(('sí', 10.0001, 10.0002))), 10.00025)
+    assert normal['segments'] == []
+    assert recortes['segmentos_descartados'] == recortes['palabras_descartadas'] == 1
+
+
+def test_limite_exacto_de_audio_no_pierde_un_milisegundo():
+    datos = asr(segmento(('fin', 1.0, 1.001)))
+    normal, recortes = validar_asr(datos, 1.001)
+    assert normal == datos
+    assert not any(recortes.values())

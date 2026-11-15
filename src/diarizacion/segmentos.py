@@ -12,17 +12,11 @@ from __future__ import annotations
 import math
 from typing import Iterable
 
+from ..tiempos import techo_3_decimales
+
 # Campo heredado: se sigue registrando en el meta como `tolerancia_fin_s` por compatibilidad, pero ya no
 # controla descartes ni correcciones (regla anterior, reemplazada el 08/11/2026; ver design.md §4).
 TOLERANCIA_FIN_S = 0.05
-
-
-def techo_3_decimales(duracion: float) -> float:
-    """Mayor valor con 3 decimales que no supera `duracion`."""
-    d3 = math.floor(duracion * 1000) / 1000
-    if d3 > duracion:  # por la representación binaria
-        d3 = (math.floor(duracion * 1000) - 1) / 1000
-    return max(d3, 0.0)
 
 
 def acotar(inicio: float, fin: float, d3: float) -> tuple[float, float] | None:

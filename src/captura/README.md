@@ -43,7 +43,7 @@ Si la grabación se interrumpe, la interfaz ofrece los WAV recuperables al inici
 | `captura.py` | Grabación, remuestreo, mezcla, escritura incremental y reporte; se usa solo o desde la interfaz |
 | `src/interfaz/interfaz.py` | Ventana principal (PySide6, estética Windows Vista) |
 | `src/interfaz/panel_procesamiento.py` | Panel «Procesar reunión»: ejecuta el pipeline integrado |
-| `src/interfaz/estilo.py` · `src/interfaz/widgets.py` | Hoja de estilo e íconos · encabezado, botón de grabar y medidores |
+| `src/interfaz/estilo.py` · `src/interfaz/widgets.py` | Paletas, estilo e íconos · encabezado, botón de grabar y medidores |
 | `docs/captura/NOTAS-TECNICAS.md` | Escritura a prueba de cortes, criterios de las pruebas, mediciones en Fedora 43 y problema de eco |
 
 ## Problema conocido

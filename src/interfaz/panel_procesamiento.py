@@ -844,6 +844,11 @@ class PanelProcesamiento(QGroupBox):
             except (ValueError, KeyError, TypeError):
                 pendiente = True
         aviso = "\nLa selección aún no se aplicó; los resultados corresponden a la configuración guardada." if pendiente else ""
+        consolidacion = consulta.get('consolidacion') or {}
+        if consolidacion.get('uniones_locales'):
+            aviso += "\nLa minuta incluye uniones locales; pueden quedar elementos redundantes."
+        if consolidacion.get('concatenaciones_resumen'):
+            aviso += "\nEl resumen incluye síntesis parciales; revisá su coherencia global."
         self.lbl_destino_modelo.setText(self._texto_destino_modelo + aviso)
         editable = not (procesando or activa) and self.puede_procesar
         self.btn_procesar.setText("Cancelar" if procesando else "Procesar")

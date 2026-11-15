@@ -36,6 +36,7 @@ Use the complete repository environment (CPU or cu128) described in the [root RE
 
 - Segments with empty text are dropped; words with empty text or `start >= end` are dropped.
 - Every segment and word has `start < end`, and ends do not exceed the audio duration (1 s tolerance).
+- Positive intervals that would collapse at millisecond precision use enclosing millisecond bounds instead. The conversion and contract validator run without Whisper; see [temporal design](../../docs/temporalidad-transcripcion.md).
 
 ## Usage
 

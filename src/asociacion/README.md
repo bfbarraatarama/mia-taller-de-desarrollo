@@ -81,7 +81,7 @@ Reglas de asignación (`design.md`):
 - **D1:** cada palabra va al hablante con más superposición.
 - **D2:** un empate va al hablante de la palabra anterior; si no, al del turno más largo; si sigue, a la etiqueta menor.
 - **D3:** una palabra en un hueco va al turno más cercano si está a 0,25 s o menos.
-- **D4:** las intervenciones se cortan por cambio de hablante y en cada segmento de Whisper.
+- **D4:** las intervenciones se cortan por cambio de hablante y en cada segmento de Whisper. Sus límites abarcan los intervalos de todas las palabras del grupo, sin alterar su orden textual. Véase [Temporalidad de la transcripción](../../docs/temporalidad-transcripcion.md).
 - **D5:** `overlap` marca 0,2 s o más con dos voces. `ambiguous` marca la falta de hablante, otra voz en el 30 % o más, o la propia en menos del 50 %.
 
 La publicación es todo o nada: si algo falla a mitad, la carpeta vuelve al resultado anterior byte a byte.

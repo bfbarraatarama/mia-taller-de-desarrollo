@@ -516,3 +516,21 @@ def test_selector_de_tema_en_vivo_conserva_reunion_y_visores(app, tmp_path, monk
         app.setPalette(pal)
         app.setFont(font)
         app.setStyleSheet(hoja)
+
+
+def test_aviso_consolidacion_visible_sin_invalidar_resultados(panel, tmp_path, modelos_falsos, monkeypatch):
+    s = solicitud(tmp_path)
+    procesar_reunion(s)
+    consulta = consultar_reunion(s.salida, incluir_fuentes=True)
+    consulta['consolidacion']['uniones_locales'] = 1
+    consulta['consolidacion']['concatenaciones_resumen'] = 1
+    monkeypatch.setattr(interfaz, 'consultar_reunion', lambda *a, **kw: consulta)
+    panel._restaurar_reunion(consulta)
+    assert 'uniones locales' in panel.lbl_destino_modelo.text()
+    assert 'síntesis parciales' in panel.lbl_destino_modelo.text()
+    assert panel.btn_minuta.isEnabled()
+    consulta['consolidacion']['uniones_locales'] = 0
+    consulta['consolidacion']['concatenaciones_resumen'] = 0
+    panel._actualizar()
+    assert 'uniones locales' not in panel.lbl_destino_modelo.text()
+    assert 'síntesis parciales' not in panel.lbl_destino_modelo.text()

@@ -3,6 +3,9 @@
 - [Orquestación de reuniones: decisiones de diseño y contratos](orquestacion.md).
 - [Reanudación y confidencialidad](continuidad-y-confidencialidad.md).
 - [Interfaz y presentación de resultados](interfaz-y-presentacion.md).
+- [Consolidación de minutas extensas](consolidacion-de-minutas.md).
+- [Temporalidad de la transcripción](temporalidad-transcripcion.md).
+- [Validación de la integración](validacion-integracion.md).
 - [Captura: notas técnicas y mediciones originales](captura/NOTAS-TECNICAS.md).
 - [Diarización: OpenSpec](diarizacion/openspec/changes/etapa-2-diarizacion/).
 - [Asociación: OpenSpec](asociacion/openspec/changes/etapa-4-asociacion-etiquetado/).

@@ -2,9 +2,7 @@
 
 import pytest
 
-pytest.importorskip("whisper")
-
-from src.stt.asr_core import build_asr, validate_asr_contract  # noqa: E402
+from src.stt import build_asr, validate_asr_contract
 
 WHISPER_RESULT = {
     "segments": [
@@ -84,7 +82,7 @@ def test_process_asr_releases_model(tmp_path, monkeypatch, fail):
     import weakref
 
     import numpy as np
-    import whisper
+    whisper = pytest.importorskip("whisper")
 
     from src.stt import asr_core
 
@@ -108,3 +106,29 @@ def test_process_asr_releases_model(tmp_path, monkeypatch, fail):
 
     gc.collect()
     assert refs and refs[0]() is None
+
+
+@pytest.mark.parametrize('inicio,fin,esperado', [
+    (0.2001, 0.2002, (0.200, 0.201)),
+    (0.1996, 0.2004, (0.199, 0.201)),
+    (0.0, 0.0001, (0.0, 0.001)),
+    (0.2009, 0.201, (0.200, 0.201)),
+    (0.12356, 0.34567, (0.124, 0.346)),
+])
+def test_intervalos_positivos_en_segmento_y_palabra(inicio, fin, esperado):
+    resultado = {'segments': [{'start': inicio, 'end': fin, 'text': 'sí',
+                                'words': [{'word': 'sí', 'start': inicio, 'end': fin}]}]}
+    asr = build_asr(resultado)
+    validate_asr_contract(asr, audio_duration=1.0)
+    [seg] = asr['segments']
+    [word] = seg['words']
+    assert (seg['start'], seg['end']) == (word['start'], word['end']) == esperado
+    assert seg['text'] == word['word'] == 'sí'
+    assert resultado['segments'][0]['start'] == inicio
+    assert resultado['segments'][0]['end'] == fin
+
+
+@pytest.mark.parametrize('inicio,fin', [(-0.0001, 0.5), (0.2, 0.2), (0.3, 0.2), (float('nan'), 1.0)])
+def test_intervalo_invalido_de_segmento_no_se_disfraza_por_redondeo(inicio, fin):
+    with pytest.raises(ValueError):
+        build_asr({'segments': [{'start': inicio, 'end': fin, 'text': 'hola', 'words': []}]})

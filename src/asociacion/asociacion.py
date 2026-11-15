@@ -205,7 +205,8 @@ class Turnos:
 
 
 def _cerrar(grupo: list[dict], speaker: str | None, turnos: Turnos) -> Intervencion:
-    start, end = grupo[0]["start"], grupo[-1]["end"]
+    start = min(w["start"] for w in grupo)
+    end = max(w["end"] for w in grupo)
     overlap, ambiguous = turnos.marcas(ms(start), ms(end), speaker)
     return Intervencion(start=start, end=end, speaker=speaker, name=None,
                         text=" ".join(w["word"].strip() for w in grupo), overlap=overlap, ambiguous=ambiguous)

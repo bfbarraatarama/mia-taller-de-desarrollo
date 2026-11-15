@@ -224,6 +224,7 @@ Los tests sin GPU comprueban contratos y conexiones; **no demuestran** calidad d
 minutas, compatibilidad de VRAM de 6 GB o cumplimiento de los umbrales de Hito 3 §2.3.
 Esas evidencias requieren las muestras y el hardware correspondientes. Los modelos
 reales, credenciales, WAV personales y cachés no deben versionarse.
+La [validación de la integración](docs/validacion-integracion.md) organiza las comprobaciones de ejecución y sus límites respecto de la evaluación académica.
 
 ### Pruebas
 

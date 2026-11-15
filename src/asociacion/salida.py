@@ -19,7 +19,7 @@ from .contrato import validar_speakers, validar_transcripcion
 from .errores import AsociacionError
 from .fragmentos import semilla
 
-VERSION = "0.3.1"
+VERSION = "0.3.2"
 TRANSCRIPCION = "transcription.json"
 META = "transcription.meta.json"
 SPEAKERS = "speakers.json"

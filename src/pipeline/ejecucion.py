@@ -24,9 +24,9 @@ from ..asociacion.asociacion import asociar
 from ..asociacion.contrato import validar_asr, validar_diarizacion, validar_transcripcion, validar_speakers
 from ..asociacion.errores import AsociacionError
 from ..asociacion.etiquetado import Decision, Etiquetado, ModeloFichas, aplicar
-from ..asociacion.salida import resultado_vigente
+from ..asociacion.salida import VERSION as VERSION_ASOCIACION, resultado_vigente
 from ..ingesta.audio import ingestar, sha256, verificar_wav
-from ..minutas.generacion import ConfiguracionMinutas, _preparar_prompts
+from ..minutas.generacion import ConfiguracionMinutas, VERSION_CONSOLIDACION, _preparar_prompts
 from ..minutas.modelos import obtener_modelo
 from ..minutas.proveedores import resolver_destino, comprobar_autorizacion
 from ..rutas import (
@@ -275,6 +275,14 @@ def _validar_minutas(carpeta, config=None, *, prompts_actuales=False, destino=No
     from ..minutas.formato import a_markdown
     if (carpeta / 'minutes.md').read_text(encoding='utf-8') != a_markdown(minuta, intervenciones):
         raise ValueError('La minuta Markdown no corresponde a la minuta estructurada.')
+    consolidacion = meta.get('consolidacion')
+    if consolidacion is not None:
+        if (not isinstance(consolidacion, dict)
+                or any(type(consolidacion.get(campo)) is not int or consolidacion[campo] < 0
+                       for campo in ('version', 'uniones_locales', 'concatenaciones_resumen'))):
+            raise ValueError('Metadata de consolidación inválida.')
+    if prompts_actuales and (consolidacion is None or consolidacion['version'] != VERSION_CONSOLIDACION):
+        raise ValueError('La minuta no corresponde a la versión de consolidación vigente.')
     if config is not None:
         modelo = obtener_modelo(config.modelo)
         datos = _config_serializada(config)
@@ -291,6 +299,7 @@ def _validar_minutas(carpeta, config=None, *, prompts_actuales=False, destino=No
                 meta['huella_destino'] != destino.huella or meta.get('destino') != destino.tipo):
             raise ValueError('La minuta no corresponde al destino configurado.')
 
+    return meta
 
 def _config_serializada(config: ConfiguracionMinutas) -> dict:
     """Forma estable en memoria y en JSON (sin diferencias tupla/lista)."""
@@ -336,6 +345,7 @@ def _clave_minutas(carpeta: Path, config: ConfiguracionMinutas, destino=None) ->
     destino = (destino or resolver_destino(config.modelo)).identidad[1:]
     datos = _config_serializada(config)
     return huella(sha256(carpeta / ARCHIVO_TRANSCRIPCION), datos, modelo.identificador, destino,
+                  VERSION_CONSOLIDACION,
                   [(p.name, sha256(p)) for p in (PROMPT_EXTRACCION_MINUTAS,
                    PROMPT_CONSOLIDACION_MINUTAS, DEFINICIONES_SECCIONES_MINUTAS)],
                   _paquetes('ollama', 'boto3', 'pydantic'))
@@ -481,7 +491,7 @@ def _validar_checkpoint(carpeta, estado, etapa):
     elif etapa == 'asociar':
         _validar_transcripcion(carpeta)
     elif etapa == 'minuta':
-        _validar_minutas(carpeta, _config_desde_estado(estado))
+        return _validar_minutas(carpeta, _config_desde_estado(estado))
 
 
 def _validar_preparada(carpeta, estado, medicion):
@@ -496,7 +506,7 @@ def _validar_preparada(carpeta, estado, medicion):
 
 def _clave_asociacion(carpeta: Path, decision: Decision) -> str:
     hashes = {n: sha256(carpeta / n) for n in (ARCHIVO_AUDIO, ARCHIVO_DIARIZACION, ARCHIVO_ASR)}
-    return huella(hashes, asdict(decision.etiquetado) if decision.etiquetado else None)
+    return huella(hashes, asdict(decision.etiquetado) if decision.etiquetado else None, VERSION_ASOCIACION)
 
 
 def _reutilizable_minuta(carpeta, estado, clave_asociacion, config, destino) -> bool:
@@ -603,13 +613,16 @@ def _generar(carpeta: Path, estado: dict, config: ConfiguracionMinutas, medicion
 
 def _consulta(carpeta, estado):
     duracion = None
+    consolidacion = None
 
     def comprobar(etapa):
-        nonlocal duracion
+        nonlocal duracion, consolidacion
         try:
             datos = _validar_checkpoint(carpeta, estado, etapa)
             if etapa == 'preparar':
                 duracion = datos['duracion_s']
+            elif etapa == 'minuta':
+                consolidacion = datos.get('consolidacion')
             return True
         except ERRORES_CHECKPOINT:
             return False
@@ -625,7 +638,7 @@ def _consulta(carpeta, estado):
     return {'carpeta': str(carpeta), 'estado': terminal, 'etapa': etapa, 'error': error,
             'artefactos': artefactos_vigentes(carpeta, estado, validas), 'solicitud': estado.get('solicitud'),
             'activa': False, 'etapas_vigentes': [e for e in ARCHIVOS if e in validas],
-            'duracion_audio_s': duracion, 'tiempos': estado.get('tiempos')}
+            'duracion_audio_s': duracion, 'tiempos': estado.get('tiempos'), 'consolidacion': consolidacion}
 
 
 def _solicitud_reutilizable(carpeta, estado, solicitud, destino) -> bool:
@@ -795,7 +808,7 @@ def consultar_reunion(reunion: str | Path, *, incluir_fuentes: bool = False) -> 
         estado = leer(carpeta)
         return {'carpeta': str(carpeta), 'estado': 'procesando', 'etapa': estado.get('etapa'),
                 'error': None, 'artefactos': {}, 'solicitud': estado.get('solicitud'), 'activa': True,
-                'etapas_vigentes': None, 'duracion_audio_s': None, 'tiempos': estado.get('tiempos')}
+                'etapas_vigentes': None, 'duracion_audio_s': None, 'tiempos': estado.get('tiempos'), 'consolidacion': None}
 
 
 def leer_resultado_texto(reunion: str | Path, nombre: str) -> str:

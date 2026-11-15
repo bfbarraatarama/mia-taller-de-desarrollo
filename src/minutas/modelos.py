@@ -18,6 +18,8 @@ class ModeloMinutas:
     identificador: str
     descripcion: str
     requiere_remoto: bool
+    contexto_maximo: int
+    salida_maxima: int
 
 
 MODELOS_DISPONIBLES: tuple[ModeloMinutas, ...] = (
@@ -28,6 +30,7 @@ MODELOS_DISPONIBLES: tuple[ModeloMinutas, ...] = (
         identificador="qwen2.5:7b",
         descripcion="Inferencia mediante Ollama, local si el servidor es local.",
         requiere_remoto=False,
+        contexto_maximo=32768, salida_maxima=8192,
     ),
     ModeloMinutas(
         clave="nova-lite",
@@ -36,6 +39,7 @@ MODELOS_DISPONIBLES: tuple[ModeloMinutas, ...] = (
         identificador="us.amazon.nova-lite-v1:0",
         descripcion="Inferencia remota mediante AWS Bedrock (perfil de EE. UU.).",
         requiere_remoto=True,
+        contexto_maximo=300000, salida_maxima=10000,
     ),
     ModeloMinutas(
         clave="claude-opus-4.5",
@@ -44,6 +48,7 @@ MODELOS_DISPONIBLES: tuple[ModeloMinutas, ...] = (
         identificador="us.anthropic.claude-opus-4-5-20251101-v1:0",
         descripcion="Inferencia remota mediante AWS Bedrock (perfil de EE. UU.).",
         requiere_remoto=True,
+        contexto_maximo=200000, salida_maxima=64000,
     ),
 )
 

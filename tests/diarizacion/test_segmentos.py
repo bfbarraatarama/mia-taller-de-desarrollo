@@ -95,6 +95,10 @@ def test_techo_nunca_supera_la_duracion():
     for cuadros in range(1, 50000, 37):
         d = cuadros / 16000
         assert techo_3_decimales(d) <= d
+        assert techo_3_decimales(d) == (cuadros // 16) / 1000
+    for cuadros in range(16, 50000, 16):
+        d = cuadros / 16000
+        assert techo_3_decimales(d) == d
 
 
 def test_end_igual_a_la_duracion_se_redondea_hacia_abajo():

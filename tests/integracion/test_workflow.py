@@ -1036,3 +1036,115 @@ def test_consulta_distingue_original_modificado_de_checkpoint_vigente(tmp_path, 
     procesar_reunion(s)
     assert tuple(modelos_falsos.values()) == (2, 2, 2)
     assert consultar_reunion(s.salida, incluir_fuentes=True)['fuentes_disponibles'][0]['situacion'] == 'original'
+
+
+@pytest.mark.parametrize('tipo_fuente', [Path, str])
+def test_notebook_workflow_usa_api_y_lectura_vigente(tmp_path, modelos_falsos, monkeypatch, capsys, tipo_fuente):
+    from src import rutas
+    from src.pipeline import leer_resultado_texto
+
+    grabaciones = tmp_path / 'grabaciones'
+    grabaciones.mkdir()
+    archivo_wav(grabaciones / 'audio_reunion_01.wav', muestras=64000)
+    monkeypatch.setattr(rutas, 'DIRECTORIO_GRABACIONES_PREDETERMINADO', grabaciones)
+    monkeypatch.setattr(rutas, 'DIRECTORIO_RESULTADOS_PREDETERMINADO', tmp_path / 'resultados')
+    notebook = json.loads((Path(__file__).resolve().parents[2] / 'notebooks/workflow_poc.ipynb').read_text(encoding='utf-8'))
+    contexto = {}
+    for celda in notebook['cells']:
+        if celda['cell_type'] == 'code':
+            assert not celda.get('outputs')
+            exec(compile(''.join(celda['source']), celda['id'], 'exec'), contexto)
+            if celda['id'] == 'mia104-04':
+                contexto['solicitud'] = contexto['replace'](
+                    contexto['solicitud'],
+                    fuentes=tuple(tipo_fuente(ruta) for ruta in contexto['solicitud'].fuentes),
+                )
+    resultado = contexto['consulta']
+    assert resultado['estado'] == 'completado'
+    assert len(resultado['etapas_vigentes']) == 5
+    assert contexto['leer_resultado_texto'] is leer_resultado_texto
+    assert 'Se revisó el tema.' in capsys.readouterr().out
+    assert modelos_falsos == {'src.diarizacion.diarizar': 1, 'src.stt': 1, 'src.minutas': 1}
+
+
+def test_cli_ejecutar_y_consultar_con_fuentes_ordenadas(tmp_path, modelos_falsos, capsys):
+    from src.pipeline.__main__ import main
+
+    s = solicitud(tmp_path, secciones=('resumen', 'acciones'))
+    assert main(['ejecutar', *map(str, reversed(s.fuentes)), '--salida', str(s.salida),
+                 '--secciones', ','.join(s.minutas.secciones)]) == 0
+    capsys.readouterr()
+    assert main(['estado', '--reunion', str(s.salida)]) == 0
+    resultado = json.loads(capsys.readouterr().out)
+    assert resultado['estado'] == 'completado'
+    assert resultado['solicitud']['fuentes'] == [str(p.resolve()) for p in reversed(s.fuentes)]
+    assert set(json.loads((s.salida / 'minutes.json').read_text(encoding='utf-8'))) == {'resumen', 'acciones'}
+    assert modelos_falsos == {'src.diarizacion.diarizar': 1, 'src.stt': 1, 'src.minutas': 1}
+
+
+def test_consolidacion_legacy_legible_y_regeneracion_selectiva(tmp_path, modelos_falsos):
+    s = solicitud(tmp_path)
+    procesar_reunion(s)
+    previo = instantanea(s.salida, ['audio.wav', 'diarization.json', 'asr.json', 'transcription.json'])
+    ruta = s.salida / 'ejecucion_minutas.json'
+    meta = json.loads(ruta.read_text())
+    assert meta['consolidacion']['version'] == 2
+    assert consultar_reunion(s.salida)['consolidacion'] == meta['consolidacion']
+    # Simular una minuta válida publicada antes de versionar la consolidación.
+    meta.pop('consolidacion')
+    ruta.write_text(json.dumps(meta))
+    datos = manifiesto(s.salida)
+    datos['etapas']['minuta']['clave'] = '0' * 64
+    datos['etapas']['minuta']['archivos'][ruta.name] = sha256(ruta)
+    guardar_manifiesto(s.salida, datos)
+    consulta = consultar_reunion(s.salida)
+    assert consulta['estado'] == 'completado'
+    assert consulta['consolidacion'] is None
+    assert len(consulta['etapas_vigentes']) == 5
+    r = procesar_reunion(s)
+    assert r['estado'] == 'completado'
+    assert r['consolidacion']['version'] == 2
+    assert tuple(modelos_falsos.values()) == (1, 1, 2)
+    assert instantanea(s.salida, previo) == previo
+
+
+def test_consolidacion_no_vigente_con_metadata_invalida(tmp_path, modelos_falsos):
+    s = solicitud(tmp_path)
+    procesar_reunion(s)
+    ruta = s.salida / 'ejecucion_minutas.json'
+    meta = json.loads(ruta.read_text())
+    meta['consolidacion']['uniones_locales'] = -1
+    ruta.write_text(json.dumps(meta))
+    datos = manifiesto(s.salida)
+    datos['etapas']['minuta']['archivos'][ruta.name] = sha256(ruta)
+    guardar_manifiesto(s.salida, datos)
+    consulta = consultar_reunion(s.salida)
+    assert consulta['estado'] == 'fallido'
+    assert consulta['etapas_vigentes'] == ['preparar', 'diarizar', 'transcribir', 'asociar']
+    assert consulta['consolidacion'] is None
+    assert procesar_reunion(s)['estado'] == 'completado'
+    assert tuple(modelos_falsos.values()) == (1, 1, 2)
+
+
+def test_asociacion_anterior_legible_y_regeneracion_sin_repetir_inferencias_previas(tmp_path, modelos_falsos):
+    from src.pipeline.estado import huella
+
+    s = solicitud(tmp_path)
+    procesar_reunion(s)
+    previos = instantanea(s.salida, ['audio.wav', 'diarization.json', 'asr.json'])
+    meta = s.salida / 'transcription.meta.json'
+    datos_meta = json.loads(meta.read_text())
+    datos_meta['version'] = '0.3.1'
+    meta.write_text(json.dumps(datos_meta))
+    datos = manifiesto(s.salida)
+    hashes_anteriores = {n: digest for n, (digest, _) in previos.items()}
+    datos['etapas']['asociar']['clave'] = huella(hashes_anteriores, None)
+    datos['etapas']['asociar']['archivos'][meta.name] = sha256(meta)
+    guardar_manifiesto(s.salida, datos)
+    assert len(consultar_reunion(s.salida)['etapas_vigentes']) == 5
+    r = procesar_reunion(s)
+    assert r['estado'] == 'completado'
+    assert r['tiempos']['etapas']['asociar']['estado'] == 'ejecutada'
+    assert tuple(modelos_falsos.values()) == (1, 1, 2)
+    assert instantanea(s.salida, previos) == previos
+    assert json.loads(meta.read_text())['version'] == '0.3.2'

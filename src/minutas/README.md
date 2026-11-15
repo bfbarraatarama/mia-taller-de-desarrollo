@@ -1,6 +1,6 @@
 # Etapa 5 — Generación de minutas
 
-Módulo independiente de la interfaz y de los modelos de diarización y transcripción. Recibe `transcription.json` conforme al contrato de `hito-3/pipeline-etapas-y-herramientas.md`, genera una minuta estructurada con contenido en español y la presenta en Markdown. La decisión técnica de la PoC sigue siendo ejecutar `qwen2.5:7b` localmente; AWS Bedrock se admite solo de forma opcional y explícita para contenido autorizado.
+Módulo independiente de la interfaz y de los modelos de diarización y transcripción. Recibe `transcription.json` conforme al contrato de `hito-3/pipeline-etapas-y-herramientas.md`, genera una minuta estructurada con contenido en español y la presenta en Markdown. `qwen2.5:7b` es el modelo predeterminado; AWS Bedrock se admite de forma opcional y explícita para contenido autorizado. Todos los modelos son experimentales, según la actualización de la [definición de la PoC](../../hito-3/definicion-de-la-poc.md#311-el-modelo).
 
 ## Dependencias
 
@@ -119,19 +119,21 @@ Todos estos archivos conservan la versión 1 durante el desarrollo actual. El co
 
 ## Reuniones extensas y fallos
 
-El presupuesto `max_caracteres_bloque` es un margen conservador, **no un conteo exacto de tokens**. Por defecto se limita a 12.000 caracteres de entrada estructurada por bloque y se solicita `num_ctx=16384` en Ollama; ambas opciones son configurables por CLI. Los bloques comparten hasta dos intervenciones de contexto. Cuando hay varios bloques, se consolidan recursivamente con el segundo prompt, conservando las referencias. Si una intervención individual supera el presupuesto, se informa el problema: dividirla asignándole tiempos ficticios sería incorrecto.
+El presupuesto `max_caracteres_bloque` limita los caracteres de entrada estructurada (12.000 por defecto), junto con una estimación del contexto efectivo, no un conteo exacto de tokens. El contexto solicitado a Ollama es `num_ctx=16384` por defecto. Los límites de contexto y generación del modelo se verifican y las intervenciones extensas pueden dividirse sin modificar sus identificadores ni inventar tiempos. Si el proveedor notifica un límite, la extracción se subdivide de manera acotada; si no puede concluir, se informa el error sin publicar resultados incompletos.
 
-Ollama informa cuántos tokens recibió; si se acerca demasiado al contexto declarado, se produce un error explícito para evitar aceptar una respuesta potencialmente truncada. El parámetro `max_tokens_salida` se aplica mediante `num_predict` en Ollama y `maxTokens` en Bedrock. Si el modelo devuelve JSON inválido, campos ausentes, referencias inexistentes o no entrega la salida estructurada requerida, se reintenta la solicitud hasta dos veces y luego se informa el fallo. Los errores de conexión, autenticación y permisos de los proveedores no se reintentan como errores de formato. Cuando el modelo declara un `id_ancla` existente pero lo omite de `ids_intervenciones`, el programa incorpora ese mismo identificador a las evidencias y registra la normalización en `ejecucion_minutas.json`. No se cambian anclas ni se generan identificadores nuevos. La validación de referencias garantiza **existencia**, pero no demuestra fidelidad semántica. Esa última dimensión corresponde a la evaluación posterior de la PoC.
+En la consolidación se prefiere la síntesis jerárquica. Si no puede avanzarse respetando el presupuesto, se conserva la salida estructurada por unión local y se intenta sintetizar el resumen por separado cuando corresponda. La pérdida de cobertura de identificadores por sección también activa la unión local. La minuta puede ser menos compacta y el resumen puede incluir síntesis parciales; el manifiesto y la interfaz identifican estas situaciones. Véase [Consolidación de minutas extensas](../../docs/consolidacion-de-minutas.md) para las decisiones, condiciones de terminación y limitaciones.
+
+Los errores de formato tienen hasta dos reintentos por defecto, sin reenviar la respuesta inválida. Los errores de conexión, autenticación, permisos y controles de contenido no se reintentan como errores de formato. Si el modelo declara un `id_ancla` existente pero lo omite de `ids_intervenciones`, se incorpora ese identificador y se registra la normalización. La validación de referencias exige que pertenezcan a las evidencias recibidas, pero no demuestra fidelidad semántica.
 
 No se reemplazan archivos existentes de manera predeterminada; `--sobrescribir` habilita una ejecución repetida sobre el mismo directorio. Las tres salidas se preparan antes de publicarse; ante errores recuperables de escritura se eliminan las nuevas salidas parciales o se restauran los archivos anteriores al sobrescribir. Cada reemplazo es atómico de manera individual, pero el conjunto de tres archivos no constituye una transacción atómica frente a cortes abruptos del proceso o pérdidas de energía. El manifiesto se publica al final y contiene el hash del JSON. El input debe conservarse en su ubicación original: el manifiesto registra su hash, no una segunda copia. Los modelos no garantizan reproducibilidad bit a bit aunque se fije la temperatura.
 
 ## Pruebas técnicas
 
 ```bash
-.venv/bin/python -m unittest discover -s tests/minutas -v
+.venv/bin/python -m pytest -q -rs tests/minutas
 .venv/bin/python -m src.minutas --help
 ```
 
-Las pruebas automatizadas utilizan un proveedor simulado: validan contratos, salida, referencias, reintentos, fragmentación, consolidación y construcción de solicitudes para ambos adaptadores sin enviar datos. No sustituyen pruebas de inferencia real, integración con Matías ni evaluación de calidad con AMI o reuniones propias, que se realizarán cuando corresponda.
+Las pruebas automatizadas utilizan un proveedor simulado: validan contratos, salida, referencias, reintentos, fragmentación, consolidación y construcción de solicitudes para ambos adaptadores sin enviar datos. Las pruebas integradas del workflow se ejecutan también desde `tests/integracion/`. Ninguna de estas suites sustituye la inferencia real ni la evaluación de calidad con AMI o reuniones propias.
 
 La GUI integrada consulta y abre `minutes.md`, conforme al contrato del Hito 3; no se genera ningún alias `minuta.md`.
