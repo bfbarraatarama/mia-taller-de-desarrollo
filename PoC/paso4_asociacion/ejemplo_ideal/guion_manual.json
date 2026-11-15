@@ -1,0 +1,24 @@
+{
+  "velocidad_palabras_por_minuto": 150,
+  "voces": {
+    "Ana": "es-419+f3",
+    "Bruno": "es-419+m3",
+    "Carla": "es-419+f1",
+    "Diego": "es-419+m1",
+    "Elena": "es-419+f2",
+    "Facundo": "es-419+m2",
+    "Gabriela": "es-419+f4",
+    "Hugo": "es-419+m4"
+  },
+  "intervenciones": [
+    {"hablante": "Ana", "texto": "Buenas tardes. Hoy somos ocho, así que vamos rápido con la ronda de novedades de cada equipo."},
+    {"hablante": "Bruno", "texto": "En infraestructura terminamos la migración de la base de datos y no hubo cortes."},
+    {"hablante": "Carla", "texto": "En diseño cerramos las pantallas del tablero y mañana las pasamos a desarrollo."},
+    {"hablante": "Diego", "texto": "En soporte bajamos los tiempos de respuesta a la mitad desde que usamos las plantillas nuevas, y queremos extenderlas a los pedidos de facturación el mes que viene."},
+    {"hablante": "Hugo", "encima_de_anterior": 3.0, "texto": "Sí, totalmente de acuerdo."},
+    {"hablante": "Elena", "texto": "En ventas cerramos dos clientes nuevos en la provincia de Córdoba."},
+    {"hablante": "Facundo", "texto": "En finanzas necesitamos el informe de gastos de todos antes del viernes."},
+    {"hablante": "Gabriela", "texto": "En recursos humanos abrimos la búsqueda para dos puestos de analista."},
+    {"hablante": "Ana", "texto": "Perfecto. Entonces queda pendiente el informe de gastos para el viernes. Gracias a todos."}
+  ]
+}

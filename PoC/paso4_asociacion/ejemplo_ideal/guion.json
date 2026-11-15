@@ -1,0 +1,34 @@
+{
+  "velocidad_palabras_por_minuto": 150,
+  "voces": {
+    "Ana": "es-419+f3",
+    "Carlos": "es-419+m3",
+    "Sofía": "es-419+f1"
+  },
+  "intervenciones": [
+    {
+      "hablante": "Ana",
+      "texto": "Buenas tardes a todos. Arrancamos con el primer tema, que es el presupuesto del trimestre. Gastamos un poco más de lo previsto en servidores y en licencias, así que propongo revisar cada partida antes de fin de mes para no pasarnos del límite que aprobó la dirección en septiembre."
+    },
+    {
+      "hablante": "Carlos",
+      "texto": "Estoy de acuerdo con revisar las partidas. Lo de los servidores se explica por las pruebas de carga que hicimos en octubre."
+    },
+    {
+      "hablante": "Sofía",
+      "texto": "Perfecto. Pasemos al segundo tema, la fecha de la demo con el cliente. ¿Llegamos con todo listo para el jueves veinte?"
+    },
+    {
+      "hablante": "Carlos",
+      "texto": "Creo que sí llegamos. Yo mando el informe del presupuesto el viernes, así tenemos los números cerrados antes de la demo."
+    },
+    {
+      "hablante": "Ana",
+      "texto": "Entonces queda decidido: la demo es el jueves veinte de noviembre."
+    },
+    {
+      "hablante": "Sofía",
+      "texto": "Listo, confirmo la fecha con el cliente. Gracias a todos, cerramos la reunión."
+    }
+  ]
+}

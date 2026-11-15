@@ -1,0 +1,11 @@
+schema: spec-driven
+
+context: |
+  OpenSpec propio de la Etapa 4 (asociación y etiquetado de hablantes), módulo PoC/paso4_asociacion/ del repo
+  mia-taller-de-desarrollo. Las otras etapas no usan este directorio. Ejecutar el CLI desde PoC/paso4_asociacion/.
+  Escribir todos los artefactos en español, con tablas y una línea de lectura por decisión.
+  Cada escenario de specs/ tiene un test con el mismo nombre.
+
+rules:
+  design:
+    - Cada decisión lista tres alternativas, la elegida y el motivo
