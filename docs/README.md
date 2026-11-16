@@ -8,7 +8,7 @@ La [definición del Hito 3](../hito-3/definicion-de-la-poc.md) es la fuente de a
 - [Orquestación de reuniones](orquestacion.md): checkpoints, vigencia, exclusión, recuperación de fuentes y medición.
 - [Continuidad y confidencialidad](continuidad-y-confidencialidad.md): reapertura, captura interrumpida y autorización de transferencias.
 - [Interfaz y presentación de resultados](interfaz-y-presentacion.md): distribución, temas, visores y agrupación.
-- [Temporalidad de la transcripción](temporalidad-transcripcion.md): cuantización e invariantes temporales.
+- [Temporalidad de la transcripción](temporalidad-transcripcion.md): cuantización, integridad textual y tratamiento de la incertidumbre.
 
 ## Guías por componente
 

@@ -1,6 +1,6 @@
 """Paso 1 de la API de la Etapa 4 (D7): valida las entradas y asocia palabras con hablantes. No escribe nada.
 
-Reglas de `design.md`:
+Reglas de `design.md`, con las precisiones de `docs/temporalidad-transcripcion.md`:
 - D1: cada palabra va al hablante con más milisegundos de turno dentro de ella.
 - D2: empate de cobertura: el hablante de la palabra anterior (en todo asr.json) si está entre los empatados; si no,
   el del turno más largo; si persiste, la etiqueta menor.
@@ -8,7 +8,7 @@ Reglas de `design.md`:
   si no, `speaker: null`.
 - D4: intervenciones cortadas por cambio de hablante y en cada segmento de Whisper.
 - D5: `overlap` si hay 0,2 s o más con dos o más hablantes; `ambiguous` si no hay hablante, si otra etiqueta cubre
-  el 30 % o más, o si la propia cubre menos del 50 %.
+  el 30 % o más, o si la propia cubre menos del 50 %. Se propaga también la incertidumbre de cada palabra.
 
 Los tiempos se comparan en milisegundos enteros, y los porcentajes como productos de enteros, para que los valores
 límite no dependan del redondeo en coma flotante. Un «turno» es la unión de los turnos que se tocan de una etiqueta.
@@ -24,6 +24,7 @@ from pathlib import Path
 
 from .contrato import CAMPOS_INTERVENCION, validar_asr, validar_audio, validar_diarizacion
 from .errores import AsociacionError
+from .texto import alinear, intervalo_segmento
 
 NOMBRES_ENTRADA = {"audio": "audio.wav", "diarizacion": "diarization.json", "asr": "asr.json"}
 
@@ -37,13 +38,16 @@ UMBRALES = {"hueco_max_s": HUECO_MAX_MS / 1000, "overlap_min_s": OVERLAP_MIN_MS 
 
 @dataclass
 class Intervencion:
-    start: float
-    end: float
+    start: float | None
+    end: float | None
     speaker: str | None
     name: str | None
     text: str
-    overlap: bool
+    overlap: bool | None
     ambiguous: bool
+    timing: str = "word"
+    speakers_detected: list[dict] | None = None
+    source: dict = field(default_factory=dict)
 
     def a_dict(self) -> dict:
         d = asdict(self)
@@ -204,37 +208,79 @@ class Turnos:
         return overlap, ambiguous
 
 
-def _cerrar(grupo: list[dict], speaker: str | None, turnos: Turnos) -> Intervencion:
+def _detectados(turnos: Turnos, ini: int, fin: int) -> list[dict]:
+    return [{"speaker": e, "name": None} for e in turnos.etiquetas if turnos.cobertura(e, ini, fin) > 0]
+
+
+def _cerrar(grupo: list[dict], speaker: str | None, turnos: Turnos, seg: dict, indice: int) -> Intervencion:
     start = min(w["start"] for w in grupo)
     end = max(w["end"] for w in grupo)
     overlap, ambiguous = turnos.marcas(ms(start), ms(end), speaker)
-    return Intervencion(start=start, end=end, speaker=speaker, name=None,
-                        text=" ".join(w["word"].strip() for w in grupo), overlap=overlap, ambiguous=ambiguous)
+    a, b = grupo[0]["char_start"], grupo[-1]["char_end"]
+    return Intervencion(start, end, speaker, None, seg["text"][a:b], overlap,
+                        ambiguous or any(w["ambiguous"] for w in grupo), "word",
+                        _detectados(turnos, ms(start), ms(end)), {"segment": indice, "start": a, "end": b})
+
+
+def _respaldo(seg: dict, indice: int, turnos: Turnos) -> Intervencion:
+    texto = seg["text"]
+    a, b = len(texto) - len(texto.lstrip()), len(texto.rstrip())
+    fuente = {"segment": indice, "start": a, "end": b}
+    intervalo = intervalo_segmento(seg)
+    if intervalo is None:
+        return Intervencion(None, None, None, None, texto[a:b], None, True, "unknown", None, fuente)
+    start, end = intervalo
+    ini, fin = ms(start), ms(end)
+    detectados = _detectados(turnos, ini, fin)
+    speaker = None
+    if len(detectados) == 1 and not seg.get("_palabras_fuera_audio"):
+        e = detectados[0]["speaker"]
+        if turnos.cobertura(e, ini, fin) == fin - ini:
+            speaker = e
+    overlap, ambiguous = turnos.marcas(ini, fin, speaker)
+    return Intervencion(start, end, speaker, None, texto[a:b], overlap, ambiguous, "segment", detectados, fuente)
 
 
 def armar_intervenciones(asr: dict, turnos: Turnos) -> tuple[list[Intervencion], dict[str, int]]:
-    """D4: corta por cambio de hablante y en cada segmento de Whisper. Devuelve (intervenciones, conteos)."""
+    """D1–D5 sobre una partición literal; respaldo íntegro si no es utilizable."""
     intervenciones = []
-    conteos = {"palabras": 0, "palabras_por_empate": 0, "palabras_por_hueco": 0, "palabras_sin_hablante": 0}
-    anterior = None  # hablante de la palabra anterior en todo asr.json (D2)
-    for seg in asr["segments"]:
-        palabras = seg["words"] or [{"word": seg["text"], "start": seg["start"], "end": seg["end"]}]
+    conteos = dict.fromkeys(("palabras", "palabras_por_empate", "palabras_por_hueco", "palabras_sin_hablante",
+                             "segmentos_respaldo", "segmentos_sin_tiempo"), 0)
+    anterior = None
+    for indice, seg in enumerate(asr["segments"]):
+        palabras = alinear(seg)
+        parciales = []
+        local = dict.fromkeys(("palabras", "palabras_por_empate", "palabras_por_hueco", "palabras_sin_hablante"), 0)
+        previo = anterior
         grupo = []
-        for w in palabras:
-            ini, fin = ms(w["start"]), ms(w["end"])
-            hablante, regla = turnos.asignar(ini, max(fin, ini + 1), anterior)
-            if grupo and hablante != anterior:
-                intervenciones.append(_cerrar(grupo, anterior, turnos))
-                grupo = []
-            grupo.append(w)
-            anterior = hablante
-            conteos["palabras"] += 1
-            conteos["palabras_por_empate"] += regla == "D2"
-            conteos["palabras_por_hueco"] += regla == "D3"
-            conteos["palabras_sin_hablante"] += hablante is None
-        if grupo:
-            intervenciones.append(_cerrar(grupo, anterior, turnos))
-    intervenciones.sort(key=lambda i: i.start)  # estable: respeta el orden de Whisper en empates
+        if palabras:
+            for w in palabras:
+                ini, fin = ms(w["start"]), ms(w["end"])
+                hablante, regla = turnos.asignar(ini, fin, previo)
+                if grupo and hablante != previo:
+                    parciales.append(_cerrar(grupo, previo, turnos, seg, indice))
+                    grupo = []
+                _, ambigua = turnos.marcas(ini, fin, hablante)
+                grupo.append({**w, "ambiguous": ambigua or regla in ("D2", "D3")})
+                previo = hablante
+                local["palabras"] += 1
+                local["palabras_por_empate"] += regla == "D2"
+                local["palabras_por_hueco"] += regla == "D3"
+                local["palabras_sin_hablante"] += hablante is None
+            if grupo:
+                parciales.append(_cerrar(grupo, previo, turnos, seg, indice))
+        # No invertir el orden de las palabras al publicar cambios de hablante.
+        if not parciales or any(a.start > b.start for a, b in zip(parciales, parciales[1:])):
+            respaldo = _respaldo(seg, indice, turnos)
+            intervenciones.append(respaldo)
+            anterior = respaldo.speaker
+            conteos["segmentos_respaldo"] += 1
+            conteos["segmentos_sin_tiempo"] += respaldo.timing == "unknown"
+        else:
+            intervenciones.extend(parciales)
+            anterior = previo
+            for k, v in local.items():
+                conteos[k] += v
     return intervenciones, conteos
 
 
@@ -252,17 +298,16 @@ def asociar(carpeta=None, *, audio=None, diarizacion=None, asr=None, salida=None
     datos_asr, sha_asr = _leer_json(rutas.asr, "asr")
     asr_normal, recortes = validar_asr(datos_asr, duracion, archivo=rutas.asr)
     if not asr_normal["segments"]:
-        descartados = recortes["segmentos_descartados"]
-        detalle = f" ({descartados} segmentos descartados por empezar después del audio)" if descartados else ""
-        raise AsociacionError("asr", f"{rutas.asr}: sin habla transcrita, no hay ningún segmento con texto "
-                                     f"dentro del audio{detalle}", archivo=rutas.asr)
+        raise AsociacionError("asr", f"{rutas.asr}: sin habla transcrita, no hay ningún segmento con texto",
+                              archivo=rutas.asr)
 
     turnos = Turnos(datos_diar["segments"])
     intervenciones, conteos = armar_intervenciones(asr_normal, turnos)
     conteos.update({
         "intervenciones": len(intervenciones),
         "intervenciones_sin_hablante": sum(i.speaker is None for i in intervenciones),
-        "intervenciones_overlap": sum(i.overlap for i in intervenciones),
+        "intervenciones_sin_tiempo": sum(i.timing == "unknown" for i in intervenciones),
+        "intervenciones_overlap": sum(i.overlap is True for i in intervenciones),
         "intervenciones_ambiguous": sum(i.ambiguous for i in intervenciones),
     })
     return Asociacion(

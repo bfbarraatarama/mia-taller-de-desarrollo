@@ -13,7 +13,7 @@ from .contratos import Intervencion
 
 
 def leer_transcripcion(origen: str | Path | Mapping[str, Any]) -> tuple[list[Intervencion], bytes]:
-    """Devuelve intervenciones cronológicas y bytes canónicos para trazabilidad."""
+    """Devuelve intervenciones en orden de reconocimiento (cronológico en el contrato histórico)."""
     if isinstance(origen, (str, Path)):
         datos_bytes = Path(origen).read_bytes()
         datos = json.loads(datos_bytes)
@@ -35,6 +35,14 @@ def leer_transcripcion(origen: str | Path | Mapping[str, Any]) -> tuple[list[Int
         filas.append((indice, fila))
 
     # Valida antes de ordenar; evita comparar valores heterogéneos con sort().
+    actual = any(any(k in fila for k in ("timing", "source", "speakers_detected")) for _, fila in filas)
+    if actual:
+        from ..asociacion.contrato import validar_transcripcion
+        etiquetas = {f["speaker"] for _, f in filas if isinstance(f.get("speaker"), str)}
+        etiquetas.update(d["speaker"] for _, f in filas if isinstance(f.get("speakers_detected"), list)
+                         for d in f["speakers_detected"] if isinstance(d, dict) and isinstance(d.get("speaker"), str))
+        if validar_transcripcion(datos, float("inf"), etiquetas):
+            raise ValueError("La transcripción no cumple el contrato de asociación.")
     preparadas: list[tuple[int, Intervencion]] = []
     for indice, fila in filas:
         try:
@@ -43,13 +51,17 @@ def leer_transcripcion(origen: str | Path | Mapping[str, Any]) -> tuple[list[Int
                 hablante=fila.get("speaker"), nombre=fila.get("name"),
                 texto=fila["text"], superposicion=fila["overlap"],
                 ambiguo=fila["ambiguous"],
+                resolucion_temporal={"word": "palabra", "segment": "segmento", "unknown": "desconocida"}.get(fila.get("timing")),
+                hablantes_detectados=[{"hablante": d["speaker"], "nombre": d["name"]}
+                                     for d in fila["speakers_detected"]] if fila.get("speakers_detected") is not None else None,
             )
         except (KeyError, ValidationError, ValueError, TypeError) as exc:
             # No reproducir los campos de entrada en errores que puede persistir el orquestador.
             raise ValueError(f"Intervención {indice + 1} inválida ({type(exc).__name__}).") from None
         preparadas.append((indice, intervencion))
 
-    preparadas.sort(key=lambda x: (x[1].inicio, x[0]))
+    if not actual:
+        preparadas.sort(key=lambda x: (x[1].inicio, x[0]))
     intervenciones = [
         intervencion.model_copy(update={"id": f"I{numero:06d}"})
         for numero, (_, intervencion) in enumerate(preparadas, start=1)
@@ -60,6 +72,7 @@ def leer_transcripcion(origen: str | Path | Mapping[str, Any]) -> tuple[list[Int
 def representar_intervenciones(intervenciones: list[Intervencion]) -> str:
     """El modelo solo recibe claves y contenido semántico en español."""
     return json.dumps(
-        {"intervenciones": [intervencion.model_dump() for intervencion in intervenciones]},
+        {"intervenciones": [intervencion.model_dump(exclude={"resolucion_temporal", "hablantes_detectados"}
+                         if intervencion.resolucion_temporal is None else None) for intervencion in intervenciones]},
         ensure_ascii=False, separators=(",", ":"),
     )
