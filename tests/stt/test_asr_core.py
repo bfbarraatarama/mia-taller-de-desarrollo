@@ -130,5 +130,6 @@ def test_intervalos_positivos_en_segmento_y_palabra(inicio, fin, esperado):
 
 @pytest.mark.parametrize('inicio,fin', [(-0.0001, 0.5), (0.2, 0.2), (0.3, 0.2), (float('nan'), 1.0)])
 def test_intervalo_invalido_de_segmento_no_se_disfraza_por_redondeo(inicio, fin):
-    with pytest.raises(ValueError):
-        build_asr({'segments': [{'start': inicio, 'end': fin, 'text': 'hola', 'words': []}]})
+    datos = build_asr({'segments': [{'start': inicio, 'end': fin, 'text': 'hola', 'words': []}]})
+    validate_asr_contract(datos, 1.0)
+    assert datos['segments'] == [{'start': None, 'end': None, 'text': 'hola', 'words': []}]

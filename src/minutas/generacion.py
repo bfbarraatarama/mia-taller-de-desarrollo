@@ -353,7 +353,10 @@ def generar_minuta(
     destinos = (rutas.json, rutas.markdown, rutas.manifiesto)
     if not sobrescribir and any(ruta.exists() for ruta in destinos):
         raise FileExistsError("Ya existe un resultado de minutas. Elegí otra carpeta o sobrescribir=True.")
-    intervenciones, bytes_origen = leer_transcripcion(entrada)
+    todas, bytes_origen = leer_transcripcion(entrada)
+    intervenciones = [i for i in todas if i.inicio is not None]
+    if not intervenciones:
+        raise ValueError("No existe evidencia temporal utilizable para generar la minuta; se conserva la transcripción.")
     extraccion, consolidacion, hashes_prompts = _preparar_prompts(config.secciones)
     destino = resolver_destino(config.modelo)
     try:
@@ -569,7 +572,7 @@ def generar_minuta(
         minuta_final = parciales[0]
         validar_evidencias(minuta_final, intervenciones)
         texto_json = minuta_final.model_dump_json(indent=2) + "\n"
-        texto_markdown = a_markdown(minuta_final, intervenciones)
+        texto_markdown = a_markdown(minuta_final, todas)
         manifiesto = {
             "version_esquema": 1,
             "creado_utc": datetime.now(timezone.utc).isoformat(),
@@ -582,6 +585,7 @@ def generar_minuta(
             "huella_destino": destino.huella,
             "prompts": hashes_prompts,
             "intervenciones": len(intervenciones),
+            "intervenciones_sin_ubicacion_excluidas": len(todas) - len(intervenciones),
             "bloques_extraccion": bloques_extraccion,
             "consolidacion": {
                 "version": VERSION_CONSOLIDACION,

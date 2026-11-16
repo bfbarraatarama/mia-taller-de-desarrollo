@@ -24,12 +24,15 @@ def build_asr(result: dict, language: str = LANGUAGE) -> dict:
     Convert a Whisper result into the asr.json contract.
 
     Segments without text are dropped, as are words with empty text or
-    invalid timing.
+    invalid timing. A segment with unusable timing retains its text and
+    valid words, with both interval endpoints null.
     """
     segments = []
     for seg in result.get("segments", []):
         text = seg.get("text", "").strip()
         if not text:
+            if any(w.get("word", "").strip() for w in seg.get("words", [])):
+                raise ValueError("Segment: empty text with non-empty words")
             continue
 
         words = []
@@ -45,8 +48,9 @@ def build_asr(result: dict, language: str = LANGUAGE) -> dict:
 
         inicio, fin = seg.get("start"), seg.get("end")
         if not _is_time(inicio) or not _is_time(fin) or inicio >= fin:
-            raise ValueError("Segment: 'start' and 'end' must define a positive finite interval")
-        inicio, fin = cuantizar_intervalo(inicio, fin)
+            inicio, fin = None, None
+        else:
+            inicio, fin = cuantizar_intervalo(inicio, fin)
         segments.append({
             "start": inicio,
             "end": fin,
@@ -98,7 +102,8 @@ def validate_asr_contract(asr: dict, audio_duration: float | None = None) -> Non
         label = f"Segment {i}"
         if not isinstance(seg, dict):
             raise ValueError(f"{label} must be a dict")
-        check_times(label, seg)
+        if not ("start" in seg and "end" in seg and seg["start"] is None and seg["end"] is None):
+            check_times(label, seg)
 
         text = seg.get("text")
         if not isinstance(text, str) or not text.strip():

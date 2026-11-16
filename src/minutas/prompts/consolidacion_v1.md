@@ -12,7 +12,7 @@ Reglas:
 - Un acuerdo puede aparecer en un fragmento posterior a su discusión; elegí como `id_ancla` la intervención que lo confirme.
 - Utilizá únicamente identificadores presentes en las minutas parciales recibidas, nunca de otros bloques.
 - Preservá los identificadores originales de intervenciones y elegí el `id_ancla` entre los `ids_intervenciones` de cada elemento.
-- Si hay datos contradictorios o incompletos, no los presentes como certezas.
+- Si hay datos contradictorios o incompletos, no los presentes como certezas. Conservá las reservas de atribución de las minutas parciales; no conviertas hablantes detectados o tentativos en responsables confirmados.
 - Si está seleccionada la sección de resumen, redactá una síntesis global fiel, sin inventar datos nuevos.
 - Para listas seleccionadas sin elementos respaldados, devolvé listas vacías.
 - No agregues claves de secciones que el usuario no haya solicitado.

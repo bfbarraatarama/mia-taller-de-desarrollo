@@ -152,15 +152,15 @@ def test_asr_externo_intervalo_positivo_no_colapsa(inicio, fin, esperado):
     [w] = seg['words']
     assert (seg['start'], seg['end']) == (w['start'], w['end']) == esperado
     assert w['word'] == 'sí'
-    assert recortes['segmentos_descartados'] == recortes['palabras_descartadas'] == 0
+    assert recortes['intervalos_segmento_descartados'] == recortes['palabras_descartadas'] == 0
     assert datos == original
 
 
 def test_asr_fuera_de_grilla_final_no_se_retrotrae():
     # El audio tiene una fracción de ms final sin intervalo representable.
     normal, recortes = validar_asr(asr(segmento(('sí', 10.0001, 10.0002))), 10.00025)
-    assert normal['segments'] == []
-    assert recortes['segmentos_descartados'] == recortes['palabras_descartadas'] == 1
+    assert normal['segments'] == [{'start': None, 'end': None, 'text': 'sí', 'words': [], '_palabras_fuera_audio': True}]
+    assert recortes['intervalos_segmento_descartados'] == recortes['palabras_descartadas'] == 1
 
 
 def test_limite_exacto_de_audio_no_pierde_un_milisegundo():

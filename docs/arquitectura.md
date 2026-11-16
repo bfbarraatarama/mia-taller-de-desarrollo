@@ -27,7 +27,7 @@ flowchart TD
 | [`src/ingesta`](../src/ingesta/) | Normalización, orden, copias verificables y correspondencia temporal | `audio.wav`, `ingesta.json` |
 | [`src/diarizacion`](../src/diarizacion/) | Turnos y etiquetas de hablantes, conservando solapamientos | `diarization.json`, `diarization.meta.json` |
 | [`src/stt`](../src/stt/) | Texto en castellano y tiempos de segmentos y palabras | `asr.json` |
-| [`src/asociacion`](../src/asociacion/) | Atribución temporal, incertidumbre y modelo de identificación humana | `transcription.json`, `transcription.meta.json`, `speakers.json` cuando corresponde |
+| [`src/asociacion`](../src/asociacion/) | Integridad textual, atribución temporal, incertidumbre y modelo de identificación humana | `transcription.json`, `transcription.meta.json`, `speakers.json` cuando corresponde |
 | [`src/minutas`](../src/minutas/) | Extracción, consolidación y presentación del contenido solicitado | `minutes.json`, `minutes.md`, `ejecucion_minutas.json` |
 | [`src/pipeline`](../src/pipeline/) | Configuración, orquestación, exclusión, vigencia y continuidad | `workflow.json` y eventos de progreso |
 | [`src/interfaz`](../src/interfaz/) | Interacción, captura, selección de parámetros, fichas y visores | Consume la API y los eventos del pipeline |

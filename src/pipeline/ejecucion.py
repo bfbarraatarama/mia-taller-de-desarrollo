@@ -254,8 +254,20 @@ def _validar_transcripcion(carpeta):
             raise ValueError('Fichas de hablantes inválidas.')
     if any(meta['sha256'].get(n) != sha256(carpeta / n) for n in nombres):
         raise ValueError('La asociación no corresponde a sus insumos.')
-    if validar_transcripcion(datos, duracion, etiquetas):
+    actual = meta.get('version') == VERSION_ASOCIACION or any('source' in s for s in datos['segments'])
+    asr = None
+    if actual:
+        asr, _ = validar_asr(json.loads((carpeta / ARCHIVO_ASR).read_text(encoding='utf-8')), duracion)
+        if any('source' not in fila for fila in datos['segments']):
+            raise ValueError('Falta la procedencia textual de la asociación vigente.')
+    if validar_transcripcion(datos, duracion, etiquetas, asr=asr):
         raise ValueError('Transcripción fuera de contrato.')
+    if actual:
+        nombres = {e: v['name'] for e, v in speakers.items()} if meta['etiquetado'] else {}
+        for fila in datos['segments']:
+            if fila['name'] != nombres.get(fila['speaker']) or any(
+                    d['name'] != nombres.get(d['speaker']) for d in fila['speakers_detected'] or []):
+                raise ValueError('Nombres de la transcripción discordantes con el etiquetado.')
 
 
 def _validar_minutas(carpeta, config=None, *, prompts_actuales=False, destino=None):

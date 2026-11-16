@@ -53,9 +53,9 @@ Ejemplo de `asr.json`:
 }
 ```
 
-La conversión descarta segmentos sin texto y palabras vacías o con tiempos originales inválidos; un segmento no vacío con intervalo original inválido produce un error. La validación exige intervalos finitos, no negativos y positivos, con fines que no superen la duración del audio más la tolerancia de 1 s cuando se informa esa duración. Los intervalos positivos que colapsan por redondeo se representan mediante una envolvente al milisegundo (véase [temporalidad](../temporalidad-transcripcion.md)). La fuente del contrato es [`src/stt/contrato.py`](../../src/stt/contrato.py), independiente de Whisper.
+La conversión descarta palabras vacías o sus registros cuando los tiempos originales son inválidos, pero conserva el texto no vacío del segmento. Un intervalo de segmento inválido se representa con `start: null` y `end: null`, manteniendo las palabras con tiempos válidos. Un segmento vacío sin palabras no vacías se omite; si contiene palabras no vacías, se informa una inconsistencia. La validación admite ambos límites de segmento nulos o ambos numéricos válidos; los límites de palabra deben ser finitos, no negativos y de duración positiva. Los fines numéricos no pueden superar la duración del audio más la tolerancia de 1 s cuando se informa esa duración. Los intervalos positivos que colapsan por redondeo se representan mediante una envolvente al milisegundo. La fuente del contrato es [`src/stt/contrato.py`](../../src/stt/contrato.py), independiente de Whisper.
 
-El texto del segmento se conserva aunque algunas palabras se descarten. No se garantiza que la concatenación de las palabras temporizadas reproduzca todo ese texto; la pérdida potencial durante la asociación todavía requiere tratamiento específico. No se deben inventar marcas temporales para ocultarla.
+El texto del segmento es la referencia del contenido reconocido. No se exige que las palabras temporizadas lo reproduzcan íntegramente ni se inventan marcas para completarlas; [asociación](../asociacion/README.md#contratos) comprueba la correspondencia y aplica un respaldo íntegro cuando es insuficiente. Véase [temporalidad](../temporalidad-transcripcion.md).
 
 ## Ejemplo y pruebas
 
