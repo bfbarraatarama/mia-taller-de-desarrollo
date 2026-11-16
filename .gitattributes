@@ -1,3 +1,8 @@
 # Los resultados versionados se verifican por SHA-256 de sus bytes (diarization_sha256 de cada corrida):
 # git no debe convertir sus fines de línea al hacer checkout en Windows.
 evaluacion/diarizacion/resultados/** -text
+# Evaluación modular: los reportes y las salidas se comparan byte a byte (evaluar los reproduce y los tests lo
+# comprueban); git no debe convertir sus fines de línea. Las salidas de los modelos son generadas: GitHub las
+# colapsa en los diffs.
+evaluacion/modular/resultados/** -text
+evaluacion/modular/resultados/salidas/** linguist-generated=true
