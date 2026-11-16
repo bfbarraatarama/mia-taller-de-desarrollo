@@ -5,7 +5,7 @@ En cada tarea, primero los tests de sus escenarios. Meta del martes 17/11: grupo
 ## 1. Preparación
 
 - [ ] 1.1 Estructura de `evaluacion/modular/` (`__main__` con `preparar`, `inferir` y `evaluar`), `tests/evaluacion/` y configuración TOML versionada con la semilla 20261010
-- [ ] 1.2 Consultar los pendientes 1 a 4 de `design.md` y anotar las respuestas
+- [x] 1.2 Consultar los pendientes del diseño (D14 a D17)
 
 ## 2. Originales
 

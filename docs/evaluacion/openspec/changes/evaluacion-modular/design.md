@@ -146,11 +146,42 @@ Motivo: cumple «recalcular sin inferir» y sigue el patrón de `preparar_figsha
 | B | Matías baja todo | Descartada por comodidad, no por riesgo |
 | C | Copiar los RAR de Bruno | Descartada: hay que coordinar la transferencia y verificar igual |
 
-## Pendientes de consulta
+### D14. Entrada de la Etapa 5 en AMI
 
-Antes de implementar el grupo correspondiente de `tasks.md`:
+| Alternativa | Descripción | Resultado |
+|---|---|---|
+| **A** | **`speaker` = letra del participante; `name` = su rol de AMI traducido; `overlap` con la regla D5 de la asociación sobre los tiempos de referencia; `ambiguous: false`** | **Elegida** |
+| B | Etiqueta sin nombre (`name: null`) | Descartada: las acciones salen con la etiqueta y la referencia nombra el rol |
+| C | Pasar por la Etapa 4 con `asr.json` y diarización de referencia | Descartada: mezcla la evaluación de minutas con la de asociación (D9) |
 
-1. Cómo se arma el `transcription.json` de AMI a partir de los turnos (hablante, marcas `overlap` y `ambiguous`).
-2. Modelo y secciones de la Etapa 5 para la evaluación (el *baseline* de §3.1.1 es `qwen2.5:7b`).
-3. Cómo se generan los WAV de Figshare para la cadena: mezcla mono como en la Etapa 2, o por canal.
-4. Formato y lugar de la planilla de minutas, y quién la marca.
+Motivo: las acciones de referencia nombran a los responsables por su rol («The industrial designer will…»); así la minuta puede asignarlos igual. Los roles salen del ZIP original de AMI (`hito-2/.cache/ami/ami_public_manual_1.6.2.zip`).
+
+### D15. Modelo de la Etapa 5
+
+| Alternativa | Descripción | Resultado |
+|---|---|---|
+| **A** | **`qwen2.5:7b` local, todas las secciones, con la configuración del pipeline registrada** | **Elegida** |
+| B | `qwen2.5:7b` y Claude remoto | Descartada: §1.3 deja fuera la comparación de modelos; duplica el marcado |
+| C | Solo Claude remoto | Descartada: no es el *baseline* de §3.1.1 |
+
+Motivo: evalúa el sistema que define la PoC, en la máquina de referencia y sin credenciales.
+
+### D16. Audio de Figshare para la cadena
+
+| Alternativa | Descripción | Resultado |
+|---|---|---|
+| **A** | **Mezcla mono `(L + R) // 2`, como la evaluación de la Etapa 2** | **Elegida** |
+| B | Un archivo por canal | Descartada: diarización y asociación triviales, sin superposición |
+| C | Mezcla para la cadena y canales para el WER por hablante | Descartada: duplica el STT sin cambiar el criterio |
+
+Motivo: equivale a una reunión grabada con un micrófono y deja los DER comparables con S26.
+
+### D17. Marcado de la planilla de minutas
+
+| Alternativa | Descripción | Resultado |
+|---|---|---|
+| **A** | **Un integrante que no ejecutó la inferencia (Felipe o Luisa), sobre un CSV que genera `evaluar`** | **Elegida** |
+| B | Matías, que ejecutó la inferencia | Descartada: sesgo de quien conoce la salida |
+| C | Dos personas y su acuerdo | Descartada: duplica el trabajo; con unos 80 ítems el acuerdo es poco estable |
+
+Motivo: es el mismo resguardo que §2.3 pide para las notas de la reunión de prueba.
