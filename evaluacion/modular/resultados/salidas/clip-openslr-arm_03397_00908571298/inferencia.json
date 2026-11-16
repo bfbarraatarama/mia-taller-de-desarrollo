@@ -27,5 +27,9 @@
     "cuda"
   ],
   "segundos": 14.2,
-  "codigo": 0
+  "codigo": 0,
+  "salidas_sha256": {
+    "asr.json": "28a2a0a07508dca06e811eea47f7723eac3878aedd3c3765b67cd6e4e33d69b7"
+  },
+  "sellado": "16/11/2026, después de la corrida, contra resultados/salidas versionado en 4fd427e"
 }

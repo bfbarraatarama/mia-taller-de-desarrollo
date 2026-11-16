@@ -34,5 +34,13 @@
     "resumen,temas,decisiones,problemas,acciones"
   ],
   "segundos": 180.1,
-  "codigo": 0
+  "codigo": 0,
+  "salidas_sha256": {
+    "diarization.json": "176ab9960fc9ca84e5af3cdd52a93d7dd59f6a901e32a5be8425602ebc19306c",
+    "asr.json": "4b209dbc0a17cfb59ac89b6e764b4ec4f26e593262eabfac59fd506fd2dfac73",
+    "transcription.json": "c35ae784dd72ce594e8576b9a6dd4dd17d9c97ecfd5c1a08dae97c670068c4d8",
+    "minutes.json": "4edf119a27680de041766470abd5b83439b10e83ed1888e983cb122d6cdc20a3",
+    "ejecucion_minutas.json": "fcc1aac1926c9bdbe6c9882ec73317ac3d4bf7b07aecc72c37cf1474361bfa6d"
+  },
+  "sellado": "16/11/2026, después de la corrida, contra resultados/salidas versionado en 4fd427e"
 }

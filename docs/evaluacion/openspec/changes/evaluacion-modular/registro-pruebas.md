@@ -71,6 +71,8 @@ El PR #19 cambió la asociación y las minutas. Con la huella de código de `inf
 
 Las secciones de nivel 2 anteriores corresponden a la corrida previa al #19.
 
+Después de la revisión del #20, `inferencia.json` guarda el SHA-256 de cada salida. Las 82 salidas de esta corrida se sellaron sin volver a inferir, solo tras comprobar que eran idénticas byte a byte a `resultados/salidas` versionado en `4fd427e`; luego `inferir` reutilizó los 82 elementos sin ejecutar nada.
+
 ## Comprobación con el PR #19
 
 Con los validadores de la rama del PR #19 (`19bbd6a`), las 77 salidas de `transcription.json` de esta corrida (74 de Figshare y 3 de AMI) siguen dentro del contrato y la Etapa 5 las lee.
