@@ -47,8 +47,8 @@ Los turnos y los ítems de minuta de las 3 reuniones SHALL traducirse con `Helsi
 Todo audio de la muestra SHALL quedar como WAV de 16 000 Hz, 1 canal y PCM de 16 bits, el formato de entrada de las Etapas 2 y 3. El manifiesto SHALL registrar para cada archivo el original, su hash y la transformación aplicada.
 
 #### Scenario: Clip de OpenSLR
-- **WHEN** se prepara un clip FLAC de 48 kHz de OpenSLR 61
-- **THEN** queda un WAV de 16 kHz, mono y PCM16, y el manifiesto vincula su SHA-256 con el del FLAC
+- **WHEN** se prepara un clip de OpenSLR 61, un WAV de 48 kHz dentro de `es_ar_female.zip`
+- **THEN** queda un WAV de 16 kHz, mono y PCM16, y el manifiesto vincula su SHA-256 con el del WAV original
 
 ### Requirement: Manifiesto verificable
 `preparar` SHALL escribir un manifiesto con la semilla, la versión del ejecutor, cada elemento con su fuente, original, transformación y SHA-256, y un `contenido_sha256` del conjunto. `preparar --verificar` SHALL comprobar los archivos contra el manifiesto sin modificarlos y fallar nombrando cada diferencia.

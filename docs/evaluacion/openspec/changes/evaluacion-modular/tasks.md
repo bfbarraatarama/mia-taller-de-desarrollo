@@ -14,10 +14,10 @@ En cada tarea, primero los tests de sus escenarios. Meta del martes 17/11: grupo
 
 ## 3. Selección y normalización
 
-- [ ] 3.1 Selección de clips · escenarios: Clips de personas distintas, Misma semilla, misma muestra
-- [ ] 3.2 Selección de sesiones de Figshare · escenario: Sesiones excluidas
-- [ ] 3.3 Selección de reuniones de AMI (series distintas, con acción, cerca de la mediana)
-- [ ] 3.4 Audio a WAV de 16 kHz, mono y PCM16 · escenario: Clip de OpenSLR
+- [x] 3.1 Selección de clips · escenarios: Clips de personas distintas, Misma semilla, misma muestra
+- [x] 3.2 Selección de sesiones de Figshare · escenario: Sesiones excluidas
+- [x] 3.3 Selección de reuniones de AMI (series distintas, con acción, cerca de la mediana)
+- [x] 3.4 Audio a WAV de 16 kHz, mono y PCM16 · escenario: Clip de OpenSLR
 
 ## 4. Traducción y manifiesto
 

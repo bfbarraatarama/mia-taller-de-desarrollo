@@ -185,3 +185,18 @@ Motivo: equivale a una reunión grabada con un micrófono y deja los DER compara
 | C | Dos personas y su acuerdo | Descartada: duplica el trabajo; con unos 80 ítems el acuerdo es poco estable |
 
 Motivo: es el mismo resguardo que §2.3 pide para las notas de la reunión de prueba.
+
+## Precisiones de la implementación
+
+| Tema | Precisión | Tarea |
+|---|---|---|
+| Hashes de los originales | No se repiten en `config.toml`: salen de `hito-2/fuentes.lock.json`; si un archivo no está fijado, del MD5 publicado en `hito-2/fuentes.toml` | 2.1 |
+| Common Voice | El `.tar.gz` bajado desde la web de Mozilla Data Collective tiene otro nombre pero el mismo SHA-256 y tamaño que el fijado; se guarda en la caché con el nombre del lock | 2.2 |
+| Clips (D2) | OpenSLR 61 (31 mujeres y 13 hombres): una mujer, un hombre y un tercer hablante al azar entre los restantes. Common Voice: un clip `female_feminine` y uno `male_masculine` del split `test` (224 clips, 110 personas); quedan fuera los 63 sin género declarado. Un clip al azar por hablante | 3.1 |
+| Sesiones (D5) | Candidatas S21 a S25: el README de `wavs.rar` indica que S26 a S30 vienen de «annotations_incompleto» y que la S28 no está. Cada exclusión queda con su motivo | 3.2 |
+| Reuniones (D8) | «Cerca de la mediana»: duración entre los percentiles 25 y 75 (cuartiles inclusivos) de las reuniones con minuta y al menos una acción; se sortean y se toma la primera de cada serie hasta tener 3 | 3.3 |
+| Determinismo | Cada inventario se ordena antes de sortear con `random.Random(semilla)`, así el orden de lectura no cambia la selección | 3.1 a 3.3 |
+| Normalización | Cada elemento es una carpeta de reunión hecha con `ingestar` de `src/ingesta` (FFmpeg a 16 kHz, mono, PCM16), la misma de la aplicación. Los miembros se leen de los originales sin extraerlos | 3.4 |
+| Canales de Figshare | S21 a S25 vienen en dos WAV mono por tarea (`channel1` y `channel2`); la mezcla es `(L + R) // 2` en enteros, con hasta 1 cuadro de diferencia entre canales (criterio de la Etapa 2) | 3.4 |
+| 7-Zip | Los RAR se leen con `src/rar7z`; en Fedora hace falta `SIETE_ZIP` apuntando a un 7-Zip con RAR (hallazgo del #18) | 3.2, 3.4 |
+| Selección obtenida (semilla 20261010) | OpenSLR `arf_03398`, `arm_03397`, `arf_01208`; Common Voice `common_voice_es_19635568.mp3` y `common_voice_es_38141239.mp3`; Figshare S22, S23 y S25; AMI IB4005, IS1009c y TS3009a. Limitación: el clip `common_voice_es_38141239.mp3` es un nombre propio japonés de dos palabras; no se reemplaza para no elegir a mano | 3.1 a 3.3 |
