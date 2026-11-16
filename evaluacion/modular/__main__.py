@@ -86,6 +86,22 @@ def inferir(args) -> int:
     return 0
 
 
+def metricas(config, manifiesto: dict) -> None:
+    """Métricas sin umbral (grupo 6) desde las salidas guardadas; cada una en su reporte de `resultados/`."""
+    import json
+
+    from .metricas_stt import metricas_stt
+
+    elementos = manifiesto["contenido"]["elementos"]
+    stt = metricas_stt(elementos, config.inferencia, config.cache)
+    stt["contenido_sha256_muestra"] = manifiesto["contenido_sha256"]
+    (config.resultados / "metricas_stt.json").write_text(json.dumps(stt, ensure_ascii=False, indent=2) + "\n",
+                                                         encoding="utf-8")
+    for fuente, r in sorted(stt["por_fuente"].items()):
+        if r["wer"] is not None:
+            print(f"STT {fuente:13} WER {r['wer']:.3f}  CER {r['cer']:.3f}  ({r['palabras_referencia']} palabras)")
+
+
 def evaluar(args) -> int:
     import json
 
@@ -102,6 +118,7 @@ def evaluar(args) -> int:
     config.resultados.mkdir(parents=True, exist_ok=True)
     (config.resultados / "contratos.json").write_text(json.dumps(reporte, ensure_ascii=False, indent=2) + "\n",
                                                        encoding="utf-8")
+    metricas(config, json.loads(config.manifiesto.read_text(encoding="utf-8")))
     for modulo, r in reporte["modulos"].items():
         detalle = f"{r['validas']}/{r['total']}" + (f", {len(r['faltantes'])} faltantes" if r["faltantes"] else "")
         print(f"{modulo:12} {detalle} ({r['porcentaje']} %)")

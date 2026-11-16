@@ -32,7 +32,7 @@ En cada tarea, primero los tests de sus escenarios. Meta del martes 17/11: grupo
 
 ## 6. Métricas
 
-- [ ] 6.1 WER y CER · escenario: Normalización
+- [x] 6.1 WER y CER · escenario: Normalización
 - [ ] 6.2 DER y JER con `der.py` · escenario: Misma configuración que S26
 - [ ] 6.3 Atribución de palabras · escenarios: Palabra en superposición, Correspondencia de etiquetas
 - [ ] 6.4 Planilla de minutas · escenarios: Planilla sin marcar, Planilla marcada
