@@ -118,6 +118,14 @@ def metricas(config, manifiesto: dict) -> None:
         print(f"Asociación: {t['todas']['porcentaje']} % de palabras bien atribuidas "
               f"(sin superposición {t['sin_superposicion']['porcentaje']} %, "
               f"con superposición {t['con_superposicion']['porcentaje']} %)")
+    from .exposicion import informe_exposicion
+
+    exposicion = informe_exposicion(manifiesto)
+    (config.resultados / "exposicion.json").write_text(json.dumps(exposicion, ensure_ascii=False, indent=2) + "\n",
+                                                       encoding="utf-8")
+    for pendiente in exposicion["pendientes"]:
+        print(f"Exposición a confirmar: {pendiente}")
+
     from .planilla import planillas_de_minutas
 
     planilla = planillas_de_minutas(elementos, config.salida, config.inferencia, config.resultados / "planillas")
@@ -150,11 +158,12 @@ def evaluar(args) -> int:
     config.resultados.mkdir(parents=True, exist_ok=True)
     (config.resultados / "contratos.json").write_text(json.dumps(reporte, ensure_ascii=False, indent=2) + "\n",
                                                        encoding="utf-8")
+    from .exposicion import ExposicionIncompleta
     from .planilla import PlanillaInvalida
 
     try:
         metricas(config, json.loads(config.manifiesto.read_text(encoding="utf-8")))
-    except PlanillaInvalida as e:
+    except (PlanillaInvalida, ExposicionIncompleta) as e:
         print(e, file=sys.stderr)
         return 1
     for modulo, r in reporte["modulos"].items():
