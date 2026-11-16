@@ -28,7 +28,7 @@ En cada tarea, primero los tests de sus escenarios. Meta del martes 17/11: grupo
 
 - [x] 5.1 Contratos de los cuatro módulos desde lo guardado · escenarios: Todas válidas, Una salida fuera de contrato
 - [x] 5.2 `inferir` con verificación previa y reutilización · escenarios: Muestra alterada, Reutilización
-- [ ] 5.3 Corrida en GPU (RTX 3050, 6 GB) sobre la muestra completa; revisar antes con `nvidia-smi` que la GPU esté libre
+- [x] 5.3 Corrida en GPU (RTX 3050, 6 GB) sobre la muestra completa; revisar antes con `nvidia-smi` que la GPU esté libre
 
 ## 6. Métricas
 
