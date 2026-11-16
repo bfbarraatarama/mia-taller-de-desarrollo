@@ -40,6 +40,6 @@ En cada tarea, primero los tests de sus escenarios. Meta del martes 17/11: grupo
 
 ## 7. Exposición y cierre
 
-- [ ] 7.1 Informe de exposición previa · escenario: Fuente de desarrollo excluida
+- [x] 7.1 Informe de exposición previa · escenario: Fuente de desarrollo excluida
 - [ ] 7.2 Marcado de la planilla de minutas por una persona que no ejecutó la inferencia
-- [ ] 7.3 `evaluacion/modular/README.md`, registro de pruebas con los resultados y enlace desde `docs/validacion-integracion.md`
+- [x] 7.3 `evaluacion/modular/README.md`, registro de pruebas con los resultados y enlace desde `docs/validacion-integracion.md`
