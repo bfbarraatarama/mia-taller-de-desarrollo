@@ -107,6 +107,28 @@ def metricas(config, manifiesto: dict) -> None:
         if r and r["der_estricto"]["valor"] is not None:
             print(f"Diarización {sesion:6} DER {r['der_estricto']['valor']:.3f}  DER NIST "
                   f"{r['der_tolerancia']['valor']:.3f}  JER {r['jer']['valor']:.3f}")
+    from .metricas_asociacion import metricas_asociacion
+
+    asoc = metricas_asociacion(elementos, config.inferencia, config.cache)
+    asoc["contenido_sha256_muestra"] = manifiesto["contenido_sha256"]
+    (config.resultados / "metricas_asociacion.json").write_text(
+        json.dumps(asoc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if asoc["total"]:
+        t = asoc["total"]
+        print(f"Asociación: {t['todas']['porcentaje']} % de palabras bien atribuidas "
+              f"(sin superposición {t['sin_superposicion']['porcentaje']} %, "
+              f"con superposición {t['con_superposicion']['porcentaje']} %)")
+    from .planilla import planillas_de_minutas
+
+    planilla = planillas_de_minutas(elementos, config.salida, config.inferencia, config.resultados / "planillas")
+    planilla["contenido_sha256_muestra"] = manifiesto["contenido_sha256"]
+    (config.resultados / "planilla_minutas.json").write_text(
+        json.dumps(planilla, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    t = planilla["total"]
+    print(f"Minutas: {t['recuperados']} de {t['marcados']} ítems marcados recuperados; "
+          f"{t['pendientes']} de {t['items']} sin marcar (resultados/planillas/)")
+    for aviso in planilla["avisos"]:
+        print(f"Aviso: {aviso}", file=sys.stderr)
     for fuente, r in sorted(stt["por_fuente"].items()):
         if r["wer"] is not None:
             print(f"STT {fuente:13} WER {r['wer']:.3f}  CER {r['cer']:.3f}  ({r['palabras_referencia']} palabras)")
@@ -128,7 +150,13 @@ def evaluar(args) -> int:
     config.resultados.mkdir(parents=True, exist_ok=True)
     (config.resultados / "contratos.json").write_text(json.dumps(reporte, ensure_ascii=False, indent=2) + "\n",
                                                        encoding="utf-8")
-    metricas(config, json.loads(config.manifiesto.read_text(encoding="utf-8")))
+    from .planilla import PlanillaInvalida
+
+    try:
+        metricas(config, json.loads(config.manifiesto.read_text(encoding="utf-8")))
+    except PlanillaInvalida as e:
+        print(e, file=sys.stderr)
+        return 1
     for modulo, r in reporte["modulos"].items():
         detalle = f"{r['validas']}/{r['total']}" + (f", {len(r['faltantes'])} faltantes" if r["faltantes"] else "")
         print(f"{modulo:12} {detalle} ({r['porcentaje']} %)")

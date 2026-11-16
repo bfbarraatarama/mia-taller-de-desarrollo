@@ -1,0 +1,120 @@
+{
+  "criterio": "ítems de la minuta de referencia recuperados por la minuta producida, marcados por una persona que no ejecutó la inferencia (§2.3, D17); sin umbral",
+  "reuniones": {
+    "IB4005": {
+      "por_tipo": {
+        "accion": {
+          "items": 2,
+          "marcados": 0,
+          "recuperados": 0
+        },
+        "decision": {
+          "items": 10,
+          "marcados": 0,
+          "recuperados": 0
+        },
+        "problema": {
+          "items": 8,
+          "marcados": 0,
+          "recuperados": 0
+        },
+        "resumen": {
+          "items": 5,
+          "marcados": 0,
+          "recuperados": 0
+        }
+      },
+      "items": 25,
+      "marcados": 0,
+      "pendientes": 25,
+      "recuperados": 0
+    },
+    "IS1009c": {
+      "por_tipo": {
+        "accion": {
+          "items": 4,
+          "marcados": 0,
+          "recuperados": 0
+        },
+        "decision": {
+          "items": 3,
+          "marcados": 0,
+          "recuperados": 0
+        },
+        "problema": {
+          "items": 2,
+          "marcados": 0,
+          "recuperados": 0
+        },
+        "resumen": {
+          "items": 10,
+          "marcados": 0,
+          "recuperados": 0
+        }
+      },
+      "items": 19,
+      "marcados": 0,
+      "pendientes": 19,
+      "recuperados": 0
+    },
+    "TS3009a": {
+      "por_tipo": {
+        "accion": {
+          "items": 2,
+          "marcados": 0,
+          "recuperados": 0
+        },
+        "decision": {
+          "items": 2,
+          "marcados": 0,
+          "recuperados": 0
+        },
+        "problema": {
+          "items": 1,
+          "marcados": 0,
+          "recuperados": 0
+        },
+        "resumen": {
+          "items": 7,
+          "marcados": 0,
+          "recuperados": 0
+        }
+      },
+      "items": 12,
+      "marcados": 0,
+      "pendientes": 12,
+      "recuperados": 0
+    }
+  },
+  "total": {
+    "items": 56,
+    "marcados": 0,
+    "pendientes": 56,
+    "recuperados": 0,
+    "por_tipo": {
+      "accion": {
+        "items": 8,
+        "marcados": 0,
+        "recuperados": 0
+      },
+      "decision": {
+        "items": 15,
+        "marcados": 0,
+        "recuperados": 0
+      },
+      "problema": {
+        "items": 11,
+        "marcados": 0,
+        "recuperados": 0
+      },
+      "resumen": {
+        "items": 22,
+        "marcados": 0,
+        "recuperados": 0
+      }
+    }
+  },
+  "avisos": [],
+  "faltantes": [],
+  "contenido_sha256_muestra": "68b317117c84676f835d58473e8a9c82aa94cefb87d26f6cde487a919416b456"
+}
