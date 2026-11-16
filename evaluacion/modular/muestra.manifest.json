@@ -1,0 +1,2666 @@
+{
+  "contenido": {
+    "version": "0.1.0",
+    "semilla": 20261010,
+    "originales": {
+      "ami/ami_public_manual_1.6.2.zip": "b56e5babb2496b8795deeeda7e71178d7fbc9963f94276cf2a3f4b56ebbc9f9d",
+      "common_voice/common-voice-scripted-speech-26-0-riopla-0a258d97.tar.gz": "0c69b1e1f49b02afbe2f99af90651b8867cf5c7e9ea02137c995518e575546ec",
+      "slr61/es_ar_female.zip": "9cc0f2895d6466c478af9a393def99a9ff4688f26593bbfbb5468eb21627bf08",
+      "slr61/es_ar_male.zip": "9f0cd8441370ce6a7fe2693c306a83d699d7d05608170f8a1d42b0556bf3d9bc",
+      "slr61/line_index_female.tsv": "b1ecaea981f29623b9f07a35cb6b90b1dc97fc655d9a17a3cb39e825b37dc9e2",
+      "slr61/line_index_male.tsv": "cd3e47467638e14c6173e8eb82058e97f512b231e116e364d9f3967c2f839826",
+      "uba_games/figshare-v2/phrases.rar": "687d1a6c1db8cda12c5ca8a6d50051966a2d638dd0daafb82803162ebf2c3e8b",
+      "uba_games/figshare-v2/wavs.rar": "6cd828e4c80006aedbf328035166824f042b59af03796dafdc6b2e785870233b"
+    },
+    "exclusiones": {
+      "S26": "material de desarrollo de la diarización y la asociación (D3); además, transcripción incompleta",
+      "S27": "transcripción incompleta según el README de origen (D5)",
+      "S28": "no está en la distribución de Figshare v2",
+      "S29": "transcripción incompleta según el README de origen (D5)",
+      "S30": "transcripción incompleta según el README de origen (D5)"
+    },
+    "elementos": [
+      {
+        "id": "ami-IB4005",
+        "fuente": "ami",
+        "reunion": "IB4005",
+        "serie": "IB400",
+        "duracion_s": 2019.336,
+        "acciones": 2,
+        "modulos": [
+          "minutas"
+        ],
+        "original": "ami/ami_public_manual_1.6.2.zip",
+        "sintetico": true,
+        "modelo": "Helsinki-NLP/opus-mt-en-es",
+        "revision": "5bc4493d463cf000c1f0b50f8d56886a392ed4ab",
+        "parametros": {
+          "do_sample": false,
+          "num_beams": 4,
+          "max_length": 512,
+          "dispositivo": "cpu",
+          "lote": 16
+        },
+        "roles": {},
+        "turnos": 533,
+        "descartados": 47,
+        "items": 25,
+        "archivos": {
+          "ami/IB4005/transcription.json": "c7a49cb5c7b618db12ad4e7bab70e982438c130dbe742c7bb526d8b518182aa0",
+          "ami/IB4005/traduccion.json": "996aa95fe808a4e6e1ce69b99d3f74b45b2807db361963a58e76f78c8f4173d8",
+          "ami/IB4005/referencia_minuta.json": "619f27b5c5e6e2dca57f01bd2f0160dd9d1e10ca864ae3c72fe4c24ed61b0b30"
+        }
+      },
+      {
+        "id": "ami-IS1009c",
+        "fuente": "ami",
+        "reunion": "IS1009c",
+        "serie": "IS1009",
+        "duracion_s": 1806.0,
+        "acciones": 4,
+        "modulos": [
+          "minutas"
+        ],
+        "original": "ami/ami_public_manual_1.6.2.zip",
+        "sintetico": true,
+        "modelo": "Helsinki-NLP/opus-mt-en-es",
+        "revision": "5bc4493d463cf000c1f0b50f8d56886a392ed4ab",
+        "parametros": {
+          "do_sample": false,
+          "num_beams": 4,
+          "max_length": 512,
+          "dispositivo": "cpu",
+          "lote": 16
+        },
+        "roles": {
+          "D": "ME",
+          "B": "UI",
+          "A": "PM",
+          "C": "ID"
+        },
+        "turnos": 291,
+        "descartados": 42,
+        "items": 19,
+        "archivos": {
+          "ami/IS1009c/transcription.json": "8bbccd627e82857e1768fc7850eecb4de13b4ee7547f885bf013ff999e4426f9",
+          "ami/IS1009c/traduccion.json": "9ced4aa94503ba3fe509c235a0080329070e717b6fd2a3d9f814c35e3ac8ca19",
+          "ami/IS1009c/referencia_minuta.json": "ac01caca321c37fd2939e8914923ee9bff45123dbafb9a86831448a82acf4591"
+        }
+      },
+      {
+        "id": "ami-TS3009a",
+        "fuente": "ami",
+        "reunion": "TS3009a",
+        "serie": "TS3009",
+        "duracion_s": 1505.0,
+        "acciones": 2,
+        "modulos": [
+          "minutas"
+        ],
+        "original": "ami/ami_public_manual_1.6.2.zip",
+        "sintetico": true,
+        "modelo": "Helsinki-NLP/opus-mt-en-es",
+        "revision": "5bc4493d463cf000c1f0b50f8d56886a392ed4ab",
+        "parametros": {
+          "do_sample": false,
+          "num_beams": 4,
+          "max_length": 512,
+          "dispositivo": "cpu",
+          "lote": 16
+        },
+        "roles": {
+          "A": "PM",
+          "C": "ID",
+          "B": "UI",
+          "D": "ME"
+        },
+        "turnos": 502,
+        "descartados": 77,
+        "items": 12,
+        "archivos": {
+          "ami/TS3009a/transcription.json": "107765ec36b8cb44b245e7a27dfb7e0f2552db43f83721ea2bd8cd2170bd00c9",
+          "ami/TS3009a/traduccion.json": "d8fb052e7bcf3a2cd6b17505dcb7652b4b86cc1108d348ebab84efc06f883218",
+          "ami/TS3009a/referencia_minuta.json": "e146042d837fdfb5e8db5bc77dc6ef7dc9576aacff9931122b826faf492a0c69"
+        }
+      },
+      {
+        "id": "clip-common_voice-common_voice_es_19635568",
+        "fuente": "common_voice",
+        "modulos": [
+          "stt"
+        ],
+        "hablante": "90b3f9f77fb4f8769da5bf8e4b4b98306f8e3a73be6e0a73dab1eb782c90cbba995c85c38581a9e16e0b05b67ae51def91fff92cb8fc711732ff40b772ee37d3",
+        "genero": "female_feminine",
+        "referencia": "Nacido en el barrio de La Boca.",
+        "original": "common_voice/common-voice-scripted-speech-26-0-riopla-0a258d97.tar.gz",
+        "entrada": "es-Rioplatense/clips/common_voice_es_19635568.mp3",
+        "original_sha256": "e61db27d5d6476ed97cfa0a266c4a761b606cec31c4214373964bdc11c45847a",
+        "transformacion": "ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16 (16 kHz)",
+        "archivos": {
+          "clips/clip-common_voice-common_voice_es_19635568/audio.wav": "eeea648a8a987db78dc1a632ff9eeec250534b0013e087cb4ccc269163b26a8f"
+        }
+      },
+      {
+        "id": "clip-common_voice-common_voice_es_38141239",
+        "fuente": "common_voice",
+        "modulos": [
+          "stt"
+        ],
+        "hablante": "9cda372bc128fc776502813115d7f38b0a6edc4031687112f825a21049f3bcf3ee5050f4a03482379d712d318b2efa0dfcfb5e12ce29dc487488b4310f9f7ce5",
+        "genero": "male_masculine",
+        "referencia": "Keita Kanemoto",
+        "original": "common_voice/common-voice-scripted-speech-26-0-riopla-0a258d97.tar.gz",
+        "entrada": "es-Rioplatense/clips/common_voice_es_38141239.mp3",
+        "original_sha256": "616bf55df1babf1f42cb3985de987ac9d3a3c3619604cea5d9c437fd24bcb260",
+        "transformacion": "ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16 (16 kHz)",
+        "archivos": {
+          "clips/clip-common_voice-common_voice_es_38141239/audio.wav": "add5b8fe8581d09e8ae5ec91d587af1346d74e23e0b8b96df0139c4617f32c81"
+        }
+      },
+      {
+        "id": "clip-openslr-arf_01208_01340718114",
+        "fuente": "openslr",
+        "modulos": [
+          "stt"
+        ],
+        "hablante": "arf_01208",
+        "genero": "female",
+        "referencia": "¿Podrías comprar el disco y mandárselo a mi mamá?",
+        "original": "slr61/es_ar_female.zip",
+        "entrada": "arf_01208_01340718114.wav",
+        "original_sha256": "195dcf9a8fa96f91a8afd409ad17623a357cb87b236d60c5d8271645b33c6712",
+        "transformacion": "ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16 (16 kHz)",
+        "archivos": {
+          "clips/clip-openslr-arf_01208_01340718114/audio.wav": "ffef0389be81602b59c48d4c069a2afc5eb33f525f5d0df209eaf6fd3e2d28ba"
+        }
+      },
+      {
+        "id": "clip-openslr-arf_03398_01736798627",
+        "fuente": "openslr",
+        "modulos": [
+          "stt"
+        ],
+        "hablante": "arf_03398",
+        "genero": "female",
+        "referencia": "Hace once grados y llueve",
+        "original": "slr61/es_ar_female.zip",
+        "entrada": "arf_03398_01736798627.wav",
+        "original_sha256": "ccb4e5ad27debe3dcd2f20e27d4f7383569ee500ac35897424c45d1e619d7c13",
+        "transformacion": "ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16 (16 kHz)",
+        "archivos": {
+          "clips/clip-openslr-arf_03398_01736798627/audio.wav": "d3e63e3c2b824ee34f1a7e78420628612c7cb3fed7ed80b376a21ffab4ed2ae2"
+        }
+      },
+      {
+        "id": "clip-openslr-arm_03397_00908571298",
+        "fuente": "openslr",
+        "modulos": [
+          "stt"
+        ],
+        "hablante": "arm_03397",
+        "genero": "male",
+        "referencia": "Para hacer esa receta necesitás fruta y alcohol",
+        "original": "slr61/es_ar_male.zip",
+        "entrada": "arm_03397_00908571298.wav",
+        "original_sha256": "3ec62bda8e04054aec7444c6617b82863b4905ec6bcf038b9a3da2d5bb03d257",
+        "transformacion": "ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16 (16 kHz)",
+        "archivos": {
+          "clips/clip-openslr-arm_03397_00908571298/audio.wav": "39604f67a5e10214b7f583cd1982c8d23e82e7ff2d7579118bf85da37de988b5"
+        }
+      },
+      {
+        "id": "figshare-S22-01",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "01",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.01.channel1.wav",
+          "wavs/S22/s22.objects.01.channel2.wav"
+        ],
+        "originales_sha256": [
+          "9503ccc81feffab7d2b7f83368c8cdd11a43f5568c0d4bb1dc12c22f1b2888ff",
+          "7ca21d89d523ee376eee07c2fa71afa256dbaad4ad08169f4172d40bc13d4d2c"
+        ],
+        "cuadros": 928436,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.01.channel1.phrases": "620ccc7efb1956cd588652edf6e5ebd6f79d66a0981a3f1583bff01974adbd7d",
+            "phrases/S22/s22.objects.01.channel2.phrases": "b19868e816c0dac0052085cd890288c2968c17474ba88455ebdab0485113b333"
+          }
+        },
+        "archivos": {
+          "figshare/S22/01/audio.wav": "6ed09096f76a978d6a7271b8d3851256d3b427bd3a6a85cc311b55e57859fdaa"
+        }
+      },
+      {
+        "id": "figshare-S22-02",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "02",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.02.channel1.wav",
+          "wavs/S22/s22.objects.02.channel2.wav"
+        ],
+        "originales_sha256": [
+          "50986cf8db717ddae94aba5e617e6f61f1aad5d5578d0edf4424d6e24ae5d4dc",
+          "1152094c2cc412cc8ca4d9fdf9f302c13c39ea6f9564ecead6e16a2f5f16179d"
+        ],
+        "cuadros": 1524108,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.02.channel1.phrases": "71ccf15c3c2a5e6ab66b35464fb3aac2bbfd821eda8003d142acb04b4a2c16fa",
+            "phrases/S22/s22.objects.02.channel2.phrases": "bb1b8e5dd1e3da7e35d73a6ceda20de8dbeb52ad9ea8838d3bd4c8b6c30e6628"
+          }
+        },
+        "archivos": {
+          "figshare/S22/02/audio.wav": "eb8f67f19ed152aca9f2a084b6f7f43be2d49ae5a409c58db1e623bb53749e9c"
+        }
+      },
+      {
+        "id": "figshare-S22-03",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "03",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.03.channel1.wav",
+          "wavs/S22/s22.objects.03.channel2.wav"
+        ],
+        "originales_sha256": [
+          "89031df13110a8341c7ac7b82ae24847b5745411247c2e338f4f459677ccc60c",
+          "0ea1b949f5d983ea9f5f2fff9c18a77c805e4cae5dc6debc1606af76101ab3ef"
+        ],
+        "cuadros": 372570,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.03.channel1.phrases": "4ab780e901cc8be0442cf6ba85ff5dca5180aae530304b1658c5fd97cef082a7",
+            "phrases/S22/s22.objects.03.channel2.phrases": "ee53702dff91e3711327b8d62acf1bc7d487e737a6576b9f1be8160aa90028af"
+          }
+        },
+        "archivos": {
+          "figshare/S22/03/audio.wav": "c9e95d249e9c13c9ea893d825e39d65f0fa0f67a017fc0460a93183bbafcc9c7"
+        }
+      },
+      {
+        "id": "figshare-S22-04",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "04",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.04.channel1.wav",
+          "wavs/S22/s22.objects.04.channel2.wav"
+        ],
+        "originales_sha256": [
+          "fd9d29c3ac2854d3ff86590fa06b453e34c66c9fb56a50e6af8017101bff0091",
+          "805692fafe3dd66780b9494b2c46005a1ead58922aa53fcbdb1424b6be13425a"
+        ],
+        "cuadros": 1865738,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.04.channel1.phrases": "96e01faf5c903875575d5ad3a31a1c1777153ba2a413e6fcb3759841d2ea71b4",
+            "phrases/S22/s22.objects.04.channel2.phrases": "c7f3e0c59d9901812fc1117e5cbc830ec5f6dad099b389927584d9b99b0d11e9"
+          }
+        },
+        "archivos": {
+          "figshare/S22/04/audio.wav": "5b873b4eaf5079111b5b7baddad9bd12815f1f1a6e541c6571bcec8f7b580677"
+        }
+      },
+      {
+        "id": "figshare-S22-05",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "05",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.05.channel1.wav",
+          "wavs/S22/s22.objects.05.channel2.wav"
+        ],
+        "originales_sha256": [
+          "9766ec50ffbc69872cfe728ff0c6b847c533539b4b4235cc672b807ea5c9e842",
+          "13d533ac7dc31ce6ef7301278a3c501c3f2e6bd942ad7482a9917a412c4586ca"
+        ],
+        "cuadros": 541365,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.05.channel1.phrases": "ebd560056b2aed43daa76b385eeace7b06e00f853f43e31ed4d9ffacfab0bef0",
+            "phrases/S22/s22.objects.05.channel2.phrases": "d83fb2c26eae0d63e4c02e74767934714b97e9c5bfa56b92d67d64cb8e2fbd9b"
+          }
+        },
+        "archivos": {
+          "figshare/S22/05/audio.wav": "88127710b1c702c4271c1ee8f90047221122b1c4546a0da4fb1e144f1991718f"
+        }
+      },
+      {
+        "id": "figshare-S22-06",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "06",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.06.channel1.wav",
+          "wavs/S22/s22.objects.06.channel2.wav"
+        ],
+        "originales_sha256": [
+          "526f846bf13e8cd0ceba2002f079b3bc2efa832d0e91c59a191605ec4b73dc43",
+          "c4d5b4539b8afbb61a235124280facc58bd70b183846401acb92ef7db3b273ea"
+        ],
+        "cuadros": 659680,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.06.channel1.phrases": "c960eb258cedc91e086a97a41c4dead7519174bffad19f75fcaef88113c34aa4",
+            "phrases/S22/s22.objects.06.channel2.phrases": "953d0acacc6eb8996c60045074a24b174a2a6090b996b7a7c67bab5f223a6a9e"
+          }
+        },
+        "archivos": {
+          "figshare/S22/06/audio.wav": "f625cae8f1967b49fb4673fc5d14da53663fd086419ebc866b9ade1728624de6"
+        }
+      },
+      {
+        "id": "figshare-S22-07",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "07",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.07.channel1.wav",
+          "wavs/S22/s22.objects.07.channel2.wav"
+        ],
+        "originales_sha256": [
+          "3615897fe621277218f011e8688a6781b01a2627f297b212ba31234b7a606e0c",
+          "49830064b17e04a451ece564605b21ac2a1882b7aeec9b66486e62e4e8435beb"
+        ],
+        "cuadros": 675175,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.07.channel1.phrases": "5e72501f3f579ee18e771a9bae3f184b5964917f01025152dc5b033d00e3c95c",
+            "phrases/S22/s22.objects.07.channel2.phrases": "366f9c51b84adcd4777e23762da988c9011182e068a1f2dc1d9e009df2187c32"
+          }
+        },
+        "archivos": {
+          "figshare/S22/07/audio.wav": "f69f243a8591a9be8f119e4b10d0591e526bccb5f73270b589a08b787b7365ac"
+        }
+      },
+      {
+        "id": "figshare-S22-08",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "08",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.08.channel1.wav",
+          "wavs/S22/s22.objects.08.channel2.wav"
+        ],
+        "originales_sha256": [
+          "ea94aad452ce9de59087f8cd85b01b86a4d01129fa662a96a75e65c754cb3248",
+          "c2240052f43e68ac43a2a6be2135c02dff88352ffd36b8eb1e7217f9feb1f833"
+        ],
+        "cuadros": 690990,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.08.channel1.phrases": "67cfc6a135b280fb58f252e3a26880dcb579c8ff4c1f91dd068438cc2972506f",
+            "phrases/S22/s22.objects.08.channel2.phrases": "5fb6ecefe7296ebe0196a4ebb82c90bf8209583fa671394a4cf3aa6d0fed2a92"
+          }
+        },
+        "archivos": {
+          "figshare/S22/08/audio.wav": "c4f4a7177754fa3085ea08c5a695d2fee0d1bc89de6c50865cdcaa848fa840ff"
+        }
+      },
+      {
+        "id": "figshare-S22-09",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "09",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.09.channel1.wav",
+          "wavs/S22/s22.objects.09.channel2.wav"
+        ],
+        "originales_sha256": [
+          "8e6b42813df34b5db500a0fb1ba36bcd5721db47ca47a601c38f1c4d9ed711ed",
+          "b06d6a4fd96f2fe0707b8bbf798796291df63b79743eb915497b9e514b7e02ab"
+        ],
+        "cuadros": 2512150,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.09.channel1.phrases": "b9e4887f78f1e87e8021ea5b976cdd2a6ba1c55153bcd50a6bd1f1005be6a329",
+            "phrases/S22/s22.objects.09.channel2.phrases": "b508a468350c017acb7dfb884f8d4a01dd2d08b75033ae71e7f5bd127d32eb85"
+          }
+        },
+        "archivos": {
+          "figshare/S22/09/audio.wav": "d210d5d2c9952222bd0e16d4091cc3b73ca132a984445531e01ac74b068775a7"
+        }
+      },
+      {
+        "id": "figshare-S22-10",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "10",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.10.channel1.wav",
+          "wavs/S22/s22.objects.10.channel2.wav"
+        ],
+        "originales_sha256": [
+          "a205145f872a981a4144ec31ff06cc9be7fbcb9552cea58f2ece0fee8c62ee3c",
+          "e1050218ad85b8f9934aca47d905980926fc06bac97b8f2b65183660450adc9e"
+        ],
+        "cuadros": 872471,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.10.channel1.phrases": "304504684f50f1f18e6daa119d13ece82af4b9dbdf0bb4007838fe02d1b9ef38",
+            "phrases/S22/s22.objects.10.channel2.phrases": "6a60aedbd9848b70978a6f98f78ef9bbbe6ed05856fdce927935cd2f9e89671a"
+          }
+        },
+        "archivos": {
+          "figshare/S22/10/audio.wav": "99440adb8093a4b270351e4fd8c7a11b43163967f636900088dd242b48d4062a"
+        }
+      },
+      {
+        "id": "figshare-S22-11",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "11",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.11.channel1.wav",
+          "wavs/S22/s22.objects.11.channel2.wav"
+        ],
+        "originales_sha256": [
+          "6e2bb2ea8347417d07cfa8267a54f639df0b365626e63dba245a7509a3aeda23",
+          "6fe9e52d3e7bcea55c7f3f18a3da95bffb0e73d96e14b23fcf18e5c3bad8bc2b"
+        ],
+        "cuadros": 480567,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.11.channel1.phrases": "77d24876dc9946288a01d65a6053579442e3a24155b1d50bbed9da90fb7a728c",
+            "phrases/S22/s22.objects.11.channel2.phrases": "984149dfb4895f589608b1884caffa5c372754a80d6eeaf23106b666ab7b45b7"
+          }
+        },
+        "archivos": {
+          "figshare/S22/11/audio.wav": "e297e1aa92406800fd882451d923cf2012fb8ae153f3c48dd735bfa784af0dec"
+        }
+      },
+      {
+        "id": "figshare-S22-12",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "12",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.12.channel1.wav",
+          "wavs/S22/s22.objects.12.channel2.wav"
+        ],
+        "originales_sha256": [
+          "b7840710e045a3c10ab550a0365d916b74e93cc31d8612171af4d0a1a726066b",
+          "adfb64eaaf81e0ad9b694e2951f11fa7ac6a480e8d165ee8f064a1e24f16bede"
+        ],
+        "cuadros": 1130803,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.12.channel1.phrases": "703090ba402eeab7a32d96dce4228c7f7a2ef87fe8547b4396931aa507873eae",
+            "phrases/S22/s22.objects.12.channel2.phrases": "bdf09a9c54d5d913179d9f8b4bc3f315c5b384e31a75fce97650eff40fea2157"
+          }
+        },
+        "archivos": {
+          "figshare/S22/12/audio.wav": "6016df9dd0ce967dc64135ad2dc99b2ca20c2639add91c086d30d28d998039a2"
+        }
+      },
+      {
+        "id": "figshare-S22-13",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "13",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.13.channel1.wav",
+          "wavs/S22/s22.objects.13.channel2.wav"
+        ],
+        "originales_sha256": [
+          "ee1df68332ea5454ae58ce74d4cc9fb7d98a8df61a22031d1317b8527f0bf70b",
+          "4a0ebe9d61b0bfc856165714924d48e5caa17f09fa8a10c249ce8d143771743c"
+        ],
+        "cuadros": 687750,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.13.channel1.phrases": "64362fbd237fbe166ac5f21bf20d04f60e8579090904d25725fd38444120e3c8",
+            "phrases/S22/s22.objects.13.channel2.phrases": "1e48f263ca105ba2e73418e8f39650b01ea22e8573e33108e153728ca4d0bd0a"
+          }
+        },
+        "archivos": {
+          "figshare/S22/13/audio.wav": "5e441b7a73fcbcb1af5564ef763c5dc18cc810b92e25b1ac754a842ae94bca96"
+        }
+      },
+      {
+        "id": "figshare-S22-14",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "14",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.14.channel1.wav",
+          "wavs/S22/s22.objects.14.channel2.wav"
+        ],
+        "originales_sha256": [
+          "f229517529b8b2e8c4739ba47b185e25c9b789514fa325230d93573db2be0040",
+          "8f1ad823ae8e4e644dba0a9ebd0380df592b40b17ef49d50f83bcbe39711dec0"
+        ],
+        "cuadros": 1494015,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.14.channel1.phrases": "5c85128bf2005b5b15c0440ab2263fb325fbbb97183fb306edecce65016c6334",
+            "phrases/S22/s22.objects.14.channel2.phrases": "a0e7dc8882c82dffb3c72f896ab4c0ed0f26528ee0f952f948e4e77a6cdffc98"
+          }
+        },
+        "archivos": {
+          "figshare/S22/14/audio.wav": "be4227b733bd27884d62469ed3b3f3eb1ae0eb2920eea8fea8b66ea08209d0ae"
+        }
+      },
+      {
+        "id": "figshare-S22-15",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "15",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.15.channel1.wav",
+          "wavs/S22/s22.objects.15.channel2.wav"
+        ],
+        "originales_sha256": [
+          "07f885c4bd3e3ab89ee3f3338314f417fc01b9fbd463f36d561328ecff621df0",
+          "8fd5234dc15dd41f6c58de829698545f251e9c450d71377ec61c3cbd956e63e7"
+        ],
+        "cuadros": 424302,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.15.channel1.phrases": "baa58097d89eddf72faf263373dbfdc140c6f352b13c9ed8ede415bd6110ca96",
+            "phrases/S22/s22.objects.15.channel2.phrases": "fd7805727b64d603f14dffcc6ce1d2446eb2b1a8fae3560f768666bda62748c2"
+          }
+        },
+        "archivos": {
+          "figshare/S22/15/audio.wav": "736da42719511a3e91377352e67cd77fe9dcb754db2c2e46c78d81f72a0306cb"
+        }
+      },
+      {
+        "id": "figshare-S22-16",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "16",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.16.channel1.wav",
+          "wavs/S22/s22.objects.16.channel2.wav"
+        ],
+        "originales_sha256": [
+          "4734e05ead453a39818c9e4c61fbcc7ac6b2981f4f89300a43596dd4eb97db91",
+          "90d72eb658295b26d8ed93b2a681f588ee4001d231882d163efaa9c7697f69ad"
+        ],
+        "cuadros": 908023,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.16.channel1.phrases": "852342ea03c167f0433d9e8816a628c91164c9083271940c195194f1fd5b34c7",
+            "phrases/S22/s22.objects.16.channel2.phrases": "5ebe1f0eb33ae0200af8c186aea9e83f7c8729d41997c6d1703e5d627e3439b0"
+          }
+        },
+        "archivos": {
+          "figshare/S22/16/audio.wav": "9a21301fdbe9d5dcf5ee1e0e81669a44f49a537dd50ff1cfd5c3bd5c9875d8bd"
+        }
+      },
+      {
+        "id": "figshare-S22-17",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "17",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.17.channel1.wav",
+          "wavs/S22/s22.objects.17.channel2.wav"
+        ],
+        "originales_sha256": [
+          "f934d789cb45313c77bd8ec8afddc6c0ab92cda8e63a0b3a7ec92447cd44cf8b",
+          "1878bfe2b37ba839c395c2bd28a922573b91ea34a966b091c9fef7af1727d791"
+        ],
+        "cuadros": 507912,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.17.channel1.phrases": "5a58b1a2926f994d7e96da9146d669d46842314b61b30057c4ae93022a5be74f",
+            "phrases/S22/s22.objects.17.channel2.phrases": "f8c1e35f7e7fead6ef51bc6d7fb8b789c236f8524458f4d652e0c06ffe2404ef"
+          }
+        },
+        "archivos": {
+          "figshare/S22/17/audio.wav": "2bf1024184ecbac91c6bfb8b83116bd090fc98d3c3c6b56cf2c7af2cff774f27"
+        }
+      },
+      {
+        "id": "figshare-S22-18",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "18",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.18.channel1.wav",
+          "wavs/S22/s22.objects.18.channel2.wav"
+        ],
+        "originales_sha256": [
+          "e90f4072962222871337fa7403b7f96318fa0926334ec03c445fec171f1e8f9e",
+          "e439a74f186c6c6540979071f1eb8a88da2a3d16a41dfb51d57f92e1af2959ef"
+        ],
+        "cuadros": 1166260,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.18.channel1.phrases": "034abb30bdb7dbb972b213f7c68243c402ad160f14ebf5117d07881b37cc0512",
+            "phrases/S22/s22.objects.18.channel2.phrases": "a208a1f89ff426a6b30d8b3c9d6c61720b8f53acff029eb3646e8edac5e53c00"
+          }
+        },
+        "archivos": {
+          "figshare/S22/18/audio.wav": "5b9cdfd332b99e9ea73ce1bf22db691536f95ed822325bf482efa244ff6bdeba"
+        }
+      },
+      {
+        "id": "figshare-S22-19",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "19",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.19.channel1.wav",
+          "wavs/S22/s22.objects.19.channel2.wav"
+        ],
+        "originales_sha256": [
+          "70db4adb17180398ee2dca9909928cee069f737af18ccc08137c13db7240b291",
+          "c9382ecbb110b4f1bcacfb0fb47019bf186fe5dd560e2503dd67ec0022fef180"
+        ],
+        "cuadros": 1072195,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.19.channel1.phrases": "4cf452c6c9e0446d41270c0888fb21a570089e8a0bff5544db06f5d1edb311ed",
+            "phrases/S22/s22.objects.19.channel2.phrases": "e7ba67ac2e2c8d20fe465fe546864d908cc84ad5c5722f8d568a93ece662fbdd"
+          }
+        },
+        "archivos": {
+          "figshare/S22/19/audio.wav": "f007ac2f233b19baad209639e399912ca756b01955647b6349545b5b4e82c299"
+        }
+      },
+      {
+        "id": "figshare-S22-20",
+        "fuente": "figshare",
+        "sesion": "S22",
+        "tarea": "20",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S22/s22.objects.20.channel1.wav",
+          "wavs/S22/s22.objects.20.channel2.wav"
+        ],
+        "originales_sha256": [
+          "8b23c543cabb0e4e25989316f7fd1ad2e9c2df9957e3ef4198cf344dbc81123d",
+          "867f26978195e2a0e8f51890063d7a9cbac55d22c9f35a28240ad8b4b826adb7"
+        ],
+        "cuadros": 1890865,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S22/s22.objects.20.channel1.phrases": "c5ff18535cdbcb9199d7106480a190150dab26797079847915537ccefbcbdf27",
+            "phrases/S22/s22.objects.20.channel2.phrases": "fb1056e724c7f110181bffdf0a085128e60a2db44de7aa8eace76b7e8cfebfd0"
+          }
+        },
+        "archivos": {
+          "figshare/S22/20/audio.wav": "fe6d17a89d52d998df796a82809a77a340a11daae2b0310e09888e59568503fc"
+        }
+      },
+      {
+        "id": "figshare-S23-01",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "01",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.01.channel1.wav",
+          "wavs/S23/s23.objects.01.channel2.wav"
+        ],
+        "originales_sha256": [
+          "391d2772aa7c1a3b0ab000b1d63e8f161c719dc6024e384aeb49686fbd26d6ce",
+          "6dac89268ea6cce77435490e6d5d81b1bf7dee7dafff56fbc062cbdcc1bec5a8"
+        ],
+        "cuadros": 457823,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.01.channel1.phrases": "b291aec805cd50834c473ddb60faaed5fca5b4818ff3540963493d55b8b79354",
+            "phrases/S23/s23.objects.01.channel2.phrases": "0f475e95e3d28bf7e69fb2203dae1ec5638035c4230ee4e093fd6e43c61638cb"
+          }
+        },
+        "archivos": {
+          "figshare/S23/01/audio.wav": "25ea6bb85b590c53ce48d29a67a6c1d69369beb36b68bd89799899517b76bb35"
+        }
+      },
+      {
+        "id": "figshare-S23-02",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "02",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.02.channel1.wav",
+          "wavs/S23/s23.objects.02.channel2.wav"
+        ],
+        "originales_sha256": [
+          "0bc70c663d6ff001f109abd6267e5248049a88b218a143dc6040960c6fb62d73",
+          "f792afc0ed75d6ce582f2f39db604c9a8ea0c9706e5336fdae748d2e084cfd84"
+        ],
+        "cuadros": 379654,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.02.channel1.phrases": "b617ea7d9f4002a37b90ed623f29490a5dbfd4359a3153afc6224974dd96d798",
+            "phrases/S23/s23.objects.02.channel2.phrases": "9ec1520c0586568dd17a750c38b5335535c3564f60d9581d3890bb4bf910fa70"
+          }
+        },
+        "archivos": {
+          "figshare/S23/02/audio.wav": "e2a7d9dbbb0d4ace2a393dbc27b99773907b2c63706daf49d6db7f24929dea31"
+        }
+      },
+      {
+        "id": "figshare-S23-03",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "03",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.03.channel1.wav",
+          "wavs/S23/s23.objects.03.channel2.wav"
+        ],
+        "originales_sha256": [
+          "6751b133a07418f4b952612d97dcd68dbb54ff4fbbceda447dbc3d0d0418cac3",
+          "2988142880aa7cac318c9ea032c1a732856a2541872d5ce93495943827382120"
+        ],
+        "cuadros": 443132,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.03.channel1.phrases": "de0693670827c14e1a0c00e9a1a24a6aa3be0213ed2dad539b90bd54fa3e2c05",
+            "phrases/S23/s23.objects.03.channel2.phrases": "75fed14103531a4898b582ca4947309645c76e029e63cd9132706cefcfa8ad43"
+          }
+        },
+        "archivos": {
+          "figshare/S23/03/audio.wav": "e00001cf43226f67ddd12505f0e6a3fdf4f595d520f7a4bb4a95ddf513159df3"
+        }
+      },
+      {
+        "id": "figshare-S23-04",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "04",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.04.channel1.wav",
+          "wavs/S23/s23.objects.04.channel2.wav"
+        ],
+        "originales_sha256": [
+          "932d277aa7539fed3e9e3a241bef38a775605d1d6316ba1106b77f505764dff1",
+          "f34f3ea9eeb322408f3d351bd639b1b7b77be58d18c1d7d79c5ce30a0c08d363"
+        ],
+        "cuadros": 437843,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.04.channel1.phrases": "51ed8af79f2df994c39b0853674b8af71ba9a3819952ed17fac82d34e3e1bfec",
+            "phrases/S23/s23.objects.04.channel2.phrases": "be3b5bfbed122e5360411c9268334da4a72b9bde519bb04eef48a86cde250a4d"
+          }
+        },
+        "archivos": {
+          "figshare/S23/04/audio.wav": "c2edb2589e84305ef5ce262080fa3f3569400f701fa91b2b8552446885b8390f"
+        }
+      },
+      {
+        "id": "figshare-S23-05",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "05",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.05.channel1.wav",
+          "wavs/S23/s23.objects.05.channel2.wav"
+        ],
+        "originales_sha256": [
+          "2d9f356914eb16282a077b403b930e109c4952c5d89f6676cfc6ba359af6c7df",
+          "847d3ee585c79d3038f30834b4e4fa201461adde18c85bffb0938095d873339e"
+        ],
+        "cuadros": 534945,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.05.channel1.phrases": "818907e4921af60ba9a8341c1bdfa4ed67cd27eb333f6b511e79efc67dbedf28",
+            "phrases/S23/s23.objects.05.channel2.phrases": "1c3109c5da7483c7e72451d49f1d878e567c2072440994906151a94b877d8805"
+          }
+        },
+        "archivos": {
+          "figshare/S23/05/audio.wav": "078a256496822643a08be4ae3c73adf6eb13fe97def3c42a8e5788c56bbc55d6"
+        }
+      },
+      {
+        "id": "figshare-S23-06",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "06",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.06.channel1.wav",
+          "wavs/S23/s23.objects.06.channel2.wav"
+        ],
+        "originales_sha256": [
+          "908f851f608802ccb28281b825f85f3b3cc472d50bdc675607fbefb275de3f1a",
+          "ff0d803ca75a9e90534e2d7aa2690bbaa953eed4f75aece7d2ab258f285afe69"
+        ],
+        "cuadros": 299187,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.06.channel1.phrases": "eb64e90f1efa3142a863d330e3013bf27c0b86fc0a030e1bf606b9126c4a7f20",
+            "phrases/S23/s23.objects.06.channel2.phrases": "0553d2344daff551d203b0c976002b12a1e5564da0ce73db3b959b8db529e607"
+          }
+        },
+        "archivos": {
+          "figshare/S23/06/audio.wav": "6d168cf7b3b7f2727df98c6b9ca2af2c1a734536fcdf4f7618411c7da47dc0cd"
+        }
+      },
+      {
+        "id": "figshare-S23-07",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "07",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.07.channel1.wav",
+          "wavs/S23/s23.objects.07.channel2.wav"
+        ],
+        "originales_sha256": [
+          "6337de989d57420904e131448e35340c0982e9dc674bd0af3a06cc737b95a14d",
+          "36fff9aa4425f7a270230f97049f993698c93ae01ac72616dc21f8cfaa45f9ee"
+        ],
+        "cuadros": 371754,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.07.channel1.phrases": "6aa4ea9769353056af2659aa81480f5f34363c226675c41f99835a9804e4b30e",
+            "phrases/S23/s23.objects.07.channel2.phrases": "f8e709f05a68f5ec740e19083e2526965d31d421a706bbde44bb6dd103cba6ad"
+          }
+        },
+        "archivos": {
+          "figshare/S23/07/audio.wav": "7913cf94813c86c6418c305a9d3204508efae8d985d3a8a47dfdc318d0373f81"
+        }
+      },
+      {
+        "id": "figshare-S23-08",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "08",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.08.channel1.wav",
+          "wavs/S23/s23.objects.08.channel2.wav"
+        ],
+        "originales_sha256": [
+          "b0d14c82438eebaada0b3723069296d242efd0612bfd8f2bafe848a9f3f9ea1b",
+          "2fc385653f6fe9f0d378f71a8be3cb71a12a409580b83ea3b91e9d83c717d373"
+        ],
+        "cuadros": 262403,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.08.channel1.phrases": "a44ccb09f66b9a892f808af42949951e071e50b474f73388a717b518d7adcfcb",
+            "phrases/S23/s23.objects.08.channel2.phrases": "61f942c645b759af866569b3076b0fc496429b6cbed58e759f8ca6a476973932"
+          }
+        },
+        "archivos": {
+          "figshare/S23/08/audio.wav": "e80db1e85791a1c2e1f21f9376e2299dc9a8a444ed47dbf6a33931287c125e35"
+        }
+      },
+      {
+        "id": "figshare-S23-09",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "09",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.09.channel1.wav",
+          "wavs/S23/s23.objects.09.channel2.wav"
+        ],
+        "originales_sha256": [
+          "c9e921ba84753839648f380a8694df086fff1547e5723578407cda5082ac7115",
+          "2500817e128b04a8ac4b8db5dd8fbd40073aeab4273c06be00890ddae26c5fd3"
+        ],
+        "cuadros": 588903,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.09.channel1.phrases": "b721954b46c65e092a60684397f4704cb9a2a08b3a1dda0f8e9575ccef64bd96",
+            "phrases/S23/s23.objects.09.channel2.phrases": "388fff4ce7d2d09bde8870be4b28b5d98baee38629ea1009a79c1f8cfb7f714d"
+          }
+        },
+        "archivos": {
+          "figshare/S23/09/audio.wav": "4e488a30a615be65b7695a20568592b584b8af3d82721f1454ad3c6f95dfc072"
+        }
+      },
+      {
+        "id": "figshare-S23-10",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "10",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.10.channel1.wav",
+          "wavs/S23/s23.objects.10.channel2.wav"
+        ],
+        "originales_sha256": [
+          "a77c1505960522e37813ad26e01ed4bdbea54f06ebfff3fcbdab4697f3485dfb",
+          "203130ab76a5b620bad99203167ed24702b9980428730d5238de4133368c28d0"
+        ],
+        "cuadros": 493009,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.10.channel1.phrases": "4818b70cdbb4c16d041547c5fd523c4e29878ff04ab475313fcbb875c48f0c8d",
+            "phrases/S23/s23.objects.10.channel2.phrases": "20a1e3d1c29379a82b4cde71c2bfa6a594b83fd9ecab142e14c446844d0b8cd4"
+          }
+        },
+        "archivos": {
+          "figshare/S23/10/audio.wav": "106a136b4579ef67f97461d4505c13aa171b82c58fce071f1385f23487898dd4"
+        }
+      },
+      {
+        "id": "figshare-S23-11",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "11",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.11.channel1.wav",
+          "wavs/S23/s23.objects.11.channel2.wav"
+        ],
+        "originales_sha256": [
+          "0b8e2acb741d89b11d379cc631fe9c94b7c85d52b0fc23cdbb260a541b6ed521",
+          "5f659dac853e187581c8a631d180a52a208dd4f1e285da4e19bddf1014420308"
+        ],
+        "cuadros": 371391,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.11.channel1.phrases": "e2df858956439dba41f7dc287ea92f4d71f71c98ac729887c2ea854ad52cc518",
+            "phrases/S23/s23.objects.11.channel2.phrases": "d3cc19e0d55507ccab1b3d1074e003cc8de2e93131a14fef0efab660735549ff"
+          }
+        },
+        "archivos": {
+          "figshare/S23/11/audio.wav": "8d77ddf99cfab572ce4cee5f7fd70e205d1a52c38d18cd666293041c4de2db76"
+        }
+      },
+      {
+        "id": "figshare-S23-12",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "12",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.12.channel1.wav",
+          "wavs/S23/s23.objects.12.channel2.wav"
+        ],
+        "originales_sha256": [
+          "ad48449e577f28c0e93593df5c3bb178670b470894e2c32879fbb6df3f06438f",
+          "556af785e95ed3c7538e7e7c582257aed6db1c7053dfd64c05e39d7428457251"
+        ],
+        "cuadros": 799508,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.12.channel1.phrases": "2eafe4879bb922a935cfa2958e9b32864de5c9b73f7e1ab33ef94cd86e9f5c34",
+            "phrases/S23/s23.objects.12.channel2.phrases": "8e0c2e3711c8f271050ee4752783819ee7c500b385c24e192b506c09b439a3ed"
+          }
+        },
+        "archivos": {
+          "figshare/S23/12/audio.wav": "329fdecdd68b0c51d2cb8d523532367872d0086fbcd157148c56f0bd2e3c9901"
+        }
+      },
+      {
+        "id": "figshare-S23-13",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "13",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.13.channel1.wav",
+          "wavs/S23/s23.objects.13.channel2.wav"
+        ],
+        "originales_sha256": [
+          "96e0b8144c9ba13e89632c191e4de824019e3164eb3424ced262a9c21ba3cd1d",
+          "f073d84cefbfadbc8eab96728ca3eb236318b947bcf5117fb93dd19c36ee8f70"
+        ],
+        "cuadros": 409305,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.13.channel1.phrases": "14b8a0540500e164fdab541145b7b6cf7f0f04d687865f7d18289381a4838755",
+            "phrases/S23/s23.objects.13.channel2.phrases": "eb692f2c73c2a50461250398a42d74c71c8d08f45d40ddfcd1fbcbccde18d907"
+          }
+        },
+        "archivos": {
+          "figshare/S23/13/audio.wav": "5330b48035ae8068c0b79c82829faa249b011e8a1288b36b16c1923fd53a009c"
+        }
+      },
+      {
+        "id": "figshare-S23-14",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "14",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.14.channel1.wav",
+          "wavs/S23/s23.objects.14.channel2.wav"
+        ],
+        "originales_sha256": [
+          "d7a3aab3f74761018bc225b231b00ea83e5d9b87beb7d52d281c6d3ca6c58a96",
+          "4e5008b7cf11ac76ea456bae1cec057bc0778786ea2845d18fd175a7f797490d"
+        ],
+        "cuadros": 832725,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.14.channel1.phrases": "cddabfb17522e5487ee36bb437ea4939a9f4acf4c059b4f827680079655826bb",
+            "phrases/S23/s23.objects.14.channel2.phrases": "7ff3d221d5d5863ce0c64231507ae883c58d9e15bd5437b81f93d01923c22f09"
+          }
+        },
+        "archivos": {
+          "figshare/S23/14/audio.wav": "d7b9b577928e815b8078774b80f0a16557856c7df584ed48b7aa260530c53c7f"
+        }
+      },
+      {
+        "id": "figshare-S23-15",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "15",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.15.channel1.wav",
+          "wavs/S23/s23.objects.15.channel2.wav"
+        ],
+        "originales_sha256": [
+          "a4a3edb0cc8f214ac4596de3f617eee41048d01522f92f9cc52a5d27576d047c",
+          "9824d31da2d2f5b13a560d39bc01db95f15757dfcdac4e983d82463b3e1714f8"
+        ],
+        "cuadros": 808669,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.15.channel1.phrases": "87defd3b507279a10769c3d26f954723f5d6483fdb095095d34c50d490c0a429",
+            "phrases/S23/s23.objects.15.channel2.phrases": "5b18d4fd5a9d906e1708b1d23a6e17baef5f2d73064f18b443e6dc70c922be92"
+          }
+        },
+        "archivos": {
+          "figshare/S23/15/audio.wav": "9729e0bd35e2238bc55eacb573fa689339c519d6817b7e1e673ab5c88d678985"
+        }
+      },
+      {
+        "id": "figshare-S23-16",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "16",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.16.channel1.wav",
+          "wavs/S23/s23.objects.16.channel2.wav"
+        ],
+        "originales_sha256": [
+          "900283abcaa3ab4ce8b718178edc6643474239fc8ec3957bb84544c08a0ea134",
+          "d42b1009c95da03767335fb1d907e1e8be0f37be9e23994cdc7b0a063cec9787"
+        ],
+        "cuadros": 552621,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.16.channel1.phrases": "268fd9bbfad150adf3e44339892fec229bf246986d07d64f1ab242fd6bc6108b",
+            "phrases/S23/s23.objects.16.channel2.phrases": "4836ff045b7b5d5658a122328906fc4dfbad217845ddd22c4b26e97ded9b75e6"
+          }
+        },
+        "archivos": {
+          "figshare/S23/16/audio.wav": "9fb341ae0566735669e355603471715fba951213a1c8d00a5b1130e99a46d4a6"
+        }
+      },
+      {
+        "id": "figshare-S23-17",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "17",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.17.channel1.wav",
+          "wavs/S23/s23.objects.17.channel2.wav"
+        ],
+        "originales_sha256": [
+          "e7b5b5eefd7451571c4f3b8e9b2eb73899453ae5d89a45cd8c475401a8b95efd",
+          "a5988102a6c4f455c57ed041cc7cfc55abdfbebc0f597c846d320a9c9bac430b"
+        ],
+        "cuadros": 559822,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.17.channel1.phrases": "89dc93af041e0fddc03a3521c4a0799868e9dceab39ac5ebe8d67284af01603f",
+            "phrases/S23/s23.objects.17.channel2.phrases": "513b7990e59c4e95fcb02c2c8874f77b3832d718a58b6f031476cbf9f02f31aa"
+          }
+        },
+        "archivos": {
+          "figshare/S23/17/audio.wav": "112f3e47d4cc91eb89b676ec31b36ba2a6be58b6359a03aa58cc9adc237735da"
+        }
+      },
+      {
+        "id": "figshare-S23-18",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "18",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.18.channel1.wav",
+          "wavs/S23/s23.objects.18.channel2.wav"
+        ],
+        "originales_sha256": [
+          "841c94cc282b76c31066385edb15e3e155dac11cd381983327817eb14cfbc6af",
+          "3b5dfaff2e77d591f70defff8f8d0f7e4477aefa2c78088497cfa234ce964a5b"
+        ],
+        "cuadros": 639779,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.18.channel1.phrases": "3dd40878e647f7a0f584bef18404f735f61b5674579afbe6aa8894c5d49ac33e",
+            "phrases/S23/s23.objects.18.channel2.phrases": "c0f4376729de0bd9390190cc6ae0bfd3f7dad31ff324a9bff3725c687125fb4a"
+          }
+        },
+        "archivos": {
+          "figshare/S23/18/audio.wav": "00051454d9fbe21dec12aa0ebd3ece8455c75acf914a4445888c4c4f12fc795c"
+        }
+      },
+      {
+        "id": "figshare-S23-19",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "19",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.19.channel1.wav",
+          "wavs/S23/s23.objects.19.channel2.wav"
+        ],
+        "originales_sha256": [
+          "5b88347ee769ff1d08a7b4f52659da81bcd17962088f50209a88df58aca2c836",
+          "2a66a45887d6f6f878d6401e10bb41a306192f62406733b1dde82f3e1f83bf17"
+        ],
+        "cuadros": 749944,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.19.channel1.phrases": "31814d05c7ae3879646eaff7e66883797461ad4576f708925aa8df181139a4fb",
+            "phrases/S23/s23.objects.19.channel2.phrases": "03b6733043f91618bce40abb7be6dcfcdf6b94040152ed281f1260b9028ff7d3"
+          }
+        },
+        "archivos": {
+          "figshare/S23/19/audio.wav": "8827232a15c8d917f51f390e0d9f23bdca9b7c54b953b728efe0e98bca7d7b2e"
+        }
+      },
+      {
+        "id": "figshare-S23-20",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "20",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.20.channel1.wav",
+          "wavs/S23/s23.objects.20.channel2.wav"
+        ],
+        "originales_sha256": [
+          "0b90b1ff766dbef7fa5ec75bb59d8649a8ebe188ec112e738ed21cb667443c50",
+          "555c57e89ae6e383e6c2e50307a022f42af1fd9a48b19e35a80e197796e10404"
+        ],
+        "cuadros": 774479,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.20.channel1.phrases": "e93e10b298db7e8255c3b84b16c7f2fde2e764b0893a6c5630bb0986cf7b1c3e",
+            "phrases/S23/s23.objects.20.channel2.phrases": "fbb6e9c4c8d86f3df200779babb117a88a41b72bd073253b85d436c2bcc0e3f2"
+          }
+        },
+        "archivos": {
+          "figshare/S23/20/audio.wav": "717f4dbf575bedd88bcdef02710baabb397e801335baee8f64f499dea5eef21b"
+        }
+      },
+      {
+        "id": "figshare-S23-21",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "21",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.21.channel1.wav",
+          "wavs/S23/s23.objects.21.channel2.wav"
+        ],
+        "originales_sha256": [
+          "1f4714207ea6a259cfa657fbdd205a605a5399a1cc2206434fdcaa9299b72cc0",
+          "ba1427c8cda2e3acc62cf431397d0c8215dc28544d79d742a846ca4ff75eb2a0"
+        ],
+        "cuadros": 637264,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.21.channel1.phrases": "e66cadb6231aacf427aaf0bba70d4c65a8fc73279963c3c1097fb97d2495bd0a",
+            "phrases/S23/s23.objects.21.channel2.phrases": "324eed9e435c8ec139cefb666bc2526af020311faebef8e9f2abbfa760c26095"
+          }
+        },
+        "archivos": {
+          "figshare/S23/21/audio.wav": "711298aa51a202d21535aba76991c9f4ea125e8bbd7247f2a6f3a6977949a2f2"
+        }
+      },
+      {
+        "id": "figshare-S23-22",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "22",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.22.channel1.wav",
+          "wavs/S23/s23.objects.22.channel2.wav"
+        ],
+        "originales_sha256": [
+          "53a0da57293192d38397cca64c58f825573460aef7760c8bfc704fdb92f76b5d",
+          "eef3054f25bc8954a58dc4a0fec45d02b3558898a64a433d7ecfb0e9785984d9"
+        ],
+        "cuadros": 941297,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.22.channel1.phrases": "8e6bd5e6e4c81d42eecf922c2cdb80a2a32b45a6c384645bf7f6a59f767ef5c1",
+            "phrases/S23/s23.objects.22.channel2.phrases": "9c253d0a69031be32956793a90e65d3383c17809ef05e315abaf3c24915f53f3"
+          }
+        },
+        "archivos": {
+          "figshare/S23/22/audio.wav": "b1c5f164ceff7de3d0f6a45ac5facf4c008e36dc14e994c494a4168f68be5feb"
+        }
+      },
+      {
+        "id": "figshare-S23-23",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "23",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.23.channel1.wav",
+          "wavs/S23/s23.objects.23.channel2.wav"
+        ],
+        "originales_sha256": [
+          "681e24a119d2d6baa1e6964c5a9dd141904b5dccd124806ca13230e5a233703b",
+          "3ad1796a00670f944761b774d9c5c25881c6bb9e5746866c0ff8ae8d22521b15"
+        ],
+        "cuadros": 1042872,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.23.channel1.phrases": "3871da75043915894a1399e35cdb71ee04e764a1b5a868ff6ddc31be6eb54556",
+            "phrases/S23/s23.objects.23.channel2.phrases": "f4e82e22f93bdbc9bca7eb55bbb00549fb8bf625b0a7fecb56bfcb186b22465f"
+          }
+        },
+        "archivos": {
+          "figshare/S23/23/audio.wav": "aabb23dc3a7c306a26d2b230973ef8f6d3f57939b0f16b758066dd9761ea9d06"
+        }
+      },
+      {
+        "id": "figshare-S23-24",
+        "fuente": "figshare",
+        "sesion": "S23",
+        "tarea": "24",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S23/s23.objects.24.channel1.wav",
+          "wavs/S23/s23.objects.24.channel2.wav"
+        ],
+        "originales_sha256": [
+          "d52dd34b8176f7841a5d1cc5c9f53979bed36f20839c410088fc834b306c2ca3",
+          "286db18eeb6efe16f1692bd7dff5bf326490f507644a69b32a20c32deed5db1e"
+        ],
+        "cuadros": 1018132,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S23/s23.objects.24.channel1.phrases": "c25e56f12bf96e8c60d52a9755c2f94fdf8c604dbe911651da684076d5c5a89d",
+            "phrases/S23/s23.objects.24.channel2.phrases": "b3a783c80e85be2a904debee25f1c2b512238823b4a5f841d40d2e1b36383807"
+          }
+        },
+        "archivos": {
+          "figshare/S23/24/audio.wav": "643e99b90e2b35f34d693bdc43f38b4f8d4a242cad1b493b1e6187874b6e6798"
+        }
+      },
+      {
+        "id": "figshare-S25-01",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "01",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.01.channel1.wav",
+          "wavs/S25/s25.objects.01.channel2.wav"
+        ],
+        "originales_sha256": [
+          "d17050560bd1af5ba0a07a7ac2b298667ab30d45e26e8174767151c552967119",
+          "5e58370fd42a3d7f8ade405a3d4c557733e94dc68bf6c8a79c0feb094bec604c"
+        ],
+        "cuadros": 717906,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.01.channel1.phrases": "1c685c217979aa7411e9380accd2d8a0fc0ed0c557abd383980777e3909575b1",
+            "phrases/S25/s25.objects.01.channel2.phrases": "ad6dc916285bb10b95b65d85d62f33ac1d6b974f1967eb7e94a763cd51dfc81d"
+          }
+        },
+        "archivos": {
+          "figshare/S25/01/audio.wav": "d3044be25393b263bbf7af5a9c365b2c001bbc9b6c0c041f04d531a3b5583340"
+        }
+      },
+      {
+        "id": "figshare-S25-02",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "02",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.02.channel1.wav",
+          "wavs/S25/s25.objects.02.channel2.wav"
+        ],
+        "originales_sha256": [
+          "134d0095cfddcb9adef9d9b373a12cfa7c58cd67d169e0c7cbdca8a6c19e9bc7",
+          "f0eef59828b6742dc49ab561a320e9213445d6da37a54495c8bf156e4c55bfb6"
+        ],
+        "cuadros": 401482,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.02.channel1.phrases": "b6f30d2fbd2a23874754b9d355554326846336b69f7316f06be5ee07c9d9e982",
+            "phrases/S25/s25.objects.02.channel2.phrases": "5f67c26cba5b2c076b591e0a5cd50d5964a45438f1ec1cf418d636eed40cd882"
+          }
+        },
+        "archivos": {
+          "figshare/S25/02/audio.wav": "b23470a69a85d290bd7752348cecc51dd2b9afd79ac24758774c1c7d1ff477c5"
+        }
+      },
+      {
+        "id": "figshare-S25-03",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "03",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.03.channel1.wav",
+          "wavs/S25/s25.objects.03.channel2.wav"
+        ],
+        "originales_sha256": [
+          "86ee48d9f2b85e0f90a52a000f2b5ff403af4bdc509b913e2d8a35eae26b5a53",
+          "f1739b452a32651af992253bf077826f7a7e80a41847f70372a9dfb186c345d5"
+        ],
+        "cuadros": 417310,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.03.channel1.phrases": "5b996a47b3c826e640969619be9adfdc81e523b93dd445f058d4830299cfc6dc",
+            "phrases/S25/s25.objects.03.channel2.phrases": "5708ac1ee0e6521ae74af5a3f57fa931028d8d0a7c84cecbd77d666ad5563d14"
+          }
+        },
+        "archivos": {
+          "figshare/S25/03/audio.wav": "2326c9dea8e6d62cc6e6706223bd8715ad9c34eeecbd33506a2045f46f987d63"
+        }
+      },
+      {
+        "id": "figshare-S25-04",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "04",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.04.channel1.wav",
+          "wavs/S25/s25.objects.04.channel2.wav"
+        ],
+        "originales_sha256": [
+          "484c826a52eba96ef1c9e7ae54a9a9e4f20449949a5347b64ad392408b6efc36",
+          "d0e23d324d2c8b69df2dc07c8d637f369e8c8447db7d49f6c47fddb20759cc2e"
+        ],
+        "cuadros": 1296543,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.04.channel1.phrases": "8e3d32ed152f106af6b22f063e35ac3223a91ae3b3e517e2111fa73bc09c4349",
+            "phrases/S25/s25.objects.04.channel2.phrases": "dce7664c9fff28ce05284ad2ada351a6b8176d616020469df9fe2d24283e8071"
+          }
+        },
+        "archivos": {
+          "figshare/S25/04/audio.wav": "78ed1dba151bb19ab3277d7c3463f698c7a2ab0970c2a24beb9f3607837de144"
+        }
+      },
+      {
+        "id": "figshare-S25-05",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "05",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.05.channel1.wav",
+          "wavs/S25/s25.objects.05.channel2.wav"
+        ],
+        "originales_sha256": [
+          "a4b5c6a8d17d4ef5004e10a4ea2e5404789d8761871436601c736b36f535bd6a",
+          "e184391555cd1fc767ffc2f9eede896c4c5ecf812fb568ac302b06a92ebddab6"
+        ],
+        "cuadros": 2318430,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.05.channel1.phrases": "3ebbb81362ba79c7b20705775d792a8cf65644bc1815c060d423bafd90fa7a4e",
+            "phrases/S25/s25.objects.05.channel2.phrases": "24e6fb8b08b42a5a74f9693c87324d4c53d400b4e8c80ed9a6bcefb92c242cdb"
+          }
+        },
+        "archivos": {
+          "figshare/S25/05/audio.wav": "be2bce7c2152b135e9030ca03e058c8f37660c79035f841e815fa6dd53cded90"
+        }
+      },
+      {
+        "id": "figshare-S25-06",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "06",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.06.channel1.wav",
+          "wavs/S25/s25.objects.06.channel2.wav"
+        ],
+        "originales_sha256": [
+          "740467ff22f9fb69dfe7884c01165238f18997bda4af8390875fffe615e2c0e1",
+          "07b2e1caab46611cef538d909b480241995fadc3efc574fd6534b5e31fd1ea01"
+        ],
+        "cuadros": 1345319,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.06.channel1.phrases": "06c72f2cc6d02825404c7528255484f8adcd24b5316206500f157c6712a9d151",
+            "phrases/S25/s25.objects.06.channel2.phrases": "d0fe71588918bfa43df82c0d8709c9a07ebaaab7c03eec95aef2f9063388dbde"
+          }
+        },
+        "archivos": {
+          "figshare/S25/06/audio.wav": "4d718d2072964ff9e8bada147a02f89101c1ae9c6b97d5ddfffc71349c81dc78"
+        }
+      },
+      {
+        "id": "figshare-S25-07",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "07",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.07.channel1.wav",
+          "wavs/S25/s25.objects.07.channel2.wav"
+        ],
+        "originales_sha256": [
+          "8750ce6632b36993d13740c846b901e9b560cc4b6427606edfbaac18f4c7efa1",
+          "b11bb266c086d19e9bc1cd31d341239ec2289f113090f8fac2e0e0fb62f43656"
+        ],
+        "cuadros": 430222,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.07.channel1.phrases": "5b85c5434e4843354fb38b8f2cc045c638b5675353d5583b567025890db443c7",
+            "phrases/S25/s25.objects.07.channel2.phrases": "ef0a2f8cb676ed48ad69f4250f031935f1b9dd63fe9d6c5994550a19b3c222e2"
+          }
+        },
+        "archivos": {
+          "figshare/S25/07/audio.wav": "35be0a223ecdb417070fd78b2ee7c8cdcf508124827aad4d68e81c7c88399b23"
+        }
+      },
+      {
+        "id": "figshare-S25-08",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "08",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.08.channel1.wav",
+          "wavs/S25/s25.objects.08.channel2.wav"
+        ],
+        "originales_sha256": [
+          "13e97b7970da510e9627076a6c1d9fe83718d267a4d41a4d61f9215317a74044",
+          "b8d88c03431e0d13f8c8b25c3f59b451b518bc1294fd5a744d7545a464a6eaf5"
+        ],
+        "cuadros": 1058882,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.08.channel1.phrases": "164c2a003233eceb0c4354047afa34afeb99dd4d64dfc800a176f743d5a37185",
+            "phrases/S25/s25.objects.08.channel2.phrases": "bcd3c1b84c8d032f9d3e913ed3e43d55f049e8f51f0d7ecd8a67fdf99ac34ebf"
+          }
+        },
+        "archivos": {
+          "figshare/S25/08/audio.wav": "05d17052c50ae15aa27ae96bdba9ed2b0876bf1da73d23e140d929fa1ef23e99"
+        }
+      },
+      {
+        "id": "figshare-S25-09",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "09",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.09.channel1.wav",
+          "wavs/S25/s25.objects.09.channel2.wav"
+        ],
+        "originales_sha256": [
+          "8302584842f918feab82913328f37851d2ac8f64ca446702a377d0f3c6bac2bc",
+          "83f94e4432344f5615cd78308cbeb548d196486ad10b316ab0b1c0adc1a97339"
+        ],
+        "cuadros": 1865641,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.09.channel1.phrases": "acb45de8e7122c2fbcaa29fa3ed8e68d589b80093be6e52aade4b155de187a6b",
+            "phrases/S25/s25.objects.09.channel2.phrases": "b4393bb9176f5bfb1dae5c93d511a17a351e211a747f794ee23cfd6b7c1a7cb0"
+          }
+        },
+        "archivos": {
+          "figshare/S25/09/audio.wav": "c7cd0cca480c43b2ee985af8d6f2e1752c9966402a1a416563f5794faa565a1c"
+        }
+      },
+      {
+        "id": "figshare-S25-10",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "10",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.10.channel1.wav",
+          "wavs/S25/s25.objects.10.channel2.wav"
+        ],
+        "originales_sha256": [
+          "0d933efa5a1bdf33f20338448c6bb8815ba1e2df44d802597e86a1acb9c9808b",
+          "fc7612b0dad48bdf7a0e14b69222a5432fc5705ff537bcb1f1627e6c1297c8f3"
+        ],
+        "cuadros": 1648960,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.10.channel1.phrases": "7cd18cc2232f8e75cf4fec4222ae7abdc41776734f3c8028ef0ec3667f5c16cb",
+            "phrases/S25/s25.objects.10.channel2.phrases": "3f80d6903aee1c8c49a9c63eece0c88ec2f8b4c072fb41f0419dc3cb9e74e3af"
+          }
+        },
+        "archivos": {
+          "figshare/S25/10/audio.wav": "f5f5a285754b93784f23bb89627449d5bc84f4e615623bcaff7912004ba27a97"
+        }
+      },
+      {
+        "id": "figshare-S25-11",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "11",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.11.channel1.wav",
+          "wavs/S25/s25.objects.11.channel2.wav"
+        ],
+        "originales_sha256": [
+          "08fbce1c88de436feea1a8cf9d32bc5bdd5a121f528f94b91c0def720aefa2ed",
+          "68c0b00451c0846bc7e3d2ea59dba9ed7198299649419655df9eeafd837b841e"
+        ],
+        "cuadros": 817769,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.11.channel1.phrases": "89352f6d88fce67a2c489bf2730dfe5e0920a5d1ea0ff8938d5857998e9a273b",
+            "phrases/S25/s25.objects.11.channel2.phrases": "0e71565bdccc67c701b2916c1ce22f525e132bf812005d3cf8326ba23dbd327d"
+          }
+        },
+        "archivos": {
+          "figshare/S25/11/audio.wav": "61caa3f902cc7929196c28dcb347ccb29de15319410676ded08d56f0f2d7a311"
+        }
+      },
+      {
+        "id": "figshare-S25-12",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "12",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.12.channel1.wav",
+          "wavs/S25/s25.objects.12.channel2.wav"
+        ],
+        "originales_sha256": [
+          "f89d3db38381f6168e6184217760364ca8348624426d213b7fd8735c834bb663",
+          "7c091bdddc703248b1374fe13d8d00b6b69bf2656363703875a9c14a98caeeb8"
+        ],
+        "cuadros": 4077538,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.12.channel1.phrases": "16c532ce547578770fae0a052fb76f772c6a398ab6244723b01dcde91b1a3acb",
+            "phrases/S25/s25.objects.12.channel2.phrases": "b180ca23fa677300219eaac33a224550c6ecdcea4826fcbb3189df7a2e87c76e"
+          }
+        },
+        "archivos": {
+          "figshare/S25/12/audio.wav": "d9fb6dad141516a2202abead9c08824a3d1aeaa9f4f29a5ad7d7acdebc344f86"
+        }
+      },
+      {
+        "id": "figshare-S25-13",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "13",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.13.channel1.wav",
+          "wavs/S25/s25.objects.13.channel2.wav"
+        ],
+        "originales_sha256": [
+          "f2fdbaed652c183f8fedf9fb310df96930b392529aca8f9897c34dea44b2da99",
+          "1ecdb066557bda059f71806a523798a156f933d293720da042d07a4d8e940a0d"
+        ],
+        "cuadros": 387149,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.13.channel1.phrases": "ea6c15ba8512262016ef4c3a110308e80cc1edf24ddeea4cfefd5200cc1c4353",
+            "phrases/S25/s25.objects.13.channel2.phrases": "f362a1c58afabc0b7c89f73530ad7e274fc1927c1290e4803c088052c8ccd37b"
+          }
+        },
+        "archivos": {
+          "figshare/S25/13/audio.wav": "176e40bca6c83c55f2d658dd0e5943d3503058fa308a11079d9d57c843fb28b3"
+        }
+      },
+      {
+        "id": "figshare-S25-14",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "14",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.14.channel1.wav",
+          "wavs/S25/s25.objects.14.channel2.wav"
+        ],
+        "originales_sha256": [
+          "3ca8ccb3e3d286880898ead0fa1ef1d20292aad6ecf6034f3a864ef4b8755577",
+          "03d863533e53dad90e992888715c31320dc27f0b1af35c14edd105dea5089bc6"
+        ],
+        "cuadros": 1407505,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.14.channel1.phrases": "81cf6f677b1d352a7dd1e5c81f9dcb262fb7db7a196fd12fbd062dc2a28e90c9",
+            "phrases/S25/s25.objects.14.channel2.phrases": "3ae154a03782633c2d223f159c1ff5dc8272d29e5575cb3adfd6b26c060cdc8c"
+          }
+        },
+        "archivos": {
+          "figshare/S25/14/audio.wav": "934b9ac6d197f258cb0edc2e0dbddfc38bb9d30c2853e80ffbb292050e501e0e"
+        }
+      },
+      {
+        "id": "figshare-S25-15",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "15",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.15.channel1.wav",
+          "wavs/S25/s25.objects.15.channel2.wav"
+        ],
+        "originales_sha256": [
+          "5e0045b78ed8af696df505d177a30a87a656e28768485835f81430f4e8f55a36",
+          "8fc4f2b63ab9e0a3609305fcd9cc967b9411bd7d6c6c62e49bf66725ba491d15"
+        ],
+        "cuadros": 746316,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.15.channel1.phrases": "d7889f8bb5299a6537a30f420490631a78b5d37d67896e0b7a8a94943180a728",
+            "phrases/S25/s25.objects.15.channel2.phrases": "ee5e418e7148e5efb5cef72a88cfa03ae0189bc570499e4e67c2cdba3dd3c09d"
+          }
+        },
+        "archivos": {
+          "figshare/S25/15/audio.wav": "0363f87fe60b18b92d60a895946755de99dc5638a95f6cc9423ddd8ee857ce81"
+        }
+      },
+      {
+        "id": "figshare-S25-16",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "16",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.16.channel1.wav",
+          "wavs/S25/s25.objects.16.channel2.wav"
+        ],
+        "originales_sha256": [
+          "aefc96815396d598776d9b12442531f74f4d5102206987b7b5ce0bc9d26bb697",
+          "0c5411a4f56ba144532d03e298e5f84a83279fc5560d523b7929217fc92bf5b0"
+        ],
+        "cuadros": 2183264,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.16.channel1.phrases": "af192e30e4bc0f9a24b242e2e673e3cd1232bfc979484b5f7396d990b395b40d",
+            "phrases/S25/s25.objects.16.channel2.phrases": "2f8d6d666b48c81d2ca4b93e747b552bd7f76d1678fea0fdbfe65f6067f6dbd2"
+          }
+        },
+        "archivos": {
+          "figshare/S25/16/audio.wav": "8a60bdc88c7752718bfbcaca737b98d308f1b745e96c409d5ec952cee1850aa2"
+        }
+      },
+      {
+        "id": "figshare-S25-17",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "17",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.17.channel1.wav",
+          "wavs/S25/s25.objects.17.channel2.wav"
+        ],
+        "originales_sha256": [
+          "c7753f65d125428f15cd5082716dea9f43fa6501aa6dd36ca56d283d5260731c",
+          "475d4d4ee343228824e7d6e1745c70a22861cebe0ad03a0292726aca5d883c74"
+        ],
+        "cuadros": 618294,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.17.channel1.phrases": "d4f63881a75314b757586f1dadd177e1161939ff460870eeb87622c435530609",
+            "phrases/S25/s25.objects.17.channel2.phrases": "c99461a07508a74e80954689be1f5494d97bc0d3f9c2a04172de8a7e8f4fcd0a"
+          }
+        },
+        "archivos": {
+          "figshare/S25/17/audio.wav": "a31599c1c4bef11795df310b449898f8f10f09b3758f3a75c67d28e884358dc9"
+        }
+      },
+      {
+        "id": "figshare-S25-18",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "18",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.18.channel1.wav",
+          "wavs/S25/s25.objects.18.channel2.wav"
+        ],
+        "originales_sha256": [
+          "dc5adf610b341468de838f05001db44b781b04279d02fcc42e4d1c2ea266a68b",
+          "c7581524986145278d1dba595afab4c1bf25444fcbcec0eff248480593321f37"
+        ],
+        "cuadros": 1001061,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.18.channel1.phrases": "7520f471038fbe14ca0cd60d284351c17c7a2922fc8a73dfcf38cf015302e5c1",
+            "phrases/S25/s25.objects.18.channel2.phrases": "994a08ad7eac64b87863a352cbbfe1b91ed9829399cec011b87b3f2bb4737c22"
+          }
+        },
+        "archivos": {
+          "figshare/S25/18/audio.wav": "f87c3a83eb21c73c827762c5e25e90a51bf2b0076952724b3c55881eb2cba441"
+        }
+      },
+      {
+        "id": "figshare-S25-19",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "19",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.19.channel1.wav",
+          "wavs/S25/s25.objects.19.channel2.wav"
+        ],
+        "originales_sha256": [
+          "54fd6920459a6e4fe71f4f1a7963b30705c8d6c91f10bec3eb940696fae8ecef",
+          "fd5e9412ac8a86f390128a536c25f822efcc553bb87e18131b17f9d858714e1b"
+        ],
+        "cuadros": 772650,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.19.channel1.phrases": "95ab27fa2cd1c751eb54551562213b0211289519c7702e7d2c807b1f2a8e3a35",
+            "phrases/S25/s25.objects.19.channel2.phrases": "0441f7151c7e5f7a45072445a27fbe646aac7d3297700d4a0b400cb07a1dc560"
+          }
+        },
+        "archivos": {
+          "figshare/S25/19/audio.wav": "b01fefb29ebaf6a7ff0eb645bde60248bf481a3576fb9d714a850505ea3ee44a"
+        }
+      },
+      {
+        "id": "figshare-S25-20",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "20",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.20.channel1.wav",
+          "wavs/S25/s25.objects.20.channel2.wav"
+        ],
+        "originales_sha256": [
+          "de2037cdf5dea440d0fe9961664bd74f8c6a2475f62fff44841143cc6517e2d7",
+          "b7b34558990b63513b41e37c6f1e60c840268dc7a83012d388f1958a4dd56d4a"
+        ],
+        "cuadros": 1557810,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.20.channel1.phrases": "9c4e96f2d085cc022bc23ea4a250fdf3f4aff922b113d8dd06df695711ba606f",
+            "phrases/S25/s25.objects.20.channel2.phrases": "5524c3077a593bbc141a8766635b2d8582b4b82321d34e5062a4357fe2987e05"
+          }
+        },
+        "archivos": {
+          "figshare/S25/20/audio.wav": "b8a989f226473f4e1da562d5de047c1971c88653440b40b0bfd37b2b2f000e62"
+        }
+      },
+      {
+        "id": "figshare-S25-21",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "21",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.21.channel1.wav",
+          "wavs/S25/s25.objects.21.channel2.wav"
+        ],
+        "originales_sha256": [
+          "06aece844cd4db3bc4954adc92f61abba3d186558d07437bf72ff75e195b5286",
+          "f5e70210560b9c56015fe8b1051517a622d63d8a3ad3bc7370127e9cb8a7bc6e"
+        ],
+        "cuadros": 1376178,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.21.channel1.phrases": "f46e39eaed13a0968bd7f9be0a657a68e9bc77ea217bbe350c683596cfde4768",
+            "phrases/S25/s25.objects.21.channel2.phrases": "52bc8b2bf3eb65a62b8c64d7e7b65ae0e744ddeb6475eedb9329a2273f3e754f"
+          }
+        },
+        "archivos": {
+          "figshare/S25/21/audio.wav": "08dbb75760d6f1ef85d7beb231195036bb0a0bbfad3af108d08efdbb3742da82"
+        }
+      },
+      {
+        "id": "figshare-S25-22",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "22",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.22.channel1.wav",
+          "wavs/S25/s25.objects.22.channel2.wav"
+        ],
+        "originales_sha256": [
+          "4da0e05c62bf7468836c9663709f14feefd4a43a3c2e967060a8d5efcdad5560",
+          "0b66b8ec1f596a4f34e09dc39b00e5717d5695f224e954ce023a4bdd172d63ea"
+        ],
+        "cuadros": 1935723,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.22.channel1.phrases": "beb67cb09be2f1428318f1abfeceba8521e152855e9801153aca716ffccfa977",
+            "phrases/S25/s25.objects.22.channel2.phrases": "b44da16345f8ac8dd352b3eab681c67ea265d5eb7439bff34eaf08b2c4ddc1c1"
+          }
+        },
+        "archivos": {
+          "figshare/S25/22/audio.wav": "268c594047e9d6a1d02651977502cb1bd6f4807880077e69530e65f50fc87107"
+        }
+      },
+      {
+        "id": "figshare-S25-23",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "23",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.23.channel1.wav",
+          "wavs/S25/s25.objects.23.channel2.wav"
+        ],
+        "originales_sha256": [
+          "f26aa6b2a132449c2e13e1575bfde2d13fc46b6a432f2df54f8c8c625f94d875",
+          "8bb0ac4069874302617fbeb3cbf629290505538376cecbb706acdf12bf9230d1"
+        ],
+        "cuadros": 1443444,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.23.channel1.phrases": "2c1020a73dc07152dcaec6c29daa980e7d61fa4d85e63371c73ad9467b951ab7",
+            "phrases/S25/s25.objects.23.channel2.phrases": "854110fc0c809f32a081122321816ee7b5aa6416035c6f087a0e65fa5b8d77cb"
+          }
+        },
+        "archivos": {
+          "figshare/S25/23/audio.wav": "6072d1707d6e19af47e5bdc198ddceb706cc70b7b7ccf6b1774089c3ac51b283"
+        }
+      },
+      {
+        "id": "figshare-S25-24",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "24",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.24.channel1.wav",
+          "wavs/S25/s25.objects.24.channel2.wav"
+        ],
+        "originales_sha256": [
+          "db97b6cef8bac1b02f3744360991e7b1fb96301b9158b1ecb4da87f3da434bf6",
+          "f27bc7e6157b472bd3d1de1357ea4fbb012068ba9d4657005dd45dd59349caa3"
+        ],
+        "cuadros": 1257532,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.24.channel1.phrases": "f3187b7ee11e3012fde45c5767b4e8361d2b7973ff5c7e020afcd310afe97806",
+            "phrases/S25/s25.objects.24.channel2.phrases": "5180472ad831ce31642db8e037b9fdfc95358c04a3ec1a3ec92380b684a8fe47"
+          }
+        },
+        "archivos": {
+          "figshare/S25/24/audio.wav": "120dd3bc9a68127263130d1d9d0017831ee721a7993bacaa4ab03ef8c470c5ff"
+        }
+      },
+      {
+        "id": "figshare-S25-25",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "25",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.25.channel1.wav",
+          "wavs/S25/s25.objects.25.channel2.wav"
+        ],
+        "originales_sha256": [
+          "f5cd0bd2acb1fcbe475a604564ff24dbb95e3ce4754af2ff842c9d11f082c597",
+          "31f3ccec22ae92bb3600b942a5cdb6d9b0aa229a02c3d86fa6dfbbba55e1bb63"
+        ],
+        "cuadros": 759534,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.25.channel1.phrases": "2b2ac14d5466bc7dfe2270fe535fa1601ddbe3daeea788a247371a96f5c2792f",
+            "phrases/S25/s25.objects.25.channel2.phrases": "8129ec494562df0692dcdefff5b72411e37a2b448a8bea33b6798617c27d48d6"
+          }
+        },
+        "archivos": {
+          "figshare/S25/25/audio.wav": "72e49a39ae8dc0e2785a7ea62310d34410ef5177d12b8d6a0e44f8e0fb305525"
+        }
+      },
+      {
+        "id": "figshare-S25-26",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "26",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.26.channel1.wav",
+          "wavs/S25/s25.objects.26.channel2.wav"
+        ],
+        "originales_sha256": [
+          "dc8c02f5ca1f6b7bfb5acbbe47b9cee17be2b2a8f22b3cdab4c40f29ef857fdd",
+          "194bc3bbc0ffe4e8b3678fde7d2440c5bf2d48a6c4540abf5c6aa05e1cd55166"
+        ],
+        "cuadros": 1720427,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.26.channel1.phrases": "094001c1e7d1950a4721fa8f63ec8e02c09ec800be548e968a11674f60db809b",
+            "phrases/S25/s25.objects.26.channel2.phrases": "fbc36e1573583cdae14adc22de911cd8cb76404aa8df45e0b835aaf197350bb8"
+          }
+        },
+        "archivos": {
+          "figshare/S25/26/audio.wav": "d9beddf14f5ac12a967eac49108e82d21f703f38528aa6ae4a0ed6ec4695966f"
+        }
+      },
+      {
+        "id": "figshare-S25-27",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "27",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.27.channel1.wav",
+          "wavs/S25/s25.objects.27.channel2.wav"
+        ],
+        "originales_sha256": [
+          "7c6abf3a96b21c1ded64f0c914719182ab64811fe8e761958603810c4f0f6a6a",
+          "d0c5ed37f68f39273da4dff83baf0d4dc77cbca75a307e897d4cce3c1f085229"
+        ],
+        "cuadros": 940962,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.27.channel1.phrases": "60285f69709142e8092eef20f7bfceb11b845f621b460b0c35864dada7e5285e",
+            "phrases/S25/s25.objects.27.channel2.phrases": "c300ef5813b2b8aa6201a59acbe4b1ed10aeec22047e6747b6cce3d8ef2b868d"
+          }
+        },
+        "archivos": {
+          "figshare/S25/27/audio.wav": "0f5b3216666e98572bbdb3a19ef6211bf188f789451925305bd5d7cd5973a07b"
+        }
+      },
+      {
+        "id": "figshare-S25-28",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "28",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.28.channel1.wav",
+          "wavs/S25/s25.objects.28.channel2.wav"
+        ],
+        "originales_sha256": [
+          "262c32fdee29764e3ee881b2b1c96b911a2b0d85ad0b58566294fffabd8d7f45",
+          "4a6245bf2d15c70c772597f46ce02c2c7c63dec301146cabfb444439bf80e4ad"
+        ],
+        "cuadros": 2471522,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.28.channel1.phrases": "308cbce6b27aee99f01bf221685e3faaf41f5625506cf5a941e8542934132d12",
+            "phrases/S25/s25.objects.28.channel2.phrases": "40e07decd85643398b96da97cdb7ca431f339b584a2b45a15207dcafb87ab2c0"
+          }
+        },
+        "archivos": {
+          "figshare/S25/28/audio.wav": "03ba72f4695fb1b9a0ee7aa0aa16fec21b6a1c4d0dbfa2d12875d7a6960d7808"
+        }
+      },
+      {
+        "id": "figshare-S25-29",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "29",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.29.channel1.wav",
+          "wavs/S25/s25.objects.29.channel2.wav"
+        ],
+        "originales_sha256": [
+          "7121f209a55eda6b6c485dc3a30138d9e0a557c0608f4ab7af1b8ad9abbf5db8",
+          "386af518f31f638df21e6db3ad94084d9f8f2938f03056eabf8b7d333a453847"
+        ],
+        "cuadros": 2066993,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.29.channel1.phrases": "9bd3fb090156cd8c7ae9323bdd9743020a47755ffdc90f55342ea2739bbd3dd8",
+            "phrases/S25/s25.objects.29.channel2.phrases": "bd282a4d0204c04bdd7cd776faa598bd500fa805595a6e24f4a403fbca11152f"
+          }
+        },
+        "archivos": {
+          "figshare/S25/29/audio.wav": "9abc2b4865beb578482197b3650ead1341bc5f7bbf4e14ffa11c56cd0f648e1d"
+        }
+      },
+      {
+        "id": "figshare-S25-30",
+        "fuente": "figshare",
+        "sesion": "S25",
+        "tarea": "30",
+        "modulos": [
+          "stt",
+          "diarizacion",
+          "asociacion",
+          "minutas"
+        ],
+        "original": "uba_games/figshare-v2/wavs.rar",
+        "entradas": [
+          "wavs/S25/s25.objects.30.channel1.wav",
+          "wavs/S25/s25.objects.30.channel2.wav"
+        ],
+        "originales_sha256": [
+          "fa9a0f3ea53c413c3b2a0c88beae4f313a5c7a3f8d6422171d1f902742b20021",
+          "444f4e1b918cb6bf980045a2ce7d355952f00f23b576266b8c0070e4ad072c56"
+        ],
+        "cuadros": 1774514,
+        "transformacion": "mezcla mono (L + R) // 2 de los dos canales; ingestar del pipeline: FFmpeg a WAV de 16 kHz, mono y PCM16",
+        "referencia": {
+          "original": "uba_games/figshare-v2/phrases.rar",
+          "entradas": {
+            "phrases/S25/s25.objects.30.channel1.phrases": "559b0b0e81d78592a0470810ba38b93951b27106805e7f666a917e565085f49c",
+            "phrases/S25/s25.objects.30.channel2.phrases": "91f528ad7780ac1e33677939564894699e81c15b47c81ffc5bee48039baa31d7"
+          }
+        },
+        "archivos": {
+          "figshare/S25/30/audio.wav": "e5ec8753e2a949d746310aff846a656129810dba4ae765508891d214da87ac07"
+        }
+      }
+    ]
+  },
+  "contenido_sha256": "68b317117c84676f835d58473e8a9c82aa94cefb87d26f6cde487a919416b456",
+  "ejecucion": {
+    "fecha_utc": "2026-11-16T01:37:38+00:00",
+    "segundos": 396.0,
+    "python": "3.12.16",
+    "plataforma": "Linux-7.2.11-100.fc43.x86_64-x86_64-with-glibc2.42",
+    "ffmpeg": "ffmpeg version 7.1.5 Copyright (c) 2000-2026 the FFmpeg developers",
+    "7zip": "7-Zip (z) 26.04 (x64) : Copyright (c) 1999-2026 Igor Pavlov : 2026-10-05",
+    "torch": "2.8.0+cu128",
+    "transformers": "5.22.1"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "criterio": "Funcionamiento modular (§2.3): 4/4 módulos con el 100 % de sus salidas dentro del contrato",
+  "cumple": true,
+  "modulos_al_100": 4,
+  "contenido_sha256_muestra": "68b317117c84676f835d58473e8a9c82aa94cefb87d26f6cde487a919416b456",
+  "modulos": {
+    "diarizacion": {
+      "validas": 74,
+      "total": 74,
+      "faltantes": [],
+      "violaciones": [],
+      "porcentaje": 100.0
+    },
+    "stt": {
+      "validas": 79,
+      "total": 79,
+      "faltantes": [],
+      "violaciones": [],
+      "porcentaje": 100.0
+    },
+    "asociacion": {
+      "validas": 74,
+      "total": 74,
+      "faltantes": [],
+      "violaciones": [],
+      "porcentaje": 100.0
+    },
+    "minutas": {
+      "validas": 77,
+      "total": 77,
+      "faltantes": [],
+      "violaciones": [],
+      "porcentaje": 100.0
+    }
+  }
+}

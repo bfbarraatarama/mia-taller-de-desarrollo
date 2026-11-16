@@ -1,0 +1,13 @@
+schema: spec-driven
+
+context: |
+  OpenSpec de la evaluación modular de la PoC (issue #13) del repo mia-taller-de-desarrollo: muestra congelada
+  de la definición de la PoC (hito-3/definicion-de-la-poc.md, §2.3) y ejecutor en evaluacion/modular/.
+  Atraviesa las cuatro etapas (src/diarizacion, src/stt, src/asociacion, src/minutas); no cambia su código.
+  Ejecutar el CLI desde docs/evaluacion/. Las pruebas están en tests/evaluacion/.
+  Escribir todos los artefactos en español, con tablas y una línea de lectura por decisión.
+  Cada escenario de specs/ tiene un test con el mismo nombre.
+
+rules:
+  design:
+    - Cada decisión lista tres alternativas, la elegida y el motivo

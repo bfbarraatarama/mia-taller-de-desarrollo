@@ -71,6 +71,9 @@ hito-2/muestra/uba_games_figshare/
 /evaluacion/asociacion/ejemplo_ideal/generado/
 /evaluacion/asociacion/**/*.wav
 /evaluacion/stt/generado/
+/evaluacion/modular/datos/
+/evaluacion/modular/inferencia/
+/evaluacion/modular/**/*.wav
 # Protección frente a residuos locales de la arquitectura anterior.
 /PoC/
 /src/STT_old/
@@ -82,3 +85,4 @@ feli.md
 # Resultados locales de reuniones (no versionar audios, transcripciones ni minutas privadas)
 resultados/
 !/evaluacion/diarizacion/resultados/
+!/evaluacion/modular/resultados/

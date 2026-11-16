@@ -1,0 +1,53 @@
+# Configuración versionada de la evaluación modular (issue #13).
+# Diseño: docs/evaluacion/openspec/changes/evaluacion-modular/design.md
+# Las rutas relativas se resuelven desde la raíz del repositorio.
+# Los hashes de los originales no se repiten acá: salen de hito-2/fuentes.lock.json o,
+# si el archivo todavía no está fijado, del MD5 publicado en hito-2/fuentes.toml (`registro`).
+
+semilla = 20261010
+cache = "hito-2/.cache"
+salida = "evaluacion/modular/datos"                    # audio y derivados: locales, no se versionan
+manifiesto = "evaluacion/modular/muestra.manifest.json"  # se versiona
+inferencia = "evaluacion/modular/inferencia"            # salidas de los módulos: locales, no se versionan
+resultados = "evaluacion/modular/resultados"            # reportes de evaluar: se versionan
+
+# Configuración de la inferencia (D15: baseline de §3.1.1).
+[modelos]
+modelo_stt = "medium"
+dispositivo = "cuda"
+modelo_minutas = "qwen2.5-7b"
+secciones = ["resumen", "temas", "decisiones", "problemas", "acciones"]
+
+[originales.common_voice]
+clave = "common_voice/common-voice-scripted-speech-26-0-riopla-0a258d97.tar.gz"
+obtener = "MDC_API_KEY=… .venv/bin/python -I hito-2/scripts/descargar_fuentes.py common_voice (cuenta de Mozilla Data Collective con los términos de Common Voice 26 Rioplatense aceptados)"
+
+[originales.figshare_frases]
+clave = "uba_games/figshare-v2/phrases.rar"
+registro = ["uba_games_figshare", "archivos", "phrases.rar"]
+obtener = ".venv/bin/python -I hito-2/scripts/descargar_fuentes.py uba_games_figshare"
+
+[originales.figshare_audio]
+clave = "uba_games/figshare-v2/wavs.rar"
+registro = ["uba_games_figshare", "archivos", "wavs.rar"]
+obtener = ".venv/bin/python -I hito-2/scripts/descargar_fuentes.py uba_games_figshare"
+
+[originales.openslr_mujeres]
+clave = "slr61/es_ar_female.zip"
+obtener = ".venv/bin/python -I hito-2/scripts/descargar_fuentes.py slr61"
+
+[originales.openslr_hombres]
+clave = "slr61/es_ar_male.zip"
+obtener = ".venv/bin/python -I hito-2/scripts/descargar_fuentes.py slr61"
+
+[originales.openslr_indice_mujeres]
+clave = "slr61/line_index_female.tsv"
+obtener = ".venv/bin/python -I hito-2/scripts/descargar_fuentes.py slr61"
+
+[originales.openslr_indice_hombres]
+clave = "slr61/line_index_male.tsv"
+obtener = ".venv/bin/python -I hito-2/scripts/descargar_fuentes.py slr61"
+
+[originales.ami]
+clave = "ami/ami_public_manual_1.6.2.zip"
+obtener = ".venv/bin/python -I hito-2/scripts/descargar_fuentes.py anotaciones"
