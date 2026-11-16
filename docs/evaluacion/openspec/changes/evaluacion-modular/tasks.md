@@ -10,7 +10,7 @@ En cada tarea, primero los tests de sus escenarios. Meta del martes 17/11: grupo
 ## 2. Originales
 
 - [x] 2.1 Verificación contra `fuentes.toml` y `fuentes.lock.json`, con el comando del Hito 2 en el mensaje · escenarios: Original con hash distinto, Original ausente
-- [ ] 2.2 Obtener Common Voice 26 rioplatense (Matías, con `MDC_API_KEY`) y `wavs.rar` de Figshare (con el ok de Matías), y verificarlos
+- [x] 2.2 Obtener Common Voice 26 rioplatense (Matías, con `MDC_API_KEY`) y `wavs.rar` de Figshare (con el ok de Matías), y verificarlos
 
 ## 3. Selección y normalización
 
