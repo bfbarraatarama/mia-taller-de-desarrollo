@@ -134,7 +134,7 @@ class Flujo(unittest.TestCase):
             origen.write_text(json.dumps(transcripcion(), ensure_ascii=False), encoding="utf-8")
             salida = generar_minuta(origen, Path(carpeta) / "salida", cliente=cliente)
             self.assertTrue(origen.exists())
-            self.assertEqual(json.loads(salida.json.read_text())["resumen"],
+            self.assertEqual(json.loads(salida.json.read_text(encoding='utf-8'))["resumen"],
                              "Se revisó el proyecto y se habló del informe.")
 
     def test_reintentos_por_referencias_inexistentes(self):

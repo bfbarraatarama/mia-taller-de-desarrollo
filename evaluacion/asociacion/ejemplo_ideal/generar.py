@@ -51,7 +51,7 @@ def sintetizar(texto: str, voz: str, velocidad: int) -> np.ndarray:
     """Devuelve la voz a 16 kHz, sin el silencio de los extremos."""
     with tempfile.TemporaryDirectory() as tmp:
         ruta = Path(tmp) / "frase.wav"
-        subprocess.run(["espeak-ng", "-v", voz, "-s", str(velocidad), "-w", str(ruta), texto],
+        subprocess.run(["espeak-ng", "-D", "-v", voz, "-s", str(velocidad), "-w", str(ruta), texto],
                        check=True, capture_output=True)
         x, fs = sf.read(ruta, dtype="float64")
     g = gcd(FS, fs)

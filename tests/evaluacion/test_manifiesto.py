@@ -86,8 +86,8 @@ def _config(tmp_path, datos: Path, manifiesto: Path) -> Path:
     config = tmp_path / "config.toml"
     config.write_text(
         (RAIZ / "evaluacion/modular/config.toml").read_text(encoding="utf-8")
-        .replace('salida = "evaluacion/modular/datos"', f'salida = "{datos}"')
-        .replace('manifiesto = "evaluacion/modular/muestra.manifest.json"', f'manifiesto = "{manifiesto}"'),
+        .replace('salida = "evaluacion/modular/datos"', f'salida = "{datos.as_posix()}"')
+        .replace('manifiesto = "evaluacion/modular/muestra.manifest.json"', f'manifiesto = "{manifiesto.as_posix()}"'),
         encoding="utf-8")
     return config
 

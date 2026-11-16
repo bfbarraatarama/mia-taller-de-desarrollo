@@ -226,19 +226,49 @@ def verificar_qt() -> None:
     verificar_comando(sys.executable, ("-c", "from PySide6.QtWidgets import QApplication; app = QApplication([]); print(app.platformName())"), tema="plataforma Qt")
 
 
+def _encontrar_carpeta_dll_ffmpeg() -> Path | None:
+    """Devuelve la primera carpeta con avcodec-*.dll entre las ubicaciones conocidas.
+
+    Busca en orden: variable de entorno DIARIZACION_FFMPEG_DLL_DIR, ruta del README
+    (instalación manual gyan.dev), y directorio del ejecutable ffmpeg/ffprobe en PATH
+    (cubre instalaciones vía WinGet y similares).
+    """
+    carpetas: list[Path] = []
+    env = os.environ.get("DIARIZACION_FFMPEG_DLL_DIR")
+    if env:
+        carpetas.append(Path(env))
+    carpetas.append(DLL_FFMPEG_POR_DEFECTO)
+    exe = shutil.which("ffmpeg") or shutil.which("ffprobe")
+    if exe:
+        carpetas.append(Path(exe).parent)
+    return next((c for c in carpetas if c.is_dir() and any(c.glob("avcodec-*.dll"))), None)
+
+
 def verificar_ffmpeg() -> None:
     verificar_comando("ffmpeg", ("-version",))
     if os.name != "nt":
         return
     pth = [p for p in map(Path, sys.path) if (p / "ffmpeg_dll_dir.pth").is_file()]
-    carpeta = Path(os.environ.get("DIARIZACION_FFMPEG_DLL_DIR") or DLL_FFMPEG_POR_DEFECTO)
-    if not pth:
-        informar("FALLA", "FFmpeg para torchcodec", "falta ffmpeg_dll_dir.pth en site-packages del venv (ver README)")
-    dlls = sorted(p.name for p in carpeta.glob("avcodec-*.dll")) if carpeta.is_dir() else []
-    if dlls:
-        informar("OK", "FFmpeg para torchcodec", f"{carpeta} ({', '.join(dlls)})")
+    carpeta = _encontrar_carpeta_dll_ffmpeg()
+    if carpeta is None:
+        informar("FALLA", "FFmpeg para torchcodec",
+                 "no se encontró avcodec-*.dll en ninguna ubicación conocida (ver README)")
+        return
+    dlls = sorted(p.name for p in carpeta.glob("avcodec-*.dll"))
+    informar("OK", "FFmpeg para torchcodec", f"{carpeta} ({', '.join(dlls)})")
+    if pth:
+        return
+    if carpeta == DLL_FFMPEG_POR_DEFECTO:
+        # DLLs en la ruta del README pero sin .pth: torchcodec no las encontrará.
+        informar("FALLA", "FFmpeg para torchcodec (.pth)",
+                 "falta ffmpeg_dll_dir.pth en site-packages del venv (ver README)")
     else:
-        informar("FALLA", "FFmpeg para torchcodec", f"no hay avcodec-*.dll en {carpeta} (FFmpeg 7.1.1 shared, ver README)")
+        # DLLs en otra ubicación (p.ej. WinGet): pueden ser accesibles sin .pth si el
+        # directorio ya está registrado; si torchcodec falla al decodificar, seguir el README.
+        informar("AVISO", "FFmpeg para torchcodec (.pth)",
+                 f"DLL en {carpeta} (fuera de la ruta del README); sin ffmpeg_dll_dir.pth — "
+                 "si torchcodec falla al decodificar, registrar la carpeta con "
+                 "DIARIZACION_FFMPEG_DLL_DIR y el procedimiento .pth del README")
 
 
 def _wav_sintetico(ruta: Path) -> None:

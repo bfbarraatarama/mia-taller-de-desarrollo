@@ -111,3 +111,49 @@ def test_restriccion_duplicada(tmp_path):
     ruta.write_text("pyannote.audio==4.0.7\npyannote-audio==4.0.7\n", encoding="utf-8")
     with pytest.raises(ValueError, match="duplicada"):
         leer_restricciones(ruta)
+
+
+def _mock_ffmpeg_base(monkeypatch, tmp_path):
+    """Fija el entorno mínimo para probar verificar_ffmpeg en modo Windows."""
+    monkeypatch.setattr(v.os, "name", "nt")
+    monkeypatch.setattr(v.sys, "path", [])
+    monkeypatch.setattr(v, "DLL_FFMPEG_POR_DEFECTO", tmp_path / "readme_path")
+    monkeypatch.delenv("DIARIZACION_FFMPEG_DLL_DIR", raising=False)
+    monkeypatch.setattr(v, "verificar_comando", lambda *a, **kw: True)
+    monkeypatch.setattr(v, "_resultados", [])
+
+
+def test_verificar_ffmpeg_dll_en_directorio_ffmpeg(monkeypatch, tmp_path):
+    """avcodec-*.dll en el mismo directorio que ffmpeg.exe (p.ej. WinGet) → OK sin FALLA."""
+    carpeta_bin = tmp_path / "bin"
+    carpeta_bin.mkdir()
+    (carpeta_bin / "avcodec-61.dll").touch()
+    _mock_ffmpeg_base(monkeypatch, tmp_path)
+    monkeypatch.setattr(v.shutil, "which",
+                        lambda cmd: str(carpeta_bin / f"{cmd}.exe") if cmd in ("ffmpeg", "ffprobe") else None)
+    v.verificar_ffmpeg()
+    temas = {tema: estado for estado, tema, _ in v._resultados}
+    assert temas.get("FFmpeg para torchcodec") == "OK"
+    assert all(estado != "FALLA" for estado, tema, _ in v._resultados if "torchcodec" in tema.lower())
+
+
+def test_verificar_ffmpeg_dll_en_ruta_readme(monkeypatch, tmp_path):
+    """avcodec-*.dll en la ruta del README pero sin .pth → OK + FALLA de .pth."""
+    readme_path = tmp_path / "readme_path"
+    readme_path.mkdir()
+    (readme_path / "avcodec-61.dll").touch()
+    _mock_ffmpeg_base(monkeypatch, tmp_path)
+    monkeypatch.setattr(v, "DLL_FFMPEG_POR_DEFECTO", readme_path)
+    monkeypatch.setattr(v.shutil, "which", lambda cmd: None)
+    v.verificar_ffmpeg()
+    temas = {tema: estado for estado, tema, _ in v._resultados}
+    assert temas.get("FFmpeg para torchcodec") == "OK"
+    assert temas.get("FFmpeg para torchcodec (.pth)") == "FALLA"
+
+
+def test_verificar_ffmpeg_sin_dll(monkeypatch, tmp_path):
+    """Sin avcodec-*.dll en ninguna ubicación → FALLA."""
+    _mock_ffmpeg_base(monkeypatch, tmp_path)
+    monkeypatch.setattr(v.shutil, "which", lambda cmd: None)
+    v.verificar_ffmpeg()
+    assert any(estado == "FALLA" and "torchcodec" in tema.lower() for estado, tema, _ in v._resultados)
