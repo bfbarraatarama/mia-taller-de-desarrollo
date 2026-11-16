@@ -68,6 +68,16 @@ requests==2.34.2
 urllib3==2.8.0
 certifi==2026.10.23
 charset-normalizer==3.5.2
+
+# --- Traducción sintética de AMI con MarianMT (evaluación modular, issue #13) ---
+# Resueltas el 15/11/2026 con las restricciones anteriores; versiones publicadas antes del 1/11/2026.
+transformers==5.22.1
+tokenizers==0.23.3
+sentencepiece==0.2.2
+sacremoses==0.2.0
+typer==0.27.3
+annotated-doc==0.0.5
+shellingham==1.5.4
 idna==3.20
 h11==0.16.0
 anyio==4.16.0
