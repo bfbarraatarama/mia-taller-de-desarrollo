@@ -12,7 +12,7 @@ En cada tarea, primero los tests de sus escenarios. Meta: estado de 2.1.2 a 2.1.
 
 - [x] 2.1 Corrida de cada escenario por `src.pipeline ejecutar`
 - [x] 2.2 Comprobaciones de 2.1.2 a 2.1.5 · escenarios: Seis o más hablantes, Minuta por fragmentos, Comprobación solo visual
-- [ ] 2.3 Corrida en GPU y reporte
+- [x] 2.3 Corrida en GPU y reporte
 
 ## 3. Recuperación
 
