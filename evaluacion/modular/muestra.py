@@ -80,12 +80,15 @@ def _tareas_figshare(rar_wavs: Path, rar_frases: Path, sesion: str) -> list[str]
     return tareas
 
 
-def preparar_muestra(config, originales_sha: dict[str, str], *, traductor=None, avisar=print) -> dict:
-    """Selecciona y prepara la muestra en una carpeta nueva y la publica en `config.salida`; devuelve el manifiesto."""
+class MuestraDistinta(Exception):
+    """La muestra preparada no coincide con la congelada: no se reemplaza sin pedirlo."""
+
+
+def preparar_muestra(config, originales_sha: dict[str, str], *, traductor=None, avisar=print) -> tuple[dict, Path]:
+    """Selecciona y prepara la muestra en una carpeta nueva, sin publicarla; devuelve (manifiesto, carpeta nueva)."""
     cache, semilla = config.cache, config.semilla
     o = config.originales
-    destino = Path(config.salida)
-    nueva = destino.with_name(destino.name + ".preparando")
+    nueva = Path(config.salida).with_name(Path(config.salida).name + ".preparando")
     shutil.rmtree(nueva, ignore_errors=True)
     elementos = []
 
@@ -134,15 +137,30 @@ def preparar_muestra(config, originales_sha: dict[str, str], *, traductor=None, 
                           "archivos": {f"ami/{r.id}/{k}": v for k, v in reg["archivos"].items()}})
 
     claves = {original.clave: originales_sha[nombre] for nombre, original in o.items()}
-    manifiesto = construir_manifiesto(semilla, claves, elementos, exclusiones)
+    return construir_manifiesto(semilla, claves, elementos, exclusiones), nueva
 
+
+def publicar_muestra(config, manifiesto: dict, nueva: Path, inicio: float, *, reemplazar: bool = False) -> bool:
+    """Publica `nueva` en `config.salida`. Si ya hay una muestra congelada con otro `contenido_sha256`, falla sin
+    tocar nada, salvo `reemplazar`. Con el mismo hash renueva los datos y deja el manifiesto como está.
+    Devuelve True si escribió un manifiesto nuevo."""
+    ruta, destino, nueva = Path(config.manifiesto), Path(config.salida), Path(nueva)
+    actual = json.loads(ruta.read_text(encoding="utf-8"))["contenido_sha256"] if ruta.is_file() else None
+    nuevo = manifiesto["contenido_sha256"]
+    if actual is not None and actual != nuevo and not reemplazar:
+        shutil.rmtree(nueva, ignore_errors=True)
+        raise MuestraDistinta(f"La muestra preparada ({nuevo}) no coincide con la congelada en {ruta.name} ({actual}); "
+                              "no se reemplazó nada. Para reemplazarla a propósito: preparar --reemplazar")
     anterior = destino.with_name(destino.name + ".anterior")
     shutil.rmtree(anterior, ignore_errors=True)
     if destino.exists():
         os.replace(destino, anterior)
     os.replace(nueva, destino)
     shutil.rmtree(anterior, ignore_errors=True)
-    return manifiesto
+    if actual == nuevo:
+        return False
+    escribir_manifiesto(ruta, manifiesto, inicio)
+    return True
 
 
 def _primera_linea(comando: list[str]) -> str | None:

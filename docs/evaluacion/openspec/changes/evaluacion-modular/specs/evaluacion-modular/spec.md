@@ -18,7 +18,7 @@ Correr los cuatro módulos de la PoC sobre la muestra congelada, por separado y 
 - **THEN** la segunda corrida no carga modelos y deja las salidas intactas
 
 ### Requirement: Contratos de los cuatro módulos
-`evaluar` SHALL validar cada salida con el validador de su etapa (`validar_diarizacion`, `validate_asr_contract`, `validar_transcripcion` y el modelo de `src/minutas/contratos.py`) y SHALL informar, por módulo, salidas válidas sobre totales y cada violación con archivo y regla. El criterio se cumple con 4/4 módulos al 100 %.
+`evaluar` SHALL validar cada salida con el validador de su etapa (`validar_diarizacion`, `validate_asr_contract`, `validar_transcripcion` y el modelo de `src/minutas/contratos.py` para las secciones de la configuración) y SHALL informar, por módulo, salidas válidas sobre totales y cada violación con archivo y regla. El criterio se cumple con 4/4 módulos al 100 %.
 
 #### Scenario: Todas válidas
 - **WHEN** todas las salidas de los cuatro módulos cumplen su contrato
@@ -27,6 +27,10 @@ Correr los cuatro módulos de la PoC sobre la muestra congelada, por separado y 
 #### Scenario: Una salida fuera de contrato
 - **WHEN** un `diarization.json` guardado tiene un segmento con `start >= end`
 - **THEN** el reporte indica diarización por debajo del 100 %, nombra el archivo y la regla, y `evaluar` termina con código distinto de 0
+
+#### Scenario: Minuta sin las secciones requeridas
+- **WHEN** una minuta guardada solo tiene el resumen y la configuración pide las cinco secciones
+- **THEN** cuenta como fuera de contrato, con una regla que nombra las secciones
 
 ### Requirement: Métricas de transcripción
 `evaluar` SHALL calcular WER y CER por archivo y agregados, contra la referencia de cada clip y de cada tarea de Figshare, después de pasar a minúsculas y quitar la puntuación, conservando las tildes. SHALL registrar las sustituciones, inserciones y borrados, sin umbral.

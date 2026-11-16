@@ -13,6 +13,8 @@ from evaluacion.modular.contratos import evaluar_contratos
 from evaluacion.modular.muestra import construir_manifiesto
 from src.minutas.entrada import leer_transcripcion
 
+REQUERIDAS = ("resumen", "temas", "decisiones", "problemas", "acciones")
+
 RAIZ = Path(__file__).resolve().parents[2]
 SECCIONES = ["resumen", "temas", "decisiones", "problemas", "acciones"]
 
@@ -72,7 +74,7 @@ def armar(tmp_path: Path) -> tuple[Path, Path, Path]:
 
 
 def test_todas_validas(tmp_path):
-    reporte = evaluar_contratos(*armar(tmp_path))
+    reporte = evaluar_contratos(*armar(tmp_path), REQUERIDAS)
     assert reporte["cumple"] is True
     assert {m: (r["validas"], r["total"]) for m, r in reporte["modulos"].items()} == {
         "stt": (2, 2), "diarizacion": (1, 1), "asociacion": (1, 1), "minutas": (2, 2)}
@@ -83,7 +85,7 @@ def test_una_salida_fuera_de_contrato(tmp_path):
     manifiesto, datos, inferencia = armar(tmp_path)
     escribir(inferencia / "figshare-S22-01/diarization.json",
              {"segments": [{"start": 0.5, "end": 0.5, "speaker": "SPEAKER_00"}]})
-    reporte = evaluar_contratos(manifiesto, datos, inferencia)
+    reporte = evaluar_contratos(manifiesto, datos, inferencia, REQUERIDAS)
     assert reporte["cumple"] is False
     diar = reporte["modulos"]["diarizacion"]
     assert (diar["validas"], diar["total"]) == (0, 1)
@@ -95,7 +97,7 @@ def test_una_salida_fuera_de_contrato(tmp_path):
 def test_salida_faltante_no_es_violacion(tmp_path):
     manifiesto, datos, inferencia = armar(tmp_path)
     (inferencia / "clip-c1/asr.json").unlink()
-    stt = evaluar_contratos(manifiesto, datos, inferencia)["modulos"]["stt"]
+    stt = evaluar_contratos(manifiesto, datos, inferencia, REQUERIDAS)["modulos"]["stt"]
     assert stt["faltantes"] == ["clip-c1/asr.json"]
     assert stt["violaciones"] == []
     assert (stt["validas"], stt["total"]) == (1, 2)
@@ -108,7 +110,7 @@ def test_minuta_con_evidencia_inexistente(tmp_path):
     datos_minuta["temas"][0]["ids_intervenciones"] = datos_minuta["temas"][0]["id_ancla"] = "x"
     datos_minuta["temas"][0]["ids_intervenciones"] = ["x"]
     escribir(ruta, datos_minuta)
-    minutas = evaluar_contratos(manifiesto, datos, inferencia)["modulos"]["minutas"]
+    minutas = evaluar_contratos(manifiesto, datos, inferencia, REQUERIDAS)["modulos"]["minutas"]
     assert (minutas["validas"], minutas["total"]) == (1, 2)
     assert minutas["violaciones"][0]["archivo"] == "ami-r1/minutes.json"
 
@@ -130,3 +132,14 @@ def test_evaluar_por_linea_de_comandos(tmp_path, capsys):
     assert "4/4" in capsys.readouterr().out
     escribir(inferencia / "clip-c1/asr.json", {"language": "es", "segments": [{"start": 2, "end": 1}]})
     assert main(["evaluar", "--config", str(config)]) == 1
+
+
+def test_minuta_sin_las_secciones_requeridas(tmp_path):
+    manifiesto, datos, inferencia = armar(tmp_path)
+    carpeta = inferencia / "ami-r1"
+    escribir(carpeta / "minutes.json", {"resumen": "Solo un resumen."})
+    escribir(carpeta / "ejecucion_minutas.json", {"secciones": ["resumen"]})
+    minutas = evaluar_contratos(manifiesto, datos, inferencia, REQUERIDAS)["modulos"]["minutas"]
+    assert (minutas["validas"], minutas["total"]) == (1, 2)
+    [violacion] = minutas["violaciones"]
+    assert violacion["archivo"] == "ami-r1/minutes.json" and "secciones" in violacion["regla"]

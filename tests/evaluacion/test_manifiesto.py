@@ -100,3 +100,61 @@ def test_verificar_por_linea_de_comandos(tmp_path, capsys):
     (datos / "clips" / "c1" / "audio.wav").write_bytes(b"otro")
     assert main(["preparar", "--verificar", "--config", str(config)]) == 1
     assert "clips/c1/audio.wav" in capsys.readouterr().err
+
+
+# ---------- muestra congelada: preparar no la reemplaza si cambia (revisión del PR #20) ----------
+
+from types import SimpleNamespace
+
+import pytest
+
+from evaluacion.modular.muestra import MuestraDistinta, publicar_muestra
+
+
+def congelada(tmp_path, semilla: int):
+    """Muestra publicada (datos + manifiesto) y una nueva preparada en datos.preparando."""
+    datos, ruta = tmp_path / "datos", tmp_path / "manifiesto.json"
+    datos.mkdir()
+    (datos / "x.wav").write_bytes(b"vieja")
+    escribir(ruta, construir_manifiesto(20261010, {}, [], {}))
+    nueva = tmp_path / "datos.preparando"
+    nueva.mkdir()
+    (nueva / "x.wav").write_bytes(b"nueva")
+    config = SimpleNamespace(salida=datos, manifiesto=ruta)
+    return config, construir_manifiesto(semilla, {}, [], {}), nueva
+
+
+def test_muestra_distinta_de_la_congelada(tmp_path):
+    config, manifiesto, nueva = congelada(tmp_path, semilla=7)
+    antes = config.manifiesto.read_bytes()
+    with pytest.raises(MuestraDistinta) as error:
+        publicar_muestra(config, manifiesto, nueva, inicio=0)
+    assert manifiesto["contenido_sha256"] in str(error.value) and "--reemplazar" in str(error.value)
+    assert config.manifiesto.read_bytes() == antes
+    assert (config.salida / "x.wav").read_bytes() == b"vieja"
+    assert not nueva.exists()
+
+
+def test_misma_muestra_renueva_datos_sin_tocar_el_manifiesto(tmp_path):
+    config, manifiesto, nueva = congelada(tmp_path, semilla=20261010)
+    antes = config.manifiesto.read_bytes()
+    publicar_muestra(config, manifiesto, nueva, inicio=0)
+    assert config.manifiesto.read_bytes() == antes
+    assert (config.salida / "x.wav").read_bytes() == b"nueva"
+
+
+def test_reemplazar_explicito(tmp_path):
+    config, manifiesto, nueva = congelada(tmp_path, semilla=7)
+    publicar_muestra(config, manifiesto, nueva, inicio=0, reemplazar=True)
+    assert json.loads(config.manifiesto.read_text(encoding="utf-8"))["contenido_sha256"] == manifiesto["contenido_sha256"]
+    assert (config.salida / "x.wav").read_bytes() == b"nueva"
+
+
+def test_primera_muestra(tmp_path):
+    datos, ruta, nueva = tmp_path / "datos", tmp_path / "manifiesto.json", tmp_path / "datos.preparando"
+    nueva.mkdir()
+    (nueva / "x.wav").write_bytes(b"nueva")
+    manifiesto = construir_manifiesto(1, {}, [], {})
+    publicar_muestra(SimpleNamespace(salida=datos, manifiesto=ruta), manifiesto, nueva, inicio=0)
+    assert json.loads(ruta.read_text(encoding="utf-8"))["contenido_sha256"] == manifiesto["contenido_sha256"]
+    assert (datos / "x.wav").is_file()

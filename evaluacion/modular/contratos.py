@@ -4,7 +4,8 @@ Cada salida se valida con el validador de su etapa, sin cargar modelos:
 - diarización: `validar_diarizacion` de `src/diarizacion/contrato.py`;
 - transcripción: `validate_asr_contract` de `src/stt/contrato.py`;
 - asociación: `validar_transcripcion` de `src/asociacion/contrato.py` y la lectura de la Etapa 5 (`leer_transcripcion`);
-- minutas: el modelo de `src/minutas/contratos.py` para sus secciones y `validar_evidencias`.
+- minutas: las secciones exigidas por la configuración, el modelo de `src/minutas/contratos.py` para ellas y
+  `validar_evidencias`.
 Una salida que falta se informa como faltante, no como violación.
 """
 
@@ -42,7 +43,8 @@ def _transcripcion_de(elemento: dict, datos: Path, inferencia: Path) -> Path:
     return inferencia / elemento["id"] / "transcription.json"
 
 
-def _violaciones(modulo: str, elemento: dict, datos: Path, inferencia: Path) -> tuple[str, list[str]]:
+def _violaciones(modulo: str, elemento: dict, datos: Path, inferencia: Path,
+                 secciones: tuple[str, ...]) -> tuple[str, list[str]]:
     """(archivo evaluado, reglas incumplidas); lanza Faltante si falta una salida."""
     carpeta = inferencia / elemento["id"]
     duracion = _duracion(datos, elemento)
@@ -72,10 +74,13 @@ def _violaciones(modulo: str, elemento: dict, datos: Path, inferencia: Path) -> 
     from src.minutas.contratos import modelo_minuta, validar_evidencias
     from src.minutas.entrada import leer_transcripcion
 
-    secciones = tuple(_leer(carpeta / "ejecucion_minutas.json")["secciones"])
+    declaradas = tuple(_leer(carpeta / "ejecucion_minutas.json")["secciones"])
     texto = (carpeta / "minutes.json")
     if not texto.is_file():
         raise Faltante(texto)
+    if declaradas != secciones:
+        return "minutes.json", [f"secciones {list(declaradas)} distintas de las requeridas por la configuración "
+                                f"{list(secciones)}"]
     try:
         minuta = modelo_minuta(secciones).model_validate_json(texto.read_text(encoding="utf-8"))
         intervenciones, _ = leer_transcripcion(_transcripcion_de(elemento, datos, inferencia))
@@ -85,7 +90,9 @@ def _violaciones(modulo: str, elemento: dict, datos: Path, inferencia: Path) -> 
     return "minutes.json", []
 
 
-def evaluar_contratos(manifiesto: Path, datos: Path, inferencia: Path) -> dict:
+def evaluar_contratos(manifiesto: Path, datos: Path, inferencia: Path, secciones) -> dict:
+    """`secciones`: las que exige la configuración (`[modelos].secciones`); la minuta se valida contra ellas."""
+    secciones = tuple(secciones)
     m = json.loads(Path(manifiesto).read_text(encoding="utf-8"))
     datos, inferencia = Path(datos), Path(inferencia)
     modulos = {mod: {"validas": 0, "total": 0, "faltantes": [], "violaciones": []} for mod in MODULOS}
@@ -94,7 +101,7 @@ def evaluar_contratos(manifiesto: Path, datos: Path, inferencia: Path) -> dict:
             r = modulos[modulo]
             r["total"] += 1
             try:
-                archivo, reglas = _violaciones(modulo, elemento, datos, inferencia)
+                archivo, reglas = _violaciones(modulo, elemento, datos, inferencia, secciones)
             except Faltante as f:
                 r["faltantes"].append(Path(str(f.args[0])).relative_to(inferencia).as_posix()
                                       if str(f.args[0]).startswith(str(inferencia)) else Path(str(f.args[0])).name)
