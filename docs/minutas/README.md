@@ -107,7 +107,9 @@ La implementación integrada importa `src` como paquete desde la raíz o tras in
 
 ## Contratos
 
-La entrada del flujo integrado exige una lista no vacía `segments`; cada intervención contiene `start`, `end` (segundos no negativos, inicio menor que fin), `speaker`, `name`, `text`, `overlap` y `ambiguous`. Se admiten campos adicionales que incorpore el módulo anterior, sin alterar estos campos obligatorios. Las intervenciones se ordenan de forma estable y reciben identificadores internos `I000001`, `I000002`, etc.; no se inventan marcas temporales nuevas.
+La entrada exige una lista no vacía `segments`, según el [contrato de asociación](../asociacion/README.md#contratos). Las intervenciones reciben identificadores internos `I000001`, `I000002`, etc. Se conserva el orden de reconocimiento en las salidas nuevas y el orden temporal estable en las históricas. En las nuevas se comunica al modelo la resolución temporal y los hablantes detectados, diferenciando presencia vocal de atribución textual. El contexto puede fundamentar la interpretación semántica, pero la mera detección de una voz no permite atribuirle una afirmación, decisión o compromiso; la incertidumbre se mantiene en extracción y consolidación.
+
+El texto con ubicación por segmento se utiliza como evidencia completa y se presenta con el intervalo y la indicación `aprox.` en las referencias de Markdown. El texto sin ubicación utilizable permanece en la transcripción y no se transmite al modelo ni se admite como evidencia de la minuta. La salida registra el número de intervenciones excluidas en el manifiesto y lo informa en el Markdown. Si no queda ninguna intervención localizable, se informa un error antes de llamar al modelo. Esta decisión prioriza la verificabilidad de las referencias en el audio; puede excluir contenido relevante. No se inventan tiempos ni se presupone resolución por palabra en los artefactos históricos.
 
 La salida contiene:
 
@@ -115,7 +117,7 @@ La salida contiene:
 |---|---|
 | `minutes.json` | Minuta estructurada con exactamente las secciones solicitadas. Los elementos de las listas contienen referencias a las intervenciones. |
 | `minutes.md` | Presentación ejecutiva determinística del JSON, con tiempos tomados del archivo de entrada. |
-| `ejecucion_minutas.json` | Modelo, proveedor, parámetros, hashes de entrada y prompts, uso de tokens cuando esté disponible y duración. |
+| `ejecucion_minutas.json` | Modelo, proveedor, parámetros, hashes de entrada y prompts, uso de tokens cuando esté disponible, duración y conteo de intervenciones sin ubicación excluidas. |
 
 Los elementos de listas incluyen `texto`, `ids_intervenciones` e `id_ancla`. Las acciones incorporan `responsable` y `plazo`, con `null` cuando no constan. Una categoría seleccionada sin elementos produce una lista vacía. Las categorías no seleccionadas no aparecen en la salida. No se solicitan ni inventan título, fecha o participantes que no estén disponibles en la transcripción. El JSON no reproduce el XML de AMI: toma sus categorías abstractivas como referencia y permite seleccionar exclusivamente las que correspondan.
 

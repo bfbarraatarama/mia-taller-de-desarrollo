@@ -96,7 +96,7 @@ def test_interrupcion_breve(tmp_path):
     palabras = [(f"p{k}", 0.5 + k, 1.5 + k) for k in range(12)]  # intervención de 0,5 a 12,5 s
     carpeta = crear_reunion(tmp_path, 14.0, [(0.0, 13.0, "SPEAKER_00"), (5.0, 5.3, "SPEAKER_01")],
                             [segmento(*palabras)])
-    assert marcas(carpeta) == [("SPEAKER_00", True, False)]
+    assert marcas(carpeta) == [("SPEAKER_00", True, True)]
 
 
 def test_roce_de_bordes(tmp_path):
@@ -156,11 +156,11 @@ def test_sin_habla_transcrita(tmp_path, capsys):
     assert "sin habla transcrita" in leer(carpeta / "transcription.error.json")["mensaje"]
 
 
-def test_sin_habla_tras_el_recorte(tmp_path):
-    """El único segmento empieza después del audio (dentro del margen de 1,0 s): se descarta y no queda habla."""
+def test_texto_sin_intervalo_tras_el_recorte(tmp_path):
     carpeta = crear_reunion(tmp_path, 5.0, [(0.0, 2.0, "SPEAKER_00")], [segmento(("eco", 5.2, 5.6))])
-    with pytest.raises(AsociacionError, match="sin habla transcrita"):
-        asociar(carpeta)
+    [i] = asociar(carpeta).intervenciones
+    assert (i.text, i.start, i.end, i.timing, i.speaker, i.overlap, i.ambiguous) == (
+        "eco", None, None, "unknown", None, None, True)
 
 
 def test_diarizacion_vacia_con_texto(tmp_path):

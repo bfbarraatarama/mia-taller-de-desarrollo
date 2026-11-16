@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import math
 from functools import lru_cache
-from typing import Self
+from typing import Literal, Self
 
 from pydantic import BaseModel, ConfigDict, Field, create_model, field_validator, model_validator
 
@@ -13,19 +13,28 @@ class _Estricto(BaseModel):
     model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
 
 
+class HablanteDetectado(_Estricto):
+    hablante: str
+    nombre: str | None
+
+
 class Intervencion(_Estricto):
     id: str
-    inicio: float
-    fin: float
+    inicio: float | None
+    fin: float | None
     hablante: str | None
     nombre: str | None
     texto: str = Field(min_length=1)
-    superposicion: bool
+    superposicion: bool | None
     ambiguo: bool
+    resolucion_temporal: Literal["palabra", "segmento", "desconocida"] | None = None
+    hablantes_detectados: list[HablanteDetectado] | None = None
 
     @field_validator("inicio", "fin", mode="before")
     @classmethod
-    def tiempo_valido(cls, valor: object) -> float:
+    def tiempo_valido(cls, valor: object) -> float | None:
+        if valor is None:
+            return None
         if isinstance(valor, bool) or not isinstance(valor, (int, float)):
             raise ValueError("El tiempo debe ser numérico, expresado en segundos.")
         if not math.isfinite(valor) or valor < 0:
@@ -34,14 +43,21 @@ class Intervencion(_Estricto):
 
     @field_validator("superposicion", "ambiguo", mode="before")
     @classmethod
-    def bandera_valida(cls, valor: object) -> bool:
+    def bandera_valida(cls, valor: object) -> bool | None:
+        if valor is None:
+            return None
         if not isinstance(valor, bool):
             raise ValueError("La marca de confianza debe ser booleana.")
         return valor
 
     @model_validator(mode="after")
     def orden_temporal(self) -> Self:
-        if self.fin <= self.inicio:
+        if self.resolucion_temporal == "desconocida":
+            if (any(v is not None for v in (self.inicio, self.fin, self.hablante, self.nombre,
+                                            self.superposicion, self.hablantes_detectados)) or not self.ambiguo):
+                raise ValueError("Evidencia incompatible con resolución desconocida.")
+            return self
+        if self.inicio is None or self.fin is None or self.superposicion is None or self.fin <= self.inicio:
             raise ValueError("El fin de la intervención debe superar el inicio.")
         return self
 
@@ -115,7 +131,7 @@ def modelo_minuta(secciones: tuple[str, ...]) -> type[BaseModel]:
 
 def validar_evidencias(minuta: BaseModel, intervenciones: list[Intervencion]) -> None:
     """Comprueba existencia de referencias, no su veracidad semántica."""
-    disponibles = {intervencion.id for intervencion in intervenciones}
+    disponibles = {intervencion.id for intervencion in intervenciones if intervencion.inicio is not None}
     for categoria in ("temas", "decisiones", "problemas", "acciones"):
         for indice, elemento in enumerate(getattr(minuta, categoria, []), start=1):
             desconocidos = set(elemento.ids_intervenciones) - disponibles

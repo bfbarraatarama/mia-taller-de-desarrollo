@@ -107,6 +107,18 @@ Nova Lite (`us.amazon.nova-lite-v1:0`) registró 2447 tokens de entrada y 449 de
 
 La regresión final del código (árbol `819b4c2fbcec8811c6dbd2b9e9f94555168a8513`, anterior a esta actualización exclusivamente documental) pasó 821 pruebas ordinarias y 52 subtests, con una omisión por presencia de CUDA, seis deselecciones, compilación sin errores y código de salida 0. No se ejecutaron los seis casos deseleccionados como parte de esa suite.
 
+## Preservación textual y tratamiento de incertidumbres
+
+La versión 0.4.0 de asociación incorpora la regresión de una negación sin intervalo de palabra válido. En el caso sintético, el segmento «No aprobar el cambio» tiene intervalo [0; 2] s y la palabra «No» tiene duración nula. Se reproduce el mecanismo de pérdida sin depender de los tiempos exactos de la grabación que motivó la revisión ni de una inferencia. La salida conserva el texto completo con resolución por segmento. Las pruebas incluyen discordancias entre texto y palabras, signos de puntuación, repeticiones, recortes, intervalos desconocidos, órdenes incompatibles, empates, huecos y actividad simultánea o sucesiva. Se comprueba además la partición literal de 150 combinaciones generadas con semilla fija.
+
+```bash
+.venv/bin/python -m pytest -q tests/asociacion/test_preservacion_textual.py tests/integracion/test_preservacion_textual.py tests/integracion/test_workflow.py
+```
+
+Las pruebas verifican el alcance de la lista de voces detectadas, el etiquetado, las referencias de minutas y su exclusión de evidencias ilocalizables, los visores y la reutilización de STT y diarización. Los modelos se sustituyen por entradas y respuestas de prueba; las salidas del modelo de minutas no constituyen una evaluación semántica. El notebook `stt_asr_peru.ipynb` admite segmentos sin intervalo; sus celdas de presentación se comprueban con datos sintéticos y se retiran las salidas antiguas, sin regenerarlas mediante inferencia.
+
+En un entorno aislado con Python 3.13.5, `python -m compileall -q src tests evaluacion hito-2/scripts` terminó sin errores. La suite ordinaria (`python -m pytest -q -rs`) registró 768 pruebas y 52 subtests aprobados, 54 omisiones, seis deselecciones y dos fallos por ausencia de PyArrow en pruebas de Hito 2 (`test_auditoria_integrada_publica_datos_no_sensibles` y `test_tablas_csv_y_parquet_reales`). Las omisiones incluyen pruebas que requieren PySide6, eSpeak NG, 7-Zip, referencias RTTM, Whisper y el SDK de Ollama. En el entorno local con CUDA, la compilación terminó sin errores; las pruebas de asociación, STT, minutas e integración registraron 530 pruebas y 52 subtests aprobados. La suite ordinaria (`.venv/bin/python -m pytest -q -rs`) registró 861 pruebas y 52 subtests aprobados, una omisión por presencia de CUDA, seis deselecciones y ningún fallo. Queda pendiente la comprobación visual de la interfaz gráfica real. No se estima la frecuencia de estas condiciones en reuniones reales ni se modifican los resultados de evaluación previos.
+
 ## Límites y evaluación posterior
 
 No consta una instalación nueva integral en CPU o Windows ni una evaluación completa en la RTX 3050 Laptop de 6 GB prevista por la definición de la PoC. El manifiesto de muestra de Hito 2 y el de Figshare no acreditan por sí solos que se haya congelado la muestra combinada específica de §2.3. La reunión consentida de evaluación, sus notas previas independientes, las muestras modulares concretas y los siete escenarios deben identificarse con sus propios hashes y registros. No se deben convertir ejecuciones cortas, resultados previos ni pruebas simuladas en un veredicto GO. Los umbrales y casos se deben tomar directamente del documento de Hito 3, sin crear una segunda definición normativa.

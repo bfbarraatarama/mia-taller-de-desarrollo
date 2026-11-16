@@ -19,14 +19,15 @@ from .contrato import validar_speakers, validar_transcripcion
 from .errores import AsociacionError
 from .fragmentos import semilla
 
-VERSION = "0.3.2"
+VERSION = "0.4.0"
 TRANSCRIPCION = "transcription.json"
 META = "transcription.meta.json"
 SPEAKERS = "speakers.json"
 ERROR = "transcription.error.json"
 
 REGLAS = ["D1 máxima superposición", "D2 empates por continuidad", "D3 huecos de hasta 0,25 s",
-          "D4 cortes por hablante y segmento de Whisper", "D5 marcas overlap y ambiguous"]
+          "D4 cortes por hablante y segmento de Whisper", "D5 marcas overlap y ambiguous global y local",
+          "preservación literal con respaldo de segmento y hablantes detectados"]
 
 
 def serializar(datos) -> bytes:
@@ -141,9 +142,12 @@ def escribir(asociacion: Asociacion, etiquetado=None, salida: str | Path | None 
     for i in asociacion.intervenciones:
         d = i.a_dict()
         d["name"] = nombres.get(i.speaker) if i.speaker is not None else None
+        if d["speakers_detected"] is not None:
+            for detectado in d["speakers_detected"]:
+                detectado["name"] = nombres.get(detectado["speaker"])
         segmentos.append(d)
     datos = {"segments": segmentos}
-    violaciones = validar_transcripcion(datos, asociacion.duracion, asociacion.etiquetas)
+    violaciones = validar_transcripcion(datos, asociacion.duracion, asociacion.etiquetas, asr=asociacion.asr)
     if violaciones:
         raise _violacion(TRANSCRIPCION, violaciones)
     archivos = {TRANSCRIPCION: serializar(datos)}

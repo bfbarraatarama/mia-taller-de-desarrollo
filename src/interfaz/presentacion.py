@@ -15,14 +15,16 @@ PAUSA_MAX_MS = 1000
 
 @dataclass(frozen=True)
 class Bloque:
-    inicio: float
-    fin: float
+    inicio: float | None
+    fin: float | None
     hablante: str | None
     nombre: str | None
     textos: tuple[str, ...]
-    overlap: bool
+    overlap: bool | None
     ambiguous: bool
     solapamiento_parcial: bool = False
+    timing: str | None = None
+    detectados: tuple[str, ...] | None = None
 
 
 def agrupar_transcripcion(contenido: str) -> list[Bloque]:
@@ -40,6 +42,8 @@ def agrupar_transcripcion(contenido: str) -> list[Bloque]:
         raise ValueError('La etiqueta del hablante debe ser texto o nula.')
     etiquetas = {s.get('speaker') for s in filas if isinstance(s, dict)
                  and isinstance(s.get('speaker'), str)}
+    etiquetas.update(d['speaker'] for s in filas if isinstance(s, dict) and isinstance(s.get('speakers_detected'), list)
+                     for d in s['speakers_detected'] if isinstance(d, dict) and isinstance(d.get('speaker'), str))
     # sin acceso a la duración del audio en este adaptador de lectura
     errores = validar_transcripcion(datos, float('inf'), etiquetas)
     if errores:
@@ -49,8 +53,11 @@ def agrupar_transcripcion(contenido: str) -> list[Bloque]:
     fin_previo = -1.0
     cruzados = []
     for i, s in enumerate(filas):
-        cruzados.append(s['start'] < fin_previo or
-                        (i + 1 < len(filas) and filas[i + 1]['start'] < s['end']))
+        if s['start'] is None:
+            cruzados.append(True)
+            continue
+        siguiente = filas[i + 1]['start'] if i + 1 < len(filas) else None
+        cruzados.append(s['start'] < fin_previo or (siguiente is not None and siguiente < s['end']))
         fin_previo = max(fin_previo, s['end'])
     grupos = []
     for i, s in enumerate(filas):
@@ -58,6 +65,8 @@ def agrupar_transcripcion(contenido: str) -> list[Bloque]:
         reunir = (anterior is not None and s['speaker'] is not None
                   and (s['speaker'], s['name']) == (anterior['speaker'], anterior['name'])
                   and not any((s['ambiguous'], anterior['ambiguous'], cruzados[i], cruzados[i - 1]))
+                  and s.get('timing') == anterior.get('timing') in (None, 'word')
+                  and s.get('speakers_detected') == anterior.get('speakers_detected')
                   and 0 <= round(s['start'] * 1000) - round(anterior['end'] * 1000) <= PAUSA_MAX_MS)
         if not reunir:
             grupos.append([])
@@ -66,10 +75,13 @@ def agrupar_transcripcion(contenido: str) -> list[Bloque]:
     bloques = []
     for grupo in grupos:
         primera, ultima = grupo[0], grupo[-1]
-        solapados = sum(s['overlap'] for s in grupo)
+        solapados = sum(s['overlap'] is True for s in grupo)
+        detectados = primera.get('speakers_detected')
         bloques.append(Bloque(primera['start'], ultima['end'], primera['speaker'], primera['name'],
-                              tuple(s['text'] for s in grupo), bool(solapados),
-                              any(s['ambiguous'] for s in grupo), 0 < solapados < len(grupo)))
+                              tuple(s['text'] for s in grupo), None if primera['overlap'] is None else bool(solapados),
+                              any(s['ambiguous'] for s in grupo), 0 < solapados < len(grupo), primera.get('timing'),
+                              tuple(f"{d['name']} ({d['speaker']})" if d['name'] else d['speaker']
+                                    for d in detectados) if detectados is not None else None))
     return bloques
 
 
@@ -97,6 +109,8 @@ def transcripcion_html(contenido: str) -> str:
     bloques = agrupar_transcripcion(contenido)
     partes = ['<h1>Transcripción de la reunión</h1>',
               '<p>Vista agrupada para lectura. Consultá el original para los límites de cada fragmento.</p>']
+    if any(b.timing is not None for b in bloques):
+        partes.append('<p>Se conserva el orden de reconocimiento aunque no coincida con el temporal.</p>')
     if not bloques:
         partes.append('<p>No hay intervenciones transcritas.</p>')
     for b in bloques:
@@ -108,7 +122,12 @@ def transcripcion_html(contenido: str) -> str:
             marcas.append('solapamiento en parte de la intervención' if b.solapamiento_parcial else 'solapamiento')
         if b.ambiguous:
             marcas.append('atribución ambigua')
-        detalle = f'{marca_tiempo(b.inicio)} – {marca_tiempo(b.fin)}'
+        detalle = ('Sin ubicación temporal verificable' if b.inicio is None else
+                   f'{marca_tiempo(b.inicio)} – {marca_tiempo(b.fin)}')
+        if b.timing == 'segment':
+            marcas.append('resolución temporal por segmento')
+        if b.detectados is not None and (b.ambiguous or b.overlap or len(b.detectados) != 1):
+            marcas.append('hablantes detectados: ' + (', '.join(b.detectados) or 'ninguno'))
         if marcas:
             detalle += ' · ' + ' · '.join(marcas)
         partes.append(f'<p><b>{_literal(hablante)}</b><br>{_literal(detalle)}</p>')
@@ -118,7 +137,8 @@ def transcripcion_html(contenido: str) -> str:
 
 # Invertir exclusivamente el escape que aplica src.minutas.formato._texto.
 _ESCAPE = re.compile(r'\\([\\`*_{}\[\]<>])')
-_ITEM = re.compile(r'^- \[\d{2,}:\d{2}(?::\d{2})?\] ')
+_RELOJ = r'\d{2,}:\d{2}(?::\d{2})?(?:\.\d{3})?'
+_ITEM = re.compile(rf'^- \[({_RELOJ})(?:–{_RELOJ}, aprox\.)?\] ')
 
 
 def minuta_html(contenido: str) -> str:

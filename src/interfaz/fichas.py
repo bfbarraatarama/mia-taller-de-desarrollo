@@ -172,7 +172,10 @@ class TarjetaFicha(QGroupBox):
         f = self.ficha.fragmento
         self.contador.setText(f"{self.ficha.contador} · {mmss(f.start)} a {mmss(f.end)}")
         self.aviso.setVisible(self.ficha.aviso_superposicion)
-        self.texto.setText(f"«{f.texto}»" if f.texto else "(sin texto transcrito en este fragmento)")
+        texto = f"«{f.texto}»" if f.texto else "(sin texto localizable en este fragmento)"
+        if f.texto_incierto:
+            texto += "\nTexto de resolución temporal incompleta; pueden omitirse segmentos parcialmente incluidos."
+        self.texto.setText(texto)
 
     def mostrar_sonando(self, sonando: bool) -> None:
         self.boton_reproducir.setText("■ Detener" if sonando else "▶ Reproducir")

@@ -1134,12 +1134,26 @@ def test_asociacion_anterior_legible_y_regeneracion_sin_repetir_inferencias_prev
     previos = instantanea(s.salida, ['audio.wav', 'diarization.json', 'asr.json'])
     meta = s.salida / 'transcription.meta.json'
     datos_meta = json.loads(meta.read_text())
-    datos_meta['version'] = '0.3.1'
+    datos_meta['version'] = '0.3.2'
+    transcripcion = s.salida / 'transcription.json'
+    anterior = json.loads(transcripcion.read_text())
+    for fila in anterior['segments']:
+        for clave in ('source', 'timing', 'speakers_detected'):
+            fila.pop(clave)
+    transcripcion.write_text(json.dumps(anterior))
+    datos_meta['sha256'][transcripcion.name] = sha256(transcripcion)
     meta.write_text(json.dumps(datos_meta))
+    meta_minuta = s.salida / 'ejecucion_minutas.json'
+    minuta = json.loads(meta_minuta.read_text())
+    minuta['sha256_entrada'] = sha256(transcripcion)
+    minuta.pop('intervenciones_sin_ubicacion_excluidas')
+    meta_minuta.write_text(json.dumps(minuta))
     datos = manifiesto(s.salida)
     hashes_anteriores = {n: digest for n, (digest, _) in previos.items()}
-    datos['etapas']['asociar']['clave'] = huella(hashes_anteriores, None)
+    datos['etapas']['asociar']['clave'] = huella(hashes_anteriores, None, '0.3.2')
     datos['etapas']['asociar']['archivos'][meta.name] = sha256(meta)
+    datos['etapas']['asociar']['archivos'][transcripcion.name] = sha256(transcripcion)
+    datos['etapas']['minuta']['archivos'][meta_minuta.name] = sha256(meta_minuta)
     guardar_manifiesto(s.salida, datos)
     assert len(consultar_reunion(s.salida)['etapas_vigentes']) == 5
     r = procesar_reunion(s)
@@ -1147,4 +1161,41 @@ def test_asociacion_anterior_legible_y_regeneracion_sin_repetir_inferencias_prev
     assert r['tiempos']['etapas']['asociar']['estado'] == 'ejecutada'
     assert tuple(modelos_falsos.values()) == (1, 1, 2)
     assert instantanea(s.salida, previos) == previos
-    assert json.loads(meta.read_text())['version'] == '0.3.2'
+    assert json.loads(meta.read_text())['version'] == '0.4.0'
+
+
+def test_preservacion_textual_en_workflow_y_reutilizacion(tmp_path, modelos_falsos, monkeypatch):
+    s = solicitud(tmp_path, modo='pausa')
+    original = ejecucion._trabajador
+
+    def ejecutar(modulo, args, *, emisor):
+        resultado = original(modulo, args, emisor=emisor)
+        if modulo == 'src.stt':
+            ruta = s.salida / 'asr.json'
+            datos = json.loads(ruta.read_text())
+            datos['segments'][0]['text'] = 'No revisamos el tema'
+            datos['segments'].append({'start': None, 'end': None, 'text': 'Texto sin tiempo.', 'words': []})
+            ruta.write_text(json.dumps(datos))
+        return resultado
+
+    monkeypatch.setattr(ejecucion, '_trabajador', ejecutar)
+    preparar_reunion(s)
+    from src.asociacion.asociacion import asociar
+    fichas = ModeloFichas(asociar(s.salida))
+    fichas.escribir_nombre('SPEAKER_00', 'Ana')
+    r = continuar_reunion(s.salida, fichas.confirmar())
+    assert r['estado'] == 'completado'
+    datos = json.loads((s.salida / 'transcription.json').read_text())['segments']
+    assert [x['text'] for x in datos] == ['No revisamos el tema', 'Texto sin tiempo.']
+    assert datos[0]['timing'] == 'segment' and datos[0]['name'] == 'Ana'
+    assert datos[0]['speakers_detected'] == [{'speaker': 'SPEAKER_00', 'name': 'Ana'}]
+    assert datos[1]['timing'] == 'unknown'
+    assert 'falta de ubicación temporal' in (s.salida / 'minutes.md').read_text()
+    inicial = instantanea(s.salida, ('audio.wav', 'diarization.json', 'asr.json', 'transcription.json', 'minutes.md'))
+    assert continuar_reunion(s.salida)['estado'] == 'completado'
+    assert tuple(modelos_falsos.values()) == (1, 1, 1)
+    assert instantanea(s.salida, inicial) == inicial
+    assert reetiquetar_reunion(s.salida, {'SPEAKER_00': 'Beatriz'})['estado'] == 'completado'
+    datos = json.loads((s.salida / 'transcription.json').read_text())['segments']
+    assert datos[0]['speakers_detected'] == [{'speaker': 'SPEAKER_00', 'name': 'Beatriz'}]
+    assert tuple(modelos_falsos.values()) == (1, 1, 2)
