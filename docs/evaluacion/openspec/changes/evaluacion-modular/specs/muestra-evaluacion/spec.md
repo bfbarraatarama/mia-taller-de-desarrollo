@@ -51,7 +51,7 @@ Todo audio de la muestra SHALL quedar como WAV de 16 000 Hz, 1 canal y PCM de 16
 - **THEN** queda un WAV de 16 kHz, mono y PCM16, y el manifiesto vincula su SHA-256 con el del WAV original
 
 ### Requirement: Manifiesto verificable
-`preparar` SHALL escribir un manifiesto con la semilla, la versión del ejecutor, cada elemento con su fuente, original, transformación y SHA-256, y un `contenido_sha256` del conjunto. `preparar --verificar` SHALL comprobar los archivos contra el manifiesto sin modificarlos y fallar nombrando cada diferencia.
+`preparar` SHALL escribir un manifiesto con la semilla, la versión del ejecutor, cada elemento con su fuente, original, transformación y SHA-256, y un `contenido_sha256` del conjunto. `preparar --verificar` SHALL comprobar los archivos contra el manifiesto sin modificarlos y fallar nombrando cada diferencia. Si ya hay una muestra congelada con otro `contenido_sha256`, `preparar` SHALL fallar sin reemplazar nada, salvo `--reemplazar`.
 
 #### Scenario: Archivo alterado
 - **WHEN** se modifica un WAV de la muestra después de congelarla
@@ -60,3 +60,7 @@ Todo audio de la muestra SHALL quedar como WAV de 16 000 Hz, 1 canal y PCM de 16
 #### Scenario: Muestra intacta
 - **WHEN** se ejecuta `preparar --verificar` sobre la muestra recién preparada
 - **THEN** termina con código 0 y no modifica ningún archivo
+
+#### Scenario: Muestra distinta de la congelada
+- **WHEN** `preparar` produce un `contenido_sha256` distinto del manifiesto congelado
+- **THEN** falla nombrando los dos hashes, sin reemplazar el manifiesto ni los datos

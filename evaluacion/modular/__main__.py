@@ -30,6 +30,8 @@ def construir_parser() -> argparse.ArgumentParser:
         if nombre == "preparar":
             p.add_argument("--verificar", action="store_true",
                            help="solo comprobar la muestra contra su manifiesto, sin modificar nada")
+            p.add_argument("--reemplazar", action="store_true",
+                           help="reemplazar la muestra congelada aunque la nueva tenga otro contenido_sha256")
         if nombre == "inferir":
             p.add_argument("--rehacer", action="store_true", help="volver a inferir aunque haya salidas vigentes")
     return parser
@@ -61,12 +63,17 @@ def preparar(args) -> int:
         print(e, file=sys.stderr)
         return 1
     print(f"{len(hashes)} originales verificados.")
-    from .muestra import escribir_manifiesto, preparar_muestra
+    from .muestra import MuestraDistinta, preparar_muestra, publicar_muestra
 
-    manifiesto = preparar_muestra(config, hashes)
-    escribir_manifiesto(config.manifiesto, manifiesto, inicio)
+    manifiesto, nueva = preparar_muestra(config, hashes)
+    try:
+        escrito = publicar_muestra(config, manifiesto, nueva, inicio, reemplazar=args.reemplazar)
+    except MuestraDistinta as e:
+        print(e, file=sys.stderr)
+        return 1
     elementos = manifiesto["contenido"]["elementos"]
-    print(f"Muestra congelada: {len(elementos)} elementos, contenido_sha256 {manifiesto['contenido_sha256']}.")
+    estado = "congelada" if escrito else "igual a la congelada (manifiesto sin cambios)"
+    print(f"Muestra {estado}: {len(elementos)} elementos, contenido_sha256 {manifiesto['contenido_sha256']}.")
     return 0
 
 
@@ -166,7 +173,7 @@ def evaluar(args) -> int:
     else:
         print(f"No hay salidas: correr `inferir` o tener {config.salidas}.", file=sys.stderr)
         return 1
-    reporte = evaluar_contratos(config.manifiesto, config.salida, origen)
+    reporte = evaluar_contratos(config.manifiesto, config.salida, origen, config.modelos["secciones"])
     config.resultados.mkdir(parents=True, exist_ok=True)
     (config.resultados / "contratos.json").write_text(json.dumps(reporte, ensure_ascii=False, indent=2) + "\n",
                                                        encoding="utf-8")
