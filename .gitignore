@@ -73,6 +73,8 @@ hito-2/muestra/uba_games_figshare/
 /evaluacion/stt/generado/
 /evaluacion/modular/datos/
 /evaluacion/modular/inferencia/
+/evaluacion/escenarios/datos/
+/evaluacion/escenarios/corridas/
 /evaluacion/modular/**/*.wav
 # Protección frente a residuos locales de la arquitectura anterior.
 /PoC/

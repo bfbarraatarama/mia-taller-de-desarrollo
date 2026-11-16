@@ -1,0 +1,37 @@
+# Escenarios de §2.1 y recuperación (issue #15). Diseño: docs/evaluacion/openspec/changes/escenarios-funcionales/
+# Rutas relativas a la raíz del repositorio.
+
+semilla = 20261010
+manifiesto = "evaluacion/escenarios/entradas.manifest.json"  # se versiona
+resultados = "evaluacion/escenarios/resultados"              # se versiona
+datos = "evaluacion/escenarios/datos"                        # entradas derivadas (ruido): locales
+corridas = "evaluacion/escenarios/corridas"                  # salidas de la aplicación: locales
+muestra = "evaluacion/modular/muestra.manifest.json"         # muestra congelada del #13
+datos_muestra = "evaluacion/modular/datos"
+
+# Misma configuración que la evaluación modular (baseline de §3.1.1).
+[modelos]
+modelo_stt = "medium"
+dispositivo = "cuda"
+modelo_minutas = "qwen2.5-7b"
+secciones = ["resumen", "temas", "decisiones", "problemas", "acciones"]
+
+# 2.1.2: la tarea de la muestra con más habla superpuesta en la referencia (16,2 s).
+[superposicion]
+tarea = "figshare/S25/12/audio.wav"
+
+# 2.1.3: la reunión de ICSI más corta con 6 o más hablantes (D2).
+[icsi]
+archivo = "hito-2/.cache/icsi_audio/Bro015.interaction.wav"
+bytes = 32474668
+sha256 = "395768148dab1fcfbddaf35f886d3c360d61efa59bc3836804e243894565d589"
+obtener = "curl -fL -o hito-2/.cache/icsi_audio/Bro015.interaction.wav https://groups.inf.ed.ac.uk/ami/ICSIsignals/NXT/Bro015.interaction.wav"
+
+# 2.1.4: ruido rosa con semilla sobre una tarea de la muestra (D4).
+[ruido]
+base = "figshare/S22/01/audio.wav"
+snr_db = 5.0
+
+# 2.1.5: una sesión completa como varios archivos en orden (D3).
+[fragmentos]
+sesion = "S25"
