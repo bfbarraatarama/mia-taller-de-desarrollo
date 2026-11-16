@@ -8,6 +8,15 @@ semilla = 20261010
 cache = "hito-2/.cache"
 salida = "evaluacion/modular/datos"                    # audio y derivados: locales, no se versionan
 manifiesto = "evaluacion/modular/muestra.manifest.json"  # se versiona
+inferencia = "evaluacion/modular/inferencia"            # salidas de los módulos: locales, no se versionan
+resultados = "evaluacion/modular/resultados"            # reportes de evaluar: se versionan
+
+# Configuración de la inferencia (D15: baseline de §3.1.1).
+[modelos]
+modelo_stt = "medium"
+dispositivo = "cuda"
+modelo_minutas = "qwen2.5-7b"
+secciones = ["resumen", "temas", "decisiones", "problemas", "acciones"]
 
 [originales.common_voice]
 clave = "common_voice/common-voice-scripted-speech-26-0-riopla-0a258d97.tar.gz"

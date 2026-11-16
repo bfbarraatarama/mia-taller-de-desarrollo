@@ -21,6 +21,9 @@ class Config:
     cache: Path
     salida: Path
     manifiesto: Path
+    inferencia: Path
+    resultados: Path
+    modelos: dict
     originales: dict[str, Original]
 
 
@@ -50,4 +53,6 @@ def cargar_config(ruta: Path | str = CONFIG_POR_DEFECTO) -> Config:
                                       obtener=o["obtener"])
     return Config(semilla=int(datos["semilla"]), cache=RAIZ / datos["cache"], salida=RAIZ / datos["salida"],
                   manifiesto=RAIZ / datos["manifiesto"],
+                  inferencia=RAIZ / datos["inferencia"], resultados=RAIZ / datos["resultados"],
+                  modelos=dict(datos["modelos"]),
                   originales=originales)

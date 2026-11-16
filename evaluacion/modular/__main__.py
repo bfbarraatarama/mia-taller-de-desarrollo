@@ -5,7 +5,7 @@ Uso, desde la raíz del repositorio:
     .venv/bin/python -m evaluacion.modular inferir  [--config RUTA]
     .venv/bin/python -m evaluacion.modular evaluar  [--config RUTA]
 
-Códigos de salida: 0 terminó · 1 falló (el motivo va a la salida de errores) · 2 paso todavía no implementado.
+Códigos de salida: 0 terminó · 1 falló (el motivo va a la salida de errores).
 """
 
 from __future__ import annotations
@@ -30,6 +30,8 @@ def construir_parser() -> argparse.ArgumentParser:
         if nombre == "preparar":
             p.add_argument("--verificar", action="store_true",
                            help="solo comprobar la muestra contra su manifiesto, sin modificar nada")
+        if nombre == "inferir":
+            p.add_argument("--rehacer", action="store_true", help="volver a inferir aunque haya salidas vigentes")
     return parser
 
 
@@ -68,14 +70,51 @@ def preparar(args) -> int:
     return 0
 
 
-def no_implementado(args) -> int:
-    print(f"`{args.comando}` todavía no está implementado (grupos 5 y 6 de tasks.md).", file=sys.stderr)
-    return 2
+def inferir(args) -> int:
+    from .inferencia import MuestraAlterada, inferir as correr
+
+    config = cargar_config(args.config)
+    try:
+        resumen = correr(config, rehacer=args.rehacer, avisar=lambda m: print(m, flush=True))
+    except MuestraAlterada as e:
+        print(e, file=sys.stderr)
+        return 1
+    print(f"Inferencia: {resumen['ejecutados']} ejecutados, {resumen['reutilizados']} reutilizados.")
+    if resumen.get("fallidos"):
+        print("Fallaron: " + ", ".join(resumen["fallidos"]), file=sys.stderr)
+        return 1
+    return 0
+
+
+def evaluar(args) -> int:
+    import json
+
+    from .contratos import evaluar_contratos
+    from .muestra import verificar_muestra
+
+    config = cargar_config(args.config)
+    problemas = verificar_muestra(config.manifiesto, config.salida)
+    if problemas:
+        print("La muestra no coincide con su manifiesto; no se evalúa:\n" + "\n".join(f"- {p}" for p in problemas),
+              file=sys.stderr)
+        return 1
+    reporte = evaluar_contratos(config.manifiesto, config.salida, config.inferencia)
+    config.resultados.mkdir(parents=True, exist_ok=True)
+    (config.resultados / "contratos.json").write_text(json.dumps(reporte, ensure_ascii=False, indent=2) + "\n",
+                                                       encoding="utf-8")
+    for modulo, r in reporte["modulos"].items():
+        detalle = f"{r['validas']}/{r['total']}" + (f", {len(r['faltantes'])} faltantes" if r["faltantes"] else "")
+        print(f"{modulo:12} {detalle} ({r['porcentaje']} %)")
+        for v in r["violaciones"]:
+            print(f"    {v['archivo']}: {v['regla']}", file=sys.stderr)
+    print(f"Funcionamiento modular: {reporte['modulos_al_100']}/4 módulos al 100 % "
+          f"({'cumple' if reporte['cumple'] else 'no cumple'}).")
+    return 0 if reporte["cumple"] else 1
 
 
 def main(argv: list[str] | None = None) -> int:
     args = construir_parser().parse_args(argv)
-    return {"preparar": preparar}.get(args.comando, no_implementado)(args)
+    return {"preparar": preparar, "inferir": inferir, "evaluar": evaluar}[args.comando](args)
 
 
 if __name__ == "__main__":
