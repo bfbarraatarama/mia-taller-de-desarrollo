@@ -96,14 +96,31 @@ def _sin_rutas(comando: list[str], config) -> list[str]:
     return salida
 
 
+def _hashes_salidas(carpeta: Path, tipo: str) -> dict[str, str] | None:
+    """SHA-256 de cada archivo esperado; None si falta alguno."""
+    if not all((carpeta / n).is_file() for n in ARCHIVOS_ESPERADOS[tipo]):
+        return None
+    return {n: hashlib.sha256((carpeta / n).read_bytes()).hexdigest() for n in ARCHIVOS_ESPERADOS[tipo]}
+
+
+def _pipeline_completado(carpeta: Path) -> bool:
+    try:
+        return json.loads((carpeta / "workflow.json").read_text(encoding="utf-8")).get("estado") == "completado"
+    except (OSError, ValueError):
+        return False
+
+
 def _vigente(carpeta: Path, tipo: str, sha: str, modelos: dict, codigo: str) -> bool:
+    """Mismo insumo, configuración y código; salidas intactas (SHA-256 del registro) y, en Figshare, pipeline completo."""
     try:
         registro = json.loads((carpeta / "inferencia.json").read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return False
     return (registro.get("codigo") == 0 and registro.get("entrada_sha256") == sha
             and registro.get("configuracion") == modelos and registro.get("codigo_sha256") == codigo
-            and all((carpeta / n).is_file() for n in ARCHIVOS_ESPERADOS[tipo]))
+            and registro.get("salidas_sha256") is not None
+            and registro["salidas_sha256"] == _hashes_salidas(carpeta, tipo)
+            and (tipo != "figshare" or _pipeline_completado(carpeta)))
 
 
 def inferir(config, *, rehacer: bool = False, ejecutar=ejecutar_proceso, avisar=lambda *_: None) -> dict:
@@ -130,6 +147,8 @@ def inferir(config, *, rehacer: bool = False, ejecutar=ejecutar_proceso, avisar=
         codigo = ejecutar(comando, carpeta, tipo)
         resumen["ejecutados"] += 1
         faltan = [n for n in ARCHIVOS_ESPERADOS[tipo] if not (carpeta / n).is_file()]
+        if tipo == "figshare" and not faltan and not _pipeline_completado(carpeta):
+            faltan.append("workflow.json con estado «completado»")
         if codigo != 0 or faltan:
             fallidos.append(elemento["id"])
             avisar(f"    falló (código {codigo}; faltan {', '.join(faltan) or 'nada'}); ver {carpeta / 'inferencia.log'}")
@@ -137,6 +156,7 @@ def inferir(config, *, rehacer: bool = False, ejecutar=ejecutar_proceso, avisar=
         carpeta.mkdir(parents=True, exist_ok=True)
         (carpeta / "inferencia.json").write_text(json.dumps({
             "elemento": elemento["id"], "entrada_sha256": sha, "configuracion": config.modelos, "codigo_sha256": huella,
+            "salidas_sha256": _hashes_salidas(carpeta, tipo),
             "comando": _sin_rutas(comando, config), "segundos": round(time.time() - inicio, 1), "codigo": codigo,
         }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if fallidos:

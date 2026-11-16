@@ -11,6 +11,7 @@ from pathlib import Path
 from evaluacion.modular.__main__ import main
 from evaluacion.modular.contratos import evaluar_contratos
 from evaluacion.modular.muestra import construir_manifiesto
+from src.asociacion.asociacion import asociar
 from src.minutas.entrada import leer_transcripcion
 
 REQUERIDAS = ("resumen", "temas", "decisiones", "problemas", "acciones")
@@ -65,7 +66,9 @@ def armar(tmp_path: Path) -> tuple[Path, Path, Path]:
     fig = inferencia / "figshare-S22-01"
     escribir(fig / "asr.json", ASR)
     escribir(fig / "diarization.json", DIAR)
-    escribir(fig / "transcription.json", TRANS)
+    # Contrato vigente de la asociación: la transcripción la arma asociar() a partir del ASR y la diarización.
+    a = asociar(fig, audio=datos / "figshare/S22/01/audio.wav")
+    escribir(fig / "transcription.json", {"segments": [i.a_dict() for i in a.intervenciones]})
     minuta(fig, fig / "transcription.json")
     minuta(inferencia / "ami-r1", datos / "ami/r1/transcription.json")
     manifiesto = tmp_path / "manifiesto.json"
@@ -144,3 +147,15 @@ def test_minuta_sin_las_secciones_requeridas(tmp_path):
     assert (minutas["validas"], minutas["total"]) == (1, 2)
     [violacion] = minutas["violaciones"]
     assert violacion["archivo"] == "ami-r1/minutes.json" and "secciones" in violacion["regla"]
+
+
+def test_transcripcion_que_no_corresponde_al_asr(tmp_path):
+    """La asociación se valida contra el ASR normalizado: el texto tiene que cubrir literalmente cada segmento."""
+    manifiesto, datos, inferencia = armar(tmp_path)
+    ruta = inferencia / "figshare-S22-01/transcription.json"
+    datos_t = json.loads(ruta.read_text(encoding="utf-8"))
+    datos_t["segments"][0]["text"] = "chau"
+    escribir(ruta, datos_t)
+    asociacion = evaluar_contratos(manifiesto, datos, inferencia, REQUERIDAS)["modulos"]["asociacion"]
+    assert (asociacion["validas"], asociacion["total"]) == (0, 1)
+    assert any("source" in v["regla"] for v in asociacion["violaciones"])
