@@ -47,7 +47,7 @@ def test_intervenciones_marcadas_sobre_superposicion_real():
                       {"start": 4.0, "end": 5.0, "overlap": False, "ambiguous": True},   # no la toca
                       {"start": 2.2, "end": 2.8, "overlap": False, "ambiguous": False}]  # real, sin marca
     r = atribucion([], REFERENCIA, diar, 8.0, intervenciones)
-    assert r["intervenciones"] == {"total": 3, "sobre_superposicion_real": 2,
+    assert r["intervenciones"] == {"total": 3, "sin_tiempo": 0, "sobre_superposicion_real": 2,
                                    "ambiguous": 2, "ambiguous_sobre_superposicion_real": 1,
                                    "overlap": 1, "overlap_sobre_superposicion_real": 1}
 
@@ -55,6 +55,27 @@ def test_intervenciones_marcadas_sobre_superposicion_real():
 def test_palabras_asignadas_coinciden_con_la_asociacion(tmp_path):
     carpeta = crear_reunion(tmp_path, 4.0, [(0.0, 2.0, "SPEAKER_00"), (1.5, 4.0, "SPEAKER_01")],
                             [segmento(("hola", 0.2, 0.6), ("che", 1.6, 1.9), ("bien", 2.5, 3.0))])
-    palabras = palabras_asignadas(carpeta)
+    palabras, respaldo = palabras_asignadas(carpeta)
     assert [p[2] for p in palabras] == ["SPEAKER_00", "SPEAKER_00", "SPEAKER_01"]  # «che»: empate, sigue D2
     assert [p[:2] for p in palabras] == [(0.2, 0.6), (1.6, 1.9), (2.5, 3.0)]
+    assert respaldo == {"intervenciones": 0, "palabras": 0}
+
+
+def test_segmento_por_respaldo_se_cuenta_aparte(tmp_path):
+    # Las palabras no reconstruyen el texto del segmento: la asociación usa el segmento entero (respaldo).
+    roto = {"start": 0.2, "end": 1.0, "text": "No quiero eso.",
+            "words": [{"word": "quiero", "start": 0.4, "end": 0.7}, {"word": "eso.", "start": 0.7, "end": 1.0}]}
+    carpeta = crear_reunion(tmp_path, 4.0, [(0.0, 4.0, "SPEAKER_00")],
+                            [roto, segmento(("bien", 2.5, 3.0))])
+    palabras, respaldo = palabras_asignadas(carpeta)
+    assert [p[2] for p in palabras] == ["SPEAKER_00"] and palabras[0][:2] == (2.5, 3.0)
+    assert respaldo == {"intervenciones": 1, "palabras": 3}
+
+
+def test_intervencion_sin_tiempos_se_cuenta_aparte():
+    diar = [{"start": 0.0, "end": 6.0, "speaker": "SPEAKER_00"}]
+    intervenciones = [{"start": None, "end": None, "overlap": None, "ambiguous": True, "timing": "unknown"},
+                      {"start": 2.2, "end": 2.8, "overlap": True, "ambiguous": False, "timing": "word"}]
+    r = atribucion([], REFERENCIA, diar, 8.0, intervenciones)["intervenciones"]
+    assert r["sin_tiempo"] == 1 and r["total"] == 1
+    assert (r["ambiguous"], r["overlap_sobre_superposicion_real"]) == (0, 1)

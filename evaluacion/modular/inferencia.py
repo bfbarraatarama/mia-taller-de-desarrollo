@@ -4,8 +4,9 @@ Cada elemento se corre con el comando de su etapa, en un proceso aparte (libera 
 - clip: `python -m src.stt` (Etapa 3);
 - tarea de Figshare: `python -m src.pipeline ejecutar`, la cadena real 2→3→4→5;
 - reunión de AMI: `python -m src.minutas` (Etapa 5) sobre su `transcription.json` traducido.
-Al terminar bien se escribe `inferencia.json`; una salida con el mismo insumo, la misma configuración y todos sus
-archivos se reutiliza salvo `rehacer`.
+Al terminar bien se escribe `inferencia.json`; una salida con el mismo insumo, la misma configuración, el mismo
+código de sus etapas (`huella_codigo`) y todos sus archivos se reutiliza salvo `rehacer`. En Figshare, el pipeline
+vuelve a correr en la misma carpeta y reutiliza por su cuenta las etapas que siguen vigentes.
 """
 
 from __future__ import annotations
@@ -26,6 +27,27 @@ ARCHIVOS_ESPERADOS = {
     "figshare": ("diarization.json", "asr.json", "transcription.json", "minutes.json", "ejecucion_minutas.json"),
     "ami": ("minutes.json", "ejecucion_minutas.json"),
 }
+
+
+# Código del que depende cada tipo de elemento: si cambia, su salida deja de ser vigente.
+CODIGO = {
+    "clip": ("src/stt", "src/tiempos.py"),
+    "figshare": ("src/ingesta", "src/diarizacion", "src/stt", "src/asociacion", "src/minutas", "src/pipeline",
+                 "src/tiempos.py", "src/rutas.py"),
+    "ami": ("src/minutas",),
+}
+
+
+def huella_codigo(tipo: str) -> str:
+    """SHA-256 del código (y los prompts) de las etapas que usa un tipo de elemento."""
+    h = hashlib.sha256()
+    for relativa in CODIGO[tipo]:
+        ruta = RAIZ / relativa
+        archivos = [ruta] if ruta.is_file() else sorted(
+            p for p in ruta.rglob("*") if p.is_file() and p.suffix in (".py", ".md", ".json") and "__pycache__" not in p.parts)
+        for archivo in archivos:
+            h.update(archivo.relative_to(RAIZ).as_posix().encode() + b"\0" + archivo.read_bytes() + b"\0")
+    return h.hexdigest()
 
 
 class MuestraAlterada(Exception):
@@ -74,13 +96,13 @@ def _sin_rutas(comando: list[str], config) -> list[str]:
     return salida
 
 
-def _vigente(carpeta: Path, tipo: str, sha: str, modelos: dict) -> bool:
+def _vigente(carpeta: Path, tipo: str, sha: str, modelos: dict, codigo: str) -> bool:
     try:
         registro = json.loads((carpeta / "inferencia.json").read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return False
     return (registro.get("codigo") == 0 and registro.get("entrada_sha256") == sha
-            and registro.get("configuracion") == modelos
+            and registro.get("configuracion") == modelos and registro.get("codigo_sha256") == codigo
             and all((carpeta / n).is_file() for n in ARCHIVOS_ESPERADOS[tipo]))
 
 
@@ -95,7 +117,8 @@ def inferir(config, *, rehacer: bool = False, ejecutar=ejecutar_proceso, avisar=
         tipo, carpeta = _tipo(elemento), Path(config.inferencia) / elemento["id"]
         entrada = _entrada(elemento, Path(config.salida))
         sha = hashlib.sha256(entrada.read_bytes()).hexdigest()
-        if not rehacer and _vigente(carpeta, tipo, sha, config.modelos):
+        huella = huella_codigo(tipo)
+        if not rehacer and _vigente(carpeta, tipo, sha, config.modelos, huella):
             resumen["reutilizados"] += 1
             continue
         if rehacer and carpeta.exists():
@@ -113,7 +136,7 @@ def inferir(config, *, rehacer: bool = False, ejecutar=ejecutar_proceso, avisar=
             continue
         carpeta.mkdir(parents=True, exist_ok=True)
         (carpeta / "inferencia.json").write_text(json.dumps({
-            "elemento": elemento["id"], "entrada_sha256": sha, "configuracion": config.modelos,
+            "elemento": elemento["id"], "entrada_sha256": sha, "configuracion": config.modelos, "codigo_sha256": huella,
             "comando": _sin_rutas(comando, config), "segundos": round(time.time() - inicio, 1), "codigo": codigo,
         }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if fallidos:

@@ -81,6 +81,7 @@ def test_valor_invalido(tmp_path):
 def test_minuta_cambiada_avisa_y_no_pisa(tmp_path):
     elementos, datos, inferencia, planillas = armar(tmp_path)
     planillas_de_minutas(elementos, datos, inferencia, planillas)
+    marcar(planillas / "R.csv", ["sí", "", ""])  # con al menos una marca, no se toca
     (inferencia / "ami-R/minutes.md").write_text("# Otra minuta\n", "utf-8")
     reporte = planillas_de_minutas(elementos, datos, inferencia, planillas)
     assert (planillas / "R.minuta.md").read_text(encoding="utf-8").startswith("# Minuta")
@@ -92,3 +93,12 @@ def test_minuta_faltante(tmp_path):
     (inferencia / "ami-R/minutes.md").unlink()
     reporte = planillas_de_minutas(elementos, datos, inferencia, planillas)
     assert reporte["faltantes"] == ["ami-R/minutes.md"] and not (planillas / "R.csv").exists()
+
+
+def test_minuta_cambiada_sin_marcas_regenera(tmp_path):
+    elementos, datos, inferencia, planillas = armar(tmp_path)
+    planillas_de_minutas(elementos, datos, inferencia, planillas)
+    (inferencia / "ami-R/minutes.md").write_text("# Otra minuta\n", "utf-8")
+    reporte = planillas_de_minutas(elementos, datos, inferencia, planillas)
+    assert (planillas / "R.minuta.md").read_text(encoding="utf-8") == "# Otra minuta\n"
+    assert any("regeneró" in a for a in reporte["avisos"])

@@ -1,6 +1,6 @@
 """Atribución de palabras de la asociación en Figshare, sin umbral (requisito «Atribución de palabras», D10).
 
-Para cada palabra se toma el hablante que le dio la Etapa 4 y el canal de la frase de referencia activo en su punto
+Para cada palabra se toma el hablante de su intervención en la Etapa 4 y el canal de la frase de referencia activo en su punto
 medio. Las etiquetas de la diarización se traducen a canales con la misma correspondencia que la evaluación de la
 diarización (`optimal_mapping` del DER estricto), no por su nombre. Las palabras se separan según cuántos canales
 hablan en ese instante: uno (`sin_superposicion`), dos o más (`con_superposicion`, vale cualquiera de ellos) o
@@ -17,35 +17,40 @@ from pyannote.core import Segment, Timeline
 from pyannote.metrics.diarization import DiarizationErrorRate
 
 from evaluacion.diarizacion.der import anotacion
-from src.asociacion.asociacion import Turnos, asociar, ms
+from src.asociacion.asociacion import asociar
+from src.asociacion.texto import alinear
 
 from .audio import FS
 from .metricas_diar import referencia_tarea
 
 
-def palabras_asignadas(carpeta: Path) -> list[tuple[float, float, str | None]]:
-    """(inicio, fin, hablante) de cada palabra, con el mismo recorrido que `armar_intervenciones` (D1 a D4).
+def palabras_asignadas(carpeta: Path, audio: Path | None = None) -> tuple[list[tuple[float, float, str | None]], dict[str, int]]:
+    """(inicio, fin, hablante) de cada palabra según las intervenciones de `asociar()`, y lo que fue por respaldo.
 
-    Falla si los conteos no coinciden con los de `asociar()`: la reconstrucción tiene que ser exacta.
+    No repite las reglas de la asociación: cada intervención con `timing` «word» indica en `source` el segmento y el
+    tramo de su texto, y `alinear()` da el tramo de cada palabra; la palabra toma el hablante de su intervención.
+    Las intervenciones por segmento («segment» o «unknown») no tienen tiempos por palabra y se cuentan aparte.
+    Falla si la cantidad de palabras no coincide con los conteos de `asociar()`.
     """
-    a = asociar(carpeta)
-    turnos = Turnos(a.turnos)
-    palabras, conteos, anterior = [], {"palabras": 0, "palabras_por_empate": 0, "palabras_por_hueco": 0,
-                                       "palabras_sin_hablante": 0}, None
-    for seg in a.asr["segments"]:
-        for w in seg["words"] or [{"word": seg["text"], "start": seg["start"], "end": seg["end"]}]:
-            ini, fin = ms(w["start"]), ms(w["end"])
-            hablante, regla = turnos.asignar(ini, max(fin, ini + 1), anterior)
-            palabras.append((w["start"], w["end"], hablante))
-            anterior = hablante
-            conteos["palabras"] += 1
-            conteos["palabras_por_empate"] += regla == "D2"
-            conteos["palabras_por_hueco"] += regla == "D3"
-            conteos["palabras_sin_hablante"] += hablante is None
-    distintos = {k: (v, a.conteos.get(k)) for k, v in conteos.items() if a.conteos.get(k) != v}
-    if distintos:
-        raise RuntimeError(f"{carpeta}: la reconstrucción por palabra no coincide con asociar(): {distintos}")
-    return palabras
+    a = asociar(carpeta, audio=audio)
+    palabras, respaldo = [], {"intervenciones": 0, "palabras": 0}
+    alineadas = {}
+    for i in a.intervenciones:
+        seg = a.asr["segments"][i.source["segment"]]
+        if i.timing != "word":
+            respaldo["intervenciones"] += 1
+            respaldo["palabras"] += len(i.text.split())
+            continue
+        indice = i.source["segment"]
+        if indice not in alineadas:
+            alineadas[indice] = alinear(seg) or []
+        for w in alineadas[indice]:
+            if i.source["start"] <= w["char_start"] and w["char_end"] <= i.source["end"]:
+                palabras.append((w["start"], w["end"], i.speaker))
+    if len(palabras) != a.conteos["palabras"]:
+        raise RuntimeError(f"{carpeta}: {len(palabras)} palabras reconstruidas y {a.conteos['palabras']} según asociar()")
+    palabras.sort(key=lambda p: (p[0], p[1]))
+    return palabras, respaldo
 
 
 def _activos(referencia: list[dict], t: float) -> set[str]:
@@ -89,8 +94,10 @@ def atribucion(palabras: list[tuple], referencia: list[dict], diarizacion: list[
         grupo[1] += correspondencia.get(hablante) in activos
         sin_hablante += hablante is None
     real = _superposicion(referencia)
+    sin_tiempo = sum(i.get("start") is None for i in intervenciones)  # timing «unknown» (#19): no se ubican
+    intervenciones = [i for i in intervenciones if i.get("start") is not None]
     toca = [any(min(i["end"], b) > max(i["start"], a) for a, b in real) for i in intervenciones]
-    marcas = {"total": len(intervenciones), "sobre_superposicion_real": sum(toca)}
+    marcas = {"total": len(intervenciones), "sin_tiempo": sin_tiempo, "sobre_superposicion_real": sum(toca)}
     for marca in ("ambiguous", "overlap"):
         marcas[marca] = sum(bool(i.get(marca)) for i in intervenciones)
         marcas[f"{marca}_sobre_superposicion_real"] = sum(bool(i.get(marca)) and t for i, t in zip(intervenciones, toca))
@@ -106,6 +113,10 @@ def _acumular(destino: dict, r: dict) -> None:
         d["correctas"] += r[g]["correctas"]
     for k in ("fuera_de_la_referencia", "sin_hablante"):
         destino[k] = destino.get(k, 0) + r[k]
+    if "respaldo" in r:
+        acumulado = destino.setdefault("respaldo", {"intervenciones": 0, "palabras": 0})
+        for k, v in r["respaldo"].items():
+            acumulado[k] += v
     marcas = destino.setdefault("intervenciones", {})
     for k, v in r["intervenciones"].items():
         marcas[k] = marcas.get(k, 0) + v
@@ -121,7 +132,7 @@ def _cerrar(destino: dict) -> dict:
     return destino
 
 
-def metricas_asociacion(elementos: list[dict], inferencia: Path, cache: Path) -> dict:
+def metricas_asociacion(elementos: list[dict], inferencia: Path, cache: Path, datos: Path) -> dict:
     por_archivo, por_sesion, total, faltantes, sin_referencia = {}, {}, {}, [], []
     for e in sorted(elementos, key=lambda e: e["id"]):
         if "asociacion" not in e["modulos"]:
@@ -130,13 +141,16 @@ def metricas_asociacion(elementos: list[dict], inferencia: Path, cache: Path) ->
             sin_referencia.append(e["id"])
             continue
         carpeta = Path(inferencia) / e["id"]
-        necesarios = ("audio.wav", "diarization.json", "asr.json", "transcription.json")
-        if not all((carpeta / n).is_file() for n in necesarios):
+        audio = Path(datos) / next(r for r in e["archivos"] if r.endswith("audio.wav"))
+        necesarios = ("diarization.json", "asr.json", "transcription.json")
+        if not (audio.is_file() and all((carpeta / n).is_file() for n in necesarios)):
             faltantes.append(e["id"])
             continue
         diar = json.loads((carpeta / "diarization.json").read_text(encoding="utf-8"))["segments"]
         trans = json.loads((carpeta / "transcription.json").read_text(encoding="utf-8"))["segments"]
-        r = atribucion(palabras_asignadas(carpeta), referencia_tarea(e, cache), diar, e["cuadros"] / FS, trans)
+        palabras, respaldo = palabras_asignadas(carpeta, audio)
+        r = atribucion(palabras, referencia_tarea(e, cache), diar, e["cuadros"] / FS, trans)
+        r["respaldo"] = respaldo
         por_archivo[e["id"]] = r
         _acumular(por_sesion.setdefault(e["sesion"], {}), r)
         _acumular(total, r)

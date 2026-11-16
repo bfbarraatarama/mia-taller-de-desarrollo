@@ -1,8 +1,8 @@
 """Planilla de minutas para marcado humano (requisito «Planilla de minutas», D10 y D17).
 
 Por cada reunión de AMI: `<reunión>.csv` con un ítem de la minuta de referencia traducida por fila y la columna
-`recuperado` vacía, y `<reunión>.minuta.md` con la minuta producida. Una planilla existente nunca se reescribe:
-si ya está marcada, solo se resume.
+`recuperado` vacía, y `<reunión>.minuta.md` con la minuta producida. Una planilla con marcas nunca se reescribe:
+solo se resume. Si la minuta cambió y la planilla todavía no tiene marcas, se regenera.
 """
 
 from __future__ import annotations
@@ -90,11 +90,16 @@ def planillas_de_minutas(elementos: list[dict], datos: Path, inferencia: Path, c
         if not (carpeta / "LEEME.md").is_file():
             (carpeta / "LEEME.md").write_text(LEEME, encoding="utf-8")
         planilla, copia = carpeta / f"{reunion}.csv", carpeta / f"{reunion}.minuta.md"
+        if copia.is_file() and copia.read_bytes() != minuta.read_bytes():
+            if planilla.is_file() and _resumir(planilla, items)["marcados"]:
+                avisos.append(f"{reunion}: la minuta producida cambió después de generar la planilla; "
+                              f"se conserva la copia marcada ({copia.name})")
+            else:  # nadie marcó todavía: se regenera con la minuta vigente
+                copia.unlink()
+                planilla.unlink(missing_ok=True)
+                avisos.append(f"{reunion}: la minuta producida cambió y la planilla no tenía marcas; se regeneró")
         if not copia.is_file():
             shutil.copyfile(minuta, copia)
-        elif copia.read_bytes() != minuta.read_bytes():
-            avisos.append(f"{reunion}: la minuta producida cambió después de generar la planilla; "
-                          f"se conserva la copia marcada ({copia.name})")
         if not planilla.is_file():
             _escribir_planilla(planilla, reunion, items)
         reuniones[reunion] = _resumir(planilla, items)
