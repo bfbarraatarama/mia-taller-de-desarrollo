@@ -137,6 +137,7 @@ class AptitudAcusticaTest(unittest.TestCase):
     def test_auditoria_integrada_publica_datos_no_sensibles(self):
         import csv
         import hashlib
+        import pyarrow.parquet as pq
 
         (self.hito / "fuentes.toml").write_text(
             '[common_voice]\narchivo="cv.tar.gz"\n',
@@ -300,12 +301,6 @@ class AptitudAcusticaTest(unittest.TestCase):
                         to_pylist=lambda r=row: [r]
                     )
 
-        paquete = types.ModuleType("pyarrow")
-        paquete.__path__ = []
-        modulo = types.ModuleType("pyarrow.parquet")
-        modulo.ParquetFile = Parquet
-        paquete.parquet = modulo
-
         def verificar(path):
             return manifest, tablas
 
@@ -327,13 +322,7 @@ class AptitudAcusticaTest(unittest.TestCase):
                 b, "revisar_audio",
                 side_effect=revisar,
             ),
-            patch.dict(
-                sys.modules,
-                {
-                    "pyarrow": paquete,
-                    "pyarrow.parquet": modulo,
-                },
-            ),
+            patch.object(pq, "ParquetFile", Parquet),
         ):
             reporte = b.auditar(self.hito)
             reporte2 = b.auditar(self.hito)

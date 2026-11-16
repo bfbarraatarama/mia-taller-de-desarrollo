@@ -9,6 +9,7 @@ Secciones seleccionadas para esta ejecución (pedí únicamente estas secciones;
 {{SECCIONES_SOLICITADAS}}
 
 Reglas generales:
+- Si un identificador aparece en fragmentos textuales, corresponde a una misma intervención original; sus límites temporales no se subdividen.
 - Redactá contenido verificable, conciso y comprensible, sin reproducir innecesariamente la conversación.
 - Para cada elemento de una lista, `ids_intervenciones` contiene identificadores existentes que lo respaldan; `id_ancla` es una de esas intervenciones y señala el momento más pertinente (confirmación de una decisión o aceptación de una tarea, por ejemplo).
 - No inventes nombres, acuerdos, responsables, plazos ni información faltante.

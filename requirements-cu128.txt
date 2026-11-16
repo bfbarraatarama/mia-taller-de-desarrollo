@@ -1,0 +1,5 @@
+# Instalación completa del repositorio (cu128), desde la raíz.
+--extra-index-url https://download.pytorch.org/whl/cu128
+-r requirements.txt
+torch==2.8.0+cu128
+torchaudio==2.8.0+cu128

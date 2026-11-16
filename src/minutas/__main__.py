@@ -1,4 +1,4 @@
-"""Invocación autónoma: PYTHONPATH=src python -m minutas ..."""
+"""Invocación autónoma: python -m src.minutas ..."""
 
 from __future__ import annotations
 
@@ -38,15 +38,21 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--secciones", type=_secciones_cli, default=SECCIONES_MINUTA,
                    metavar="NOMBRES", help="Secciones, separadas por comas: " + ", ".join(SECCIONES_MINUTA))
     p.add_argument("--permitir-remoto", action="store_true")
+    p.add_argument("--destino-autorizado", help=argparse.SUPPRESS)
     p.add_argument("--sobrescribir", action="store_true")
+    p.add_argument("--temperatura", type=float, default=0.0)
+    p.add_argument("--max-tokens-salida", type=int, default=4096)
+    p.add_argument("--reintentos-formato", type=int, default=2)
     p.add_argument("--num-ctx", type=int, default=16384)
     p.add_argument("--max-caracteres-bloque", type=int, default=12000)
     args = p.parse_args(argv)
     try:
         config = ConfiguracionMinutas(
             modelo=args.modelo, permitir_remoto=args.permitir_remoto,
+            temperatura=args.temperatura, max_tokens_salida=args.max_tokens_salida,
+            reintentos_formato=args.reintentos_formato,
             num_ctx=args.num_ctx, max_caracteres_bloque=args.max_caracteres_bloque,
-            secciones=args.secciones,
+            secciones=args.secciones, destino_autorizado=args.destino_autorizado,
         )
         resultado = generar_minuta(
             args.entrada, args.salida, configuracion=config, sobrescribir=args.sobrescribir

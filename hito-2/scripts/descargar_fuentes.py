@@ -130,7 +130,7 @@ def repositorio_hf(nombre: str) -> None:
         from huggingface_hub import HfApi, hf_hub_download
     except ImportError as e:
         raise RuntimeError(
-            "Instalá huggingface_hub según requirements-adquisicion.txt"
+            "Instalá huggingface_hub según el procedimiento de instalación del README raíz"
         ) from e
 
     cfg = REGISTRO["huggingface"][nombre]
@@ -260,7 +260,7 @@ def common_voice() -> None:
     except ImportError as e:
         raise RuntimeError(
             "Instalá datacollective según "
-            "requirements-adquisicion.txt"
+            "el procedimiento de instalación del README raíz"
         ) from e
 
     cfg = REGISTRO["common_voice"]

@@ -4,26 +4,12 @@ Este procedimiento recupera los originales necesarios para verificar los datos d
 
 ## Requisitos
 
-- Python 3.12 o posterior, `venv`, `pip` y acceso a Internet.
+- Python 3.12, `venv`, `pip` y acceso a Internet.
 - Aceptación individual de las condiciones de las fuentes restringidas.
 - Espacio disponible para los archivos originales y temporales.
 - Ejecutar los comandos desde la raíz del repositorio.
 
-Instalación del entorno en Linux o macOS:
-
-```bash
-python3 -m venv .venv
-.venv/bin/python -m pip install -r hito-2/requirements-adquisicion.txt
-```
-
-En Windows (PowerShell):
-
-```powershell
-py -3.12 -m venv .venv
-.venv\Scripts\python.exe -m pip install -r hito-2/requirements-adquisicion.txt
-```
-
-Los comandos posteriores utilizan el intérprete del entorno virtual y no requieren su activación. Esta instalación mínima permite adquirir originales y ejecutar las pruebas de adquisición; **no** incluye las dependencias de `armar_muestra.py`, del notebook ni de sus pruebas. Para la suite completa debe instalarse también `requirements.txt`, según `README.md`.
+Instalar el perfil CPU o cu128 del [README raíz](../README.md#entorno-único-para-todo-el-repositorio). El entorno general incluye tanto adquisición como construcción de muestras, EDA y pruebas. Los comandos posteriores utilizan ese intérprete sin activación.
 
 ## Credenciales
 
@@ -77,7 +63,7 @@ La preparación se realiza desde el constructor general de muestras:
 .venv/bin/python -I hito-2/scripts/armar_muestra.py uba_games_figshare
 ```
 
-Este proceso requiere `libarchive` en el sistema operativo y las dependencias de `requirements.txt`. En Ubuntu, debe poder encontrarse `libarchive.so`. El archivo comprimido se lee sin extracción permanente: se preservan los 219 pares de tareas de las nueve sesiones originales disponibles en Figshare. El programa comprueba las referencias y el audio, conserva los intervalos de silencio y produce las tablas `grabaciones.csv`, `intervalos.parquet`, `hablantes.csv` y `extractos.csv`, junto con `procedencia.json`.
+Este proceso requiere `libarchive` en el sistema operativo y el entorno general. Su disponibilidad se comprueba mediante `src.verificar_entorno`; el README raíz describe la instalación. El archivo comprimido se lee sin extracción permanente: se preservan los 219 pares de tareas de las nueve sesiones originales disponibles en Figshare. El programa comprueba las referencias y el audio, conserva los intervalos de silencio y produce las tablas `grabaciones.csv`, `intervalos.parquet`, `hablantes.csv` y `extractos.csv`, junto con `procedencia.json`.
 
 Se genera determinísticamente un extracto acústico por sesión cuando existe un par válido de pistas. La mezcla de canales se realiza con media aritmética sobre PCM de 16 bits; no se elimina el solapamiento temporal. Los FLAC derivados quedan excluidos del versionado mediante `.gitignore`.
 
@@ -98,12 +84,12 @@ La adquisición puede tardar y ocupar varios gigabytes. Se recomienda ejecutar p
 ```bash
 .venv/bin/python -I hito-2/scripts/descargar_fuentes.py comprobar
 
-# Pruebas de adquisición (compatibles con el entorno mínimo de esta sección)
+# Pruebas de adquisición en el entorno general
 .venv/bin/python -m unittest discover -s hito-2/tests -p 'test_adquisicion.py' -v
 .venv/bin/python -m unittest discover -s hito-2/tests -p 'test_descargar_fuentes.py' -v
 ```
 
-Para ejecutar **todas** las pruebas, incluidas las de procesamiento y serialización de Parquet, instalar además `requirements.txt` y utilizar el comando de pruebas completas de `README.md`. No se omiten pruebas por falta de dependencias: se distinguen el entorno mínimo de adquisición y el entorno completo.
+Para ejecutar **todas** las pruebas, incluidas las de procesamiento y serialización de Parquet, utilizar el comando de pruebas completas de `README.md`, con el mismo entorno general.
 
 - `comprobar` verifica tamaño, SHA-256 y estructura ZIP de los archivos registrados; **no prueba completitud del corpus** ni calidad de etiquetas.
 - Los hashes de los originales históricos se contrastan con `muestra/MANIFIESTO.json`. Una discrepancia detiene la adquisición; no cambiar el hash para forzar que pase.

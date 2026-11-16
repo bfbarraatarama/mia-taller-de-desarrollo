@@ -38,12 +38,11 @@ En otras plataformas, instalar herramientas equivalentes y verificar sus rutas; 
 ### 1. Preparar el entorno y comprobar el código
 
 ```bash
-python3 -m venv .venv
-.venv/bin/python -m pip install -r hito-2/requirements.txt -r hito-2/requirements-adquisicion.txt
+# Después de instalar el perfil CPU o cu128 del README raíz:
 .venv/bin/python -m unittest discover -s hito-2/tests -v
 ```
 
-Las pruebas no descargan originales y deben finalizar sin fallos (72 pruebas en el estado validado el 13/10/2026). Instalar las dependencias del **Hito 2**, no las del `requirements.txt` de la raíz, que corresponde a otro proyecto. Las dependencias declaran rangos, no un bloqueo exacto de todas las versiones; por eso no se promete igualdad binaria de archivos derivados entre entornos distintos.
+Las pruebas no descargan originales y deben finalizar sin fallos (72 pruebas en el estado validado el 13/10/2026). El [entorno general del repositorio](../README.md#entorno-único-para-todo-el-repositorio) incluye la adquisición, normalización, EDA y sus pruebas. Las restricciones comunes no garantizan identidad binaria de artefactos entre plataformas.
 
 ### 2. Adquirir y verificar los originales fijados
 

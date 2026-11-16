@@ -45,7 +45,8 @@ def leer_transcripcion(origen: str | Path | Mapping[str, Any]) -> tuple[list[Int
                 ambiguo=fila["ambiguous"],
             )
         except (KeyError, ValidationError, ValueError, TypeError) as exc:
-            raise ValueError(f"Intervención {indice + 1} inválida: {exc}") from exc
+            # No reproducir los campos de entrada en errores que puede persistir el orquestador.
+            raise ValueError(f"Intervención {indice + 1} inválida ({type(exc).__name__}).") from None
         preparadas.append((indice, intervencion))
 
     preparadas.sort(key=lambda x: (x[1].inicio, x[0]))

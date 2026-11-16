@@ -121,5 +121,5 @@ def validar_evidencias(minuta: BaseModel, intervenciones: list[Intervencion]) ->
             desconocidos = set(elemento.ids_intervenciones) - disponibles
             if desconocidos:
                 raise ValueError(
-                    f"{categoria}[{indice}]: referencias inexistentes: {sorted(desconocidos)}"
+                    f"{categoria}[{indice}]: referencias inexistentes ({len(desconocidos)})."
                 )

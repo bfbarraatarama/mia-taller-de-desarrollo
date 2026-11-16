@@ -551,12 +551,12 @@ def entradas_comprimidas(ruta: Path, *, incluir=None):
     Se usa libarchive y un archivo temporal para datos mayores de 8 MiB.
     """
     import ctypes as ct
-    from ctypes.util import find_library
+    from src.bibliotecas import cargar_libarchive
 
-    nombre_biblioteca = find_library("archive")
-    if not nombre_biblioteca:
-        raise RuntimeError("Se requiere libarchive (en Ubuntu: libarchive13)")
-    biblioteca = ct.CDLL(nombre_biblioteca)
+    try:
+        biblioteca = cargar_libarchive()
+    except OSError as exc:
+        raise RuntimeError("Se requiere libarchive (ver README raíz)") from exc
     prototipos = {
         "archive_read_new": ([], ct.c_void_p),
         "archive_read_support_format_all": ([ct.c_void_p], ct.c_int),
