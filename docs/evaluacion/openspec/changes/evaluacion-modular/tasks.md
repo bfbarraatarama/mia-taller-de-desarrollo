@@ -21,8 +21,8 @@ En cada tarea, primero los tests de sus escenarios. Meta del martes 17/11: grupo
 
 ## 4. Traducción y manifiesto
 
-- [ ] 4.1 Traducción con MarianMT en revisión fija · escenarios: Traducción repetible, Marca de sintético
-- [ ] 4.2 Manifiesto y `--verificar` · escenarios: Archivo alterado, Muestra intacta
+- [x] 4.1 Traducción con MarianMT en revisión fija · escenarios: Traducción repetible, Marca de sintético
+- [x] 4.2 Manifiesto y `--verificar` · escenarios: Archivo alterado, Muestra intacta
 
 ## 5. Inferencia y contratos
 

@@ -6,7 +6,8 @@
 
 semilla = 20261010
 cache = "hito-2/.cache"
-salida = "evaluacion/modular/datos"
+salida = "evaluacion/modular/datos"                    # audio y derivados: locales, no se versionan
+manifiesto = "evaluacion/modular/muestra.manifest.json"  # se versiona
 
 [originales.common_voice]
 clave = "common_voice/common-voice-scripted-speech-26-0-riopla-0a258d97.tar.gz"

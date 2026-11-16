@@ -20,6 +20,7 @@ class Config:
     semilla: int
     cache: Path
     salida: Path
+    manifiesto: Path
     originales: dict[str, Original]
 
 
@@ -48,4 +49,5 @@ def cargar_config(ruta: Path | str = CONFIG_POR_DEFECTO) -> Config:
         originales[nombre] = Original(nombre=nombre, clave=o["clave"], bytes=tamano, sha256=sha, md5=md5,
                                       obtener=o["obtener"])
     return Config(semilla=int(datos["semilla"]), cache=RAIZ / datos["cache"], salida=RAIZ / datos["salida"],
+                  manifiesto=RAIZ / datos["manifiesto"],
                   originales=originales)
