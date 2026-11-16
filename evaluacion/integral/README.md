@@ -10,9 +10,9 @@ La evaluación formal se realiza en la máquina de Matías (RTX 3050 Laptop de 6
 
 ### Reunión y referencia
 
-- Grabar una reunión propia y consentida en castellano, de al menos cinco minutos, idealmente de duración cercana a ese valor, con dos temas y una acción explícita con responsable. Conservar el WAV original.
+- Seleccionar una reunión real en castellano, propia y consentida o externa con autorización de uso documentada, de al menos cinco minutos, idealmente de duración cercana a ese valor, con dos temas y una acción explícita con responsable. Conservar la entrada original del ejecutor. La fuente externa puede ser un fragmento continuo; registrar su procedencia, licencia e intervalo antes de las corridas.
 - Antes del procesamiento, un integrante distinto del operador debe escuchar la grabación y elaborar las notas de referencia independientemente de los resultados del modelo. Incluir autor, fecha, los dos temas, la acción, su responsable y las marcas temporales que respaldan cada ítem. Registrar otras acciones si las hubiera, para no confundirlas con invenciones. Usar identidades autorizadas para las minutas.
-- Obtener el consentimiento para grabación y procesamiento. Para la publicación posterior también se requiere autorización de los participantes para compartir el audio y los artefactos derivados; no publicar información privada.
+- Para reuniones propias, obtener el consentimiento para grabación y procesamiento y la autorización de los participantes antes de publicar. Para las externas, documentar la autorización de uso y verificar que permita publicar los artefactos seleccionados. No publicar información privada.
 
 Por ejemplo, en `resultados/evaluacion-integral/referencia.md` completar los campos con el contenido real:
 
@@ -38,6 +38,8 @@ Fecha: [fecha]
     --equipo 'Máquina de Matías: RTX 3050 Laptop, 6 GB VRAM, 31 GB RAM' \
     --consentimiento
 ```
+
+Para una fuente externa, reemplazar `--consentimiento` por `--procedencia /ruta/procedencia.json`. El JSON registra `titulo`, `url`, `url_metadatos`, `licencia`, `evidencia` (declaración documental de autorización), `seleccion` (procedimiento de selección y extracción), `sha256_original` (grabación completa), `sha256_fragmento` (WAV de entrada), `inicio_s` y `fin_s` (segundos enteros sobre la línea temporal de extracción). El fragmento debe ser WAV PCM16 mono de 16 kHz, con duración y hash coincidentes. La procedencia se conserva dentro del manifiesto; el ejecutor verifica su estructura y correspondencia con la entrada, no certifica derechos. El `sha256_original` del nivel superior del manifiesto mantiene su significado: hash del archivo de entrada al ejecutor, no de la grabación completa externa. Consultar la [muestra OSM LatAm](muestras/osm-latam-20220730/README.md).
 
 Sustituir las rutas, nombres, tipo y equipo por los valores reales. Usar `--tipo prueba` y otro nombre de sesión para las comprobaciones de desarrollo. El comando normaliza mediante la ingesta existente a PCM16 mono de 16 kHz, guarda la fuente canónica y la divide por índices de muestras en tres WAV consecutivos, sin omitir ni duplicar contenido. Comprueba que la ingesta de los cortes tiene el mismo SHA-256 que el archivo único. El manifiesto conserva el hash de la grabación original, los hashes del audio canónico y las notas, los índices y hashes de los cortes y la configuración de minutas. El original previo a la normalización se conserva fuera de la sesión. La referencia no se incluye en ningún prompt. No modificar la muestra ni el manifiesto tras congelarlos.
 
@@ -96,4 +98,4 @@ git add -f -- evaluacion/integral/resultados/baseline
 git diff --cached --stat
 ```
 
-Para repetir las inferencias desde una copia publicada, usar su `muestra/audio.wav` y `muestra/referencia.md` en una sesión nueva, manteniendo la configuración original y registrando el contexto de ejecución. El hash de la grabación anterior a la normalización se conserva como procedencia; la fuente canónica publicada es la entrada efectiva de las inferencias. No modificar la publicación anterior. Incorporar los resultados formales y sus limitaciones a [validación de la integración](../../docs/validacion-integracion.md).
+Para repetir las inferencias desde una copia publicada, usar la muestra congelada en una sesión nueva sin corridas previas, manteniendo el manifiesto, los cortes y la configuración original y registrando el contexto de ejecución. No declarar un consentimiento nuevo ni alterar los hashes de procedencia. El hash de la grabación anterior a la normalización se conserva como procedencia; la fuente canónica publicada es la entrada efectiva de las inferencias. No modificar la publicación anterior. Incorporar los resultados formales y sus limitaciones a [validación de la integración](../../docs/validacion-integracion.md).

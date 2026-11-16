@@ -5,6 +5,7 @@ import argparse
 import json
 import math
 import platform
+import re
 import shutil
 import subprocess
 import tempfile
@@ -14,6 +15,7 @@ from datetime import datetime, timezone
 from functools import lru_cache
 from pathlib import Path
 from time import monotonic
+from urllib.parse import urlsplit
 
 from src.ingesta.audio import FS, ingestar, sha256, verificar_wav
 from src.rutas import DIRECTORIO_PROYECTO
@@ -99,14 +101,38 @@ def _configuracion_base():
     return config
 
 
-def preparar(sesion, audio, notas, *, autor, tipo, equipo, consentimiento):
+def _validar_procedencia(datos, digest, muestras):
+    """Comprueba trazabilidad declarada; no certifica jurídicamente la licencia."""
+    if not isinstance(datos, dict):
+        raise ValueError('Procedencia externa inválida.')
+    for campo in ('titulo', 'licencia', 'evidencia', 'seleccion'):
+        if not isinstance(datos.get(campo), str) or not datos[campo].strip():
+            raise ValueError(f'Procedencia externa: falta {campo}.')
+    for campo in ('url', 'url_metadatos'):
+        valor = datos.get(campo)
+        url = urlsplit(valor) if isinstance(valor, str) else None
+        if not url or url.scheme not in {'https', 'http'} or not url.hostname:
+            raise ValueError(f'Procedencia externa: falta URL válida en {campo}.')
+    for campo in ('sha256_original', 'sha256_fragmento'):
+        if not isinstance(datos.get(campo), str) or not re.fullmatch(r'[0-9a-f]{64}', datos[campo]):
+            raise ValueError(f'Procedencia externa: hash inválido en {campo}.')
+    inicio, fin = datos.get('inicio_s'), datos.get('fin_s')
+    if (type(inicio) is not int or type(fin) is not int or inicio < 0 or fin <= inicio or
+            (fin - inicio) * FS != muestras or datos['sha256_fragmento'] != digest):
+        raise ValueError('Procedencia externa: intervalo o hash no coincide con el fragmento.')
+
+
+def preparar(sesion, audio, notas, *, autor, tipo, equipo, consentimiento=False, procedencia=None):
     """Normaliza una vez y congela la fuente y las notas antes de cualquier corrida."""
-    if not consentimiento:
-        raise ValueError('Se requiere consentimiento para grabar y procesar la reunión.')
+    if bool(consentimiento) == (procedencia is not None):
+        raise ValueError('Se requiere consentimiento o procedencia externa autorizada, no ambos.')
     if tipo not in {'prueba', 'formal'}:
         raise ValueError('Tipo de sesión inválido.')
     autor, equipo = _texto(autor, 'Autor de referencia'), _texto(equipo, 'Equipo')
     audio, notas = audio.resolve(strict=True), notas.resolve(strict=True)
+    externa = leer(Path(procedencia)) if procedencia is not None else None
+    if procedencia is not None:
+        _validar_procedencia(externa, sha256(audio), verificar_wav(audio))
     if not notas.read_text(encoding='utf-8').strip():
         raise ValueError('Las notas de referencia están vacías.')
     sesion = sesion.resolve()
@@ -130,12 +156,14 @@ def preparar(sesion, audio, notas, *, autor, tipo, equipo, consentimiento):
             raise ValueError('El audio normalizado de ambas modalidades no es idéntico.')
         shutil.copyfile(notas, muestra / 'referencia.md')
         manifiesto = {'version': 1, 'creado_utc': ahora(), 'tipo': tipo, 'equipo': equipo,
-                      'consentimiento_declarado': True, 'autor_referencia': autor,
+                      'consentimiento_declarado': bool(consentimiento), 'autor_referencia': autor,
                       'configuracion_minutas': _configuracion_base(),
                       'sha256_original': ingesta['fuentes'][0]['sha256_fuente'],
                       'frecuencia_hz': FS, 'muestras': muestras, 'duracion_s': muestras / FS,
                       'sha256_audio': digest, 'sha256_referencia': sha256(muestra / 'referencia.md'),
                       'cortes': partes}
+        if externa is not None:
+            manifiesto['procedencia_externa'] = externa
         guardar(muestra / 'manifiesto.json', manifiesto)
         (base / 'corridas').mkdir()
         (base / 'calidad.md').write_text(CALIDAD, encoding='utf-8')
@@ -148,7 +176,9 @@ def verificar_muestra(sesion):
     muestra = sesion / 'muestra'
     m = leer(muestra / 'manifiesto.json')
     if (m['version'] != 1 or m['tipo'] not in {'formal', 'prueba'} or
-            m['consentimiento_declarado'] is not True or m['frecuencia_hz'] != FS):
+            m['frecuencia_hz'] != FS or
+            not ((m.get('consentimiento_declarado') is True and 'procedencia_externa' not in m) or
+                 (m.get('consentimiento_declarado') is False and 'procedencia_externa' in m))):
         raise ValueError('Manifiesto de muestra inválido.')
     audio = muestra / 'audio.wav'
     muestras = verificar_wav(audio)
@@ -156,6 +186,8 @@ def verificar_muestra(sesion):
             sha256(audio) != m['sha256_audio'] or
             sha256(muestra / 'referencia.md') != m['sha256_referencia']):
         raise ValueError('Cambió el audio o la referencia congelada.')
+    if 'procedencia_externa' in m:
+        _validar_procedencia(m['procedencia_externa'], m['sha256_original'], muestras)
     if len(m['cortes']) != 3:
         raise ValueError('Cantidad de cortes inválida.')
     # Verificación del PCM sin volver a usar FFmpeg ni realizar inferencias.
@@ -517,7 +549,9 @@ def main(argv=None):
     p.add_argument('--autor', required=True)
     p.add_argument('--tipo', choices=['prueba', 'formal'], required=True)
     p.add_argument('--equipo', required=True)
-    p.add_argument('--consentimiento', action='store_true')
+    permiso = p.add_mutually_exclusive_group(required=True)
+    permiso.add_argument('--consentimiento', action='store_true')
+    permiso.add_argument('--procedencia', type=Path, help='JSON de fuente externa autorizada')
     e = sub.add_parser('ejecutar')
     e.add_argument('sesion', type=Path)
     e.add_argument('--corrida', type=int, choices=range(1, 6))
@@ -529,7 +563,7 @@ def main(argv=None):
     a = parser.parse_args(argv)
     sesion = a.sesion.resolve()
     if a.operacion == 'preparar':
-        preparar(sesion, a.audio, a.notas, autor=a.autor, tipo=a.tipo, equipo=a.equipo, consentimiento=a.consentimiento)
+        preparar(sesion, a.audio, a.notas, autor=a.autor, tipo=a.tipo, equipo=a.equipo, consentimiento=a.consentimiento, procedencia=a.procedencia)
     elif a.operacion == 'ejecutar':
         numeros = [a.corrida] if a.corrida else list(range(1, 6))
         if any((sesion / 'corridas' / f'{i:02d}').exists() for i in numeros):

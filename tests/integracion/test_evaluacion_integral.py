@@ -193,3 +193,37 @@ def test_reporte_con_corrida_sin_cierre(sesion):
     r = ev.reporte(sesion)
     assert r['corridas'][0]['estado'] == 'iniciada_sin_cierre'
     assert r['maximo_s'] is None
+
+
+def test_procedencia_externa(tmp_path, fuentes):
+    a = audio(tmp_path / 'fragmento.wav', 300 * ev.FS)
+    p = tmp_path / 'procedencia.json'
+    datos = {
+        'titulo': 'Grabación sintética', 'url': 'https://example.org/video',
+        'url_metadatos': 'https://example.org/api/video', 'licencia': 'CC0',
+        'evidencia': 'Declaración de prueba', 'seleccion': 'Extracción de prueba',
+        'sha256_original': 'a' * 64, 'sha256_fragmento': ev.sha256(a),
+        'inicio_s': 100, 'fin_s': 400,
+    }
+    ev.guardar(p, datos)
+    s = tmp_path / 'externa'
+    kwargs = dict(autor='Ana', tipo='prueba', equipo='Simulado', procedencia=p)
+    with pytest.raises(ValueError, match='no ambos'):
+        ev.preparar(s, a, fuentes[1], consentimiento=True, **kwargs)
+    for clave, valor in [('sha256_fragmento', 'b' * 64), ('fin_s', 401), ('licencia', '')]:
+        ev.guardar(p, {**datos, clave: valor})
+        with pytest.raises(ValueError, match='Procedencia externa'):
+            ev.preparar(s, a, fuentes[1], **kwargs)
+        assert not s.exists()
+    ev.guardar(p, datos)
+    m = ev.preparar(s, a, fuentes[1], **kwargs)
+    assert m['consentimiento_declarado'] is False
+    assert m['procedencia_externa'] == datos
+    assert ev.verificar_muestra(s) == m
+    destino = tmp_path / 'publicada'
+    ev.publicar(s, destino)
+    assert ev.verificar_muestra(destino) == m
+    m['procedencia_externa']['sha256_fragmento'] = 'b' * 64
+    ev.guardar(s / 'muestra/manifiesto.json', m)
+    with pytest.raises(ValueError, match='Procedencia externa'):
+        ev.verificar_muestra(s)

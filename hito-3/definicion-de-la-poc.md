@@ -10,6 +10,7 @@ Insumos: [`canvas.md`](../canvas.md) (Hito 1) y [`4-veredicto.md`](../hito-2/4-v
 |---|---|---|
 | 1, Hito 3 | 2026-11-01 | Primera versión completa |
 | 2, Hito 3 | 2026-11-03 | Etapa de asociación y etiquetado de hablantes: el usuario nombra a cada hablante antes de generar la minuta (2.1, 2.2, 2.3, 3.1.3, 3.1.4, 3.2 y 4.1) |
+| 3, Hito 4 | 2026-11-16 | Admisión de reuniones externas con autorización de uso documentada para la evaluación integral (1.1, 2.1, 2.3, 3.1.2 y 3.1.5), sin modificar los umbrales ni los ensayos de captura y recuperación |
 
 ---
 
@@ -17,7 +18,7 @@ Insumos: [`canvas.md`](../canvas.md) (Hito 1) y [`4-veredicto.md`](../hito-2/4-v
 
 ### 1.1 Overview
 
-La PoC es una aplicación de ejecución local que captura el audio del micrófono y del sistema, identifica hablantes, transcribe las intervenciones y genera minutas con temas y acciones. Está orientada a organizaciones con terminología especializada e información confidencial. Sus módulos se comprueban con datos reales del Hito 2: OpenSLR, CORdeBA, Humyn y Common Voice para transcripción; Figshare (UBA Games) y CALLHOME para diarización, y AMI para minutas, con traducciones sintéticas al castellano. El veredicto del Hito 2 ajustó el alcance porque el EDA registró V5 = 0/10 reuniones con referencias integrales en castellano: se comprueba cada módulo y se demuestra el workflow completo con grabaciones propias, sin dar por validada su calidad integral. Quedan afuera el entrenamiento, la optimización, la comparación de modelos y la personalización terminológica.
+La PoC es una aplicación de ejecución local que captura el audio del micrófono y del sistema, identifica hablantes, transcribe las intervenciones y genera minutas con temas y acciones. Está orientada a organizaciones con terminología especializada e información confidencial. Sus módulos se comprueban con datos reales del Hito 2: OpenSLR, CORdeBA, Humyn y Common Voice para transcripción; Figshare (UBA Games) y CALLHOME para diarización, y AMI para minutas, con traducciones sintéticas al castellano. El veredicto del Hito 2 ajustó el alcance porque el EDA registró V5 = 0/10 reuniones con referencias integrales en castellano: se comprueba cada módulo y se demuestra el workflow completo con grabaciones propias o externas autorizadas, sin dar por validada su calidad integral. Quedan afuera el entrenamiento, la optimización, la comparación de modelos y la personalización terminológica.
 
 ### 1.2 Objetivo
 
@@ -47,7 +48,7 @@ La PoC es una aplicación de ejecución local que captura el audio del micrófon
 
 #### Happy path
 
-- **Dado:** la reunión de prueba de 2.3 y sus notas de referencia, escritas antes de procesar; el usuario eligió el micrófono, el audio del sistema y el directorio de salida.
+- **Dado:** una reunión propia de prueba (o una reproducción autorizada de la fuente externa de 2.3) y sus notas de referencia, escritas antes de procesar; el usuario eligió el micrófono, el audio del sistema y el directorio de salida.
 - **Cuando:** inicia la grabación al empezar la reunión y la detiene al terminar.
 - **Entonces:** la aplicación guarda la grabación en el directorio elegido.
 - **Y:** el usuario pide procesarla y ve el avance de cada etapa.
@@ -113,7 +114,7 @@ La PoC es una aplicación de ejecución local que captura el audio del micrófon
 
 | Criterio | Métrica | Umbral | Conjunto de evaluación | Cómo se chequea |
 |---|---|---|---|---|
-| Calidad de la respuesta | Temas y acciones de las notas de referencia que la minuta recupera (nombrados aunque sea con otras palabras; las acciones, con su responsable) y acciones inventadas (sin respaldo en la marca temporal que citan ni en las notas) | 2/2 temas y 1/1 acción recuperados, y 0 inventadas, en las 2 modalidades (un archivo y varios ordenados) | Reunión de prueba: propia, consentida, en castellano, de al menos 5 minutos, con 2 temas y 1 acción explícita; completa y dividida en 2 o más archivos | Un integrante que no ejecuta el procesamiento escribe antes las notas (temas, acciones, responsables y marcas temporales) y marca sí o no por ítem |
+| Calidad de la respuesta | Temas y acciones de las notas de referencia que la minuta recupera (nombrados aunque sea con otras palabras; las acciones, con su responsable) y acciones inventadas (sin respaldo en la marca temporal que citan ni en las notas) | 2/2 temas y 1/1 acción recuperados, y 0 inventadas, en las 2 modalidades (un archivo y varios ordenados) | Reunión de prueba: real, propia y consentida o externa con autorización de uso documentada, en castellano, de al menos 5 minutos, con 2 temas y 1 acción explícita; completa y dividida en 2 o más archivos | Un integrante que no ejecuta el procesamiento escribe antes las notas (temas, acciones, responsables y marcas temporales) y marca sí o no por ítem |
 | Funcionamiento modular | Salidas dentro del contrato del módulo siguiente. Diarización: segmentos con hablante, inicio menor que fin y dentro del audio. Transcripción: segmentos con texto y tiempos. Asociación: intervenciones con etiqueta de hablante, nombre o vacío, texto, tiempos y marcas de solapamiento y ambigüedad. Minuta: secciones de temas, decisiones y acciones | 4/4 módulos con el 100 % de sus salidas dentro del contrato | Muestra congelada en la semana 7, con su SHA-256 en un manifiesto: 5 clips de OpenSLR y Common Voice, 3 sesiones de Figshare y 3 reuniones de AMI traducidas | Script de contratos |
 | Latencia (máximo, p100) | Tiempo desde que se pide procesar hasta que la minuta queda escrita, sin contar el que el usuario tarda en nombrar a los hablantes | Las 5 corridas en 30 minutos o menos para 5 minutos de audio | La reunión de prueba, 5 corridas en la máquina de Matías (RTX 3050 Laptop, 6 GB de VRAM, 31 GB de RAM) | Tiempo registrado en cada corrida |
 | Cobertura de los casos borde | Escenarios de 2.1 que hacen lo que dice su «Entonces», con la entrada conservada | 7/7: happy path, 2.1.1 a 2.1.5 y error del sistema | Un input real o preparado por escenario, fijado antes de la semana 9 (2.1.3: una reunión de ICSI con 6 o más hablantes) | Un tercero recorre los escenarios con la aplicación abierta y marca sí o no |
@@ -164,7 +165,7 @@ Se registran versiones, orden de los archivos, notas y resultados. WER, DER y JE
 2. **Solo grabaciones propias:** representan el uso, pero sin referencias por módulo. Descartada.
 3. **Combinar ambas:** comprueba módulos e integración sin un corpus nuevo. Sigue en pie.
 
-**Decisión.** La 3. Del plan del veredicto se mantienen la obtención con originales, permisos y hashes, la exclusión trazable de tramos inválidos, la distinción de las traducciones sintéticas y los conjuntos separados por módulo, de los que se congela la muestra de 2.3. Cambia la evaluación integral: una reunión de prueba con notas de referencia en lugar de diez reuniones anotadas, porque la PoC demuestra el funcionamiento integral y no lo valida. Varios archivos ordenados forman una reunión.
+**Decisión.** La 3. Del plan del veredicto se mantienen la obtención con originales, permisos y hashes, la exclusión trazable de tramos inválidos, la distinción de las traducciones sintéticas y los conjuntos separados por módulo, de los que se congela la muestra de 2.3. Cambia la evaluación integral: una reunión de prueba con notas de referencia en lugar de diez reuniones anotadas, porque la PoC demuestra el funcionamiento integral y no lo valida. Varios archivos ordenados forman una reunión. La evaluación integral admite una grabación externa real con autorización documentada y un fragmento continuo delimitado antes de las corridas; se registran procedencia, licencia, intervalo y hashes. Los ensayos de captura y recuperación conservan la grabación efectiva desde la aplicación.
 
 **Consecuencias.** Se conservan los originales, su orden y la correspondencia temporal con el audio procesado. Se resigna validar la calidad integral hasta reunir las diez reuniones anotadas.
 
@@ -203,7 +204,7 @@ Se registran versiones, orden de los archivos, notas y resultados. WER, DER y JE
 1. **Rendimiento y hardware variado:** exige optimización y pruebas de carga fuera de alcance. Descartada.
 2. **Ejecución local y trazabilidad:** permite diagnosticar errores. Sigue en pie.
 
-**Decisión.** La 2. **Confiable:** 5 s perdidos o menos ante un corte, resultados intermedios conservados y versiones y configuración registradas en cada corrida. **Escalable:** una reunión a la vez y una persona por máquina, sin exigir más. **Mantenible:** cada módulo se ejecuta por separado y se valida contra su contrato de 2.3. Por confidencialidad, las pruebas usan reuniones consentidas sin información sensible, y todo queda en el directorio local elegido.
+**Decisión.** La 2. **Confiable:** 5 s perdidos o menos ante un corte, resultados intermedios conservados y versiones y configuración registradas en cada corrida. **Escalable:** una reunión a la vez y una persona por máquina, sin exigir más. **Mantenible:** cada módulo se ejecuta por separado y se valida contra su contrato de 2.3. Por confidencialidad, las pruebas usan reuniones propias consentidas o externas autorizadas, sin información sensible, y todo queda en el directorio local elegido.
 
 **Consecuencias.** No se garantiza escalabilidad ni rendimiento en hardware de bajos recursos; la recuperación se limita a lo que llegó a escribirse.
 

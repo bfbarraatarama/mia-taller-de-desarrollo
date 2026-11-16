@@ -1,0 +1,17 @@
+{
+  "titulo": "Junta OsmLatAm Julio 2022 Argentina",
+  "url": "https://peertube.openstreetmap.fr/videos/watch/e8177007-3a34-4926-abed-b5dbc1700631",
+  "url_metadatos": "https://peertube.openstreetmap.fr/api/v1/videos/e8177007-3a34-4926-abed-b5dbc1700631",
+  "licencia": "Public Domain Dedication",
+  "licencia_peertube": {
+    "id": 7,
+    "label": "Public Domain Dedication"
+  },
+  "evidencia": "Declaración de licencia del publicador en los metadatos de PeerTube.",
+  "seleccion": "Fragmento continuo localizado con Whisper small y contrastado con el audio y el acta; FFmpeg 6.1.1-3ubuntu5.",
+  "sha256_metadatos": "cbd5d0d98946da43b001ad25f12552b8f6bdcb8fda552438a78a42e20d3f5b63",
+  "sha256_original": "6cab42348f0460b9eda679bdeea820c5da476417280e2b82ac2269685537423e",
+  "sha256_fragmento": "c9377dd2c5ccba00a9767622e4943bd6b56933acef027ab348fc6968067e2201",
+  "inicio_s": 2588,
+  "fin_s": 2927
+}

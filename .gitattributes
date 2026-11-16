@@ -4,3 +4,6 @@ evaluacion/diarizacion/resultados/** -text
 
 # La evidencia integral también se verifica por SHA-256 de los bytes publicados.
 evaluacion/integral/resultados/** -text
+
+# Entradas externas de evaluación integral congeladas por SHA-256.
+evaluacion/integral/muestras/** -text
