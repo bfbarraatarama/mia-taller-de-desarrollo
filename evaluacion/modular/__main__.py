@@ -97,6 +97,16 @@ def metricas(config, manifiesto: dict) -> None:
     stt["contenido_sha256_muestra"] = manifiesto["contenido_sha256"]
     (config.resultados / "metricas_stt.json").write_text(json.dumps(stt, ensure_ascii=False, indent=2) + "\n",
                                                          encoding="utf-8")
+    from .metricas_diar import metricas_diarizacion
+
+    diar = metricas_diarizacion(elementos, config.inferencia, config.cache)
+    diar["contenido_sha256_muestra"] = manifiesto["contenido_sha256"]
+    (config.resultados / "metricas_diarizacion.json").write_text(
+        json.dumps(diar, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    for sesion, r in [*diar["por_sesion"].items(), ("total", diar["total"])]:
+        if r and r["der_estricto"]["valor"] is not None:
+            print(f"Diarización {sesion:6} DER {r['der_estricto']['valor']:.3f}  DER NIST "
+                  f"{r['der_tolerancia']['valor']:.3f}  JER {r['jer']['valor']:.3f}")
     for fuente, r in sorted(stt["por_fuente"].items()):
         if r["wer"] is not None:
             print(f"STT {fuente:13} WER {r['wer']:.3f}  CER {r['cer']:.3f}  ({r['palabras_referencia']} palabras)")
