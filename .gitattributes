@@ -1,3 +1,6 @@
 # Los resultados versionados se verifican por SHA-256 de sus bytes (diarization_sha256 de cada corrida):
 # git no debe convertir sus fines de línea al hacer checkout en Windows.
 evaluacion/diarizacion/resultados/** -text
+
+# La evidencia integral también se verifica por SHA-256 de los bytes publicados.
+evaluacion/integral/resultados/** -text

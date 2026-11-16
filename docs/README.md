@@ -23,6 +23,7 @@ La [definición del Hito 3](../hito-3/definicion-de-la-poc.md) es la fuente de a
 ## Evidencia y alcance de la validación
 
 - [Validación de la integración](validacion-integracion.md): procedimientos, resultados funcionales, límites y evaluación pendiente.
+- [Evaluación integral del baseline](../evaluacion/integral/README.md): protocolo reproducible de calidad y latencia.
 - [Hito 2](../hito-2/README.md): fuentes y análisis de viabilidad, preservados como entregable académico anterior.
 - [Criterios de aceptación del Hito 3](../hito-3/definicion-de-la-poc.md#23-criterios-de-aceptación): referencia normativa de la evaluación de la PoC.
 
