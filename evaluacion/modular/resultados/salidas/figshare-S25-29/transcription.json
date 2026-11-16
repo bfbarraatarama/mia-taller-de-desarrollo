@@ -1,0 +1,1142 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.24,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "manda el cinturón exactamente superpuesto al avión",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 50
+      }
+    },
+    {
+      "start": 7.0,
+      "end": 7.72,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "de",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 7.72,
+      "end": 11.58,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "tal manera que, ahí te digo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 3,
+        "end": 30
+      }
+    },
+    {
+      "start": 11.58,
+      "end": 15.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "a ver, cómo te lo puedo escribir a esto",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 39
+      }
+    },
+    {
+      "start": 15.34,
+      "end": 17.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "la hebilla, viste el extremo de abajo de la hebilla",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 51
+      }
+    },
+    {
+      "start": 17.98,
+      "end": 24.66,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "está casi tocando el extremo inferior izquierdo del avión",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 57
+      }
+    },
+    {
+      "start": 24.66,
+      "end": 26.22,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "la cola atrás, viste?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 21
+      }
+    },
+    {
+      "start": 26.22,
+      "end": 27.18,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "está",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 4
+      }
+    },
+    {
+      "start": 27.18,
+      "end": 29.28,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "casi tocando el ojo, pero se ve la cola",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 5,
+        "end": 44
+      }
+    },
+    {
+      "start": 29.28,
+      "end": 31.72,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "no la está tapando del todo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 27
+      }
+    },
+    {
+      "start": 31.72,
+      "end": 32.72,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "pero casi la tapa toda",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 22
+      }
+    },
+    {
+      "start": 32.72,
+      "end": 35.78,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "se ve la",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 8
+      }
+    },
+    {
+      "start": 35.78,
+      "end": 37.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "puntita del ala",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 9,
+        "end": 24
+      }
+    },
+    {
+      "start": 37.08,
+      "end": 38.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "se",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 38.08,
+      "end": 41.22,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "ve la puntita de la parte derecha",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 3,
+        "end": 36
+      }
+    },
+    {
+      "start": 42.04,
+      "end": 43.28,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "y de la izquierda también",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 43.28,
+      "end": 46.06,
+      "speaker": null,
+      "name": null,
+      "text": "se ve el contorno, digamos",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 26
+      }
+    },
+    {
+      "start": 47.2,
+      "end": 51.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "y el eje vertical está bastante centrado del avión",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 50
+      }
+    },
+    {
+      "start": 51.08,
+      "end": 53.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "tal vez un poquito hacia la derecha",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 35
+      }
+    },
+    {
+      "start": 53.08,
+      "end": 53.38,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "de",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 53.38,
+      "end": 57.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "tal manera que el cinturón, viste el ala derecha?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 3,
+        "end": 52
+      }
+    },
+    {
+      "start": 58.4,
+      "end": 60.16,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "el ala derecha no está tapada para nada",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 39
+      }
+    },
+    {
+      "start": 60.16,
+      "end": 63.18,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "pero el cinturón la está tocando por todos los extremos",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 55
+      }
+    },
+    {
+      "start": 63.18,
+      "end": 64.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "el ala derecha del avión?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 65.88,
+      "end": 68.84,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "sí, el cinturón está adentro del cinturón",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 41
+      }
+    },
+    {
+      "start": 68.84,
+      "end": 72.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "pero el cinturón la está tocando, no la está superponiendo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 58
+      }
+    },
+    {
+      "start": 72.46,
+      "end": 74.3,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "voy para ahí entonces",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 21
+      }
+    },
+    {
+      "start": 75.04,
+      "end": 75.6,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "no,",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 76.92,
+      "end": 78.32,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "ahí me fui",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 4,
+        "end": 14
+      }
+    },
+    {
+      "start": 78.32,
+      "end": 80.42,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "bueno, olvídate lo que te dije antes",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 23,
+        "start": 0,
+        "end": 36
+      }
+    },
+    {
+      "start": 80.42,
+      "end": 81.76,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "y recordá esto",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 0,
+        "end": 14
+      }
+    },
+    {
+      "start": 82.36,
+      "end": 87.62,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "el eje vertical bastante coincidente con el eje vertical del avión",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 25,
+        "start": 0,
+        "end": 66
+      }
+    },
+    {
+      "start": 87.62,
+      "end": 91.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "digamos, la hebilla está...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 26,
+        "start": 0,
+        "end": 27
+      }
+    },
+    {
+      "start": 91.46,
+      "end": 91.88,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "o qué?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 26,
+        "start": 28,
+        "end": 34
+      }
+    },
+    {
+      "start": 92.6,
+      "end": 92.8,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "digamos,",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 27,
+        "start": 0,
+        "end": 8
+      }
+    },
+    {
+      "start": 93.02,
+      "end": 95.6,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "el centro del cinturón no es la hebilla",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 27,
+        "start": 9,
+        "end": 48
+      }
+    },
+    {
+      "start": 95.6,
+      "end": 98.24,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "está ahí cuando termina la hebilla, más o menos",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 28,
+        "start": 0,
+        "end": 47
+      }
+    },
+    {
+      "start": 98.24,
+      "end": 101.4,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "el eje del cinturón es más o menos donde termina la hebilla",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 29,
+        "start": 0,
+        "end": 59
+      }
+    },
+    {
+      "start": 101.4,
+      "end": 103.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "no es exactamente donde termina, es un poco antes",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 30,
+        "start": 0,
+        "end": 49
+      }
+    },
+    {
+      "start": 105.68,
+      "end": 108.14,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "eso está en el centro del avión",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 31,
+        "start": 0,
+        "end": 31
+      }
+    },
+    {
+      "start": 108.14,
+      "end": 109.0,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "ok",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 32,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 109.58,
+      "end": 112.54,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "y ahora lo que tienes que hacer es subir o bajar el cinturón",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 33,
+        "start": 0,
+        "end": 60
+      }
+    },
+    {
+      "start": 112.54,
+      "end": 115.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "de tal manera que el ala derecha",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 34,
+        "start": 0,
+        "end": 32
+      }
+    },
+    {
+      "start": 115.86,
+      "end": 118.42,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "puedas verla, puedes ver el extremo del ala derecha",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 35,
+        "start": 0,
+        "end": 51
+      }
+    },
+    {
+      "start": 118.42,
+      "end": 120.5,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "no la está tapando, la está tocando igual",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 36,
+        "start": 0,
+        "end": 41
+      }
+    },
+    {
+      "start": 120.5,
+      "end": 122.26,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "listo, pero no la está tapando",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 37,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 122.26,
+      "end": 122.9,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "ok, bueno,",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 38,
+        "start": 0,
+        "end": 10
+      }
+    },
+    {
+      "start": 123.2,
+      "end": 123.78,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "vamos más o",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 38,
+        "start": 11,
+        "end": 22
+      }
+    },
+    {
+      "start": 123.78,
+      "end": 125.64,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "menos así",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 38,
+        "start": 23,
+        "end": 32
+      }
+    },
+    {
+      "start": 128.06,
+      "end": 128.92,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "más o menos",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 39,
+        "start": 0,
+        "end": 11
+      }
+    }
+  ]
+}

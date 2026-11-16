@@ -1,0 +1,694 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.16,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Ya estás?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 10
+      }
+    },
+    {
+      "start": 2.48,
+      "end": 8.36,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El clavo está exactamente sobre la cortadora de pasto",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 53
+      }
+    },
+    {
+      "start": 8.36,
+      "end": 18.35,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "y donde en la cabeza del clavo está alineada con el lugar en donde tomas la máquina para cortar el pasto",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 104
+      }
+    },
+    {
+      "start": 19.3,
+      "end": 20.04,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 1
+      }
+    },
+    {
+      "start": 20.04,
+      "end": 22.48,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "no llega a tocar el clavo a la cortadora",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 2,
+        "end": 42
+      }
+    },
+    {
+      "start": 23.0,
+      "end": 25.16,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Está por sobre",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 14
+      }
+    },
+    {
+      "start": 25.16,
+      "end": 31.98,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Sí, por eso, yo no puedo subir, lo tengo al mango para arriba",
+      "overlap": true,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 61
+      }
+    },
+    {
+      "start": 31.98,
+      "end": 38.1,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "y quiero saber si qué tanto toca el cuerpo del clavo a la cortadora",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 67
+      }
+    },
+    {
+      "start": 39.9,
+      "end": 41.38,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿La toca o no?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 14
+      }
+    },
+    {
+      "start": 41.7,
+      "end": 43.96,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "El cuerpo del clavo a la",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "start": 43.96,
+      "end": 46.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "cortadora está sobre, sí sí",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 25,
+        "end": 52
+      }
+    },
+    {
+      "start": 46.34,
+      "end": 56.16,
+      "speaker": null,
+      "name": null,
+      "text": "Y para saber dónde ubicarla exactamente, la cabeza del clavo estaría en la misma línea con la que vos agarrás la cortadora de pasto",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 131
+      }
+    },
+    {
+      "start": 56.16,
+      "end": 57.62,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Claro, pero ¿qué parte de la cabeza?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 36
+      }
+    },
+    {
+      "start": 57.88,
+      "end": 59.96,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "El clavo termina donde...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 59.96,
+      "end": 60.04,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿La",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 60.04,
+      "end": 61.16,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "cabeza donde martillas?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 4,
+        "end": 27
+      }
+    },
+    {
+      "start": 61.38,
+      "end": 70.54,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Sí, sí, sí, yo sé, pero como la cabeza, digo, para ser preciso otra vez, como la cabeza no es un punto sino que tiene...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 120
+      }
+    },
+    {
+      "start": 70.54,
+      "end": 82.02,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ah, pero mide casi lo mismo que el mango de la cortadora, así que con que lo sitúes sobre eso, vas a ver que cuando lo pones arriba, tapa perfectamente el mango de la cortadora",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 176
+      }
+    },
+    {
+      "start": 83.74,
+      "end": 86.1,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Bueno, lo pongo casi pegadito",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 86.1,
+      "end": 87.28,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "a la cortadora entonces",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 30,
+        "end": 53
+      }
+    },
+    {
+      "start": 87.28,
+      "end": 88.5,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Por sobre, sí sí",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 88.5,
+      "end": 89.8,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "No, no, yo sé que por sobre",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 27
+      }
+    },
+    {
+      "start": 89.8,
+      "end": 90.28,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Ah, ok",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 6
+      }
+    },
+    {
+      "start": 91.98,
+      "end": 95.7,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Pero como el cuerpito me sirve de referencia, ¿entendés?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 56
+      }
+    },
+    {
+      "start": 95.7,
+      "end": 106.06,
+      "speaker": null,
+      "name": null,
+      "text": "Y el cuerpito, al ponerlo así, lineal, la cabeza con el mango, el cuerpito entonces queda así como en diagonal, igual que la cortadora",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 134
+      }
+    },
+    {
+      "start": 106.06,
+      "end": 110.9,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Sí, pero ¿llega a tocar a la cortadora? ¿O qué tan lejos queda?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 63
+      }
+    },
+    {
+      "start": 111.34,
+      "end": 112.7,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Estás encima de...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 18
+      }
+    },
+    {
+      "start": 113.34,
+      "end": 114.94,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Bueno, dale, lo dejo ahí y veamos",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 23,
+        "start": 0,
+        "end": 33
+      }
+    },
+    {
+      "start": 114.94,
+      "end": 115.54,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Bueno",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 0,
+        "end": 5
+      }
+    },
+    {
+      "start": 115.54,
+      "end": 116.2,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Listo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 25,
+        "start": 0,
+        "end": 5
+      }
+    }
+  ]
+}

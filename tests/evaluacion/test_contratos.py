@@ -122,7 +122,8 @@ def test_evaluar_por_linea_de_comandos(tmp_path, capsys):
         .replace('salida = "evaluacion/modular/datos"', f'salida = "{datos}"')
         .replace('manifiesto = "evaluacion/modular/muestra.manifest.json"', f'manifiesto = "{manifiesto}"')
         .replace('inferencia = "evaluacion/modular/inferencia"', f'inferencia = "{inferencia}"')
-        .replace('resultados = "evaluacion/modular/resultados"', f'resultados = "{resultados}"'),
+        .replace('resultados = "evaluacion/modular/resultados"', f'resultados = "{resultados}"')
+        .replace('salidas = "evaluacion/modular/resultados/salidas"', f'salidas = "{tmp_path / "salidas"}"'),
         encoding="utf-8")
     assert main(["evaluar", "--config", str(config)]) == 0
     reporte = json.loads((resultados / "contratos.json").read_text(encoding="utf-8"))

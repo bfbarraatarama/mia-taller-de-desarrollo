@@ -1,0 +1,33 @@
+{
+  "elemento": "ami-IS1009c",
+  "entrada_sha256": "8bbccd627e82857e1768fc7850eecb4de13b4ee7547f885bf013ff999e4426f9",
+  "configuracion": {
+    "modelo_stt": "medium",
+    "dispositivo": "cuda",
+    "modelo_minutas": "qwen2.5-7b",
+    "secciones": [
+      "resumen",
+      "temas",
+      "decisiones",
+      "problemas",
+      "acciones"
+    ]
+  },
+  "codigo_sha256": "4622740d14ef7dd701f6efd23aa4c49ff051df0cb3806d157ac06919ec2aabf3",
+  "comando": [
+    "python",
+    "-m",
+    "src.minutas",
+    "--entrada",
+    "<datos>/ami/IS1009c/transcription.json",
+    "--salida",
+    "<inferencia>/ami-IS1009c",
+    "--modelo",
+    "qwen2.5-7b",
+    "--secciones",
+    "resumen,temas,decisiones,problemas,acciones",
+    "--sobrescribir"
+  ],
+  "segundos": 501.7,
+  "codigo": 0
+}

@@ -1,0 +1,531 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 1.6,
+      "end": 7.0,
+      "text": "La plancha la tenes que poner justo debajo de la caracola o el limón",
+      "words": [
+        {
+          "word": "La",
+          "start": 1.6,
+          "end": 2.18
+        },
+        {
+          "word": "plancha",
+          "start": 2.18,
+          "end": 2.76
+        },
+        {
+          "word": "la",
+          "start": 2.76,
+          "end": 3.86
+        },
+        {
+          "word": "tenes",
+          "start": 3.86,
+          "end": 4.0
+        },
+        {
+          "word": "que",
+          "start": 4.0,
+          "end": 4.08
+        },
+        {
+          "word": "poner",
+          "start": 4.08,
+          "end": 4.3
+        },
+        {
+          "word": "justo",
+          "start": 4.3,
+          "end": 4.68
+        },
+        {
+          "word": "debajo",
+          "start": 4.68,
+          "end": 5.06
+        },
+        {
+          "word": "de",
+          "start": 5.06,
+          "end": 5.7
+        },
+        {
+          "word": "la",
+          "start": 5.7,
+          "end": 5.92
+        },
+        {
+          "word": "caracola",
+          "start": 5.92,
+          "end": 6.42
+        },
+        {
+          "word": "o",
+          "start": 6.42,
+          "end": 6.5
+        },
+        {
+          "word": "el",
+          "start": 6.5,
+          "end": 6.7
+        },
+        {
+          "word": "limón",
+          "start": 6.7,
+          "end": 7.0
+        }
+      ]
+    },
+    {
+      "start": 8.66,
+      "end": 11.0,
+      "text": "Muy cerca, muy lejos",
+      "words": [
+        {
+          "word": "Muy",
+          "start": 8.66,
+          "end": 9.24
+        },
+        {
+          "word": "cerca,",
+          "start": 9.24,
+          "end": 9.72
+        },
+        {
+          "word": "muy",
+          "start": 9.78,
+          "end": 10.08
+        },
+        {
+          "word": "lejos",
+          "start": 10.08,
+          "end": 11.0
+        }
+      ]
+    },
+    {
+      "start": 11.88,
+      "end": 22.62,
+      "text": "Fijate que la parte más baja de la plancha está justo encima, ponle a 2 milímetros de la cabeza de la ballena",
+      "words": [
+        {
+          "word": "Fijate",
+          "start": 11.88,
+          "end": 12.44
+        },
+        {
+          "word": "que",
+          "start": 12.44,
+          "end": 12.56
+        },
+        {
+          "word": "la",
+          "start": 12.56,
+          "end": 12.7
+        },
+        {
+          "word": "parte",
+          "start": 12.7,
+          "end": 12.98
+        },
+        {
+          "word": "más",
+          "start": 12.98,
+          "end": 13.3
+        },
+        {
+          "word": "baja",
+          "start": 13.3,
+          "end": 13.84
+        },
+        {
+          "word": "de",
+          "start": 13.84,
+          "end": 15.64
+        },
+        {
+          "word": "la",
+          "start": 15.64,
+          "end": 15.9
+        },
+        {
+          "word": "plancha",
+          "start": 15.9,
+          "end": 16.82
+        },
+        {
+          "word": "está",
+          "start": 16.82,
+          "end": 17.3
+        },
+        {
+          "word": "justo",
+          "start": 17.3,
+          "end": 18.04
+        },
+        {
+          "word": "encima,",
+          "start": 18.04,
+          "end": 18.46
+        },
+        {
+          "word": "ponle",
+          "start": 18.68,
+          "end": 18.84
+        },
+        {
+          "word": "a",
+          "start": 18.84,
+          "end": 19.78
+        },
+        {
+          "word": "2",
+          "start": 19.78,
+          "end": 20.02
+        },
+        {
+          "word": "milímetros",
+          "start": 20.02,
+          "end": 20.78
+        },
+        {
+          "word": "de",
+          "start": 20.78,
+          "end": 21.52
+        },
+        {
+          "word": "la",
+          "start": 21.52,
+          "end": 21.66
+        },
+        {
+          "word": "cabeza",
+          "start": 21.66,
+          "end": 21.9
+        },
+        {
+          "word": "de",
+          "start": 21.9,
+          "end": 22.04
+        },
+        {
+          "word": "la",
+          "start": 22.04,
+          "end": 22.16
+        },
+        {
+          "word": "ballena",
+          "start": 22.16,
+          "end": 22.62
+        }
+      ]
+    },
+    {
+      "start": 22.62,
+      "end": 24.0,
+      "text": "La parte más alta de la ballena",
+      "words": [
+        {
+          "word": "La",
+          "start": 22.62,
+          "end": 23.0
+        },
+        {
+          "word": "parte",
+          "start": 23.0,
+          "end": 23.14
+        },
+        {
+          "word": "más",
+          "start": 23.14,
+          "end": 23.36
+        },
+        {
+          "word": "alta",
+          "start": 23.36,
+          "end": 23.52
+        },
+        {
+          "word": "de",
+          "start": 23.52,
+          "end": 23.66
+        },
+        {
+          "word": "la",
+          "start": 23.66,
+          "end": 23.78
+        },
+        {
+          "word": "ballena",
+          "start": 23.78,
+          "end": 24.07
+        }
+      ]
+    },
+    {
+      "start": 25.28,
+      "end": 29.32,
+      "text": "Y que sería la parte celeste estaría más cerca del ovriz o el cable?",
+      "words": [
+        {
+          "word": "Y",
+          "start": 25.28,
+          "end": 25.86
+        },
+        {
+          "word": "que",
+          "start": 25.86,
+          "end": 26.0
+        },
+        {
+          "word": "sería",
+          "start": 26.0,
+          "end": 26.22
+        },
+        {
+          "word": "la",
+          "start": 26.22,
+          "end": 26.34
+        },
+        {
+          "word": "parte",
+          "start": 26.34,
+          "end": 26.66
+        },
+        {
+          "word": "celeste",
+          "start": 26.66,
+          "end": 27.18
+        },
+        {
+          "word": "estaría",
+          "start": 27.18,
+          "end": 27.98
+        },
+        {
+          "word": "más",
+          "start": 27.98,
+          "end": 28.28
+        },
+        {
+          "word": "cerca",
+          "start": 28.28,
+          "end": 28.46
+        },
+        {
+          "word": "del",
+          "start": 28.46,
+          "end": 28.62
+        },
+        {
+          "word": "ovriz",
+          "start": 28.62,
+          "end": 28.88
+        },
+        {
+          "word": "o",
+          "start": 28.88,
+          "end": 29.0
+        },
+        {
+          "word": "el",
+          "start": 29.0,
+          "end": 29.12
+        },
+        {
+          "word": "cable?",
+          "start": 29.12,
+          "end": 29.32
+        }
+      ]
+    },
+    {
+      "start": 31.32,
+      "end": 43.42,
+      "text": "Bueno, me dijiste que la parte más baja de la plancha está encima de la parte más alta de la ballena",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 31.1,
+          "end": 31.5
+        },
+        {
+          "word": "me",
+          "start": 32.54,
+          "end": 32.6
+        },
+        {
+          "word": "dijiste",
+          "start": 32.6,
+          "end": 33.06
+        },
+        {
+          "word": "que",
+          "start": 33.06,
+          "end": 34.68
+        },
+        {
+          "word": "la",
+          "start": 34.68,
+          "end": 34.78
+        },
+        {
+          "word": "parte",
+          "start": 34.78,
+          "end": 35.12
+        },
+        {
+          "word": "más",
+          "start": 35.12,
+          "end": 35.62
+        },
+        {
+          "word": "baja",
+          "start": 35.62,
+          "end": 36.08
+        },
+        {
+          "word": "de",
+          "start": 36.08,
+          "end": 36.76
+        },
+        {
+          "word": "la",
+          "start": 36.76,
+          "end": 37.16
+        },
+        {
+          "word": "plancha",
+          "start": 37.16,
+          "end": 37.92
+        },
+        {
+          "word": "está",
+          "start": 37.92,
+          "end": 38.72
+        },
+        {
+          "word": "encima",
+          "start": 38.72,
+          "end": 39.88
+        },
+        {
+          "word": "de",
+          "start": 39.88,
+          "end": 40.36
+        },
+        {
+          "word": "la",
+          "start": 40.36,
+          "end": 41.96
+        },
+        {
+          "word": "parte",
+          "start": 41.96,
+          "end": 42.1
+        },
+        {
+          "word": "más",
+          "start": 42.1,
+          "end": 42.46
+        },
+        {
+          "word": "alta",
+          "start": 42.46,
+          "end": 42.64
+        },
+        {
+          "word": "de",
+          "start": 42.64,
+          "end": 42.76
+        },
+        {
+          "word": "la",
+          "start": 42.76,
+          "end": 42.9
+        },
+        {
+          "word": "ballena",
+          "start": 42.9,
+          "end": 43.42
+        }
+      ]
+    },
+    {
+      "start": 43.42,
+      "end": 45.32,
+      "text": "Ah, ya lo entendí",
+      "words": [
+        {
+          "word": "Ah,",
+          "start": 43.42,
+          "end": 43.8
+        },
+        {
+          "word": "ya",
+          "start": 44.46,
+          "end": 44.58
+        },
+        {
+          "word": "lo",
+          "start": 44.58,
+          "end": 44.7
+        },
+        {
+          "word": "entendí",
+          "start": 44.7,
+          "end": 45.32
+        }
+      ]
+    },
+    {
+      "start": 45.32,
+      "end": 48.12,
+      "text": "Y el cable queda encima de la sirena",
+      "words": [
+        {
+          "word": "Y",
+          "start": 45.32,
+          "end": 46.04
+        },
+        {
+          "word": "el",
+          "start": 46.04,
+          "end": 46.26
+        },
+        {
+          "word": "cable",
+          "start": 46.26,
+          "end": 46.46
+        },
+        {
+          "word": "queda",
+          "start": 46.46,
+          "end": 46.7
+        },
+        {
+          "word": "encima",
+          "start": 46.7,
+          "end": 47.02
+        },
+        {
+          "word": "de",
+          "start": 47.02,
+          "end": 47.24
+        },
+        {
+          "word": "la",
+          "start": 47.24,
+          "end": 47.38
+        },
+        {
+          "word": "sirena",
+          "start": 47.38,
+          "end": 48.12
+        }
+      ]
+    }
+  ]
+}

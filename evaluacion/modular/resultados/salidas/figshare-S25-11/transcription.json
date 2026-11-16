@@ -1,0 +1,410 @@
+{
+  "segments": [
+    {
+      "start": 0.64,
+      "end": 2.76,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, tenéis que agarrar el limón, ¿viste?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 43
+      }
+    },
+    {
+      "start": 3.02,
+      "end": 3.4,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 3.4,
+      "end": 6.52,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ponerlo entre la ballena y la cebolla",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 37
+      }
+    },
+    {
+      "start": 6.52,
+      "end": 8.5,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Entre la ballena y la cebolla, ¿viste?",
+      "overlap": true,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 38
+      }
+    },
+    {
+      "start": 8.84,
+      "end": 10.48,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Casi tocando la ballena",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 10.48,
+      "end": 18.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ponerle que haya medio milímetro entre el lomito ese, como la jorobita que tiene la ballena y el limón",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 102
+      }
+    },
+    {
+      "start": 18.52,
+      "end": 19.96,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí, sí, entonces...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 19
+      }
+    },
+    {
+      "start": 19.96,
+      "end": 26.14,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Fijate ahora que el extremo derecho del limón casi consigue con el extremo derecho de la nápida de la ballena",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 109
+      }
+    },
+    {
+      "start": 26.14,
+      "end": 28.3,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Pero no llega a hacer la misma raya",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 35
+      }
+    },
+    {
+      "start": 28.3,
+      "end": 29.88,
+      "speaker": null,
+      "name": null,
+      "text": "Pero es, no sé, nada",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 20
+      }
+    },
+    {
+      "start": 30.7,
+      "end": 34.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ponerlo el mismo porque es prácticamente imperceptible",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 54
+      }
+    },
+    {
+      "start": 34.52,
+      "end": 36.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El cosito negro de la derecha del limón, ¿viste?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 48
+      }
+    },
+    {
+      "start": 36.44,
+      "end": 37.88,
+      "speaker": null,
+      "name": null,
+      "text": "Sí, sí, sí",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 10
+      }
+    },
+    {
+      "start": 39.48,
+      "end": 42.54,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y lo pusiste más cerca de la ballena que de la cebolla",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 54
+      }
+    },
+    {
+      "start": 42.54,
+      "end": 44.38,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí, lo puse muy cerca de la ballena",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 35
+      }
+    },
+    {
+      "start": 45.24,
+      "end": 47.64,
+      "speaker": null,
+      "name": null,
+      "text": "Se ve igual el guar entre la ballena y el limón",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 47
+      }
+    },
+    {
+      "start": 47.64,
+      "end": 49.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí, sí, sí, sí",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 14
+      }
+    },
+    {
+      "start": 49.98,
+      "end": 50.66,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, mándale",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 14
+      }
+    }
+  ]
+}

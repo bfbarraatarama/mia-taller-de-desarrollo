@@ -1,0 +1,57 @@
+{
+  "resumen": "Se discutió sobre la superposición de una oreja en un cuadro con una monja, identificando las posiciones relativas y el grado de superposición. Se concluyeron detalles específicos sobre la ubicación de las orejas y la visibilidad de la cabeza de la monja.",
+  "temas": [
+    {
+      "texto": "Superposición de una oreja en un cuadro con una monja",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024",
+        "I000025",
+        "I000026",
+        "I000027",
+        "I000028",
+        "I000029",
+        "I000030"
+      ],
+      "id_ancla": "I000030"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "Ubicar las orejas en el cuadro",
+      "ids_intervenciones": [
+        "I000007",
+        "I000010",
+        "I000026",
+        "I000027"
+      ],
+      "id_ancla": "I000027",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

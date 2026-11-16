@@ -1,0 +1,180 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.44,
+      "speaker": null,
+      "name": null,
+      "text": "manda el bichito ese simpático a la lombriz esa arriba de las dos lunas",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 71
+      }
+    },
+    {
+      "start": 6.44,
+      "end": 12.38,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "centrada entre las dos lunas como si la sombra estuviese apoyada sobre la luna",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 78
+      }
+    },
+    {
+      "start": 12.38,
+      "end": 13.96,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "derecha la amarilla",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 19
+      }
+    },
+    {
+      "start": 16.88,
+      "end": 23.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "y poner el mentón del mentón del bicho del gusano está como la misma línea que",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 78
+      }
+    },
+    {
+      "start": 23.08,
+      "end": 28.32,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "la punta sur de la luna amarilla. Listo y la sombra está casi rosando.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 70
+      }
+    },
+    {
+      "start": 28.32,
+      "end": 36.32,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La sombra del lado derecho está tocando o está sobre la línea negra de la luna amarilla",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 87
+      }
+    },
+    {
+      "start": 36.32,
+      "end": 42.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "y la sombra del lado izquierdo está tocando el borde de la luna azul y la",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 73
+      }
+    },
+    {
+      "start": 42.7,
+      "end": 46.64,
+      "speaker": null,
+      "name": null,
+      "text": "pasa un poco también. Está un poco superpuesta con la luna azul.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 64
+      }
+    }
+  ]
+}

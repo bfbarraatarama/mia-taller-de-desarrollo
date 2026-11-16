@@ -1,0 +1,75 @@
+{
+  "segments": [
+    {
+      "start": 0.94,
+      "end": 8.04,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, el limón tenés que agarrar y ponerlo en el medio de la monja, el espejo, el ojo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 86
+      }
+    },
+    {
+      "start": 8.04,
+      "end": 8.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "En el medio de todo",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 19
+      }
+    },
+    {
+      "start": 12.74,
+      "end": 13.64,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Queda muy bonito",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 16
+      }
+    }
+  ]
+}

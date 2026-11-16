@@ -1,0 +1,17 @@
+{
+  "resumen": "La reunión se centró en la colocación de una luna amarilla entre un ojo y una regla, especificando que debe estar en el espacio central equidistante de ambos elementos.",
+  "temas": [
+    {
+      "texto": "Colocación de la luna amarilla",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003"
+      ],
+      "id_ancla": "I000003"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": []
+}

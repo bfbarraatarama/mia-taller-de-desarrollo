@@ -1,0 +1,85 @@
+{
+  "resumen": "La reunión se centró en la colocación de un caballo negro sobre una piña, discutiendo la posición y el apoyo de las patas del caballo. Se acordó que la segunda pata del caballo debe estar alineada con el borde sur de la piña, con un extremo ligeramente sobresaliente.",
+  "temas": [
+    {
+      "texto": "Colocación del caballo negro sobre una piña",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024",
+        "I000025",
+        "I000026",
+        "I000027",
+        "I000028",
+        "I000029",
+        "I000030",
+        "I000031"
+      ],
+      "id_ancla": "I000031"
+    }
+  ],
+  "decisiones": [
+    {
+      "texto": "La segunda pata del caballo debe estar alineada con el borde sur de la piña, con un extremo ligeramente sobresaliente.",
+      "ids_intervenciones": [
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000023",
+        "I000024",
+        "I000025"
+      ],
+      "id_ancla": "I000025"
+    }
+  ],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "Colocar la segunda pata del caballo negro alineada con el borde sur de la piña, con un extremo ligeramente sobresaliente.",
+      "ids_intervenciones": [
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000023",
+        "I000024",
+        "I000025"
+      ],
+      "id_ancla": "I000025",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

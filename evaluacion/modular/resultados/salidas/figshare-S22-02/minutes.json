@@ -1,0 +1,60 @@
+{
+  "resumen": "La reunión se centró en la ubicación de una cortadora de pasto con respecto a dos leones. Se discutió sobre si la cortadora debía estar equidistante entre los leones y finalmente se acordó que debería coincidir con la patita delanteras del león amarillo.",
+  "temas": [
+    {
+      "texto": "Ubicación de la cortadora de pasto",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024"
+      ],
+      "id_ancla": "I000024"
+    }
+  ],
+  "decisiones": [
+    {
+      "texto": "La cortadora de pasto debe estar exactamente donde está la patita delanteras del león amarillo.",
+      "ids_intervenciones": [
+        "I000015",
+        "I000021",
+        "I000024"
+      ],
+      "id_ancla": "I000024"
+    }
+  ],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "Bajar la cortadora de pasto un poco.",
+      "ids_intervenciones": [
+        "I000025",
+        "I000026",
+        "I000024"
+      ],
+      "id_ancla": "I000024",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

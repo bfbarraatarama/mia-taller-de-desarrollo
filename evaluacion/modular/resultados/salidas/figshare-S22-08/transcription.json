@@ -1,0 +1,543 @@
+{
+  "segments": [
+    {
+      "start": 1.64,
+      "end": 2.92,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "que maraña",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 10
+      }
+    },
+    {
+      "start": 5.04,
+      "end": 6.24,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "es un limon",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 11
+      }
+    },
+    {
+      "start": 7.74,
+      "end": 11.24,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "esta en el centro del centro",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 11.24,
+      "end": 11.96,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "en el centro",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 11.96,
+      "end": 12.52,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "de todas las",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 13,
+        "end": 25
+      }
+    },
+    {
+      "start": 12.52,
+      "end": 12.86,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "cosas",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 26,
+        "end": 31
+      }
+    },
+    {
+      "start": 12.86,
+      "end": 15.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "claro, arriba el ojo abajo la luna azul",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 39
+      }
+    },
+    {
+      "start": 15.74,
+      "end": 17.22,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "toca alguna cosa?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 17
+      }
+    },
+    {
+      "start": 18.94,
+      "end": 20.48,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "casi a la luna azul",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 19
+      }
+    },
+    {
+      "start": 20.48,
+      "end": 20.82,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "pero",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 4
+      }
+    },
+    {
+      "start": 20.82,
+      "end": 21.78,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "no",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 5,
+        "end": 7
+      }
+    },
+    {
+      "start": 21.78,
+      "end": 24.52,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "y para mi me quedan las hojitas",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 31
+      }
+    },
+    {
+      "start": 24.52,
+      "end": 26.7,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "me quedan casi tocando esa uriola",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 33
+      }
+    },
+    {
+      "start": 26.7,
+      "end": 28.74,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "que esta alrededor de la",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "start": 28.74,
+      "end": 29.04,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "monja",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 25,
+        "end": 30
+      }
+    },
+    {
+      "start": 29.04,
+      "end": 29.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "el aura de la monja",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 19
+      }
+    },
+    {
+      "start": 29.98,
+      "end": 30.78,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "asi pues",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 8
+      }
+    },
+    {
+      "start": 30.78,
+      "end": 33.16,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "que las hojitas esten justo",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 27
+      }
+    },
+    {
+      "start": 33.16,
+      "end": 36.64,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "en la linea en donde comienza esa pintura",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 41
+      }
+    },
+    {
+      "start": 36.64,
+      "end": 38.4,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "y a las pestañas no las toca?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 38.64,
+      "end": 39.88,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "no, al marco",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 39.88,
+      "end": 40.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "tampoco",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 13,
+        "end": 20
+      }
+    },
+    {
+      "start": 40.46,
+      "end": 43.02,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "creo que esta bien listo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 24
+      }
+    }
+  ]
+}

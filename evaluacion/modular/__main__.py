@@ -86,20 +86,20 @@ def inferir(args) -> int:
     return 0
 
 
-def metricas(config, manifiesto: dict) -> None:
+def metricas(config, manifiesto: dict, origen) -> None:
     """Métricas sin umbral (grupo 6) desde las salidas guardadas; cada una en su reporte de `resultados/`."""
     import json
 
     from .metricas_stt import metricas_stt
 
     elementos = manifiesto["contenido"]["elementos"]
-    stt = metricas_stt(elementos, config.inferencia, config.cache)
+    stt = metricas_stt(elementos, origen, config.cache)
     stt["contenido_sha256_muestra"] = manifiesto["contenido_sha256"]
     (config.resultados / "metricas_stt.json").write_text(json.dumps(stt, ensure_ascii=False, indent=2) + "\n",
                                                          encoding="utf-8")
     from .metricas_diar import metricas_diarizacion
 
-    diar = metricas_diarizacion(elementos, config.inferencia, config.cache)
+    diar = metricas_diarizacion(elementos, origen, config.cache)
     diar["contenido_sha256_muestra"] = manifiesto["contenido_sha256"]
     (config.resultados / "metricas_diarizacion.json").write_text(
         json.dumps(diar, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -109,7 +109,7 @@ def metricas(config, manifiesto: dict) -> None:
                   f"{r['der_tolerancia']['valor']:.3f}  JER {r['jer']['valor']:.3f}")
     from .metricas_asociacion import metricas_asociacion
 
-    asoc = metricas_asociacion(elementos, config.inferencia, config.cache)
+    asoc = metricas_asociacion(elementos, origen, config.cache, config.salida)
     asoc["contenido_sha256_muestra"] = manifiesto["contenido_sha256"]
     (config.resultados / "metricas_asociacion.json").write_text(
         json.dumps(asoc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -128,7 +128,7 @@ def metricas(config, manifiesto: dict) -> None:
 
     from .planilla import planillas_de_minutas
 
-    planilla = planillas_de_minutas(elementos, config.salida, config.inferencia, config.resultados / "planillas")
+    planilla = planillas_de_minutas(elementos, config.salida, origen, config.resultados / "planillas")
     planilla["contenido_sha256_muestra"] = manifiesto["contenido_sha256"]
     (config.resultados / "planilla_minutas.json").write_text(
         json.dumps(planilla, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -154,7 +154,19 @@ def evaluar(args) -> int:
         print("La muestra no coincide con su manifiesto; no se evalúa:\n" + "\n".join(f"- {p}" for p in problemas),
               file=sys.stderr)
         return 1
-    reporte = evaluar_contratos(config.manifiesto, config.salida, config.inferencia)
+    if config.inferencia.is_dir():
+        from .salidas import publicar_salidas
+
+        origen = config.inferencia
+        publicados = publicar_salidas(config.inferencia, config.salidas)
+        print(f"Salidas publicadas en {config.salidas.name}/: {publicados} archivos.")
+    elif config.salidas.is_dir():
+        origen = config.salidas
+        print(f"Sin inferencia local: se evalúan las salidas versionadas de {config.salidas.name}/.")
+    else:
+        print(f"No hay salidas: correr `inferir` o tener {config.salidas}.", file=sys.stderr)
+        return 1
+    reporte = evaluar_contratos(config.manifiesto, config.salida, origen)
     config.resultados.mkdir(parents=True, exist_ok=True)
     (config.resultados / "contratos.json").write_text(json.dumps(reporte, ensure_ascii=False, indent=2) + "\n",
                                                        encoding="utf-8")
@@ -162,7 +174,7 @@ def evaluar(args) -> int:
     from .planilla import PlanillaInvalida
 
     try:
-        metricas(config, json.loads(config.manifiesto.read_text(encoding="utf-8")))
+        metricas(config, json.loads(config.manifiesto.read_text(encoding="utf-8")), origen)
     except (PlanillaInvalida, ExposicionIncompleta) as e:
         print(e, file=sys.stderr)
         return 1

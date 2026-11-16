@@ -1,0 +1,640 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 2.1,
+      "end": 7.0,
+      "text": "Tiene que poner el mimo arriba de la lechusa y a la derecha de la oreja.",
+      "words": [
+        {
+          "word": "Tiene",
+          "start": 2.1,
+          "end": 2.46
+        },
+        {
+          "word": "que",
+          "start": 2.46,
+          "end": 2.64
+        },
+        {
+          "word": "el",
+          "start": 2.64,
+          "end": 2.88
+        },
+        {
+          "word": "mimo",
+          "start": 2.88,
+          "end": 4.06
+        },
+        {
+          "word": "arriba",
+          "start": 4.06,
+          "end": 4.78
+        },
+        {
+          "word": "de",
+          "start": 4.78,
+          "end": 4.94
+        },
+        {
+          "word": "la",
+          "start": 4.94,
+          "end": 5.04
+        },
+        {
+          "word": "lechusa",
+          "start": 5.04,
+          "end": 5.26
+        },
+        {
+          "word": "y",
+          "start": 5.26,
+          "end": 5.86
+        },
+        {
+          "word": "a",
+          "start": 5.86,
+          "end": 5.92
+        },
+        {
+          "word": "la",
+          "start": 5.92,
+          "end": 6.08
+        },
+        {
+          "word": "derecha",
+          "start": 6.08,
+          "end": 6.28
+        },
+        {
+          "word": "de",
+          "start": 6.28,
+          "end": 6.4
+        },
+        {
+          "word": "la",
+          "start": 6.4,
+          "end": 6.52
+        },
+        {
+          "word": "oreja.",
+          "start": 6.52,
+          "end": 7.0
+        }
+      ]
+    },
+    {
+      "start": 7.14,
+      "end": 9.18,
+      "text": "Tiene que estar más o menos centrado en todo sentido.",
+      "words": [
+        {
+          "word": "Tiene",
+          "start": 7.14,
+          "end": 7.2
+        },
+        {
+          "word": "que",
+          "start": 7.2,
+          "end": 7.36
+        },
+        {
+          "word": "estar",
+          "start": 7.36,
+          "end": 7.4
+        },
+        {
+          "word": "más",
+          "start": 7.4,
+          "end": 7.56
+        },
+        {
+          "word": "o",
+          "start": 7.56,
+          "end": 7.64
+        },
+        {
+          "word": "menos",
+          "start": 7.64,
+          "end": 7.76
+        },
+        {
+          "word": "centrado",
+          "start": 7.76,
+          "end": 8.2
+        },
+        {
+          "word": "en",
+          "start": 8.2,
+          "end": 8.38
+        },
+        {
+          "word": "todo",
+          "start": 8.38,
+          "end": 8.46
+        },
+        {
+          "word": "sentido.",
+          "start": 8.46,
+          "end": 9.18
+        }
+      ]
+    },
+    {
+      "start": 9.66,
+      "end": 11.62,
+      "text": "Centrado en la lechusa y centrado en la oreja.",
+      "words": [
+        {
+          "word": "Centrado",
+          "start": 9.66,
+          "end": 10.02
+        },
+        {
+          "word": "en",
+          "start": 10.02,
+          "end": 10.08
+        },
+        {
+          "word": "la",
+          "start": 10.08,
+          "end": 10.26
+        },
+        {
+          "word": "lechusa",
+          "start": 10.26,
+          "end": 10.56
+        },
+        {
+          "word": "y",
+          "start": 10.56,
+          "end": 10.66
+        },
+        {
+          "word": "centrado",
+          "start": 10.66,
+          "end": 10.9
+        },
+        {
+          "word": "en",
+          "start": 10.9,
+          "end": 10.98
+        },
+        {
+          "word": "la",
+          "start": 10.98,
+          "end": 11.04
+        },
+        {
+          "word": "oreja.",
+          "start": 11.04,
+          "end": 11.62
+        }
+      ]
+    },
+    {
+      "start": 11.76,
+      "end": 12.48,
+      "text": "El mimo.",
+      "words": [
+        {
+          "word": "El",
+          "start": 11.76,
+          "end": 11.9
+        },
+        {
+          "word": "mimo.",
+          "start": 11.9,
+          "end": 12.48
+        }
+      ]
+    },
+    {
+      "start": 12.68,
+      "end": 14.38,
+      "text": "El mimo encima de la lechusa.",
+      "words": [
+        {
+          "word": "El",
+          "start": 12.68,
+          "end": 12.92
+        },
+        {
+          "word": "mimo",
+          "start": 12.92,
+          "end": 13.26
+        },
+        {
+          "word": "encima",
+          "start": 13.26,
+          "end": 13.64
+        },
+        {
+          "word": "de",
+          "start": 13.64,
+          "end": 13.82
+        },
+        {
+          "word": "la",
+          "start": 13.82,
+          "end": 13.9
+        },
+        {
+          "word": "lechusa.",
+          "start": 13.9,
+          "end": 14.38
+        }
+      ]
+    },
+    {
+      "start": 14.44,
+      "end": 15.7,
+      "text": "Y a la derecha de la oreja.",
+      "words": [
+        {
+          "word": "Y",
+          "start": 14.44,
+          "end": 14.64
+        },
+        {
+          "word": "a",
+          "start": 14.64,
+          "end": 14.72
+        },
+        {
+          "word": "la",
+          "start": 14.72,
+          "end": 14.88
+        },
+        {
+          "word": "derecha",
+          "start": 14.88,
+          "end": 15.06
+        },
+        {
+          "word": "de",
+          "start": 15.06,
+          "end": 15.16
+        },
+        {
+          "word": "la",
+          "start": 15.16,
+          "end": 15.24
+        },
+        {
+          "word": "oreja.",
+          "start": 15.24,
+          "end": 15.7
+        }
+      ]
+    },
+    {
+      "start": 16.38,
+      "end": 17.96,
+      "text": "A la derecha de la oreja.",
+      "words": [
+        {
+          "word": "A",
+          "start": 16.38,
+          "end": 16.58
+        },
+        {
+          "word": "la",
+          "start": 16.58,
+          "end": 16.86
+        },
+        {
+          "word": "derecha",
+          "start": 16.86,
+          "end": 17.32
+        },
+        {
+          "word": "de",
+          "start": 17.32,
+          "end": 17.48
+        },
+        {
+          "word": "la",
+          "start": 17.48,
+          "end": 17.66
+        },
+        {
+          "word": "oreja.",
+          "start": 17.66,
+          "end": 17.96
+        }
+      ]
+    },
+    {
+      "start": 18.02,
+      "end": 21.32,
+      "text": "Sí, tirando un poquito... no exactamente en el...",
+      "words": [
+        {
+          "word": "Sí,",
+          "start": 18.02,
+          "end": 18.28
+        },
+        {
+          "word": "tirando",
+          "start": 18.28,
+          "end": 18.52
+        },
+        {
+          "word": "un",
+          "start": 18.52,
+          "end": 18.66
+        },
+        {
+          "word": "poquito...",
+          "start": 18.66,
+          "end": 20.0
+        },
+        {
+          "word": "no",
+          "start": 20.0,
+          "end": 20.06
+        },
+        {
+          "word": "exactamente",
+          "start": 20.06,
+          "end": 20.56
+        },
+        {
+          "word": "en",
+          "start": 20.56,
+          "end": 20.66
+        },
+        {
+          "word": "el...",
+          "start": 20.66,
+          "end": 21.32
+        }
+      ]
+    },
+    {
+      "start": 21.32,
+      "end": 22.7,
+      "text": "No a la altura de la lechusa.",
+      "words": [
+        {
+          "word": "No",
+          "start": 21.32,
+          "end": 21.5
+        },
+        {
+          "word": "a",
+          "start": 21.5,
+          "end": 21.62
+        },
+        {
+          "word": "la",
+          "start": 21.62,
+          "end": 21.74
+        },
+        {
+          "word": "altura",
+          "start": 21.74,
+          "end": 21.94
+        },
+        {
+          "word": "de",
+          "start": 21.94,
+          "end": 22.08
+        },
+        {
+          "word": "la",
+          "start": 22.08,
+          "end": 22.16
+        },
+        {
+          "word": "lechusa.",
+          "start": 22.16,
+          "end": 22.7
+        }
+      ]
+    },
+    {
+      "start": 29.26,
+      "end": 29.98,
+      "text": "O sea...",
+      "words": [
+        {
+          "word": "O",
+          "start": 29.26,
+          "end": 29.62
+        },
+        {
+          "word": "sea...",
+          "start": 29.62,
+          "end": 29.98
+        }
+      ]
+    },
+    {
+      "start": 31.82,
+      "end": 32.54,
+      "text": "Ok, perfecto.",
+      "words": [
+        {
+          "word": "Ok,",
+          "start": 31.82,
+          "end": 32.18
+        },
+        {
+          "word": "perfecto.",
+          "start": 32.18,
+          "end": 32.54
+        }
+      ]
+    },
+    {
+      "start": 32.6,
+      "end": 34.74,
+      "text": "El eje horizontal a la altura de la oreja.",
+      "words": [
+        {
+          "word": "El",
+          "start": 32.6,
+          "end": 32.96
+        },
+        {
+          "word": "eje",
+          "start": 32.96,
+          "end": 33.12
+        },
+        {
+          "word": "horizontal",
+          "start": 33.12,
+          "end": 33.66
+        },
+        {
+          "word": "a",
+          "start": 33.66,
+          "end": 33.86
+        },
+        {
+          "word": "la",
+          "start": 33.86,
+          "end": 33.94
+        },
+        {
+          "word": "altura",
+          "start": 33.94,
+          "end": 34.08
+        },
+        {
+          "word": "de",
+          "start": 34.08,
+          "end": 34.22
+        },
+        {
+          "word": "la",
+          "start": 34.22,
+          "end": 34.3
+        },
+        {
+          "word": "oreja.",
+          "start": 34.3,
+          "end": 34.74
+        }
+      ]
+    },
+    {
+      "start": 34.78,
+      "end": 37.08,
+      "text": "A la altura del eje horizontal de la oreja.",
+      "words": [
+        {
+          "word": "A",
+          "start": 34.78,
+          "end": 34.9
+        },
+        {
+          "word": "la",
+          "start": 34.9,
+          "end": 35.06
+        },
+        {
+          "word": "altura",
+          "start": 35.06,
+          "end": 35.24
+        },
+        {
+          "word": "del",
+          "start": 35.24,
+          "end": 35.34
+        },
+        {
+          "word": "eje",
+          "start": 35.34,
+          "end": 35.48
+        },
+        {
+          "word": "horizontal",
+          "start": 35.48,
+          "end": 35.88
+        },
+        {
+          "word": "de",
+          "start": 35.88,
+          "end": 36.06
+        },
+        {
+          "word": "la",
+          "start": 36.06,
+          "end": 36.48
+        },
+        {
+          "word": "oreja.",
+          "start": 36.48,
+          "end": 37.08
+        }
+      ]
+    },
+    {
+      "start": 37.52,
+      "end": 39.68,
+      "text": "¿Se entiende? Con la leja centrado y con la lechusa un poco a la izquierda.",
+      "words": [
+        {
+          "word": "¿Se",
+          "start": 37.52,
+          "end": 37.66
+        },
+        {
+          "word": "entiende?",
+          "start": 37.66,
+          "end": 37.86
+        },
+        {
+          "word": "Con",
+          "start": 37.94,
+          "end": 38.06
+        },
+        {
+          "word": "la",
+          "start": 38.06,
+          "end": 38.2
+        },
+        {
+          "word": "leja",
+          "start": 38.2,
+          "end": 38.3
+        },
+        {
+          "word": "centrado",
+          "start": 38.3,
+          "end": 38.7
+        },
+        {
+          "word": "y",
+          "start": 38.7,
+          "end": 38.9
+        },
+        {
+          "word": "la",
+          "start": 38.9,
+          "end": 39.0
+        },
+        {
+          "word": "lechusa",
+          "start": 39.0,
+          "end": 39.2
+        },
+        {
+          "word": "poco",
+          "start": 39.2,
+          "end": 39.38
+        },
+        {
+          "word": "la",
+          "start": 39.38,
+          "end": 39.54
+        },
+        {
+          "word": "izquierda.",
+          "start": 39.54,
+          "end": 39.68
+        }
+      ]
+    },
+    {
+      "start": 43.44,
+      "end": 44.16,
+      "text": "A ver...",
+      "words": [
+        {
+          "word": "A",
+          "start": 43.44,
+          "end": 43.8
+        },
+        {
+          "word": "ver...",
+          "start": 43.8,
+          "end": 44.16
+        }
+      ]
+    }
+  ]
+}

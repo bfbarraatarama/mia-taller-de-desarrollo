@@ -1,0 +1,51 @@
+{
+  "resumen": "La reunión discutió la posición de una media luna azul en relación a un espejo y un telar. Se confirmó que la media luna está equidistante entre el espejo y el telar, compartiendo la línea con ambos objetos.",
+  "temas": [
+    {
+      "texto": "La posición de una media luna azul en relación a un espejo y un telar.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024"
+      ],
+      "id_ancla": "I000024"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "Compartir la línea con el espejo y el telar.",
+      "ids_intervenciones": [
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022"
+      ],
+      "id_ancla": "I000022",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

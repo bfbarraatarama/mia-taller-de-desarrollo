@@ -114,7 +114,11 @@
       }
     }
   },
-  "avisos": [],
+  "avisos": [
+    "IB4005: la minuta producida cambió y la planilla no tenía marcas; se regeneró",
+    "IS1009c: la minuta producida cambió y la planilla no tenía marcas; se regeneró",
+    "TS3009a: la minuta producida cambió y la planilla no tenía marcas; se regeneró"
+  ],
   "faltantes": [],
   "contenido_sha256_muestra": "68b317117c84676f835d58473e8a9c82aa94cefb87d26f6cde487a919416b456"
 }

@@ -1,0 +1,3263 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 25.36,
+      "text": "la sirena superpuesta a la plancha de manera que la aleta de la sirena está... la parte más baja de la aleta",
+      "words": [
+        {
+          "word": "la",
+          "start": 0.0,
+          "end": 2.18
+        },
+        {
+          "word": "sirena",
+          "start": 2.18,
+          "end": 4.98
+        },
+        {
+          "word": "superpuesta",
+          "start": 4.98,
+          "end": 6.38
+        },
+        {
+          "word": "a",
+          "start": 6.38,
+          "end": 7.08
+        },
+        {
+          "word": "la",
+          "start": 7.08,
+          "end": 7.38
+        },
+        {
+          "word": "plancha",
+          "start": 7.38,
+          "end": 9.42
+        },
+        {
+          "word": "de",
+          "start": 9.42,
+          "end": 10.12
+        },
+        {
+          "word": "manera",
+          "start": 10.12,
+          "end": 10.68
+        },
+        {
+          "word": "que",
+          "start": 10.68,
+          "end": 15.26
+        },
+        {
+          "word": "la",
+          "start": 15.26,
+          "end": 16.42
+        },
+        {
+          "word": "aleta",
+          "start": 16.42,
+          "end": 17.52
+        },
+        {
+          "word": "de",
+          "start": 17.52,
+          "end": 17.74
+        },
+        {
+          "word": "la",
+          "start": 17.74,
+          "end": 17.94
+        },
+        {
+          "word": "sirena",
+          "start": 17.94,
+          "end": 19.68
+        },
+        {
+          "word": "está...",
+          "start": 19.68,
+          "end": 22.9
+        },
+        {
+          "word": "la",
+          "start": 22.9,
+          "end": 23.02
+        },
+        {
+          "word": "parte",
+          "start": 23.02,
+          "end": 23.52
+        },
+        {
+          "word": "más",
+          "start": 23.52,
+          "end": 23.88
+        },
+        {
+          "word": "baja",
+          "start": 23.88,
+          "end": 24.44
+        },
+        {
+          "word": "de",
+          "start": 24.44,
+          "end": 24.84
+        },
+        {
+          "word": "la",
+          "start": 24.84,
+          "end": 25.02
+        },
+        {
+          "word": "aleta",
+          "start": 25.02,
+          "end": 25.36
+        }
+      ]
+    },
+    {
+      "start": 25.36,
+      "end": 34.68,
+      "text": "la parte negra más baja excede un poco hacia abajo a la plancha",
+      "words": [
+        {
+          "word": "la",
+          "start": 25.36,
+          "end": 26.7
+        },
+        {
+          "word": "parte",
+          "start": 26.7,
+          "end": 26.98
+        },
+        {
+          "word": "negra",
+          "start": 26.98,
+          "end": 27.3
+        },
+        {
+          "word": "más",
+          "start": 27.3,
+          "end": 27.48
+        },
+        {
+          "word": "baja",
+          "start": 27.48,
+          "end": 28.08
+        },
+        {
+          "word": "excede",
+          "start": 28.08,
+          "end": 29.36
+        },
+        {
+          "word": "un",
+          "start": 29.36,
+          "end": 30.02
+        },
+        {
+          "word": "poco",
+          "start": 30.02,
+          "end": 30.58
+        },
+        {
+          "word": "hacia",
+          "start": 30.58,
+          "end": 31.1
+        },
+        {
+          "word": "abajo",
+          "start": 31.1,
+          "end": 31.86
+        },
+        {
+          "word": "a",
+          "start": 31.86,
+          "end": 33.74
+        },
+        {
+          "word": "la",
+          "start": 33.74,
+          "end": 34.0
+        },
+        {
+          "word": "plancha",
+          "start": 34.0,
+          "end": 34.68
+        }
+      ]
+    },
+    {
+      "start": 34.68,
+      "end": 42.0,
+      "text": "en realidad la parte negra excede totalmente y de la parte amarilla excede medio milímetro",
+      "words": [
+        {
+          "word": "en",
+          "start": 34.68,
+          "end": 34.92
+        },
+        {
+          "word": "realidad",
+          "start": 34.92,
+          "end": 35.4
+        },
+        {
+          "word": "la",
+          "start": 35.4,
+          "end": 35.56
+        },
+        {
+          "word": "parte",
+          "start": 35.56,
+          "end": 35.8
+        },
+        {
+          "word": "negra",
+          "start": 35.8,
+          "end": 36.12
+        },
+        {
+          "word": "excede",
+          "start": 36.12,
+          "end": 36.44
+        },
+        {
+          "word": "totalmente",
+          "start": 36.44,
+          "end": 37.32
+        },
+        {
+          "word": "y",
+          "start": 37.32,
+          "end": 38.1
+        },
+        {
+          "word": "de",
+          "start": 38.1,
+          "end": 38.24
+        },
+        {
+          "word": "la",
+          "start": 38.24,
+          "end": 38.38
+        },
+        {
+          "word": "parte",
+          "start": 38.38,
+          "end": 38.64
+        },
+        {
+          "word": "amarilla",
+          "start": 38.64,
+          "end": 39.38
+        },
+        {
+          "word": "excede",
+          "start": 39.38,
+          "end": 40.62
+        },
+        {
+          "word": "medio",
+          "start": 40.62,
+          "end": 41.14
+        },
+        {
+          "word": "milímetro",
+          "start": 41.14,
+          "end": 42.0
+        }
+      ]
+    },
+    {
+      "start": 42.0,
+      "end": 60.0,
+      "text": "las rodillas de la sirena son como si de la parte baja de las rodillas se extendiera ese cablecito",
+      "words": [
+        {
+          "word": "las",
+          "start": 42.0,
+          "end": 43.48
+        },
+        {
+          "word": "rodillas",
+          "start": 43.48,
+          "end": 44.14
+        },
+        {
+          "word": "de",
+          "start": 44.14,
+          "end": 44.94
+        },
+        {
+          "word": "la",
+          "start": 44.94,
+          "end": 47.16
+        },
+        {
+          "word": "sirena",
+          "start": 47.16,
+          "end": 48.5
+        },
+        {
+          "word": "son",
+          "start": 48.5,
+          "end": 51.06
+        },
+        {
+          "word": "como",
+          "start": 51.06,
+          "end": 51.08
+        },
+        {
+          "word": "si",
+          "start": 51.08,
+          "end": 54.66
+        },
+        {
+          "word": "de",
+          "start": 54.66,
+          "end": 55.34
+        },
+        {
+          "word": "la",
+          "start": 55.34,
+          "end": 55.56
+        },
+        {
+          "word": "parte",
+          "start": 55.56,
+          "end": 55.9
+        },
+        {
+          "word": "baja",
+          "start": 55.9,
+          "end": 56.48
+        },
+        {
+          "word": "de",
+          "start": 56.48,
+          "end": 56.68
+        },
+        {
+          "word": "las",
+          "start": 56.68,
+          "end": 56.86
+        },
+        {
+          "word": "rodillas",
+          "start": 56.86,
+          "end": 57.6
+        },
+        {
+          "word": "se",
+          "start": 57.6,
+          "end": 58.22
+        },
+        {
+          "word": "extendiera",
+          "start": 58.22,
+          "end": 58.92
+        },
+        {
+          "word": "ese",
+          "start": 58.92,
+          "end": 59.22
+        },
+        {
+          "word": "cablecito",
+          "start": 59.22,
+          "end": 60.0
+        }
+      ]
+    },
+    {
+      "start": 60.0,
+      "end": 64.0,
+      "text": "pero se extendiera un centímetro de ese cablecito",
+      "words": [
+        {
+          "word": "pero",
+          "start": 60.0,
+          "end": 60.8
+        },
+        {
+          "word": "se",
+          "start": 60.8,
+          "end": 61.92
+        },
+        {
+          "word": "extendiera",
+          "start": 61.92,
+          "end": 62.44
+        },
+        {
+          "word": "un",
+          "start": 62.44,
+          "end": 62.74
+        },
+        {
+          "word": "centímetro",
+          "start": 62.74,
+          "end": 63.28
+        },
+        {
+          "word": "de",
+          "start": 63.28,
+          "end": 63.46
+        },
+        {
+          "word": "ese",
+          "start": 63.46,
+          "end": 63.64
+        },
+        {
+          "word": "cablecito",
+          "start": 63.64,
+          "end": 64.0
+        }
+      ]
+    },
+    {
+      "start": 66.14,
+      "end": 73.76,
+      "text": "la sirena es como si estuviera sentada entre el cablecito y la parte derecha de la plancha",
+      "words": [
+        {
+          "word": "la",
+          "start": 66.14,
+          "end": 66.66
+        },
+        {
+          "word": "sirena",
+          "start": 66.66,
+          "end": 67.12
+        },
+        {
+          "word": "es",
+          "start": 67.12,
+          "end": 67.22
+        },
+        {
+          "word": "como",
+          "start": 67.22,
+          "end": 67.38
+        },
+        {
+          "word": "si",
+          "start": 67.38,
+          "end": 67.58
+        },
+        {
+          "word": "estuviera",
+          "start": 67.58,
+          "end": 67.82
+        },
+        {
+          "word": "sentada",
+          "start": 67.82,
+          "end": 68.58
+        },
+        {
+          "word": "entre",
+          "start": 68.58,
+          "end": 70.26
+        },
+        {
+          "word": "el",
+          "start": 70.26,
+          "end": 70.54
+        },
+        {
+          "word": "cablecito",
+          "start": 70.54,
+          "end": 71.2
+        },
+        {
+          "word": "y",
+          "start": 71.2,
+          "end": 71.42
+        },
+        {
+          "word": "la",
+          "start": 71.42,
+          "end": 71.54
+        },
+        {
+          "word": "parte",
+          "start": 71.54,
+          "end": 71.72
+        },
+        {
+          "word": "derecha",
+          "start": 71.72,
+          "end": 72.1
+        },
+        {
+          "word": "de",
+          "start": 72.1,
+          "end": 72.24
+        },
+        {
+          "word": "la",
+          "start": 72.24,
+          "end": 72.44
+        },
+        {
+          "word": "plancha",
+          "start": 72.44,
+          "end": 73.76
+        }
+      ]
+    },
+    {
+      "start": 74.38,
+      "end": 76.38,
+      "text": "sentada arriba, entonces no está centrada con la plancha",
+      "words": [
+        {
+          "word": "sentada",
+          "start": 74.38,
+          "end": 74.9
+        },
+        {
+          "word": "arriba,",
+          "start": 74.9,
+          "end": 75.1
+        },
+        {
+          "word": "entonces",
+          "start": 75.14,
+          "end": 75.3
+        },
+        {
+          "word": "no",
+          "start": 75.3,
+          "end": 75.38
+        },
+        {
+          "word": "está",
+          "start": 75.38,
+          "end": 75.5
+        },
+        {
+          "word": "centrada",
+          "start": 75.5,
+          "end": 75.76
+        },
+        {
+          "word": "con",
+          "start": 75.76,
+          "end": 75.88
+        },
+        {
+          "word": "la",
+          "start": 75.88,
+          "end": 76.06
+        },
+        {
+          "word": "plancha",
+          "start": 76.06,
+          "end": 76.38
+        }
+      ]
+    },
+    {
+      "start": 76.38,
+      "end": 78.5,
+      "text": "no, centrada con la plancha no",
+      "words": [
+        {
+          "word": "no,",
+          "start": 76.38,
+          "end": 76.64
+        },
+        {
+          "word": "centrada",
+          "start": 76.66,
+          "end": 77.14
+        },
+        {
+          "word": "con",
+          "start": 77.14,
+          "end": 77.3
+        },
+        {
+          "word": "la",
+          "start": 77.3,
+          "end": 77.5
+        },
+        {
+          "word": "plancha",
+          "start": 77.5,
+          "end": 77.76
+        },
+        {
+          "word": "no",
+          "start": 77.76,
+          "end": 78.5
+        }
+      ]
+    },
+    {
+      "start": 78.5,
+      "end": 80.3,
+      "text": "por eso era complicado explicar",
+      "words": [
+        {
+          "word": "por",
+          "start": 78.5,
+          "end": 79.16
+        },
+        {
+          "word": "eso",
+          "start": 79.16,
+          "end": 79.42
+        },
+        {
+          "word": "era",
+          "start": 79.42,
+          "end": 79.64
+        },
+        {
+          "word": "complicado",
+          "start": 79.64,
+          "end": 79.94
+        },
+        {
+          "word": "explicar",
+          "start": 79.94,
+          "end": 80.3
+        }
+      ]
+    },
+    {
+      "start": 80.3,
+      "end": 83.28,
+      "text": "está superpuesta entre el cable y la plancha",
+      "words": [
+        {
+          "word": "está",
+          "start": 80.3,
+          "end": 80.94
+        },
+        {
+          "word": "superpuesta",
+          "start": 80.94,
+          "end": 81.84
+        },
+        {
+          "word": "entre",
+          "start": 81.84,
+          "end": 82.22
+        },
+        {
+          "word": "el",
+          "start": 82.22,
+          "end": 82.46
+        },
+        {
+          "word": "cable",
+          "start": 82.46,
+          "end": 82.58
+        },
+        {
+          "word": "y",
+          "start": 82.58,
+          "end": 82.68
+        },
+        {
+          "word": "la",
+          "start": 82.68,
+          "end": 82.96
+        },
+        {
+          "word": "plancha",
+          "start": 82.96,
+          "end": 83.28
+        }
+      ]
+    },
+    {
+      "start": 84.22,
+      "end": 91.82,
+      "text": "el culo de la sirena está a medio milímetro de la parte celeste de la plancha",
+      "words": [
+        {
+          "word": "el",
+          "start": 84.22,
+          "end": 84.9
+        },
+        {
+          "word": "culo",
+          "start": 84.9,
+          "end": 85.32
+        },
+        {
+          "word": "de",
+          "start": 85.32,
+          "end": 85.44
+        },
+        {
+          "word": "la",
+          "start": 85.44,
+          "end": 85.66
+        },
+        {
+          "word": "sirena",
+          "start": 85.66,
+          "end": 86.2
+        },
+        {
+          "word": "está",
+          "start": 86.2,
+          "end": 87.42
+        },
+        {
+          "word": "a",
+          "start": 87.42,
+          "end": 87.84
+        },
+        {
+          "word": "medio",
+          "start": 87.84,
+          "end": 88.12
+        },
+        {
+          "word": "milímetro",
+          "start": 88.12,
+          "end": 89.0
+        },
+        {
+          "word": "de",
+          "start": 89.0,
+          "end": 89.42
+        },
+        {
+          "word": "la",
+          "start": 89.42,
+          "end": 89.66
+        },
+        {
+          "word": "parte",
+          "start": 89.66,
+          "end": 90.14
+        },
+        {
+          "word": "celeste",
+          "start": 90.14,
+          "end": 91.12
+        },
+        {
+          "word": "de",
+          "start": 91.12,
+          "end": 91.24
+        },
+        {
+          "word": "la",
+          "start": 91.24,
+          "end": 91.48
+        },
+        {
+          "word": "plancha",
+          "start": 91.48,
+          "end": 91.82
+        }
+      ]
+    },
+    {
+      "start": 91.82,
+      "end": 93.64,
+      "text": "fíjate que tiene agujeritos la plancha",
+      "words": [
+        {
+          "word": "fíjate",
+          "start": 91.82,
+          "end": 92.1
+        },
+        {
+          "word": "que",
+          "start": 92.1,
+          "end": 92.22
+        },
+        {
+          "word": "tiene",
+          "start": 92.22,
+          "end": 92.38
+        },
+        {
+          "word": "agujeritos",
+          "start": 92.38,
+          "end": 92.92
+        },
+        {
+          "word": "la",
+          "start": 92.92,
+          "end": 93.1
+        },
+        {
+          "word": "plancha",
+          "start": 93.1,
+          "end": 93.64
+        }
+      ]
+    },
+    {
+      "start": 93.64,
+      "end": 98.88,
+      "text": "claro, esos agujeritos se ven todos, no hay nada superpuesto los agujeritos",
+      "words": [
+        {
+          "word": "claro,",
+          "start": 93.64,
+          "end": 94.04
+        },
+        {
+          "word": "esos",
+          "start": 94.66,
+          "end": 94.8
+        },
+        {
+          "word": "agujeritos",
+          "start": 94.8,
+          "end": 95.98
+        },
+        {
+          "word": "se",
+          "start": 95.98,
+          "end": 96.14
+        },
+        {
+          "word": "ven",
+          "start": 96.14,
+          "end": 96.32
+        },
+        {
+          "word": "todos,",
+          "start": 96.32,
+          "end": 96.84
+        },
+        {
+          "word": "no",
+          "start": 96.88,
+          "end": 97.12
+        },
+        {
+          "word": "hay",
+          "start": 97.12,
+          "end": 97.16
+        },
+        {
+          "word": "nada",
+          "start": 97.16,
+          "end": 97.42
+        },
+        {
+          "word": "superpuesto",
+          "start": 97.42,
+          "end": 97.88
+        },
+        {
+          "word": "los",
+          "start": 97.88,
+          "end": 98.08
+        },
+        {
+          "word": "agujeritos",
+          "start": 98.08,
+          "end": 98.88
+        }
+      ]
+    },
+    {
+      "start": 98.88,
+      "end": 106.54,
+      "text": "la parte de la aleta está muy cerca de los agujeritos pero no se superpone del todo",
+      "words": [
+        {
+          "word": "la",
+          "start": 98.88,
+          "end": 99.82
+        },
+        {
+          "word": "parte",
+          "start": 99.82,
+          "end": 100.54
+        },
+        {
+          "word": "de",
+          "start": 100.54,
+          "end": 101.8
+        },
+        {
+          "word": "la",
+          "start": 101.8,
+          "end": 102.0
+        },
+        {
+          "word": "aleta",
+          "start": 102.0,
+          "end": 102.5
+        },
+        {
+          "word": "está",
+          "start": 102.5,
+          "end": 103.3
+        },
+        {
+          "word": "muy",
+          "start": 103.3,
+          "end": 103.78
+        },
+        {
+          "word": "cerca",
+          "start": 103.78,
+          "end": 104.04
+        },
+        {
+          "word": "de",
+          "start": 104.04,
+          "end": 104.18
+        },
+        {
+          "word": "los",
+          "start": 104.18,
+          "end": 104.36
+        },
+        {
+          "word": "agujeritos",
+          "start": 104.36,
+          "end": 104.9
+        },
+        {
+          "word": "pero",
+          "start": 104.9,
+          "end": 105.1
+        },
+        {
+          "word": "no",
+          "start": 105.1,
+          "end": 105.26
+        },
+        {
+          "word": "se",
+          "start": 105.26,
+          "end": 105.44
+        },
+        {
+          "word": "superpone",
+          "start": 105.44,
+          "end": 105.9
+        },
+        {
+          "word": "del",
+          "start": 105.9,
+          "end": 106.1
+        },
+        {
+          "word": "todo",
+          "start": 106.1,
+          "end": 106.54
+        }
+      ]
+    },
+    {
+      "start": 107.58,
+      "end": 116.1,
+      "text": "la cola de la sirena está en la parte celeste y no en la parte gris",
+      "words": [
+        {
+          "word": "la",
+          "start": 107.58,
+          "end": 108.26
+        },
+        {
+          "word": "cola",
+          "start": 108.26,
+          "end": 108.78
+        },
+        {
+          "word": "de",
+          "start": 108.78,
+          "end": 109.1
+        },
+        {
+          "word": "la",
+          "start": 109.1,
+          "end": 109.48
+        },
+        {
+          "word": "sirena",
+          "start": 109.48,
+          "end": 110.16
+        },
+        {
+          "word": "está",
+          "start": 110.16,
+          "end": 110.84
+        },
+        {
+          "word": "en",
+          "start": 110.84,
+          "end": 112.38
+        },
+        {
+          "word": "la",
+          "start": 112.38,
+          "end": 112.58
+        },
+        {
+          "word": "parte",
+          "start": 112.58,
+          "end": 113.18
+        },
+        {
+          "word": "celeste",
+          "start": 113.18,
+          "end": 114.46
+        },
+        {
+          "word": "y",
+          "start": 114.46,
+          "end": 115.04
+        },
+        {
+          "word": "no",
+          "start": 115.04,
+          "end": 115.1
+        },
+        {
+          "word": "en",
+          "start": 115.1,
+          "end": 115.22
+        },
+        {
+          "word": "la",
+          "start": 115.22,
+          "end": 115.36
+        },
+        {
+          "word": "parte",
+          "start": 115.36,
+          "end": 115.66
+        },
+        {
+          "word": "gris",
+          "start": 115.66,
+          "end": 116.1
+        }
+      ]
+    },
+    {
+      "start": 116.1,
+      "end": 123.0,
+      "text": "pero está en la parte celeste muy cerca de la raya negra",
+      "words": [
+        {
+          "word": "pero",
+          "start": 116.1,
+          "end": 116.92
+        },
+        {
+          "word": "está",
+          "start": 116.92,
+          "end": 117.12
+        },
+        {
+          "word": "en",
+          "start": 117.12,
+          "end": 117.18
+        },
+        {
+          "word": "la",
+          "start": 117.18,
+          "end": 117.38
+        },
+        {
+          "word": "parte",
+          "start": 117.38,
+          "end": 117.6
+        },
+        {
+          "word": "celeste",
+          "start": 117.6,
+          "end": 118.72
+        },
+        {
+          "word": "muy",
+          "start": 118.72,
+          "end": 119.18
+        },
+        {
+          "word": "cerca",
+          "start": 119.18,
+          "end": 119.78
+        },
+        {
+          "word": "de",
+          "start": 119.78,
+          "end": 120.64
+        },
+        {
+          "word": "la",
+          "start": 120.64,
+          "end": 120.82
+        },
+        {
+          "word": "raya",
+          "start": 120.82,
+          "end": 121.16
+        },
+        {
+          "word": "negra",
+          "start": 121.16,
+          "end": 123.0
+        }
+      ]
+    },
+    {
+      "start": 123.0,
+      "end": 128.88,
+      "text": "a medio milímetro de la raya negra que separa lo celeste y lo gris",
+      "words": [
+        {
+          "word": "a",
+          "start": 123.0,
+          "end": 123.74
+        },
+        {
+          "word": "medio",
+          "start": 123.74,
+          "end": 124.7
+        },
+        {
+          "word": "milímetro",
+          "start": 124.7,
+          "end": 125.84
+        },
+        {
+          "word": "de",
+          "start": 125.84,
+          "end": 125.96
+        },
+        {
+          "word": "la",
+          "start": 125.96,
+          "end": 126.08
+        },
+        {
+          "word": "raya",
+          "start": 126.08,
+          "end": 126.36
+        },
+        {
+          "word": "negra",
+          "start": 126.36,
+          "end": 126.7
+        },
+        {
+          "word": "que",
+          "start": 126.7,
+          "end": 126.82
+        },
+        {
+          "word": "separa",
+          "start": 126.82,
+          "end": 127.12
+        },
+        {
+          "word": "lo",
+          "start": 127.12,
+          "end": 127.3
+        },
+        {
+          "word": "celeste",
+          "start": 127.3,
+          "end": 127.62
+        },
+        {
+          "word": "y",
+          "start": 127.62,
+          "end": 127.68
+        },
+        {
+          "word": "lo",
+          "start": 127.68,
+          "end": 127.9
+        },
+        {
+          "word": "gris",
+          "start": 127.9,
+          "end": 128.88
+        }
+      ]
+    },
+    {
+      "start": 128.88,
+      "end": 130.3,
+      "text": "así más o menos",
+      "words": [
+        {
+          "word": "así",
+          "start": 128.88,
+          "end": 129.24
+        },
+        {
+          "word": "más",
+          "start": 129.24,
+          "end": 129.54
+        },
+        {
+          "word": "o",
+          "start": 129.54,
+          "end": 129.68
+        },
+        {
+          "word": "menos",
+          "start": 129.68,
+          "end": 130.3
+        }
+      ]
+    },
+    {
+      "start": 130.3,
+      "end": 132.52,
+      "text": "de manera que te quedan las rodillas",
+      "words": [
+        {
+          "word": "de",
+          "start": 130.3,
+          "end": 130.56
+        },
+        {
+          "word": "manera",
+          "start": 130.56,
+          "end": 130.76
+        },
+        {
+          "word": "que",
+          "start": 130.76,
+          "end": 130.92
+        },
+        {
+          "word": "te",
+          "start": 130.92,
+          "end": 131.1
+        },
+        {
+          "word": "quedan",
+          "start": 131.1,
+          "end": 131.76
+        },
+        {
+          "word": "las",
+          "start": 131.76,
+          "end": 132.0
+        },
+        {
+          "word": "rodillas",
+          "start": 132.0,
+          "end": 132.52
+        }
+      ]
+    },
+    {
+      "start": 132.52,
+      "end": 139.26,
+      "text": "es como si un pedacito del cable curveado saliera de las rodillas de la sirena",
+      "words": [
+        {
+          "word": "es",
+          "start": 132.52,
+          "end": 133.1
+        },
+        {
+          "word": "como",
+          "start": 133.1,
+          "end": 133.36
+        },
+        {
+          "word": "si",
+          "start": 133.36,
+          "end": 134.0
+        },
+        {
+          "word": "un",
+          "start": 134.0,
+          "end": 134.2
+        },
+        {
+          "word": "pedacito",
+          "start": 134.2,
+          "end": 134.72
+        },
+        {
+          "word": "del",
+          "start": 134.72,
+          "end": 134.94
+        },
+        {
+          "word": "cable",
+          "start": 134.94,
+          "end": 135.46
+        },
+        {
+          "word": "curveado",
+          "start": 135.46,
+          "end": 136.2
+        },
+        {
+          "word": "saliera",
+          "start": 136.2,
+          "end": 136.62
+        },
+        {
+          "word": "de",
+          "start": 136.62,
+          "end": 136.76
+        },
+        {
+          "word": "las",
+          "start": 136.76,
+          "end": 136.96
+        },
+        {
+          "word": "rodillas",
+          "start": 136.96,
+          "end": 137.36
+        },
+        {
+          "word": "de",
+          "start": 137.36,
+          "end": 138.66
+        },
+        {
+          "word": "la",
+          "start": 138.66,
+          "end": 138.92
+        },
+        {
+          "word": "sirena",
+          "start": 138.92,
+          "end": 139.26
+        }
+      ]
+    },
+    {
+      "start": 139.26,
+      "end": 144.76,
+      "text": "fíjate que la plancha tiene un botoncito como un círculo rojo",
+      "words": [
+        {
+          "word": "fíjate",
+          "start": 139.26,
+          "end": 139.64
+        },
+        {
+          "word": "que",
+          "start": 139.64,
+          "end": 140.0
+        },
+        {
+          "word": "la",
+          "start": 140.0,
+          "end": 140.22
+        },
+        {
+          "word": "plancha",
+          "start": 140.22,
+          "end": 140.36
+        },
+        {
+          "word": "tiene",
+          "start": 140.36,
+          "end": 140.6
+        },
+        {
+          "word": "un",
+          "start": 140.6,
+          "end": 142.0
+        },
+        {
+          "word": "botoncito",
+          "start": 142.0,
+          "end": 142.7
+        },
+        {
+          "word": "como",
+          "start": 142.7,
+          "end": 143.78
+        },
+        {
+          "word": "un",
+          "start": 143.78,
+          "end": 143.98
+        },
+        {
+          "word": "círculo",
+          "start": 143.98,
+          "end": 144.28
+        },
+        {
+          "word": "rojo",
+          "start": 144.28,
+          "end": 144.76
+        }
+      ]
+    },
+    {
+      "start": 144.76,
+      "end": 145.24,
+      "text": "se ve eso?",
+      "words": [
+        {
+          "word": "se",
+          "start": 144.76,
+          "end": 144.96
+        },
+        {
+          "word": "ve",
+          "start": 144.96,
+          "end": 145.08
+        },
+        {
+          "word": "eso?",
+          "start": 145.08,
+          "end": 145.24
+        }
+      ]
+    },
+    {
+      "start": 145.44,
+      "end": 146.78,
+      "text": "no, eso yo no lo veo",
+      "words": [
+        {
+          "word": "no,",
+          "start": 145.44,
+          "end": 145.72
+        },
+        {
+          "word": "eso",
+          "start": 145.76,
+          "end": 145.96
+        },
+        {
+          "word": "yo",
+          "start": 145.96,
+          "end": 146.12
+        },
+        {
+          "word": "no",
+          "start": 146.12,
+          "end": 146.28
+        },
+        {
+          "word": "lo",
+          "start": 146.28,
+          "end": 146.36
+        },
+        {
+          "word": "veo",
+          "start": 146.36,
+          "end": 146.78
+        }
+      ]
+    },
+    {
+      "start": 146.78,
+      "end": 149.34,
+      "text": "pero un caca",
+      "words": [
+        {
+          "word": "pero",
+          "start": 146.78,
+          "end": 147.5
+        },
+        {
+          "word": "un",
+          "start": 147.5,
+          "end": 149.1
+        },
+        {
+          "word": "caca",
+          "start": 149.1,
+          "end": 149.34
+        }
+      ]
+    },
+    {
+      "start": 150.8,
+      "end": 152.2,
+      "text": "y lo blanco lo ves?",
+      "words": [
+        {
+          "word": "y",
+          "start": 150.8,
+          "end": 151.32
+        },
+        {
+          "word": "lo",
+          "start": 151.32,
+          "end": 151.54
+        },
+        {
+          "word": "blanco",
+          "start": 151.54,
+          "end": 151.8
+        },
+        {
+          "word": "lo",
+          "start": 151.8,
+          "end": 152.0
+        },
+        {
+          "word": "ves?",
+          "start": 152.0,
+          "end": 152.2
+        }
+      ]
+    },
+    {
+      "start": 153.42,
+      "end": 156.16,
+      "text": "de lo blanco de la plancha se ve a penitas",
+      "words": [
+        {
+          "word": "de",
+          "start": 153.42,
+          "end": 153.94
+        },
+        {
+          "word": "lo",
+          "start": 153.94,
+          "end": 153.98
+        },
+        {
+          "word": "blanco",
+          "start": 153.98,
+          "end": 154.36
+        },
+        {
+          "word": "de",
+          "start": 154.36,
+          "end": 154.48
+        },
+        {
+          "word": "la",
+          "start": 154.48,
+          "end": 154.68
+        },
+        {
+          "word": "plancha",
+          "start": 154.68,
+          "end": 154.92
+        },
+        {
+          "word": "se",
+          "start": 154.92,
+          "end": 155.1
+        },
+        {
+          "word": "ve",
+          "start": 155.1,
+          "end": 155.38
+        },
+        {
+          "word": "a",
+          "start": 155.38,
+          "end": 155.6
+        },
+        {
+          "word": "penitas",
+          "start": 155.6,
+          "end": 156.16
+        }
+      ]
+    },
+    {
+      "start": 156.16,
+      "end": 158.3,
+      "text": "como una esquina, la esquina superior izquierda",
+      "words": [
+        {
+          "word": "como",
+          "start": 156.16,
+          "end": 156.7
+        },
+        {
+          "word": "una",
+          "start": 156.7,
+          "end": 156.94
+        },
+        {
+          "word": "esquina,",
+          "start": 156.94,
+          "end": 157.3
+        },
+        {
+          "word": "la",
+          "start": 157.3,
+          "end": 157.42
+        },
+        {
+          "word": "esquina",
+          "start": 157.42,
+          "end": 157.7
+        },
+        {
+          "word": "superior",
+          "start": 157.7,
+          "end": 158.08
+        },
+        {
+          "word": "izquierda",
+          "start": 158.08,
+          "end": 158.34
+        }
+      ]
+    },
+    {
+      "start": 159.62,
+      "end": 161.7,
+      "text": "del hombro izquierdo",
+      "words": [
+        {
+          "word": "del",
+          "start": 159.62,
+          "end": 160.14
+        },
+        {
+          "word": "hombro",
+          "start": 160.14,
+          "end": 160.66
+        },
+        {
+          "word": "izquierdo",
+          "start": 160.66,
+          "end": 161.7
+        }
+      ]
+    },
+    {
+      "start": 161.7,
+      "end": 163.72,
+      "text": "el derecho",
+      "words": [
+        {
+          "word": "el",
+          "start": 161.7,
+          "end": 162.72
+        },
+        {
+          "word": "derecho",
+          "start": 162.72,
+          "end": 163.72
+        }
+      ]
+    },
+    {
+      "start": 163.72,
+      "end": 166.2,
+      "text": "claro, del hombro derecho de ella",
+      "words": [
+        {
+          "word": "claro,",
+          "start": 163.72,
+          "end": 164.58
+        },
+        {
+          "word": "hombro",
+          "start": 164.84,
+          "end": 165.1
+        },
+        {
+          "word": "derecho",
+          "start": 165.1,
+          "end": 165.44
+        },
+        {
+          "word": "de",
+          "start": 165.44,
+          "end": 165.72
+        },
+        {
+          "word": "ella",
+          "start": 165.72,
+          "end": 166.2
+        }
+      ]
+    },
+    {
+      "start": 166.2,
+      "end": 170.34,
+      "text": "como si de ahí sale apenas un poco de la esquina de lo blanco",
+      "words": [
+        {
+          "word": "como",
+          "start": 166.2,
+          "end": 166.9
+        },
+        {
+          "word": "si",
+          "start": 166.9,
+          "end": 167.12
+        },
+        {
+          "word": "de",
+          "start": 167.12,
+          "end": 167.28
+        },
+        {
+          "word": "ahí",
+          "start": 167.28,
+          "end": 167.48
+        },
+        {
+          "word": "sale",
+          "start": 167.48,
+          "end": 167.92
+        },
+        {
+          "word": "apenas",
+          "start": 167.92,
+          "end": 168.58
+        },
+        {
+          "word": "un",
+          "start": 168.58,
+          "end": 168.8
+        },
+        {
+          "word": "poco",
+          "start": 168.8,
+          "end": 168.98
+        },
+        {
+          "word": "de",
+          "start": 168.98,
+          "end": 169.14
+        },
+        {
+          "word": "la",
+          "start": 169.14,
+          "end": 169.4
+        },
+        {
+          "word": "esquina",
+          "start": 169.4,
+          "end": 169.76
+        },
+        {
+          "word": "de",
+          "start": 169.76,
+          "end": 169.9
+        },
+        {
+          "word": "lo",
+          "start": 169.9,
+          "end": 170.06
+        },
+        {
+          "word": "blanco",
+          "start": 170.06,
+          "end": 170.34
+        }
+      ]
+    },
+    {
+      "start": 171.3,
+      "end": 172.34,
+      "text": "del hombro?",
+      "words": [
+        {
+          "word": "del",
+          "start": 171.3,
+          "end": 171.82
+        },
+        {
+          "word": "hombro?",
+          "start": 171.82,
+          "end": 172.34
+        }
+      ]
+    },
+    {
+      "start": 172.34,
+      "end": 173.84,
+      "text": "está bastante más abajo",
+      "words": [
+        {
+          "word": "está",
+          "start": 172.34,
+          "end": 172.62
+        },
+        {
+          "word": "bastante",
+          "start": 172.62,
+          "end": 173.02
+        },
+        {
+          "word": "más",
+          "start": 173.02,
+          "end": 173.26
+        },
+        {
+          "word": "abajo",
+          "start": 173.26,
+          "end": 173.84
+        }
+      ]
+    },
+    {
+      "start": 173.84,
+      "end": 177.08,
+      "text": "del hombro, sí, del hombro, como la parte alta del brazo",
+      "words": [
+        {
+          "word": "del",
+          "start": 173.84,
+          "end": 174.16
+        },
+        {
+          "word": "hombro,",
+          "start": 174.16,
+          "end": 174.86
+        },
+        {
+          "word": "sí,",
+          "start": 174.86,
+          "end": 175.04
+        },
+        {
+          "word": "del",
+          "start": 175.48,
+          "end": 175.52
+        },
+        {
+          "word": "hombro,",
+          "start": 175.52,
+          "end": 176.18
+        },
+        {
+          "word": "como",
+          "start": 176.4,
+          "end": 176.6
+        },
+        {
+          "word": "la",
+          "start": 176.6,
+          "end": 176.78
+        },
+        {
+          "word": "parte",
+          "start": 176.78,
+          "end": 176.92
+        },
+        {
+          "word": "alta",
+          "start": 176.92,
+          "end": 177.06
+        },
+        {
+          "word": "del",
+          "start": 177.06,
+          "end": 177.08
+        }
+      ]
+    },
+    {
+      "start": 177.08,
+      "end": 177.9,
+      "text": "del hombro o del pelo?",
+      "words": [
+        {
+          "word": "del",
+          "start": 177.08,
+          "end": 177.22
+        },
+        {
+          "word": "hombro",
+          "start": 177.22,
+          "end": 177.36
+        },
+        {
+          "word": "o",
+          "start": 177.36,
+          "end": 177.4
+        },
+        {
+          "word": "del",
+          "start": 177.4,
+          "end": 177.54
+        },
+        {
+          "word": "pelo?",
+          "start": 177.54,
+          "end": 177.9
+        }
+      ]
+    },
+    {
+      "start": 178.8,
+      "end": 181.78,
+      "text": "no, entre el hombro y la parte alta del brazo",
+      "words": [
+        {
+          "word": "no,",
+          "start": 178.8,
+          "end": 179.06
+        },
+        {
+          "word": "entre",
+          "start": 179.22,
+          "end": 179.84
+        },
+        {
+          "word": "el",
+          "start": 179.84,
+          "end": 179.96
+        },
+        {
+          "word": "hombro",
+          "start": 179.96,
+          "end": 180.1
+        },
+        {
+          "word": "y",
+          "start": 180.1,
+          "end": 180.22
+        },
+        {
+          "word": "la",
+          "start": 180.22,
+          "end": 180.36
+        },
+        {
+          "word": "parte",
+          "start": 180.36,
+          "end": 180.6
+        },
+        {
+          "word": "alta",
+          "start": 180.6,
+          "end": 180.84
+        },
+        {
+          "word": "del",
+          "start": 180.84,
+          "end": 181.06
+        },
+        {
+          "word": "brazo",
+          "start": 181.06,
+          "end": 181.78
+        }
+      ]
+    },
+    {
+      "start": 181.78,
+      "end": 185.72,
+      "text": "de manera, mira, la parte de más arriba de la sirena, la cabeza",
+      "words": [
+        {
+          "word": "de",
+          "start": 181.78,
+          "end": 181.92
+        },
+        {
+          "word": "manera,",
+          "start": 181.92,
+          "end": 182.2
+        },
+        {
+          "word": "la",
+          "start": 183.0,
+          "end": 183.02
+        },
+        {
+          "word": "parte",
+          "start": 183.02,
+          "end": 183.34
+        },
+        {
+          "word": "de",
+          "start": 183.34,
+          "end": 183.48
+        },
+        {
+          "word": "más",
+          "start": 183.48,
+          "end": 183.68
+        },
+        {
+          "word": "arriba",
+          "start": 183.68,
+          "end": 184.14
+        },
+        {
+          "word": "de",
+          "start": 184.14,
+          "end": 184.34
+        },
+        {
+          "word": "la",
+          "start": 184.34,
+          "end": 184.54
+        },
+        {
+          "word": "sirena,",
+          "start": 184.54,
+          "end": 184.96
+        },
+        {
+          "word": "la",
+          "start": 185.12,
+          "end": 185.2
+        },
+        {
+          "word": "cabeza",
+          "start": 185.2,
+          "end": 185.72
+        }
+      ]
+    },
+    {
+      "start": 185.72,
+      "end": 188.32,
+      "text": "está casi, casi cerca de la sirena",
+      "words": [
+        {
+          "word": "está",
+          "start": 185.72,
+          "end": 186.7
+        },
+        {
+          "word": "casi,",
+          "start": 186.7,
+          "end": 187.38
+        },
+        {
+          "word": "casi",
+          "start": 187.38,
+          "end": 188.32
+        }
+      ]
+    },
+    {
+      "start": 188.32,
+      "end": 193.7,
+      "text": "está casi al mismo nivel horizontal que la punta de la plancha",
+      "words": [
+        {
+          "word": "casi",
+          "start": 188.32,
+          "end": 188.62
+        },
+        {
+          "word": "al",
+          "start": 188.62,
+          "end": 189.06
+        },
+        {
+          "word": "mismo",
+          "start": 189.06,
+          "end": 189.28
+        },
+        {
+          "word": "nivel",
+          "start": 189.28,
+          "end": 190.04
+        },
+        {
+          "word": "horizontal",
+          "start": 190.04,
+          "end": 190.78
+        },
+        {
+          "word": "que",
+          "start": 190.78,
+          "end": 191.24
+        },
+        {
+          "word": "la",
+          "start": 191.24,
+          "end": 191.46
+        },
+        {
+          "word": "punta",
+          "start": 191.46,
+          "end": 191.76
+        },
+        {
+          "word": "de",
+          "start": 191.76,
+          "end": 191.92
+        },
+        {
+          "word": "la",
+          "start": 191.92,
+          "end": 193.62
+        },
+        {
+          "word": "plancha",
+          "start": 193.62,
+          "end": 193.7
+        }
+      ]
+    },
+    {
+      "start": 193.7,
+      "end": 196.8,
+      "text": "entonces los ojos están a la altura de la esquina de la derecha de la plancha",
+      "words": [
+        {
+          "word": "entonces",
+          "start": 193.7,
+          "end": 193.94
+        },
+        {
+          "word": "los",
+          "start": 193.94,
+          "end": 194.14
+        },
+        {
+          "word": "ojos",
+          "start": 194.14,
+          "end": 194.36
+        },
+        {
+          "word": "están",
+          "start": 194.36,
+          "end": 194.62
+        },
+        {
+          "word": "a",
+          "start": 194.62,
+          "end": 194.68
+        },
+        {
+          "word": "la",
+          "start": 194.68,
+          "end": 194.86
+        },
+        {
+          "word": "altura",
+          "start": 194.86,
+          "end": 194.96
+        },
+        {
+          "word": "de",
+          "start": 194.96,
+          "end": 195.1
+        },
+        {
+          "word": "la",
+          "start": 195.1,
+          "end": 195.26
+        },
+        {
+          "word": "esquina",
+          "start": 195.26,
+          "end": 195.5
+        },
+        {
+          "word": "de",
+          "start": 195.5,
+          "end": 195.64
+        },
+        {
+          "word": "la",
+          "start": 195.64,
+          "end": 195.8
+        },
+        {
+          "word": "derecha",
+          "start": 195.8,
+          "end": 196.04
+        },
+        {
+          "word": "de",
+          "start": 196.04,
+          "end": 196.16
+        },
+        {
+          "word": "la",
+          "start": 196.16,
+          "end": 196.34
+        },
+        {
+          "word": "plancha",
+          "start": 196.34,
+          "end": 196.8
+        }
+      ]
+    },
+    {
+      "start": 196.8,
+      "end": 198.32,
+      "text": "no, más arriba",
+      "words": [
+        {
+          "word": "no,",
+          "start": 196.8,
+          "end": 197.16
+        },
+        {
+          "word": "más",
+          "start": 197.16,
+          "end": 197.34
+        },
+        {
+          "word": "arriba",
+          "start": 197.34,
+          "end": 198.32
+        }
+      ]
+    },
+    {
+      "start": 198.32,
+      "end": 199.24,
+      "text": "más arriba?",
+      "words": [
+        {
+          "word": "más",
+          "start": 198.32,
+          "end": 198.68
+        },
+        {
+          "word": "arriba?",
+          "start": 198.68,
+          "end": 199.24
+        }
+      ]
+    },
+    {
+      "start": 199.48,
+      "end": 202.46,
+      "text": "a ver, mira, la punta de la plancha",
+      "words": [
+        {
+          "word": "a",
+          "start": 199.48,
+          "end": 199.5
+        },
+        {
+          "word": "ver,",
+          "start": 199.5,
+          "end": 200.46
+        },
+        {
+          "word": "mira,",
+          "start": 200.52,
+          "end": 200.64
+        },
+        {
+          "word": "la",
+          "start": 200.94,
+          "end": 201.18
+        },
+        {
+          "word": "punta",
+          "start": 201.18,
+          "end": 201.52
+        },
+        {
+          "word": "de",
+          "start": 201.52,
+          "end": 201.66
+        },
+        {
+          "word": "la",
+          "start": 201.66,
+          "end": 201.86
+        },
+        {
+          "word": "plancha",
+          "start": 201.86,
+          "end": 202.46
+        }
+      ]
+    },
+    {
+      "start": 203.82,
+      "end": 210.06,
+      "text": "y la punta de la sirena, digamos, las dos partes de más arriba están más o menos al mismo nivel",
+      "words": [
+        {
+          "word": "y",
+          "start": 203.82,
+          "end": 204.26
+        },
+        {
+          "word": "la",
+          "start": 204.26,
+          "end": 204.7
+        },
+        {
+          "word": "punta",
+          "start": 204.7,
+          "end": 205.08
+        },
+        {
+          "word": "de",
+          "start": 205.08,
+          "end": 205.92
+        },
+        {
+          "word": "la",
+          "start": 205.92,
+          "end": 206.1
+        },
+        {
+          "word": "sirena,",
+          "start": 206.1,
+          "end": 206.48
+        },
+        {
+          "word": "digamos,",
+          "start": 206.58,
+          "end": 206.96
+        },
+        {
+          "word": "las",
+          "start": 207.08,
+          "end": 207.12
+        },
+        {
+          "word": "dos",
+          "start": 207.12,
+          "end": 207.26
+        },
+        {
+          "word": "partes",
+          "start": 207.26,
+          "end": 207.48
+        },
+        {
+          "word": "de",
+          "start": 207.48,
+          "end": 207.66
+        },
+        {
+          "word": "más",
+          "start": 207.66,
+          "end": 207.82
+        },
+        {
+          "word": "arriba",
+          "start": 207.82,
+          "end": 208.02
+        },
+        {
+          "word": "están",
+          "start": 208.02,
+          "end": 208.36
+        },
+        {
+          "word": "más",
+          "start": 208.36,
+          "end": 208.64
+        },
+        {
+          "word": "o",
+          "start": 208.64,
+          "end": 208.7
+        },
+        {
+          "word": "menos",
+          "start": 208.7,
+          "end": 208.86
+        },
+        {
+          "word": "al",
+          "start": 208.86,
+          "end": 208.98
+        },
+        {
+          "word": "mismo",
+          "start": 208.98,
+          "end": 209.18
+        },
+        {
+          "word": "nivel",
+          "start": 209.18,
+          "end": 210.06
+        }
+      ]
+    },
+    {
+      "start": 211.04,
+      "end": 214.58,
+      "text": "pero viste que tiene como un extremo a la derecha, la plancha arriba a la derecha",
+      "words": [
+        {
+          "word": "pero",
+          "start": 211.04,
+          "end": 211.48
+        },
+        {
+          "word": "viste",
+          "start": 211.48,
+          "end": 211.6
+        },
+        {
+          "word": "que",
+          "start": 211.6,
+          "end": 211.72
+        },
+        {
+          "word": "tiene",
+          "start": 211.72,
+          "end": 211.9
+        },
+        {
+          "word": "como",
+          "start": 211.9,
+          "end": 212.08
+        },
+        {
+          "word": "un",
+          "start": 212.08,
+          "end": 212.3
+        },
+        {
+          "word": "extremo",
+          "start": 212.3,
+          "end": 212.56
+        },
+        {
+          "word": "a",
+          "start": 212.56,
+          "end": 212.64
+        },
+        {
+          "word": "la",
+          "start": 212.64,
+          "end": 212.82
+        },
+        {
+          "word": "derecha,",
+          "start": 212.82,
+          "end": 213.14
+        },
+        {
+          "word": "la",
+          "start": 213.32,
+          "end": 213.48
+        },
+        {
+          "word": "plancha",
+          "start": 213.48,
+          "end": 213.84
+        },
+        {
+          "word": "arriba",
+          "start": 213.84,
+          "end": 214.06
+        },
+        {
+          "word": "a",
+          "start": 214.06,
+          "end": 214.2
+        },
+        {
+          "word": "la",
+          "start": 214.2,
+          "end": 214.32
+        },
+        {
+          "word": "derecha",
+          "start": 214.32,
+          "end": 214.58
+        }
+      ]
+    },
+    {
+      "start": 214.58,
+      "end": 216.62,
+      "text": "tiene una punta y un extremo a la derecha",
+      "words": [
+        {
+          "word": "tiene",
+          "start": 214.58,
+          "end": 214.74
+        },
+        {
+          "word": "una",
+          "start": 214.74,
+          "end": 214.96
+        },
+        {
+          "word": "punta",
+          "start": 214.96,
+          "end": 215.26
+        },
+        {
+          "word": "y",
+          "start": 215.26,
+          "end": 215.4
+        },
+        {
+          "word": "un",
+          "start": 215.4,
+          "end": 215.6
+        },
+        {
+          "word": "extremo",
+          "start": 215.6,
+          "end": 215.84
+        },
+        {
+          "word": "a",
+          "start": 215.84,
+          "end": 215.92
+        },
+        {
+          "word": "la",
+          "start": 215.92,
+          "end": 216.04
+        },
+        {
+          "word": "derecha",
+          "start": 216.04,
+          "end": 216.62
+        }
+      ]
+    },
+    {
+      "start": 216.62,
+      "end": 218.4,
+      "text": "o lo ves eso o lo está tapando la sirena?",
+      "words": [
+        {
+          "word": "o",
+          "start": 216.62,
+          "end": 216.76
+        },
+        {
+          "word": "lo",
+          "start": 216.76,
+          "end": 216.92
+        },
+        {
+          "word": "ves",
+          "start": 216.92,
+          "end": 217.02
+        },
+        {
+          "word": "eso",
+          "start": 217.02,
+          "end": 217.18
+        },
+        {
+          "word": "o",
+          "start": 217.18,
+          "end": 217.26
+        },
+        {
+          "word": "lo",
+          "start": 217.26,
+          "end": 217.28
+        },
+        {
+          "word": "está",
+          "start": 217.28,
+          "end": 217.38
+        },
+        {
+          "word": "tapando",
+          "start": 217.38,
+          "end": 217.62
+        },
+        {
+          "word": "la",
+          "start": 217.62,
+          "end": 217.8
+        },
+        {
+          "word": "sirena?",
+          "start": 217.8,
+          "end": 218.4
+        }
+      ]
+    },
+    {
+      "start": 218.8,
+      "end": 220.84,
+      "text": "no, el extremo a la derecha no lo veo",
+      "words": [
+        {
+          "word": "no,",
+          "start": 218.8,
+          "end": 218.88
+        },
+        {
+          "word": "el",
+          "start": 218.88,
+          "end": 219.08
+        },
+        {
+          "word": "extremo",
+          "start": 219.08,
+          "end": 219.46
+        },
+        {
+          "word": "a",
+          "start": 219.46,
+          "end": 219.52
+        },
+        {
+          "word": "la",
+          "start": 219.52,
+          "end": 219.7
+        },
+        {
+          "word": "derecha",
+          "start": 219.7,
+          "end": 219.92
+        },
+        {
+          "word": "no",
+          "start": 219.92,
+          "end": 220.06
+        },
+        {
+          "word": "lo",
+          "start": 220.06,
+          "end": 220.26
+        },
+        {
+          "word": "veo",
+          "start": 220.26,
+          "end": 220.84
+        }
+      ]
+    },
+    {
+      "start": 220.84,
+      "end": 224.66,
+      "text": "veo la parte más alta de la plancha que es la punta",
+      "words": [
+        {
+          "word": "veo",
+          "start": 220.84,
+          "end": 221.5
+        },
+        {
+          "word": "la",
+          "start": 221.5,
+          "end": 222.32
+        },
+        {
+          "word": "parte",
+          "start": 222.32,
+          "end": 222.54
+        },
+        {
+          "word": "más",
+          "start": 222.54,
+          "end": 222.88
+        },
+        {
+          "word": "alta",
+          "start": 222.88,
+          "end": 223.02
+        },
+        {
+          "word": "de",
+          "start": 223.02,
+          "end": 223.16
+        },
+        {
+          "word": "la",
+          "start": 223.16,
+          "end": 223.34
+        },
+        {
+          "word": "plancha",
+          "start": 223.34,
+          "end": 223.54
+        },
+        {
+          "word": "que",
+          "start": 223.54,
+          "end": 223.66
+        },
+        {
+          "word": "es",
+          "start": 223.66,
+          "end": 223.74
+        },
+        {
+          "word": "la",
+          "start": 223.74,
+          "end": 223.92
+        },
+        {
+          "word": "punta",
+          "start": 223.92,
+          "end": 224.66
+        }
+      ]
+    },
+    {
+      "start": 225.24,
+      "end": 231.04,
+      "text": "y esa punta está más o menos al mismo nivel horizontal que la parte más alta de la sirena",
+      "words": [
+        {
+          "word": "y",
+          "start": 225.24,
+          "end": 225.64
+        },
+        {
+          "word": "esa",
+          "start": 225.64,
+          "end": 226.04
+        },
+        {
+          "word": "punta",
+          "start": 226.04,
+          "end": 226.32
+        },
+        {
+          "word": "está",
+          "start": 226.32,
+          "end": 226.46
+        },
+        {
+          "word": "más",
+          "start": 226.46,
+          "end": 226.64
+        },
+        {
+          "word": "o",
+          "start": 226.64,
+          "end": 226.72
+        },
+        {
+          "word": "menos",
+          "start": 226.72,
+          "end": 226.9
+        },
+        {
+          "word": "al",
+          "start": 226.9,
+          "end": 227.04
+        },
+        {
+          "word": "mismo",
+          "start": 227.04,
+          "end": 227.24
+        },
+        {
+          "word": "nivel",
+          "start": 227.24,
+          "end": 227.5
+        },
+        {
+          "word": "horizontal",
+          "start": 227.5,
+          "end": 228.04
+        },
+        {
+          "word": "que",
+          "start": 228.04,
+          "end": 228.74
+        },
+        {
+          "word": "la",
+          "start": 228.74,
+          "end": 229.02
+        },
+        {
+          "word": "parte",
+          "start": 229.02,
+          "end": 229.24
+        },
+        {
+          "word": "más",
+          "start": 229.24,
+          "end": 229.52
+        },
+        {
+          "word": "alta",
+          "start": 229.52,
+          "end": 229.68
+        },
+        {
+          "word": "de",
+          "start": 229.68,
+          "end": 229.82
+        },
+        {
+          "word": "la",
+          "start": 229.82,
+          "end": 229.94
+        },
+        {
+          "word": "sirena",
+          "start": 229.94,
+          "end": 231.04
+        }
+      ]
+    },
+    {
+      "start": 231.04,
+      "end": 236.04,
+      "text": "está bien, entonces, ¿estás seguro que no ves nada rojo por ahí en la parte de abajo de la sirena?",
+      "words": [
+        {
+          "word": "está",
+          "start": 231.04,
+          "end": 231.34
+        },
+        {
+          "word": "bien,",
+          "start": 231.34,
+          "end": 231.6
+        },
+        {
+          "word": "entonces,",
+          "start": 231.64,
+          "end": 231.84
+        },
+        {
+          "word": "¿estás",
+          "start": 231.92,
+          "end": 232.0
+        },
+        {
+          "word": "seguro",
+          "start": 232.0,
+          "end": 232.16
+        },
+        {
+          "word": "que",
+          "start": 232.16,
+          "end": 232.24
+        },
+        {
+          "word": "no",
+          "start": 232.24,
+          "end": 232.3
+        },
+        {
+          "word": "ves",
+          "start": 232.3,
+          "end": 232.42
+        },
+        {
+          "word": "nada",
+          "start": 232.42,
+          "end": 232.72
+        },
+        {
+          "word": "rojo",
+          "start": 232.72,
+          "end": 233.34
+        },
+        {
+          "word": "por",
+          "start": 233.34,
+          "end": 233.88
+        },
+        {
+          "word": "ahí",
+          "start": 233.88,
+          "end": 234.1
+        },
+        {
+          "word": "en",
+          "start": 234.1,
+          "end": 234.64
+        },
+        {
+          "word": "la",
+          "start": 234.64,
+          "end": 234.74
+        },
+        {
+          "word": "parte",
+          "start": 234.74,
+          "end": 234.94
+        },
+        {
+          "word": "de",
+          "start": 234.94,
+          "end": 235.1
+        },
+        {
+          "word": "abajo",
+          "start": 235.1,
+          "end": 235.3
+        },
+        {
+          "word": "de",
+          "start": 235.3,
+          "end": 235.48
+        },
+        {
+          "word": "la",
+          "start": 235.48,
+          "end": 235.62
+        },
+        {
+          "word": "sirena?",
+          "start": 235.62,
+          "end": 236.04
+        }
+      ]
+    },
+    {
+      "start": 236.42,
+      "end": 237.98,
+      "text": "cerca de la leta?",
+      "words": [
+        {
+          "word": "cerca",
+          "start": 236.42,
+          "end": 236.52
+        },
+        {
+          "word": "de",
+          "start": 236.52,
+          "end": 236.7
+        },
+        {
+          "word": "la",
+          "start": 236.7,
+          "end": 236.84
+        },
+        {
+          "word": "leta?",
+          "start": 236.84,
+          "end": 237.98
+        }
+      ]
+    },
+    {
+      "start": 238.36,
+      "end": 238.54,
+      "text": "no, yo no veo nada",
+      "words": [
+        {
+          "word": "no,",
+          "start": 238.36,
+          "end": 238.46
+        }
+      ]
+    },
+    {
+      "start": 238.54,
+      "end": 240.82,
+      "text": "¿y la leta amarilla está tocando la parte gris?",
+      "words": [
+        {
+          "word": "¿y",
+          "start": 238.54,
+          "end": 238.64
+        },
+        {
+          "word": "la",
+          "start": 238.64,
+          "end": 238.8
+        },
+        {
+          "word": "leta",
+          "start": 238.8,
+          "end": 239.0
+        },
+        {
+          "word": "amarilla",
+          "start": 239.0,
+          "end": 239.38
+        },
+        {
+          "word": "está",
+          "start": 239.38,
+          "end": 239.64
+        },
+        {
+          "word": "tocando",
+          "start": 239.64,
+          "end": 240.16
+        },
+        {
+          "word": "la",
+          "start": 240.16,
+          "end": 240.3
+        },
+        {
+          "word": "parte",
+          "start": 240.3,
+          "end": 240.46
+        },
+        {
+          "word": "gris?",
+          "start": 240.46,
+          "end": 240.82
+        }
+      ]
+    },
+    {
+      "start": 241.16,
+      "end": 242.7,
+      "text": "la leta amarilla, sí",
+      "words": [
+        {
+          "word": "la",
+          "start": 241.16,
+          "end": 241.4
+        },
+        {
+          "word": "leta",
+          "start": 241.4,
+          "end": 241.68
+        },
+        {
+          "word": "amarilla,",
+          "start": 241.68,
+          "end": 242.12
+        },
+        {
+          "word": "sí",
+          "start": 242.14,
+          "end": 242.7
+        }
+      ]
+    },
+    {
+      "start": 242.7,
+      "end": 248.36,
+      "text": "la leta amarilla toca la parte gris, toca la parte celeste y además sobresale hacia lo blanco",
+      "words": [
+        {
+          "word": "la",
+          "start": 242.7,
+          "end": 243.48
+        },
+        {
+          "word": "leta",
+          "start": 243.48,
+          "end": 243.78
+        },
+        {
+          "word": "amarilla",
+          "start": 243.78,
+          "end": 244.34
+        },
+        {
+          "word": "toca",
+          "start": 244.34,
+          "end": 244.66
+        },
+        {
+          "word": "la",
+          "start": 244.66,
+          "end": 244.84
+        },
+        {
+          "word": "parte",
+          "start": 244.84,
+          "end": 245.06
+        },
+        {
+          "word": "gris,",
+          "start": 245.06,
+          "end": 245.52
+        },
+        {
+          "word": "toca",
+          "start": 245.72,
+          "end": 245.76
+        },
+        {
+          "word": "la",
+          "start": 245.76,
+          "end": 245.96
+        },
+        {
+          "word": "parte",
+          "start": 245.96,
+          "end": 246.18
+        },
+        {
+          "word": "celeste",
+          "start": 246.18,
+          "end": 246.62
+        },
+        {
+          "word": "y",
+          "start": 246.62,
+          "end": 246.86
+        },
+        {
+          "word": "además",
+          "start": 246.86,
+          "end": 247.1
+        },
+        {
+          "word": "sobresale",
+          "start": 247.1,
+          "end": 247.66
+        },
+        {
+          "word": "hacia",
+          "start": 247.66,
+          "end": 247.86
+        },
+        {
+          "word": "lo",
+          "start": 247.86,
+          "end": 248.08
+        },
+        {
+          "word": "blanco",
+          "start": 248.08,
+          "end": 248.36
+        }
+      ]
+    },
+    {
+      "start": 248.36,
+      "end": 249.38,
+      "text": "pero no llega a los puntos",
+      "words": [
+        {
+          "word": "pero",
+          "start": 248.36,
+          "end": 248.64
+        },
+        {
+          "word": "no",
+          "start": 248.64,
+          "end": 248.8
+        },
+        {
+          "word": "llega",
+          "start": 248.8,
+          "end": 248.9
+        },
+        {
+          "word": "a",
+          "start": 248.9,
+          "end": 248.98
+        },
+        {
+          "word": "los",
+          "start": 248.98,
+          "end": 249.1
+        },
+        {
+          "word": "puntos",
+          "start": 249.1,
+          "end": 249.38
+        }
+      ]
+    },
+    {
+      "start": 249.38,
+      "end": 251.74,
+      "text": "no llega a los puntos, está un toque más abajo de los puntos",
+      "words": [
+        {
+          "word": "no",
+          "start": 249.38,
+          "end": 249.72
+        },
+        {
+          "word": "llega",
+          "start": 249.72,
+          "end": 249.94
+        },
+        {
+          "word": "a",
+          "start": 249.94,
+          "end": 250.0
+        },
+        {
+          "word": "los",
+          "start": 250.0,
+          "end": 250.14
+        },
+        {
+          "word": "puntos,",
+          "start": 250.14,
+          "end": 250.3
+        },
+        {
+          "word": "está",
+          "start": 250.44,
+          "end": 250.5
+        },
+        {
+          "word": "un",
+          "start": 250.5,
+          "end": 250.68
+        },
+        {
+          "word": "toque",
+          "start": 250.68,
+          "end": 250.94
+        },
+        {
+          "word": "más",
+          "start": 250.94,
+          "end": 251.16
+        },
+        {
+          "word": "abajo",
+          "start": 251.16,
+          "end": 251.44
+        },
+        {
+          "word": "de",
+          "start": 251.44,
+          "end": 251.66
+        },
+        {
+          "word": "los",
+          "start": 251.66,
+          "end": 251.72
+        },
+        {
+          "word": "puntos",
+          "start": 251.72,
+          "end": 251.74
+        }
+      ]
+    },
+    {
+      "start": 251.74,
+      "end": 252.56,
+      "text": "ya está, más de eso",
+      "words": [
+        {
+          "word": "está,",
+          "start": 251.74,
+          "end": 251.9
+        },
+        {
+          "word": "más",
+          "start": 252.08,
+          "end": 252.24
+        },
+        {
+          "word": "de",
+          "start": 252.24,
+          "end": 252.42
+        },
+        {
+          "word": "eso",
+          "start": 252.42,
+          "end": 252.56
+        }
+      ]
+    }
+  ]
+}

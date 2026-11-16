@@ -1,0 +1,33 @@
+{
+  "elemento": "ami-TS3009a",
+  "entrada_sha256": "107765ec36b8cb44b245e7a27dfb7e0f2552db43f83721ea2bd8cd2170bd00c9",
+  "configuracion": {
+    "modelo_stt": "medium",
+    "dispositivo": "cuda",
+    "modelo_minutas": "qwen2.5-7b",
+    "secciones": [
+      "resumen",
+      "temas",
+      "decisiones",
+      "problemas",
+      "acciones"
+    ]
+  },
+  "codigo_sha256": "4622740d14ef7dd701f6efd23aa4c49ff051df0cb3806d157ac06919ec2aabf3",
+  "comando": [
+    "python",
+    "-m",
+    "src.minutas",
+    "--entrada",
+    "<datos>/ami/TS3009a/transcription.json",
+    "--salida",
+    "<inferencia>/ami-TS3009a",
+    "--modelo",
+    "qwen2.5-7b",
+    "--secciones",
+    "resumen,temas,decisiones,problemas,acciones",
+    "--sobrescribir"
+  ],
+  "segundos": 1333.9,
+  "codigo": 0
+}

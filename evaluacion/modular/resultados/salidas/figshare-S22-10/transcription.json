@@ -1,0 +1,406 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 7.52,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Bueno, el espejo, es un marco, está justamente sobre la monja y su aura.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 72
+      }
+    },
+    {
+      "start": 8.88,
+      "end": 14.2,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "O sea que no deja verla de ninguna forma más que lo negro por abajo, pero no, no.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 81
+      }
+    },
+    {
+      "start": 14.2,
+      "end": 14.42,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Ah,",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 14.52,
+      "end": 15.4,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "la tapa completamente.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 4,
+        "end": 26
+      }
+    },
+    {
+      "start": 15.9,
+      "end": 16.38,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Totalmente.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 11
+      }
+    },
+    {
+      "start": 17.04,
+      "end": 20.04,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Se ve un poquito lo negro, se ve un poquito la cabeza.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 54
+      }
+    },
+    {
+      "start": 20.26,
+      "end": 20.56,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 20.94,
+      "end": 21.82,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Nada de la cabeza.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 18
+      }
+    },
+    {
+      "start": 22.06,
+      "end": 22.22,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 23.04,
+      "end": 23.94,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Infimo, nada.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 13
+      }
+    },
+    {
+      "start": 24.56,
+      "end": 26.24,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ah, pero un poquitito, sí.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 26
+      }
+    },
+    {
+      "start": 26.24,
+      "end": 29.88,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Y vos si el tuala exactamente sobre y la va a tapar.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 52
+      }
+    },
+    {
+      "start": 30.08,
+      "end": 31.2,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "A primera vista no la ves.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 26
+      }
+    },
+    {
+      "start": 31.7,
+      "end": 35.5,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y la auríola esa se ve de los dos lados o de...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 47
+      }
+    },
+    {
+      "start": 35.5,
+      "end": 37.96,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sobre sale, por los costados y por arriba.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 42
+      }
+    },
+    {
+      "start": 38.4,
+      "end": 38.72,
+      "speaker": null,
+      "name": null,
+      "text": "Está bien.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 10
+      }
+    },
+    {
+      "start": 47.04,
+      "end": 50.1,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No puedo ser, se me corre, quiero ser preciso.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 46
+      }
+    },
+    {
+      "start": 52.96,
+      "end": 53.86,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, ahí va, listo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 21
+      }
+    }
+  ]
+}

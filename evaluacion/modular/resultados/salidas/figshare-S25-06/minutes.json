@@ -1,0 +1,52 @@
+{
+  "resumen": "La reunión se centró en la colocación de una luna amarilla en un diseño, con el objetivo de que estuviera equidistante entre una regla y un ojo. Se discutió sobre la posición del extremo izquierdo de la luna y se acordó que la luna ocupara el mismo área horizontal que el ojo. El hablante envió la imagen para revisión.",
+  "temas": [
+    {
+      "texto": "Colocación de una luna amarilla equidistante entre una regla y un ojo.",
+      "ids_intervenciones": [
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000021",
+        "I000022",
+        "I000024"
+      ],
+      "id_ancla": "I000024"
+    }
+  ],
+  "decisiones": [
+    {
+      "texto": "La luna amarilla ocupará el mismo área horizontal que el ojo.",
+      "ids_intervenciones": [
+        "I000013",
+        "I000022",
+        "I000024"
+      ],
+      "id_ancla": "I000024"
+    }
+  ],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "El hablante enviará la imagen para revisión.",
+      "ids_intervenciones": [
+        "I000025",
+        "I000026"
+      ],
+      "id_ancla": "I000026",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

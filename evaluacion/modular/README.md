@@ -26,7 +26,9 @@ Desde la raíz del repositorio, con el [entorno único](../../README.md#entorno-
 .venv/bin/python -m evaluacion.modular evaluar              # contratos y métricas desde lo guardado (segundos, sin GPU)
 ```
 
-Códigos de salida: 0 terminó; 1 falló, con el motivo en la salida de errores. `inferir` reutiliza lo ya inferido con el mismo insumo y la misma configuración; `--rehacer` lo fuerza. `evaluar` termina con 1 si no se cumple el criterio «Funcionamiento modular».
+Códigos de salida: 0 terminó; 1 falló, con el motivo en la salida de errores. `inferir` reutiliza lo ya inferido con el mismo insumo, la misma configuración y el mismo código de sus etapas; si cambia el código, lo vuelve a correr, y `--rehacer` lo fuerza. `evaluar` termina con 1 si no se cumple el criterio «Funcionamiento modular».
+
+**Sin GPU:** las salidas de la corrida de referencia están versionadas en `resultados/salidas/`. En otra máquina alcanza con `preparar` (para el audio de la muestra) y `evaluar`: sin `inferencia/` local, `evaluar` lee esas salidas.
 
 ### Originales
 
@@ -48,7 +50,8 @@ Los RAR se leen con 7-Zip. En Fedora, el 7-Zip del sistema no lee RAR: hace falt
 | `muestra.manifest.json` | Muestra congelada: `contenido` con su SHA-256, y `ejecucion` | Sí |
 | `exposicion.toml` | Exposición previa declarada por fuente, con evidencia | Sí |
 | `datos/` | Audio normalizado y traducciones de AMI (unos 290 MB) | No |
-| `inferencia/` | Salidas de los módulos, cada una con `inferencia.json` | No |
+| `inferencia/` | Salidas completas de los módulos (incluye copias del audio y registros), cada una con `inferencia.json` | No |
+| `resultados/salidas/` | Los JSON de cada módulo, la minuta en Markdown y `inferencia.json`, publicados por `evaluar` (unos 2 MB) | Sí |
 | `resultados/` | `contratos.json`, `metricas_stt.json`, `metricas_diarizacion.json`, `metricas_asociacion.json`, `planilla_minutas.json`, `exposicion.json` y `planillas/` | Sí |
 
 | Módulo | Qué hace |
@@ -62,15 +65,16 @@ Los RAR se leen con 7-Zip. En Fedora, el 7-Zip del sistema no lee RAR: hace falt
 | `contratos.py` | Validadores públicos de cada etapa |
 | `metricas_stt.py`, `metricas_diar.py`, `metricas_asociacion.py` | WER y CER; DER y JER con `evaluacion/diarizacion/der.py`; palabras bien atribuidas |
 | `planilla.py`, `exposicion.py` | Planilla de minutas para marcar; informe de exposición previa |
+| `salidas.py` | Publicación de las salidas versionadas |
 
-## Resultados (corrida del 16/11/2026)
+## Resultados (16/11/2026, con el PR #19)
 
 | Criterio o métrica | Resultado |
 |---|---|
 | Funcionamiento modular (§2.3) | **Cumple**: diarización 74/74, STT 79/79, asociación 74/74, minutas 77/77 |
 | WER (STT) | Figshare 27,0 % (CER 20,1 %; 77 % de los errores son borrados), OpenSLR 9,1 %, Common Voice 0 % |
 | DER estricto, DER NIST y JER (diarización) | 21,3 %, 10,7 % y 41,0 % (S26, Etapa 2: 23,1 %, 12,3 % y 40,0 %) |
-| Palabras bien atribuidas (asociación) | 86,1 % sin superposición; 87,3 % en total |
+| Palabras bien atribuidas (asociación) | 86,7 % sin superposición; 87,7 % en total (sin contar las 1516 palabras de los 144 segmentos que la asociación resolvió por respaldo) |
 | Ítems recuperados (minutas) | Pendiente: 56 ítems a marcar en `resultados/planillas/` |
 
 Las métricas no tienen umbral (§2.3). Detalle por sesión y por archivo en `resultados/`.
@@ -84,4 +88,4 @@ La marca una persona que no ejecutó la inferencia, siguiendo [`resultados/plani
 - La muestra es chica, como pide §2.3: Figshare son 3 sesiones de 2 personas en un juego, no reuniones, y AMI está traducida automáticamente.
 - En la atribución de palabras, el grupo «con superposición» no es informativo con 2 hablantes: se acepta cualquiera de los dos canales.
 - Exposición previa: no se puede descartar que Whisper, pyannote o Qwen hayan visto estos corpus públicos, y falta confirmar que S22 y S23 (alcance inicial de la Etapa 2) no se usaron localmente para desarrollar ([`resultados/exposicion.json`](resultados/exposicion.json)).
-- Las salidas son de `main` antes del PR #19; con sus validadores siguen dentro del contrato.
+- Los resultados corresponden a `main` con el PR #19 (asociación y minutas nuevas); la diarización y el STT se reutilizaron de la corrida anterior, porque su código no cambió.

@@ -1,0 +1,889 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 8.4,
+      "text": "Ok, la luna azul, ponela entre el telar y el espejo.",
+      "words": [
+        {
+          "word": "Ok,",
+          "start": 0.0,
+          "end": 1.28
+        },
+        {
+          "word": "la",
+          "start": 1.56,
+          "end": 1.9
+        },
+        {
+          "word": "luna",
+          "start": 1.9,
+          "end": 2.4
+        },
+        {
+          "word": "azul,",
+          "start": 2.4,
+          "end": 3.1
+        },
+        {
+          "word": "ponela",
+          "start": 3.1,
+          "end": 4.58
+        },
+        {
+          "word": "entre",
+          "start": 4.58,
+          "end": 6.38
+        },
+        {
+          "word": "el",
+          "start": 6.38,
+          "end": 6.76
+        },
+        {
+          "word": "telar",
+          "start": 6.76,
+          "end": 7.16
+        },
+        {
+          "word": "y",
+          "start": 7.16,
+          "end": 7.52
+        },
+        {
+          "word": "el",
+          "start": 7.52,
+          "end": 7.86
+        },
+        {
+          "word": "espejo.",
+          "start": 7.86,
+          "end": 8.4
+        }
+      ]
+    },
+    {
+      "start": 9.3,
+      "end": 11.12,
+      "text": "Entre, digamos, sobre ellos.",
+      "words": [
+        {
+          "word": "Entre,",
+          "start": 9.3,
+          "end": 9.48
+        },
+        {
+          "word": "digamos,",
+          "start": 9.6,
+          "end": 9.82
+        },
+        {
+          "word": "sobre",
+          "start": 10.08,
+          "end": 10.5
+        },
+        {
+          "word": "ellos.",
+          "start": 10.5,
+          "end": 11.12
+        }
+      ]
+    },
+    {
+      "start": 12.48,
+      "end": 16.84,
+      "text": "Claro, está arriba del cuadro y a la izquierda del telar.",
+      "words": [
+        {
+          "word": "Claro,",
+          "start": 12.48,
+          "end": 12.8
+        },
+        {
+          "word": "está",
+          "start": 13.0,
+          "end": 13.2
+        },
+        {
+          "word": "arriba",
+          "start": 13.2,
+          "end": 13.7
+        },
+        {
+          "word": "del",
+          "start": 13.7,
+          "end": 14.94
+        },
+        {
+          "word": "cuadro",
+          "start": 14.94,
+          "end": 15.52
+        },
+        {
+          "word": "y",
+          "start": 15.52,
+          "end": 15.68
+        },
+        {
+          "word": "a",
+          "start": 15.68,
+          "end": 15.74
+        },
+        {
+          "word": "la",
+          "start": 15.74,
+          "end": 15.92
+        },
+        {
+          "word": "izquierda",
+          "start": 15.92,
+          "end": 16.26
+        },
+        {
+          "word": "del",
+          "start": 16.26,
+          "end": 16.46
+        },
+        {
+          "word": "telar.",
+          "start": 16.46,
+          "end": 16.84
+        }
+      ]
+    },
+    {
+      "start": 16.86,
+      "end": 18.52,
+      "text": "No está superpuesto.",
+      "words": [
+        {
+          "word": "No",
+          "start": 16.86,
+          "end": 17.2
+        },
+        {
+          "word": "está",
+          "start": 17.2,
+          "end": 17.98
+        },
+        {
+          "word": "superpuesto.",
+          "start": 17.98,
+          "end": 18.52
+        }
+      ]
+    },
+    {
+      "start": 18.6,
+      "end": 20.12,
+      "text": "No está superpuesto con nada.",
+      "words": [
+        {
+          "word": "No",
+          "start": 18.6,
+          "end": 18.72
+        },
+        {
+          "word": "está",
+          "start": 18.72,
+          "end": 18.94
+        },
+        {
+          "word": "superpuesto",
+          "start": 18.94,
+          "end": 19.54
+        },
+        {
+          "word": "con",
+          "start": 19.54,
+          "end": 19.8
+        },
+        {
+          "word": "nada.",
+          "start": 19.8,
+          "end": 20.12
+        }
+      ]
+    },
+    {
+      "start": 20.76,
+      "end": 28.06,
+      "text": "De todas maneras, está esa orejita que está en la parte de arriba del cuadro,",
+      "words": [
+        {
+          "word": "De",
+          "start": 20.76,
+          "end": 20.86
+        },
+        {
+          "word": "todas",
+          "start": 20.86,
+          "end": 21.06
+        },
+        {
+          "word": "maneras,",
+          "start": 21.06,
+          "end": 21.96
+        },
+        {
+          "word": "está",
+          "start": 22.66,
+          "end": 22.76
+        },
+        {
+          "word": "esa",
+          "start": 22.76,
+          "end": 24.72
+        },
+        {
+          "word": "orejita",
+          "start": 24.72,
+          "end": 25.32
+        },
+        {
+          "word": "que",
+          "start": 25.32,
+          "end": 25.54
+        },
+        {
+          "word": "está",
+          "start": 25.54,
+          "end": 25.72
+        },
+        {
+          "word": "en",
+          "start": 25.72,
+          "end": 25.96
+        },
+        {
+          "word": "la",
+          "start": 25.96,
+          "end": 26.18
+        },
+        {
+          "word": "parte",
+          "start": 26.18,
+          "end": 26.48
+        },
+        {
+          "word": "de",
+          "start": 26.48,
+          "end": 26.72
+        },
+        {
+          "word": "arriba",
+          "start": 26.72,
+          "end": 26.96
+        },
+        {
+          "word": "del",
+          "start": 26.96,
+          "end": 27.16
+        },
+        {
+          "word": "cuadro,",
+          "start": 27.16,
+          "end": 28.06
+        }
+      ]
+    },
+    {
+      "start": 28.06,
+      "end": 32.76,
+      "text": "está casi casi, es como si la luna estuviera casi apoyada ahí, o apoyada ahí, ponele.",
+      "words": [
+        {
+          "word": "está",
+          "start": 28.06,
+          "end": 28.36
+        },
+        {
+          "word": "casi",
+          "start": 28.36,
+          "end": 28.96
+        },
+        {
+          "word": "casi,",
+          "start": 28.96,
+          "end": 29.28
+        },
+        {
+          "word": "es",
+          "start": 29.38,
+          "end": 29.52
+        },
+        {
+          "word": "como",
+          "start": 29.52,
+          "end": 29.7
+        },
+        {
+          "word": "si",
+          "start": 29.7,
+          "end": 29.82
+        },
+        {
+          "word": "la",
+          "start": 29.82,
+          "end": 29.94
+        },
+        {
+          "word": "luna",
+          "start": 29.94,
+          "end": 30.1
+        },
+        {
+          "word": "estuviera",
+          "start": 30.1,
+          "end": 30.74
+        },
+        {
+          "word": "casi",
+          "start": 30.74,
+          "end": 31.06
+        },
+        {
+          "word": "apoyada",
+          "start": 31.06,
+          "end": 31.46
+        },
+        {
+          "word": "ahí,",
+          "start": 31.46,
+          "end": 31.64
+        },
+        {
+          "word": "o",
+          "start": 31.64,
+          "end": 31.74
+        },
+        {
+          "word": "apoyada",
+          "start": 31.74,
+          "end": 32.12
+        },
+        {
+          "word": "ahí,",
+          "start": 32.12,
+          "end": 32.28
+        },
+        {
+          "word": "ponele.",
+          "start": 32.28,
+          "end": 32.76
+        }
+      ]
+    },
+    {
+      "start": 33.02,
+      "end": 34.36,
+      "text": "Como si los bordes se rozaran.",
+      "words": [
+        {
+          "word": "Como",
+          "start": 33.02,
+          "end": 33.14
+        },
+        {
+          "word": "si",
+          "start": 33.14,
+          "end": 33.26
+        },
+        {
+          "word": "los",
+          "start": 33.26,
+          "end": 33.42
+        },
+        {
+          "word": "bordes",
+          "start": 33.42,
+          "end": 33.66
+        },
+        {
+          "word": "se",
+          "start": 33.66,
+          "end": 33.84
+        },
+        {
+          "word": "rozaran.",
+          "start": 33.84,
+          "end": 34.36
+        }
+      ]
+    },
+    {
+      "start": 34.6,
+      "end": 35.8,
+      "text": "Llegan a rozarse los bordes.",
+      "words": [
+        {
+          "word": "Llegan",
+          "start": 34.6,
+          "end": 34.86
+        },
+        {
+          "word": "a",
+          "start": 34.86,
+          "end": 35.0
+        },
+        {
+          "word": "rozarse",
+          "start": 35.0,
+          "end": 35.34
+        },
+        {
+          "word": "los",
+          "start": 35.34,
+          "end": 35.48
+        },
+        {
+          "word": "bordes.",
+          "start": 35.48,
+          "end": 35.8
+        }
+      ]
+    },
+    {
+      "start": 36.12,
+      "end": 38.18,
+      "text": "Sí, ponele, sí, llegan a rozarse los bordes.",
+      "words": [
+        {
+          "word": "Sí,",
+          "start": 36.12,
+          "end": 36.42
+        },
+        {
+          "word": "ponele,",
+          "start": 36.6,
+          "end": 37.26
+        },
+        {
+          "word": "sí,",
+          "start": 37.42,
+          "end": 37.54
+        },
+        {
+          "word": "llegan",
+          "start": 37.56,
+          "end": 37.7
+        },
+        {
+          "word": "a",
+          "start": 37.7,
+          "end": 37.8
+        },
+        {
+          "word": "rozarse",
+          "start": 37.8,
+          "end": 38.12
+        },
+        {
+          "word": "los",
+          "start": 38.12,
+          "end": 38.18
+        }
+      ]
+    },
+    {
+      "start": 38.18,
+      "end": 38.74,
+      "text": "Y con el telar?",
+      "words": [
+        {
+          "word": "Y",
+          "start": 38.18,
+          "end": 38.24
+        },
+        {
+          "word": "con",
+          "start": 38.24,
+          "end": 38.38
+        },
+        {
+          "word": "el",
+          "start": 38.38,
+          "end": 38.54
+        },
+        {
+          "word": "telar?",
+          "start": 38.54,
+          "end": 38.74
+        }
+      ]
+    },
+    {
+      "start": 39.0,
+      "end": 43.66,
+      "text": "Y con el telar también, hay medio milímetro de separación pero está casi apoyado.",
+      "words": [
+        {
+          "word": "Y",
+          "start": 39.0,
+          "end": 39.22
+        },
+        {
+          "word": "con",
+          "start": 39.22,
+          "end": 39.38
+        },
+        {
+          "word": "el",
+          "start": 39.38,
+          "end": 39.56
+        },
+        {
+          "word": "telar",
+          "start": 39.56,
+          "end": 39.84
+        },
+        {
+          "word": "también,",
+          "start": 39.84,
+          "end": 40.12
+        },
+        {
+          "word": "hay",
+          "start": 40.26,
+          "end": 40.42
+        },
+        {
+          "word": "medio",
+          "start": 40.42,
+          "end": 40.74
+        },
+        {
+          "word": "milímetro",
+          "start": 40.74,
+          "end": 41.38
+        },
+        {
+          "word": "de",
+          "start": 41.38,
+          "end": 41.82
+        },
+        {
+          "word": "separación",
+          "start": 41.82,
+          "end": 42.1
+        },
+        {
+          "word": "pero",
+          "start": 42.1,
+          "end": 42.24
+        },
+        {
+          "word": "está",
+          "start": 42.24,
+          "end": 42.42
+        },
+        {
+          "word": "casi",
+          "start": 42.42,
+          "end": 42.9
+        },
+        {
+          "word": "apoyado.",
+          "start": 42.9,
+          "end": 43.66
+        }
+      ]
+    },
+    {
+      "start": 44.28,
+      "end": 46.52,
+      "text": "Y con la oreja también, ¿hay tanta distancia?",
+      "words": [
+        {
+          "word": "Y",
+          "start": 44.28,
+          "end": 44.44
+        },
+        {
+          "word": "con",
+          "start": 44.44,
+          "end": 44.56
+        },
+        {
+          "word": "la",
+          "start": 44.56,
+          "end": 44.64
+        },
+        {
+          "word": "oreja",
+          "start": 44.64,
+          "end": 44.7
+        },
+        {
+          "word": "también,",
+          "start": 44.7,
+          "end": 44.86
+        },
+        {
+          "word": "¿hay",
+          "start": 45.0,
+          "end": 45.04
+        },
+        {
+          "word": "tanta",
+          "start": 45.04,
+          "end": 46.06
+        },
+        {
+          "word": "distancia?",
+          "start": 46.06,
+          "end": 46.52
+        }
+      ]
+    },
+    {
+      "start": 47.56,
+      "end": 48.86,
+      "text": "Con la oreja...",
+      "words": [
+        {
+          "word": "Con",
+          "start": 47.56,
+          "end": 47.96
+        },
+        {
+          "word": "la",
+          "start": 47.96,
+          "end": 48.18
+        },
+        {
+          "word": "oreja...",
+          "start": 48.18,
+          "end": 48.86
+        }
+      ]
+    },
+    {
+      "start": 49.56,
+      "end": 53.2,
+      "text": "No, en realidad hay muy muy poca distancia con los dos, hay menos con la oreja.",
+      "words": [
+        {
+          "word": "No,",
+          "start": 49.56,
+          "end": 49.92
+        },
+        {
+          "word": "en",
+          "start": 49.96,
+          "end": 50.12
+        },
+        {
+          "word": "realidad",
+          "start": 50.12,
+          "end": 50.34
+        },
+        {
+          "word": "hay",
+          "start": 50.34,
+          "end": 50.56
+        },
+        {
+          "word": "muy",
+          "start": 50.56,
+          "end": 50.82
+        },
+        {
+          "word": "muy",
+          "start": 50.82,
+          "end": 50.98
+        },
+        {
+          "word": "poca",
+          "start": 50.98,
+          "end": 51.14
+        },
+        {
+          "word": "distancia",
+          "start": 51.14,
+          "end": 51.52
+        },
+        {
+          "word": "con",
+          "start": 51.52,
+          "end": 51.72
+        },
+        {
+          "word": "los",
+          "start": 51.72,
+          "end": 51.9
+        },
+        {
+          "word": "dos,",
+          "start": 51.9,
+          "end": 52.02
+        },
+        {
+          "word": "hay",
+          "start": 52.1,
+          "end": 52.32
+        },
+        {
+          "word": "menos",
+          "start": 52.32,
+          "end": 52.56
+        },
+        {
+          "word": "con",
+          "start": 52.56,
+          "end": 52.72
+        },
+        {
+          "word": "la",
+          "start": 52.72,
+          "end": 52.94
+        },
+        {
+          "word": "oreja.",
+          "start": 52.94,
+          "end": 53.2
+        }
+      ]
+    },
+    {
+      "start": 53.24,
+      "end": 56.24,
+      "text": "Con la oreja es como si estuviera la luna apoyada.",
+      "words": [
+        {
+          "word": "Con",
+          "start": 53.24,
+          "end": 53.34
+        },
+        {
+          "word": "la",
+          "start": 53.34,
+          "end": 53.5
+        },
+        {
+          "word": "oreja",
+          "start": 53.5,
+          "end": 53.7
+        },
+        {
+          "word": "es",
+          "start": 53.7,
+          "end": 53.76
+        },
+        {
+          "word": "como",
+          "start": 53.76,
+          "end": 53.94
+        },
+        {
+          "word": "si",
+          "start": 53.94,
+          "end": 54.18
+        },
+        {
+          "word": "estuviera",
+          "start": 54.18,
+          "end": 54.64
+        },
+        {
+          "word": "la",
+          "start": 54.64,
+          "end": 54.84
+        },
+        {
+          "word": "luna",
+          "start": 54.84,
+          "end": 55.12
+        },
+        {
+          "word": "apoyada.",
+          "start": 55.12,
+          "end": 56.24
+        }
+      ]
+    },
+    {
+      "start": 56.86,
+      "end": 60.04,
+      "text": "El borde de la luna apoyada y con el telar es como si estuviera rozando.",
+      "words": [
+        {
+          "word": "El",
+          "start": 56.86,
+          "end": 57.16
+        },
+        {
+          "word": "borde",
+          "start": 57.16,
+          "end": 57.46
+        },
+        {
+          "word": "de",
+          "start": 57.46,
+          "end": 57.52
+        },
+        {
+          "word": "la",
+          "start": 57.52,
+          "end": 57.58
+        },
+        {
+          "word": "luna",
+          "start": 57.58,
+          "end": 57.72
+        },
+        {
+          "word": "apoyada",
+          "start": 57.72,
+          "end": 58.04
+        },
+        {
+          "word": "y",
+          "start": 58.04,
+          "end": 58.18
+        },
+        {
+          "word": "con",
+          "start": 58.18,
+          "end": 58.28
+        },
+        {
+          "word": "el",
+          "start": 58.28,
+          "end": 58.44
+        },
+        {
+          "word": "telar",
+          "start": 58.44,
+          "end": 58.68
+        },
+        {
+          "word": "es",
+          "start": 58.68,
+          "end": 58.8
+        },
+        {
+          "word": "como",
+          "start": 58.8,
+          "end": 58.92
+        },
+        {
+          "word": "si",
+          "start": 58.92,
+          "end": 59.06
+        },
+        {
+          "word": "estuviera",
+          "start": 59.06,
+          "end": 59.34
+        },
+        {
+          "word": "rozando.",
+          "start": 59.34,
+          "end": 60.04
+        }
+      ]
+    }
+  ]
+}

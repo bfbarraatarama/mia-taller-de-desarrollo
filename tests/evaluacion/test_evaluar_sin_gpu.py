@@ -34,10 +34,13 @@ def evaluar_sin_gpu(config: Path) -> tuple[int, list[str]]:
 
 
 def config_con(tmp_path: Path, **rutas) -> Path:
+    """Configuración con rutas reemplazadas; las salidas publicadas van siempre a tmp salvo que se indiquen."""
+    rutas.setdefault("salidas", tmp_path / "salidas-publicadas")
     texto = (RAIZ / "evaluacion/modular/config.toml").read_text(encoding="utf-8")
     for clave, valor in rutas.items():
         actual = {"salida": "evaluacion/modular/datos", "manifiesto": "evaluacion/modular/muestra.manifest.json",
-                  "inferencia": "evaluacion/modular/inferencia", "resultados": "evaluacion/modular/resultados"}[clave]
+                  "inferencia": "evaluacion/modular/inferencia", "resultados": "evaluacion/modular/resultados",
+                  "salidas": "evaluacion/modular/resultados/salidas"}[clave]
         texto = texto.replace(f'{clave} = "{actual}"', f'{clave} = "{valor}"')
     ruta = tmp_path / "config.toml"
     ruta.write_text(texto, encoding="utf-8")
@@ -60,6 +63,18 @@ def test_recalcular_metricas_reales(tmp_path):
     if not (config.inferencia.is_dir() and config.salida.is_dir()):
         pytest.skip("faltan la muestra o las salidas de la corrida de referencia (preparar e inferir)")
     rc, cargados = evaluar_sin_gpu(config_con(tmp_path, resultados=tmp_path / "resultados"))
+    assert (rc, cargados) == (0, [])
+    for reporte in REPORTES:
+        assert (tmp_path / "resultados" / reporte).read_bytes() == (config.resultados / reporte).read_bytes(), reporte
+
+
+def test_recalcular_desde_salidas_versionadas_reales(tmp_path):
+    """Sin `inferencia/` (como en otra máquina, después de `preparar`): mismos reportes desde `resultados/salidas/`."""
+    config = cargar_config()
+    if not (config.salidas.is_dir() and config.salida.is_dir()):
+        pytest.skip("faltan las salidas versionadas o la muestra preparada")
+    rc, cargados = evaluar_sin_gpu(config_con(tmp_path, inferencia=tmp_path / "no-existe",
+                                              resultados=tmp_path / "resultados", salidas=config.salidas))
     assert (rc, cargados) == (0, [])
     for reporte in REPORTES:
         assert (tmp_path / "resultados" / reporte).read_bytes() == (config.resultados / reporte).read_bytes(), reporte

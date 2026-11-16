@@ -1,0 +1,570 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.1,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Dale vamos, uno más y uno más",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 3.1,
+      "end": 3.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Dale",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 4
+      }
+    },
+    {
+      "start": 4.5,
+      "end": 5.1,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Estaban",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 7
+      }
+    },
+    {
+      "start": 5.1,
+      "end": 6.28,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "re emocionadas",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 8,
+        "end": 22
+      }
+    },
+    {
+      "start": 7.64,
+      "end": 11.78,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno vas a tener que agarrar el rinoceronte azul",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 49
+      }
+    },
+    {
+      "start": 11.78,
+      "end": 13.28,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Yo quería agarrar la de oliva",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 13.28,
+      "end": 14.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y yo también",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 16.54,
+      "end": 20.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, pegarlo digamos al lado del...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 37
+      }
+    },
+    {
+      "start": 20.44,
+      "end": 22.66,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Va de la maracuyá o lo que sea",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 22.66,
+      "end": 25.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "O sea que el rabito quede como adentro, viste?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 46
+      }
+    },
+    {
+      "start": 26.3,
+      "end": 28.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y va, bueno, arriba de...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 28.0,
+      "end": 29.16,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "De las velas?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 13
+      }
+    },
+    {
+      "start": 29.16,
+      "end": 32.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si, de las velas a un centímetro, ponle",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 39
+      }
+    },
+    {
+      "start": 33.22,
+      "end": 35.94,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Un centímetro de las velitas",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 35.94,
+      "end": 37.84,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Pero bien pegado a las frutas",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 39.46,
+      "end": 41.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El rabito digamos...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 20
+      }
+    },
+    {
+      "start": 41.0,
+      "end": 42.56,
+      "speaker": null,
+      "name": null,
+      "text": "Es como que queda en la parte de naranja",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 40
+      }
+    },
+    {
+      "start": 42.56,
+      "end": 44.14,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Ah queda en la parte naranja",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 44.14,
+      "end": 44.92,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Si",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 48.74,
+      "end": 50.66,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Un centímetro más o menos",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 50.66,
+      "end": 52.0,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Eso es un centímetro",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 20
+      }
+    },
+    {
+      "start": 53.14,
+      "end": 54.9,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Las patas quedan adentro?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 55.02,
+      "end": 56.26,
+      "speaker": null,
+      "name": null,
+      "text": "Llega a entrar algo en las patas?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 33
+      }
+    },
+    {
+      "start": 56.26,
+      "end": 58.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, la parte azul por ejemplo",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 58.44,
+      "end": 61.18,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La cola y las patas es como que tocan",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 23,
+        "start": 0,
+        "end": 37
+      }
+    },
+    {
+      "start": 61.18,
+      "end": 63.9,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La parte negra pero no llega a tocar la parte naranja",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 0,
+        "end": 53
+      }
+    }
+  ]
+}

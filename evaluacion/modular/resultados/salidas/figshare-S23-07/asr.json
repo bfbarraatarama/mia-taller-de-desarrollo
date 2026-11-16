@@ -1,0 +1,167 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.98,
+      "end": 17.42,
+      "text": "Bueno, tienes que agarrar la luna azul y bueno, a la izquierda, tienes que llevarlo abajo de la luna amarilla y a la derecha del espejo ese, que es también en la intersección.",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 0.98,
+          "end": 1.56
+        },
+        {
+          "word": "tienes",
+          "start": 1.6,
+          "end": 1.88
+        },
+        {
+          "word": "que",
+          "start": 1.88,
+          "end": 2.42
+        },
+        {
+          "word": "agarrar",
+          "start": 2.42,
+          "end": 2.74
+        },
+        {
+          "word": "la",
+          "start": 2.74,
+          "end": 2.88
+        },
+        {
+          "word": "luna",
+          "start": 2.88,
+          "end": 3.16
+        },
+        {
+          "word": "azul",
+          "start": 3.16,
+          "end": 3.58
+        },
+        {
+          "word": "y",
+          "start": 3.58,
+          "end": 4.86
+        },
+        {
+          "word": "bueno,",
+          "start": 4.86,
+          "end": 5.1
+        },
+        {
+          "word": "la",
+          "start": 5.18,
+          "end": 5.42
+        },
+        {
+          "word": "izquierda,",
+          "start": 5.42,
+          "end": 7.28
+        },
+        {
+          "word": "tienes",
+          "start": 7.44,
+          "end": 7.96
+        },
+        {
+          "word": "que",
+          "start": 7.96,
+          "end": 8.14
+        },
+        {
+          "word": "llevarlo",
+          "start": 8.14,
+          "end": 8.54
+        },
+        {
+          "word": "abajo",
+          "start": 8.54,
+          "end": 8.8
+        },
+        {
+          "word": "de",
+          "start": 8.8,
+          "end": 9.0
+        },
+        {
+          "word": "la",
+          "start": 9.0,
+          "end": 9.14
+        },
+        {
+          "word": "luna",
+          "start": 9.14,
+          "end": 10.02
+        },
+        {
+          "word": "amarilla",
+          "start": 10.02,
+          "end": 10.7
+        },
+        {
+          "word": "y",
+          "start": 10.7,
+          "end": 11.7
+        },
+        {
+          "word": "a",
+          "start": 11.7,
+          "end": 11.82
+        },
+        {
+          "word": "la",
+          "start": 11.82,
+          "end": 12.04
+        },
+        {
+          "word": "derecha",
+          "start": 12.04,
+          "end": 12.34
+        },
+        {
+          "word": "del",
+          "start": 12.34,
+          "end": 13.34
+        },
+        {
+          "word": "espejo",
+          "start": 13.34,
+          "end": 13.8
+        },
+        {
+          "word": "ese,",
+          "start": 13.8,
+          "end": 14.7
+        },
+        {
+          "word": "es",
+          "start": 15.12,
+          "end": 15.22
+        },
+        {
+          "word": "también",
+          "start": 15.22,
+          "end": 15.44
+        },
+        {
+          "word": "en",
+          "start": 15.44,
+          "end": 15.6
+        },
+        {
+          "word": "la",
+          "start": 15.6,
+          "end": 15.8
+        },
+        {
+          "word": "intersección.",
+          "start": 15.8,
+          "end": 17.42
+        }
+      ]
+    }
+  ]
+}

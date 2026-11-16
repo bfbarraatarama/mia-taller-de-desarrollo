@@ -1,0 +1,1583 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 2.22,
+      "end": 10.76,
+      "text": "El cuadro está equidistante al auto y a la luna amarilla.",
+      "words": [
+        {
+          "word": "El",
+          "start": 2.22,
+          "end": 2.7
+        },
+        {
+          "word": "cuadro",
+          "start": 2.7,
+          "end": 3.18
+        },
+        {
+          "word": "está",
+          "start": 3.18,
+          "end": 5.1
+        },
+        {
+          "word": "equidistante",
+          "start": 5.1,
+          "end": 8.62
+        },
+        {
+          "word": "al",
+          "start": 8.62,
+          "end": 8.98
+        },
+        {
+          "word": "auto",
+          "start": 8.98,
+          "end": 9.48
+        },
+        {
+          "word": "y",
+          "start": 9.48,
+          "end": 9.72
+        },
+        {
+          "word": "a",
+          "start": 9.72,
+          "end": 9.84
+        },
+        {
+          "word": "la",
+          "start": 9.84,
+          "end": 9.92
+        },
+        {
+          "word": "luna",
+          "start": 9.92,
+          "end": 10.12
+        },
+        {
+          "word": "amarilla.",
+          "start": 10.12,
+          "end": 10.76
+        }
+      ]
+    },
+    {
+      "start": 10.76,
+      "end": 12.5,
+      "text": "Si traes una diagonal o...?",
+      "words": [
+        {
+          "word": "Si",
+          "start": 10.76,
+          "end": 11.02
+        },
+        {
+          "word": "traes",
+          "start": 11.02,
+          "end": 11.2
+        },
+        {
+          "word": "una",
+          "start": 11.2,
+          "end": 11.34
+        },
+        {
+          "word": "diagonal",
+          "start": 11.34,
+          "end": 11.8
+        },
+        {
+          "word": "o...?",
+          "start": 11.8,
+          "end": 12.5
+        }
+      ]
+    },
+    {
+      "start": 12.5,
+      "end": 18.36,
+      "text": "No, está en eje horizontal como el auto y en eje vertical como la luna.",
+      "words": [
+        {
+          "word": "No,",
+          "start": 12.5,
+          "end": 13.38
+        },
+        {
+          "word": "está",
+          "start": 13.66,
+          "end": 13.94
+        },
+        {
+          "word": "en",
+          "start": 13.94,
+          "end": 14.16
+        },
+        {
+          "word": "eje",
+          "start": 14.16,
+          "end": 14.36
+        },
+        {
+          "word": "horizontal",
+          "start": 14.36,
+          "end": 15.18
+        },
+        {
+          "word": "como",
+          "start": 15.18,
+          "end": 15.98
+        },
+        {
+          "word": "el",
+          "start": 15.98,
+          "end": 16.22
+        },
+        {
+          "word": "auto",
+          "start": 16.22,
+          "end": 16.46
+        },
+        {
+          "word": "y",
+          "start": 16.46,
+          "end": 16.64
+        },
+        {
+          "word": "en",
+          "start": 16.64,
+          "end": 16.74
+        },
+        {
+          "word": "eje",
+          "start": 16.74,
+          "end": 16.92
+        },
+        {
+          "word": "vertical",
+          "start": 16.92,
+          "end": 17.38
+        },
+        {
+          "word": "como",
+          "start": 17.38,
+          "end": 17.62
+        },
+        {
+          "word": "la",
+          "start": 17.62,
+          "end": 17.82
+        },
+        {
+          "word": "luna.",
+          "start": 17.82,
+          "end": 18.36
+        }
+      ]
+    },
+    {
+      "start": 18.62,
+      "end": 20.68,
+      "text": "Pero más cerca de la luna porque están equidistantes.",
+      "words": [
+        {
+          "word": "Pero",
+          "start": 18.62,
+          "end": 19.04
+        },
+        {
+          "word": "más",
+          "start": 19.04,
+          "end": 19.24
+        },
+        {
+          "word": "cerca",
+          "start": 19.24,
+          "end": 19.36
+        },
+        {
+          "word": "de",
+          "start": 19.36,
+          "end": 19.5
+        },
+        {
+          "word": "la",
+          "start": 19.5,
+          "end": 19.54
+        },
+        {
+          "word": "luna",
+          "start": 19.54,
+          "end": 19.74
+        },
+        {
+          "word": "porque",
+          "start": 19.74,
+          "end": 19.9
+        },
+        {
+          "word": "están",
+          "start": 19.9,
+          "end": 20.04
+        },
+        {
+          "word": "equidistantes.",
+          "start": 20.04,
+          "end": 20.68
+        }
+      ]
+    },
+    {
+      "start": 22.08,
+      "end": 24.16,
+      "text": "No, está más o menos a la misma distancia de los dos.",
+      "words": [
+        {
+          "word": "No,",
+          "start": 22.08,
+          "end": 22.36
+        },
+        {
+          "word": "está",
+          "start": 22.44,
+          "end": 22.56
+        },
+        {
+          "word": "más",
+          "start": 22.56,
+          "end": 22.68
+        },
+        {
+          "word": "o",
+          "start": 22.68,
+          "end": 22.76
+        },
+        {
+          "word": "menos",
+          "start": 22.76,
+          "end": 22.9
+        },
+        {
+          "word": "a",
+          "start": 22.9,
+          "end": 23.04
+        },
+        {
+          "word": "la",
+          "start": 23.04,
+          "end": 23.1
+        },
+        {
+          "word": "misma",
+          "start": 23.1,
+          "end": 23.28
+        },
+        {
+          "word": "distancia",
+          "start": 23.28,
+          "end": 23.6
+        },
+        {
+          "word": "de",
+          "start": 23.6,
+          "end": 23.74
+        },
+        {
+          "word": "los",
+          "start": 23.74,
+          "end": 23.86
+        },
+        {
+          "word": "dos.",
+          "start": 23.86,
+          "end": 24.16
+        }
+      ]
+    },
+    {
+      "start": 24.54,
+      "end": 26.88,
+      "text": "Está a una buena distancia de los dos.",
+      "words": [
+        {
+          "word": "Está",
+          "start": 24.54,
+          "end": 24.76
+        },
+        {
+          "word": "a",
+          "start": 24.76,
+          "end": 25.04
+        },
+        {
+          "word": "una",
+          "start": 25.04,
+          "end": 25.34
+        },
+        {
+          "word": "buena",
+          "start": 25.34,
+          "end": 25.62
+        },
+        {
+          "word": "distancia",
+          "start": 25.62,
+          "end": 26.28
+        },
+        {
+          "word": "de",
+          "start": 26.28,
+          "end": 26.46
+        },
+        {
+          "word": "los",
+          "start": 26.46,
+          "end": 26.62
+        },
+        {
+          "word": "dos.",
+          "start": 26.62,
+          "end": 26.88
+        }
+      ]
+    },
+    {
+      "start": 27.94,
+      "end": 29.38,
+      "text": "Si, ponle que si...",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 27.94,
+          "end": 28.34
+        },
+        {
+          "word": "ponle",
+          "start": 28.34,
+          "end": 28.74
+        },
+        {
+          "word": "que",
+          "start": 28.74,
+          "end": 28.88
+        },
+        {
+          "word": "si...",
+          "start": 28.88,
+          "end": 29.38
+        }
+      ]
+    },
+    {
+      "start": 29.38,
+      "end": 36.94,
+      "text": "Pero digo, si yo digo que está a la misma distancia del auto que de la luna y lo pongo en el sobre...",
+      "words": [
+        {
+          "word": "Pero",
+          "start": 29.38,
+          "end": 29.62
+        },
+        {
+          "word": "digo,",
+          "start": 29.62,
+          "end": 29.94
+        },
+        {
+          "word": "si",
+          "start": 30.7,
+          "end": 30.92
+        },
+        {
+          "word": "yo",
+          "start": 30.92,
+          "end": 31.02
+        },
+        {
+          "word": "digo",
+          "start": 31.02,
+          "end": 31.18
+        },
+        {
+          "word": "que",
+          "start": 31.18,
+          "end": 31.64
+        },
+        {
+          "word": "está",
+          "start": 31.64,
+          "end": 31.78
+        },
+        {
+          "word": "a",
+          "start": 31.78,
+          "end": 31.88
+        },
+        {
+          "word": "la",
+          "start": 31.88,
+          "end": 31.94
+        },
+        {
+          "word": "misma",
+          "start": 31.94,
+          "end": 32.1
+        },
+        {
+          "word": "distancia",
+          "start": 32.1,
+          "end": 32.48
+        },
+        {
+          "word": "del",
+          "start": 32.48,
+          "end": 32.68
+        },
+        {
+          "word": "auto",
+          "start": 32.68,
+          "end": 32.96
+        },
+        {
+          "word": "que",
+          "start": 32.96,
+          "end": 33.14
+        },
+        {
+          "word": "de",
+          "start": 33.14,
+          "end": 33.28
+        },
+        {
+          "word": "la",
+          "start": 33.28,
+          "end": 33.4
+        },
+        {
+          "word": "luna",
+          "start": 33.4,
+          "end": 33.84
+        },
+        {
+          "word": "y",
+          "start": 33.84,
+          "end": 34.66
+        },
+        {
+          "word": "lo",
+          "start": 34.66,
+          "end": 34.86
+        },
+        {
+          "word": "pongo",
+          "start": 34.86,
+          "end": 35.26
+        },
+        {
+          "word": "en",
+          "start": 35.26,
+          "end": 35.6
+        },
+        {
+          "word": "el",
+          "start": 35.6,
+          "end": 36.56
+        },
+        {
+          "word": "sobre...",
+          "start": 36.56,
+          "end": 36.94
+        }
+      ]
+    },
+    {
+      "start": 36.94,
+      "end": 38.98,
+      "text": "Trasemos una cruz imaginaria, ¿no?",
+      "words": [
+        {
+          "word": "Trasemos",
+          "start": 36.94,
+          "end": 37.42
+        },
+        {
+          "word": "una",
+          "start": 37.42,
+          "end": 37.88
+        },
+        {
+          "word": "cruz",
+          "start": 37.88,
+          "end": 38.22
+        },
+        {
+          "word": "imaginaria,",
+          "start": 38.22,
+          "end": 38.78
+        },
+        {
+          "word": "¿no?",
+          "start": 38.84,
+          "end": 38.98
+        }
+      ]
+    },
+    {
+      "start": 39.02,
+      "end": 42.4,
+      "text": "Si, está a la derecha del auto y arriba de la luna.",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 39.02,
+          "end": 39.24
+        },
+        {
+          "word": "está",
+          "start": 39.24,
+          "end": 39.42
+        },
+        {
+          "word": "a",
+          "start": 39.42,
+          "end": 39.6
+        },
+        {
+          "word": "la",
+          "start": 39.6,
+          "end": 39.82
+        },
+        {
+          "word": "derecha",
+          "start": 39.82,
+          "end": 40.06
+        },
+        {
+          "word": "del",
+          "start": 40.06,
+          "end": 40.28
+        },
+        {
+          "word": "auto",
+          "start": 40.28,
+          "end": 40.68
+        },
+        {
+          "word": "y",
+          "start": 40.68,
+          "end": 41.52
+        },
+        {
+          "word": "arriba",
+          "start": 41.52,
+          "end": 41.86
+        },
+        {
+          "word": "de",
+          "start": 41.86,
+          "end": 42.06
+        },
+        {
+          "word": "la",
+          "start": 42.06,
+          "end": 42.22
+        },
+        {
+          "word": "luna.",
+          "start": 42.22,
+          "end": 42.4
+        }
+      ]
+    },
+    {
+      "start": 42.44,
+      "end": 44.22,
+      "text": "Ah, a la derecha del auto y arriba de la luna.",
+      "words": [
+        {
+          "word": "Ah,",
+          "start": 42.44,
+          "end": 42.62
+        },
+        {
+          "word": "la",
+          "start": 42.66,
+          "end": 42.78
+        },
+        {
+          "word": "derecha",
+          "start": 42.78,
+          "end": 43.6
+        },
+        {
+          "word": "del",
+          "start": 43.6,
+          "end": 43.68
+        },
+        {
+          "word": "auto",
+          "start": 43.68,
+          "end": 43.76
+        },
+        {
+          "word": "y",
+          "start": 43.76,
+          "end": 43.88
+        },
+        {
+          "word": "arriba",
+          "start": 43.88,
+          "end": 43.98
+        },
+        {
+          "word": "de",
+          "start": 43.98,
+          "end": 44.04
+        },
+        {
+          "word": "la",
+          "start": 44.04,
+          "end": 44.1
+        },
+        {
+          "word": "luna.",
+          "start": 44.1,
+          "end": 44.22
+        }
+      ]
+    },
+    {
+      "start": 44.5,
+      "end": 44.76,
+      "text": "Si.",
+      "words": [
+        {
+          "word": "Si.",
+          "start": 44.5,
+          "end": 44.76
+        }
+      ]
+    },
+    {
+      "start": 44.76,
+      "end": 47.82,
+      "text": "O está poniendo abajo del auto y a la izquierda del auto.",
+      "words": [
+        {
+          "word": "O",
+          "start": 44.76,
+          "end": 44.84
+        },
+        {
+          "word": "está",
+          "start": 44.84,
+          "end": 44.96
+        },
+        {
+          "word": "poniendo",
+          "start": 44.96,
+          "end": 45.3
+        },
+        {
+          "word": "abajo",
+          "start": 45.3,
+          "end": 45.6
+        },
+        {
+          "word": "del",
+          "start": 45.6,
+          "end": 46.96
+        },
+        {
+          "word": "auto",
+          "start": 46.96,
+          "end": 47.08
+        },
+        {
+          "word": "y",
+          "start": 47.08,
+          "end": 47.2
+        },
+        {
+          "word": "a",
+          "start": 47.2,
+          "end": 47.24
+        },
+        {
+          "word": "la",
+          "start": 47.24,
+          "end": 47.32
+        },
+        {
+          "word": "izquierda",
+          "start": 47.32,
+          "end": 47.56
+        },
+        {
+          "word": "del",
+          "start": 47.56,
+          "end": 47.76
+        },
+        {
+          "word": "auto.",
+          "start": 47.76,
+          "end": 47.82
+        }
+      ]
+    },
+    {
+      "start": 49.58,
+      "end": 50.38,
+      "text": "No, opuesto.",
+      "words": [
+        {
+          "word": "No,",
+          "start": 49.58,
+          "end": 49.98
+        },
+        {
+          "word": "opuesto.",
+          "start": 49.98,
+          "end": 50.38
+        }
+      ]
+    },
+    {
+      "start": 50.54,
+      "end": 51.34,
+      "text": "Claro, bien.",
+      "words": [
+        {
+          "word": "Claro,",
+          "start": 50.54,
+          "end": 50.74
+        }
+      ]
+    },
+    {
+      "start": 51.42,
+      "end": 52.68,
+      "text": "Buenísimo, no se te plena en cualquier lado.",
+      "words": [
+        {
+          "word": "Buenísimo,",
+          "start": 51.42,
+          "end": 51.72
+        },
+        {
+          "word": "no",
+          "start": 51.72,
+          "end": 51.86
+        },
+        {
+          "word": "se",
+          "start": 51.86,
+          "end": 51.98
+        },
+        {
+          "word": "te",
+          "start": 51.98,
+          "end": 52.08
+        },
+        {
+          "word": "plena",
+          "start": 52.08,
+          "end": 52.16
+        },
+        {
+          "word": "en",
+          "start": 52.16,
+          "end": 52.3
+        },
+        {
+          "word": "cualquier",
+          "start": 52.3,
+          "end": 52.44
+        },
+        {
+          "word": "lado.",
+          "start": 52.44,
+          "end": 52.68
+        }
+      ]
+    },
+    {
+      "start": 53.74,
+      "end": 55.42,
+      "text": "¿Y está centrado con el auto?",
+      "words": [
+        {
+          "word": "¿Y",
+          "start": 53.74,
+          "end": 54.14
+        },
+        {
+          "word": "está",
+          "start": 54.14,
+          "end": 54.54
+        },
+        {
+          "word": "centrado",
+          "start": 54.54,
+          "end": 54.98
+        },
+        {
+          "word": "con",
+          "start": 54.98,
+          "end": 55.1
+        },
+        {
+          "word": "el",
+          "start": 55.1,
+          "end": 55.26
+        },
+        {
+          "word": "auto?",
+          "start": 55.26,
+          "end": 55.42
+        }
+      ]
+    },
+    {
+      "start": 55.42,
+      "end": 57.74,
+      "text": "Está centrado con el auto...",
+      "words": [
+        {
+          "word": "Está",
+          "start": 55.42,
+          "end": 56.18
+        },
+        {
+          "word": "centrado",
+          "start": 56.18,
+          "end": 56.76
+        },
+        {
+          "word": "con",
+          "start": 56.76,
+          "end": 56.98
+        },
+        {
+          "word": "el",
+          "start": 56.98,
+          "end": 57.24
+        },
+        {
+          "word": "auto...",
+          "start": 57.24,
+          "end": 57.74
+        }
+      ]
+    },
+    {
+      "start": 57.74,
+      "end": 59.22,
+      "text": "Las orejas están centradas con el auto.",
+      "words": [
+        {
+          "word": "Las",
+          "start": 57.74,
+          "end": 57.88
+        },
+        {
+          "word": "orejas",
+          "start": 57.88,
+          "end": 58.22
+        },
+        {
+          "word": "están",
+          "start": 58.22,
+          "end": 58.36
+        },
+        {
+          "word": "centradas",
+          "start": 58.36,
+          "end": 58.74
+        },
+        {
+          "word": "con",
+          "start": 58.74,
+          "end": 58.86
+        },
+        {
+          "word": "el",
+          "start": 58.86,
+          "end": 59.06
+        },
+        {
+          "word": "auto.",
+          "start": 59.06,
+          "end": 59.22
+        }
+      ]
+    },
+    {
+      "start": 59.6,
+      "end": 67.12,
+      "text": "No exactamente, ponle que el auto ocuparía más o menos el espacio entre la oreja del medio y el borde sur.",
+      "words": [
+        {
+          "word": "No",
+          "start": 59.6,
+          "end": 59.68
+        },
+        {
+          "word": "exactamente,",
+          "start": 59.68,
+          "end": 60.66
+        },
+        {
+          "word": "ponle",
+          "start": 60.76,
+          "end": 61.04
+        },
+        {
+          "word": "que",
+          "start": 61.04,
+          "end": 61.24
+        },
+        {
+          "word": "el",
+          "start": 61.24,
+          "end": 61.52
+        },
+        {
+          "word": "auto",
+          "start": 61.52,
+          "end": 61.92
+        },
+        {
+          "word": "ocuparía",
+          "start": 61.92,
+          "end": 62.56
+        },
+        {
+          "word": "más",
+          "start": 62.56,
+          "end": 62.8
+        },
+        {
+          "word": "o",
+          "start": 62.8,
+          "end": 62.9
+        },
+        {
+          "word": "menos",
+          "start": 62.9,
+          "end": 63.08
+        },
+        {
+          "word": "el",
+          "start": 63.08,
+          "end": 63.38
+        },
+        {
+          "word": "espacio",
+          "start": 63.38,
+          "end": 63.76
+        },
+        {
+          "word": "entre",
+          "start": 63.76,
+          "end": 64.48
+        },
+        {
+          "word": "la",
+          "start": 64.48,
+          "end": 64.8
+        },
+        {
+          "word": "oreja",
+          "start": 64.8,
+          "end": 65.18
+        },
+        {
+          "word": "del",
+          "start": 65.18,
+          "end": 65.44
+        },
+        {
+          "word": "medio",
+          "start": 65.44,
+          "end": 65.8
+        },
+        {
+          "word": "y",
+          "start": 65.8,
+          "end": 66.26
+        },
+        {
+          "word": "el",
+          "start": 66.26,
+          "end": 66.42
+        },
+        {
+          "word": "borde",
+          "start": 66.42,
+          "end": 66.66
+        },
+        {
+          "word": "sur.",
+          "start": 66.66,
+          "end": 67.12
+        }
+      ]
+    },
+    {
+      "start": 69.42,
+      "end": 70.5,
+      "text": "Y el borde izquierdo sur.",
+      "words": [
+        {
+          "word": "Y",
+          "start": 69.42,
+          "end": 69.56
+        },
+        {
+          "word": "el",
+          "start": 69.56,
+          "end": 69.64
+        },
+        {
+          "word": "borde",
+          "start": 69.64,
+          "end": 69.82
+        },
+        {
+          "word": "izquierdo",
+          "start": 69.82,
+          "end": 70.2
+        },
+        {
+          "word": "sur.",
+          "start": 70.2,
+          "end": 70.5
+        }
+      ]
+    },
+    {
+      "start": 71.62,
+      "end": 73.36,
+      "text": "Entonces, claro, está bien.",
+      "words": [
+        {
+          "word": "Entonces,",
+          "start": 71.62,
+          "end": 71.74
+        },
+        {
+          "word": "claro,",
+          "start": 72.16,
+          "end": 72.5
+        },
+        {
+          "word": "está",
+          "start": 72.94,
+          "end": 73.08
+        },
+        {
+          "word": "bien.",
+          "start": 73.08,
+          "end": 73.36
+        }
+      ]
+    },
+    {
+      "start": 73.64,
+      "end": 74.44,
+      "text": "Más o menos así.",
+      "words": [
+        {
+          "word": "Más",
+          "start": 73.64,
+          "end": 73.86
+        },
+        {
+          "word": "o",
+          "start": 73.86,
+          "end": 73.98
+        },
+        {
+          "word": "menos",
+          "start": 73.98,
+          "end": 74.14
+        },
+        {
+          "word": "así.",
+          "start": 74.14,
+          "end": 74.44
+        }
+      ]
+    },
+    {
+      "start": 74.72,
+      "end": 76.22,
+      "text": "¿Y con respecto a la luna amarilla?",
+      "words": [
+        {
+          "word": "¿Y",
+          "start": 74.72,
+          "end": 75.0
+        },
+        {
+          "word": "con",
+          "start": 75.0,
+          "end": 75.2
+        },
+        {
+          "word": "respecto",
+          "start": 75.2,
+          "end": 75.66
+        },
+        {
+          "word": "a",
+          "start": 75.66,
+          "end": 75.74
+        },
+        {
+          "word": "la",
+          "start": 75.74,
+          "end": 75.76
+        },
+        {
+          "word": "luna",
+          "start": 75.76,
+          "end": 75.86
+        },
+        {
+          "word": "amarilla?",
+          "start": 75.86,
+          "end": 76.22
+        }
+      ]
+    },
+    {
+      "start": 76.64,
+      "end": 87.74,
+      "text": "Con respecto a la luna amarilla es como si los bordes derechos del cuadro estuvieran más o menos en el mismo eje vertical que el borde derecho de la luna.",
+      "words": [
+        {
+          "word": "Con",
+          "start": 76.64,
+          "end": 76.98
+        },
+        {
+          "word": "respecto",
+          "start": 76.98,
+          "end": 77.24
+        },
+        {
+          "word": "a",
+          "start": 77.24,
+          "end": 77.4
+        },
+        {
+          "word": "la",
+          "start": 77.4,
+          "end": 77.46
+        },
+        {
+          "word": "luna",
+          "start": 77.46,
+          "end": 77.64
+        },
+        {
+          "word": "amarilla",
+          "start": 77.64,
+          "end": 78.18
+        },
+        {
+          "word": "es",
+          "start": 78.18,
+          "end": 78.46
+        },
+        {
+          "word": "como",
+          "start": 78.46,
+          "end": 78.78
+        },
+        {
+          "word": "si",
+          "start": 78.78,
+          "end": 79.24
+        },
+        {
+          "word": "los",
+          "start": 79.24,
+          "end": 79.78
+        },
+        {
+          "word": "bordes",
+          "start": 79.78,
+          "end": 81.44
+        },
+        {
+          "word": "derechos",
+          "start": 81.44,
+          "end": 82.0
+        },
+        {
+          "word": "del",
+          "start": 82.0,
+          "end": 82.3
+        },
+        {
+          "word": "cuadro",
+          "start": 82.3,
+          "end": 83.32
+        },
+        {
+          "word": "estuvieran",
+          "start": 83.32,
+          "end": 83.9
+        },
+        {
+          "word": "más",
+          "start": 83.9,
+          "end": 84.18
+        },
+        {
+          "word": "o",
+          "start": 84.18,
+          "end": 84.26
+        },
+        {
+          "word": "menos",
+          "start": 84.26,
+          "end": 84.46
+        },
+        {
+          "word": "en",
+          "start": 84.46,
+          "end": 84.62
+        },
+        {
+          "word": "el",
+          "start": 84.62,
+          "end": 84.68
+        },
+        {
+          "word": "mismo",
+          "start": 84.68,
+          "end": 84.86
+        },
+        {
+          "word": "eje",
+          "start": 84.86,
+          "end": 85.02
+        },
+        {
+          "word": "vertical",
+          "start": 85.02,
+          "end": 85.56
+        },
+        {
+          "word": "que",
+          "start": 85.56,
+          "end": 86.18
+        },
+        {
+          "word": "el",
+          "start": 86.18,
+          "end": 86.42
+        },
+        {
+          "word": "borde",
+          "start": 86.42,
+          "end": 86.74
+        },
+        {
+          "word": "derecho",
+          "start": 86.74,
+          "end": 87.08
+        },
+        {
+          "word": "de",
+          "start": 87.08,
+          "end": 87.3
+        },
+        {
+          "word": "la",
+          "start": 87.3,
+          "end": 87.44
+        },
+        {
+          "word": "luna.",
+          "start": 87.44,
+          "end": 87.74
+        }
+      ]
+    },
+    {
+      "start": 89.06,
+      "end": 90.58,
+      "text": "Que el punto más a la derecha de la luna.",
+      "words": [
+        {
+          "word": "Que",
+          "start": 89.06,
+          "end": 89.08
+        },
+        {
+          "word": "el",
+          "start": 89.08,
+          "end": 89.24
+        },
+        {
+          "word": "punto",
+          "start": 89.24,
+          "end": 89.48
+        },
+        {
+          "word": "más",
+          "start": 89.48,
+          "end": 89.72
+        },
+        {
+          "word": "a",
+          "start": 89.72,
+          "end": 89.8
+        },
+        {
+          "word": "la",
+          "start": 89.8,
+          "end": 90.0
+        },
+        {
+          "word": "derecha",
+          "start": 90.0,
+          "end": 90.18
+        },
+        {
+          "word": "de",
+          "start": 90.18,
+          "end": 90.32
+        },
+        {
+          "word": "la",
+          "start": 90.32,
+          "end": 90.44
+        },
+        {
+          "word": "luna.",
+          "start": 90.44,
+          "end": 90.58
+        }
+      ]
+    },
+    {
+      "start": 90.6,
+      "end": 93.2,
+      "text": "¿Y más o menos significa que vos lo ves un poquito más a la izquierda o un poco más a la izquierda?",
+      "words": [
+        {
+          "word": "¿Y",
+          "start": 90.6,
+          "end": 90.72
+        },
+        {
+          "word": "más",
+          "start": 90.72,
+          "end": 90.84
+        },
+        {
+          "word": "o",
+          "start": 90.84,
+          "end": 90.94
+        },
+        {
+          "word": "menos",
+          "start": 90.94,
+          "end": 91.06
+        },
+        {
+          "word": "significa",
+          "start": 91.06,
+          "end": 91.44
+        },
+        {
+          "word": "que",
+          "start": 91.44,
+          "end": 91.6
+        },
+        {
+          "word": "vos",
+          "start": 91.6,
+          "end": 91.74
+        },
+        {
+          "word": "lo",
+          "start": 91.74,
+          "end": 91.84
+        },
+        {
+          "word": "ves",
+          "start": 91.84,
+          "end": 91.94
+        },
+        {
+          "word": "un",
+          "start": 91.94,
+          "end": 92.04
+        },
+        {
+          "word": "poquito",
+          "start": 92.04,
+          "end": 92.28
+        },
+        {
+          "word": "más",
+          "start": 92.28,
+          "end": 92.44
+        },
+        {
+          "word": "a",
+          "start": 92.44,
+          "end": 92.52
+        },
+        {
+          "word": "la",
+          "start": 92.52,
+          "end": 92.64
+        },
+        {
+          "word": "izquierda",
+          "start": 92.64,
+          "end": 92.8
+        },
+        {
+          "word": "o",
+          "start": 92.8,
+          "end": 92.9
+        },
+        {
+          "word": "un",
+          "start": 92.9,
+          "end": 92.92
+        },
+        {
+          "word": "poco",
+          "start": 92.92,
+          "end": 93.06
+        },
+        {
+          "word": "más",
+          "start": 93.06,
+          "end": 93.18
+        },
+        {
+          "word": "izquierda?",
+          "start": 93.18,
+          "end": 93.2
+        }
+      ]
+    },
+    {
+      "start": 93.2,
+      "end": 95.8,
+      "text": "Yo lo veo un poquito más a la izquierda del cuadro que la luna.",
+      "words": [
+        {
+          "word": "Yo",
+          "start": 93.2,
+          "end": 93.38
+        },
+        {
+          "word": "lo",
+          "start": 93.38,
+          "end": 93.5
+        },
+        {
+          "word": "veo",
+          "start": 93.5,
+          "end": 93.58
+        },
+        {
+          "word": "un",
+          "start": 93.58,
+          "end": 93.7
+        },
+        {
+          "word": "poquito",
+          "start": 93.7,
+          "end": 93.9
+        },
+        {
+          "word": "más",
+          "start": 93.9,
+          "end": 94.12
+        },
+        {
+          "word": "a",
+          "start": 94.12,
+          "end": 94.18
+        },
+        {
+          "word": "la",
+          "start": 94.18,
+          "end": 94.44
+        },
+        {
+          "word": "izquierda",
+          "start": 94.44,
+          "end": 94.8
+        },
+        {
+          "word": "del",
+          "start": 94.8,
+          "end": 94.94
+        },
+        {
+          "word": "cuadro",
+          "start": 94.94,
+          "end": 95.24
+        },
+        {
+          "word": "que",
+          "start": 95.24,
+          "end": 95.38
+        },
+        {
+          "word": "la",
+          "start": 95.38,
+          "end": 95.54
+        },
+        {
+          "word": "luna.",
+          "start": 95.54,
+          "end": 95.8
+        }
+      ]
+    },
+    {
+      "start": 96.04,
+      "end": 97.04,
+      "text": "Está bien, bueno, probemos ahí.",
+      "words": [
+        {
+          "word": "bien,",
+          "start": 96.04,
+          "end": 96.3
+        },
+        {
+          "word": "bueno,",
+          "start": 96.44,
+          "end": 96.54
+        },
+        {
+          "word": "probemos",
+          "start": 96.6,
+          "end": 96.86
+        },
+        {
+          "word": "ahí.",
+          "start": 96.86,
+          "end": 97.04
+        }
+      ]
+    }
+  ]
+}

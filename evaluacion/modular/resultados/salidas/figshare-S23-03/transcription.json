@@ -1,0 +1,263 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 7.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Tienes que agarrar la oreja y ponerla arriba del mimo y a la izquierda del león",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 79
+      }
+    },
+    {
+      "start": 8.26,
+      "end": 9.52,
+      "speaker": null,
+      "name": null,
+      "text": "Muy cerca del mimo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 18
+      }
+    },
+    {
+      "start": 9.52,
+      "end": 11.42,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí, todo muy cerca",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 18
+      }
+    },
+    {
+      "start": 11.42,
+      "end": 14.54,
+      "speaker": null,
+      "name": null,
+      "text": "O sea, tiene que encajar justo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 14.54,
+      "end": 17.64,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí, está casi casi tocando el león",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 34
+      }
+    },
+    {
+      "start": 18.34,
+      "end": 20.38,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Más cerca del mimo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 18
+      }
+    },
+    {
+      "start": 20.38,
+      "end": 21.82,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Casi tocando el mimo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 20
+      }
+    },
+    {
+      "start": 21.82,
+      "end": 22.9,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Claro",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 5
+      }
+    },
+    {
+      "start": 22.9,
+      "end": 24.16,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 5
+      }
+    },
+    {
+      "start": 24.16,
+      "end": 25.78,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Pero es prácticamente lo mismo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 25.78,
+      "end": 26.92,
+      "speaker": null,
+      "name": null,
+      "text": "Bueno,",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 6
+      }
+    },
+    {
+      "start": 27.26,
+      "end": 27.62,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "listo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 7,
+        "end": 12
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "resumen": "Se discutió la posición del rinoceronte amarillo en una composición con fruta y Oreo. Se acordó que el cuerno del rinoceronte debe estar equidistante entre la fruta y el Oreo, y que su cola no sobrepasa mucho el Oreo. También se estableció que los pies del rinoceronte deben estar a la misma altura que el extremo inferior del espejo.",
+  "temas": [
+    {
+      "texto": "Posición del rinoceronte amarillo",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024",
+        "I000025",
+        "I000026",
+        "I000027",
+        "I000028",
+        "I000029"
+      ],
+      "id_ancla": "I000014"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "El cuerno del rinoceronte debe estar equidistante entre la fruta y el Oreo.",
+      "ids_intervenciones": [
+        "I000009",
+        "I000010",
+        "I000015",
+        "I000014"
+      ],
+      "id_ancla": "I000014",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "La cola del rinoceronte no debe sobrepasar mucho el Oreo.",
+      "ids_intervenciones": [
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024"
+      ],
+      "id_ancla": "I000024",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Los pies del rinoceronte deben estar a la misma altura que el extremo inferior del espejo.",
+      "ids_intervenciones": [
+        "I000025",
+        "I000026",
+        "I000027"
+      ],
+      "id_ancla": "I000027",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

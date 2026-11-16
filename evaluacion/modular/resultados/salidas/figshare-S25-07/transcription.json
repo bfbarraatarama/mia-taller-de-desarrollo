@@ -1,0 +1,121 @@
+{
+  "segments": [
+    {
+      "start": 1.08,
+      "end": 8.9,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, la luna azul tenéis que ponerla abajo, la luna amarilla y a la derecha del cuadro, del espejo ese.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 105
+      }
+    },
+    {
+      "start": 9.62,
+      "end": 14.72,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "De tal manera que el eje vertical de la luna, digamos la luna está centrada con la luna amarilla, la luna azul.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 111
+      }
+    },
+    {
+      "start": 16.06,
+      "end": 20.14,
+      "speaker": null,
+      "name": null,
+      "text": "Y está centrada también con el espejo. Si yo trazo una cruz está justo en el medio.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 83
+      }
+    },
+    {
+      "start": 21.28,
+      "end": 23.52,
+      "speaker": null,
+      "name": null,
+      "text": "Ok, lo coloco bien ahí.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 25.18,
+      "end": 26.52,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ponelo que más o menos ahí.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 27
+      }
+    }
+  ]
+}

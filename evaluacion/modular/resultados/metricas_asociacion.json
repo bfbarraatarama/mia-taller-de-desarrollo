@@ -3,111 +3,131 @@
   "por_sesion": {
     "S22": {
       "sin_superposicion": {
-        "palabras": 2050,
-        "correctas": 1865,
-        "porcentaje": 91.0
+        "palabras": 1854,
+        "correctas": 1703,
+        "porcentaje": 91.9
       },
       "con_superposicion": {
-        "palabras": 136,
-        "correctas": 136,
+        "palabras": 114,
+        "correctas": 114,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 228,
+      "fuera_de_la_referencia": 207,
       "sin_hablante": 0,
+      "respaldo": {
+        "intervenciones": 29,
+        "palabras": 272
+      },
       "intervenciones": {
-        "total": 373,
-        "sobre_superposicion_real": 133,
-        "ambiguous": 76,
-        "ambiguous_sobre_superposicion_real": 45,
+        "total": 359,
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 126,
+        "ambiguous": 224,
+        "ambiguous_sobre_superposicion_real": 96,
         "overlap": 66,
         "overlap_sobre_superposicion_real": 66
       },
       "todas": {
-        "palabras": 2186,
-        "correctas": 2001,
-        "porcentaje": 91.5
+        "palabras": 1968,
+        "correctas": 1817,
+        "porcentaje": 92.3
       }
     },
     "S23": {
       "sin_superposicion": {
-        "palabras": 1417,
-        "correctas": 1148,
-        "porcentaje": 81.0
+        "palabras": 1165,
+        "correctas": 962,
+        "porcentaje": 82.6
       },
       "con_superposicion": {
-        "palabras": 142,
-        "correctas": 142,
+        "palabras": 117,
+        "correctas": 117,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 182,
+      "fuera_de_la_referencia": 142,
       "sin_hablante": 1,
+      "respaldo": {
+        "intervenciones": 29,
+        "palabras": 354
+      },
       "intervenciones": {
-        "total": 199,
-        "sobre_superposicion_real": 99,
-        "ambiguous": 30,
-        "ambiguous_sobre_superposicion_real": 19,
-        "overlap": 55,
-        "overlap_sobre_superposicion_real": 55
+        "total": 190,
+        "sin_tiempo": 4,
+        "sobre_superposicion_real": 94,
+        "ambiguous": 130,
+        "ambiguous_sobre_superposicion_real": 77,
+        "overlap": 53,
+        "overlap_sobre_superposicion_real": 53
       },
       "todas": {
-        "palabras": 1559,
-        "correctas": 1290,
-        "porcentaje": 82.7
+        "palabras": 1282,
+        "correctas": 1079,
+        "porcentaje": 84.2
       }
     },
     "S25": {
       "sin_superposicion": {
-        "palabras": 5253,
-        "correctas": 4498,
-        "porcentaje": 85.6
+        "palabras": 4609,
+        "correctas": 3950,
+        "porcentaje": 85.7
       },
       "con_superposicion": {
-        "palabras": 494,
-        "correctas": 494,
+        "palabras": 394,
+        "correctas": 394,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 391,
+      "fuera_de_la_referencia": 350,
       "sin_hablante": 0,
+      "respaldo": {
+        "intervenciones": 86,
+        "palabras": 890
+      },
       "intervenciones": {
-        "total": 823,
-        "sobre_superposicion_real": 383,
-        "ambiguous": 156,
-        "ambiguous_sobre_superposicion_real": 120,
-        "overlap": 197,
-        "overlap_sobre_superposicion_real": 197
+        "total": 802,
+        "sin_tiempo": 4,
+        "sobre_superposicion_real": 368,
+        "ambiguous": 460,
+        "ambiguous_sobre_superposicion_real": 280,
+        "overlap": 194,
+        "overlap_sobre_superposicion_real": 194
       },
       "todas": {
-        "palabras": 5747,
-        "correctas": 4992,
-        "porcentaje": 86.9
+        "palabras": 5003,
+        "correctas": 4344,
+        "porcentaje": 86.8
       }
     }
   },
   "total": {
     "sin_superposicion": {
-      "palabras": 8720,
-      "correctas": 7511,
-      "porcentaje": 86.1
+      "palabras": 7628,
+      "correctas": 6615,
+      "porcentaje": 86.7
     },
     "con_superposicion": {
-      "palabras": 772,
-      "correctas": 772,
+      "palabras": 625,
+      "correctas": 625,
       "porcentaje": 100.0
     },
-    "fuera_de_la_referencia": 801,
+    "fuera_de_la_referencia": 699,
     "sin_hablante": 1,
+    "respaldo": {
+      "intervenciones": 144,
+      "palabras": 1516
+    },
     "intervenciones": {
-      "total": 1395,
-      "sobre_superposicion_real": 615,
-      "ambiguous": 262,
-      "ambiguous_sobre_superposicion_real": 184,
-      "overlap": 318,
-      "overlap_sobre_superposicion_real": 318
+      "total": 1351,
+      "sin_tiempo": 8,
+      "sobre_superposicion_real": 588,
+      "ambiguous": 814,
+      "ambiguous_sobre_superposicion_real": 453,
+      "overlap": 313,
+      "overlap_sobre_superposicion_real": 313
     },
     "todas": {
-      "palabras": 9492,
-      "correctas": 8283,
-      "porcentaje": 87.3
+      "palabras": 8253,
+      "correctas": 7240,
+      "porcentaje": 87.7
     }
   },
   "por_archivo": {
@@ -117,24 +137,29 @@
         "SPEAKER_01": "figshare_v2_S22_canal1"
       },
       "sin_superposicion": {
-        "palabras": 96,
-        "correctas": 93,
-        "porcentaje": 96.9
+        "palabras": 80,
+        "correctas": 77,
+        "porcentaje": 96.2
       },
       "con_superposicion": {
         "palabras": 0,
         "correctas": 0,
         "porcentaje": null
       },
-      "fuera_de_la_referencia": 12,
+      "fuera_de_la_referencia": 11,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 13,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 1,
-        "ambiguous": 1,
+        "ambiguous": 9,
         "ambiguous_sobre_superposicion_real": 0,
         "overlap": 1,
         "overlap_sobre_superposicion_real": 1
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 18
       }
     },
     "figshare-S22-02": {
@@ -143,24 +168,29 @@
         "SPEAKER_01": "figshare_v2_S22_canal1"
       },
       "sin_superposicion": {
-        "palabras": 158,
-        "correctas": 147,
-        "porcentaje": 93.0
+        "palabras": 151,
+        "correctas": 146,
+        "porcentaje": 96.7
       },
       "con_superposicion": {
-        "palabras": 15,
-        "correctas": 15,
+        "palabras": 7,
+        "correctas": 7,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 16,
+      "fuera_de_la_referencia": 15,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 28,
-        "sobre_superposicion_real": 16,
-        "ambiguous": 7,
-        "ambiguous_sobre_superposicion_real": 6,
+        "total": 26,
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 14,
+        "ambiguous": 22,
+        "ambiguous_sobre_superposicion_real": 14,
         "overlap": 7,
         "overlap_sobre_superposicion_real": 7
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 20
       }
     },
     "figshare-S22-03": {
@@ -181,11 +211,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 4,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 0,
-        "ambiguous": 0,
+        "ambiguous": 2,
         "ambiguous_sobre_superposicion_real": 0,
         "overlap": 0,
         "overlap_sobre_superposicion_real": 0
+      },
+      "respaldo": {
+        "intervenciones": 0,
+        "palabras": 0
       }
     },
     "figshare-S22-04": {
@@ -194,24 +229,29 @@
         "SPEAKER_01": "figshare_v2_S22_canal1"
       },
       "sin_superposicion": {
-        "palabras": 230,
-        "correctas": 210,
-        "porcentaje": 91.3
+        "palabras": 191,
+        "correctas": 175,
+        "porcentaje": 91.6
       },
       "con_superposicion": {
-        "palabras": 11,
-        "correctas": 11,
+        "palabras": 8,
+        "correctas": 8,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 22,
+      "fuera_de_la_referencia": 19,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 35,
-        "sobre_superposicion_real": 16,
-        "ambiguous": 8,
-        "ambiguous_sobre_superposicion_real": 4,
-        "overlap": 9,
-        "overlap_sobre_superposicion_real": 9
+        "total": 30,
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 14,
+        "ambiguous": 22,
+        "ambiguous_sobre_superposicion_real": 10,
+        "overlap": 8,
+        "overlap_sobre_superposicion_real": 8
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 48
       }
     },
     "figshare-S22-05": {
@@ -228,15 +268,20 @@
         "correctas": 1,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 6,
+      "fuera_de_la_referencia": 4,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 4,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 2,
-        "ambiguous": 1,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 4,
+        "ambiguous_sobre_superposicion_real": 2,
         "overlap": 0,
         "overlap_sobre_superposicion_real": 0
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 3
       }
     },
     "figshare-S22-06": {
@@ -245,9 +290,9 @@
         "SPEAKER_01": "figshare_v2_S22_canal1"
       },
       "sin_superposicion": {
-        "palabras": 53,
-        "correctas": 52,
-        "porcentaje": 98.1
+        "palabras": 44,
+        "correctas": 44,
+        "porcentaje": 100.0
       },
       "con_superposicion": {
         "palabras": 1,
@@ -257,12 +302,17 @@
       "fuera_de_la_referencia": 6,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 11,
+        "total": 10,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 2,
-        "ambiguous": 5,
+        "ambiguous": 7,
         "ambiguous_sobre_superposicion_real": 2,
         "overlap": 2,
         "overlap_sobre_superposicion_real": 2
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 10
       }
     },
     "figshare-S22-07": {
@@ -283,11 +333,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 5,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 1,
-        "ambiguous": 0,
+        "ambiguous": 2,
         "ambiguous_sobre_superposicion_real": 0,
         "overlap": 0,
         "overlap_sobre_superposicion_real": 0
+      },
+      "respaldo": {
+        "intervenciones": 0,
+        "palabras": 0
       }
     },
     "figshare-S22-08": {
@@ -309,11 +364,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 23,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 13,
-        "ambiguous": 10,
-        "ambiguous_sobre_superposicion_real": 7,
+        "ambiguous": 16,
+        "ambiguous_sobre_superposicion_real": 10,
         "overlap": 8,
         "overlap_sobre_superposicion_real": 8
+      },
+      "respaldo": {
+        "intervenciones": 0,
+        "palabras": 0
       }
     },
     "figshare-S22-09": {
@@ -322,24 +382,29 @@
         "SPEAKER_01": "figshare_v2_S22_canal1"
       },
       "sin_superposicion": {
-        "palabras": 292,
-        "correctas": 281,
-        "porcentaje": 96.2
+        "palabras": 279,
+        "correctas": 272,
+        "porcentaje": 97.5
       },
       "con_superposicion": {
-        "palabras": 20,
-        "correctas": 20,
+        "palabras": 16,
+        "correctas": 16,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 21,
+      "fuera_de_la_referencia": 19,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 65,
-        "sobre_superposicion_real": 26,
-        "ambiguous": 15,
-        "ambiguous_sobre_superposicion_real": 12,
-        "overlap": 8,
-        "overlap_sobre_superposicion_real": 8
+        "total": 62,
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 24,
+        "ambiguous": 29,
+        "ambiguous_sobre_superposicion_real": 18,
+        "overlap": 9,
+        "overlap_sobre_superposicion_real": 9
+      },
+      "respaldo": {
+        "intervenciones": 5,
+        "palabras": 24
       }
     },
     "figshare-S22-10": {
@@ -348,9 +413,9 @@
         "SPEAKER_01": "figshare_v2_S22_canal2"
       },
       "sin_superposicion": {
-        "palabras": 101,
-        "correctas": 90,
-        "porcentaje": 89.1
+        "palabras": 100,
+        "correctas": 89,
+        "porcentaje": 89.0
       },
       "con_superposicion": {
         "palabras": 7,
@@ -361,11 +426,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 18,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 7,
-        "ambiguous": 2,
-        "ambiguous_sobre_superposicion_real": 1,
+        "ambiguous": 9,
+        "ambiguous_sobre_superposicion_real": 5,
         "overlap": 4,
         "overlap_sobre_superposicion_real": 4
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 2
       }
     },
     "figshare-S22-11": {
@@ -374,24 +444,29 @@
         "SPEAKER_01": "figshare_v2_S22_canal2"
       },
       "sin_superposicion": {
-        "palabras": 66,
-        "correctas": 61,
-        "porcentaje": 92.4
+        "palabras": 43,
+        "correctas": 38,
+        "porcentaje": 88.4
       },
       "con_superposicion": {
-        "palabras": 2,
-        "correctas": 2,
+        "palabras": 1,
+        "correctas": 1,
         "porcentaje": 100.0
       },
       "fuera_de_la_referencia": 0,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 6,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 3,
-        "ambiguous": 0,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 2,
+        "ambiguous_sobre_superposicion_real": 2,
         "overlap": 2,
         "overlap_sobre_superposicion_real": 2
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 25
       }
     },
     "figshare-S22-12": {
@@ -400,24 +475,29 @@
         "SPEAKER_01": "figshare_v2_S22_canal2"
       },
       "sin_superposicion": {
-        "palabras": 130,
-        "correctas": 124,
-        "porcentaje": 95.4
+        "palabras": 127,
+        "correctas": 123,
+        "porcentaje": 96.9
       },
       "con_superposicion": {
-        "palabras": 17,
-        "correctas": 17,
+        "palabras": 14,
+        "correctas": 14,
         "porcentaje": 100.0
       },
       "fuera_de_la_referencia": 12,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 27,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 17,
-        "ambiguous": 6,
-        "ambiguous_sobre_superposicion_real": 5,
+        "ambiguous": 20,
+        "ambiguous_sobre_superposicion_real": 12,
         "overlap": 8,
         "overlap_sobre_superposicion_real": 8
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 8
       }
     },
     "figshare-S22-13": {
@@ -438,11 +518,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 3,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 0,
-        "ambiguous": 1,
+        "ambiguous": 2,
         "ambiguous_sobre_superposicion_real": 0,
         "overlap": 0,
         "overlap_sobre_superposicion_real": 0
+      },
+      "respaldo": {
+        "intervenciones": 0,
+        "palabras": 0
       }
     },
     "figshare-S22-14": {
@@ -451,24 +536,29 @@
         "SPEAKER_01": "figshare_v2_S22_canal1"
       },
       "sin_superposicion": {
-        "palabras": 164,
-        "correctas": 162,
-        "porcentaje": 98.8
+        "palabras": 142,
+        "correctas": 140,
+        "porcentaje": 98.6
       },
       "con_superposicion": {
-        "palabras": 8,
-        "correctas": 8,
+        "palabras": 6,
+        "correctas": 6,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 20,
+      "fuera_de_la_referencia": 19,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 28,
-        "sobre_superposicion_real": 11,
-        "ambiguous": 7,
-        "ambiguous_sobre_superposicion_real": 4,
+        "total": 27,
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 10,
+        "ambiguous": 18,
+        "ambiguous_sobre_superposicion_real": 6,
         "overlap": 6,
         "overlap_sobre_superposicion_real": 6
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 27
       }
     },
     "figshare-S22-15": {
@@ -489,11 +579,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 6,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 0,
-        "ambiguous": 0,
+        "ambiguous": 5,
         "ambiguous_sobre_superposicion_real": 0,
         "overlap": 0,
         "overlap_sobre_superposicion_real": 0
+      },
+      "respaldo": {
+        "intervenciones": 0,
+        "palabras": 0
       }
     },
     "figshare-S22-16": {
@@ -502,24 +597,29 @@
         "SPEAKER_01": "figshare_v2_S22_canal2"
       },
       "sin_superposicion": {
-        "palabras": 86,
-        "correctas": 84,
-        "porcentaje": 97.7
+        "palabras": 77,
+        "correctas": 75,
+        "porcentaje": 97.4
       },
       "con_superposicion": {
-        "palabras": 5,
-        "correctas": 5,
+        "palabras": 4,
+        "correctas": 4,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 8,
+      "fuera_de_la_referencia": 7,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 14,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 5,
-        "ambiguous": 4,
-        "ambiguous_sobre_superposicion_real": 2,
+        "ambiguous": 10,
+        "ambiguous_sobre_superposicion_real": 5,
         "overlap": 3,
         "overlap_sobre_superposicion_real": 3
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 12
       }
     },
     "figshare-S22-17": {
@@ -527,24 +627,29 @@
         "SPEAKER_00": "figshare_v2_S22_canal1"
       },
       "sin_superposicion": {
-        "palabras": 40,
-        "correctas": 39,
-        "porcentaje": 97.5
+        "palabras": 26,
+        "correctas": 26,
+        "porcentaje": 100.0
       },
       "con_superposicion": {
         "palabras": 0,
         "correctas": 0,
         "porcentaje": null
       },
-      "fuera_de_la_referencia": 10,
+      "fuera_de_la_referencia": 9,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 4,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 0,
-        "ambiguous": 0,
+        "ambiguous": 4,
         "ambiguous_sobre_superposicion_real": 0,
         "overlap": 0,
         "overlap_sobre_superposicion_real": 0
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 17
       }
     },
     "figshare-S22-18": {
@@ -553,24 +658,29 @@
         "SPEAKER_01": "figshare_v2_S22_canal1"
       },
       "sin_superposicion": {
-        "palabras": 108,
-        "correctas": 59,
-        "porcentaje": 54.6
+        "palabras": 96,
+        "correctas": 53,
+        "porcentaje": 55.2
       },
       "con_superposicion": {
         "palabras": 9,
         "correctas": 9,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 20,
+      "fuera_de_la_referencia": 15,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 24,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 5,
-        "ambiguous": 3,
-        "ambiguous_sobre_superposicion_real": 1,
+        "ambiguous": 11,
+        "ambiguous_sobre_superposicion_real": 5,
         "overlap": 4,
         "overlap_sobre_superposicion_real": 4
+      },
+      "respaldo": {
+        "intervenciones": 3,
+        "palabras": 20
       }
     },
     "figshare-S22-19": {
@@ -579,24 +689,29 @@
         "SPEAKER_01": "figshare_v2_S22_canal1"
       },
       "sin_superposicion": {
-        "palabras": 110,
-        "correctas": 105,
-        "porcentaje": 95.5
+        "palabras": 106,
+        "correctas": 101,
+        "porcentaje": 95.3
       },
       "con_superposicion": {
         "palabras": 1,
         "correctas": 1,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 15,
+      "fuera_de_la_referencia": 14,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 19,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 2,
-        "ambiguous": 2,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 9,
+        "ambiguous_sobre_superposicion_real": 1,
         "overlap": 1,
         "overlap_sobre_superposicion_real": 1
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 7
       }
     },
     "figshare-S22-20": {
@@ -605,24 +720,29 @@
         "SPEAKER_01": "figshare_v2_S22_canal2"
       },
       "sin_superposicion": {
-        "palabras": 177,
-        "correctas": 147,
-        "porcentaje": 83.1
+        "palabras": 153,
+        "correctas": 133,
+        "porcentaje": 86.9
       },
       "con_superposicion": {
         "palabras": 23,
         "correctas": 23,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 23,
+      "fuera_de_la_referencia": 20,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 36,
+        "total": 34,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 6,
-        "ambiguous": 4,
-        "ambiguous_sobre_superposicion_real": 1,
+        "ambiguous": 21,
+        "ambiguous_sobre_superposicion_real": 4,
         "overlap": 3,
         "overlap_sobre_superposicion_real": 3
+      },
+      "respaldo": {
+        "intervenciones": 4,
+        "palabras": 31
       }
     },
     "figshare-S23-01": {
@@ -640,15 +760,20 @@
         "correctas": 8,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 4,
+      "fuera_de_la_referencia": 3,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 8,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 5,
-        "ambiguous": 2,
-        "ambiguous_sobre_superposicion_real": 2,
+        "ambiguous": 5,
+        "ambiguous_sobre_superposicion_real": 5,
         "overlap": 4,
         "overlap_sobre_superposicion_real": 4
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 2
       }
     },
     "figshare-S23-02": {
@@ -656,24 +781,29 @@
         "SPEAKER_00": "figshare_v2_S23_canal2"
       },
       "sin_superposicion": {
-        "palabras": 24,
-        "correctas": 22,
-        "porcentaje": 91.7
+        "palabras": 17,
+        "correctas": 15,
+        "porcentaje": 88.2
       },
       "con_superposicion": {
         "palabras": 2,
         "correctas": 2,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 5,
+      "fuera_de_la_referencia": 2,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 5,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 3,
-        "ambiguous": 0,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 4,
+        "ambiguous_sobre_superposicion_real": 2,
         "overlap": 0,
         "overlap_sobre_superposicion_real": 0
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 12
       }
     },
     "figshare-S23-03": {
@@ -682,24 +812,29 @@
         "SPEAKER_01": "figshare_v2_S23_canal2"
       },
       "sin_superposicion": {
-        "palabras": 37,
-        "correctas": 24,
-        "porcentaje": 64.9
+        "palabras": 32,
+        "correctas": 21,
+        "porcentaje": 65.6
       },
       "con_superposicion": {
-        "palabras": 5,
-        "correctas": 5,
+        "palabras": 4,
+        "correctas": 4,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 9,
+      "fuera_de_la_referencia": 8,
       "sin_hablante": 1,
       "intervenciones": {
         "total": 12,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 3,
-        "ambiguous": 5,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 12,
+        "ambiguous_sobre_superposicion_real": 3,
         "overlap": 2,
         "overlap_sobre_superposicion_real": 2
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 10
       }
     },
     "figshare-S23-04": {
@@ -708,24 +843,29 @@
         "SPEAKER_01": "figshare_v2_S23_canal1"
       },
       "sin_superposicion": {
-        "palabras": 40,
-        "correctas": 34,
-        "porcentaje": 85.0
+        "palabras": 35,
+        "correctas": 29,
+        "porcentaje": 82.9
       },
       "con_superposicion": {
         "palabras": 5,
         "correctas": 5,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 3,
+      "fuera_de_la_referencia": 1,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 7,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 3,
-        "ambiguous": 2,
-        "ambiguous_sobre_superposicion_real": 1,
+        "ambiguous": 5,
+        "ambiguous_sobre_superposicion_real": 2,
         "overlap": 1,
         "overlap_sobre_superposicion_real": 1
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 8
       }
     },
     "figshare-S23-05": {
@@ -734,24 +874,29 @@
         "SPEAKER_01": "figshare_v2_S23_canal1"
       },
       "sin_superposicion": {
-        "palabras": 58,
-        "correctas": 58,
+        "palabras": 47,
+        "correctas": 47,
         "porcentaje": 100.0
       },
       "con_superposicion": {
-        "palabras": 8,
-        "correctas": 8,
+        "palabras": 3,
+        "correctas": 3,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 5,
+      "fuera_de_la_referencia": 4,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 6,
-        "sobre_superposicion_real": 4,
-        "ambiguous": 1,
-        "ambiguous_sobre_superposicion_real": 1,
-        "overlap": 3,
-        "overlap_sobre_superposicion_real": 3
+        "total": 5,
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 3,
+        "ambiguous": 5,
+        "ambiguous_sobre_superposicion_real": 3,
+        "overlap": 2,
+        "overlap_sobre_superposicion_real": 2
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 20
       }
     },
     "figshare-S23-06": {
@@ -759,24 +904,29 @@
         "SPEAKER_00": "figshare_v2_S23_canal2"
       },
       "sin_superposicion": {
-        "palabras": 27,
-        "correctas": 24,
-        "porcentaje": 88.9
+        "palabras": 16,
+        "correctas": 13,
+        "porcentaje": 81.2
       },
       "con_superposicion": {
         "palabras": 0,
         "correctas": 0,
         "porcentaje": null
       },
-      "fuera_de_la_referencia": 7,
+      "fuera_de_la_referencia": 4,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 3,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 0,
-        "ambiguous": 0,
+        "ambiguous": 2,
         "ambiguous_sobre_superposicion_real": 0,
         "overlap": 0,
         "overlap_sobre_superposicion_real": 0
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 15
       }
     },
     "figshare-S23-07": {
@@ -784,24 +934,29 @@
         "SPEAKER_00": "figshare_v2_S23_canal1"
       },
       "sin_superposicion": {
-        "palabras": 26,
-        "correctas": 26,
-        "porcentaje": 100.0
+        "palabras": 0,
+        "correctas": 0,
+        "porcentaje": null
       },
       "con_superposicion": {
         "palabras": 0,
         "correctas": 0,
         "porcentaje": null
       },
-      "fuera_de_la_referencia": 5,
+      "fuera_de_la_referencia": 0,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 1,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 1,
-        "ambiguous": 0,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 1,
+        "ambiguous_sobre_superposicion_real": 1,
         "overlap": 0,
         "overlap_sobre_superposicion_real": 0
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 33
       }
     },
     "figshare-S23-08": {
@@ -823,11 +978,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 3,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 1,
-        "ambiguous": 1,
+        "ambiguous": 2,
         "ambiguous_sobre_superposicion_real": 1,
         "overlap": 1,
         "overlap_sobre_superposicion_real": 1
+      },
+      "respaldo": {
+        "intervenciones": 0,
+        "palabras": 0
       }
     },
     "figshare-S23-09": {
@@ -836,24 +996,29 @@
         "SPEAKER_01": "figshare_v2_S23_canal1"
       },
       "sin_superposicion": {
-        "palabras": 49,
-        "correctas": 48,
-        "porcentaje": 98.0
-      },
-      "con_superposicion": {
-        "palabras": 2,
-        "correctas": 2,
+        "palabras": 27,
+        "correctas": 27,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 10,
+      "con_superposicion": {
+        "palabras": 1,
+        "correctas": 1,
+        "porcentaje": 100.0
+      },
+      "fuera_de_la_referencia": 6,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 10,
+        "total": 9,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 3,
-        "ambiguous": 2,
-        "ambiguous_sobre_superposicion_real": 1,
+        "ambiguous": 6,
+        "ambiguous_sobre_superposicion_real": 3,
         "overlap": 3,
         "overlap_sobre_superposicion_real": 3
+      },
+      "respaldo": {
+        "intervenciones": 3,
+        "palabras": 30
       }
     },
     "figshare-S23-10": {
@@ -875,11 +1040,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 4,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 3,
-        "ambiguous": 1,
-        "ambiguous_sobre_superposicion_real": 1,
+        "ambiguous": 3,
+        "ambiguous_sobre_superposicion_real": 2,
         "overlap": 2,
         "overlap_sobre_superposicion_real": 2
+      },
+      "respaldo": {
+        "intervenciones": 0,
+        "palabras": 0
       }
     },
     "figshare-S23-11": {
@@ -901,11 +1071,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 8,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 6,
-        "ambiguous": 0,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 4,
+        "ambiguous_sobre_superposicion_real": 3,
         "overlap": 1,
         "overlap_sobre_superposicion_real": 1
+      },
+      "respaldo": {
+        "intervenciones": 0,
+        "palabras": 0
       }
     },
     "figshare-S23-12": {
@@ -914,24 +1089,29 @@
         "SPEAKER_01": "figshare_v2_S23_canal1"
       },
       "sin_superposicion": {
-        "palabras": 89,
-        "correctas": 71,
-        "porcentaje": 79.8
+        "palabras": 62,
+        "correctas": 60,
+        "porcentaje": 96.8
       },
       "con_superposicion": {
-        "palabras": 7,
-        "correctas": 7,
+        "palabras": 4,
+        "correctas": 4,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 13,
+      "fuera_de_la_referencia": 10,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 7,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 3,
-        "ambiguous": 0,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 5,
+        "ambiguous_sobre_superposicion_real": 3,
         "overlap": 3,
         "overlap_sobre_superposicion_real": 3
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 35
       }
     },
     "figshare-S23-13": {
@@ -953,11 +1133,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 3,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 2,
-        "ambiguous": 0,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 3,
+        "ambiguous_sobre_superposicion_real": 2,
         "overlap": 2,
         "overlap_sobre_superposicion_real": 2
+      },
+      "respaldo": {
+        "intervenciones": 0,
+        "palabras": 0
       }
     },
     "figshare-S23-14": {
@@ -979,11 +1164,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 8,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 5,
-        "ambiguous": 0,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 5,
+        "ambiguous_sobre_superposicion_real": 4,
         "overlap": 3,
         "overlap_sobre_superposicion_real": 3
+      },
+      "respaldo": {
+        "intervenciones": 0,
+        "palabras": 0
       }
     },
     "figshare-S23-15": {
@@ -992,24 +1182,29 @@
         "SPEAKER_01": "figshare_v2_S23_canal2"
       },
       "sin_superposicion": {
-        "palabras": 91,
-        "correctas": 67,
-        "porcentaje": 73.6
+        "palabras": 59,
+        "correctas": 36,
+        "porcentaje": 61.0
       },
       "con_superposicion": {
-        "palabras": 11,
-        "correctas": 11,
+        "palabras": 9,
+        "correctas": 9,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 9,
+      "fuera_de_la_referencia": 6,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 16,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 10,
-        "ambiguous": 2,
-        "ambiguous_sobre_superposicion_real": 1,
+        "ambiguous": 11,
+        "ambiguous_sobre_superposicion_real": 7,
         "overlap": 5,
         "overlap_sobre_superposicion_real": 5
+      },
+      "respaldo": {
+        "intervenciones": 3,
+        "palabras": 41
       }
     },
     "figshare-S23-16": {
@@ -1018,24 +1213,29 @@
         "SPEAKER_01": "figshare_v2_S23_canal1"
       },
       "sin_superposicion": {
-        "palabras": 59,
-        "correctas": 39,
-        "porcentaje": 66.1
+        "palabras": 35,
+        "correctas": 16,
+        "porcentaje": 45.7
       },
       "con_superposicion": {
-        "palabras": 2,
-        "correctas": 2,
-        "porcentaje": 100.0
+        "palabras": 0,
+        "correctas": 0,
+        "porcentaje": null
       },
-      "fuera_de_la_referencia": 7,
+      "fuera_de_la_referencia": 2,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 6,
+        "total": 5,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 1,
-        "ambiguous": 1,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 3,
+        "ambiguous_sobre_superposicion_real": 1,
         "overlap": 1,
         "overlap_sobre_superposicion_real": 1
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 33
       }
     },
     "figshare-S23-17": {
@@ -1057,11 +1257,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 6,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 3,
-        "ambiguous": 0,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 4,
+        "ambiguous_sobre_superposicion_real": 2,
         "overlap": 1,
         "overlap_sobre_superposicion_real": 1
+      },
+      "respaldo": {
+        "intervenciones": 0,
+        "palabras": 0
       }
     },
     "figshare-S23-18": {
@@ -1070,24 +1275,29 @@
         "SPEAKER_01": "figshare_v2_S23_canal1"
       },
       "sin_superposicion": {
-        "palabras": 73,
-        "correctas": 50,
-        "porcentaje": 68.5
+        "palabras": 61,
+        "correctas": 47,
+        "porcentaje": 77.0
       },
       "con_superposicion": {
-        "palabras": 7,
-        "correctas": 7,
+        "palabras": 6,
+        "correctas": 6,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 9,
+      "fuera_de_la_referencia": 8,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 10,
-        "sobre_superposicion_real": 5,
-        "ambiguous": 3,
-        "ambiguous_sobre_superposicion_real": 2,
-        "overlap": 4,
-        "overlap_sobre_superposicion_real": 4
+        "total": 9,
+        "sin_tiempo": 1,
+        "sobre_superposicion_real": 4,
+        "ambiguous": 7,
+        "ambiguous_sobre_superposicion_real": 4,
+        "overlap": 3,
+        "overlap_sobre_superposicion_real": 3
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 15
       }
     },
     "figshare-S23-19": {
@@ -1096,24 +1306,29 @@
         "SPEAKER_01": "figshare_v2_S23_canal2"
       },
       "sin_superposicion": {
-        "palabras": 77,
+        "palabras": 73,
         "correctas": 70,
-        "porcentaje": 90.9
+        "porcentaje": 95.9
       },
       "con_superposicion": {
-        "palabras": 11,
-        "correctas": 11,
+        "palabras": 8,
+        "correctas": 8,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 12,
+      "fuera_de_la_referencia": 9,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 8,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 6,
-        "ambiguous": 1,
-        "ambiguous_sobre_superposicion_real": 1,
+        "ambiguous": 7,
+        "ambiguous_sobre_superposicion_real": 6,
         "overlap": 3,
         "overlap_sobre_superposicion_real": 3
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 11
       }
     },
     "figshare-S23-20": {
@@ -1122,24 +1337,29 @@
         "SPEAKER_01": "figshare_v2_S23_canal1"
       },
       "sin_superposicion": {
-        "palabras": 82,
-        "correctas": 60,
-        "porcentaje": 73.2
+        "palabras": 42,
+        "correctas": 42,
+        "porcentaje": 100.0
       },
       "con_superposicion": {
         "palabras": 0,
         "correctas": 0,
         "porcentaje": null
       },
-      "fuera_de_la_referencia": 6,
+      "fuera_de_la_referencia": 5,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 6,
-        "sobre_superposicion_real": 5,
-        "ambiguous": 0,
-        "ambiguous_sobre_superposicion_real": 0,
-        "overlap": 2,
-        "overlap_sobre_superposicion_real": 2
+        "total": 3,
+        "sin_tiempo": 3,
+        "sobre_superposicion_real": 2,
+        "ambiguous": 1,
+        "ambiguous_sobre_superposicion_real": 1,
+        "overlap": 1,
+        "overlap_sobre_superposicion_real": 1
+      },
+      "respaldo": {
+        "intervenciones": 3,
+        "palabras": 46
       }
     },
     "figshare-S23-21": {
@@ -1161,11 +1381,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 6,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 4,
-        "ambiguous": 0,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 6,
+        "ambiguous_sobre_superposicion_real": 4,
         "overlap": 2,
         "overlap_sobre_superposicion_real": 2
+      },
+      "respaldo": {
+        "intervenciones": 0,
+        "palabras": 0
       }
     },
     "figshare-S23-22": {
@@ -1174,24 +1399,29 @@
         "SPEAKER_01": "figshare_v2_S23_canal1"
       },
       "sin_superposicion": {
-        "palabras": 75,
-        "correctas": 61,
-        "porcentaje": 81.3
+        "palabras": 63,
+        "correctas": 49,
+        "porcentaje": 77.8
       },
       "con_superposicion": {
         "palabras": 11,
         "correctas": 11,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 13,
+      "fuera_de_la_referencia": 9,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 7,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 5,
-        "ambiguous": 1,
-        "ambiguous_sobre_superposicion_real": 1,
+        "ambiguous": 6,
+        "ambiguous_sobre_superposicion_real": 5,
         "overlap": 3,
         "overlap_sobre_superposicion_real": 3
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 18
       }
     },
     "figshare-S23-23": {
@@ -1200,24 +1430,29 @@
         "SPEAKER_01": "figshare_v2_S23_canal2"
       },
       "sin_superposicion": {
-        "palabras": 112,
-        "correctas": 96,
-        "porcentaje": 85.7
+        "palabras": 106,
+        "correctas": 92,
+        "porcentaje": 86.8
       },
       "con_superposicion": {
-        "palabras": 14,
-        "correctas": 14,
+        "palabras": 7,
+        "correctas": 7,
         "porcentaje": 100.0
       },
       "fuera_de_la_referencia": 15,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 28,
+        "total": 26,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 12,
-        "ambiguous": 4,
-        "ambiguous_sobre_superposicion_real": 4,
-        "overlap": 3,
-        "overlap_sobre_superposicion_real": 3
+        "ambiguous": 12,
+        "ambiguous_sobre_superposicion_real": 7,
+        "overlap": 4,
+        "overlap_sobre_superposicion_real": 4
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 16
       }
     },
     "figshare-S23-24": {
@@ -1226,9 +1461,9 @@
         "SPEAKER_01": "figshare_v2_S23_canal1"
       },
       "sin_superposicion": {
-        "palabras": 127,
+        "palabras": 119,
         "correctas": 99,
-        "porcentaje": 78.0
+        "porcentaje": 83.2
       },
       "con_superposicion": {
         "palabras": 7,
@@ -1239,11 +1474,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 21,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 6,
-        "ambiguous": 4,
-        "ambiguous_sobre_superposicion_real": 3,
+        "ambiguous": 11,
+        "ambiguous_sobre_superposicion_real": 6,
         "overlap": 6,
         "overlap_sobre_superposicion_real": 6
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 9
       }
     },
     "figshare-S25-01": {
@@ -1252,24 +1492,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 83,
-        "correctas": 57,
-        "porcentaje": 68.7
+        "palabras": 67,
+        "correctas": 41,
+        "porcentaje": 61.2
       },
       "con_superposicion": {
-        "palabras": 16,
-        "correctas": 16,
+        "palabras": 7,
+        "correctas": 7,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 7,
+      "fuera_de_la_referencia": 5,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 15,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 8,
-        "ambiguous": 4,
-        "ambiguous_sobre_superposicion_real": 3,
+        "ambiguous": 8,
+        "ambiguous_sobre_superposicion_real": 5,
         "overlap": 4,
         "overlap_sobre_superposicion_real": 4
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 31
       }
     },
     "figshare-S25-02": {
@@ -1278,24 +1523,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal1"
       },
       "sin_superposicion": {
-        "palabras": 41,
-        "correctas": 37,
-        "porcentaje": 90.2
+        "palabras": 35,
+        "correctas": 33,
+        "porcentaje": 94.3
       },
       "con_superposicion": {
-        "palabras": 8,
-        "correctas": 8,
+        "palabras": 6,
+        "correctas": 6,
         "porcentaje": 100.0
       },
       "fuera_de_la_referencia": 4,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 9,
-        "sobre_superposicion_real": 5,
-        "ambiguous": 3,
+        "total": 8,
+        "sin_tiempo": 1,
+        "sobre_superposicion_real": 4,
+        "ambiguous": 4,
         "ambiguous_sobre_superposicion_real": 3,
-        "overlap": 3,
-        "overlap_sobre_superposicion_real": 3
+        "overlap": 2,
+        "overlap_sobre_superposicion_real": 2
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 9
       }
     },
     "figshare-S25-03": {
@@ -1304,24 +1554,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal1"
       },
       "sin_superposicion": {
-        "palabras": 54,
-        "correctas": 53,
-        "porcentaje": 98.1
+        "palabras": 49,
+        "correctas": 48,
+        "porcentaje": 98.0
       },
       "con_superposicion": {
-        "palabras": 5,
-        "correctas": 5,
+        "palabras": 4,
+        "correctas": 4,
         "porcentaje": 100.0
       },
       "fuera_de_la_referencia": 5,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 8,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 4,
-        "ambiguous": 2,
-        "ambiguous_sobre_superposicion_real": 1,
+        "ambiguous": 6,
+        "ambiguous_sobre_superposicion_real": 2,
         "overlap": 0,
         "overlap_sobre_superposicion_real": 0
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 9
       }
     },
     "figshare-S25-04": {
@@ -1330,24 +1585,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal1"
       },
       "sin_superposicion": {
-        "palabras": 211,
-        "correctas": 169,
-        "porcentaje": 80.1
+        "palabras": 175,
+        "correctas": 151,
+        "porcentaje": 86.3
       },
       "con_superposicion": {
-        "palabras": 26,
-        "correctas": 26,
+        "palabras": 17,
+        "correctas": 17,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 7,
+      "fuera_de_la_referencia": 6,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 32,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 17,
-        "ambiguous": 5,
-        "ambiguous_sobre_superposicion_real": 3,
+        "ambiguous": 18,
+        "ambiguous_sobre_superposicion_real": 14,
         "overlap": 11,
         "overlap_sobre_superposicion_real": 11
+      },
+      "respaldo": {
+        "intervenciones": 5,
+        "palabras": 53
       }
     },
     "figshare-S25-05": {
@@ -1356,24 +1616,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 361,
-        "correctas": 327,
+        "palabras": 351,
+        "correctas": 318,
         "porcentaje": 90.6
       },
       "con_superposicion": {
-        "palabras": 57,
-        "correctas": 57,
+        "palabras": 56,
+        "correctas": 56,
         "porcentaje": 100.0
       },
       "fuera_de_la_referencia": 14,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 58,
-        "sobre_superposicion_real": 35,
-        "ambiguous": 18,
-        "ambiguous_sobre_superposicion_real": 15,
+        "total": 56,
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 33,
+        "ambiguous": 33,
+        "ambiguous_sobre_superposicion_real": 23,
         "overlap": 14,
         "overlap_sobre_superposicion_real": 14
+      },
+      "respaldo": {
+        "intervenciones": 3,
+        "palabras": 15
       }
     },
     "figshare-S25-06": {
@@ -1382,9 +1647,9 @@
         "SPEAKER_01": "figshare_v2_S25_canal1"
       },
       "sin_superposicion": {
-        "palabras": 206,
-        "correctas": 185,
-        "porcentaje": 89.8
+        "palabras": 200,
+        "correctas": 179,
+        "porcentaje": 89.5
       },
       "con_superposicion": {
         "palabras": 3,
@@ -1395,11 +1660,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 26,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 4,
-        "ambiguous": 2,
-        "ambiguous_sobre_superposicion_real": 1,
+        "ambiguous": 13,
+        "ambiguous_sobre_superposicion_real": 4,
         "overlap": 2,
         "overlap_sobre_superposicion_real": 2
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 7
       }
     },
     "figshare-S25-07": {
@@ -1408,24 +1678,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 63,
-        "correctas": 55,
-        "porcentaje": 87.3
+        "palabras": 46,
+        "correctas": 40,
+        "porcentaje": 87.0
       },
       "con_superposicion": {
-        "palabras": 2,
-        "correctas": 2,
+        "palabras": 1,
+        "correctas": 1,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 3,
+      "fuera_de_la_referencia": 1,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 5,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 3,
-        "ambiguous": 0,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 3,
+        "ambiguous_sobre_superposicion_real": 3,
         "overlap": 2,
         "overlap_sobre_superposicion_real": 2
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 22
       }
     },
     "figshare-S25-08": {
@@ -1434,9 +1709,9 @@
         "SPEAKER_01": "figshare_v2_S25_canal1"
       },
       "sin_superposicion": {
-        "palabras": 166,
+        "palabras": 159,
         "correctas": 130,
-        "porcentaje": 78.3
+        "porcentaje": 81.8
       },
       "con_superposicion": {
         "palabras": 11,
@@ -1447,11 +1722,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 20,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 6,
-        "ambiguous": 3,
-        "ambiguous_sobre_superposicion_real": 2,
+        "ambiguous": 9,
+        "ambiguous_sobre_superposicion_real": 4,
         "overlap": 2,
         "overlap_sobre_superposicion_real": 2
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 10
       }
     },
     "figshare-S25-09": {
@@ -1460,24 +1740,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal1"
       },
       "sin_superposicion": {
-        "palabras": 280,
-        "correctas": 239,
-        "porcentaje": 85.4
+        "palabras": 243,
+        "correctas": 204,
+        "porcentaje": 84.0
       },
       "con_superposicion": {
-        "palabras": 43,
-        "correctas": 43,
+        "palabras": 35,
+        "correctas": 35,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 21,
+      "fuera_de_la_referencia": 19,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 67,
-        "sobre_superposicion_real": 37,
-        "ambiguous": 19,
-        "ambiguous_sobre_superposicion_real": 14,
-        "overlap": 16,
-        "overlap_sobre_superposicion_real": 16
+        "total": 63,
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 33,
+        "ambiguous": 41,
+        "ambiguous_sobre_superposicion_real": 23,
+        "overlap": 14,
+        "overlap_sobre_superposicion_real": 14
+      },
+      "respaldo": {
+        "intervenciones": 8,
+        "palabras": 55
       }
     },
     "figshare-S25-10": {
@@ -1486,24 +1771,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 188,
-        "correctas": 176,
-        "porcentaje": 93.6
+        "palabras": 160,
+        "correctas": 148,
+        "porcentaje": 92.5
       },
       "con_superposicion": {
-        "palabras": 15,
-        "correctas": 15,
+        "palabras": 9,
+        "correctas": 9,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 11,
+      "fuera_de_la_referencia": 8,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 30,
-        "sobre_superposicion_real": 14,
-        "ambiguous": 5,
-        "ambiguous_sobre_superposicion_real": 4,
-        "overlap": 7,
-        "overlap_sobre_superposicion_real": 7
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 16,
+        "ambiguous": 18,
+        "ambiguous_sobre_superposicion_real": 12,
+        "overlap": 9,
+        "overlap_sobre_superposicion_real": 9
+      },
+      "respaldo": {
+        "intervenciones": 5,
+        "palabras": 44
       }
     },
     "figshare-S25-11": {
@@ -1512,24 +1802,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 113,
-        "correctas": 95,
-        "porcentaje": 84.1
+        "palabras": 94,
+        "correctas": 77,
+        "porcentaje": 81.9
       },
       "con_superposicion": {
-        "palabras": 12,
-        "correctas": 12,
+        "palabras": 11,
+        "correctas": 11,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 8,
+      "fuera_de_la_referencia": 6,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 18,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 8,
-        "ambiguous": 4,
-        "ambiguous_sobre_superposicion_real": 4,
+        "ambiguous": 9,
+        "ambiguous_sobre_superposicion_real": 6,
         "overlap": 7,
         "overlap_sobre_superposicion_real": 7
+      },
+      "respaldo": {
+        "intervenciones": 4,
+        "palabras": 26
       }
     },
     "figshare-S25-12": {
@@ -1538,24 +1833,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal1"
       },
       "sin_superposicion": {
-        "palabras": 483,
-        "correctas": 434,
-        "porcentaje": 89.9
+        "palabras": 446,
+        "correctas": 397,
+        "porcentaje": 89.0
       },
       "con_superposicion": {
-        "palabras": 44,
-        "correctas": 44,
+        "palabras": 38,
+        "correctas": 38,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 42,
+      "fuera_de_la_referencia": 39,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 68,
-        "sobre_superposicion_real": 40,
-        "ambiguous": 12,
-        "ambiguous_sobre_superposicion_real": 10,
+        "total": 69,
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 42,
+        "ambiguous": 48,
+        "ambiguous_sobre_superposicion_real": 35,
         "overlap": 23,
         "overlap_sobre_superposicion_real": 23
+      },
+      "respaldo": {
+        "intervenciones": 7,
+        "palabras": 59
       }
     },
     "figshare-S25-13": {
@@ -1564,24 +1864,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 36,
-        "correctas": 35,
-        "porcentaje": 97.2
+        "palabras": 32,
+        "correctas": 31,
+        "porcentaje": 96.9
       },
       "con_superposicion": {
-        "palabras": 3,
-        "correctas": 3,
+        "palabras": 1,
+        "correctas": 1,
         "porcentaje": 100.0
       },
       "fuera_de_la_referencia": 3,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 6,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 2,
-        "ambiguous": 1,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 5,
+        "ambiguous_sobre_superposicion_real": 2,
         "overlap": 2,
         "overlap_sobre_superposicion_real": 2
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 7
       }
     },
     "figshare-S25-14": {
@@ -1603,11 +1908,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 20,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 6,
-        "ambiguous": 1,
-        "ambiguous_sobre_superposicion_real": 1,
+        "ambiguous": 11,
+        "ambiguous_sobre_superposicion_real": 5,
         "overlap": 4,
         "overlap_sobre_superposicion_real": 4
+      },
+      "respaldo": {
+        "intervenciones": 0,
+        "palabras": 0
       }
     },
     "figshare-S25-15": {
@@ -1616,24 +1926,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 122,
-        "correctas": 104,
-        "porcentaje": 85.2
+        "palabras": 112,
+        "correctas": 96,
+        "porcentaje": 85.7
       },
       "con_superposicion": {
-        "palabras": 12,
-        "correctas": 12,
+        "palabras": 10,
+        "correctas": 10,
         "porcentaje": 100.0
       },
       "fuera_de_la_referencia": 9,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 34,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 12,
-        "ambiguous": 6,
-        "ambiguous_sobre_superposicion_real": 4,
+        "ambiguous": 10,
+        "ambiguous_sobre_superposicion_real": 7,
         "overlap": 4,
         "overlap_sobre_superposicion_real": 4
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 14
       }
     },
     "figshare-S25-16": {
@@ -1642,24 +1957,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 192,
-        "correctas": 165,
-        "porcentaje": 85.9
+        "palabras": 178,
+        "correctas": 154,
+        "porcentaje": 86.5
       },
       "con_superposicion": {
-        "palabras": 26,
-        "correctas": 26,
+        "palabras": 21,
+        "correctas": 21,
         "porcentaje": 100.0
       },
       "fuera_de_la_referencia": 25,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 39,
-        "sobre_superposicion_real": 20,
-        "ambiguous": 10,
-        "ambiguous_sobre_superposicion_real": 8,
+        "total": 38,
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 19,
+        "ambiguous": 23,
+        "ambiguous_sobre_superposicion_real": 14,
         "overlap": 12,
         "overlap_sobre_superposicion_real": 12
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 21
       }
     },
     "figshare-S25-17": {
@@ -1668,24 +1988,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 93,
-        "correctas": 83,
-        "porcentaje": 89.2
+        "palabras": 72,
+        "correctas": 62,
+        "porcentaje": 86.1
       },
       "con_superposicion": {
-        "palabras": 13,
-        "correctas": 13,
+        "palabras": 12,
+        "correctas": 12,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 7,
+      "fuera_de_la_referencia": 4,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 14,
+        "total": 13,
+        "sin_tiempo": 1,
         "sobre_superposicion_real": 6,
-        "ambiguous": 2,
-        "ambiguous_sobre_superposicion_real": 2,
+        "ambiguous": 7,
+        "ambiguous_sobre_superposicion_real": 5,
         "overlap": 3,
         "overlap_sobre_superposicion_real": 3
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 27
       }
     },
     "figshare-S25-18": {
@@ -1694,24 +2019,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal1"
       },
       "sin_superposicion": {
-        "palabras": 125,
-        "correctas": 104,
-        "porcentaje": 83.2
+        "palabras": 119,
+        "correctas": 98,
+        "porcentaje": 82.4
       },
       "con_superposicion": {
-        "palabras": 24,
-        "correctas": 24,
+        "palabras": 23,
+        "correctas": 23,
         "porcentaje": 100.0
       },
       "fuera_de_la_referencia": 4,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 17,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 7,
-        "ambiguous": 1,
-        "ambiguous_sobre_superposicion_real": 1,
+        "ambiguous": 7,
+        "ambiguous_sobre_superposicion_real": 5,
         "overlap": 4,
         "overlap_sobre_superposicion_real": 4
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 8
       }
     },
     "figshare-S25-19": {
@@ -1720,24 +2050,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 93,
-        "correctas": 86,
-        "porcentaje": 92.5
+        "palabras": 71,
+        "correctas": 64,
+        "porcentaje": 90.1
       },
       "con_superposicion": {
         "palabras": 3,
         "correctas": 3,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 8,
+      "fuera_de_la_referencia": 6,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 8,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 5,
-        "ambiguous": 0,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 5,
+        "ambiguous_sobre_superposicion_real": 3,
         "overlap": 1,
         "overlap_sobre_superposicion_real": 1
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 26
       }
     },
     "figshare-S25-20": {
@@ -1746,24 +2081,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal1"
       },
       "sin_superposicion": {
-        "palabras": 249,
+        "palabras": 216,
         "correctas": 133,
-        "porcentaje": 53.4
+        "porcentaje": 61.6
       },
       "con_superposicion": {
-        "palabras": 15,
-        "correctas": 15,
+        "palabras": 13,
+        "correctas": 13,
         "porcentaje": 100.0
       },
       "fuera_de_la_referencia": 11,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 29,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 12,
-        "ambiguous": 4,
-        "ambiguous_sobre_superposicion_real": 4,
+        "ambiguous": 12,
+        "ambiguous_sobre_superposicion_real": 9,
         "overlap": 8,
         "overlap_sobre_superposicion_real": 8
+      },
+      "respaldo": {
+        "intervenciones": 4,
+        "palabras": 40
       }
     },
     "figshare-S25-21": {
@@ -1772,24 +2112,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 172,
-        "correctas": 124,
-        "porcentaje": 72.1
+        "palabras": 163,
+        "correctas": 121,
+        "porcentaje": 74.2
       },
       "con_superposicion": {
-        "palabras": 12,
-        "correctas": 12,
+        "palabras": 11,
+        "correctas": 11,
         "porcentaje": 100.0
       },
       "fuera_de_la_referencia": 22,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 43,
-        "sobre_superposicion_real": 15,
-        "ambiguous": 5,
-        "ambiguous_sobre_superposicion_real": 4,
+        "total": 42,
+        "sin_tiempo": 1,
+        "sobre_superposicion_real": 14,
+        "ambiguous": 17,
+        "ambiguous_sobre_superposicion_real": 8,
         "overlap": 7,
         "overlap_sobre_superposicion_real": 7
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 12
       }
     },
     "figshare-S25-22": {
@@ -1798,24 +2143,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal1"
       },
       "sin_superposicion": {
-        "palabras": 230,
-        "correctas": 189,
-        "porcentaje": 82.2
+        "palabras": 158,
+        "correctas": 124,
+        "porcentaje": 78.5
       },
       "con_superposicion": {
-        "palabras": 15,
-        "correctas": 15,
+        "palabras": 10,
+        "correctas": 10,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 18,
+      "fuera_de_la_referencia": 12,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 31,
-        "sobre_superposicion_real": 14,
-        "ambiguous": 7,
-        "ambiguous_sobre_superposicion_real": 5,
+        "total": 29,
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 13,
+        "ambiguous": 19,
+        "ambiguous_sobre_superposicion_real": 12,
         "overlap": 9,
         "overlap_sobre_superposicion_real": 9
+      },
+      "respaldo": {
+        "intervenciones": 6,
+        "palabras": 89
       }
     },
     "figshare-S25-23": {
@@ -1824,24 +2174,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 184,
-        "correctas": 180,
-        "porcentaje": 97.8
+        "palabras": 154,
+        "correctas": 150,
+        "porcentaje": 97.4
       },
       "con_superposicion": {
-        "palabras": 15,
-        "correctas": 15,
+        "palabras": 13,
+        "correctas": 13,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 17,
+      "fuera_de_la_referencia": 16,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 24,
-        "sobre_superposicion_real": 17,
-        "ambiguous": 5,
-        "ambiguous_sobre_superposicion_real": 5,
+        "total": 23,
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 16,
+        "ambiguous": 20,
+        "ambiguous_sobre_superposicion_real": 15,
         "overlap": 9,
         "overlap_sobre_superposicion_real": 9
+      },
+      "respaldo": {
+        "intervenciones": 2,
+        "palabras": 35
       }
     },
     "figshare-S25-24": {
@@ -1850,24 +2205,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal1"
       },
       "sin_superposicion": {
-        "palabras": 157,
-        "correctas": 110,
-        "porcentaje": 70.1
+        "palabras": 148,
+        "correctas": 101,
+        "porcentaje": 68.2
       },
       "con_superposicion": {
-        "palabras": 13,
-        "correctas": 13,
+        "palabras": 12,
+        "correctas": 12,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 22,
+      "fuera_de_la_referencia": 20,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 24,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 12,
-        "ambiguous": 5,
-        "ambiguous_sobre_superposicion_real": 3,
+        "ambiguous": 18,
+        "ambiguous_sobre_superposicion_real": 9,
         "overlap": 6,
         "overlap_sobre_superposicion_real": 6
+      },
+      "respaldo": {
+        "intervenciones": 3,
+        "palabras": 16
       }
     },
     "figshare-S25-25": {
@@ -1889,11 +2249,16 @@
       "sin_hablante": 0,
       "intervenciones": {
         "total": 21,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 5,
-        "ambiguous": 4,
-        "ambiguous_sobre_superposicion_real": 2,
+        "ambiguous": 9,
+        "ambiguous_sobre_superposicion_real": 3,
         "overlap": 3,
         "overlap_sobre_superposicion_real": 3
+      },
+      "respaldo": {
+        "intervenciones": 0,
+        "palabras": 0
       }
     },
     "figshare-S25-26": {
@@ -1902,24 +2267,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal1"
       },
       "sin_superposicion": {
-        "palabras": 226,
-        "correctas": 216,
-        "porcentaje": 95.6
+        "palabras": 201,
+        "correctas": 194,
+        "porcentaje": 96.5
       },
       "con_superposicion": {
-        "palabras": 18,
-        "correctas": 18,
+        "palabras": 10,
+        "correctas": 10,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 9,
+      "fuera_de_la_referencia": 8,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 24,
-        "sobre_superposicion_real": 15,
-        "ambiguous": 8,
-        "ambiguous_sobre_superposicion_real": 6,
+        "total": 22,
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 13,
+        "ambiguous": 17,
+        "ambiguous_sobre_superposicion_real": 12,
         "overlap": 9,
         "overlap_sobre_superposicion_real": 9
+      },
+      "respaldo": {
+        "intervenciones": 4,
+        "palabras": 38
       }
     },
     "figshare-S25-27": {
@@ -1928,24 +2298,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 87,
-        "correctas": 82,
-        "porcentaje": 94.3
+        "palabras": 75,
+        "correctas": 73,
+        "porcentaje": 97.3
       },
       "con_superposicion": {
-        "palabras": 14,
-        "correctas": 14,
+        "palabras": 12,
+        "correctas": 12,
         "porcentaje": 100.0
       },
       "fuera_de_la_referencia": 12,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 9,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 5,
-        "ambiguous": 1,
-        "ambiguous_sobre_superposicion_real": 0,
+        "ambiguous": 8,
+        "ambiguous_sobre_superposicion_real": 4,
         "overlap": 2,
         "overlap_sobre_superposicion_real": 2
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 15
       }
     },
     "figshare-S25-28": {
@@ -1954,24 +2329,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal1"
       },
       "sin_superposicion": {
-        "palabras": 285,
-        "correctas": 269,
-        "porcentaje": 94.4
+        "palabras": 205,
+        "correctas": 190,
+        "porcentaje": 92.7
       },
       "con_superposicion": {
-        "palabras": 20,
-        "correctas": 20,
+        "palabras": 14,
+        "correctas": 14,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 18,
+      "fuera_de_la_referencia": 10,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 38,
-        "sobre_superposicion_real": 17,
-        "ambiguous": 4,
-        "ambiguous_sobre_superposicion_real": 3,
-        "overlap": 7,
-        "overlap_sobre_superposicion_real": 7
+        "total": 36,
+        "sin_tiempo": 1,
+        "sobre_superposicion_real": 15,
+        "ambiguous": 19,
+        "ambiguous_sobre_superposicion_real": 12,
+        "overlap": 6,
+        "overlap_sobre_superposicion_real": 6
+      },
+      "respaldo": {
+        "intervenciones": 7,
+        "palabras": 101
       }
     },
     "figshare-S25-29": {
@@ -1980,24 +2360,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 255,
-        "correctas": 241,
+        "palabras": 253,
+        "correctas": 239,
         "porcentaje": 94.5
       },
       "con_superposicion": {
-        "palabras": 13,
-        "correctas": 13,
+        "palabras": 11,
+        "correctas": 11,
         "porcentaje": 100.0
       },
       "fuera_de_la_referencia": 23,
       "sin_hablante": 0,
       "intervenciones": {
         "total": 50,
+        "sin_tiempo": 0,
         "sobre_superposicion_real": 16,
-        "ambiguous": 8,
-        "ambiguous_sobre_superposicion_real": 5,
+        "ambiguous": 24,
+        "ambiguous_sobre_superposicion_real": 10,
         "overlap": 6,
         "overlap_sobre_superposicion_real": 6
+      },
+      "respaldo": {
+        "intervenciones": 1,
+        "palabras": 5
       }
     },
     "figshare-S25-30": {
@@ -2006,24 +2391,29 @@
         "SPEAKER_01": "figshare_v2_S25_canal2"
       },
       "sin_superposicion": {
-        "palabras": 230,
-        "correctas": 211,
-        "porcentaje": 91.7
+        "palabras": 159,
+        "correctas": 145,
+        "porcentaje": 91.2
       },
       "con_superposicion": {
-        "palabras": 23,
-        "correctas": 23,
+        "palabras": 7,
+        "correctas": 7,
         "porcentaje": 100.0
       },
-      "fuera_de_la_referencia": 13,
+      "fuera_de_la_referencia": 10,
       "sin_hablante": 0,
       "intervenciones": {
-        "total": 36,
-        "sobre_superposicion_real": 16,
-        "ambiguous": 7,
-        "ambiguous_sobre_superposicion_real": 7,
-        "overlap": 10,
-        "overlap_sobre_superposicion_real": 10
+        "total": 31,
+        "sin_tiempo": 0,
+        "sobre_superposicion_real": 12,
+        "ambiguous": 19,
+        "ambiguous_sobre_superposicion_real": 11,
+        "overlap": 9,
+        "overlap_sobre_superposicion_real": 9
+      },
+      "respaldo": {
+        "intervenciones": 6,
+        "palabras": 96
       }
     }
   },

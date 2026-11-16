@@ -1,0 +1,216 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.04,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "bueno agarras la luna azul y la pones sobre el espejo a la izquierda del telar",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 78
+      }
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "name": null,
+      "text": "muy cerca de ambas no llega para sobre el espejo entonces a la izquierda bien",
+      "overlap": null,
+      "ambiguous": true,
+      "timing": "unknown",
+      "speakers_detected": null,
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 77
+      }
+    },
+    {
+      "start": 12.12,
+      "end": 18.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "está muy cerca de ambas, no tapa nada pero no entiendo entonces arriba o no?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 76
+      }
+    },
+    {
+      "start": 18.96,
+      "end": 21.82,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "si si arriba del espejo a la izquierda del telar",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 48
+      }
+    },
+    {
+      "start": 22.5,
+      "end": 23.1,
+      "speaker": null,
+      "name": null,
+      "text": "si",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 24.4,
+      "end": 26.48,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "arriba del espejo o para?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 26.58,
+      "end": 28.16,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "ah ya entendí ya entendí",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "start": 28.16,
+      "end": 29.86,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "arriba sin superponerlo",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 29.86,
+      "end": 31.76,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "sin superponer ninguna de las dos",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 33
+      }
+    },
+    {
+      "start": 31.76,
+      "end": 38.26,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "está justo tocando ambas cosas pero no tapa nada de ninguna de las dos",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 70
+      }
+    }
+  ]
+}

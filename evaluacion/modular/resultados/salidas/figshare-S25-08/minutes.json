@@ -1,0 +1,56 @@
+{
+  "resumen": "La reunión se centró en la posición del limón en una composición artística. Se discutió sobre cómo el limón debe estar equidistante de varios elementos, como la luna azul y las pestañas, y que sus hojas deben rozar suavemente el aura de la monja.",
+  "temas": [
+    {
+      "texto": "La posición del limón en relación con otros objetos",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020"
+      ],
+      "id_ancla": "I000020"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "La precisión de la posición del limón en relación con otros elementos.",
+      "ids_intervenciones": [
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006"
+      ],
+      "id_ancla": "I000006"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Revisar la posición del limón para asegurar que esté equidistante de los elementos mencionados.",
+      "ids_intervenciones": [
+        "I000017",
+        "I000018"
+      ],
+      "id_ancla": "I000018",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

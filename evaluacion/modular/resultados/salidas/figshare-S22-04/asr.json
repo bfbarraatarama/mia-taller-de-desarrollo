@@ -1,0 +1,1502 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.16,
+      "text": "¿Ya estás?",
+      "words": [
+        {
+          "word": "¿Ya",
+          "start": 0.0,
+          "end": 0.76
+        },
+        {
+          "word": "estás?",
+          "start": 0.76,
+          "end": 1.16
+        }
+      ]
+    },
+    {
+      "start": 2.48,
+      "end": 8.36,
+      "text": "El clavo está exactamente sobre la cortadora de pasto",
+      "words": [
+        {
+          "word": "El",
+          "start": 2.48,
+          "end": 3.22
+        },
+        {
+          "word": "clavo",
+          "start": 3.22,
+          "end": 3.96
+        },
+        {
+          "word": "está",
+          "start": 3.96,
+          "end": 4.9
+        },
+        {
+          "word": "exactamente",
+          "start": 4.9,
+          "end": 5.6
+        },
+        {
+          "word": "sobre",
+          "start": 5.6,
+          "end": 6.32
+        },
+        {
+          "word": "la",
+          "start": 6.32,
+          "end": 6.96
+        },
+        {
+          "word": "cortadora",
+          "start": 6.96,
+          "end": 7.36
+        },
+        {
+          "word": "de",
+          "start": 7.36,
+          "end": 7.58
+        },
+        {
+          "word": "pasto",
+          "start": 7.58,
+          "end": 8.36
+        }
+      ]
+    },
+    {
+      "start": 8.36,
+      "end": 18.0,
+      "text": "y donde en la cabeza del clavo está alineada con el lugar en donde tomas la máquina para cortar el pasto",
+      "words": [
+        {
+          "word": "y",
+          "start": 8.36,
+          "end": 8.84
+        },
+        {
+          "word": "donde",
+          "start": 8.84,
+          "end": 9.08
+        },
+        {
+          "word": "en",
+          "start": 9.08,
+          "end": 9.88
+        },
+        {
+          "word": "la",
+          "start": 9.88,
+          "end": 9.98
+        },
+        {
+          "word": "cabeza",
+          "start": 9.98,
+          "end": 10.24
+        },
+        {
+          "word": "del",
+          "start": 10.24,
+          "end": 10.42
+        },
+        {
+          "word": "clavo",
+          "start": 10.42,
+          "end": 11.3
+        },
+        {
+          "word": "está",
+          "start": 11.3,
+          "end": 12.42
+        },
+        {
+          "word": "alineada",
+          "start": 12.42,
+          "end": 13.8
+        },
+        {
+          "word": "con",
+          "start": 13.8,
+          "end": 15.3
+        },
+        {
+          "word": "el",
+          "start": 15.3,
+          "end": 15.42
+        },
+        {
+          "word": "lugar",
+          "start": 15.42,
+          "end": 15.6
+        },
+        {
+          "word": "en",
+          "start": 15.6,
+          "end": 15.8
+        },
+        {
+          "word": "donde",
+          "start": 15.8,
+          "end": 16.12
+        },
+        {
+          "word": "tomas",
+          "start": 16.12,
+          "end": 16.68
+        },
+        {
+          "word": "la",
+          "start": 16.68,
+          "end": 16.94
+        },
+        {
+          "word": "máquina",
+          "start": 16.94,
+          "end": 17.2
+        },
+        {
+          "word": "para",
+          "start": 17.2,
+          "end": 17.44
+        },
+        {
+          "word": "cortar",
+          "start": 17.44,
+          "end": 17.72
+        },
+        {
+          "word": "el",
+          "start": 17.72,
+          "end": 17.98
+        },
+        {
+          "word": "pasto",
+          "start": 17.98,
+          "end": 18.35
+        }
+      ]
+    },
+    {
+      "start": 19.3,
+      "end": 22.48,
+      "text": "Y no llega a tocar el clavo a la cortadora",
+      "words": [
+        {
+          "word": "Y",
+          "start": 19.3,
+          "end": 20.04
+        },
+        {
+          "word": "no",
+          "start": 20.04,
+          "end": 20.5
+        },
+        {
+          "word": "llega",
+          "start": 20.5,
+          "end": 20.78
+        },
+        {
+          "word": "a",
+          "start": 20.78,
+          "end": 20.92
+        },
+        {
+          "word": "tocar",
+          "start": 20.92,
+          "end": 21.2
+        },
+        {
+          "word": "el",
+          "start": 21.2,
+          "end": 21.54
+        },
+        {
+          "word": "clavo",
+          "start": 21.54,
+          "end": 21.78
+        },
+        {
+          "word": "a",
+          "start": 21.78,
+          "end": 21.9
+        },
+        {
+          "word": "la",
+          "start": 21.9,
+          "end": 21.96
+        },
+        {
+          "word": "cortadora",
+          "start": 21.96,
+          "end": 22.48
+        }
+      ]
+    },
+    {
+      "start": 23.0,
+      "end": 25.16,
+      "text": "Está por sobre",
+      "words": [
+        {
+          "word": "Está",
+          "start": 23.0,
+          "end": 23.92
+        },
+        {
+          "word": "por",
+          "start": 23.92,
+          "end": 24.24
+        },
+        {
+          "word": "sobre",
+          "start": 24.24,
+          "end": 25.16
+        }
+      ]
+    },
+    {
+      "start": 25.16,
+      "end": 31.98,
+      "text": "Sí, por eso, yo no puedo subir, lo tengo al mango para arriba",
+      "words": [
+        {
+          "word": "Sí,",
+          "start": 25.16,
+          "end": 25.54
+        },
+        {
+          "word": "por",
+          "start": 26.06,
+          "end": 26.34
+        },
+        {
+          "word": "eso,",
+          "start": 26.34,
+          "end": 27.12
+        },
+        {
+          "word": "yo",
+          "start": 27.4,
+          "end": 27.56
+        },
+        {
+          "word": "no",
+          "start": 27.56,
+          "end": 27.88
+        },
+        {
+          "word": "puedo",
+          "start": 27.88,
+          "end": 28.14
+        },
+        {
+          "word": "subir,",
+          "start": 28.14,
+          "end": 28.88
+        },
+        {
+          "word": "lo",
+          "start": 30.2,
+          "end": 30.5
+        },
+        {
+          "word": "tengo",
+          "start": 30.5,
+          "end": 30.7
+        },
+        {
+          "word": "al",
+          "start": 30.7,
+          "end": 31.02
+        },
+        {
+          "word": "mango",
+          "start": 31.02,
+          "end": 31.24
+        },
+        {
+          "word": "para",
+          "start": 31.24,
+          "end": 31.54
+        },
+        {
+          "word": "arriba",
+          "start": 31.54,
+          "end": 31.98
+        }
+      ]
+    },
+    {
+      "start": 31.98,
+      "end": 38.1,
+      "text": "y quiero saber si qué tanto toca el cuerpo del clavo a la cortadora",
+      "words": [
+        {
+          "word": "y",
+          "start": 31.98,
+          "end": 32.48
+        },
+        {
+          "word": "quiero",
+          "start": 32.48,
+          "end": 32.62
+        },
+        {
+          "word": "saber",
+          "start": 32.62,
+          "end": 33.0
+        },
+        {
+          "word": "si",
+          "start": 33.0,
+          "end": 33.4
+        },
+        {
+          "word": "qué",
+          "start": 33.4,
+          "end": 33.74
+        },
+        {
+          "word": "tanto",
+          "start": 33.74,
+          "end": 34.32
+        },
+        {
+          "word": "toca",
+          "start": 34.32,
+          "end": 34.86
+        },
+        {
+          "word": "el",
+          "start": 34.86,
+          "end": 35.8
+        },
+        {
+          "word": "cuerpo",
+          "start": 35.8,
+          "end": 36.16
+        },
+        {
+          "word": "del",
+          "start": 36.16,
+          "end": 36.44
+        },
+        {
+          "word": "clavo",
+          "start": 36.44,
+          "end": 36.84
+        },
+        {
+          "word": "a",
+          "start": 36.84,
+          "end": 37.28
+        },
+        {
+          "word": "la",
+          "start": 37.28,
+          "end": 37.44
+        },
+        {
+          "word": "cortadora",
+          "start": 37.44,
+          "end": 38.1
+        }
+      ]
+    },
+    {
+      "start": 39.9,
+      "end": 41.38,
+      "text": "¿La toca o no?",
+      "words": [
+        {
+          "word": "¿La",
+          "start": 39.9,
+          "end": 40.66
+        },
+        {
+          "word": "toca",
+          "start": 40.66,
+          "end": 40.92
+        },
+        {
+          "word": "o",
+          "start": 40.92,
+          "end": 41.1
+        },
+        {
+          "word": "no?",
+          "start": 41.1,
+          "end": 41.38
+        }
+      ]
+    },
+    {
+      "start": 41.7,
+      "end": 46.16,
+      "text": "El cuerpo del clavo a la cortadora está sobre, sí sí",
+      "words": [
+        {
+          "word": "El",
+          "start": 41.7,
+          "end": 42.46
+        },
+        {
+          "word": "cuerpo",
+          "start": 42.46,
+          "end": 42.84
+        },
+        {
+          "word": "del",
+          "start": 42.84,
+          "end": 43.48
+        },
+        {
+          "word": "clavo",
+          "start": 43.48,
+          "end": 43.66
+        },
+        {
+          "word": "a",
+          "start": 43.66,
+          "end": 43.8
+        },
+        {
+          "word": "la",
+          "start": 43.8,
+          "end": 43.96
+        },
+        {
+          "word": "cortadora",
+          "start": 43.96,
+          "end": 44.46
+        },
+        {
+          "word": "está",
+          "start": 44.46,
+          "end": 45.02
+        },
+        {
+          "word": "sobre,",
+          "start": 45.02,
+          "end": 45.5
+        },
+        {
+          "word": "sí",
+          "start": 45.56,
+          "end": 45.96
+        },
+        {
+          "word": "sí",
+          "start": 45.96,
+          "end": 46.34
+        }
+      ]
+    },
+    {
+      "start": 46.34,
+      "end": 56.16,
+      "text": "Y para saber dónde ubicarla exactamente, la cabeza del clavo estaría en la misma línea con la que vos agarrás la cortadora de pasto",
+      "words": [
+        {
+          "word": "Y",
+          "start": 46.34,
+          "end": 47.28
+        },
+        {
+          "word": "para",
+          "start": 47.28,
+          "end": 47.54
+        },
+        {
+          "word": "saber",
+          "start": 47.54,
+          "end": 47.82
+        },
+        {
+          "word": "dónde",
+          "start": 47.82,
+          "end": 48.04
+        },
+        {
+          "word": "ubicarla",
+          "start": 48.04,
+          "end": 48.56
+        },
+        {
+          "word": "exactamente,",
+          "start": 48.56,
+          "end": 49.36
+        },
+        {
+          "word": "cabeza",
+          "start": 49.64,
+          "end": 50.0
+        },
+        {
+          "word": "del",
+          "start": 50.0,
+          "end": 50.26
+        },
+        {
+          "word": "clavo",
+          "start": 50.26,
+          "end": 50.96
+        },
+        {
+          "word": "estaría",
+          "start": 50.96,
+          "end": 51.46
+        },
+        {
+          "word": "en",
+          "start": 51.46,
+          "end": 51.64
+        },
+        {
+          "word": "la",
+          "start": 51.64,
+          "end": 51.66
+        },
+        {
+          "word": "misma",
+          "start": 51.66,
+          "end": 51.9
+        },
+        {
+          "word": "línea",
+          "start": 51.9,
+          "end": 52.42
+        },
+        {
+          "word": "con",
+          "start": 52.42,
+          "end": 53.66
+        },
+        {
+          "word": "la",
+          "start": 53.66,
+          "end": 53.88
+        },
+        {
+          "word": "que",
+          "start": 53.88,
+          "end": 53.9
+        },
+        {
+          "word": "vos",
+          "start": 53.9,
+          "end": 54.18
+        },
+        {
+          "word": "agarrás",
+          "start": 54.18,
+          "end": 55.16
+        },
+        {
+          "word": "la",
+          "start": 55.16,
+          "end": 55.44
+        },
+        {
+          "word": "cortadora",
+          "start": 55.44,
+          "end": 55.9
+        },
+        {
+          "word": "de",
+          "start": 55.9,
+          "end": 56.16
+        }
+      ]
+    },
+    {
+      "start": 56.16,
+      "end": 57.62,
+      "text": "Claro, pero ¿qué parte de la cabeza?",
+      "words": [
+        {
+          "word": "Claro,",
+          "start": 56.16,
+          "end": 56.4
+        },
+        {
+          "word": "pero",
+          "start": 56.52,
+          "end": 56.66
+        },
+        {
+          "word": "¿qué",
+          "start": 56.66,
+          "end": 56.8
+        },
+        {
+          "word": "parte",
+          "start": 56.8,
+          "end": 57.08
+        },
+        {
+          "word": "de",
+          "start": 57.08,
+          "end": 57.22
+        },
+        {
+          "word": "la",
+          "start": 57.22,
+          "end": 57.42
+        },
+        {
+          "word": "cabeza?",
+          "start": 57.42,
+          "end": 57.62
+        }
+      ]
+    },
+    {
+      "start": 57.88,
+      "end": 59.96,
+      "text": "El clavo termina donde...",
+      "words": [
+        {
+          "word": "El",
+          "start": 57.88,
+          "end": 58.36
+        },
+        {
+          "word": "clavo",
+          "start": 58.36,
+          "end": 58.72
+        },
+        {
+          "word": "termina",
+          "start": 58.72,
+          "end": 59.68
+        },
+        {
+          "word": "donde...",
+          "start": 59.68,
+          "end": 59.96
+        }
+      ]
+    },
+    {
+      "start": 59.96,
+      "end": 61.16,
+      "text": "¿La cabeza donde martillas?",
+      "words": [
+        {
+          "word": "¿La",
+          "start": 59.96,
+          "end": 60.04
+        },
+        {
+          "word": "cabeza",
+          "start": 60.04,
+          "end": 60.38
+        },
+        {
+          "word": "donde",
+          "start": 60.38,
+          "end": 60.62
+        },
+        {
+          "word": "martillas?",
+          "start": 60.62,
+          "end": 61.16
+        }
+      ]
+    },
+    {
+      "start": 61.38,
+      "end": 70.54,
+      "text": "Sí, sí, sí, yo sé, pero como la cabeza, digo, para ser preciso otra vez, como la cabeza no es un punto sino que tiene...",
+      "words": [
+        {
+          "word": "Sí,",
+          "start": 61.38,
+          "end": 61.78
+        },
+        {
+          "word": "sí,",
+          "start": 61.92,
+          "end": 61.94
+        },
+        {
+          "word": "sí,",
+          "start": 61.94,
+          "end": 62.22
+        },
+        {
+          "word": "yo",
+          "start": 62.22,
+          "end": 62.4
+        },
+        {
+          "word": "sé,",
+          "start": 62.4,
+          "end": 62.56
+        },
+        {
+          "word": "pero",
+          "start": 62.6,
+          "end": 62.8
+        },
+        {
+          "word": "como",
+          "start": 62.8,
+          "end": 62.96
+        },
+        {
+          "word": "la",
+          "start": 62.96,
+          "end": 63.16
+        },
+        {
+          "word": "cabeza,",
+          "start": 63.16,
+          "end": 63.62
+        },
+        {
+          "word": "digo,",
+          "start": 64.14,
+          "end": 64.48
+        },
+        {
+          "word": "para",
+          "start": 64.6,
+          "end": 64.66
+        },
+        {
+          "word": "ser",
+          "start": 64.66,
+          "end": 64.88
+        },
+        {
+          "word": "preciso",
+          "start": 64.88,
+          "end": 65.16
+        },
+        {
+          "word": "otra",
+          "start": 65.16,
+          "end": 65.44
+        },
+        {
+          "word": "vez,",
+          "start": 65.44,
+          "end": 66.2
+        },
+        {
+          "word": "como",
+          "start": 66.4,
+          "end": 66.5
+        },
+        {
+          "word": "la",
+          "start": 66.5,
+          "end": 66.7
+        },
+        {
+          "word": "cabeza",
+          "start": 66.7,
+          "end": 67.08
+        },
+        {
+          "word": "no",
+          "start": 67.08,
+          "end": 67.78
+        },
+        {
+          "word": "es",
+          "start": 67.78,
+          "end": 67.96
+        },
+        {
+          "word": "un",
+          "start": 67.96,
+          "end": 68.18
+        },
+        {
+          "word": "punto",
+          "start": 68.18,
+          "end": 68.62
+        },
+        {
+          "word": "sino",
+          "start": 68.62,
+          "end": 68.94
+        },
+        {
+          "word": "que",
+          "start": 68.94,
+          "end": 69.64
+        },
+        {
+          "word": "tiene...",
+          "start": 69.64,
+          "end": 70.54
+        }
+      ]
+    },
+    {
+      "start": 70.54,
+      "end": 82.02,
+      "text": "Ah, pero mide casi lo mismo que el mango de la cortadora, así que con que lo sitúes sobre eso, vas a ver que cuando lo pones arriba, tapa perfectamente el mango de la cortadora",
+      "words": [
+        {
+          "word": "Ah,",
+          "start": 70.54,
+          "end": 70.66
+        },
+        {
+          "word": "pero",
+          "start": 71.04,
+          "end": 71.14
+        },
+        {
+          "word": "mide",
+          "start": 71.14,
+          "end": 71.46
+        },
+        {
+          "word": "casi",
+          "start": 71.46,
+          "end": 71.82
+        },
+        {
+          "word": "lo",
+          "start": 71.82,
+          "end": 72.02
+        },
+        {
+          "word": "mismo",
+          "start": 72.02,
+          "end": 72.34
+        },
+        {
+          "word": "que",
+          "start": 72.34,
+          "end": 72.54
+        },
+        {
+          "word": "el",
+          "start": 72.54,
+          "end": 72.68
+        },
+        {
+          "word": "mango",
+          "start": 72.68,
+          "end": 72.9
+        },
+        {
+          "word": "de",
+          "start": 72.9,
+          "end": 73.06
+        },
+        {
+          "word": "la",
+          "start": 73.06,
+          "end": 73.22
+        },
+        {
+          "word": "cortadora,",
+          "start": 73.22,
+          "end": 73.62
+        },
+        {
+          "word": "así",
+          "start": 73.62,
+          "end": 73.98
+        },
+        {
+          "word": "que",
+          "start": 73.98,
+          "end": 74.14
+        },
+        {
+          "word": "con",
+          "start": 74.14,
+          "end": 74.32
+        },
+        {
+          "word": "que",
+          "start": 74.32,
+          "end": 74.46
+        },
+        {
+          "word": "lo",
+          "start": 74.46,
+          "end": 74.64
+        },
+        {
+          "word": "sitúes",
+          "start": 74.64,
+          "end": 75.2
+        },
+        {
+          "word": "sobre",
+          "start": 75.2,
+          "end": 75.58
+        },
+        {
+          "word": "eso,",
+          "start": 75.58,
+          "end": 76.22
+        },
+        {
+          "word": "vas",
+          "start": 76.5,
+          "end": 76.66
+        },
+        {
+          "word": "a",
+          "start": 76.66,
+          "end": 76.84
+        },
+        {
+          "word": "ver",
+          "start": 76.84,
+          "end": 76.96
+        },
+        {
+          "word": "que",
+          "start": 76.96,
+          "end": 77.16
+        },
+        {
+          "word": "cuando",
+          "start": 77.16,
+          "end": 77.5
+        },
+        {
+          "word": "lo",
+          "start": 77.5,
+          "end": 77.88
+        },
+        {
+          "word": "pones",
+          "start": 77.88,
+          "end": 78.06
+        },
+        {
+          "word": "arriba,",
+          "start": 78.06,
+          "end": 78.5
+        },
+        {
+          "word": "tapa",
+          "start": 78.94,
+          "end": 79.24
+        },
+        {
+          "word": "perfectamente",
+          "start": 79.24,
+          "end": 80.28
+        },
+        {
+          "word": "el",
+          "start": 80.28,
+          "end": 80.46
+        },
+        {
+          "word": "mango",
+          "start": 80.46,
+          "end": 80.66
+        },
+        {
+          "word": "de",
+          "start": 80.66,
+          "end": 80.82
+        },
+        {
+          "word": "la",
+          "start": 80.82,
+          "end": 81.0
+        },
+        {
+          "word": "cortadora",
+          "start": 81.0,
+          "end": 82.02
+        }
+      ]
+    },
+    {
+      "start": 83.74,
+      "end": 87.28,
+      "text": "Bueno, lo pongo casi pegadito a la cortadora entonces",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 83.74,
+          "end": 84.18
+        },
+        {
+          "word": "lo",
+          "start": 84.84,
+          "end": 85.0
+        },
+        {
+          "word": "pongo",
+          "start": 85.0,
+          "end": 85.22
+        },
+        {
+          "word": "casi",
+          "start": 85.22,
+          "end": 85.48
+        },
+        {
+          "word": "pegadito",
+          "start": 85.48,
+          "end": 86.1
+        },
+        {
+          "word": "a",
+          "start": 86.1,
+          "end": 86.24
+        },
+        {
+          "word": "la",
+          "start": 86.24,
+          "end": 86.36
+        },
+        {
+          "word": "cortadora",
+          "start": 86.36,
+          "end": 86.8
+        },
+        {
+          "word": "entonces",
+          "start": 86.8,
+          "end": 87.28
+        }
+      ]
+    },
+    {
+      "start": 87.28,
+      "end": 88.5,
+      "text": "Por sobre, sí sí",
+      "words": [
+        {
+          "word": "Por",
+          "start": 87.28,
+          "end": 87.66
+        },
+        {
+          "word": "sobre,",
+          "start": 87.66,
+          "end": 88.0
+        },
+        {
+          "word": "sí",
+          "start": 88.22,
+          "end": 88.36
+        },
+        {
+          "word": "sí",
+          "start": 88.36,
+          "end": 88.5
+        }
+      ]
+    },
+    {
+      "start": 88.5,
+      "end": 89.8,
+      "text": "No, no, yo sé que por sobre",
+      "words": [
+        {
+          "word": "No,",
+          "start": 88.5,
+          "end": 88.76
+        },
+        {
+          "word": "no,",
+          "start": 88.82,
+          "end": 88.92
+        },
+        {
+          "word": "yo",
+          "start": 88.92,
+          "end": 89.06
+        },
+        {
+          "word": "sé",
+          "start": 89.06,
+          "end": 89.18
+        },
+        {
+          "word": "que",
+          "start": 89.18,
+          "end": 89.34
+        },
+        {
+          "word": "por",
+          "start": 89.34,
+          "end": 89.54
+        },
+        {
+          "word": "sobre",
+          "start": 89.54,
+          "end": 89.8
+        }
+      ]
+    },
+    {
+      "start": 89.8,
+      "end": 90.28,
+      "text": "Ah, ok",
+      "words": [
+        {
+          "word": "Ah,",
+          "start": 89.8,
+          "end": 89.98
+        },
+        {
+          "word": "ok",
+          "start": 89.98,
+          "end": 90.28
+        }
+      ]
+    },
+    {
+      "start": 91.98,
+      "end": 95.7,
+      "text": "Pero como el cuerpito me sirve de referencia, ¿entendés?",
+      "words": [
+        {
+          "word": "Pero",
+          "start": 91.98,
+          "end": 92.42
+        },
+        {
+          "word": "como",
+          "start": 92.42,
+          "end": 92.86
+        },
+        {
+          "word": "el",
+          "start": 92.86,
+          "end": 93.82
+        },
+        {
+          "word": "cuerpito",
+          "start": 93.82,
+          "end": 94.3
+        },
+        {
+          "word": "me",
+          "start": 94.3,
+          "end": 94.5
+        },
+        {
+          "word": "sirve",
+          "start": 94.5,
+          "end": 94.66
+        },
+        {
+          "word": "de",
+          "start": 94.66,
+          "end": 94.9
+        },
+        {
+          "word": "referencia,",
+          "start": 94.9,
+          "end": 95.3
+        },
+        {
+          "word": "¿entendés?",
+          "start": 95.46,
+          "end": 95.7
+        }
+      ]
+    },
+    {
+      "start": 95.7,
+      "end": 106.06,
+      "text": "Y el cuerpito, al ponerlo así, lineal, la cabeza con el mango, el cuerpito entonces queda así como en diagonal, igual que la cortadora",
+      "words": [
+        {
+          "word": "Y",
+          "start": 95.7,
+          "end": 95.96
+        },
+        {
+          "word": "el",
+          "start": 95.96,
+          "end": 96.06
+        },
+        {
+          "word": "cuerpito,",
+          "start": 96.06,
+          "end": 97.36
+        },
+        {
+          "word": "al",
+          "start": 97.44,
+          "end": 98.2
+        },
+        {
+          "word": "ponerlo",
+          "start": 98.2,
+          "end": 98.82
+        },
+        {
+          "word": "así,",
+          "start": 98.82,
+          "end": 99.64
+        },
+        {
+          "word": "lineal,",
+          "start": 99.86,
+          "end": 100.34
+        },
+        {
+          "word": "cabeza",
+          "start": 100.54,
+          "end": 101.0
+        },
+        {
+          "word": "con",
+          "start": 101.0,
+          "end": 101.28
+        },
+        {
+          "word": "el",
+          "start": 101.28,
+          "end": 101.52
+        },
+        {
+          "word": "mango,",
+          "start": 101.52,
+          "end": 101.84
+        },
+        {
+          "word": "el",
+          "start": 102.0,
+          "end": 102.02
+        },
+        {
+          "word": "cuerpito",
+          "start": 102.02,
+          "end": 102.5
+        },
+        {
+          "word": "entonces",
+          "start": 102.5,
+          "end": 102.86
+        },
+        {
+          "word": "queda",
+          "start": 102.86,
+          "end": 103.14
+        },
+        {
+          "word": "así",
+          "start": 103.14,
+          "end": 103.42
+        },
+        {
+          "word": "como",
+          "start": 103.42,
+          "end": 103.62
+        },
+        {
+          "word": "en",
+          "start": 103.62,
+          "end": 103.8
+        },
+        {
+          "word": "diagonal,",
+          "start": 103.8,
+          "end": 104.32
+        },
+        {
+          "word": "igual",
+          "start": 105.1,
+          "end": 105.22
+        },
+        {
+          "word": "que",
+          "start": 105.22,
+          "end": 105.36
+        },
+        {
+          "word": "la",
+          "start": 105.36,
+          "end": 105.56
+        },
+        {
+          "word": "cortadora",
+          "start": 105.56,
+          "end": 106.06
+        }
+      ]
+    },
+    {
+      "start": 106.06,
+      "end": 110.9,
+      "text": "Sí, pero ¿llega a tocar a la cortadora? ¿O qué tan lejos queda?",
+      "words": [
+        {
+          "word": "Sí,",
+          "start": 106.06,
+          "end": 106.52
+        },
+        {
+          "word": "pero",
+          "start": 106.68,
+          "end": 106.92
+        },
+        {
+          "word": "¿llega",
+          "start": 106.92,
+          "end": 107.3
+        },
+        {
+          "word": "a",
+          "start": 107.3,
+          "end": 107.44
+        },
+        {
+          "word": "tocar",
+          "start": 107.44,
+          "end": 107.86
+        },
+        {
+          "word": "a",
+          "start": 107.86,
+          "end": 108.4
+        },
+        {
+          "word": "la",
+          "start": 108.4,
+          "end": 108.5
+        },
+        {
+          "word": "cortadora?",
+          "start": 108.5,
+          "end": 109.04
+        },
+        {
+          "word": "¿O",
+          "start": 109.74,
+          "end": 109.86
+        },
+        {
+          "word": "qué",
+          "start": 109.86,
+          "end": 110.02
+        },
+        {
+          "word": "tan",
+          "start": 110.02,
+          "end": 110.26
+        },
+        {
+          "word": "lejos",
+          "start": 110.26,
+          "end": 110.62
+        },
+        {
+          "word": "queda?",
+          "start": 110.62,
+          "end": 110.9
+        }
+      ]
+    },
+    {
+      "start": 111.34,
+      "end": 112.7,
+      "text": "Estás encima de...",
+      "words": [
+        {
+          "word": "Estás",
+          "start": 111.34,
+          "end": 111.82
+        },
+        {
+          "word": "encima",
+          "start": 111.82,
+          "end": 112.3
+        },
+        {
+          "word": "de...",
+          "start": 112.3,
+          "end": 112.7
+        }
+      ]
+    },
+    {
+      "start": 113.34,
+      "end": 114.94,
+      "text": "Bueno, dale, lo dejo ahí y veamos",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 113.34,
+          "end": 113.62
+        },
+        {
+          "word": "dale,",
+          "start": 113.74,
+          "end": 113.84
+        },
+        {
+          "word": "lo",
+          "start": 113.9,
+          "end": 113.98
+        },
+        {
+          "word": "dejo",
+          "start": 113.98,
+          "end": 114.22
+        },
+        {
+          "word": "ahí",
+          "start": 114.22,
+          "end": 114.48
+        },
+        {
+          "word": "y",
+          "start": 114.48,
+          "end": 114.52
+        },
+        {
+          "word": "veamos",
+          "start": 114.52,
+          "end": 114.94
+        }
+      ]
+    },
+    {
+      "start": 114.94,
+      "end": 115.54,
+      "text": "Bueno",
+      "words": [
+        {
+          "word": "Bueno",
+          "start": 114.94,
+          "end": 115.54
+        }
+      ]
+    },
+    {
+      "start": 115.54,
+      "end": 116.2,
+      "text": "Listo",
+      "words": [
+        {
+          "word": "Listo",
+          "start": 115.54,
+          "end": 116.2
+        }
+      ]
+    }
+  ]
+}

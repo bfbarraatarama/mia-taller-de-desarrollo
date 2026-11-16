@@ -1,0 +1,88 @@
+{
+  "segments": [
+    {
+      "start": 0.88,
+      "end": 8.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Tengo a la oreja titilando sobre el mimo y a la izquierda del león amarillo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 76
+      }
+    },
+    {
+      "start": 9.04,
+      "end": 15.94,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bien pegadito, casi pegada al sombrero del mimo está el lóbulo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 63
+      }
+    },
+    {
+      "start": 17.0,
+      "end": 19.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y termina un poquito por sobre la cabeza.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 41
+      }
+    },
+    {
+      "start": 19.8,
+      "end": 20.36,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Listo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 6
+      }
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 13.24,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "tengo al alguien entre las tres cosas la cabecita está sobre esa no sé cómo se",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 78
+      }
+    },
+    {
+      "start": 13.24,
+      "end": 19.9,
+      "speaker": null,
+      "name": null,
+      "text": "llama el centro del espejo está casi en la misma en la misma línea un poquito de",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 80
+      }
+    },
+    {
+      "start": 19.9,
+      "end": 28.24,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "bajo la mano casi tocando la limusina y la otra mano casi tocando a la mano de",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 78
+      }
+    },
+    {
+      "start": 28.24,
+      "end": 29.62,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "esa mujer",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 9
+      }
+    }
+  ]
+}

@@ -56,6 +56,21 @@ Muestra: OpenSLR `arf_03398_01736798627`, `arm_03397_00908571298`, `arf_01208_01
 | Ítems recuperados (minutas) | Planillas generadas: 56 ítems sin marcar (tarea 7.2) |
 | Exposición previa | Pendiente de confirmar: uso de S22 y S23 en el desarrollo de la Etapa 2 |
 
+## Re-inferencia con el PR #19 (16/11/2026)
+
+El PR #19 cambió la asociación y las minutas. Con la huella de código de `inferir`, se volvieron a correr los 82 elementos: en Figshare el pipeline reutilizó la preparación, la diarización y el STT, y rehízo la asociación y la minuta. Las reuniones de AMI y los clips se rehicieron enteros (cambiaron `src/minutas` y `src/stt`).
+
+| | |
+|---|---|
+| Corrida | 82 elementos en 6462 s (1 h 48 min), sin fallas; pico de VRAM 4822 MiB |
+| Contratos | Sin cambios: 4/4 módulos al 100 % (`contratos.json` idéntico) |
+| STT y diarización | Idénticos (reportes iguales byte a byte) |
+| Asociación | 87,7 % de 8253 palabras con tiempos por palabra; sin superposición 86,7 % (S22 91,9 %, S23 82,6 %, S25 85,7 %). 144 intervenciones (1516 palabras) por respaldo de segmento y 8 sin tiempos, fuera del porcentaje. 699 palabras fuera del habla de referencia y 1 sin hablante. Marcas: 313 de 313 `overlap` y 453 de 814 `ambiguous` caen sobre superposición real (el #19 marca como `ambiguous` también las palabras decididas por D2 y D3) |
+| Minutas | Planillas regeneradas con las minutas nuevas (no tenían marcas) |
+| Salidas | Publicadas en `evaluacion/modular/resultados/salidas/` (540 archivos, 3,7 MB); `evaluar` reproduce los reportes solo desde ellas, sin `inferencia/` |
+
+Las secciones de nivel 2 anteriores corresponden a la corrida previa al #19.
+
 ## Comprobación con el PR #19
 
 Con los validadores de la rama del PR #19 (`19bbd6a`), las 77 salidas de `transcription.json` de esta corrida (74 de Figshare y 3 de AMI) siguen dentro del contrato y la Etapa 5 las lee.
