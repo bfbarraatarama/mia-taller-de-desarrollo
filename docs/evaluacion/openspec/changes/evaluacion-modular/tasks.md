@@ -4,12 +4,12 @@ En cada tarea, primero los tests de sus escenarios. Meta del martes 17/11: grupo
 
 ## 1. Preparación
 
-- [ ] 1.1 Estructura de `evaluacion/modular/` (`__main__` con `preparar`, `inferir` y `evaluar`), `tests/evaluacion/` y configuración TOML versionada con la semilla 20261010
+- [x] 1.1 Estructura de `evaluacion/modular/` (`__main__` con `preparar`, `inferir` y `evaluar`), `tests/evaluacion/` y configuración TOML versionada con la semilla 20261010
 - [x] 1.2 Consultar los pendientes del diseño (D14 a D17)
 
 ## 2. Originales
 
-- [ ] 2.1 Verificación contra `fuentes.toml` y `fuentes.lock.json`, con el comando del Hito 2 en el mensaje · escenarios: Original con hash distinto, Original ausente
+- [x] 2.1 Verificación contra `fuentes.toml` y `fuentes.lock.json`, con el comando del Hito 2 en el mensaje · escenarios: Original con hash distinto, Original ausente
 - [ ] 2.2 Obtener Common Voice 26 rioplatense (Matías, con `MDC_API_KEY`) y `wavs.rar` de Figshare (con el ok de Matías), y verificarlos
 
 ## 3. Selección y normalización
