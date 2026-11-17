@@ -5,69 +5,69 @@
       "por_tipo": {
         "accion": {
           "items": 2,
-          "marcados": 0,
-          "recuperados": 0
+          "marcados": 2,
+          "recuperados": 1
         },
         "decision": {
           "items": 10,
-          "marcados": 0,
-          "recuperados": 0
+          "marcados": 10,
+          "recuperados": 3
         },
         "problema": {
           "items": 8,
-          "marcados": 0,
-          "recuperados": 0
+          "marcados": 8,
+          "recuperados": 3
         },
         "resumen": {
           "items": 5,
-          "marcados": 0,
-          "recuperados": 0
+          "marcados": 5,
+          "recuperados": 1
         }
       },
       "items": 25,
-      "marcados": 0,
-      "pendientes": 25,
-      "recuperados": 0
+      "marcados": 25,
+      "pendientes": 0,
+      "recuperados": 8
     },
     "IS1009c": {
       "por_tipo": {
         "accion": {
           "items": 4,
-          "marcados": 0,
-          "recuperados": 0
+          "marcados": 4,
+          "recuperados": 2
         },
         "decision": {
           "items": 3,
-          "marcados": 0,
-          "recuperados": 0
+          "marcados": 3,
+          "recuperados": 2
         },
         "problema": {
           "items": 2,
-          "marcados": 0,
-          "recuperados": 0
+          "marcados": 2,
+          "recuperados": 2
         },
         "resumen": {
           "items": 10,
-          "marcados": 0,
-          "recuperados": 0
+          "marcados": 10,
+          "recuperados": 2
         }
       },
       "items": 19,
-      "marcados": 0,
-      "pendientes": 19,
-      "recuperados": 0
+      "marcados": 19,
+      "pendientes": 0,
+      "recuperados": 8
     },
     "TS3009a": {
       "por_tipo": {
         "accion": {
           "items": 2,
-          "marcados": 0,
+          "marcados": 2,
           "recuperados": 0
         },
         "decision": {
           "items": 2,
-          "marcados": 0,
-          "recuperados": 0
+          "marcados": 2,
+          "recuperados": 2
         },
         "problema": {
           "items": 1,
@@ -76,41 +76,41 @@
         },
         "resumen": {
           "items": 7,
-          "marcados": 0,
-          "recuperados": 0
+          "marcados": 7,
+          "recuperados": 4
         }
       },
       "items": 12,
-      "marcados": 0,
-      "pendientes": 12,
-      "recuperados": 0
+      "marcados": 11,
+      "pendientes": 1,
+      "recuperados": 6
     }
   },
   "total": {
     "items": 56,
-    "marcados": 0,
-    "pendientes": 56,
-    "recuperados": 0,
+    "marcados": 55,
+    "pendientes": 1,
+    "recuperados": 22,
     "por_tipo": {
       "accion": {
         "items": 8,
-        "marcados": 0,
-        "recuperados": 0
+        "marcados": 8,
+        "recuperados": 3
       },
       "decision": {
         "items": 15,
-        "marcados": 0,
-        "recuperados": 0
+        "marcados": 15,
+        "recuperados": 7
       },
       "problema": {
         "items": 11,
-        "marcados": 0,
-        "recuperados": 0
+        "marcados": 10,
+        "recuperados": 5
       },
       "resumen": {
         "items": 22,
-        "marcados": 0,
-        "recuperados": 0
+        "marcados": 22,
+        "recuperados": 7
       }
     }
   },

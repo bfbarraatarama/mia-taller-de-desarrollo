@@ -75,7 +75,7 @@ Los RAR se leen con 7-Zip. En Fedora, el 7-Zip del sistema no lee RAR: hace falt
 | WER (STT) | Figshare 27,0 % (CER 20,1 %; 77 % de los errores son borrados), OpenSLR 9,1 %, Common Voice 0 % |
 | DER estricto, DER NIST y JER (diarización) | 21,3 %, 10,7 % y 41,0 % (S26, Etapa 2: 23,1 %, 12,3 % y 40,0 %) |
 | Palabras bien atribuidas (asociación) | 86,7 % sin superposición; 87,7 % en total (sin contar las 1516 palabras de los 144 segmentos que la asociación resolvió por respaldo) |
-| Ítems recuperados (minutas) | Pendiente: 56 ítems a marcar en `resultados/planillas/` |
+| Ítems recuperados (minutas) | 22 de 55 marcados (acciones 3 de 8, decisiones 7 de 15, problemas 5 de 10, resumen 7 de 22); marcó un integrante que no ejecutó la inferencia |
 
 Las métricas no tienen umbral (§2.3). Detalle por sesión y por archivo en `resultados/`.
 

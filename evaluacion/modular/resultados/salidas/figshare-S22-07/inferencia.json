@@ -40,7 +40,8 @@
     "asr.json": "a42f9aba01a0d819e44fd7bc4cb6c74ec9a13d5c311b3cd485cf9ce6e66e6efe",
     "transcription.json": "0fcf59c1439467069818739d31eeb702c20ace4fdf5821020ffe569acc4b7b67",
     "minutes.json": "01b5840654ad538121e0caf7663abe4c063291bcbd3df2b74603254cc1eca2d1",
-    "ejecucion_minutas.json": "4c53b5b6d413be5f1714db1b04fcf56a886ca062d859c50f5a086fd907eec38b"
+    "ejecucion_minutas.json": "4c53b5b6d413be5f1714db1b04fcf56a886ca062d859c50f5a086fd907eec38b",
+    "minutes.md": "6c07dd1bca29d79c47ba86a697fe45e650fb2ec4510ab236bf46791c4a782670"
   },
-  "sellado": "16/11/2026, después de la corrida, contra resultados/salidas versionado en 4fd427e"
+  "sellado": "16/11/2026, después de la corrida, contra resultados/salidas versionado en 4fd427e; minutes.md agregado el 17/11/2026 contra la copia versionada en HEAD (0bc0747)"
 }

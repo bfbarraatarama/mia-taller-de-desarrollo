@@ -81,3 +81,12 @@ Con los validadores de la rama del PR #19 (`19bbd6a`), las 77 salidas de `transc
 
 - Tarea 7.2: marcado de la planilla de minutas por Felipe o Luisa.
 - Confirmar con la responsable de la Etapa 2 que S22 y S23 no se usaron para desarrollar.
+
+## Planilla de minutas (tarea 7.2)
+
+Marcada por Felipe Aguirre (no ejecutó la inferencia), commit `0bc0747`, 16/11/2026: 55 de 56 ítems (falta un «problema» de TS3009a). Recuperados 22 de 55: resumen 7 de 22, decisiones 7 de 15, problemas 5 de 10, acciones 3 de 8. Por reunión: IB4005 8 de 25, IS1009c 8 de 19, TS3009a 6 de 11. Sin umbral (§2.3); 21 ítems tienen observaciones de quien marcó.
+
+## Revisión del #21 (17/11/2026)
+
+La atribución de palabras se calcula desde la transcripción guardada (no vuelve a ejecutar la asociación) y da el mismo resultado: 87,7 % (86,7 % sin superposición). `evaluar` verifica los SHA-256 de las 82 salidas, incluido `minutes.md`, antes de publicar. Suite completa: 951 aprobadas, 2 omitidas.
+
