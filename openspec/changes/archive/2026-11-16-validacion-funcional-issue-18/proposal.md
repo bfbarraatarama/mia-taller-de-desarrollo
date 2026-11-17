@@ -26,7 +26,7 @@ La issue #18 requiere validar que la aplicación funciona de extremo a extremo e
 ## Impact
 
 - **Código afectado (solo lectura en este cambio):** `src/pipeline/ejecucion.py`, `src/pipeline/configuracion.py`, `src/captura/captura.py`, `src/captura/recuperacion.py`, `src/interfaz/interfaz.py`, `src/interfaz/panel_procesamiento.py`
-- **Archivos de salida del pipeline:** `workflow.json`, `audio.wav`, `ingesta.json`, `diarization.json`, `asr.json`, `transcripcion.json`, `minutes.json`, `minutes.md`
+- **Archivos de salida del pipeline:** `workflow.json`, `audio.wav`, `ingesta.json`, `diarization.json`, `asr.json`, `transcription.json`, `minutes.json`, `minutes.md`
 - **Plataformas en scope:** Windows 11 / CPU (sin GPU); Linux/CPU y Linux/GPU como validación a cargo de compañeros
 - **Dependencias externas usadas en la validación:** espeak-ng (pruebas de ejemplo ideal ya resueltas), ffmpeg, libarchive, sounddevice, pyannote, Whisper
 - **Fuera de scope:** corrección de los hallazgos de instalación en Fedora/cu128 reportados por Matías Caccia (torchcodec/libnppicc, 7zip/RAR, README Fedora); esos se registran como pendientes externos

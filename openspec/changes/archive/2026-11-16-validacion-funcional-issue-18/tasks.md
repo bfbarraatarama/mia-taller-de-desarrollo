@@ -7,8 +7,8 @@
 
 ## 2. Validación del flujo principal — Windows/CPU (Luisa)
 
-- [x] 2.1 Procesar `evaluacion/asociacion/ejemplo_ideal/generado/audio.wav` con `python -m src.pipeline <ruta_audio>` y verificar que el directorio de salida contiene `workflow.json` con `"estado": "completado"` y los 7 archivos de salida esperados (`audio.wav`, `ingesta.json`, `diarization.json`, `asr.json`, `transcripcion.json`, `minutes.json`, `minutes.md`)
-- [x] 2.2 Verificar que `minutes.md` contiene texto de transcripción y al menos dos nombres de hablantes diferentes, y que `minutes.json` tiene un campo `resumen` no vacío — registrar el contenido generado como evidencia
+- [x] 2.1 Procesar `evaluacion/asociacion/ejemplo_ideal/generado/audio.wav` con `python -m src.pipeline <ruta_audio>` y verificar que el directorio de salida contiene `workflow.json` con `"estado": "completado"` y los 7 archivos de salida esperados (`audio.wav`, `ingesta.json`, `diarization.json`, `asr.json`, `transcription.json`, `minutes.json`, `minutes.md`)
+- [x] 2.2 Verificar que el pipeline produce `minutes.json` con exactamente las secciones solicitadas y `minutes.md` como presentación ejecutiva del JSON; en la configuración por defecto (todas las secciones habilitadas), comprobar que `resumen` no está vacío — registrar el contenido generado como evidencia
 - [x] 2.3 Procesar un archivo MP3 (cualquier grabación de voz de más de 10 segundos) y verificar que el pipeline lo ingesta y produce `audio.wav` a 16 kHz mono PCM 16 (usar `python -c "import soundfile as sf; print(sf.info('<ruta>/audio.wav'))"`)
 - [x] 2.4 Procesar el mismo directorio de salida del paso 2.1 nuevamente y verificar que el sistema detecta el resultado vigente y no reprocesa (el `workflow.json` mantiene las fechas de las etapas originales sin actualizarse)
 

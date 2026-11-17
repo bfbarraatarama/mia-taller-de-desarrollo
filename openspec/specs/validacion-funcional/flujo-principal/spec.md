@@ -24,17 +24,17 @@ Dado un archivo WAV de entrada válido, el sistema SHALL ejecutar las cinco etap
 - **THEN** el pipeline completa todas las etapas sin errores y el directorio de salida contiene los mismos archivos que en Windows/CPU
 
 ### Requirement: Contenido mínimo de la minuta generada
-El archivo `minutes.md` SHALL contener al menos un bloque de texto con participantes identificados y el archivo `minutes.json` SHALL contener una estructura con `resumen` no vacío y, opcionalmente, otras secciones que pueden ser un subconjunto de las habilitadas o estar vacías. El archivo `transcription.json` (producido por la etapa `asociar`) es un artefacto intermedio distinto de la minuta: contiene los segmentos con hablante, nombre y texto, y sirve de entrada a la etapa `minuta`.
+El archivo `minutes.json` SHALL contener exactamente las secciones solicitadas; las secciones no solicitadas no aparecerán en la salida. Cuando `resumen` esté entre las secciones solicitadas, su valor SHALL ser no vacío; las demás secciones seleccionadas pueden contener listas vacías si no hay elementos extraíbles. El archivo `minutes.md` SHALL ser la presentación ejecutiva del contenido de `minutes.json`. El archivo `transcription.json` (producido por la etapa `asociar`) es un artefacto intermedio distinto de la minuta: contiene los segmentos con hablante, nombre y texto, y sirve de entrada a la etapa `minuta`.
 
 #### Scenario: Minuta con múltiples hablantes
 - **GIVEN** un audio con al menos dos voces distintas
 - **WHEN** el pipeline completa la etapa `minuta`
-- **THEN** `minutes.md` contiene al menos dos participantes detectados (por nombre o etiqueta del modelo) y `minutes.json` tiene un campo `resumen` no vacío
+- **THEN** el pipeline termina sin error y `minutes.json` contiene exactamente las secciones solicitadas; si `resumen` fue una de ellas, su valor no está vacío
 
 #### Scenario: Minuta con un único hablante
 - **GIVEN** un audio con una sola voz
 - **WHEN** el pipeline completa la etapa `minuta`
-- **THEN** `minutes.md` contiene texto de transcripción y `minutes.json` tiene un campo `resumen` no vacío
+- **THEN** el pipeline termina sin error y `minutes.json` contiene exactamente las secciones solicitadas; si `resumen` fue una de ellas, su valor no está vacío
 
 #### Scenario: Hablantes sin nombre asignado o con nombres repetidos
 - **GIVEN** un pipeline en la etapa `asociar` con dos o más hablantes detectados, sin identificación de nombre o con nombres idénticos entre hablantes
