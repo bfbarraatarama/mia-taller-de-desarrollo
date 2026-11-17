@@ -189,6 +189,7 @@ notebook-shim==0.2.4
 numba==0.68.1
 ollama==0.6.3
 openai-whisper==20250625
+jiwer==4.0.0
 pandocfilters==1.5.1
 parso==0.8.7
 pexpect==4.9.0
