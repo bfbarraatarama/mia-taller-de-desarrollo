@@ -44,6 +44,19 @@ def test_hypothesis_recorta_segmentos_que_empiezan_despues_del_limite(tmp_path):
     assert wer.load_hypothesis("X", float("inf"), base=tmp_path) == "hola mundo adios sobra"
 
 
+def test_asr_path_acepta_las_dos_estructuras(tmp_path):
+    _asr(tmp_path, "X", [{"start": 0.0, "end": 1.0, "text": "Hola"}])
+    plano = tmp_path / "publicado"
+    plano.mkdir()
+    (plano / "Y.json").write_text(
+        json.dumps({"language": "es", "segments": [{"start": 0.0, "end": 1.0, "text": "Chau"}]}),
+        encoding="utf-8",
+    )
+    assert wer.asr_path(tmp_path, "X") == tmp_path / "X" / "asr.json"
+    assert wer.asr_path(plano, "Y") == plano / "Y.json"
+    assert wer.load_hypothesis("Y", float("inf"), base=plano) == "chau"
+
+
 def test_wer_de_textos_normalizados():
     ref = wer.normalize("Uno, dos, tres, cuatro.")
     hyp = wer.normalize("uno dos TRES")

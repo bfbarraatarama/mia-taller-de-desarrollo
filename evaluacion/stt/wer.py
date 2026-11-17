@@ -9,6 +9,7 @@ evaluacion/stt/resultados/asr/<ID>.json (both versioned, unlike generado/).
 
     python -m evaluacion.stt.wer                    # every ID in generado/
     python -m evaluacion.stt.wer --ids PER-1 PER-2  # only these IDs
+    python -m evaluacion.stt.wer --asr-dir evaluacion/stt/resultados/asr  # published ASR, no Whisper
 """
 
 from __future__ import annotations
@@ -63,9 +64,15 @@ def word_error_rate(reference: str, hypothesis: str) -> float:
     return errores(reference.split(), hypothesis.split())["wer"]
 
 
+def asr_path(base: Path, test_id: str) -> Path:
+    """asr.json of a recording: <base>/<ID>/asr.json (generado/) or <base>/<ID>.json (resultados/asr/)."""
+    nested = base / test_id / ARCHIVO_ASR
+    return nested if nested.exists() else base / f"{test_id}.json"
+
+
 def load_hypothesis(test_id: str, until: float, base: Path = OUTPUT_BASE) -> str:
     """Normalized ASR text from the segments that start before `until` seconds."""
-    with open(base / test_id / ARCHIVO_ASR, encoding="utf-8") as f:
+    with open(asr_path(base, test_id), encoding="utf-8") as f:
         asr = json.load(f)
     return normalize(" ".join(seg["text"] for seg in asr["segments"] if seg["start"] < until))
 
@@ -100,22 +107,33 @@ def load_references(test_ids: list[str]) -> dict[str, tuple[str, float]]:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Compute WER of generado/*/asr.json")
-    parser.add_argument("--ids", nargs="+", help="Specific IDs (default: all in generado/)")
+    parser = argparse.ArgumentParser(description="Compute WER from the ASR outputs")
+    parser.add_argument("--ids", nargs="+", help="Specific IDs (default: all in --asr-dir)")
+    parser.add_argument(
+        "--asr-dir",
+        type=Path,
+        default=OUTPUT_BASE,
+        help=f"ASR folder: {OUTPUT_BASE.name}/<ID>/asr.json (default) or the published "
+        f"{RESULTADOS_ASR.parent.name}/{RESULTADOS_ASR.name}/<ID>.json",
+    )
     args = parser.parse_args()
+    asr_dir = args.asr_dir
     logging.basicConfig(level=logging.INFO, format="%(message)s")
 
     if args.ids:
         ids = args.ids
     else:
-        ids = sorted(p.parent.name for p in OUTPUT_BASE.glob(f"*/{ARCHIVO_ASR}"))
+        ids = sorted(
+            {p.parent.name for p in asr_dir.glob(f"*/{ARCHIVO_ASR}")}
+            | {p.stem for p in asr_dir.glob("*.json")}
+        )
 
     valid = []
     for test_id in ids:
         if test_id not in RECORDINGS:
             logger.warning(f"SKIP {test_id}: no ground truth mapping")
-        elif not (OUTPUT_BASE / test_id / ARCHIVO_ASR).exists():
-            logger.warning(f"SKIP {test_id}: missing {ARCHIVO_ASR}")
+        elif not asr_path(asr_dir, test_id).exists():
+            logger.warning(f"SKIP {test_id}: no ASR output in {asr_dir}")
         else:
             valid.append(test_id)
     if not valid:
@@ -131,9 +149,11 @@ def main() -> int:
             logger.warning(f"SKIP {test_id}: ground truth not found")
             continue
         ref, until = entry
-        results[test_id] = word_error_rate(ref, load_hypothesis(test_id, until))
+        results[test_id] = word_error_rate(ref, load_hypothesis(test_id, until, asr_dir))
+        destination = RESULTADOS_ASR / f"{test_id}.json"
         RESULTADOS_ASR.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(OUTPUT_BASE / test_id / ARCHIVO_ASR, RESULTADOS_ASR / f"{test_id}.json")
+        if asr_path(asr_dir, test_id).resolve() != destination.resolve():
+            shutil.copyfile(asr_path(asr_dir, test_id), destination)
         logger.info(f"{test_id}: WER = {results[test_id]:.2%}")
 
     if not results:
