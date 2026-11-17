@@ -1,0 +1,1133 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.0,
+      "text": "el espejo superponelo al rinoceronte amarillo",
+      "words": [
+        {
+          "word": "el",
+          "start": 0.0,
+          "end": 0.74
+        },
+        {
+          "word": "espejo",
+          "start": 0.74,
+          "end": 1.2
+        },
+        {
+          "word": "superponelo",
+          "start": 1.2,
+          "end": 1.96
+        },
+        {
+          "word": "al",
+          "start": 1.96,
+          "end": 2.24
+        },
+        {
+          "word": "rinoceronte",
+          "start": 2.24,
+          "end": 3.16
+        },
+        {
+          "word": "amarillo",
+          "start": 3.16,
+          "end": 4.0
+        }
+      ]
+    },
+    {
+      "start": 4.9,
+      "end": 14.26,
+      "text": "de manera que lo único que se ve del rinoceronte amarillo es la parte de la cola",
+      "words": [
+        {
+          "word": "de",
+          "start": 4.9,
+          "end": 5.46
+        },
+        {
+          "word": "manera",
+          "start": 5.46,
+          "end": 5.86
+        },
+        {
+          "word": "que",
+          "start": 5.86,
+          "end": 6.66
+        },
+        {
+          "word": "lo",
+          "start": 6.66,
+          "end": 6.9
+        },
+        {
+          "word": "único",
+          "start": 6.9,
+          "end": 7.14
+        },
+        {
+          "word": "que",
+          "start": 7.14,
+          "end": 7.36
+        },
+        {
+          "word": "se",
+          "start": 7.36,
+          "end": 7.56
+        },
+        {
+          "word": "ve",
+          "start": 7.56,
+          "end": 7.74
+        },
+        {
+          "word": "del",
+          "start": 7.74,
+          "end": 8.0
+        },
+        {
+          "word": "rinoceronte",
+          "start": 8.0,
+          "end": 8.64
+        },
+        {
+          "word": "amarillo",
+          "start": 8.64,
+          "end": 9.74
+        },
+        {
+          "word": "es",
+          "start": 9.74,
+          "end": 10.68
+        },
+        {
+          "word": "la",
+          "start": 10.68,
+          "end": 12.94
+        },
+        {
+          "word": "parte",
+          "start": 12.94,
+          "end": 13.32
+        },
+        {
+          "word": "de",
+          "start": 13.32,
+          "end": 13.52
+        },
+        {
+          "word": "la",
+          "start": 13.52,
+          "end": 13.72
+        },
+        {
+          "word": "cola",
+          "start": 13.72,
+          "end": 14.26
+        }
+      ]
+    },
+    {
+      "start": 15.12,
+      "end": 21.7,
+      "text": "se ve como si fuera... lo que queda del rinoceronte amarillo es la cola y como una especie de luna",
+      "words": [
+        {
+          "word": "se",
+          "start": 15.12,
+          "end": 15.68
+        },
+        {
+          "word": "ve",
+          "start": 15.68,
+          "end": 15.78
+        },
+        {
+          "word": "como",
+          "start": 15.78,
+          "end": 16.0
+        },
+        {
+          "word": "si",
+          "start": 16.0,
+          "end": 16.32
+        },
+        {
+          "word": "fuera...",
+          "start": 16.32,
+          "end": 17.88
+        },
+        {
+          "word": "lo",
+          "start": 17.88,
+          "end": 18.0
+        },
+        {
+          "word": "que",
+          "start": 18.0,
+          "end": 18.34
+        },
+        {
+          "word": "queda",
+          "start": 18.34,
+          "end": 18.46
+        },
+        {
+          "word": "del",
+          "start": 18.46,
+          "end": 18.64
+        },
+        {
+          "word": "rinoceronte",
+          "start": 18.64,
+          "end": 19.1
+        },
+        {
+          "word": "amarillo",
+          "start": 19.1,
+          "end": 19.48
+        },
+        {
+          "word": "es",
+          "start": 19.48,
+          "end": 19.62
+        },
+        {
+          "word": "la",
+          "start": 19.62,
+          "end": 19.88
+        },
+        {
+          "word": "cola",
+          "start": 19.88,
+          "end": 20.06
+        },
+        {
+          "word": "y",
+          "start": 20.06,
+          "end": 20.26
+        },
+        {
+          "word": "como",
+          "start": 20.26,
+          "end": 20.32
+        },
+        {
+          "word": "una",
+          "start": 20.32,
+          "end": 20.44
+        },
+        {
+          "word": "especie",
+          "start": 20.44,
+          "end": 20.76
+        },
+        {
+          "word": "de",
+          "start": 20.76,
+          "end": 21.02
+        },
+        {
+          "word": "luna",
+          "start": 21.02,
+          "end": 21.7
+        }
+      ]
+    },
+    {
+      "start": 21.7,
+      "end": 25.18,
+      "text": "de toda la parte de atrás del cuerpo, como una C",
+      "words": [
+        {
+          "word": "de",
+          "start": 21.7,
+          "end": 22.3
+        },
+        {
+          "word": "toda",
+          "start": 22.3,
+          "end": 22.44
+        },
+        {
+          "word": "la",
+          "start": 22.44,
+          "end": 22.6
+        },
+        {
+          "word": "parte",
+          "start": 22.6,
+          "end": 22.8
+        },
+        {
+          "word": "de",
+          "start": 22.8,
+          "end": 23.0
+        },
+        {
+          "word": "atrás",
+          "start": 23.0,
+          "end": 23.12
+        },
+        {
+          "word": "del",
+          "start": 23.12,
+          "end": 23.34
+        },
+        {
+          "word": "cuerpo,",
+          "start": 23.34,
+          "end": 23.74
+        },
+        {
+          "word": "como",
+          "start": 23.92,
+          "end": 24.0
+        },
+        {
+          "word": "una",
+          "start": 24.0,
+          "end": 24.3
+        },
+        {
+          "word": "C",
+          "start": 24.3,
+          "end": 25.18
+        }
+      ]
+    },
+    {
+      "start": 25.18,
+      "end": 27.82,
+      "text": "como una C, no entiendo",
+      "words": [
+        {
+          "word": "como",
+          "start": 25.18,
+          "end": 25.76
+        },
+        {
+          "word": "una",
+          "start": 25.76,
+          "end": 26.08
+        },
+        {
+          "word": "C,",
+          "start": 26.08,
+          "end": 26.5
+        },
+        {
+          "word": "no",
+          "start": 26.58,
+          "end": 26.86
+        },
+        {
+          "word": "entiendo",
+          "start": 26.86,
+          "end": 27.82
+        }
+      ]
+    },
+    {
+      "start": 29.68,
+      "end": 31.16,
+      "text": "eh... a ver",
+      "words": [
+        {
+          "word": "eh...",
+          "start": 29.68,
+          "end": 30.3
+        },
+        {
+          "word": "a",
+          "start": 30.3,
+          "end": 30.68
+        },
+        {
+          "word": "ver",
+          "start": 30.68,
+          "end": 31.16
+        }
+      ]
+    },
+    {
+      "start": 31.16,
+      "end": 32.88,
+      "text": "no se ve... no se ve el cuerno entonces",
+      "words": [
+        {
+          "word": "no",
+          "start": 31.16,
+          "end": 31.44
+        },
+        {
+          "word": "se",
+          "start": 31.44,
+          "end": 31.52
+        },
+        {
+          "word": "ve...",
+          "start": 31.52,
+          "end": 31.72
+        },
+        {
+          "word": "no",
+          "start": 31.72,
+          "end": 31.88
+        },
+        {
+          "word": "se",
+          "start": 31.88,
+          "end": 31.92
+        },
+        {
+          "word": "ve",
+          "start": 31.92,
+          "end": 31.96
+        },
+        {
+          "word": "el",
+          "start": 31.96,
+          "end": 32.06
+        },
+        {
+          "word": "cuerno",
+          "start": 32.06,
+          "end": 32.38
+        },
+        {
+          "word": "entonces",
+          "start": 32.38,
+          "end": 32.88
+        }
+      ]
+    },
+    {
+      "start": 32.88,
+      "end": 34.42,
+      "text": "no, no, no se ve... a ver",
+      "words": [
+        {
+          "word": "no,",
+          "start": 32.88,
+          "end": 33.24
+        },
+        {
+          "word": "no,",
+          "start": 33.26,
+          "end": 33.62
+        },
+        {
+          "word": "no",
+          "start": 33.62,
+          "end": 33.8
+        },
+        {
+          "word": "se",
+          "start": 33.8,
+          "end": 33.88
+        },
+        {
+          "word": "a",
+          "start": 33.88,
+          "end": 33.96
+        },
+        {
+          "word": "ver",
+          "start": 33.96,
+          "end": 34.42
+        }
+      ]
+    },
+    {
+      "start": 35.32,
+      "end": 40.04,
+      "text": "del cuerno se ve... ahora que lo estoy viendo, del cuerno se ve un milímetro, menos",
+      "words": [
+        {
+          "word": "del",
+          "start": 35.32,
+          "end": 35.94
+        },
+        {
+          "word": "cuerno",
+          "start": 35.94,
+          "end": 36.44
+        },
+        {
+          "word": "se",
+          "start": 36.44,
+          "end": 36.62
+        },
+        {
+          "word": "ve...",
+          "start": 36.62,
+          "end": 37.12
+        },
+        {
+          "word": "ahora",
+          "start": 37.12,
+          "end": 37.28
+        },
+        {
+          "word": "que",
+          "start": 37.28,
+          "end": 37.4
+        },
+        {
+          "word": "lo",
+          "start": 37.4,
+          "end": 37.5
+        },
+        {
+          "word": "estoy",
+          "start": 37.5,
+          "end": 37.6
+        },
+        {
+          "word": "viendo,",
+          "start": 37.6,
+          "end": 37.76
+        },
+        {
+          "word": "del",
+          "start": 37.9,
+          "end": 37.94
+        },
+        {
+          "word": "cuerno",
+          "start": 37.94,
+          "end": 38.24
+        },
+        {
+          "word": "se",
+          "start": 38.24,
+          "end": 38.36
+        },
+        {
+          "word": "ve",
+          "start": 38.36,
+          "end": 38.52
+        },
+        {
+          "word": "un",
+          "start": 38.52,
+          "end": 38.84
+        },
+        {
+          "word": "milímetro,",
+          "start": 38.84,
+          "end": 39.3
+        },
+        {
+          "word": "menos",
+          "start": 39.46,
+          "end": 40.04
+        }
+      ]
+    },
+    {
+      "start": 40.04,
+      "end": 43.04,
+      "text": "menos, menos de un milímetro, apenas la punta del cuerno se ve",
+      "words": [
+        {
+          "word": "menos,",
+          "start": 40.04,
+          "end": 40.48
+        },
+        {
+          "word": "menos",
+          "start": 40.48,
+          "end": 40.68
+        },
+        {
+          "word": "de",
+          "start": 40.68,
+          "end": 40.8
+        },
+        {
+          "word": "un",
+          "start": 40.8,
+          "end": 40.96
+        },
+        {
+          "word": "milímetro,",
+          "start": 40.96,
+          "end": 41.3
+        },
+        {
+          "word": "apenas",
+          "start": 41.5,
+          "end": 41.78
+        },
+        {
+          "word": "la",
+          "start": 41.78,
+          "end": 42.0
+        },
+        {
+          "word": "punta",
+          "start": 42.0,
+          "end": 42.26
+        },
+        {
+          "word": "del",
+          "start": 42.26,
+          "end": 42.38
+        },
+        {
+          "word": "cuerno",
+          "start": 42.38,
+          "end": 42.72
+        },
+        {
+          "word": "se",
+          "start": 42.72,
+          "end": 42.88
+        },
+        {
+          "word": "ve",
+          "start": 42.88,
+          "end": 43.04
+        }
+      ]
+    },
+    {
+      "start": 43.04,
+      "end": 54.82,
+      "text": "y el cuerno quedaría ubicado entre la oreja izquierda del cuadro y la esquina inferior izquierda del cuadro",
+      "words": [
+        {
+          "word": "y",
+          "start": 43.04,
+          "end": 43.58
+        },
+        {
+          "word": "el",
+          "start": 43.58,
+          "end": 43.72
+        },
+        {
+          "word": "cuerno",
+          "start": 43.72,
+          "end": 44.1
+        },
+        {
+          "word": "quedaría",
+          "start": 44.1,
+          "end": 44.54
+        },
+        {
+          "word": "ubicado",
+          "start": 44.54,
+          "end": 45.22
+        },
+        {
+          "word": "entre",
+          "start": 45.22,
+          "end": 45.9
+        },
+        {
+          "word": "la",
+          "start": 45.9,
+          "end": 46.32
+        },
+        {
+          "word": "oreja",
+          "start": 46.32,
+          "end": 46.84
+        },
+        {
+          "word": "izquierda",
+          "start": 46.84,
+          "end": 48.82
+        },
+        {
+          "word": "del",
+          "start": 48.82,
+          "end": 49.4
+        },
+        {
+          "word": "cuadro",
+          "start": 49.4,
+          "end": 50.6
+        },
+        {
+          "word": "y",
+          "start": 50.6,
+          "end": 51.78
+        },
+        {
+          "word": "la",
+          "start": 51.78,
+          "end": 53.06
+        },
+        {
+          "word": "esquina",
+          "start": 53.06,
+          "end": 53.54
+        },
+        {
+          "word": "inferior",
+          "start": 53.54,
+          "end": 54.04
+        },
+        {
+          "word": "izquierda",
+          "start": 54.04,
+          "end": 54.5
+        },
+        {
+          "word": "del",
+          "start": 54.5,
+          "end": 54.66
+        },
+        {
+          "word": "cuadro",
+          "start": 54.66,
+          "end": 54.97
+        }
+      ]
+    },
+    {
+      "start": 55.6,
+      "end": 56.48,
+      "text": "está bien",
+      "words": [
+        {
+          "word": "está",
+          "start": 55.6,
+          "end": 56.0
+        },
+        {
+          "word": "bien",
+          "start": 56.0,
+          "end": 56.48
+        }
+      ]
+    },
+    {
+      "start": 57.34,
+      "end": 59.34,
+      "text": "sobresale apenas un poquitín entre los dos",
+      "words": [
+        {
+          "word": "sobresale",
+          "start": 57.34,
+          "end": 57.78
+        },
+        {
+          "word": "apenas",
+          "start": 57.78,
+          "end": 58.1
+        },
+        {
+          "word": "un",
+          "start": 58.1,
+          "end": 58.28
+        },
+        {
+          "word": "poquitín",
+          "start": 58.28,
+          "end": 58.66
+        },
+        {
+          "word": "entre",
+          "start": 58.66,
+          "end": 58.86
+        },
+        {
+          "word": "los",
+          "start": 58.86,
+          "end": 59.08
+        },
+        {
+          "word": "dos",
+          "start": 59.08,
+          "end": 59.34
+        }
+      ]
+    },
+    {
+      "start": 59.34,
+      "end": 62.28,
+      "text": "entonces se ven las patas de atrás del rinoceronte",
+      "words": [
+        {
+          "word": "entonces",
+          "start": 59.34,
+          "end": 59.7
+        },
+        {
+          "word": "se",
+          "start": 59.7,
+          "end": 59.98
+        },
+        {
+          "word": "ven",
+          "start": 59.98,
+          "end": 60.06
+        },
+        {
+          "word": "las",
+          "start": 60.06,
+          "end": 60.26
+        },
+        {
+          "word": "patas",
+          "start": 60.26,
+          "end": 60.44
+        },
+        {
+          "word": "de",
+          "start": 60.44,
+          "end": 60.6
+        },
+        {
+          "word": "atrás",
+          "start": 60.6,
+          "end": 60.76
+        },
+        {
+          "word": "del",
+          "start": 60.76,
+          "end": 61.14
+        },
+        {
+          "word": "rinoceronte",
+          "start": 61.14,
+          "end": 62.28
+        }
+      ]
+    },
+    {
+      "start": 63.78,
+      "end": 65.4,
+      "text": "si, se ve la parte...",
+      "words": [
+        {
+          "word": "si,",
+          "start": 63.78,
+          "end": 64.22
+        },
+        {
+          "word": "ve",
+          "start": 64.56,
+          "end": 64.78
+        },
+        {
+          "word": "la",
+          "start": 64.78,
+          "end": 64.9
+        },
+        {
+          "word": "parte...",
+          "start": 64.9,
+          "end": 65.4
+        }
+      ]
+    },
+    {
+      "start": 65.4,
+      "end": 66.3,
+      "text": "las dos patas veo allá",
+      "words": [
+        {
+          "word": "las",
+          "start": 65.4,
+          "end": 65.56
+        },
+        {
+          "word": "dos",
+          "start": 65.56,
+          "end": 65.74
+        },
+        {
+          "word": "patas",
+          "start": 65.74,
+          "end": 66.04
+        },
+        {
+          "word": "veo",
+          "start": 66.04,
+          "end": 66.12
+        },
+        {
+          "word": "allá",
+          "start": 66.12,
+          "end": 66.3
+        }
+      ]
+    },
+    {
+      "start": 66.3,
+      "end": 67.58,
+      "text": "si, ponele",
+      "words": [
+        {
+          "word": "si,",
+          "start": 66.3,
+          "end": 66.58
+        },
+        {
+          "word": "ponele",
+          "start": 66.58,
+          "end": 67.58
+        }
+      ]
+    },
+    {
+      "start": 67.58,
+      "end": 69.68,
+      "text": "una pata la veo entera y la otra...",
+      "words": [
+        {
+          "word": "una",
+          "start": 67.58,
+          "end": 68.22
+        },
+        {
+          "word": "pata",
+          "start": 68.22,
+          "end": 68.48
+        },
+        {
+          "word": "la",
+          "start": 68.48,
+          "end": 68.56
+        },
+        {
+          "word": "veo",
+          "start": 68.56,
+          "end": 68.62
+        },
+        {
+          "word": "entera",
+          "start": 68.62,
+          "end": 69.08
+        },
+        {
+          "word": "y",
+          "start": 69.08,
+          "end": 69.36
+        },
+        {
+          "word": "la",
+          "start": 69.36,
+          "end": 69.4
+        },
+        {
+          "word": "otra...",
+          "start": 69.4,
+          "end": 69.68
+        }
+      ]
+    },
+    {
+      "start": 69.68,
+      "end": 70.2,
+      "text": "y la otro pedazo",
+      "words": [
+        {
+          "word": "otro",
+          "start": 69.68,
+          "end": 69.72
+        },
+        {
+          "word": "pedazo",
+          "start": 69.72,
+          "end": 70.2
+        }
+      ]
+    },
+    {
+      "start": 70.2,
+      "end": 72.2,
+      "text": "no veo el pie digamos, pero veo la pierna",
+      "words": [
+        {
+          "word": "no",
+          "start": 70.2,
+          "end": 70.42
+        },
+        {
+          "word": "veo",
+          "start": 70.42,
+          "end": 70.8
+        },
+        {
+          "word": "el",
+          "start": 70.8,
+          "end": 70.9
+        },
+        {
+          "word": "pie",
+          "start": 70.9,
+          "end": 71.12
+        },
+        {
+          "word": "digamos,",
+          "start": 71.12,
+          "end": 71.42
+        },
+        {
+          "word": "pero",
+          "start": 71.52,
+          "end": 71.56
+        },
+        {
+          "word": "veo",
+          "start": 71.56,
+          "end": 71.68
+        },
+        {
+          "word": "la",
+          "start": 71.68,
+          "end": 71.84
+        },
+        {
+          "word": "pierna",
+          "start": 71.84,
+          "end": 72.2
+        }
+      ]
+    },
+    {
+      "start": 72.2,
+      "end": 72.84,
+      "text": "exactamente",
+      "words": [
+        {
+          "word": "exactamente",
+          "start": 72.2,
+          "end": 72.84
+        }
+      ]
+    },
+    {
+      "start": 72.84,
+      "end": 75.72,
+      "text": "y la oreja derecha está centrada con el culo más o menos",
+      "words": [
+        {
+          "word": "y",
+          "start": 72.84,
+          "end": 73.36
+        },
+        {
+          "word": "la",
+          "start": 73.36,
+          "end": 73.44
+        },
+        {
+          "word": "oreja",
+          "start": 73.44,
+          "end": 73.78
+        },
+        {
+          "word": "derecha",
+          "start": 73.78,
+          "end": 74.06
+        },
+        {
+          "word": "está",
+          "start": 74.06,
+          "end": 74.18
+        },
+        {
+          "word": "centrada",
+          "start": 74.18,
+          "end": 74.56
+        },
+        {
+          "word": "con",
+          "start": 74.56,
+          "end": 74.76
+        },
+        {
+          "word": "el",
+          "start": 74.76,
+          "end": 74.92
+        },
+        {
+          "word": "culo",
+          "start": 74.92,
+          "end": 75.12
+        },
+        {
+          "word": "más",
+          "start": 75.12,
+          "end": 75.32
+        },
+        {
+          "word": "o",
+          "start": 75.32,
+          "end": 75.44
+        },
+        {
+          "word": "menos",
+          "start": 75.44,
+          "end": 75.72
+        }
+      ]
+    },
+    {
+      "start": 75.72,
+      "end": 77.52,
+      "text": "si, más o menos si",
+      "words": [
+        {
+          "word": "si,",
+          "start": 75.72,
+          "end": 76.38
+        },
+        {
+          "word": "más",
+          "start": 76.58,
+          "end": 76.82
+        },
+        {
+          "word": "o",
+          "start": 76.82,
+          "end": 76.96
+        },
+        {
+          "word": "menos",
+          "start": 76.96,
+          "end": 77.1
+        },
+        {
+          "word": "si",
+          "start": 77.1,
+          "end": 77.52
+        }
+      ]
+    },
+    {
+      "start": 77.52,
+      "end": 78.38,
+      "text": "bueno, ahora ahí",
+      "words": [
+        {
+          "word": "bueno,",
+          "start": 77.52,
+          "end": 77.86
+        },
+        {
+          "word": "ahora",
+          "start": 78.02,
+          "end": 78.16
+        },
+        {
+          "word": "ahí",
+          "start": 78.16,
+          "end": 78.38
+        }
+      ]
+    }
+  ]
+}

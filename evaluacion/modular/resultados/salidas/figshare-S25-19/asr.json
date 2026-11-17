@@ -1,0 +1,581 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.44,
+      "text": "manda el bichito ese simpático a la lombriz esa arriba de las dos lunas",
+      "words": [
+        {
+          "word": "manda",
+          "start": 0.0,
+          "end": 0.86
+        },
+        {
+          "word": "el",
+          "start": 0.86,
+          "end": 1.08
+        },
+        {
+          "word": "bichito",
+          "start": 1.08,
+          "end": 1.5
+        },
+        {
+          "word": "ese",
+          "start": 1.5,
+          "end": 2.12
+        },
+        {
+          "word": "simpático",
+          "start": 2.12,
+          "end": 2.72
+        },
+        {
+          "word": "a",
+          "start": 2.72,
+          "end": 3.58
+        },
+        {
+          "word": "lombriz",
+          "start": 3.58,
+          "end": 3.94
+        },
+        {
+          "word": "esa",
+          "start": 3.94,
+          "end": 4.26
+        },
+        {
+          "word": "arriba",
+          "start": 4.26,
+          "end": 5.22
+        },
+        {
+          "word": "de",
+          "start": 5.22,
+          "end": 5.7
+        },
+        {
+          "word": "las",
+          "start": 5.7,
+          "end": 5.76
+        },
+        {
+          "word": "dos",
+          "start": 5.76,
+          "end": 5.92
+        },
+        {
+          "word": "lunas",
+          "start": 5.92,
+          "end": 6.44
+        }
+      ]
+    },
+    {
+      "start": 6.44,
+      "end": 12.38,
+      "text": "centrada entre las dos lunas como si la sombra estuviese apoyada sobre la luna",
+      "words": [
+        {
+          "word": "centrada",
+          "start": 6.44,
+          "end": 7.34
+        },
+        {
+          "word": "entre",
+          "start": 7.34,
+          "end": 7.62
+        },
+        {
+          "word": "las",
+          "start": 7.62,
+          "end": 7.76
+        },
+        {
+          "word": "dos",
+          "start": 7.76,
+          "end": 7.94
+        },
+        {
+          "word": "lunas",
+          "start": 7.94,
+          "end": 8.42
+        },
+        {
+          "word": "como",
+          "start": 8.42,
+          "end": 9.14
+        },
+        {
+          "word": "si",
+          "start": 9.14,
+          "end": 9.3
+        },
+        {
+          "word": "la",
+          "start": 9.3,
+          "end": 9.5
+        },
+        {
+          "word": "sombra",
+          "start": 9.5,
+          "end": 9.76
+        },
+        {
+          "word": "estuviese",
+          "start": 9.76,
+          "end": 10.06
+        },
+        {
+          "word": "apoyada",
+          "start": 10.06,
+          "end": 11.36
+        },
+        {
+          "word": "sobre",
+          "start": 11.36,
+          "end": 11.74
+        },
+        {
+          "word": "la",
+          "start": 11.74,
+          "end": 12.14
+        },
+        {
+          "word": "luna",
+          "start": 12.14,
+          "end": 12.38
+        }
+      ]
+    },
+    {
+      "start": 12.38,
+      "end": 13.96,
+      "text": "derecha la amarilla",
+      "words": [
+        {
+          "word": "derecha",
+          "start": 12.38,
+          "end": 12.92
+        },
+        {
+          "word": "la",
+          "start": 12.92,
+          "end": 13.12
+        },
+        {
+          "word": "amarilla",
+          "start": 13.12,
+          "end": 13.96
+        }
+      ]
+    },
+    {
+      "start": 16.88,
+      "end": 23.08,
+      "text": "y poner el mentón del mentón del bicho del gusano está como la misma línea que",
+      "words": [
+        {
+          "word": "y",
+          "start": 16.88,
+          "end": 17.58
+        },
+        {
+          "word": "poner",
+          "start": 17.58,
+          "end": 17.98
+        },
+        {
+          "word": "el",
+          "start": 17.98,
+          "end": 18.18
+        },
+        {
+          "word": "mentón",
+          "start": 18.18,
+          "end": 18.58
+        },
+        {
+          "word": "del",
+          "start": 18.58,
+          "end": 19.04
+        },
+        {
+          "word": "mentón",
+          "start": 19.04,
+          "end": 19.54
+        },
+        {
+          "word": "del",
+          "start": 19.54,
+          "end": 20.18
+        },
+        {
+          "word": "bicho",
+          "start": 20.18,
+          "end": 20.44
+        },
+        {
+          "word": "del",
+          "start": 20.44,
+          "end": 20.6
+        },
+        {
+          "word": "gusano",
+          "start": 20.6,
+          "end": 21.4
+        },
+        {
+          "word": "está",
+          "start": 21.4,
+          "end": 21.76
+        },
+        {
+          "word": "como",
+          "start": 21.76,
+          "end": 22.08
+        },
+        {
+          "word": "la",
+          "start": 22.08,
+          "end": 22.32
+        },
+        {
+          "word": "misma",
+          "start": 22.32,
+          "end": 22.54
+        },
+        {
+          "word": "línea",
+          "start": 22.54,
+          "end": 22.9
+        },
+        {
+          "word": "que",
+          "start": 22.9,
+          "end": 23.08
+        }
+      ]
+    },
+    {
+      "start": 23.08,
+      "end": 28.32,
+      "text": "la punta sur de la luna amarilla. Listo y la sombra está casi rosando.",
+      "words": [
+        {
+          "word": "la",
+          "start": 23.08,
+          "end": 23.26
+        },
+        {
+          "word": "punta",
+          "start": 23.26,
+          "end": 23.92
+        },
+        {
+          "word": "sur",
+          "start": 23.92,
+          "end": 24.24
+        },
+        {
+          "word": "de",
+          "start": 24.24,
+          "end": 24.5
+        },
+        {
+          "word": "la",
+          "start": 24.5,
+          "end": 25.54
+        },
+        {
+          "word": "luna",
+          "start": 25.54,
+          "end": 25.86
+        },
+        {
+          "word": "amarilla.",
+          "start": 25.86,
+          "end": 26.28
+        },
+        {
+          "word": "Listo",
+          "start": 26.68,
+          "end": 26.86
+        },
+        {
+          "word": "y",
+          "start": 26.86,
+          "end": 26.98
+        },
+        {
+          "word": "la",
+          "start": 26.98,
+          "end": 27.1
+        },
+        {
+          "word": "sombra",
+          "start": 27.1,
+          "end": 27.34
+        },
+        {
+          "word": "está",
+          "start": 27.34,
+          "end": 27.48
+        },
+        {
+          "word": "casi",
+          "start": 27.48,
+          "end": 27.74
+        },
+        {
+          "word": "rosando.",
+          "start": 27.74,
+          "end": 28.32
+        }
+      ]
+    },
+    {
+      "start": 28.32,
+      "end": 36.32,
+      "text": "La sombra del lado derecho está tocando o está sobre la línea negra de la luna amarilla",
+      "words": [
+        {
+          "word": "La",
+          "start": 28.32,
+          "end": 28.82
+        },
+        {
+          "word": "sombra",
+          "start": 28.82,
+          "end": 29.42
+        },
+        {
+          "word": "del",
+          "start": 29.42,
+          "end": 29.56
+        },
+        {
+          "word": "lado",
+          "start": 29.56,
+          "end": 29.72
+        },
+        {
+          "word": "derecho",
+          "start": 29.72,
+          "end": 29.9
+        },
+        {
+          "word": "está",
+          "start": 29.9,
+          "end": 31.72
+        },
+        {
+          "word": "tocando",
+          "start": 31.72,
+          "end": 32.96
+        },
+        {
+          "word": "o",
+          "start": 32.96,
+          "end": 33.24
+        },
+        {
+          "word": "está",
+          "start": 33.24,
+          "end": 33.54
+        },
+        {
+          "word": "sobre",
+          "start": 33.54,
+          "end": 34.08
+        },
+        {
+          "word": "la",
+          "start": 34.08,
+          "end": 34.32
+        },
+        {
+          "word": "línea",
+          "start": 34.32,
+          "end": 34.56
+        },
+        {
+          "word": "negra",
+          "start": 34.56,
+          "end": 34.9
+        },
+        {
+          "word": "de",
+          "start": 34.9,
+          "end": 35.02
+        },
+        {
+          "word": "la",
+          "start": 35.02,
+          "end": 35.1
+        },
+        {
+          "word": "luna",
+          "start": 35.1,
+          "end": 35.24
+        },
+        {
+          "word": "amarilla",
+          "start": 35.24,
+          "end": 36.32
+        }
+      ]
+    },
+    {
+      "start": 36.32,
+      "end": 42.7,
+      "text": "y la sombra del lado izquierdo está tocando el borde de la luna azul y la",
+      "words": [
+        {
+          "word": "y",
+          "start": 36.32,
+          "end": 37.04
+        },
+        {
+          "word": "la",
+          "start": 37.04,
+          "end": 37.18
+        },
+        {
+          "word": "sombra",
+          "start": 37.18,
+          "end": 37.5
+        },
+        {
+          "word": "del",
+          "start": 37.5,
+          "end": 37.64
+        },
+        {
+          "word": "lado",
+          "start": 37.64,
+          "end": 37.78
+        },
+        {
+          "word": "izquierdo",
+          "start": 37.78,
+          "end": 39.16
+        },
+        {
+          "word": "está",
+          "start": 39.16,
+          "end": 39.64
+        },
+        {
+          "word": "tocando",
+          "start": 39.64,
+          "end": 40.54
+        },
+        {
+          "word": "el",
+          "start": 40.54,
+          "end": 41.02
+        },
+        {
+          "word": "borde",
+          "start": 41.02,
+          "end": 41.34
+        },
+        {
+          "word": "de",
+          "start": 41.34,
+          "end": 41.54
+        },
+        {
+          "word": "la",
+          "start": 41.54,
+          "end": 41.6
+        },
+        {
+          "word": "luna",
+          "start": 41.6,
+          "end": 41.82
+        },
+        {
+          "word": "azul",
+          "start": 41.82,
+          "end": 42.06
+        },
+        {
+          "word": "y",
+          "start": 42.06,
+          "end": 42.48
+        },
+        {
+          "word": "la",
+          "start": 42.48,
+          "end": 42.7
+        }
+      ]
+    },
+    {
+      "start": 42.7,
+      "end": 46.64,
+      "text": "pasa un poco también. Está un poco superpuesta con la luna azul.",
+      "words": [
+        {
+          "word": "pasa",
+          "start": 42.7,
+          "end": 42.84
+        },
+        {
+          "word": "un",
+          "start": 42.84,
+          "end": 42.96
+        },
+        {
+          "word": "poco",
+          "start": 42.96,
+          "end": 43.14
+        },
+        {
+          "word": "también.",
+          "start": 43.14,
+          "end": 43.84
+        },
+        {
+          "word": "un",
+          "start": 44.34,
+          "end": 44.46
+        },
+        {
+          "word": "poco",
+          "start": 44.46,
+          "end": 44.66
+        },
+        {
+          "word": "superpuesta",
+          "start": 44.66,
+          "end": 45.04
+        },
+        {
+          "word": "con",
+          "start": 45.04,
+          "end": 46.08
+        },
+        {
+          "word": "la",
+          "start": 46.08,
+          "end": 46.2
+        },
+        {
+          "word": "luna",
+          "start": 46.2,
+          "end": 46.4
+        },
+        {
+          "word": "azul.",
+          "start": 46.4,
+          "end": 46.64
+        }
+      ]
+    }
+  ]
+}

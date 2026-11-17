@@ -1,0 +1,96 @@
+{
+  "segments": [
+    {
+      "start": 1.94,
+      "end": 8.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, tenés que agarrar el espejo y tapar a la monja con el espejo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 68
+      }
+    },
+    {
+      "start": 12.54,
+      "end": 17.06,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Se sigue viendo el circulito, digamos la uriola que tiene la monja, pero la monja no se ve.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 91
+      }
+    },
+    {
+      "start": 18.76,
+      "end": 20.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Se ve? ¿Le tapa la cabeza?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 27
+      }
+    },
+    {
+      "start": 20.38,
+      "end": 27.16,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Se ve un poquitito de la cabeza, de la parte izquierda y un poco del mando, la parte abajo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 91
+      }
+    }
+  ]
+}

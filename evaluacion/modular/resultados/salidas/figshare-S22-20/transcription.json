@@ -1,0 +1,770 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 10.98,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "El espejo está en la misma línea que la luna amarilla y en la misma línea que la limusina esta",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 94
+      }
+    },
+    {
+      "start": 10.98,
+      "end": 11.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "negra.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 95,
+        "end": 101
+      }
+    },
+    {
+      "start": 12.66,
+      "end": 15.18,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y referencia a ver...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 21
+      }
+    },
+    {
+      "start": 15.72,
+      "end": 20.28,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Usemos el cuadro de la luna azul también, ¿no? como referencia.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 63
+      }
+    },
+    {
+      "start": 20.54,
+      "end": 22.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, no entra acá.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 17
+      }
+    },
+    {
+      "start": 22.92,
+      "end": 26.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Pero entonces, ¿está a la altura de la luna amarilla?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 53
+      }
+    },
+    {
+      "start": 26.46,
+      "end": 27.02,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sobre.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 6
+      }
+    },
+    {
+      "start": 27.02,
+      "end": 34.64,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ah, y sí a la altura... horizontalmente sí a la altura del auto.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 64
+      }
+    },
+    {
+      "start": 35.66,
+      "end": 48.72,
+      "speaker": null,
+      "name": null,
+      "text": "Ahora, la rueda de adelante que se ve del coche estaría un poquito más arriba que el espejo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 92
+      }
+    },
+    {
+      "start": 48.9,
+      "end": 49.86,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Solamente un poquito.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 21
+      }
+    },
+    {
+      "start": 49.86,
+      "end": 57.56,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y la punta de abajo de la luna con respecto a la parte izquierda...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 67
+      }
+    },
+    {
+      "start": 57.56,
+      "end": 62.86,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Así milimétricamente, bueno, está a 2, 3 milímetros del espejo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 63
+      }
+    },
+    {
+      "start": 63.2,
+      "end": 64.32,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Después empieza el espejo, digamos.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 35
+      }
+    },
+    {
+      "start": 64.92,
+      "end": 66.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Más hacia la izquierda?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 66.76,
+      "end": 67.44,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Hacia la",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 8
+      }
+    },
+    {
+      "start": 67.44,
+      "end": 70.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "derecha. El espejo hacia la derecha.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 9,
+        "end": 45
+      }
+    },
+    {
+      "start": 70.38,
+      "end": 72.18,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Claro, el espejo está por detrás, digamos.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 42
+      }
+    },
+    {
+      "start": 72.18,
+      "end": 74.18,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El espejo está más cerca de...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 75.62,
+      "end": 77.66,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Como el final del cuadro, digamos.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 34
+      }
+    },
+    {
+      "start": 77.94,
+      "end": 79.38,
+      "speaker": null,
+      "name": null,
+      "text": "El final del... ¿cómo se llamaba?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 33
+      }
+    },
+    {
+      "start": 81.08,
+      "end": 81.64,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 81.64,
+      "end": 82.2,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "marco...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 3,
+        "end": 11
+      }
+    },
+    {
+      "start": 82.2,
+      "end": 83.42,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Es lo mismo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 84.38,
+      "end": 85.22,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, pero te digo...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 19
+      }
+    },
+    {
+      "start": 86.88,
+      "end": 91.6,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La punta de la luna está más y es más cercana a la limusina.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 60
+      }
+    },
+    {
+      "start": 93.02,
+      "end": 93.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, para nada.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 14
+      }
+    },
+    {
+      "start": 94.36,
+      "end": 101.7,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Tenemos la luna abajo y la punta que vos decías, si necesitas de referencia, esa punta de abajo de la luna...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 23,
+        "start": 0,
+        "end": 109
+      }
+    },
+    {
+      "start": 102.76,
+      "end": 105.22,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Pues entonces, trases una línea hacia arriba",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 0,
+        "end": 44
+      }
+    },
+    {
+      "start": 105.22,
+      "end": 105.9,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "y",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 45,
+        "end": 46
+      }
+    },
+    {
+      "start": 105.9,
+      "end": 107.98,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "este espejo está corrido hacia la derecha...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 47,
+        "end": 91
+      }
+    },
+    {
+      "start": 107.98,
+      "end": 109.94,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "No sé, dos milímetros.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 25,
+        "start": 0,
+        "end": 22
+      }
+    },
+    {
+      "start": 110.2,
+      "end": 110.88,
+      "speaker": null,
+      "name": null,
+      "text": "Ah, bien.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 26,
+        "start": 0,
+        "end": 9
+      }
+    },
+    {
+      "start": 111.48,
+      "end": 113.62,
+      "speaker": null,
+      "name": null,
+      "text": "Vamos a ver un poquito...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 27,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 116.56,
+      "end": 117.6,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, ahora ahí.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 28,
+        "start": 0,
+        "end": 17
+      }
+    }
+  ]
+}

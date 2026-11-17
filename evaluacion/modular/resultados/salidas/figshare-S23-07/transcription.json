@@ -1,0 +1,25 @@
+{
+  "segments": [
+    {
+      "start": 0.98,
+      "end": 17.42,
+      "speaker": null,
+      "name": null,
+      "text": "Bueno, tienes que agarrar la luna azul y bueno, a la izquierda, tienes que llevarlo abajo de la luna amarilla y a la derecha del espejo ese, que es también en la intersección.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 175
+      }
+    }
+  ]
+}

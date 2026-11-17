@@ -1,0 +1,318 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 1.94,
+      "end": 8.0,
+      "text": "Bueno, tenés que agarrar el espejo y tapar a la monja con el espejo.",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 1.94,
+          "end": 2.34
+        },
+        {
+          "word": "tenés",
+          "start": 2.5,
+          "end": 2.7
+        },
+        {
+          "word": "que",
+          "start": 2.7,
+          "end": 2.8
+        },
+        {
+          "word": "agarrar",
+          "start": 2.8,
+          "end": 3.12
+        },
+        {
+          "word": "el",
+          "start": 3.12,
+          "end": 3.38
+        },
+        {
+          "word": "espejo",
+          "start": 3.38,
+          "end": 4.36
+        },
+        {
+          "word": "y",
+          "start": 4.36,
+          "end": 5.72
+        },
+        {
+          "word": "tapar",
+          "start": 5.72,
+          "end": 6.26
+        },
+        {
+          "word": "a",
+          "start": 6.26,
+          "end": 6.38
+        },
+        {
+          "word": "la",
+          "start": 6.38,
+          "end": 6.52
+        },
+        {
+          "word": "monja",
+          "start": 6.52,
+          "end": 6.82
+        },
+        {
+          "word": "con",
+          "start": 6.82,
+          "end": 6.98
+        },
+        {
+          "word": "el",
+          "start": 6.98,
+          "end": 7.14
+        },
+        {
+          "word": "espejo.",
+          "start": 7.14,
+          "end": 8.0
+        }
+      ]
+    },
+    {
+      "start": 12.54,
+      "end": 17.06,
+      "text": "Se sigue viendo el circulito, digamos la uriola que tiene la monja, pero la monja no se ve.",
+      "words": [
+        {
+          "word": "Se",
+          "start": 12.54,
+          "end": 12.94
+        },
+        {
+          "word": "sigue",
+          "start": 12.94,
+          "end": 13.12
+        },
+        {
+          "word": "viendo",
+          "start": 13.12,
+          "end": 13.48
+        },
+        {
+          "word": "el",
+          "start": 13.48,
+          "end": 13.98
+        },
+        {
+          "word": "circulito,",
+          "start": 13.98,
+          "end": 14.64
+        },
+        {
+          "word": "digamos",
+          "start": 14.68,
+          "end": 14.9
+        },
+        {
+          "word": "la",
+          "start": 14.9,
+          "end": 15.06
+        },
+        {
+          "word": "uriola",
+          "start": 15.06,
+          "end": 15.34
+        },
+        {
+          "word": "que",
+          "start": 15.34,
+          "end": 15.48
+        },
+        {
+          "word": "tiene",
+          "start": 15.48,
+          "end": 15.58
+        },
+        {
+          "word": "la",
+          "start": 15.58,
+          "end": 15.74
+        },
+        {
+          "word": "monja,",
+          "start": 15.74,
+          "end": 15.94
+        },
+        {
+          "word": "pero",
+          "start": 16.04,
+          "end": 16.12
+        },
+        {
+          "word": "la",
+          "start": 16.12,
+          "end": 16.24
+        },
+        {
+          "word": "monja",
+          "start": 16.24,
+          "end": 16.52
+        },
+        {
+          "word": "no",
+          "start": 16.52,
+          "end": 16.74
+        },
+        {
+          "word": "se",
+          "start": 16.74,
+          "end": 16.84
+        },
+        {
+          "word": "ve.",
+          "start": 16.84,
+          "end": 17.06
+        }
+      ]
+    },
+    {
+      "start": 18.76,
+      "end": 20.12,
+      "text": "¿Se ve? ¿Le tapa la cabeza?",
+      "words": [
+        {
+          "word": "¿Se",
+          "start": 18.76,
+          "end": 19.08
+        },
+        {
+          "word": "ve?",
+          "start": 19.08,
+          "end": 19.36
+        },
+        {
+          "word": "¿Le",
+          "start": 19.44,
+          "end": 19.56
+        },
+        {
+          "word": "tapa",
+          "start": 19.56,
+          "end": 19.7
+        },
+        {
+          "word": "la",
+          "start": 19.7,
+          "end": 19.86
+        },
+        {
+          "word": "cabeza?",
+          "start": 19.86,
+          "end": 20.12
+        }
+      ]
+    },
+    {
+      "start": 20.38,
+      "end": 27.16,
+      "text": "Se ve un poquitito de la cabeza, de la parte izquierda y un poco del mando, la parte abajo.",
+      "words": [
+        {
+          "word": "Se",
+          "start": 20.38,
+          "end": 20.78
+        },
+        {
+          "word": "ve",
+          "start": 20.78,
+          "end": 20.88
+        },
+        {
+          "word": "un",
+          "start": 20.88,
+          "end": 21.06
+        },
+        {
+          "word": "poquitito",
+          "start": 21.06,
+          "end": 21.54
+        },
+        {
+          "word": "de",
+          "start": 21.54,
+          "end": 21.7
+        },
+        {
+          "word": "la",
+          "start": 21.7,
+          "end": 21.96
+        },
+        {
+          "word": "cabeza,",
+          "start": 21.96,
+          "end": 22.2
+        },
+        {
+          "word": "de",
+          "start": 22.38,
+          "end": 22.4
+        },
+        {
+          "word": "la",
+          "start": 22.4,
+          "end": 22.5
+        },
+        {
+          "word": "parte",
+          "start": 22.5,
+          "end": 22.68
+        },
+        {
+          "word": "izquierda",
+          "start": 22.68,
+          "end": 24.26
+        },
+        {
+          "word": "y",
+          "start": 24.26,
+          "end": 25.22
+        },
+        {
+          "word": "un",
+          "start": 25.22,
+          "end": 25.34
+        },
+        {
+          "word": "poco",
+          "start": 25.34,
+          "end": 25.58
+        },
+        {
+          "word": "del",
+          "start": 25.58,
+          "end": 25.88
+        },
+        {
+          "word": "mando,",
+          "start": 25.88,
+          "end": 26.44
+        },
+        {
+          "word": "la",
+          "start": 26.58,
+          "end": 26.64
+        },
+        {
+          "word": "parte",
+          "start": 26.64,
+          "end": 26.82
+        },
+        {
+          "word": "abajo.",
+          "start": 26.82,
+          "end": 27.16
+        }
+      ]
+    }
+  ]
+}

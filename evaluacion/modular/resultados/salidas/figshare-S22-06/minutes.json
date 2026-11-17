@@ -1,0 +1,34 @@
+{
+  "resumen": "La reunión se centró en la ubicación de una media luna amarilla en relación con un ojo y una regla. Se acordó que la media luna debe estar simétricamente colocada entre las dos puntas del ojo, y termina donde terminan las dos puntas del ojo.",
+  "temas": [
+    {
+      "texto": "Ubicación de la media luna amarilla",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010"
+      ],
+      "id_ancla": "I000010"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "Dale, listo.",
+      "ids_intervenciones": [
+        "I000010"
+      ],
+      "id_ancla": "I000010",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

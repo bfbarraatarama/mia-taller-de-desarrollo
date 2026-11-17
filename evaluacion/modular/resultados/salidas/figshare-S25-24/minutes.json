@@ -1,0 +1,48 @@
+{
+  "resumen": "La reunión se centró en la colocación de un espejo sobre un rinoceronte amarillo, con el objetivo de que solo se vea la cola del animal. Se discutió la visibilidad del cuerno y las patas traseras del rinoceronte.",
+  "temas": [
+    {
+      "texto": "Colocación del espejo sobre un rinoceronte amarillo.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024"
+      ],
+      "id_ancla": "I000024"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "La visibilidad del cuerno y las patas traseras del rinoceronte.",
+      "ids_intervenciones": [
+        "I000010",
+        "I000011",
+        "I000020"
+      ],
+      "id_ancla": "I000020"
+    }
+  ],
+  "acciones": []
+}

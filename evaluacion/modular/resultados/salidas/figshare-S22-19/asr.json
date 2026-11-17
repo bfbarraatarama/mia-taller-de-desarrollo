@@ -1,0 +1,768 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 1.42,
+      "end": 8.84,
+      "text": "la víbora esa está sobre las dos lunas como si fuera la",
+      "words": [
+        {
+          "word": "la",
+          "start": 1.42,
+          "end": 1.96
+        },
+        {
+          "word": "víbora",
+          "start": 1.96,
+          "end": 2.38
+        },
+        {
+          "word": "esa",
+          "start": 2.38,
+          "end": 3.46
+        },
+        {
+          "word": "está",
+          "start": 3.46,
+          "end": 4.18
+        },
+        {
+          "word": "sobre",
+          "start": 4.18,
+          "end": 4.76
+        },
+        {
+          "word": "las",
+          "start": 4.76,
+          "end": 4.98
+        },
+        {
+          "word": "dos",
+          "start": 4.98,
+          "end": 5.14
+        },
+        {
+          "word": "lunas",
+          "start": 5.14,
+          "end": 6.58
+        },
+        {
+          "word": "como",
+          "start": 6.58,
+          "end": 6.82
+        },
+        {
+          "word": "si",
+          "start": 6.82,
+          "end": 7.0
+        },
+        {
+          "word": "fuera",
+          "start": 7.0,
+          "end": 7.24
+        },
+        {
+          "word": "la",
+          "start": 7.24,
+          "end": 8.84
+        }
+      ]
+    },
+    {
+      "start": 8.84,
+      "end": 12.18,
+      "text": "no sé qué es, viste que tiene como una sombra negra o...",
+      "words": [
+        {
+          "word": "no",
+          "start": 8.84,
+          "end": 8.9
+        },
+        {
+          "word": "sé",
+          "start": 8.9,
+          "end": 9.12
+        },
+        {
+          "word": "qué",
+          "start": 9.12,
+          "end": 9.74
+        },
+        {
+          "word": "es,",
+          "start": 9.74,
+          "end": 9.92
+        },
+        {
+          "word": "viste",
+          "start": 9.92,
+          "end": 10.0
+        },
+        {
+          "word": "que",
+          "start": 10.0,
+          "end": 10.16
+        },
+        {
+          "word": "tiene",
+          "start": 10.16,
+          "end": 10.32
+        },
+        {
+          "word": "como",
+          "start": 10.32,
+          "end": 10.54
+        },
+        {
+          "word": "una",
+          "start": 10.54,
+          "end": 10.82
+        },
+        {
+          "word": "sombra",
+          "start": 10.82,
+          "end": 11.3
+        },
+        {
+          "word": "negra",
+          "start": 11.3,
+          "end": 12.08
+        },
+        {
+          "word": "o...",
+          "start": 12.08,
+          "end": 12.18
+        }
+      ]
+    },
+    {
+      "start": 12.18,
+      "end": 13.96,
+      "text": "sí, apoya en las dos lunas",
+      "words": [
+        {
+          "word": "sí,",
+          "start": 12.18,
+          "end": 12.72
+        },
+        {
+          "word": "apoya",
+          "start": 12.92,
+          "end": 13.18
+        },
+        {
+          "word": "en",
+          "start": 13.18,
+          "end": 13.32
+        },
+        {
+          "word": "las",
+          "start": 13.32,
+          "end": 13.46
+        },
+        {
+          "word": "dos",
+          "start": 13.46,
+          "end": 13.64
+        },
+        {
+          "word": "lunas",
+          "start": 13.64,
+          "end": 13.96
+        }
+      ]
+    },
+    {
+      "start": 13.96,
+      "end": 15.76,
+      "text": "apoya en las dos",
+      "words": [
+        {
+          "word": "apoya",
+          "start": 13.96,
+          "end": 14.36
+        },
+        {
+          "word": "en",
+          "start": 14.36,
+          "end": 14.5
+        },
+        {
+          "word": "las",
+          "start": 14.5,
+          "end": 14.64
+        },
+        {
+          "word": "dos",
+          "start": 14.64,
+          "end": 15.76
+        }
+      ]
+    },
+    {
+      "start": 15.76,
+      "end": 18.0,
+      "text": "y a ver qué te puedo decir",
+      "words": [
+        {
+          "word": "y",
+          "start": 15.76,
+          "end": 16.68
+        },
+        {
+          "word": "a",
+          "start": 16.68,
+          "end": 17.04
+        },
+        {
+          "word": "ver",
+          "start": 17.04,
+          "end": 17.36
+        },
+        {
+          "word": "qué",
+          "start": 17.36,
+          "end": 17.54
+        },
+        {
+          "word": "te",
+          "start": 17.54,
+          "end": 17.78
+        },
+        {
+          "word": "puedo",
+          "start": 17.78,
+          "end": 17.9
+        },
+        {
+          "word": "decir",
+          "start": 17.9,
+          "end": 18.17
+        }
+      ]
+    },
+    {
+      "start": 21.52,
+      "end": 22.06,
+      "text": "la",
+      "words": [
+        {
+          "word": "la",
+          "start": 21.52,
+          "end": 22.06
+        }
+      ]
+    },
+    {
+      "start": 23.34,
+      "end": 25.04,
+      "text": "digamos la parte",
+      "words": [
+        {
+          "word": "digamos",
+          "start": 23.34,
+          "end": 23.88
+        },
+        {
+          "word": "la",
+          "start": 23.88,
+          "end": 24.12
+        },
+        {
+          "word": "parte",
+          "start": 24.12,
+          "end": 25.04
+        }
+      ]
+    },
+    {
+      "start": 25.78,
+      "end": 29.76,
+      "text": "viste que está como enroscada y tiene como si fuera un monito",
+      "words": [
+        {
+          "word": "viste",
+          "start": 25.78,
+          "end": 26.32
+        },
+        {
+          "word": "que",
+          "start": 26.32,
+          "end": 26.78
+        },
+        {
+          "word": "está",
+          "start": 26.78,
+          "end": 27.08
+        },
+        {
+          "word": "como",
+          "start": 27.08,
+          "end": 27.34
+        },
+        {
+          "word": "enroscada",
+          "start": 27.34,
+          "end": 28.04
+        },
+        {
+          "word": "y",
+          "start": 28.04,
+          "end": 28.42
+        },
+        {
+          "word": "tiene",
+          "start": 28.42,
+          "end": 28.6
+        },
+        {
+          "word": "como",
+          "start": 28.6,
+          "end": 28.92
+        },
+        {
+          "word": "si",
+          "start": 28.92,
+          "end": 29.1
+        },
+        {
+          "word": "fuera",
+          "start": 29.1,
+          "end": 29.2
+        },
+        {
+          "word": "un",
+          "start": 29.2,
+          "end": 29.42
+        },
+        {
+          "word": "monito",
+          "start": 29.42,
+          "end": 29.76
+        }
+      ]
+    },
+    {
+      "start": 29.76,
+      "end": 30.78,
+      "text": "digamos la parte de abajo",
+      "words": [
+        {
+          "word": "digamos",
+          "start": 29.76,
+          "end": 30.0
+        },
+        {
+          "word": "la",
+          "start": 30.0,
+          "end": 30.18
+        },
+        {
+          "word": "parte",
+          "start": 30.18,
+          "end": 30.32
+        },
+        {
+          "word": "de",
+          "start": 30.32,
+          "end": 30.78
+        }
+      ]
+    },
+    {
+      "start": 31.76,
+      "end": 33.9,
+      "text": "la parte derecha de ese monito",
+      "words": [
+        {
+          "word": "la",
+          "start": 31.76,
+          "end": 32.14
+        },
+        {
+          "word": "parte",
+          "start": 32.14,
+          "end": 32.5
+        },
+        {
+          "word": "derecha",
+          "start": 32.5,
+          "end": 32.96
+        },
+        {
+          "word": "de",
+          "start": 32.96,
+          "end": 33.12
+        },
+        {
+          "word": "ese",
+          "start": 33.12,
+          "end": 33.28
+        },
+        {
+          "word": "monito",
+          "start": 33.28,
+          "end": 33.9
+        }
+      ]
+    },
+    {
+      "start": 33.9,
+      "end": 38.76,
+      "text": "casi está a la altura de la punta de la luna amarilla",
+      "words": [
+        {
+          "word": "casi",
+          "start": 33.9,
+          "end": 34.96
+        },
+        {
+          "word": "está",
+          "start": 34.96,
+          "end": 36.18
+        },
+        {
+          "word": "a",
+          "start": 36.18,
+          "end": 36.54
+        },
+        {
+          "word": "la",
+          "start": 36.54,
+          "end": 36.72
+        },
+        {
+          "word": "altura",
+          "start": 36.72,
+          "end": 36.98
+        },
+        {
+          "word": "de",
+          "start": 36.98,
+          "end": 37.24
+        },
+        {
+          "word": "la",
+          "start": 37.24,
+          "end": 37.48
+        },
+        {
+          "word": "punta",
+          "start": 37.48,
+          "end": 37.82
+        },
+        {
+          "word": "de",
+          "start": 37.82,
+          "end": 37.96
+        },
+        {
+          "word": "la",
+          "start": 37.96,
+          "end": 38.08
+        },
+        {
+          "word": "luna",
+          "start": 38.08,
+          "end": 38.24
+        },
+        {
+          "word": "amarilla",
+          "start": 38.24,
+          "end": 38.76
+        }
+      ]
+    },
+    {
+      "start": 39.4,
+      "end": 40.92,
+      "text": "ah ok",
+      "words": [
+        {
+          "word": "ok",
+          "start": 39.4,
+          "end": 40.92
+        }
+      ]
+    },
+    {
+      "start": 40.92,
+      "end": 43.76,
+      "text": "igual casi casi",
+      "words": [
+        {
+          "word": "igual",
+          "start": 40.92,
+          "end": 42.2
+        },
+        {
+          "word": "casi",
+          "start": 42.2,
+          "end": 42.92
+        },
+        {
+          "word": "casi",
+          "start": 42.92,
+          "end": 43.76
+        }
+      ]
+    },
+    {
+      "start": 44.7,
+      "end": 49.98,
+      "text": "como si siguieramos la línea de la punta de la luna amarilla",
+      "words": [
+        {
+          "word": "como",
+          "start": 44.7,
+          "end": 45.22
+        },
+        {
+          "word": "si",
+          "start": 45.22,
+          "end": 45.4
+        },
+        {
+          "word": "siguieramos",
+          "start": 45.4,
+          "end": 45.82
+        },
+        {
+          "word": "la",
+          "start": 45.82,
+          "end": 46.02
+        },
+        {
+          "word": "línea",
+          "start": 46.02,
+          "end": 46.24
+        },
+        {
+          "word": "de",
+          "start": 46.24,
+          "end": 46.52
+        },
+        {
+          "word": "la",
+          "start": 46.52,
+          "end": 48.44
+        },
+        {
+          "word": "punta",
+          "start": 48.44,
+          "end": 48.8
+        },
+        {
+          "word": "de",
+          "start": 48.8,
+          "end": 48.88
+        },
+        {
+          "word": "la",
+          "start": 48.88,
+          "end": 48.96
+        },
+        {
+          "word": "luna",
+          "start": 48.96,
+          "end": 49.14
+        },
+        {
+          "word": "amarilla",
+          "start": 49.14,
+          "end": 49.98
+        }
+      ]
+    },
+    {
+      "start": 51.64,
+      "end": 54.76,
+      "text": "en esa línea empezaría el monito",
+      "words": [
+        {
+          "word": "en",
+          "start": 51.64,
+          "end": 52.34
+        },
+        {
+          "word": "esa",
+          "start": 52.34,
+          "end": 52.56
+        },
+        {
+          "word": "línea",
+          "start": 52.56,
+          "end": 52.86
+        },
+        {
+          "word": "empezaría",
+          "start": 52.86,
+          "end": 54.14
+        },
+        {
+          "word": "el",
+          "start": 54.14,
+          "end": 54.52
+        },
+        {
+          "word": "monito",
+          "start": 54.52,
+          "end": 54.87
+        }
+      ]
+    },
+    {
+      "start": 55.67,
+      "end": 59.81,
+      "text": "y está sobre la línea amarilla y tocando la luna azul",
+      "words": [
+        {
+          "word": "y",
+          "start": 55.67,
+          "end": 56.27
+        },
+        {
+          "word": "está",
+          "start": 56.27,
+          "end": 56.69
+        },
+        {
+          "word": "sobre",
+          "start": 56.69,
+          "end": 57.47
+        },
+        {
+          "word": "la",
+          "start": 57.47,
+          "end": 57.69
+        },
+        {
+          "word": "línea",
+          "start": 57.69,
+          "end": 57.87
+        },
+        {
+          "word": "amarilla",
+          "start": 57.87,
+          "end": 58.41
+        },
+        {
+          "word": "y",
+          "start": 58.41,
+          "end": 58.63
+        },
+        {
+          "word": "tocando",
+          "start": 58.63,
+          "end": 58.93
+        },
+        {
+          "word": "la",
+          "start": 58.93,
+          "end": 59.17
+        },
+        {
+          "word": "luna",
+          "start": 59.17,
+          "end": 59.51
+        },
+        {
+          "word": "azul",
+          "start": 59.51,
+          "end": 59.81
+        }
+      ]
+    },
+    {
+      "start": 59.81,
+      "end": 60.85,
+      "text": "tocando apenas",
+      "words": [
+        {
+          "word": "tocando",
+          "start": 59.81,
+          "end": 60.37
+        },
+        {
+          "word": "apenas",
+          "start": 60.37,
+          "end": 60.85
+        }
+      ]
+    },
+    {
+      "start": 61.89,
+      "end": 64.73,
+      "text": "llega a cubrir la cosa esa negra",
+      "words": [
+        {
+          "word": "llega",
+          "start": 61.89,
+          "end": 62.49
+        },
+        {
+          "word": "a",
+          "start": 62.49,
+          "end": 62.61
+        },
+        {
+          "word": "cubrir",
+          "start": 62.61,
+          "end": 63.21
+        },
+        {
+          "word": "la",
+          "start": 63.21,
+          "end": 63.61
+        },
+        {
+          "word": "cosa",
+          "start": 63.61,
+          "end": 63.83
+        },
+        {
+          "word": "esa",
+          "start": 63.83,
+          "end": 64.07
+        },
+        {
+          "word": "negra",
+          "start": 64.07,
+          "end": 64.73
+        }
+      ]
+    },
+    {
+      "start": 64.73,
+      "end": 65.93,
+      "text": "ah ya pues está listo",
+      "words": [
+        {
+          "word": "ah",
+          "start": 64.73,
+          "end": 64.97
+        },
+        {
+          "word": "ya",
+          "start": 64.97,
+          "end": 65.07
+        },
+        {
+          "word": "pues",
+          "start": 65.07,
+          "end": 65.23
+        },
+        {
+          "word": "está",
+          "start": 65.23,
+          "end": 65.35
+        },
+        {
+          "word": "listo",
+          "start": 65.35,
+          "end": 65.93
+        }
+      ]
+    }
+  ]
+}

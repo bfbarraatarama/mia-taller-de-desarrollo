@@ -1,0 +1,87 @@
+{
+  "resumen": "Se discutió la posición y superposición de un avión sobre un bombillo, foco y cinturón. Se determinaron los detalles visuales del borde negro del foco y la relación entre el eje vertical del avión y los elementos del cinturón.",
+  "temas": [
+    {
+      "texto": "Posición del avión en relación al bombillo",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006"
+      ],
+      "id_ancla": "I000006"
+    },
+    {
+      "texto": "Descripción del borde negro del foco",
+      "ids_intervenciones": [
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019"
+      ],
+      "id_ancla": "I000019"
+    },
+    {
+      "texto": "Superposición del avión con el cinturón y el bombillo",
+      "ids_intervenciones": [
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024",
+        "I000025",
+        "I000026",
+        "I000027",
+        "I000028",
+        "I000029",
+        "I000030",
+        "I000031",
+        "I000032",
+        "I000033",
+        "I000034",
+        "I000035",
+        "I000036",
+        "I000037"
+      ],
+      "id_ancla": "I000037"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "Diferencia en la cantidad de dientes del borde negro del foco",
+      "ids_intervenciones": [
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019"
+      ],
+      "id_ancla": "I000019"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Continuar la revisión visual del avión en relación con el bombillo, foco y cinturón",
+      "ids_intervenciones": [
+        "I000026",
+        "I000034",
+        "I000037"
+      ],
+      "id_ancla": "I000037",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

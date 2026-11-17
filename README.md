@@ -16,7 +16,7 @@ La [documentación técnica y de decisiones de diseño](docs/README.md) reúne l
 
 - `src/`: implementación integrada; los README de cada componente remiten a su guía técnica.
 - `tests/`: pruebas automatizadas de las etapas e integración.
-- `evaluacion/`: herramientas y evidencias reproducibles por componente (diarización, asociación y STT). Ejecutar los módulos desde la raíz.
+- `evaluacion/`: herramientas y evidencias reproducibles por componente (diarización, asociación y STT) y [evaluación integral del baseline](evaluacion/integral/README.md). Ejecutar los módulos desde la raíz.
 - `docs/`: documentación técnica canónica, fundamentos de diseño y especificaciones OpenSpec originales.
 - `notebooks/`: clientes y análisis del flujo actual; `notebooks/historicos/` conserva evidencia de contratos anteriores.
 - `hito-2/` y `hito-3/`: entregables académicos; los scripts, datos y pruebas del Hito 2 se mantienen juntos para reproducir ese entregable.

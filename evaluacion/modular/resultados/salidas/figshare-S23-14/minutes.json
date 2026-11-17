@@ -1,0 +1,48 @@
+{
+  "resumen": "La reunión se centró en la colocación de una plancha y un cable bajo una ballena. Se discutieron las posiciones relativas de los elementos, pero no se tomaron decisiones definitivas sobre su ubicación.",
+  "temas": [
+    {
+      "texto": "Colocación de la plancha",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004"
+      ],
+      "id_ancla": "I000003"
+    },
+    {
+      "texto": "Posición del cable",
+      "ids_intervenciones": [
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008"
+      ],
+      "id_ancla": "I000008"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "Dificultad en la ubicación relativa de los elementos",
+      "ids_intervenciones": [
+        "I000005",
+        "I000006"
+      ],
+      "id_ancla": "I000006"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Revisar la ubicación de los elementos",
+      "ids_intervenciones": [
+        "I000007",
+        "I000008"
+      ],
+      "id_ancla": "I000008",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

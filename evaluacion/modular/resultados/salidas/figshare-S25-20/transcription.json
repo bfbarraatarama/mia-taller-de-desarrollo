@@ -1,0 +1,653 @@
+{
+  "segments": [
+    {
+      "start": 2.22,
+      "end": 10.76,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El cuadro está equidistante al auto y a la luna amarilla.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 57
+      }
+    },
+    {
+      "start": 10.76,
+      "end": 12.5,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si traes una diagonal o...?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 27
+      }
+    },
+    {
+      "start": 12.5,
+      "end": 18.36,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, está en eje horizontal como el auto y en eje vertical como la luna.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 71
+      }
+    },
+    {
+      "start": 18.62,
+      "end": 20.68,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Pero más cerca de la luna porque están equidistantes.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 53
+      }
+    },
+    {
+      "start": 22.08,
+      "end": 24.16,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, está más o menos a la misma distancia de los dos.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 53
+      }
+    },
+    {
+      "start": 24.54,
+      "end": 26.88,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está a una buena distancia de los dos.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 38
+      }
+    },
+    {
+      "start": 27.94,
+      "end": 29.38,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si, ponle que si...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 19
+      }
+    },
+    {
+      "start": 29.38,
+      "end": 36.94,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Pero digo, si yo digo que está a la misma distancia del auto que de la luna y lo pongo en el sobre...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 101
+      }
+    },
+    {
+      "start": 36.94,
+      "end": 38.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Trasemos una cruz imaginaria, ¿no?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 34
+      }
+    },
+    {
+      "start": 39.02,
+      "end": 42.4,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si, está a la derecha del auto y arriba de la luna.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 51
+      }
+    },
+    {
+      "start": 42.44,
+      "end": 44.22,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ah, a la derecha del auto y arriba de la luna.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 46
+      }
+    },
+    {
+      "start": 44.5,
+      "end": 44.76,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 44.76,
+      "end": 47.82,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "O está poniendo abajo del auto y a la izquierda del auto.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 57
+      }
+    },
+    {
+      "start": 49.58,
+      "end": 50.38,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, opuesto.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 50.54,
+      "end": 51.34,
+      "speaker": null,
+      "name": null,
+      "text": "Claro, bien.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 51.42,
+      "end": 52.68,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Buenísimo, no se te plena en cualquier lado.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 44
+      }
+    },
+    {
+      "start": 53.74,
+      "end": 55.42,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Y está centrado con el auto?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 55.42,
+      "end": 57.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está centrado con el auto...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 57.74,
+      "end": 59.22,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Las orejas están centradas con el auto.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 39
+      }
+    },
+    {
+      "start": 59.6,
+      "end": 67.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No exactamente, ponle que el auto ocuparía más o menos el espacio entre la oreja del medio y el borde sur.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 106
+      }
+    },
+    {
+      "start": 69.42,
+      "end": 70.5,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y el borde izquierdo sur.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 71.62,
+      "end": 73.36,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Entonces, claro, está bien.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 27
+      }
+    },
+    {
+      "start": 73.64,
+      "end": 74.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Más o menos así.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 74.72,
+      "end": 76.22,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Y con respecto a la luna amarilla?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 23,
+        "start": 0,
+        "end": 35
+      }
+    },
+    {
+      "start": 76.64,
+      "end": 87.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Con respecto a la luna amarilla es como si los bordes derechos del cuadro estuvieran más o menos en el mismo eje vertical que el borde derecho de la luna.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 0,
+        "end": 154
+      }
+    },
+    {
+      "start": 89.06,
+      "end": 90.58,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Que el punto más a la derecha de la luna.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 25,
+        "start": 0,
+        "end": 41
+      }
+    },
+    {
+      "start": 90.6,
+      "end": 93.2,
+      "speaker": null,
+      "name": null,
+      "text": "¿Y más o menos significa que vos lo ves un poquito más a la izquierda o un poco más a la izquierda?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 26,
+        "start": 0,
+        "end": 99
+      }
+    },
+    {
+      "start": 93.2,
+      "end": 95.8,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Yo lo veo un poquito más a la izquierda del cuadro que la luna.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 27,
+        "start": 0,
+        "end": 63
+      }
+    },
+    {
+      "start": 96.04,
+      "end": 97.04,
+      "speaker": null,
+      "name": null,
+      "text": "Está bien, bueno, probemos ahí.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 28,
+        "start": 0,
+        "end": 31
+      }
+    }
+  ]
+}

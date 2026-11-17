@@ -1,0 +1,16 @@
+{
+  "resumen": "La reunión discutió la ubicación de un elemento en una instalación, probablemente relacionado con leones. Se mencionaron aspectos como la distancia entre los leones y la altura del elemento.",
+  "temas": [
+    {
+      "texto": "Ubicación de un elemento en relación a dos leones.",
+      "ids_intervenciones": [
+        "I000004",
+        "I000005"
+      ],
+      "id_ancla": "I000005"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": []
+}

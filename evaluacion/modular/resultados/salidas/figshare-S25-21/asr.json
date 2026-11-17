@@ -1,0 +1,1336 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.0,
+      "text": "bueno ahora manda el candelabro",
+      "words": [
+        {
+          "word": "bueno",
+          "start": 0.0,
+          "end": 0.96
+        },
+        {
+          "word": "ahora",
+          "start": 0.96,
+          "end": 1.2
+        },
+        {
+          "word": "manda",
+          "start": 1.2,
+          "end": 1.42
+        },
+        {
+          "word": "el",
+          "start": 1.42,
+          "end": 1.52
+        },
+        {
+          "word": "candelabro",
+          "start": 1.52,
+          "end": 2.0
+        }
+      ]
+    },
+    {
+      "start": 2.54,
+      "end": 4.02,
+      "text": "si menoraz se llama",
+      "words": [
+        {
+          "word": "si",
+          "start": 2.54,
+          "end": 2.84
+        },
+        {
+          "word": "menoraz",
+          "start": 2.84,
+          "end": 3.28
+        },
+        {
+          "word": "se",
+          "start": 3.28,
+          "end": 3.44
+        },
+        {
+          "word": "llama",
+          "start": 3.44,
+          "end": 4.02
+        }
+      ]
+    },
+    {
+      "start": 4.02,
+      "end": 5.78,
+      "text": "menoraz se llama? bueno",
+      "words": [
+        {
+          "word": "menoraz",
+          "start": 4.02,
+          "end": 4.54
+        },
+        {
+          "word": "se",
+          "start": 4.54,
+          "end": 4.66
+        },
+        {
+          "word": "llama?",
+          "start": 4.66,
+          "end": 4.92
+        }
+      ]
+    },
+    {
+      "start": 5.78,
+      "end": 8.46,
+      "text": "mandalo a la derecha del rinoceronte",
+      "words": [
+        {
+          "word": "mandalo",
+          "start": 5.78,
+          "end": 7.04
+        },
+        {
+          "word": "a",
+          "start": 7.04,
+          "end": 7.22
+        },
+        {
+          "word": "la",
+          "start": 7.22,
+          "end": 7.44
+        },
+        {
+          "word": "derecha",
+          "start": 7.44,
+          "end": 7.7
+        },
+        {
+          "word": "del",
+          "start": 7.7,
+          "end": 7.88
+        },
+        {
+          "word": "rinoceronte",
+          "start": 7.88,
+          "end": 8.46
+        }
+      ]
+    },
+    {
+      "start": 8.46,
+      "end": 9.84,
+      "text": "y arriba del cuadro",
+      "words": [
+        {
+          "word": "y",
+          "start": 8.46,
+          "end": 8.6
+        },
+        {
+          "word": "arriba",
+          "start": 8.6,
+          "end": 9.08
+        },
+        {
+          "word": "del",
+          "start": 9.08,
+          "end": 9.34
+        },
+        {
+          "word": "cuadro",
+          "start": 9.34,
+          "end": 9.84
+        }
+      ]
+    },
+    {
+      "start": 9.84,
+      "end": 10.84,
+      "text": "perdón, ¿qué hay que hacerte?",
+      "words": [
+        {
+          "word": "perdón,",
+          "start": 9.84,
+          "end": 10.5
+        },
+        {
+          "word": "¿qué",
+          "start": 10.5,
+          "end": 10.58
+        },
+        {
+          "word": "hay",
+          "start": 10.58,
+          "end": 10.64
+        },
+        {
+          "word": "que",
+          "start": 10.64,
+          "end": 10.68
+        },
+        {
+          "word": "hacerte?",
+          "start": 10.68,
+          "end": 10.84
+        }
+      ]
+    },
+    {
+      "start": 11.12,
+      "end": 14.48,
+      "text": "a la derecha del rinoceronte azul y arriba del",
+      "words": [
+        {
+          "word": "a",
+          "start": 11.12,
+          "end": 11.58
+        },
+        {
+          "word": "la",
+          "start": 11.58,
+          "end": 11.82
+        },
+        {
+          "word": "derecha",
+          "start": 11.82,
+          "end": 11.98
+        },
+        {
+          "word": "del",
+          "start": 11.98,
+          "end": 12.08
+        },
+        {
+          "word": "rinoceronte",
+          "start": 12.08,
+          "end": 12.54
+        },
+        {
+          "word": "azul",
+          "start": 12.54,
+          "end": 12.88
+        },
+        {
+          "word": "y",
+          "start": 12.88,
+          "end": 13.12
+        },
+        {
+          "word": "arriba",
+          "start": 13.12,
+          "end": 13.5
+        },
+        {
+          "word": "del",
+          "start": 13.5,
+          "end": 14.48
+        }
+      ]
+    },
+    {
+      "start": 14.48,
+      "end": 15.08,
+      "text": "ay no sale",
+      "words": [
+        {
+          "word": "ay",
+          "start": 14.48,
+          "end": 14.6
+        },
+        {
+          "word": "no",
+          "start": 14.6,
+          "end": 14.72
+        },
+        {
+          "word": "sale",
+          "start": 14.72,
+          "end": 15.08
+        }
+      ]
+    },
+    {
+      "start": 15.08,
+      "end": 17.0,
+      "text": "la porquería esa",
+      "words": [
+        {
+          "word": "la",
+          "start": 15.08,
+          "end": 15.8
+        },
+        {
+          "word": "porquería",
+          "start": 15.8,
+          "end": 16.14
+        },
+        {
+          "word": "esa",
+          "start": 16.14,
+          "end": 17.0
+        }
+      ]
+    },
+    {
+      "start": 18.0,
+      "end": 19.04,
+      "text": "del jarrón",
+      "words": [
+        {
+          "word": "del",
+          "start": 17.84,
+          "end": 18.16
+        },
+        {
+          "word": "jarrón",
+          "start": 18.16,
+          "end": 19.04
+        }
+      ]
+    },
+    {
+      "start": 19.04,
+      "end": 21.4,
+      "text": "entonces a la izquierda del rinoceronte",
+      "words": [
+        {
+          "word": "entonces",
+          "start": 19.04,
+          "end": 19.74
+        },
+        {
+          "word": "a",
+          "start": 19.74,
+          "end": 19.96
+        },
+        {
+          "word": "la",
+          "start": 19.96,
+          "end": 20.08
+        },
+        {
+          "word": "izquierda",
+          "start": 20.08,
+          "end": 20.4
+        },
+        {
+          "word": "del",
+          "start": 20.4,
+          "end": 20.52
+        },
+        {
+          "word": "rinoceronte",
+          "start": 20.52,
+          "end": 21.4
+        }
+      ]
+    },
+    {
+      "start": 21.4,
+      "end": 22.88,
+      "text": "no a la derecha",
+      "words": [
+        {
+          "word": "no",
+          "start": 21.4,
+          "end": 21.74
+        },
+        {
+          "word": "a",
+          "start": 21.74,
+          "end": 22.08
+        },
+        {
+          "word": "la",
+          "start": 22.08,
+          "end": 22.2
+        },
+        {
+          "word": "derecha",
+          "start": 22.2,
+          "end": 22.88
+        }
+      ]
+    },
+    {
+      "start": 22.88,
+      "end": 24.68,
+      "text": "del rinoceronte azul",
+      "words": [
+        {
+          "word": "del",
+          "start": 22.88,
+          "end": 23.9
+        },
+        {
+          "word": "rinoceronte",
+          "start": 23.9,
+          "end": 24.26
+        },
+        {
+          "word": "azul",
+          "start": 24.26,
+          "end": 24.68
+        }
+      ]
+    },
+    {
+      "start": 26.0,
+      "end": 27.72,
+      "text": "ah no había visto el azul, que boludo",
+      "words": [
+        {
+          "word": "ah",
+          "start": 25.8,
+          "end": 26.12
+        },
+        {
+          "word": "no",
+          "start": 26.12,
+          "end": 26.44
+        },
+        {
+          "word": "había",
+          "start": 26.44,
+          "end": 26.58
+        },
+        {
+          "word": "visto",
+          "start": 26.58,
+          "end": 26.82
+        },
+        {
+          "word": "el",
+          "start": 26.82,
+          "end": 26.94
+        },
+        {
+          "word": "azul,",
+          "start": 26.94,
+          "end": 27.14
+        },
+        {
+          "word": "boludo",
+          "start": 27.34,
+          "end": 27.72
+        }
+      ]
+    },
+    {
+      "start": 27.72,
+      "end": 29.54,
+      "text": "había visto el amarillo",
+      "words": [
+        {
+          "word": "había",
+          "start": 27.72,
+          "end": 28.26
+        },
+        {
+          "word": "visto",
+          "start": 28.26,
+          "end": 28.52
+        },
+        {
+          "word": "el",
+          "start": 28.52,
+          "end": 28.66
+        },
+        {
+          "word": "amarillo",
+          "start": 28.66,
+          "end": 29.54
+        }
+      ]
+    },
+    {
+      "start": 29.54,
+      "end": 32.36,
+      "text": "listo a la derecha del azul y encima del jarrón",
+      "words": [
+        {
+          "word": "listo",
+          "start": 29.54,
+          "end": 29.92
+        },
+        {
+          "word": "a",
+          "start": 29.92,
+          "end": 30.0
+        },
+        {
+          "word": "la",
+          "start": 30.0,
+          "end": 30.16
+        },
+        {
+          "word": "derecha",
+          "start": 30.16,
+          "end": 30.42
+        },
+        {
+          "word": "del",
+          "start": 30.42,
+          "end": 30.6
+        },
+        {
+          "word": "azul",
+          "start": 30.6,
+          "end": 30.92
+        },
+        {
+          "word": "y",
+          "start": 30.92,
+          "end": 31.38
+        },
+        {
+          "word": "encima",
+          "start": 31.38,
+          "end": 31.7
+        },
+        {
+          "word": "del",
+          "start": 31.7,
+          "end": 31.94
+        },
+        {
+          "word": "jarrón",
+          "start": 31.94,
+          "end": 32.36
+        }
+      ]
+    },
+    {
+      "start": 32.36,
+      "end": 32.56,
+      "text": "si",
+      "words": [
+        {
+          "word": "si",
+          "start": 32.36,
+          "end": 32.56
+        }
+      ]
+    },
+    {
+      "start": 33.22,
+      "end": 35.12,
+      "text": "digamos la pata menoraz se llama?",
+      "words": [
+        {
+          "word": "digamos",
+          "start": 33.22,
+          "end": 33.7
+        },
+        {
+          "word": "la",
+          "start": 33.7,
+          "end": 33.9
+        },
+        {
+          "word": "pata",
+          "start": 33.9,
+          "end": 34.48
+        },
+        {
+          "word": "menoraz",
+          "start": 34.48,
+          "end": 34.86
+        },
+        {
+          "word": "se",
+          "start": 34.86,
+          "end": 34.94
+        },
+        {
+          "word": "llama?",
+          "start": 34.94,
+          "end": 35.12
+        }
+      ]
+    },
+    {
+      "start": 35.8,
+      "end": 37.56,
+      "text": "no esta centrada con la boca",
+      "words": [
+        {
+          "word": "no",
+          "start": 35.8,
+          "end": 36.28
+        },
+        {
+          "word": "esta",
+          "start": 36.28,
+          "end": 36.52
+        },
+        {
+          "word": "centrada",
+          "start": 36.52,
+          "end": 36.9
+        },
+        {
+          "word": "con",
+          "start": 36.9,
+          "end": 37.06
+        },
+        {
+          "word": "la",
+          "start": 37.06,
+          "end": 37.22
+        },
+        {
+          "word": "boca",
+          "start": 37.22,
+          "end": 37.56
+        }
+      ]
+    },
+    {
+      "start": 37.56,
+      "end": 40.72,
+      "text": "del jarrón, esta un poco mas a la izquierda",
+      "words": [
+        {
+          "word": "del",
+          "start": 37.56,
+          "end": 38.02
+        },
+        {
+          "word": "jarrón,",
+          "start": 38.02,
+          "end": 38.6
+        },
+        {
+          "word": "esta",
+          "start": 38.6,
+          "end": 38.98
+        },
+        {
+          "word": "un",
+          "start": 38.98,
+          "end": 39.22
+        },
+        {
+          "word": "poco",
+          "start": 39.22,
+          "end": 39.36
+        },
+        {
+          "word": "mas",
+          "start": 39.36,
+          "end": 39.54
+        },
+        {
+          "word": "a",
+          "start": 39.54,
+          "end": 39.62
+        },
+        {
+          "word": "la",
+          "start": 39.62,
+          "end": 39.74
+        },
+        {
+          "word": "izquierda",
+          "start": 39.74,
+          "end": 40.72
+        }
+      ]
+    },
+    {
+      "start": 40.72,
+      "end": 41.72,
+      "text": "ok la base del candelabro",
+      "words": [
+        {
+          "word": "ok",
+          "start": 40.72,
+          "end": 41.1
+        },
+        {
+          "word": "la",
+          "start": 41.1,
+          "end": 41.3
+        },
+        {
+          "word": "base",
+          "start": 41.3,
+          "end": 41.54
+        },
+        {
+          "word": "del",
+          "start": 41.54,
+          "end": 41.7
+        },
+        {
+          "word": "candelabro",
+          "start": 41.7,
+          "end": 41.94
+        }
+      ]
+    },
+    {
+      "start": 42.58,
+      "end": 44.02,
+      "text": "un poco mas a la izquierda",
+      "words": [
+        {
+          "word": "un",
+          "start": 42.58,
+          "end": 43.06
+        },
+        {
+          "word": "poco",
+          "start": 43.06,
+          "end": 43.22
+        },
+        {
+          "word": "mas",
+          "start": 43.22,
+          "end": 43.4
+        },
+        {
+          "word": "a",
+          "start": 43.4,
+          "end": 43.48
+        },
+        {
+          "word": "la",
+          "start": 43.48,
+          "end": 43.62
+        },
+        {
+          "word": "izquierda",
+          "start": 43.62,
+          "end": 44.02
+        }
+      ]
+    },
+    {
+      "start": 45.5,
+      "end": 45.98,
+      "text": "listo",
+      "words": [
+        {
+          "word": "listo",
+          "start": 45.5,
+          "end": 45.98
+        }
+      ]
+    },
+    {
+      "start": 45.98,
+      "end": 48.04,
+      "text": "de tal manera que el extremo izquierdo",
+      "words": [
+        {
+          "word": "de",
+          "start": 45.98,
+          "end": 46.4
+        },
+        {
+          "word": "tal",
+          "start": 46.4,
+          "end": 46.54
+        },
+        {
+          "word": "manera",
+          "start": 46.54,
+          "end": 46.82
+        },
+        {
+          "word": "que",
+          "start": 46.82,
+          "end": 47.02
+        },
+        {
+          "word": "el",
+          "start": 47.02,
+          "end": 47.24
+        },
+        {
+          "word": "extremo",
+          "start": 47.24,
+          "end": 47.58
+        },
+        {
+          "word": "izquierdo",
+          "start": 47.58,
+          "end": 48.04
+        }
+      ]
+    },
+    {
+      "start": 48.04,
+      "end": 49.52,
+      "text": "de la base",
+      "words": [
+        {
+          "word": "de",
+          "start": 48.04,
+          "end": 48.2
+        },
+        {
+          "word": "la",
+          "start": 48.2,
+          "end": 48.36
+        },
+        {
+          "word": "base",
+          "start": 48.36,
+          "end": 49.52
+        }
+      ]
+    },
+    {
+      "start": 49.52,
+      "end": 52.18,
+      "text": "este sobrepasando un poco",
+      "words": [
+        {
+          "word": "este",
+          "start": 49.52,
+          "end": 50.04
+        },
+        {
+          "word": "sobrepasando",
+          "start": 50.04,
+          "end": 51.52
+        },
+        {
+          "word": "un",
+          "start": 51.52,
+          "end": 51.72
+        },
+        {
+          "word": "poco",
+          "start": 51.72,
+          "end": 52.18
+        }
+      ]
+    },
+    {
+      "start": 52.18,
+      "end": 53.5,
+      "text": "lo que es la boca",
+      "words": [
+        {
+          "word": "lo",
+          "start": 52.18,
+          "end": 52.46
+        },
+        {
+          "word": "que",
+          "start": 52.46,
+          "end": 52.62
+        },
+        {
+          "word": "es",
+          "start": 52.62,
+          "end": 52.8
+        },
+        {
+          "word": "la",
+          "start": 52.8,
+          "end": 53.04
+        },
+        {
+          "word": "boca",
+          "start": 53.04,
+          "end": 53.5
+        }
+      ]
+    },
+    {
+      "start": 53.5,
+      "end": 56.0,
+      "text": "no la boca, la boca del jarrón",
+      "words": [
+        {
+          "word": "no",
+          "start": 53.5,
+          "end": 54.04
+        },
+        {
+          "word": "la",
+          "start": 54.04,
+          "end": 54.2
+        },
+        {
+          "word": "boca,",
+          "start": 54.2,
+          "end": 54.42
+        },
+        {
+          "word": "la",
+          "start": 54.42,
+          "end": 54.56
+        },
+        {
+          "word": "boca",
+          "start": 54.56,
+          "end": 54.78
+        },
+        {
+          "word": "del",
+          "start": 54.78,
+          "end": 54.98
+        },
+        {
+          "word": "jarrón",
+          "start": 54.98,
+          "end": 56.0
+        }
+      ]
+    },
+    {
+      "start": 56.0,
+      "end": 57.22,
+      "text": "ok si",
+      "words": [
+        {
+          "word": "ok",
+          "start": 56.0,
+          "end": 56.52
+        },
+        {
+          "word": "si",
+          "start": 56.52,
+          "end": 57.22
+        }
+      ]
+    },
+    {
+      "start": 57.22,
+      "end": 58.88,
+      "text": "no llega a sobrepasar la oreja",
+      "words": [
+        {
+          "word": "no",
+          "start": 57.22,
+          "end": 57.54
+        },
+        {
+          "word": "llega",
+          "start": 57.54,
+          "end": 57.76
+        },
+        {
+          "word": "a",
+          "start": 57.76,
+          "end": 57.92
+        },
+        {
+          "word": "sobrepasar",
+          "start": 57.92,
+          "end": 58.3
+        },
+        {
+          "word": "la",
+          "start": 58.3,
+          "end": 58.38
+        },
+        {
+          "word": "oreja",
+          "start": 58.38,
+          "end": 58.88
+        }
+      ]
+    },
+    {
+      "start": 58.88,
+      "end": 61.1,
+      "text": "esta un poquito a la izquierda",
+      "words": [
+        {
+          "word": "esta",
+          "start": 58.88,
+          "end": 59.86
+        },
+        {
+          "word": "un",
+          "start": 59.86,
+          "end": 60.12
+        },
+        {
+          "word": "poquito",
+          "start": 60.12,
+          "end": 60.36
+        },
+        {
+          "word": "a",
+          "start": 60.36,
+          "end": 60.46
+        },
+        {
+          "word": "la",
+          "start": 60.46,
+          "end": 60.54
+        },
+        {
+          "word": "izquierda",
+          "start": 60.54,
+          "end": 61.1
+        }
+      ]
+    },
+    {
+      "start": 61.1,
+      "end": 62.68,
+      "text": "y con respecto al rinoceronte",
+      "words": [
+        {
+          "word": "y",
+          "start": 61.1,
+          "end": 61.48
+        },
+        {
+          "word": "con",
+          "start": 61.48,
+          "end": 61.56
+        },
+        {
+          "word": "respecto",
+          "start": 61.56,
+          "end": 61.82
+        },
+        {
+          "word": "al",
+          "start": 61.82,
+          "end": 61.96
+        },
+        {
+          "word": "rinoceronte",
+          "start": 61.96,
+          "end": 62.68
+        }
+      ]
+    },
+    {
+      "start": 62.68,
+      "end": 65.26,
+      "text": "y supongamos que",
+      "words": [
+        {
+          "word": "y",
+          "start": 62.68,
+          "end": 63.08
+        },
+        {
+          "word": "supongamos",
+          "start": 63.08,
+          "end": 63.94
+        },
+        {
+          "word": "que",
+          "start": 63.94,
+          "end": 65.26
+        }
+      ]
+    },
+    {
+      "start": 65.26,
+      "end": 67.2,
+      "text": "si traes una linea horizontal",
+      "words": [
+        {
+          "word": "si",
+          "start": 65.26,
+          "end": 65.9
+        },
+        {
+          "word": "traes",
+          "start": 65.9,
+          "end": 66.1
+        },
+        {
+          "word": "una",
+          "start": 66.1,
+          "end": 66.26
+        },
+        {
+          "word": "linea",
+          "start": 66.26,
+          "end": 66.64
+        },
+        {
+          "word": "horizontal",
+          "start": 66.64,
+          "end": 67.2
+        }
+      ]
+    },
+    {
+      "start": 67.2,
+      "end": 69.7,
+      "text": "de las patas del rinoceronte",
+      "words": [
+        {
+          "word": "de",
+          "start": 67.2,
+          "end": 67.36
+        },
+        {
+          "word": "las",
+          "start": 67.36,
+          "end": 67.54
+        },
+        {
+          "word": "patas",
+          "start": 67.54,
+          "end": 67.7
+        },
+        {
+          "word": "del",
+          "start": 67.7,
+          "end": 68.72
+        },
+        {
+          "word": "rinoceronte",
+          "start": 68.72,
+          "end": 69.7
+        }
+      ]
+    },
+    {
+      "start": 69.7,
+      "end": 72.12,
+      "text": "esta un poco",
+      "words": [
+        {
+          "word": "esta",
+          "start": 69.7,
+          "end": 70.94
+        },
+        {
+          "word": "un",
+          "start": 70.94,
+          "end": 71.28
+        },
+        {
+          "word": "poco",
+          "start": 71.28,
+          "end": 72.12
+        }
+      ]
+    },
+    {
+      "start": 72.12,
+      "end": 74.38,
+      "text": "no a ver dejame pensar",
+      "words": [
+        {
+          "word": "no",
+          "start": 72.12,
+          "end": 72.66
+        },
+        {
+          "word": "a",
+          "start": 72.66,
+          "end": 72.78
+        },
+        {
+          "word": "ver",
+          "start": 72.78,
+          "end": 73.02
+        },
+        {
+          "word": "dejame",
+          "start": 73.02,
+          "end": 73.2
+        },
+        {
+          "word": "pensar",
+          "start": 73.2,
+          "end": 74.38
+        }
+      ]
+    },
+    {
+      "start": 75.1,
+      "end": 76.14,
+      "text": "las llamas",
+      "words": [
+        {
+          "word": "las",
+          "start": 75.1,
+          "end": 75.76
+        },
+        {
+          "word": "llamas",
+          "start": 75.76,
+          "end": 76.14
+        }
+      ]
+    },
+    {
+      "start": 76.14,
+      "end": 77.18,
+      "text": "de las velas",
+      "words": [
+        {
+          "word": "de",
+          "start": 76.14,
+          "end": 76.58
+        },
+        {
+          "word": "las",
+          "start": 76.58,
+          "end": 76.72
+        },
+        {
+          "word": "velas",
+          "start": 76.72,
+          "end": 77.18
+        }
+      ]
+    },
+    {
+      "start": 77.18,
+      "end": 79.84,
+      "text": "están sobrepasando un poco el rinoceronte",
+      "words": [
+        {
+          "word": "están",
+          "start": 77.18,
+          "end": 77.9
+        },
+        {
+          "word": "sobrepasando",
+          "start": 77.9,
+          "end": 78.48
+        },
+        {
+          "word": "un",
+          "start": 78.48,
+          "end": 78.68
+        },
+        {
+          "word": "poco",
+          "start": 78.68,
+          "end": 78.82
+        },
+        {
+          "word": "el",
+          "start": 78.82,
+          "end": 78.9
+        },
+        {
+          "word": "rinoceronte",
+          "start": 78.9,
+          "end": 79.84
+        }
+      ]
+    },
+    {
+      "start": 79.84,
+      "end": 81.4,
+      "text": "un poco mas arriba",
+      "words": [
+        {
+          "word": "un",
+          "start": 79.84,
+          "end": 80.7
+        },
+        {
+          "word": "poco",
+          "start": 80.7,
+          "end": 80.78
+        },
+        {
+          "word": "mas",
+          "start": 80.78,
+          "end": 80.96
+        },
+        {
+          "word": "arriba",
+          "start": 80.96,
+          "end": 81.4
+        }
+      ]
+    },
+    {
+      "start": 81.4,
+      "end": 83.7,
+      "text": "después mucho mas que eso no se me ocurre",
+      "words": [
+        {
+          "word": "después",
+          "start": 81.4,
+          "end": 81.74
+        },
+        {
+          "word": "mucho",
+          "start": 81.74,
+          "end": 81.98
+        },
+        {
+          "word": "mas",
+          "start": 81.98,
+          "end": 82.18
+        },
+        {
+          "word": "que",
+          "start": 82.18,
+          "end": 82.26
+        },
+        {
+          "word": "eso",
+          "start": 82.26,
+          "end": 82.44
+        },
+        {
+          "word": "no",
+          "start": 82.44,
+          "end": 82.54
+        },
+        {
+          "word": "se",
+          "start": 82.54,
+          "end": 82.64
+        },
+        {
+          "word": "me",
+          "start": 82.64,
+          "end": 82.76
+        },
+        {
+          "word": "ocurre",
+          "start": 82.76,
+          "end": 83.7
+        }
+      ]
+    },
+    {
+      "start": 83.7,
+      "end": 84.74,
+      "text": "ok, nos vemos ahi",
+      "words": [
+        {
+          "word": "ok,",
+          "start": 83.7,
+          "end": 84.0
+        },
+        {
+          "word": "nos",
+          "start": 84.02,
+          "end": 84.12
+        },
+        {
+          "word": "vemos",
+          "start": 84.12,
+          "end": 84.28
+        },
+        {
+          "word": "ahi",
+          "start": 84.28,
+          "end": 84.74
+        }
+      ]
+    }
+  ]
+}

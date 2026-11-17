@@ -1,0 +1,117 @@
+{
+  "resumen": "La reunión se centró en la descripción y superposición entre una sirena y una plancha, incluyendo detalles sobre las aletas, el cablecito y los agujeritos. Se confirmó que no hay elementos rojos en la parte inferior de la sirena ni cerca de la leta amarilla. Además, se discutió la posición relativa de diferentes partes del objeto con respecto a la plancha.",
+  "temas": [
+    {
+      "texto": "Posición y superposición entre la sirena y la plancha",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024",
+        "I000025",
+        "I000026"
+      ],
+      "id_ancla": "I000026"
+    },
+    {
+      "texto": "Posición relativa de las partes del objeto",
+      "ids_intervenciones": [
+        "I000043",
+        "I000047",
+        "I000052",
+        "I000056",
+        "I000059"
+      ],
+      "id_ancla": "I000059"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "Dificultad en la descripción y explicación de la superposición entre la sirena y la plancha.",
+      "ids_intervenciones": [
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024",
+        "I000025",
+        "I000026"
+      ],
+      "id_ancla": "I000026"
+    },
+    {
+      "texto": "No se observa un extremo a la derecha en la plancha.",
+      "ids_intervenciones": [
+        "I000056",
+        "I000058",
+        "I000059"
+      ],
+      "id_ancla": "I000059"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Revisar la descripción y explicación de la superposición entre la sirena y la plancha.",
+      "ids_intervenciones": [
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024",
+        "I000025",
+        "I000026"
+      ],
+      "id_ancla": "I000026",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Revisar nuevamente la parte inferior de la sirena y la leta amarilla.",
+      "ids_intervenciones": [
+        "I000061",
+        "I000063",
+        "I000065"
+      ],
+      "id_ancla": "I000065",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

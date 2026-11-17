@@ -1,0 +1,41 @@
+{
+  "resumen": "La reunión se centró en la colocación de una oreja en un diseño gráfico, especificando su posición relativa a otros elementos como el león amarillo y el mimo. Se acordó que la oreja debe estar separada por medio milímetro del león y más o menos a la derecha.",
+  "temas": [
+    {
+      "texto": "Colocación de una oreja en un diseño gráfico",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008"
+      ],
+      "id_ancla": "I000008"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "Tiene que estar separado por medio milímetro.",
+      "ids_intervenciones": [
+        "I000007"
+      ],
+      "id_ancla": "I000007",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Tiene que estar más o menos a la derecha.",
+      "ids_intervenciones": [
+        "I000008"
+      ],
+      "id_ancla": "I000008",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "segments": [
+    {
+      "start": 2.1,
+      "end": 7.0,
+      "speaker": null,
+      "name": null,
+      "text": "Tiene que poner el mimo arriba de la lechusa y a la derecha de la oreja.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 72
+      }
+    },
+    {
+      "start": 7.14,
+      "end": 9.18,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Tiene que estar más o menos centrado en todo sentido.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 53
+      }
+    },
+    {
+      "start": 9.66,
+      "end": 11.62,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Centrado en la lechusa y centrado en la oreja.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 46
+      }
+    },
+    {
+      "start": 11.76,
+      "end": 12.48,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El mimo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 8
+      }
+    },
+    {
+      "start": 12.68,
+      "end": 14.38,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El mimo encima de la lechusa.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 14.44,
+      "end": 15.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y a la derecha de la oreja.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 27
+      }
+    },
+    {
+      "start": 16.38,
+      "end": 17.96,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "A la derecha de la oreja.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 18.02,
+      "end": 21.32,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí, tirando un poquito... no exactamente en el...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 49
+      }
+    },
+    {
+      "start": 21.32,
+      "end": 22.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No a la altura de la lechusa.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 29.26,
+      "end": 29.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "O sea...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 8
+      }
+    },
+    {
+      "start": 31.82,
+      "end": 32.54,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ok, perfecto.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 13
+      }
+    },
+    {
+      "start": 32.6,
+      "end": 34.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El eje horizontal a la altura de la oreja.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 42
+      }
+    },
+    {
+      "start": 34.78,
+      "end": 37.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "A la altura del eje horizontal de la oreja.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 43
+      }
+    },
+    {
+      "start": 37.52,
+      "end": 39.68,
+      "speaker": null,
+      "name": null,
+      "text": "¿Se entiende? Con la leja centrado y con la lechusa un poco a la izquierda.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 75
+      }
+    },
+    {
+      "start": 43.44,
+      "end": 44.16,
+      "speaker": null,
+      "name": null,
+      "text": "A ver...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 8
+      }
+    }
+  ]
+}

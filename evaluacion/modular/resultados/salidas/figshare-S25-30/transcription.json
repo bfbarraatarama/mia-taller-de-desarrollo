@@ -1,0 +1,719 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.46,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "El caballo negro superponelo a la piña.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 39
+      }
+    },
+    {
+      "start": 6.54,
+      "end": 10.0,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "De tal manera que",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 17
+      }
+    },
+    {
+      "start": 11.12,
+      "end": 17.24,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "la de izquierda a derecha la segunda pata, o sea la que está como apoyada en",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 76
+      }
+    },
+    {
+      "start": 17.24,
+      "end": 22.12,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "el suelo digamos, está como",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 27
+      }
+    },
+    {
+      "start": 24.16,
+      "end": 29.36,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "coincide más o menos con el borde sur de la piña. Es como si estuviera",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 70
+      }
+    },
+    {
+      "start": 29.36,
+      "end": 34.06,
+      "speaker": null,
+      "name": null,
+      "text": "apoyada sobre el borde sur. En el centro? Sí, en el centro.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 59
+      }
+    },
+    {
+      "start": 35.84,
+      "end": 37.84,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Ves que esa pata está como inclinada.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 37
+      }
+    },
+    {
+      "start": 38.16,
+      "end": 39.92,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Claro, pero el extremo de la pata está en el",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 38,
+        "end": 82
+      }
+    },
+    {
+      "start": 39.92,
+      "end": 44.64,
+      "speaker": null,
+      "name": null,
+      "text": "centro de la piña. Claro, donde la pata toca tierra, digamos, está más o",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 72
+      }
+    },
+    {
+      "start": 44.64,
+      "end": 48.52,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "menos en el centro de la piña. Quizás medio milímetro hacia la izquierda pero",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 77
+      }
+    },
+    {
+      "start": 48.52,
+      "end": 49.92,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "más o menos en el centro.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 49.92,
+      "end": 58.72,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "De manera que lo que sobresale de la piña queda un poquito",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 58
+      }
+    },
+    {
+      "start": 58.72,
+      "end": 60.24,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "más, digamos, si",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 59,
+        "end": 75
+      }
+    },
+    {
+      "start": 60.24,
+      "end": 60.8,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "trazamos un eje",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 15
+      }
+    },
+    {
+      "start": 60.8,
+      "end": 65.18,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "horizontal queda un poquito más arriba que la cabeza del",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 16,
+        "end": 72
+      }
+    },
+    {
+      "start": 65.18,
+      "end": 70.02,
+      "speaker": null,
+      "name": null,
+      "text": "caballo, digamos, que el pelo del caballo. Está bien, pero el extremo del pie, esa",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 82
+      }
+    },
+    {
+      "start": 70.02,
+      "end": 74.84,
+      "speaker": null,
+      "name": null,
+      "text": "segunda pata que me dijiste, el extremo toca el borde. Sí, es como si estuviera apoyado sobre el borde.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 103
+      }
+    },
+    {
+      "start": 74.84,
+      "end": 77.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está como casi por sobrepasar la piña. Claro,",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 45
+      }
+    },
+    {
+      "start": 77.92,
+      "end": 78.52,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "claro, está ahí",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 46,
+        "end": 61
+      }
+    },
+    {
+      "start": 78.52,
+      "end": 78.86,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "justo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 62,
+        "end": 68
+      }
+    },
+    {
+      "start": 79.22,
+      "end": 80.18,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Sí, pero nada",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 69,
+        "end": 82
+      }
+    },
+    {
+      "start": 81.12,
+      "end": 81.72,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "de eso",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 6
+      }
+    },
+    {
+      "start": 81.72,
+      "end": 83.6,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "sobresale. No, pero está como",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 7,
+        "end": 36
+      }
+    },
+    {
+      "start": 83.6,
+      "end": 84.2,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "apoyada.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 37,
+        "end": 45
+      }
+    },
+    {
+      "start": 84.38,
+      "end": 85.84,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Lo mueve un cacho y se va.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 46,
+        "end": 72
+      }
+    },
+    {
+      "start": 87.24,
+      "end": 92.1,
+      "speaker": null,
+      "name": null,
+      "text": "De tal manera que donde estarían las bolas del caballo termina la piña ahí, digamos, tiene",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 90
+      }
+    },
+    {
+      "start": 93.92,
+      "end": 98.9,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "justo el borde de la piña, pasa por afuera de la tercer pata y se mete",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 70
+      }
+    },
+    {
+      "start": 98.9,
+      "end": 103.4,
+      "speaker": null,
+      "name": null,
+      "text": "donde estarían las bolas del caballo. Algo así, sí. Sí, yo tengo como ahí exacto como que está entrando ahí.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 108
+      }
+    },
+    {
+      "start": 103.4,
+      "end": 104.64,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Sí, sí, sí.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 11
+      }
+    },
+    {
+      "start": 106.98,
+      "end": 109.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y... a ver qué va... bueno, yo me la juego ahí.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 47
+      }
+    },
+    {
+      "start": 109.88,
+      "end": 110.18,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Dale lo que va.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 15
+      }
+    }
+  ]
+}

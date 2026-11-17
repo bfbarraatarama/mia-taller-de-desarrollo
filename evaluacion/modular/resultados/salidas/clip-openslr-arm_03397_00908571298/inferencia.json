@@ -1,0 +1,35 @@
+{
+  "elemento": "clip-openslr-arm_03397_00908571298",
+  "entrada_sha256": "39604f67a5e10214b7f583cd1982c8d23e82e7ff2d7579118bf85da37de988b5",
+  "configuracion": {
+    "modelo_stt": "medium",
+    "dispositivo": "cuda",
+    "modelo_minutas": "qwen2.5-7b",
+    "secciones": [
+      "resumen",
+      "temas",
+      "decisiones",
+      "problemas",
+      "acciones"
+    ]
+  },
+  "codigo_sha256": "ab99c8dea7e7699f22e9e44eccbc995ef95d4fb9c4c11cf5f657befb0b55e038",
+  "comando": [
+    "python",
+    "-m",
+    "src.stt",
+    "<datos>/clips/clip-openslr-arm_03397_00908571298/audio.wav",
+    "-o",
+    "<inferencia>/clip-openslr-arm_03397_00908571298/asr.json",
+    "--model",
+    "medium",
+    "--device",
+    "cuda"
+  ],
+  "segundos": 14.2,
+  "codigo": 0,
+  "salidas_sha256": {
+    "asr.json": "28a2a0a07508dca06e811eea47f7723eac3878aedd3c3765b67cd6e4e33d69b7"
+  },
+  "sellado": "16/11/2026, después de la corrida, contra resultados/salidas versionado en 4fd427e"
+}

@@ -1,0 +1,406 @@
+{
+  "segments": [
+    {
+      "start": 1.42,
+      "end": 8.84,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "la víbora esa está sobre las dos lunas como si fuera la",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 55
+      }
+    },
+    {
+      "start": 8.84,
+      "end": 12.18,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "no sé qué es, viste que tiene como una sombra negra o...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 56
+      }
+    },
+    {
+      "start": 12.18,
+      "end": 13.96,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "sí, apoya en las dos lunas",
+      "overlap": true,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 26
+      }
+    },
+    {
+      "start": 13.96,
+      "end": 15.76,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "apoya en las dos",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 15.76,
+      "end": 18.17,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "y a ver qué te puedo decir",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 26
+      }
+    },
+    {
+      "start": 21.52,
+      "end": 22.06,
+      "speaker": null,
+      "name": null,
+      "text": "la",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 23.34,
+      "end": 25.04,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "digamos la parte",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 25.78,
+      "end": 29.76,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "viste que está como enroscada y tiene como si fuera un monito",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 61
+      }
+    },
+    {
+      "start": 29.76,
+      "end": 30.78,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "digamos la parte de abajo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 31.76,
+      "end": 33.9,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "la parte derecha de ese monito",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 33.9,
+      "end": 38.76,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "casi está a la altura de la punta de la luna amarilla",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 53
+      }
+    },
+    {
+      "start": 39.4,
+      "end": 40.92,
+      "speaker": null,
+      "name": null,
+      "text": "ah ok",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 5
+      }
+    },
+    {
+      "start": 40.92,
+      "end": 43.76,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "igual casi casi",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 15
+      }
+    },
+    {
+      "start": 44.7,
+      "end": 49.98,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "como si siguieramos la línea de la punta de la luna amarilla",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 60
+      }
+    },
+    {
+      "start": 51.64,
+      "end": 54.87,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "en esa línea empezaría el monito",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 32
+      }
+    },
+    {
+      "start": 55.67,
+      "end": 59.81,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "y está sobre la línea amarilla y tocando la luna azul",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 53
+      }
+    },
+    {
+      "start": 59.81,
+      "end": 60.85,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "tocando apenas",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 14
+      }
+    },
+    {
+      "start": 61.89,
+      "end": 64.73,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "llega a cubrir la cosa esa negra",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 32
+      }
+    },
+    {
+      "start": 64.73,
+      "end": 65.93,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "ah ya pues está listo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 21
+      }
+    }
+  ]
+}

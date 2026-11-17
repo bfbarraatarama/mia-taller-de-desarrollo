@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "escenarios": {
+    "2.1.2": {
+      "fuentes": [
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/12/audio.wav",
+          "sha256": "d9fb6dad141516a2202abead9c08824a3d1aeaa9f4f29a5ad7d7acdebc344f86"
+        }
+      ],
+      "transformacion": "tarea de la muestra congelada con más habla superpuesta en la referencia"
+    },
+    "2.1.3": {
+      "fuentes": [
+        {
+          "ruta": "hito-2/.cache/icsi_audio/Bro015.interaction.wav",
+          "sha256": "395768148dab1fcfbddaf35f886d3c360d61efa59bc3836804e243894565d589"
+        }
+      ],
+      "transformacion": "ICSI Bro015 completa, sin cambios"
+    },
+    "2.1.4": {
+      "fuentes": [
+        {
+          "ruta": "evaluacion/escenarios/datos/2.1.4/audio.wav",
+          "sha256": "7b5a86d3246cccbc2ec2cfdbd7b335304f5fdf4fd46aab44016bd730eb1a4785"
+        }
+      ],
+      "transformacion": "figshare/S22/01/audio.wav con ruido rosa a 5.0 dB de SNR, semilla 20261010"
+    },
+    "2.1.5": {
+      "fuentes": [
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/01/audio.wav",
+          "sha256": "d3044be25393b263bbf7af5a9c365b2c001bbc9b6c0c041f04d531a3b5583340"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/02/audio.wav",
+          "sha256": "b23470a69a85d290bd7752348cecc51dd2b9afd79ac24758774c1c7d1ff477c5"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/03/audio.wav",
+          "sha256": "2326c9dea8e6d62cc6e6706223bd8715ad9c34eeecbd33506a2045f46f987d63"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/04/audio.wav",
+          "sha256": "78ed1dba151bb19ab3277d7c3463f698c7a2ab0970c2a24beb9f3607837de144"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/05/audio.wav",
+          "sha256": "be2bce7c2152b135e9030ca03e058c8f37660c79035f841e815fa6dd53cded90"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/06/audio.wav",
+          "sha256": "4d718d2072964ff9e8bada147a02f89101c1ae9c6b97d5ddfffc71349c81dc78"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/07/audio.wav",
+          "sha256": "35be0a223ecdb417070fd78b2ee7c8cdcf508124827aad4d68e81c7c88399b23"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/08/audio.wav",
+          "sha256": "05d17052c50ae15aa27ae96bdba9ed2b0876bf1da73d23e140d929fa1ef23e99"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/09/audio.wav",
+          "sha256": "c7cd0cca480c43b2ee985af8d6f2e1752c9966402a1a416563f5794faa565a1c"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/10/audio.wav",
+          "sha256": "f5f5a285754b93784f23bb89627449d5bc84f4e615623bcaff7912004ba27a97"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/11/audio.wav",
+          "sha256": "61caa3f902cc7929196c28dcb347ccb29de15319410676ded08d56f0f2d7a311"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/12/audio.wav",
+          "sha256": "d9fb6dad141516a2202abead9c08824a3d1aeaa9f4f29a5ad7d7acdebc344f86"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/13/audio.wav",
+          "sha256": "176e40bca6c83c55f2d658dd0e5943d3503058fa308a11079d9d57c843fb28b3"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/14/audio.wav",
+          "sha256": "934b9ac6d197f258cb0edc2e0dbddfc38bb9d30c2853e80ffbb292050e501e0e"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/15/audio.wav",
+          "sha256": "0363f87fe60b18b92d60a895946755de99dc5638a95f6cc9423ddd8ee857ce81"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/16/audio.wav",
+          "sha256": "8a60bdc88c7752718bfbcaca737b98d308f1b745e96c409d5ec952cee1850aa2"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/17/audio.wav",
+          "sha256": "a31599c1c4bef11795df310b449898f8f10f09b3758f3a75c67d28e884358dc9"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/18/audio.wav",
+          "sha256": "f87c3a83eb21c73c827762c5e25e90a51bf2b0076952724b3c55881eb2cba441"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/19/audio.wav",
+          "sha256": "b01fefb29ebaf6a7ff0eb645bde60248bf481a3576fb9d714a850505ea3ee44a"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/20/audio.wav",
+          "sha256": "b8a989f226473f4e1da562d5de047c1971c88653440b40b0bfd37b2b2f000e62"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/21/audio.wav",
+          "sha256": "08dbb75760d6f1ef85d7beb231195036bb0a0bbfad3af108d08efdbb3742da82"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/22/audio.wav",
+          "sha256": "268c594047e9d6a1d02651977502cb1bd6f4807880077e69530e65f50fc87107"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/23/audio.wav",
+          "sha256": "6072d1707d6e19af47e5bdc198ddceb706cc70b7b7ccf6b1774089c3ac51b283"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/24/audio.wav",
+          "sha256": "120dd3bc9a68127263130d1d9d0017831ee721a7993bacaa4ab03ef8c470c5ff"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/25/audio.wav",
+          "sha256": "72e49a39ae8dc0e2785a7ea62310d34410ef5177d12b8d6a0e44f8e0fb305525"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/26/audio.wav",
+          "sha256": "d9beddf14f5ac12a967eac49108e82d21f703f38528aa6ae4a0ed6ec4695966f"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/27/audio.wav",
+          "sha256": "0f5b3216666e98572bbdb3a19ef6211bf188f789451925305bd5d7cd5973a07b"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/28/audio.wav",
+          "sha256": "03ba72f4695fb1b9a0ee7aa0aa16fec21b6a1c4d0dbfa2d12875d7a6960d7808"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/29/audio.wav",
+          "sha256": "9abc2b4865beb578482197b3650ead1341bc5f7bbf4e14ffa11c56cd0f648e1d"
+        },
+        {
+          "ruta": "evaluacion/modular/datos/figshare/S25/30/audio.wav",
+          "sha256": "e5ec8753e2a949d746310aff846a656129810dba4ae765508891d214da87ac07"
+        }
+      ],
+      "transformacion": "sesión S25 completa, 30 archivos en orden"
+    }
+  }
+}

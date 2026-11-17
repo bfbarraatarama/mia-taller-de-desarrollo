@@ -1,0 +1,19 @@
+{
+  "resumen": "La reunión se centró en la ubicación de los elementos visuales para un diseño gráfico. Se discutió sobre la posición relativa de las medias lunas azul y amarilla, así como su relación con el espejo.",
+  "temas": [
+    {
+      "texto": "Ubicación de las medias lunas en relación al espejo.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005"
+      ],
+      "id_ancla": "I000005"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": []
+}

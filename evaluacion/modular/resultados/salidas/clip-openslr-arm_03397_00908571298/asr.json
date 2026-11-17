@@ -1,0 +1,52 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.86,
+      "text": "Para hacer esa receta necesitas fruta y alcohol.",
+      "words": [
+        {
+          "word": "Para",
+          "start": 0.0,
+          "end": 0.88
+        },
+        {
+          "word": "hacer",
+          "start": 0.88,
+          "end": 1.06
+        },
+        {
+          "word": "esa",
+          "start": 1.06,
+          "end": 1.22
+        },
+        {
+          "word": "receta",
+          "start": 1.22,
+          "end": 1.66
+        },
+        {
+          "word": "necesitas",
+          "start": 1.66,
+          "end": 2.14
+        },
+        {
+          "word": "fruta",
+          "start": 2.14,
+          "end": 2.44
+        },
+        {
+          "word": "y",
+          "start": 2.44,
+          "end": 2.64
+        },
+        {
+          "word": "alcohol.",
+          "start": 2.64,
+          "end": 2.86
+        }
+      ]
+    }
+  ]
+}

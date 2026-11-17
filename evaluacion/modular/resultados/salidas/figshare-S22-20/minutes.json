@@ -1,0 +1,80 @@
+{
+  "resumen": "La reunión se centró en la posición relativa de un espejo con respecto a una luna amarilla y una limusina. Se discutió sobre el alineamiento horizontal del espejo, su distancia y orientación. No se tomaron decisiones formales.",
+  "temas": [
+    {
+      "texto": "Alineamiento del espejo con la luna amarilla y la limusina.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024",
+        "I000025",
+        "I000026",
+        "I000027",
+        "I000028",
+        "I000029",
+        "I000030",
+        "I000031",
+        "I000032",
+        "I000033",
+        "I000034"
+      ],
+      "id_ancla": "I000034"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "La posición exacta del espejo en relación con la luna amarilla y la limusina sigue siendo incierta.",
+      "ids_intervenciones": [
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024",
+        "I000025",
+        "I000026"
+      ],
+      "id_ancla": "I000026"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Revisar la posición del espejo en relación con la luna amarilla y la limusina.",
+      "ids_intervenciones": [
+        "I000034"
+      ],
+      "id_ancla": "I000034",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

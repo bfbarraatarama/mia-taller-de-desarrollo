@@ -1,0 +1,366 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.72,
+      "end": 8.62,
+      "text": "Bueno, tenés que agarrar el mimo y ponerlo, bueno, del lado izquierdo arriba del búho,",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 0.72,
+          "end": 1.2
+        },
+        {
+          "word": "tenés",
+          "start": 1.26,
+          "end": 1.54
+        },
+        {
+          "word": "que",
+          "start": 1.54,
+          "end": 1.92
+        },
+        {
+          "word": "agarrar",
+          "start": 1.92,
+          "end": 2.34
+        },
+        {
+          "word": "el",
+          "start": 2.34,
+          "end": 2.62
+        },
+        {
+          "word": "mimo",
+          "start": 2.62,
+          "end": 3.02
+        },
+        {
+          "word": "y",
+          "start": 3.02,
+          "end": 3.4
+        },
+        {
+          "word": "ponerlo,",
+          "start": 3.4,
+          "end": 4.74
+        },
+        {
+          "word": "bueno,",
+          "start": 4.74,
+          "end": 5.6
+        },
+        {
+          "word": "del",
+          "start": 5.68,
+          "end": 5.72
+        },
+        {
+          "word": "lado",
+          "start": 5.72,
+          "end": 5.96
+        },
+        {
+          "word": "izquierdo",
+          "start": 5.96,
+          "end": 7.06
+        },
+        {
+          "word": "arriba",
+          "start": 7.06,
+          "end": 7.5
+        },
+        {
+          "word": "del",
+          "start": 7.5,
+          "end": 7.76
+        },
+        {
+          "word": "búho,",
+          "start": 7.76,
+          "end": 8.62
+        }
+      ]
+    },
+    {
+      "start": 9.92,
+      "end": 15.36,
+      "text": "o sea, con, intersectándose con la oreja, o sea, estaría a la derecha.",
+      "words": [
+        {
+          "word": "o",
+          "start": 9.92,
+          "end": 9.96
+        },
+        {
+          "word": "sea,",
+          "start": 9.96,
+          "end": 10.32
+        },
+        {
+          "word": "con,",
+          "start": 11.4,
+          "end": 11.52
+        },
+        {
+          "word": "intersectándose",
+          "start": 11.74,
+          "end": 12.36
+        },
+        {
+          "word": "con",
+          "start": 12.36,
+          "end": 12.56
+        },
+        {
+          "word": "la",
+          "start": 12.56,
+          "end": 12.68
+        },
+        {
+          "word": "oreja,",
+          "start": 12.68,
+          "end": 13.06
+        },
+        {
+          "word": "o",
+          "start": 13.24,
+          "end": 13.32
+        },
+        {
+          "word": "sea,",
+          "start": 13.32,
+          "end": 13.4
+        },
+        {
+          "word": "estaría",
+          "start": 13.56,
+          "end": 13.66
+        },
+        {
+          "word": "a",
+          "start": 13.66,
+          "end": 13.74
+        },
+        {
+          "word": "la",
+          "start": 13.74,
+          "end": 13.92
+        },
+        {
+          "word": "derecha.",
+          "start": 13.92,
+          "end": 15.36
+        }
+      ]
+    },
+    {
+      "start": 15.8,
+      "end": 16.56,
+      "text": "Pero justo...",
+      "words": [
+        {
+          "word": "justo...",
+          "start": 15.8,
+          "end": 16.56
+        }
+      ]
+    },
+    {
+      "start": 16.56,
+      "end": 20.4,
+      "text": "Arriba del búho, a la derecha de la oreja.",
+      "words": [
+        {
+          "word": "Arriba",
+          "start": 16.56,
+          "end": 17.22
+        },
+        {
+          "word": "del",
+          "start": 17.22,
+          "end": 17.4
+        },
+        {
+          "word": "búho,",
+          "start": 17.4,
+          "end": 17.94
+        },
+        {
+          "word": "a",
+          "start": 18.4,
+          "end": 18.64
+        },
+        {
+          "word": "la",
+          "start": 18.64,
+          "end": 18.68
+        },
+        {
+          "word": "derecha",
+          "start": 18.68,
+          "end": 19.92
+        },
+        {
+          "word": "de",
+          "start": 19.92,
+          "end": 20.04
+        },
+        {
+          "word": "la",
+          "start": 20.04,
+          "end": 20.12
+        },
+        {
+          "word": "oreja.",
+          "start": 20.12,
+          "end": 20.4
+        }
+      ]
+    },
+    {
+      "start": 20.72,
+      "end": 21.88,
+      "text": "Está justo arriba del búho.",
+      "words": [
+        {
+          "word": "Está",
+          "start": 20.72,
+          "end": 20.9
+        },
+        {
+          "word": "justo",
+          "start": 20.9,
+          "end": 21.22
+        },
+        {
+          "word": "arriba",
+          "start": 21.22,
+          "end": 21.42
+        },
+        {
+          "word": "del",
+          "start": 21.42,
+          "end": 21.64
+        },
+        {
+          "word": "búho.",
+          "start": 21.64,
+          "end": 21.88
+        }
+      ]
+    },
+    {
+      "start": 22.14,
+      "end": 24.8,
+      "text": "Justo en la intersección de ambos, más cerca de uno de otro.",
+      "words": [
+        {
+          "word": "Justo",
+          "start": 22.14,
+          "end": 22.44
+        },
+        {
+          "word": "en",
+          "start": 22.44,
+          "end": 22.62
+        },
+        {
+          "word": "la",
+          "start": 22.62,
+          "end": 22.86
+        },
+        {
+          "word": "intersección",
+          "start": 22.86,
+          "end": 23.28
+        },
+        {
+          "word": "de",
+          "start": 23.28,
+          "end": 23.46
+        },
+        {
+          "word": "ambos,",
+          "start": 23.46,
+          "end": 23.62
+        },
+        {
+          "word": "más",
+          "start": 23.8,
+          "end": 23.9
+        },
+        {
+          "word": "cerca",
+          "start": 23.9,
+          "end": 24.12
+        },
+        {
+          "word": "de",
+          "start": 24.12,
+          "end": 24.24
+        },
+        {
+          "word": "uno",
+          "start": 24.24,
+          "end": 24.38
+        },
+        {
+          "word": "de",
+          "start": 24.38,
+          "end": 24.5
+        },
+        {
+          "word": "otro.",
+          "start": 24.5,
+          "end": 24.8
+        }
+      ]
+    },
+    {
+      "start": 25.54,
+      "end": 26.98,
+      "text": "No, justo en la intersección.",
+      "words": [
+        {
+          "word": "No,",
+          "start": 25.54,
+          "end": 26.02
+        },
+        {
+          "word": "justo",
+          "start": 26.08,
+          "end": 26.32
+        },
+        {
+          "word": "en",
+          "start": 26.32,
+          "end": 26.44
+        },
+        {
+          "word": "la",
+          "start": 26.44,
+          "end": 26.54
+        },
+        {
+          "word": "intersección.",
+          "start": 26.54,
+          "end": 26.98
+        }
+      ]
+    },
+    {
+      "start": 27.26,
+      "end": 27.68,
+      "text": "Bueno.",
+      "words": [
+        {
+          "word": "Bueno.",
+          "start": 27.26,
+          "end": 27.68
+        }
+      ]
+    }
+  ]
+}

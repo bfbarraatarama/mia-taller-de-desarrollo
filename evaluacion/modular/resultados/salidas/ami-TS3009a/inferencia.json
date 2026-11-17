@@ -1,0 +1,39 @@
+{
+  "elemento": "ami-TS3009a",
+  "entrada_sha256": "107765ec36b8cb44b245e7a27dfb7e0f2552db43f83721ea2bd8cd2170bd00c9",
+  "configuracion": {
+    "modelo_stt": "medium",
+    "dispositivo": "cuda",
+    "modelo_minutas": "qwen2.5-7b",
+    "secciones": [
+      "resumen",
+      "temas",
+      "decisiones",
+      "problemas",
+      "acciones"
+    ]
+  },
+  "codigo_sha256": "4622740d14ef7dd701f6efd23aa4c49ff051df0cb3806d157ac06919ec2aabf3",
+  "comando": [
+    "python",
+    "-m",
+    "src.minutas",
+    "--entrada",
+    "<datos>/ami/TS3009a/transcription.json",
+    "--salida",
+    "<inferencia>/ami-TS3009a",
+    "--modelo",
+    "qwen2.5-7b",
+    "--secciones",
+    "resumen,temas,decisiones,problemas,acciones",
+    "--sobrescribir"
+  ],
+  "segundos": 1333.9,
+  "codigo": 0,
+  "salidas_sha256": {
+    "minutes.json": "7f4993d87c6ae3f20f9b6602b9205c6da0de9203fb3f0aff7f2af0b3ec2e495e",
+    "ejecucion_minutas.json": "f39bf75c1af896162db02f80e4781075cb0eaf27cf68e7cdf221de12ae724d48",
+    "minutes.md": "a18a98b495481ea7be1d7d7431c5c5d518a855b81b6de1579422714824224d92"
+  },
+  "sellado": "16/11/2026, después de la corrida, contra resultados/salidas versionado en 4fd427e; minutes.md agregado el 17/11/2026 contra la copia versionada en HEAD (0bc0747)"
+}

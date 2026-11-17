@@ -1,0 +1,570 @@
+{
+  "segments": [
+    {
+      "start": 0.88,
+      "end": 5.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ok, la luna amarilla pone la... loco, es siempre lo mismo esto.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 63
+      }
+    },
+    {
+      "start": 6.36,
+      "end": 7.66,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La luna amarilla...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 19
+      }
+    },
+    {
+      "start": 7.66,
+      "end": 8.88,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Pero es donde está saliendo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 9.58,
+      "end": 11.32,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿No? ¿No la ves?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 12.1,
+      "end": 16.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La luna amarilla ponela a mitad de camino entre la regla y el ojo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 66
+      }
+    },
+    {
+      "start": 17.1,
+      "end": 18.76,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Igual que la otra vez, centrado.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 32
+      }
+    },
+    {
+      "start": 19.34,
+      "end": 19.78,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Centrado.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 9
+      }
+    },
+    {
+      "start": 20.68,
+      "end": 23.5,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Que tenga más o menos la misma distancia entre la regla y el ojo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 65
+      }
+    },
+    {
+      "start": 23.5,
+      "end": 35.5,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "De manera que ponerle la parte más a la derecha de la luna está casi igual que la parte más a la derecha del ojo que sería la pestaña.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 134
+      }
+    },
+    {
+      "start": 36.74,
+      "end": 39.3,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Así, más o menos equidistante entre la regla y el ojo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 54
+      }
+    },
+    {
+      "start": 39.46,
+      "end": 43.1,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿Y el extremo izquierdo de la luna de abajo está más o menos a la altura del extremo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 84
+      }
+    },
+    {
+      "start": 43.1,
+      "end": 43.92,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "izquierdo de la regla?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 85,
+        "end": 107
+      }
+    },
+    {
+      "start": 45.08,
+      "end": 51.2,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, el extremo izquierdo de abajo de la luna está más o menos a la misma altura que el extremo izquierdo del ojo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 113
+      }
+    },
+    {
+      "start": 51.2,
+      "end": 52.92,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está bien, y de la regla también.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 33
+      }
+    },
+    {
+      "start": 53.0,
+      "end": 55.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, pero la regla está...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 55.12,
+      "end": 57.26,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La regla sobresale más hacia la izquierda.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 42
+      }
+    },
+    {
+      "start": 57.38,
+      "end": 57.9,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Que el ojo?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 59.58,
+      "end": 61.36,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Que el ojo y que la luna.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 61.82,
+      "end": 64.52,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿Sí? No lo veo de esa manera.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 64.88,
+      "end": 65.86,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Pero bueno, puede ser.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 22
+      }
+    },
+    {
+      "start": 67.8,
+      "end": 72.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Traté de poner la luna equidistante entre la regla y el ojo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 60
+      }
+    },
+    {
+      "start": 75.14,
+      "end": 77.32,
+      "speaker": null,
+      "name": null,
+      "text": "Bastante centrada con respecto al ojo, digamos.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 47
+      }
+    },
+    {
+      "start": 77.5,
+      "end": 80.72,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ocupa más o menos... de derecha a izquierda ocupa más o menos el mismo área.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 76
+      }
+    },
+    {
+      "start": 80.72,
+      "end": 82.38,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está bien, listo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 17
+      }
+    },
+    {
+      "start": 82.46,
+      "end": 83.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Le mando eso.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 23,
+        "start": 0,
+        "end": 13
+      }
+    },
+    {
+      "start": 83.7,
+      "end": 83.84,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Dale.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 0,
+        "end": 5
+      }
+    }
+  ]
+}

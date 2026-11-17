@@ -1,0 +1,543 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.96,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "el rinoceronte azul mandalo arriba del menor a y a la izquierda de la fruta",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 75
+      }
+    },
+    {
+      "start": 6.56,
+      "end": 12.64,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "que la pata de atrás del rinoceronte, que está más atrás de todas",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 65
+      }
+    },
+    {
+      "start": 12.64,
+      "end": 16.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "está sobre el borde negro de la fruta",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 37
+      }
+    },
+    {
+      "start": 16.7,
+      "end": 18.44,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "a ver,",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 6
+      }
+    },
+    {
+      "start": 18.62,
+      "end": 25.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "brá, ponelo ahí, ahora el eje horizontal del rinoceronte está más",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 7,
+        "end": 72
+      }
+    },
+    {
+      "start": 25.34,
+      "end": 31.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "arriba que el de la fruta de esta manera que la punta de la colita está más o",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 77
+      }
+    },
+    {
+      "start": 31.7,
+      "end": 37.0,
+      "speaker": null,
+      "name": null,
+      "text": "menos en el mismo eje horizontal que la mitad de la de las semillitas",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 69
+      }
+    },
+    {
+      "start": 37.0,
+      "end": 37.8,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿entiende eso?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 14
+      }
+    },
+    {
+      "start": 38.52,
+      "end": 41.98,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "la punta de la colita está más o menos en el mismo eje horizontal",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 15,
+        "end": 80
+      }
+    },
+    {
+      "start": 43.34,
+      "end": 48.9,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "exactamente la punta de la cola está, si vos traslás una horizontal en la punta de la",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 85
+      }
+    },
+    {
+      "start": 48.9,
+      "end": 52.32,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "cola pasa por el mismo eje horizontal que de las semillas",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 57
+      }
+    },
+    {
+      "start": 52.32,
+      "end": 52.92,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "ok pero",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 7
+      }
+    },
+    {
+      "start": 52.92,
+      "end": 55.84,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿qué parte de las semillas? ¿del medio de las semillas? si",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 8,
+        "end": 66
+      }
+    },
+    {
+      "start": 55.84,
+      "end": 56.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "yo traslás una",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 67,
+        "end": 81
+      }
+    },
+    {
+      "start": 56.46,
+      "end": 60.64,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "cruz en el medio de las semillas, la horizontal está a la misma altura que el extremo de la cola",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 96
+      }
+    },
+    {
+      "start": 61.76,
+      "end": 67.0,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "ok entonces el rinoceronte está bastante más arriba que el fuego",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 64
+      }
+    },
+    {
+      "start": 67.0,
+      "end": 67.5,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "si,",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 67.84,
+      "end": 75.6,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "está lejos de quemarse y el curo está superpuesto a la fruta",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 4,
+        "end": 64
+      }
+    },
+    {
+      "start": 76.78,
+      "end": 77.52,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "la cola",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 7
+      }
+    },
+    {
+      "start": 77.52,
+      "end": 79.14,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "está superpuesta al",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 8,
+        "end": 27
+      }
+    },
+    {
+      "start": 79.14,
+      "end": 79.84,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "curo también",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 28,
+        "end": 40
+      }
+    },
+    {
+      "start": 81.74,
+      "end": 87.76,
+      "speaker": null,
+      "name": null,
+      "text": "la pata de atrás, la que está más atrás de todo, está sobre el borde de la fruta, el borde negro",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 96
+      }
+    },
+    {
+      "start": 87.76,
+      "end": 89.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "no llega a lo rosa",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 18
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "resumen": "La reunión se centró en la colocación de un objeto religioso con velas y su integración con un jarrón y un rinoceronte. Se discutieron posiciones y alineaciones, pero no se tomaron decisiones definitivas.",
+  "temas": [
+    {
+      "texto": "Colocación del objeto religioso con velas en relación a un jarrón y un rinoceronte.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006"
+      ],
+      "id_ancla": "I000006"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "No se llegó a un acuerdo sobre la posición exacta del objeto religioso con respecto al jarrón y el rinoceronte.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006"
+      ],
+      "id_ancla": "I000006"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Revisar la colocación del objeto religioso con velas en relación al jarrón y el rinoceronte.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006"
+      ],
+      "id_ancla": "I000006",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

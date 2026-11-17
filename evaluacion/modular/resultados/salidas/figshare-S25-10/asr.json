@@ -1,0 +1,1264 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 3.14,
+      "end": 7.98,
+      "text": "Ok, el cuadro superponelo a la monja.",
+      "words": [
+        {
+          "word": "Ok,",
+          "start": 3.14,
+          "end": 3.76
+        },
+        {
+          "word": "el",
+          "start": 4.06,
+          "end": 4.14
+        },
+        {
+          "word": "cuadro",
+          "start": 4.14,
+          "end": 5.98
+        },
+        {
+          "word": "superponelo",
+          "start": 5.98,
+          "end": 6.82
+        },
+        {
+          "word": "a",
+          "start": 6.82,
+          "end": 6.96
+        },
+        {
+          "word": "la",
+          "start": 6.96,
+          "end": 7.1
+        },
+        {
+          "word": "monja.",
+          "start": 7.1,
+          "end": 7.98
+        }
+      ]
+    },
+    {
+      "start": 8.4,
+      "end": 9.02,
+      "text": "Perfectamente.",
+      "words": [
+        {
+          "word": "Perfectamente.",
+          "start": 8.4,
+          "end": 9.02
+        }
+      ]
+    },
+    {
+      "start": 10.18,
+      "end": 11.72,
+      "text": "Y casi te diría que sí.",
+      "words": [
+        {
+          "word": "Y",
+          "start": 10.18,
+          "end": 10.3
+        },
+        {
+          "word": "casi",
+          "start": 10.3,
+          "end": 10.58
+        },
+        {
+          "word": "te",
+          "start": 10.58,
+          "end": 10.8
+        },
+        {
+          "word": "diría",
+          "start": 10.8,
+          "end": 11.06
+        },
+        {
+          "word": "que",
+          "start": 11.06,
+          "end": 11.3
+        },
+        {
+          "word": "sí.",
+          "start": 11.3,
+          "end": 11.72
+        }
+      ]
+    },
+    {
+      "start": 13.28,
+      "end": 14.34,
+      "text": "¿Alguna trindicación?",
+      "words": [
+        {
+          "word": "¿Alguna",
+          "start": 13.28,
+          "end": 13.62
+        },
+        {
+          "word": "trindicación?",
+          "start": 13.62,
+          "end": 14.34
+        }
+      ]
+    },
+    {
+      "start": 15.6,
+      "end": 16.38,
+      "text": "¿De los extremos?",
+      "words": [
+        {
+          "word": "¿De",
+          "start": 15.6,
+          "end": 15.7
+        },
+        {
+          "word": "los",
+          "start": 15.7,
+          "end": 15.98
+        },
+        {
+          "word": "extremos?",
+          "start": 15.98,
+          "end": 16.38
+        }
+      ]
+    },
+    {
+      "start": 16.64,
+      "end": 18.9,
+      "text": "No, ves lo que sobre...",
+      "words": [
+        {
+          "word": "ves",
+          "start": 17.2,
+          "end": 17.72
+        },
+        {
+          "word": "lo",
+          "start": 17.72,
+          "end": 18.14
+        },
+        {
+          "word": "que",
+          "start": 18.14,
+          "end": 18.36
+        },
+        {
+          "word": "sobre...",
+          "start": 18.36,
+          "end": 18.9
+        }
+      ]
+    },
+    {
+      "start": 18.9,
+      "end": 24.32,
+      "text": "Ves que de izquierda y derecha hay como unas orejas que sobresalen del cuadro en el medio.",
+      "words": [
+        {
+          "word": "Ves",
+          "start": 18.9,
+          "end": 19.22
+        },
+        {
+          "word": "que",
+          "start": 19.22,
+          "end": 19.88
+        },
+        {
+          "word": "de",
+          "start": 19.88,
+          "end": 20.06
+        },
+        {
+          "word": "izquierda",
+          "start": 20.06,
+          "end": 20.4
+        },
+        {
+          "word": "y",
+          "start": 20.4,
+          "end": 20.62
+        },
+        {
+          "word": "derecha",
+          "start": 20.62,
+          "end": 20.88
+        },
+        {
+          "word": "hay",
+          "start": 20.88,
+          "end": 21.08
+        },
+        {
+          "word": "como",
+          "start": 21.08,
+          "end": 21.28
+        },
+        {
+          "word": "unas",
+          "start": 21.28,
+          "end": 21.56
+        },
+        {
+          "word": "orejas",
+          "start": 21.56,
+          "end": 22.14
+        },
+        {
+          "word": "que",
+          "start": 22.14,
+          "end": 22.36
+        },
+        {
+          "word": "sobresalen",
+          "start": 22.36,
+          "end": 22.78
+        },
+        {
+          "word": "del",
+          "start": 22.78,
+          "end": 22.98
+        },
+        {
+          "word": "cuadro",
+          "start": 22.98,
+          "end": 23.54
+        },
+        {
+          "word": "en",
+          "start": 23.54,
+          "end": 23.84
+        },
+        {
+          "word": "el",
+          "start": 23.84,
+          "end": 24.0
+        },
+        {
+          "word": "medio.",
+          "start": 24.0,
+          "end": 24.32
+        }
+      ]
+    },
+    {
+      "start": 25.34,
+      "end": 25.66,
+      "text": "Listo.",
+      "words": [
+        {
+          "word": "Listo.",
+          "start": 25.34,
+          "end": 25.66
+        }
+      ]
+    },
+    {
+      "start": 25.66,
+      "end": 34.84,
+      "text": "La oreja izquierda está casi rozando la parte izquierda de la ureola.",
+      "words": [
+        {
+          "word": "La",
+          "start": 25.66,
+          "end": 25.82
+        },
+        {
+          "word": "oreja",
+          "start": 25.82,
+          "end": 26.2
+        },
+        {
+          "word": "izquierda",
+          "start": 26.2,
+          "end": 27.34
+        },
+        {
+          "word": "está",
+          "start": 27.34,
+          "end": 28.92
+        },
+        {
+          "word": "casi",
+          "start": 28.92,
+          "end": 31.82
+        },
+        {
+          "word": "rozando",
+          "start": 31.82,
+          "end": 32.8
+        },
+        {
+          "word": "la",
+          "start": 32.8,
+          "end": 33.04
+        },
+        {
+          "word": "parte",
+          "start": 33.04,
+          "end": 33.24
+        },
+        {
+          "word": "izquierda",
+          "start": 33.24,
+          "end": 33.68
+        },
+        {
+          "word": "de",
+          "start": 33.68,
+          "end": 33.82
+        },
+        {
+          "word": "la",
+          "start": 33.82,
+          "end": 34.02
+        },
+        {
+          "word": "ureola.",
+          "start": 34.02,
+          "end": 34.84
+        }
+      ]
+    },
+    {
+      "start": 35.06,
+      "end": 40.72,
+      "text": "Ponle que hay menos de medio milímetro de separación, pero es casi perfectamente superpuesto.",
+      "words": [
+        {
+          "word": "Ponle",
+          "start": 35.06,
+          "end": 35.32
+        },
+        {
+          "word": "que",
+          "start": 35.32,
+          "end": 35.52
+        },
+        {
+          "word": "hay",
+          "start": 35.52,
+          "end": 36.8
+        },
+        {
+          "word": "menos",
+          "start": 36.8,
+          "end": 37.62
+        },
+        {
+          "word": "de",
+          "start": 37.62,
+          "end": 37.84
+        },
+        {
+          "word": "medio",
+          "start": 37.84,
+          "end": 37.96
+        },
+        {
+          "word": "milímetro",
+          "start": 37.96,
+          "end": 38.28
+        },
+        {
+          "word": "de",
+          "start": 38.28,
+          "end": 38.42
+        },
+        {
+          "word": "separación,",
+          "start": 38.42,
+          "end": 38.7
+        },
+        {
+          "word": "pero",
+          "start": 38.72,
+          "end": 38.84
+        },
+        {
+          "word": "es",
+          "start": 38.84,
+          "end": 39.06
+        },
+        {
+          "word": "casi",
+          "start": 39.06,
+          "end": 39.26
+        },
+        {
+          "word": "perfectamente",
+          "start": 39.26,
+          "end": 39.82
+        },
+        {
+          "word": "superpuesto.",
+          "start": 39.82,
+          "end": 40.72
+        }
+      ]
+    },
+    {
+      "start": 43.86,
+      "end": 48.68,
+      "text": "La oreja de abajo del medio está tocando el borde de la monja o se está sobrepasando",
+      "words": [
+        {
+          "word": "La",
+          "start": 43.86,
+          "end": 44.38
+        },
+        {
+          "word": "oreja",
+          "start": 44.38,
+          "end": 44.7
+        },
+        {
+          "word": "de",
+          "start": 44.7,
+          "end": 44.88
+        },
+        {
+          "word": "abajo",
+          "start": 44.88,
+          "end": 45.16
+        },
+        {
+          "word": "del",
+          "start": 45.16,
+          "end": 45.42
+        },
+        {
+          "word": "medio",
+          "start": 45.42,
+          "end": 45.68
+        },
+        {
+          "word": "está",
+          "start": 45.68,
+          "end": 46.0
+        },
+        {
+          "word": "tocando",
+          "start": 46.0,
+          "end": 46.4
+        },
+        {
+          "word": "el",
+          "start": 46.4,
+          "end": 46.54
+        },
+        {
+          "word": "borde",
+          "start": 46.54,
+          "end": 46.86
+        },
+        {
+          "word": "de",
+          "start": 46.86,
+          "end": 47.16
+        },
+        {
+          "word": "la",
+          "start": 47.16,
+          "end": 47.34
+        },
+        {
+          "word": "monja",
+          "start": 47.34,
+          "end": 47.64
+        },
+        {
+          "word": "o",
+          "start": 47.64,
+          "end": 47.78
+        },
+        {
+          "word": "se",
+          "start": 47.78,
+          "end": 47.92
+        },
+        {
+          "word": "está",
+          "start": 47.92,
+          "end": 48.02
+        },
+        {
+          "word": "sobrepasando",
+          "start": 48.02,
+          "end": 48.68
+        }
+      ]
+    },
+    {
+      "start": 48.68,
+      "end": 49.08,
+      "text": "o está de la izquierda.",
+      "words": [
+        {
+          "word": "o",
+          "start": 48.68,
+          "end": 48.84
+        },
+        {
+          "word": "está",
+          "start": 48.84,
+          "end": 49.04
+        },
+        {
+          "word": "de",
+          "start": 49.04,
+          "end": 49.08
+        }
+      ]
+    },
+    {
+      "start": 49.14,
+      "end": 50.66,
+      "text": "No, está del lado de adentro.",
+      "words": [
+        {
+          "word": "No,",
+          "start": 49.14,
+          "end": 49.66
+        },
+        {
+          "word": "está",
+          "start": 49.66,
+          "end": 49.92
+        },
+        {
+          "word": "del",
+          "start": 49.92,
+          "end": 50.12
+        },
+        {
+          "word": "lado",
+          "start": 50.12,
+          "end": 50.3
+        },
+        {
+          "word": "de",
+          "start": 50.3,
+          "end": 50.42
+        },
+        {
+          "word": "adentro.",
+          "start": 50.42,
+          "end": 50.66
+        }
+      ]
+    },
+    {
+      "start": 50.66,
+      "end": 55.94,
+      "text": "No está sobrepasando, pero está metido medio milímetro.",
+      "words": [
+        {
+          "word": "está",
+          "start": 50.66,
+          "end": 50.88
+        },
+        {
+          "word": "sobrepasando,",
+          "start": 50.88,
+          "end": 51.58
+        },
+        {
+          "word": "pero",
+          "start": 51.66,
+          "end": 51.86
+        },
+        {
+          "word": "está",
+          "start": 51.86,
+          "end": 53.06
+        },
+        {
+          "word": "metido",
+          "start": 53.06,
+          "end": 54.22
+        },
+        {
+          "word": "medio",
+          "start": 54.22,
+          "end": 54.84
+        },
+        {
+          "word": "milímetro.",
+          "start": 54.84,
+          "end": 55.94
+        }
+      ]
+    },
+    {
+      "start": 58.16,
+      "end": 60.58,
+      "text": "¿Y la cabeza de la monja se ve o está tapada completamente?",
+      "words": [
+        {
+          "word": "¿Y",
+          "start": 58.16,
+          "end": 58.46
+        },
+        {
+          "word": "la",
+          "start": 58.46,
+          "end": 58.56
+        },
+        {
+          "word": "cabeza",
+          "start": 58.56,
+          "end": 58.78
+        },
+        {
+          "word": "de",
+          "start": 58.78,
+          "end": 58.86
+        },
+        {
+          "word": "la",
+          "start": 58.86,
+          "end": 58.94
+        },
+        {
+          "word": "monja",
+          "start": 58.94,
+          "end": 59.04
+        },
+        {
+          "word": "se",
+          "start": 59.04,
+          "end": 59.18
+        },
+        {
+          "word": "ve",
+          "start": 59.18,
+          "end": 59.42
+        },
+        {
+          "word": "o",
+          "start": 59.42,
+          "end": 59.58
+        },
+        {
+          "word": "está",
+          "start": 59.58,
+          "end": 59.78
+        },
+        {
+          "word": "tapada",
+          "start": 59.78,
+          "end": 60.04
+        },
+        {
+          "word": "completamente?",
+          "start": 60.04,
+          "end": 60.58
+        }
+      ]
+    },
+    {
+      "start": 60.92,
+      "end": 63.96,
+      "text": "La cabeza se ve un cachito negro.",
+      "words": [
+        {
+          "word": "La",
+          "start": 60.92,
+          "end": 61.0
+        },
+        {
+          "word": "cabeza",
+          "start": 61.0,
+          "end": 61.48
+        },
+        {
+          "word": "se",
+          "start": 61.48,
+          "end": 61.9
+        },
+        {
+          "word": "ve",
+          "start": 61.9,
+          "end": 62.84
+        },
+        {
+          "word": "un",
+          "start": 62.84,
+          "end": 63.04
+        },
+        {
+          "word": "cachito",
+          "start": 63.04,
+          "end": 63.58
+        },
+        {
+          "word": "negro.",
+          "start": 63.58,
+          "end": 63.96
+        }
+      ]
+    },
+    {
+      "start": 65.04,
+      "end": 66.48,
+      "text": "Bueno, creo que más que eso.",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 65.04,
+          "end": 65.5
+        },
+        {
+          "word": "creo",
+          "start": 65.66,
+          "end": 65.76
+        },
+        {
+          "word": "que",
+          "start": 65.76,
+          "end": 65.9
+        },
+        {
+          "word": "más",
+          "start": 65.9,
+          "end": 66.0
+        },
+        {
+          "word": "que",
+          "start": 66.0,
+          "end": 66.2
+        },
+        {
+          "word": "eso.",
+          "start": 66.2,
+          "end": 66.48
+        }
+      ]
+    },
+    {
+      "start": 67.18,
+      "end": 67.92,
+      "text": "¿Se te ocurre algo más?",
+      "words": [
+        {
+          "word": "¿Se",
+          "start": 67.18,
+          "end": 67.24
+        },
+        {
+          "word": "te",
+          "start": 67.24,
+          "end": 67.36
+        },
+        {
+          "word": "ocurre",
+          "start": 67.36,
+          "end": 67.54
+        },
+        {
+          "word": "algo",
+          "start": 67.54,
+          "end": 67.66
+        },
+        {
+          "word": "más?",
+          "start": 67.66,
+          "end": 67.92
+        }
+      ]
+    },
+    {
+      "start": 68.76,
+      "end": 72.4,
+      "text": "La oreja de arriba está bastante centrada respecto a la cabeza de la monja.",
+      "words": [
+        {
+          "word": "La",
+          "start": 68.76,
+          "end": 69.22
+        },
+        {
+          "word": "oreja",
+          "start": 69.22,
+          "end": 69.46
+        },
+        {
+          "word": "de",
+          "start": 69.46,
+          "end": 69.58
+        },
+        {
+          "word": "arriba",
+          "start": 69.58,
+          "end": 69.7
+        },
+        {
+          "word": "está",
+          "start": 69.7,
+          "end": 69.82
+        },
+        {
+          "word": "bastante",
+          "start": 69.82,
+          "end": 70.08
+        },
+        {
+          "word": "centrada",
+          "start": 70.08,
+          "end": 70.54
+        },
+        {
+          "word": "respecto",
+          "start": 70.54,
+          "end": 71.16
+        },
+        {
+          "word": "a",
+          "start": 71.16,
+          "end": 71.62
+        },
+        {
+          "word": "la",
+          "start": 71.62,
+          "end": 71.74
+        },
+        {
+          "word": "cabeza",
+          "start": 71.74,
+          "end": 71.94
+        },
+        {
+          "word": "de",
+          "start": 71.94,
+          "end": 72.08
+        },
+        {
+          "word": "la",
+          "start": 72.08,
+          "end": 72.16
+        },
+        {
+          "word": "monja.",
+          "start": 72.16,
+          "end": 72.4
+        }
+      ]
+    },
+    {
+      "start": 72.7,
+      "end": 77.56,
+      "text": "Sí, está un milímetro corrida hacia la derecha o medio milímetro.",
+      "words": [
+        {
+          "word": "Sí,",
+          "start": 72.7,
+          "end": 72.92
+        },
+        {
+          "word": "está",
+          "start": 73.56,
+          "end": 73.66
+        },
+        {
+          "word": "un",
+          "start": 73.66,
+          "end": 73.86
+        },
+        {
+          "word": "milímetro",
+          "start": 73.86,
+          "end": 74.34
+        },
+        {
+          "word": "corrida",
+          "start": 74.34,
+          "end": 75.8
+        },
+        {
+          "word": "hacia",
+          "start": 75.8,
+          "end": 76.04
+        },
+        {
+          "word": "la",
+          "start": 76.04,
+          "end": 76.26
+        },
+        {
+          "word": "derecha",
+          "start": 76.26,
+          "end": 76.64
+        },
+        {
+          "word": "o",
+          "start": 76.64,
+          "end": 76.82
+        },
+        {
+          "word": "medio",
+          "start": 76.82,
+          "end": 77.02
+        },
+        {
+          "word": "milímetro.",
+          "start": 77.02,
+          "end": 77.56
+        }
+      ]
+    },
+    {
+      "start": 77.64,
+      "end": 78.72,
+      "text": "No está exactamente centrada.",
+      "words": [
+        {
+          "word": "No",
+          "start": 77.64,
+          "end": 77.72
+        },
+        {
+          "word": "está",
+          "start": 77.72,
+          "end": 78.0
+        },
+        {
+          "word": "exactamente",
+          "start": 78.0,
+          "end": 78.6
+        },
+        {
+          "word": "centrada.",
+          "start": 78.6,
+          "end": 78.72
+        }
+      ]
+    },
+    {
+      "start": 78.72,
+      "end": 80.24,
+      "text": "Claro, el cosito blanco.",
+      "words": [
+        {
+          "word": "Claro,",
+          "start": 78.72,
+          "end": 79.06
+        },
+        {
+          "word": "el",
+          "start": 79.56,
+          "end": 79.66
+        },
+        {
+          "word": "cosito",
+          "start": 79.66,
+          "end": 79.92
+        },
+        {
+          "word": "blanco.",
+          "start": 79.92,
+          "end": 80.24
+        }
+      ]
+    },
+    {
+      "start": 82.52,
+      "end": 90.88,
+      "text": "La oreja de arriba no está exactamente centrada con respecto a la parte negra de arriba de",
+      "words": [
+        {
+          "word": "La",
+          "start": 82.52,
+          "end": 83.04
+        },
+        {
+          "word": "oreja",
+          "start": 83.04,
+          "end": 83.48
+        },
+        {
+          "word": "de",
+          "start": 83.48,
+          "end": 83.72
+        },
+        {
+          "word": "arriba",
+          "start": 83.72,
+          "end": 84.24
+        },
+        {
+          "word": "no",
+          "start": 84.24,
+          "end": 86.3
+        },
+        {
+          "word": "está",
+          "start": 86.3,
+          "end": 86.64
+        },
+        {
+          "word": "exactamente",
+          "start": 86.64,
+          "end": 87.16
+        },
+        {
+          "word": "centrada",
+          "start": 87.16,
+          "end": 87.58
+        },
+        {
+          "word": "con",
+          "start": 87.58,
+          "end": 87.78
+        },
+        {
+          "word": "respecto",
+          "start": 87.78,
+          "end": 88.4
+        },
+        {
+          "word": "a",
+          "start": 88.4,
+          "end": 89.44
+        },
+        {
+          "word": "la",
+          "start": 89.44,
+          "end": 89.56
+        },
+        {
+          "word": "parte",
+          "start": 89.56,
+          "end": 89.88
+        },
+        {
+          "word": "negra",
+          "start": 89.88,
+          "end": 90.3
+        },
+        {
+          "word": "de",
+          "start": 90.3,
+          "end": 90.52
+        },
+        {
+          "word": "arriba",
+          "start": 90.52,
+          "end": 90.7
+        },
+        {
+          "word": "de",
+          "start": 90.7,
+          "end": 90.88
+        }
+      ]
+    },
+    {
+      "start": 90.88,
+      "end": 94.4,
+      "text": "la monja, sino que está apenas hacia la derecha.",
+      "words": [
+        {
+          "word": "la",
+          "start": 90.88,
+          "end": 91.02
+        },
+        {
+          "word": "monja,",
+          "start": 91.02,
+          "end": 92.22
+        },
+        {
+          "word": "sino",
+          "start": 92.46,
+          "end": 92.66
+        },
+        {
+          "word": "que",
+          "start": 92.66,
+          "end": 92.88
+        },
+        {
+          "word": "está",
+          "start": 92.88,
+          "end": 93.08
+        },
+        {
+          "word": "apenas",
+          "start": 93.08,
+          "end": 93.52
+        },
+        {
+          "word": "hacia",
+          "start": 93.52,
+          "end": 93.8
+        },
+        {
+          "word": "la",
+          "start": 93.8,
+          "end": 94.08
+        },
+        {
+          "word": "derecha.",
+          "start": 94.08,
+          "end": 94.4
+        }
+      ]
+    },
+    {
+      "start": 94.5,
+      "end": 100.42,
+      "text": "O sea, de lo negro de la monja que está arriba se ve un poquito más de la izquierda que de",
+      "words": [
+        {
+          "word": "sea,",
+          "start": 94.5,
+          "end": 94.74
+        },
+        {
+          "word": "de",
+          "start": 95.22,
+          "end": 95.26
+        },
+        {
+          "word": "lo",
+          "start": 95.26,
+          "end": 95.4
+        },
+        {
+          "word": "negro",
+          "start": 95.4,
+          "end": 95.74
+        },
+        {
+          "word": "de",
+          "start": 95.74,
+          "end": 95.92
+        },
+        {
+          "word": "la",
+          "start": 95.92,
+          "end": 96.02
+        },
+        {
+          "word": "monja",
+          "start": 96.02,
+          "end": 96.28
+        },
+        {
+          "word": "que",
+          "start": 96.28,
+          "end": 96.44
+        },
+        {
+          "word": "está",
+          "start": 96.44,
+          "end": 96.56
+        },
+        {
+          "word": "arriba",
+          "start": 96.56,
+          "end": 96.8
+        },
+        {
+          "word": "se",
+          "start": 96.8,
+          "end": 97.0
+        },
+        {
+          "word": "ve",
+          "start": 97.0,
+          "end": 97.08
+        },
+        {
+          "word": "un",
+          "start": 97.08,
+          "end": 97.36
+        },
+        {
+          "word": "poquito",
+          "start": 97.36,
+          "end": 97.76
+        },
+        {
+          "word": "más",
+          "start": 97.76,
+          "end": 98.06
+        },
+        {
+          "word": "de",
+          "start": 98.06,
+          "end": 98.2
+        },
+        {
+          "word": "la",
+          "start": 98.2,
+          "end": 98.4
+        },
+        {
+          "word": "izquierda",
+          "start": 98.4,
+          "end": 99.42
+        },
+        {
+          "word": "que",
+          "start": 99.42,
+          "end": 100.22
+        },
+        {
+          "word": "de",
+          "start": 100.22,
+          "end": 100.42
+        }
+      ]
+    },
+    {
+      "start": 100.42,
+      "end": 101.08,
+      "text": "la derecha.",
+      "words": [
+        {
+          "word": "la",
+          "start": 100.42,
+          "end": 100.58
+        },
+        {
+          "word": "derecha.",
+          "start": 100.58,
+          "end": 101.08
+        }
+      ]
+    },
+    {
+      "start": 101.34,
+      "end": 102.98,
+      "text": "Bueno, ya debemos estar ubicados.",
+      "words": [
+        {
+          "word": "debemos",
+          "start": 101.92,
+          "end": 102.3
+        },
+        {
+          "word": "estar",
+          "start": 102.3,
+          "end": 102.52
+        },
+        {
+          "word": "ubicados.",
+          "start": 102.52,
+          "end": 102.98
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1444 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 2.82,
+      "end": 6.0,
+      "text": "el coche está entre las dos lunas",
+      "words": [
+        {
+          "word": "el",
+          "start": 2.82,
+          "end": 3.62
+        },
+        {
+          "word": "coche",
+          "start": 3.62,
+          "end": 4.42
+        },
+        {
+          "word": "está",
+          "start": 4.42,
+          "end": 4.92
+        },
+        {
+          "word": "entre",
+          "start": 4.92,
+          "end": 5.26
+        },
+        {
+          "word": "las",
+          "start": 5.26,
+          "end": 5.52
+        },
+        {
+          "word": "dos",
+          "start": 5.52,
+          "end": 5.7
+        },
+        {
+          "word": "lunas",
+          "start": 5.7,
+          "end": 6.1
+        }
+      ]
+    },
+    {
+      "start": 8.1,
+      "end": 9.16,
+      "text": "¿tocan algunas?",
+      "words": [
+        {
+          "word": "¿tocan",
+          "start": 8.1,
+          "end": 8.9
+        },
+        {
+          "word": "algunas?",
+          "start": 8.9,
+          "end": 9.16
+        }
+      ]
+    },
+    {
+      "start": 9.42,
+      "end": 10.72,
+      "text": "no, no toca ninguna",
+      "words": [
+        {
+          "word": "no,",
+          "start": 9.42,
+          "end": 9.7
+        },
+        {
+          "word": "no",
+          "start": 9.7,
+          "end": 9.84
+        },
+        {
+          "word": "toca",
+          "start": 9.84,
+          "end": 9.98
+        },
+        {
+          "word": "ninguna",
+          "start": 9.98,
+          "end": 10.72
+        }
+      ]
+    },
+    {
+      "start": 10.72,
+      "end": 23.0,
+      "text": "digamos que la parte de atrás del coche ubicala cerca del norte de la luna",
+      "words": [
+        {
+          "word": "digamos",
+          "start": 10.72,
+          "end": 11.18
+        },
+        {
+          "word": "que",
+          "start": 11.18,
+          "end": 12.34
+        },
+        {
+          "word": "la",
+          "start": 12.34,
+          "end": 15.14
+        },
+        {
+          "word": "parte",
+          "start": 15.14,
+          "end": 15.38
+        },
+        {
+          "word": "de",
+          "start": 15.38,
+          "end": 15.64
+        },
+        {
+          "word": "atrás",
+          "start": 15.64,
+          "end": 15.82
+        },
+        {
+          "word": "del",
+          "start": 15.82,
+          "end": 16.06
+        },
+        {
+          "word": "coche",
+          "start": 16.06,
+          "end": 17.38
+        },
+        {
+          "word": "ubicala",
+          "start": 17.38,
+          "end": 19.16
+        },
+        {
+          "word": "cerca",
+          "start": 19.16,
+          "end": 21.68
+        },
+        {
+          "word": "del",
+          "start": 21.68,
+          "end": 21.96
+        },
+        {
+          "word": "norte",
+          "start": 21.96,
+          "end": 22.28
+        },
+        {
+          "word": "de",
+          "start": 22.28,
+          "end": 22.52
+        },
+        {
+          "word": "la",
+          "start": 22.52,
+          "end": 22.66
+        },
+        {
+          "word": "luna",
+          "start": 22.66,
+          "end": 23.06
+        }
+      ]
+    },
+    {
+      "start": 23.78,
+      "end": 26.96,
+      "text": "en ese espacio",
+      "words": [
+        {
+          "word": "en",
+          "start": 23.78,
+          "end": 24.24
+        },
+        {
+          "word": "ese",
+          "start": 24.24,
+          "end": 26.26
+        },
+        {
+          "word": "espacio",
+          "start": 26.26,
+          "end": 26.96
+        }
+      ]
+    },
+    {
+      "start": 28.02,
+      "end": 30.64,
+      "text": "dentro del espacio cómpeco o congreso",
+      "words": [
+        {
+          "word": "dentro",
+          "start": 28.02,
+          "end": 28.54
+        },
+        {
+          "word": "del",
+          "start": 28.54,
+          "end": 28.74
+        },
+        {
+          "word": "espacio",
+          "start": 28.74,
+          "end": 29.06
+        },
+        {
+          "word": "cómpeco",
+          "start": 29.06,
+          "end": 30.24
+        },
+        {
+          "word": "o",
+          "start": 30.24,
+          "end": 30.3
+        },
+        {
+          "word": "congreso",
+          "start": 30.3,
+          "end": 30.64
+        }
+      ]
+    },
+    {
+      "start": 32.32,
+      "end": 34.76,
+      "text": "más cerca del norte",
+      "words": [
+        {
+          "word": "más",
+          "start": 32.32,
+          "end": 32.84
+        },
+        {
+          "word": "cerca",
+          "start": 32.84,
+          "end": 33.1
+        },
+        {
+          "word": "del",
+          "start": 33.1,
+          "end": 34.36
+        },
+        {
+          "word": "norte",
+          "start": 34.36,
+          "end": 34.76
+        }
+      ]
+    },
+    {
+      "start": 34.76,
+      "end": 44.52,
+      "text": "la distancia que hay entre el coche y cada una de las lunas es más o menos la misma",
+      "words": [
+        {
+          "word": "la",
+          "start": 34.76,
+          "end": 35.3
+        },
+        {
+          "word": "distancia",
+          "start": 35.3,
+          "end": 35.9
+        },
+        {
+          "word": "que",
+          "start": 35.9,
+          "end": 36.16
+        },
+        {
+          "word": "hay",
+          "start": 36.16,
+          "end": 37.32
+        },
+        {
+          "word": "entre",
+          "start": 37.32,
+          "end": 40.0
+        },
+        {
+          "word": "el",
+          "start": 40.0,
+          "end": 41.56
+        },
+        {
+          "word": "coche",
+          "start": 41.56,
+          "end": 41.96
+        },
+        {
+          "word": "y",
+          "start": 41.96,
+          "end": 42.14
+        },
+        {
+          "word": "cada",
+          "start": 42.14,
+          "end": 42.3
+        },
+        {
+          "word": "una",
+          "start": 42.3,
+          "end": 42.46
+        },
+        {
+          "word": "de",
+          "start": 42.46,
+          "end": 42.56
+        },
+        {
+          "word": "las",
+          "start": 42.56,
+          "end": 42.76
+        },
+        {
+          "word": "lunas",
+          "start": 42.76,
+          "end": 43.16
+        },
+        {
+          "word": "es",
+          "start": 43.16,
+          "end": 43.32
+        },
+        {
+          "word": "más",
+          "start": 43.32,
+          "end": 43.5
+        },
+        {
+          "word": "o",
+          "start": 43.5,
+          "end": 43.56
+        },
+        {
+          "word": "menos",
+          "start": 43.56,
+          "end": 43.72
+        },
+        {
+          "word": "la",
+          "start": 43.72,
+          "end": 43.96
+        },
+        {
+          "word": "misma",
+          "start": 43.96,
+          "end": 44.52
+        }
+      ]
+    },
+    {
+      "start": 44.52,
+      "end": 47.62,
+      "text": "te tiene que sobrar como un centímetro de cada lado",
+      "words": [
+        {
+          "word": "te",
+          "start": 44.52,
+          "end": 44.98
+        },
+        {
+          "word": "tiene",
+          "start": 44.98,
+          "end": 45.08
+        },
+        {
+          "word": "que",
+          "start": 45.08,
+          "end": 45.24
+        },
+        {
+          "word": "sobrar",
+          "start": 45.24,
+          "end": 46.06
+        },
+        {
+          "word": "como",
+          "start": 46.06,
+          "end": 46.26
+        },
+        {
+          "word": "un",
+          "start": 46.26,
+          "end": 46.5
+        },
+        {
+          "word": "centímetro",
+          "start": 46.5,
+          "end": 46.9
+        },
+        {
+          "word": "de",
+          "start": 46.9,
+          "end": 47.08
+        },
+        {
+          "word": "cada",
+          "start": 47.08,
+          "end": 47.28
+        },
+        {
+          "word": "lado",
+          "start": 47.28,
+          "end": 47.62
+        }
+      ]
+    },
+    {
+      "start": 48.88,
+      "end": 50.58,
+      "text": "centímetro? milímetro?",
+      "words": [
+        {
+          "word": "centímetro?",
+          "start": 48.88,
+          "end": 49.4
+        },
+        {
+          "word": "milímetro?",
+          "start": 50.06,
+          "end": 50.58
+        }
+      ]
+    },
+    {
+      "start": 50.84,
+      "end": 55.46,
+      "text": "medio centímetro de cada lado, te sobra un espacio bastante visible",
+      "words": [
+        {
+          "word": "medio",
+          "start": 50.84,
+          "end": 51.04
+        },
+        {
+          "word": "centímetro",
+          "start": 51.04,
+          "end": 51.6
+        },
+        {
+          "word": "de",
+          "start": 51.6,
+          "end": 51.74
+        },
+        {
+          "word": "cada",
+          "start": 51.74,
+          "end": 51.94
+        },
+        {
+          "word": "lado,",
+          "start": 51.94,
+          "end": 52.22
+        },
+        {
+          "word": "te",
+          "start": 53.56,
+          "end": 53.58
+        },
+        {
+          "word": "sobra",
+          "start": 53.58,
+          "end": 54.14
+        },
+        {
+          "word": "un",
+          "start": 54.14,
+          "end": 54.3
+        },
+        {
+          "word": "espacio",
+          "start": 54.3,
+          "end": 54.56
+        },
+        {
+          "word": "bastante",
+          "start": 54.56,
+          "end": 54.94
+        },
+        {
+          "word": "visible",
+          "start": 54.94,
+          "end": 55.46
+        }
+      ]
+    },
+    {
+      "start": 56.46,
+      "end": 59.34,
+      "text": "teniendo en cuenta la punta, la parte del paragolpe",
+      "words": [
+        {
+          "word": "teniendo",
+          "start": 56.46,
+          "end": 56.98
+        },
+        {
+          "word": "en",
+          "start": 56.98,
+          "end": 57.06
+        },
+        {
+          "word": "cuenta",
+          "start": 57.06,
+          "end": 57.18
+        },
+        {
+          "word": "la",
+          "start": 57.18,
+          "end": 57.6
+        },
+        {
+          "word": "punta,",
+          "start": 57.6,
+          "end": 58.08
+        },
+        {
+          "word": "la",
+          "start": 58.3,
+          "end": 58.44
+        },
+        {
+          "word": "parte",
+          "start": 58.44,
+          "end": 58.7
+        },
+        {
+          "word": "del",
+          "start": 58.7,
+          "end": 58.86
+        },
+        {
+          "word": "paragolpe",
+          "start": 58.86,
+          "end": 59.34
+        }
+      ]
+    },
+    {
+      "start": 59.34,
+      "end": 61.52,
+      "text": "la punta está casi tocándolo",
+      "words": [
+        {
+          "word": "la",
+          "start": 59.34,
+          "end": 60.04
+        },
+        {
+          "word": "punta",
+          "start": 60.04,
+          "end": 60.54
+        },
+        {
+          "word": "está",
+          "start": 60.54,
+          "end": 60.74
+        },
+        {
+          "word": "casi",
+          "start": 60.74,
+          "end": 60.88
+        },
+        {
+          "word": "tocándolo",
+          "start": 60.88,
+          "end": 61.52
+        }
+      ]
+    },
+    {
+      "start": 61.52,
+      "end": 79.92,
+      "text": "no, la punta del coche está a 2-3 milímetros de la luna amarilla",
+      "words": [
+        {
+          "word": "no,",
+          "start": 61.52,
+          "end": 62.16
+        },
+        {
+          "word": "la",
+          "start": 62.3,
+          "end": 62.46
+        },
+        {
+          "word": "punta",
+          "start": 62.46,
+          "end": 62.92
+        },
+        {
+          "word": "del",
+          "start": 62.92,
+          "end": 66.56
+        },
+        {
+          "word": "coche",
+          "start": 66.56,
+          "end": 67.0
+        },
+        {
+          "word": "está",
+          "start": 67.0,
+          "end": 68.0
+        },
+        {
+          "word": "a",
+          "start": 68.0,
+          "end": 69.96
+        },
+        {
+          "word": "2",
+          "start": 69.96,
+          "end": 70.68
+        },
+        {
+          "word": "-3",
+          "start": 70.68,
+          "end": 70.98
+        },
+        {
+          "word": "milímetros",
+          "start": 70.98,
+          "end": 72.02
+        },
+        {
+          "word": "de",
+          "start": 72.02,
+          "end": 76.36
+        },
+        {
+          "word": "la",
+          "start": 76.36,
+          "end": 78.34
+        },
+        {
+          "word": "luna",
+          "start": 78.34,
+          "end": 78.62
+        },
+        {
+          "word": "amarilla",
+          "start": 78.62,
+          "end": 79.92
+        }
+      ]
+    },
+    {
+      "start": 79.92,
+      "end": 84.86,
+      "text": "casi en el centro de la luna",
+      "words": [
+        {
+          "word": "casi",
+          "start": 79.92,
+          "end": 81.56
+        },
+        {
+          "word": "en",
+          "start": 81.56,
+          "end": 82.9
+        },
+        {
+          "word": "el",
+          "start": 82.9,
+          "end": 83.22
+        },
+        {
+          "word": "centro",
+          "start": 83.22,
+          "end": 83.74
+        },
+        {
+          "word": "de",
+          "start": 83.74,
+          "end": 84.36
+        },
+        {
+          "word": "la",
+          "start": 84.36,
+          "end": 84.5
+        },
+        {
+          "word": "luna",
+          "start": 84.5,
+          "end": 84.86
+        }
+      ]
+    },
+    {
+      "start": 86.72,
+      "end": 88.62,
+      "text": "quizás levemente más hacia el norte",
+      "words": [
+        {
+          "word": "quizás",
+          "start": 86.72,
+          "end": 87.16
+        },
+        {
+          "word": "levemente",
+          "start": 87.16,
+          "end": 87.6
+        },
+        {
+          "word": "más",
+          "start": 87.6,
+          "end": 87.82
+        },
+        {
+          "word": "hacia",
+          "start": 87.82,
+          "end": 88.02
+        },
+        {
+          "word": "el",
+          "start": 88.02,
+          "end": 88.2
+        },
+        {
+          "word": "norte",
+          "start": 88.2,
+          "end": 88.62
+        }
+      ]
+    },
+    {
+      "start": 88.62,
+      "end": 90.24,
+      "text": "y la sombra, fíjate",
+      "words": [
+        {
+          "word": "y",
+          "start": 88.62,
+          "end": 88.96
+        },
+        {
+          "word": "la",
+          "start": 88.96,
+          "end": 89.2
+        },
+        {
+          "word": "sombra,",
+          "start": 89.2,
+          "end": 89.6
+        },
+        {
+          "word": "fíjate",
+          "start": 89.8,
+          "end": 90.24
+        }
+      ]
+    },
+    {
+      "start": 90.24,
+      "end": 92.92,
+      "text": "está casi tocando la punta del azul entonces",
+      "words": [
+        {
+          "word": "está",
+          "start": 90.24,
+          "end": 91.0
+        },
+        {
+          "word": "casi",
+          "start": 91.0,
+          "end": 91.22
+        },
+        {
+          "word": "tocando",
+          "start": 91.22,
+          "end": 91.5
+        },
+        {
+          "word": "la",
+          "start": 91.5,
+          "end": 91.68
+        },
+        {
+          "word": "punta",
+          "start": 91.68,
+          "end": 91.92
+        },
+        {
+          "word": "del",
+          "start": 91.92,
+          "end": 92.08
+        },
+        {
+          "word": "azul",
+          "start": 92.08,
+          "end": 92.28
+        },
+        {
+          "word": "entonces",
+          "start": 92.28,
+          "end": 92.92
+        }
+      ]
+    },
+    {
+      "start": 92.92,
+      "end": 94.34,
+      "text": "no, está más arriba",
+      "words": [
+        {
+          "word": "no,",
+          "start": 92.92,
+          "end": 93.34
+        },
+        {
+          "word": "está",
+          "start": 93.42,
+          "end": 93.5
+        },
+        {
+          "word": "más",
+          "start": 93.5,
+          "end": 93.64
+        },
+        {
+          "word": "arriba",
+          "start": 93.64,
+          "end": 94.34
+        }
+      ]
+    },
+    {
+      "start": 94.98,
+      "end": 96.86,
+      "text": "también, ponle 2 milímetros más arriba",
+      "words": [
+        {
+          "word": "también,",
+          "start": 94.98,
+          "end": 95.42
+        },
+        {
+          "word": "ponle",
+          "start": 95.5,
+          "end": 95.74
+        },
+        {
+          "word": "2",
+          "start": 95.74,
+          "end": 95.9
+        },
+        {
+          "word": "milímetros",
+          "start": 95.9,
+          "end": 96.3
+        },
+        {
+          "word": "más",
+          "start": 96.3,
+          "end": 96.52
+        },
+        {
+          "word": "arriba",
+          "start": 96.52,
+          "end": 96.86
+        }
+      ]
+    },
+    {
+      "start": 96.86,
+      "end": 98.46,
+      "text": "entonces está centrada",
+      "words": [
+        {
+          "word": "entonces",
+          "start": 96.86,
+          "end": 97.16
+        },
+        {
+          "word": "está",
+          "start": 97.16,
+          "end": 97.32
+        },
+        {
+          "word": "centrada",
+          "start": 97.32,
+          "end": 98.46
+        }
+      ]
+    },
+    {
+      "start": 99.12,
+      "end": 100.62,
+      "text": "no, está un poco más hacia el norte",
+      "words": [
+        {
+          "word": "no,",
+          "start": 99.12,
+          "end": 99.48
+        },
+        {
+          "word": "está",
+          "start": 99.62,
+          "end": 99.68
+        },
+        {
+          "word": "un",
+          "start": 99.68,
+          "end": 99.78
+        },
+        {
+          "word": "poco",
+          "start": 99.78,
+          "end": 99.92
+        },
+        {
+          "word": "más",
+          "start": 99.92,
+          "end": 100.14
+        },
+        {
+          "word": "hacia",
+          "start": 100.14,
+          "end": 100.28
+        },
+        {
+          "word": "el",
+          "start": 100.28,
+          "end": 100.42
+        },
+        {
+          "word": "norte",
+          "start": 100.42,
+          "end": 100.62
+        }
+      ]
+    },
+    {
+      "start": 100.62,
+      "end": 106.18,
+      "text": "y está casi centrado con la punta de abajo del coche",
+      "words": [
+        {
+          "word": "y",
+          "start": 100.62,
+          "end": 101.2
+        },
+        {
+          "word": "está",
+          "start": 101.2,
+          "end": 101.36
+        },
+        {
+          "word": "casi",
+          "start": 101.36,
+          "end": 101.7
+        },
+        {
+          "word": "centrado",
+          "start": 101.7,
+          "end": 102.14
+        },
+        {
+          "word": "con",
+          "start": 102.14,
+          "end": 102.32
+        },
+        {
+          "word": "la",
+          "start": 102.32,
+          "end": 102.48
+        },
+        {
+          "word": "punta",
+          "start": 102.48,
+          "end": 102.72
+        },
+        {
+          "word": "de",
+          "start": 102.72,
+          "end": 102.94
+        },
+        {
+          "word": "abajo",
+          "start": 102.94,
+          "end": 103.96
+        },
+        {
+          "word": "del",
+          "start": 103.96,
+          "end": 105.56
+        },
+        {
+          "word": "coche",
+          "start": 105.56,
+          "end": 106.18
+        }
+      ]
+    },
+    {
+      "start": 106.18,
+      "end": 111.74,
+      "text": "es como que la primera ventana queda a la altura de la punta de abajo del azul",
+      "words": [
+        {
+          "word": "es",
+          "start": 106.18,
+          "end": 106.44
+        },
+        {
+          "word": "como",
+          "start": 106.44,
+          "end": 106.58
+        },
+        {
+          "word": "que",
+          "start": 106.58,
+          "end": 106.78
+        },
+        {
+          "word": "la",
+          "start": 106.78,
+          "end": 107.14
+        },
+        {
+          "word": "primera",
+          "start": 107.14,
+          "end": 107.36
+        },
+        {
+          "word": "ventana",
+          "start": 107.36,
+          "end": 107.8
+        },
+        {
+          "word": "queda",
+          "start": 107.8,
+          "end": 108.36
+        },
+        {
+          "word": "a",
+          "start": 108.36,
+          "end": 108.44
+        },
+        {
+          "word": "la",
+          "start": 108.44,
+          "end": 108.56
+        },
+        {
+          "word": "altura",
+          "start": 108.56,
+          "end": 108.94
+        },
+        {
+          "word": "de",
+          "start": 108.94,
+          "end": 110.36
+        },
+        {
+          "word": "la",
+          "start": 110.36,
+          "end": 110.5
+        },
+        {
+          "word": "punta",
+          "start": 110.5,
+          "end": 110.72
+        },
+        {
+          "word": "de",
+          "start": 110.72,
+          "end": 110.84
+        },
+        {
+          "word": "abajo",
+          "start": 110.84,
+          "end": 111.0
+        },
+        {
+          "word": "del",
+          "start": 111.0,
+          "end": 111.22
+        },
+        {
+          "word": "azul",
+          "start": 111.22,
+          "end": 111.74
+        }
+      ]
+    },
+    {
+      "start": 112.42,
+      "end": 115.58,
+      "text": "la primera ventana negra, izquierda, derecha",
+      "words": [
+        {
+          "word": "la",
+          "start": 112.42,
+          "end": 112.9
+        },
+        {
+          "word": "primera",
+          "start": 112.9,
+          "end": 113.22
+        },
+        {
+          "word": "ventana",
+          "start": 113.22,
+          "end": 113.92
+        },
+        {
+          "word": "negra,",
+          "start": 113.92,
+          "end": 114.66
+        },
+        {
+          "word": "izquierda,",
+          "start": 114.68,
+          "end": 115.06
+        },
+        {
+          "word": "derecha",
+          "start": 115.12,
+          "end": 115.58
+        }
+      ]
+    },
+    {
+      "start": 115.58,
+      "end": 121.9,
+      "text": "está casi, o la mitad entre las dos",
+      "words": [
+        {
+          "word": "está",
+          "start": 115.58,
+          "end": 115.84
+        },
+        {
+          "word": "casi,",
+          "start": 115.84,
+          "end": 116.96
+        },
+        {
+          "word": "o",
+          "start": 117.66,
+          "end": 117.72
+        },
+        {
+          "word": "la",
+          "start": 117.72,
+          "end": 119.44
+        },
+        {
+          "word": "mitad",
+          "start": 119.44,
+          "end": 121.22
+        },
+        {
+          "word": "entre",
+          "start": 121.22,
+          "end": 121.44
+        },
+        {
+          "word": "las",
+          "start": 121.44,
+          "end": 121.64
+        },
+        {
+          "word": "dos",
+          "start": 121.64,
+          "end": 121.9
+        }
+      ]
+    },
+    {
+      "start": 121.9,
+      "end": 122.7,
+      "text": "entiendes lo que digo?",
+      "words": [
+        {
+          "word": "entiendes",
+          "start": 121.9,
+          "end": 122.3
+        },
+        {
+          "word": "lo",
+          "start": 122.3,
+          "end": 122.38
+        },
+        {
+          "word": "que",
+          "start": 122.38,
+          "end": 122.46
+        },
+        {
+          "word": "digo?",
+          "start": 122.46,
+          "end": 122.7
+        }
+      ]
+    },
+    {
+      "start": 123.08,
+      "end": 123.82,
+      "text": "no mucho",
+      "words": [
+        {
+          "word": "no",
+          "start": 123.08,
+          "end": 123.24
+        },
+        {
+          "word": "mucho",
+          "start": 123.24,
+          "end": 123.82
+        }
+      ]
+    },
+    {
+      "start": 123.82,
+      "end": 128.34,
+      "text": "la primera y la segunda ventana, lo que está en el medio de esas dos ventanas",
+      "words": [
+        {
+          "word": "la",
+          "start": 123.82,
+          "end": 124.12
+        },
+        {
+          "word": "primera",
+          "start": 124.12,
+          "end": 124.24
+        },
+        {
+          "word": "y",
+          "start": 124.24,
+          "end": 124.36
+        },
+        {
+          "word": "la",
+          "start": 124.36,
+          "end": 124.4
+        },
+        {
+          "word": "segunda",
+          "start": 124.4,
+          "end": 124.52
+        },
+        {
+          "word": "ventana,",
+          "start": 124.52,
+          "end": 124.9
+        },
+        {
+          "word": "lo",
+          "start": 125.5,
+          "end": 125.54
+        },
+        {
+          "word": "que",
+          "start": 125.54,
+          "end": 126.18
+        },
+        {
+          "word": "está",
+          "start": 126.18,
+          "end": 126.24
+        },
+        {
+          "word": "en",
+          "start": 126.24,
+          "end": 126.36
+        },
+        {
+          "word": "el",
+          "start": 126.36,
+          "end": 126.46
+        },
+        {
+          "word": "medio",
+          "start": 126.46,
+          "end": 126.86
+        },
+        {
+          "word": "de",
+          "start": 126.86,
+          "end": 127.52
+        },
+        {
+          "word": "esas",
+          "start": 127.52,
+          "end": 127.62
+        },
+        {
+          "word": "dos",
+          "start": 127.62,
+          "end": 127.8
+        },
+        {
+          "word": "ventanas",
+          "start": 127.8,
+          "end": 128.34
+        }
+      ]
+    },
+    {
+      "start": 128.34,
+      "end": 130.5,
+      "text": "está en el mismo eje que la punta del azul más o menos",
+      "words": [
+        {
+          "word": "está",
+          "start": 128.34,
+          "end": 128.88
+        },
+        {
+          "word": "en",
+          "start": 128.88,
+          "end": 128.94
+        },
+        {
+          "word": "el",
+          "start": 128.94,
+          "end": 129.04
+        },
+        {
+          "word": "mismo",
+          "start": 129.04,
+          "end": 129.14
+        },
+        {
+          "word": "eje",
+          "start": 129.14,
+          "end": 129.34
+        },
+        {
+          "word": "que",
+          "start": 129.34,
+          "end": 129.48
+        },
+        {
+          "word": "la",
+          "start": 129.48,
+          "end": 129.62
+        },
+        {
+          "word": "punta",
+          "start": 129.62,
+          "end": 129.86
+        },
+        {
+          "word": "del",
+          "start": 129.86,
+          "end": 129.98
+        },
+        {
+          "word": "azul",
+          "start": 129.98,
+          "end": 130.24
+        },
+        {
+          "word": "más",
+          "start": 130.24,
+          "end": 130.4
+        },
+        {
+          "word": "o",
+          "start": 130.4,
+          "end": 130.5
+        }
+      ]
+    },
+    {
+      "start": 130.5,
+      "end": 133.18,
+      "text": "que la punta azul del azul, sí, exactamente",
+      "words": [
+        {
+          "word": "que",
+          "start": 130.5,
+          "end": 130.64
+        },
+        {
+          "word": "la",
+          "start": 130.64,
+          "end": 130.76
+        },
+        {
+          "word": "punta",
+          "start": 130.76,
+          "end": 131.0
+        },
+        {
+          "word": "azul",
+          "start": 131.0,
+          "end": 131.2
+        },
+        {
+          "word": "del",
+          "start": 131.2,
+          "end": 131.38
+        },
+        {
+          "word": "azul,",
+          "start": 131.38,
+          "end": 131.68
+        },
+        {
+          "word": "sí,",
+          "start": 131.68,
+          "end": 132.2
+        }
+      ]
+    },
+    {
+      "start": 133.18,
+      "end": 136.0,
+      "text": "bueno, dale así",
+      "words": [
+        {
+          "word": "bueno,",
+          "start": 133.18,
+          "end": 133.84
+        },
+        {
+          "word": "dale",
+          "start": 135.58,
+          "end": 135.76
+        },
+        {
+          "word": "así",
+          "start": 135.76,
+          "end": 136.0
+        }
+      ]
+    }
+  ]
+}
