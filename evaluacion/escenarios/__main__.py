@@ -14,6 +14,8 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
+import shutil
 import subprocess
 import sys
 import time
@@ -97,7 +99,11 @@ def correr(c: dict, escenarios: list[str], ejecutar=None) -> int:
     for nombre in escenarios:
         entradas = [RAIZ / f["ruta"] for f in manifiesto["escenarios"][nombre]["fuentes"]]
         salida = c["corridas"] / nombre
-        salida.mkdir(parents=True, exist_ok=True)
+        if salida.exists():  # cada corrida en una carpeta nueva; la anterior se conserva aparte
+            anterior = c["corridas"] / f"{nombre}.anterior"
+            shutil.rmtree(anterior, ignore_errors=True)
+            os.replace(salida, anterior)
+        salida.mkdir(parents=True)
         cmd = comando(c, nombre, entradas, salida)
         print(f"{nombre}: {len(entradas)} archivo(s)…", flush=True)
         inicio = time.time()
@@ -123,8 +129,9 @@ def comprobar_todos(c: dict) -> int:
         if not (carpeta / "corrida.json").is_file():
             reporte["escenarios"][nombre] = {"escenario": nombre, "veredicto_automatico": "sin corrida"}
             continue
-        r = comprobar(nombre, carpeta, [f["sha256"] for f in e["fuentes"]])
-        r["corrida"] = json.loads((carpeta / "corrida.json").read_text(encoding="utf-8"))
+        corrida = json.loads((carpeta / "corrida.json").read_text(encoding="utf-8"))
+        r = comprobar(nombre, carpeta, [f["sha256"] for f in e["fuentes"]], codigo=corrida["codigo"])
+        r["corrida"] = corrida
         reporte["escenarios"][nombre] = r
     c["resultados"].mkdir(parents=True, exist_ok=True)
     (c["resultados"] / "escenarios.json").write_text(json.dumps(reporte, ensure_ascii=False, indent=2) + "\n",

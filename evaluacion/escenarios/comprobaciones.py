@@ -29,7 +29,12 @@ def _audio_conservado(carpeta: Path, esperados: list[str]) -> dict:
               f"{sum(c == e for c, e in zip(copias, esperados))} de {len(esperados)} fuentes conservadas con su SHA-256")
 
 
-def _termina_o_informa(workflow: dict | None) -> dict:
+def _termina_o_informa(workflow: dict | None, codigo: int | None = None) -> dict:
+    if codigo not in (None, 0):  # la corrida falló: solo vale si el workflow informó el error
+        if workflow and workflow.get("error") and workflow.get("estado") != "completado":
+            return _c("Termina o informa la falla", "sí",
+                      f"código {codigo}; informó: {json.dumps(workflow['error'], ensure_ascii=False)}")
+        return _c("Termina o informa la falla", "no", f"código {codigo} sin error informado por la aplicación")
     if workflow and workflow.get("estado") == "completado":
         return _c("Termina o informa la falla", "sí", "pipeline completado")
     if workflow and workflow.get("error"):
@@ -38,8 +43,16 @@ def _termina_o_informa(workflow: dict | None) -> dict:
 
 
 def _superpuestos(segmentos: list[dict]) -> float:
-    """Segundos con dos o más hablantes de la diarización a la vez."""
-    eventos = sorted([(s["start"], 1) for s in segmentos] + [(s["end"], -1) for s in segmentos], key=lambda e: (e[0], e[1]))
+    """Segundos con dos o más etiquetas distintas activas a la vez (los turnos de una misma etiqueta se unen antes)."""
+    por_etiqueta: dict[str, list[list[float]]] = {}
+    for s in sorted(segmentos, key=lambda s: (s["start"], s["end"])):
+        tramos = por_etiqueta.setdefault(s["speaker"], [])
+        if tramos and s["start"] <= tramos[-1][1]:
+            tramos[-1][1] = max(tramos[-1][1], s["end"])
+        else:
+            tramos.append([s["start"], s["end"]])
+    eventos = sorted([(a, 1) for t in por_etiqueta.values() for a, _ in t] +
+                     [(b, -1) for t in por_etiqueta.values() for _, b in t], key=lambda e: (e[0], e[1]))
     total, activos, previo = 0.0, 0, 0.0
     for t, d in eventos:
         if activos >= 2:
@@ -48,7 +61,8 @@ def _superpuestos(segmentos: list[dict]) -> float:
     return total
 
 
-def comprobar(escenario: str, carpeta: Path, fuentes_sha: list[str]) -> dict:
+def comprobar(escenario: str, carpeta: Path, fuentes_sha: list[str], codigo: int | None = None) -> dict:
+    """`codigo`: el de salida de la corrida evaluada; distinto de 0 no puede darse por completado."""
     carpeta = Path(carpeta)
     workflow = _leer(carpeta / "workflow.json")
     diar = (_leer(carpeta / "diarization.json") or {}).get("segments", [])
@@ -59,7 +73,7 @@ def comprobar(escenario: str, carpeta: Path, fuentes_sha: list[str]) -> dict:
                "segundos_superpuestos_diarizacion": round(_superpuestos(diar), 3),
                "intervenciones": len(trans), "intervenciones_ambiguas": sum(bool(i.get("ambiguous")) for i in trans),
                "intervenciones_overlap": sum(bool(i.get("overlap")) for i in trans)}
-    cs = [_audio_conservado(carpeta, fuentes_sha), _termina_o_informa(workflow)]
+    cs = [_audio_conservado(carpeta, fuentes_sha), _termina_o_informa(workflow, codigo)]
 
     if escenario == "2.1.2":
         cs.append(_c("Conserva los solapamientos de la diarización", "sí" if detalle["segundos_superpuestos_diarizacion"] > 0 else "no",

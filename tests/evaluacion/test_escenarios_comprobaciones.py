@@ -107,3 +107,28 @@ def test_audio_alterado(tmp_path):
     carpeta, shas = corrida(tmp_path, diar=[seg(0, 1, "A")], trans=[interv(0, 1, "A")])
     (carpeta / "fuentes" / "001-audio.wav").write_bytes(b"otro")
     assert por_nombre(comprobar("2.1.4", carpeta, shas))["Conserva el audio"]["resultado"] == "no"
+
+
+# ---------- revisión del #24 ----------
+
+def test_superposicion_de_una_sola_etiqueta_no_cuenta(tmp_path):
+    """Dos segmentos simultáneos del mismo hablante no son habla superpuesta (2.1.2 pide dos o más hablantes)."""
+    diar = [seg(0, 3, "SPEAKER_00"), seg(1, 2, "SPEAKER_00")]
+    carpeta, shas = corrida(tmp_path, diar=diar, trans=[interv(0, 3, "SPEAKER_00", ambiguous=True)])
+    reporte = comprobar("2.1.2", carpeta, shas)
+    assert reporte["detalle"]["segundos_superpuestos_diarizacion"] == 0
+    assert por_nombre(reporte)["Conserva los solapamientos de la diarización"]["resultado"] == "no"
+
+
+def test_superposicion_cuenta_etiquetas_distintas(tmp_path):
+    diar = [seg(0, 3, "A"), seg(1, 2, "A"), seg(2.5, 4, "B")]  # A y B se pisan 0,5 s
+    carpeta, shas = corrida(tmp_path, diar=diar, trans=[interv(0, 3, "A")])
+    assert comprobar("2.1.2", carpeta, shas)["detalle"]["segundos_superpuestos_diarizacion"] == 0.5
+
+
+def test_corrida_con_codigo_de_error_no_cuenta_como_completada(tmp_path):
+    """Si la corrida terminó con error, un workflow «completado» no puede darla por buena."""
+    carpeta, shas = corrida(tmp_path, diar=[seg(0, 1, "A")], trans=[interv(0, 1, "A")])
+    reporte = comprobar("2.1.4", carpeta, shas, codigo=1)
+    assert por_nombre(reporte)["Termina o informa la falla"]["resultado"] == "no"
+    assert reporte["veredicto_automatico"] == "no"
