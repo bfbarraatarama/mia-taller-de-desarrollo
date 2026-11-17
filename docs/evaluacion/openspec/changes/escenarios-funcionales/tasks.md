@@ -23,4 +23,4 @@ En cada tarea, primero los tests de sus escenarios. Meta: estado de 2.1.2 a 2.1.
 
 - [x] 4.1 Protocolo para el tercero
 - [x] 4.2 Registro de pruebas y estado para el checkpoint
-- [ ] 4.3 Happy path y 2.1.1 (pendientes: reunión de prueba del #14 y grabación con terminología)
+- [x] 4.3 Happy path (reunión de prueba del #14 grabada con la captura y procesada por línea de comandos) y 2.1.1 (transcripción de la corrida 01 del #14). Quedan manuales, en el protocolo: grabación y avance de etapas desde la interfaz, fichas y lista de términos
