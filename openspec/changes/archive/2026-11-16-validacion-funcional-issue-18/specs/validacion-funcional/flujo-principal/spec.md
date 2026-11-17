@@ -12,7 +12,7 @@ Dado un archivo WAV de entrada válido, el sistema SHALL ejecutar las cinco etap
 #### Scenario: Ejecución exitosa en Windows/CPU
 - **GIVEN** un archivo WAV de audio de una reunión (≥ 30 segundos, 16 kHz, mono, PCM 16)
 - **WHEN** se inicia el procesamiento con perfil CPU desde la GUI o la CLI
-- **THEN** el pipeline completa todas las etapas sin errores y el directorio de salida contiene `workflow.json` con estado `completado`, `audio.wav`, `ingesta.json`, `diarization.json`, `asr.json`, `transcripcion.json`, `minutes.json` y `minutes.md`
+- **THEN** el pipeline completa todas las etapas sin errores y el directorio de salida contiene `workflow.json` con estado `completado`, `audio.wav`, `ingesta.json`, `diarization.json`, `asr.json`, `transcription.json`, `minutes.json` y `minutes.md`
 
 #### Scenario: Ejecución exitosa en Linux/GPU
 - **GIVEN** un archivo WAV de audio de una reunión (≥ 30 segundos, 16 kHz, mono, PCM 16)
@@ -25,17 +25,27 @@ Dado un archivo WAV de entrada válido, el sistema SHALL ejecutar las cinco etap
 - **THEN** el pipeline completa todas las etapas sin errores y el directorio de salida contiene los mismos archivos que en Windows/CPU
 
 ### Requirement: Contenido mínimo de la minuta generada
-El archivo `minutes.md` SHALL contener al menos un bloque de texto con participantes identificados y el archivo `minutes.json` SHALL contener una estructura con resumen y secciones no vacías.
+El archivo `minutes.md` SHALL contener al menos un bloque de texto con participantes identificados y el archivo `minutes.json` SHALL contener una estructura con `resumen` no vacío y, opcionalmente, otras secciones que pueden ser un subconjunto de las habilitadas o estar vacías. El archivo `transcription.json` (producido por la etapa `asociar`) es un artefacto intermedio distinto de la minuta: contiene los segmentos con hablante, nombre y texto, y sirve de entrada a la etapa `minuta`.
 
 #### Scenario: Minuta con múltiples hablantes
 - **GIVEN** un audio con al menos dos voces distintas
 - **WHEN** el pipeline completa la etapa `minuta`
-- **THEN** `minutes.md` contiene al menos dos nombres de hablantes diferentes y `minutes.json` tiene un campo `resumen` no vacío
+- **THEN** `minutes.md` contiene al menos dos participantes detectados (por nombre o etiqueta del modelo) y `minutes.json` tiene un campo `resumen` no vacío
 
 #### Scenario: Minuta con un único hablante
 - **GIVEN** un audio con una sola voz
 - **WHEN** el pipeline completa la etapa `minuta`
 - **THEN** `minutes.md` contiene texto de transcripción y `minutes.json` tiene un campo `resumen` no vacío
+
+#### Scenario: Hablantes sin nombre asignado o con nombres repetidos
+- **GIVEN** un pipeline en la etapa `asociar` con dos o más hablantes detectados, sin identificación de nombre o con nombres idénticos entre hablantes
+- **WHEN** se completa la etapa `asociar`
+- **THEN** `transcription.json` contiene los segmentos con `"name": null` para los hablantes no identificados o con el nombre asignado aunque sea repetido, sin omitir segmentos ni lanzar error
+
+#### Scenario: Secciones no seleccionadas o vacías
+- **GIVEN** una solicitud de minuta con solo un subconjunto de secciones habilitadas (p.ej. únicamente `resumen`)
+- **WHEN** el pipeline completa la etapa `minuta`
+- **THEN** `minutes.json` contiene únicamente las secciones solicitadas y no hay error por secciones ausentes; el campo `resumen` no está vacío
 
 ### Requirement: Persistencia de archivos de salida
 Los archivos de salida del pipeline SHALL permanecer íntegros y legibles después de que el proceso termine, incluyendo tras un reinicio del sistema operativo.

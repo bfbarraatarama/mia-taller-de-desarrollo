@@ -115,7 +115,7 @@ def test_restriccion_duplicada(tmp_path):
 
 def _mock_ffmpeg_base(monkeypatch, tmp_path):
     """Fija el entorno mínimo para probar verificar_ffmpeg en modo Windows."""
-    monkeypatch.setattr(v.os, "name", "nt")
+    monkeypatch.setattr(v, "os", SimpleNamespace(name="nt", environ=v.os.environ))
     monkeypatch.setattr(v.sys, "path", [])
     monkeypatch.setattr(v, "DLL_FFMPEG_POR_DEFECTO", tmp_path / "readme_path")
     monkeypatch.delenv("DIARIZACION_FFMPEG_DLL_DIR", raising=False)

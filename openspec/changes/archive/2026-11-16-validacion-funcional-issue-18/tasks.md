@@ -17,20 +17,20 @@
 - [x] 3.1 Ejecutar `python -m src.captura --listar` y verificar que lista al menos un micrófono disponible sin error
 - [x] 3.2 Ejecutar `python -m src.captura --duracion 15 --tono` y verificar que se crea un archivo WAV de ~15 segundos a 16 kHz mono PCM 16 con un tono audible en los primeros segundos (verificar con `sf.info()`)
 - [x] 3.3 (Opcional si hay dispositivo de audio del sistema) Capturar audio del sistema junto al micrófono usando la GUI, reproducir un audio desde el sistema durante la grabación y verificar que el WAV resultante tiene señal en ambas fuentes
-- [x] 3.4 Abrir la GUI con `python -m src.interfaz`, iniciar una grabación de 20 segundos desde micrófono y detenerla, luego usar el control de reproducción de la interfaz para verificar que el audio se escucha correctamente
+- [x] 3.4 *(parcial — ver nota de cierre)* Abrir la GUI con `python -m src.interfaz`, iniciar una grabación de 20 segundos desde micrófono y detenerla, luego usar el control de reproducción de la interfaz para verificar que el audio se escucha correctamente
 
 ## 4. Validación de resiliencia — Windows/CPU (Luisa)
 
 - [x] 4.1 Iniciar el procesamiento de un archivo de audio largo (> 60 segundos) desde la GUI y cancelarlo durante la etapa `diarizar`; verificar que `workflow.json` queda con `"estado": "cancelado"` y que no hay archivos `.tmp` ni parciales en el directorio de salida
 - [x] 4.2 Reanudar el procesamiento del directorio del paso 4.1 y verificar que el pipeline retoma desde la etapa `preparar` (la única completada antes de la cancelación) sin reprocesar la ingesta, completando exitosamente
 - [x] 4.3 Iniciar procesamiento, terminar el proceso abruptamente con Task Manager (o `taskkill /F /PID <pid>`), relanzar sobre el mismo directorio y verificar que el sistema detecta el checkpoint inconsistente, lo descarta y reanuda correctamente
-- [x] 4.4 Mover el archivo de audio original a otra carpeta después de completar la ingesta, luego intentar reprocesar desde cero con la ruta original; verificar que el sistema usa la copia conservada en el directorio de la reunión (mensaje de log o ausencia de error)
+- [x] 4.4 *(parcial — ver nota de cierre)* Mover el archivo de audio original a otra carpeta después de completar la ingesta, luego intentar reprocesar desde cero con la ruta original; verificar que el sistema usa la copia conservada en el directorio de la reunión (mensaje de log o ausencia de error)
 - [x] 4.5 Lanzar dos instancias del pipeline sobre el mismo directorio (desde dos terminales) y verificar que la segunda falla con un mensaje que contiene "ocupada" o "ReunionOcupada" sin corromper el estado de la primera
 
 ## 5. Validación en Linux/CPU y Linux/GPU (compañeros)
 
 - [ ] 5.1 [Linux/CPU] Generar el audio de ejemplo ideal y procesar el flujo principal completo (equivalente a tareas 1.1, 2.1, 2.2) — registrar plataforma, versiones de dependencias y resultado
-- [x] 5.2 [Linux/GPU] Generar el audio de ejemplo ideal y procesar el flujo principal completo con perfil CUDA — registrar plataforma, GPU, VRAM utilizada y resultado
+- [x] 5.2 [Linux/GPU] Generar el audio de ejemplo ideal y procesar el flujo principal completo con perfil CUDA — registrar plataforma, GPU, VRAM utilizada y resultado *(validado con audio sintético del ejemplo_ideal; sin verificación con grabación real de reunión)*
 - [x] 5.3 [Linux/GPU] Verificar que el hallazgo crítico de Matías Caccia (#4: torchcodec cu128 + libnppicc.so.12) está documentado como pendiente de corrección con responsable asignado en `PR_ISSUE_18.md`
 - [x] 5.4 [Linux] Ejecutar `pytest tests/ -q` completo en Linux y verificar que el resultado es 752 passed (o documentar cualquier diferencia con causa identificada)
 
