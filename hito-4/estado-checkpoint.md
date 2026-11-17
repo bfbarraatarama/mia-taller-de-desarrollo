@@ -22,11 +22,11 @@ Estado de la PoC contra la spec de la [definición de la PoC](../hito-3/definici
 | Calidad de la respuesta | 2/2 temas, 1/1 acción y 0 inventadas, en las 2 modalidades | Un archivo: 1/2 temas, 0/1 acción, 2 inventadas. Varios archivos: 1/2 temas, 1/1 acción, 1 inventada | **No cumple** | [`calidad.md`](../evaluacion/integral/resultados/baseline/calidad.md) |
 | Funcionamiento modular | 4/4 módulos al 100 % | 4/4: diarización 74/74, transcripción 79/79, asociación 74/74, minutas 77/77 | **Cumple** | [`contratos.json`](../evaluacion/modular/resultados/contratos.json) |
 | Latencia (p100) | 5/5 corridas en 1800 s o menos | 5/5; máximo 261,0 s para 339 s de audio | **Cumple** | [`reporte.md`](../evaluacion/integral/resultados/baseline/reporte.md) |
-| Cobertura de los casos borde | 7/7 marcados por un tercero | 7/7 con comprobación automática; recorrido del tercero sin hacer | **Parcial** | [`escenarios.json`](../evaluacion/escenarios/resultados/escenarios.json), [`PROTOCOLO.md`](../evaluacion/escenarios/PROTOCOLO.md); happy path y 2.1.1 en el PR #25 |
-| Recuperación ante interrupciones | 1/1: 5 s perdidos o menos, procesable, listado como interrumpido | 0,25 s perdidos de 130 s; procesado completo; listado como interrumpido. Aviso al reiniciar sin verificar | **Cumple en lo medido** | [`recuperacion.json`](../evaluacion/escenarios/resultados/recuperacion.json) |
+| Cobertura de los casos borde | 7/7 marcados por un tercero | Evidencia automática para los 7 escenarios, que no equivale a que los 7 cumplan: falta el recorrido del tercero y hay comprobaciones fallidas (micrófono sin señal en el happy path) | **Parcial** | [`escenarios.json`](../evaluacion/escenarios/resultados/escenarios.json), [`PROTOCOLO.md`](../evaluacion/escenarios/PROTOCOLO.md); happy path y 2.1.1 en el PR #25 |
+| Recuperación ante interrupciones | 1/1: 5 s perdidos o menos, procesable, listado como interrumpido | Resultado técnico satisfactorio: 0,25 s perdidos de 130 s, archivo procesable y detectado como interrumpido. Falta verificar en la interfaz que al reiniciar la liste y ofrezca procesarla | **Parcial** | [`recuperacion.json`](../evaluacion/escenarios/resultados/recuperacion.json) |
 | Ventaja sobre el *baseline* | No aplica (3.1.1) | — | — | — |
 
-Lectura: 2 criterios cumplen, 1 cumple en lo medido, 1 está parcial y 1 no cumple.
+Lectura: 2 criterios cumplen, 2 están parciales y 1 no cumple.
 
 ### Recortes y stubs
 
@@ -69,7 +69,7 @@ Sin umbral (§2.3): sin un *baseline* con que comparar, se informan como referen
 
 | Escenario | Comprobación automática | Pendiente del tercero |
 |---|---|---|
-| Happy path | Graba en el directorio elegido y procesa completo (3 hablantes, 215 s) | Avance de etapas y fichas |
+| Happy path | Graba en el directorio elegido y procesa completo (3 hablantes, 215 s). La captura marca falla: micrófono sin señal (−∞ dBFS), declarado | Avance de etapas y fichas |
 | 2.1.1 Terminología | Conserva el audio y transcribe sin adaptación; «Discourse» sale «discurso» | Confirmar la lista de términos |
 | 2.1.2 Voces y superposición | Sí (15,2 s superpuestos conservados) | Mismo nombre en dos etiquetas |
 | 2.1.3 Seis o más hablantes | Sí (6 etiquetas en ICSI Bro015) | Una ficha por hablante |
@@ -85,18 +85,21 @@ Sin umbral (§2.3): sin un *baseline* con que comparar, se informan como referen
 | Ajustar: falla alguno, pero la minuta recupera 1 tema y 1 acción sin inventar ninguna | No alcanza: las 2 modalidades inventan acciones |
 | NO GO: agotados los planes B de §1.4, no recupera ninguna acción o inventa alguna | Plan B del riesgo 2 sin ejecutar |
 
-Decisión del equipo: **[a completar por el equipo]**.
+Decisión provisional del equipo: **Ajustar**. El *baseline* no cumple la calidad exigida: inventa acciones en las 2 modalidades. Se aplican los planes B del riesgo 2 y se vuelve a medir; el NO GO definitivo requiere agotarlos (§1.2).
 
 ---
 
 ## 4. Plan de cierre
 
+Responsables y fechas propuestos, para confirmar en la revisión. Todo cierra antes de la Clase 11 (24/11), con el alcance congelado.
+
 | Ítem | Tipo | Cambia lo que ve el jurado | Responsable | Fecha |
 |---|---|---|---|---|
-| Plan B del riesgo 2: minuta desde la transcripción corregida a mano, para ubicar el módulo que falla | Mejora | Sí: calidad | [a completar] | [a completar] |
-| Según el resultado: cambiar el modelo de diarización o de ASR, o ajustar el prompt para no registrar propuestas como compromisos | Mejora | Sí: calidad | [a completar] | [a completar] |
-| Volver a medir la calidad en las 2 modalidades, con las mismas notas de referencia | Evaluación | Sí | [a completar] | [a completar] |
-| Recorrido del tercero con `PROTOCOLO.md` | Evaluación | Sí: casos borde y recuperación | [a completar] | [a completar] |
-| Integrar los PR #22 (reproducibilidad) y #25 (happy path y 2.1.1) | Cierre | No | [a completar] | [a completar] |
-| Modelos (Whisper `medium`, pyannote `community-1`, `qwen2.5:7b`), muestra congelada y reunión de prueba | Se congela | — | — | — |
-| Tag `alcance-congelado` (fin de la semana 10) | Entrega | — | [a completar] | [a completar] |
+| Integrar los PR #22 (reproducibilidad) y #25 (happy path y 2.1.1) | Cierre | No | Luisa (#22), Matías (#25) | 18/11 |
+| Recorrido del tercero con `PROTOCOLO.md`, sin haber ejecutado las corridas | Evaluación | Sí: casos borde y recuperación | Luisa | 20/11 |
+| Plan B del riesgo 2: corregir a mano la transcripción de la reunión de prueba y generar la minuta desde ella, para ubicar el módulo que falla | Mejora | Sí: calidad | Felipe (transcripción), Bruno (minuta) | 21/11 |
+| Según el resultado: cambiar el modelo de diarización o de ASR, o ajustar el prompt para no registrar propuestas como compromisos | Mejora | Sí: calidad | Responsable del módulo: Luisa (diarización), Felipe (ASR), Bruno (prompt) | 22/11 |
+| Volver a medir la calidad en las 2 modalidades, con las mismas notas de referencia | Evaluación | Sí | Matías (corridas), Bruno (evaluación) | 22/11 |
+| Tag `alcance-congelado` | Entrega | — | Bruno | 23/11 |
+
+Se congela la configuración del *baseline* (Whisper `medium`, pyannote `community-1`, `qwen2.5:7b` con sus prompts, la muestra congelada y la reunión de prueba) para preservar su reproducibilidad. Los cambios de modelo o de prompt del plan B se evalúan como variantes contra ese *baseline*, sin reemplazar sus resultados.
