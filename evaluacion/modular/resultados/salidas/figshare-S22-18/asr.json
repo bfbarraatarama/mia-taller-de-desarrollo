@@ -1,0 +1,858 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 14.0,
+      "text": "Bueno, está la media luna azul casi tocando el telar y el marco del espejo.",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 0.0,
+          "end": 0.94
+        },
+        {
+          "word": "está",
+          "start": 2.7,
+          "end": 2.92
+        },
+        {
+          "word": "la",
+          "start": 2.92,
+          "end": 3.16
+        },
+        {
+          "word": "media",
+          "start": 3.16,
+          "end": 3.34
+        },
+        {
+          "word": "luna",
+          "start": 3.34,
+          "end": 3.64
+        },
+        {
+          "word": "azul",
+          "start": 3.64,
+          "end": 4.76
+        },
+        {
+          "word": "casi",
+          "start": 4.76,
+          "end": 6.72
+        },
+        {
+          "word": "tocando",
+          "start": 6.72,
+          "end": 7.36
+        },
+        {
+          "word": "el",
+          "start": 7.36,
+          "end": 7.82
+        },
+        {
+          "word": "telar",
+          "start": 7.82,
+          "end": 9.04
+        },
+        {
+          "word": "y",
+          "start": 9.04,
+          "end": 10.56
+        },
+        {
+          "word": "el",
+          "start": 10.56,
+          "end": 10.86
+        },
+        {
+          "word": "marco",
+          "start": 10.86,
+          "end": 12.58
+        },
+        {
+          "word": "del",
+          "start": 12.58,
+          "end": 12.78
+        },
+        {
+          "word": "espejo.",
+          "start": 12.78,
+          "end": 14.0
+        }
+      ]
+    },
+    {
+      "start": 14.84,
+      "end": 17.86,
+      "text": "Casi tocando el telar y el marco del espejo.",
+      "words": [
+        {
+          "word": "Casi",
+          "start": 14.84,
+          "end": 15.38
+        },
+        {
+          "word": "tocando",
+          "start": 15.38,
+          "end": 15.76
+        },
+        {
+          "word": "el",
+          "start": 15.76,
+          "end": 16.0
+        },
+        {
+          "word": "telar",
+          "start": 16.0,
+          "end": 16.96
+        },
+        {
+          "word": "y",
+          "start": 16.96,
+          "end": 17.26
+        },
+        {
+          "word": "el",
+          "start": 17.26,
+          "end": 17.46
+        },
+        {
+          "word": "marco",
+          "start": 17.46,
+          "end": 17.84
+        },
+        {
+          "word": "del",
+          "start": 17.84,
+          "end": 17.86
+        }
+      ]
+    },
+    {
+      "start": 17.92,
+      "end": 19.48,
+      "text": "Pero que, ¿está sobre el espejo?",
+      "words": [
+        {
+          "word": "Pero",
+          "start": 17.92,
+          "end": 18.12
+        },
+        {
+          "word": "que,",
+          "start": 18.12,
+          "end": 18.34
+        },
+        {
+          "word": "¿está",
+          "start": 18.44,
+          "end": 18.56
+        },
+        {
+          "word": "sobre",
+          "start": 18.56,
+          "end": 18.8
+        },
+        {
+          "word": "el",
+          "start": 18.8,
+          "end": 19.0
+        },
+        {
+          "word": "espejo?",
+          "start": 19.0,
+          "end": 19.48
+        }
+      ]
+    },
+    {
+      "start": 19.64,
+      "end": 22.0,
+      "text": "Si, si, perdón. Sobre el espejo.",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 19.64,
+          "end": 20.0
+        },
+        {
+          "word": "si,",
+          "start": 20.2,
+          "end": 20.34
+        },
+        {
+          "word": "perdón.",
+          "start": 20.4,
+          "end": 20.96
+        },
+        {
+          "word": "Sobre",
+          "start": 21.2,
+          "end": 21.74
+        },
+        {
+          "word": "el",
+          "start": 21.74,
+          "end": 21.92
+        },
+        {
+          "word": "espejo.",
+          "start": 21.92,
+          "end": 22.19
+        }
+      ]
+    },
+    {
+      "start": 23.08,
+      "end": 25.84,
+      "text": "Y casi toca el telar y casi toca el marco.",
+      "words": [
+        {
+          "word": "Y",
+          "start": 23.08,
+          "end": 23.62
+        },
+        {
+          "word": "casi",
+          "start": 23.62,
+          "end": 23.92
+        },
+        {
+          "word": "toca",
+          "start": 23.92,
+          "end": 24.16
+        },
+        {
+          "word": "el",
+          "start": 24.16,
+          "end": 24.3
+        },
+        {
+          "word": "telar",
+          "start": 24.3,
+          "end": 24.66
+        },
+        {
+          "word": "y",
+          "start": 24.66,
+          "end": 24.84
+        },
+        {
+          "word": "casi",
+          "start": 24.84,
+          "end": 25.02
+        },
+        {
+          "word": "toca",
+          "start": 25.02,
+          "end": 25.22
+        },
+        {
+          "word": "el",
+          "start": 25.22,
+          "end": 25.38
+        },
+        {
+          "word": "marco.",
+          "start": 25.38,
+          "end": 25.84
+        }
+      ]
+    },
+    {
+      "start": 27.86,
+      "end": 28.46,
+      "text": "Ajá.",
+      "words": [
+        {
+          "word": "Ajá.",
+          "start": 27.86,
+          "end": 28.46
+        }
+      ]
+    },
+    {
+      "start": 28.5,
+      "end": 31.18,
+      "text": "Y cuando decimos casi lo toca...",
+      "words": [
+        {
+          "word": "Y",
+          "start": 28.5,
+          "end": 28.66
+        },
+        {
+          "word": "cuando",
+          "start": 28.66,
+          "end": 28.96
+        },
+        {
+          "word": "decimos",
+          "start": 28.96,
+          "end": 29.48
+        },
+        {
+          "word": "casi",
+          "start": 29.48,
+          "end": 29.84
+        },
+        {
+          "word": "lo",
+          "start": 29.84,
+          "end": 30.18
+        },
+        {
+          "word": "toca...",
+          "start": 30.18,
+          "end": 31.18
+        }
+      ]
+    },
+    {
+      "start": 31.18,
+      "end": 34.48,
+      "text": "Es que está... comparte en la línea, digamos.",
+      "words": [
+        {
+          "word": "que",
+          "start": 31.18,
+          "end": 32.06
+        },
+        {
+          "word": "está...",
+          "start": 32.06,
+          "end": 32.96
+        },
+        {
+          "word": "comparte",
+          "start": 32.96,
+          "end": 33.18
+        },
+        {
+          "word": "en",
+          "start": 33.18,
+          "end": 33.42
+        },
+        {
+          "word": "la",
+          "start": 33.42,
+          "end": 33.6
+        },
+        {
+          "word": "línea,",
+          "start": 33.6,
+          "end": 33.82
+        },
+        {
+          "word": "digamos.",
+          "start": 34.08,
+          "end": 34.48
+        }
+      ]
+    },
+    {
+      "start": 35.06,
+      "end": 35.32,
+      "text": "Si.",
+      "words": [
+        {
+          "word": "Si.",
+          "start": 35.06,
+          "end": 35.32
+        }
+      ]
+    },
+    {
+      "start": 36.68,
+      "end": 40.26,
+      "text": "Y pará, está otra vez equidistante de las dos.",
+      "words": [
+        {
+          "word": "Y",
+          "start": 36.68,
+          "end": 37.14
+        },
+        {
+          "word": "pará,",
+          "start": 37.14,
+          "end": 37.52
+        },
+        {
+          "word": "está",
+          "start": 37.72,
+          "end": 38.06
+        },
+        {
+          "word": "otra",
+          "start": 38.06,
+          "end": 38.32
+        },
+        {
+          "word": "vez",
+          "start": 38.32,
+          "end": 38.54
+        },
+        {
+          "word": "equidistante",
+          "start": 38.54,
+          "end": 39.24
+        },
+        {
+          "word": "de",
+          "start": 39.24,
+          "end": 39.8
+        },
+        {
+          "word": "las",
+          "start": 39.8,
+          "end": 40.0
+        },
+        {
+          "word": "dos.",
+          "start": 40.0,
+          "end": 40.26
+        }
+      ]
+    },
+    {
+      "start": 41.08,
+      "end": 43.62,
+      "text": "Si, está como apoyada sobre...",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 41.08,
+          "end": 41.36
+        },
+        {
+          "word": "está",
+          "start": 41.52,
+          "end": 41.7
+        },
+        {
+          "word": "como",
+          "start": 41.7,
+          "end": 42.1
+        },
+        {
+          "word": "apoyada",
+          "start": 42.1,
+          "end": 42.84
+        },
+        {
+          "word": "sobre...",
+          "start": 42.84,
+          "end": 43.62
+        }
+      ]
+    },
+    {
+      "start": 43.62,
+      "end": 44.36,
+      "text": "Sobre el telar.",
+      "words": [
+        {
+          "word": "Sobre",
+          "start": 43.62,
+          "end": 43.9
+        },
+        {
+          "word": "el",
+          "start": 43.9,
+          "end": 44.02
+        },
+        {
+          "word": "telar.",
+          "start": 44.02,
+          "end": 44.36
+        }
+      ]
+    },
+    {
+      "start": 45.46,
+      "end": 47.92,
+      "text": "Al lado del telar y sobre el espejo.",
+      "words": [
+        {
+          "word": "Al",
+          "start": 45.46,
+          "end": 46.0
+        },
+        {
+          "word": "lado",
+          "start": 46.0,
+          "end": 46.2
+        },
+        {
+          "word": "del",
+          "start": 46.2,
+          "end": 46.42
+        },
+        {
+          "word": "telar",
+          "start": 46.42,
+          "end": 46.8
+        },
+        {
+          "word": "y",
+          "start": 46.8,
+          "end": 47.0
+        },
+        {
+          "word": "sobre",
+          "start": 47.0,
+          "end": 47.22
+        },
+        {
+          "word": "el",
+          "start": 47.22,
+          "end": 47.44
+        },
+        {
+          "word": "espejo.",
+          "start": 47.44,
+          "end": 47.92
+        }
+      ]
+    },
+    {
+      "start": 48.22,
+      "end": 48.72,
+      "text": "Si.",
+      "words": [
+        {
+          "word": "Si.",
+          "start": 48.22,
+          "end": 48.72
+        }
+      ]
+    },
+    {
+      "start": 50.04,
+      "end": 51.24,
+      "text": "Pero apoyada...",
+      "words": [
+        {
+          "word": "Pero",
+          "start": 50.04,
+          "end": 50.64
+        },
+        {
+          "word": "apoyada...",
+          "start": 50.64,
+          "end": 51.24
+        }
+      ]
+    },
+    {
+      "start": 51.24,
+      "end": 52.48,
+      "text": "En el espejo.",
+      "words": [
+        {
+          "word": "En",
+          "start": 51.24,
+          "end": 51.46
+        },
+        {
+          "word": "el",
+          "start": 51.46,
+          "end": 51.68
+        },
+        {
+          "word": "espejo.",
+          "start": 51.68,
+          "end": 52.48
+        }
+      ]
+    },
+    {
+      "start": 52.96,
+      "end": 54.08,
+      "text": "O sea, más cerca del espejo.",
+      "words": [
+        {
+          "word": "O",
+          "start": 52.96,
+          "end": 53.04
+        },
+        {
+          "word": "sea,",
+          "start": 53.04,
+          "end": 53.14
+        },
+        {
+          "word": "más",
+          "start": 53.2,
+          "end": 53.38
+        },
+        {
+          "word": "cerca",
+          "start": 53.38,
+          "end": 53.52
+        },
+        {
+          "word": "del",
+          "start": 53.52,
+          "end": 53.68
+        },
+        {
+          "word": "espejo.",
+          "start": 53.68,
+          "end": 54.08
+        }
+      ]
+    },
+    {
+      "start": 54.08,
+      "end": 54.84,
+      "text": "No.",
+      "words": [
+        {
+          "word": "No.",
+          "start": 54.08,
+          "end": 54.84
+        }
+      ]
+    },
+    {
+      "start": 55.3,
+      "end": 57.12,
+      "text": "Está igual de cerca que los dos.",
+      "words": [
+        {
+          "word": "Está",
+          "start": 55.3,
+          "end": 55.48
+        },
+        {
+          "word": "igual",
+          "start": 55.48,
+          "end": 55.8
+        },
+        {
+          "word": "de",
+          "start": 55.8,
+          "end": 56.16
+        },
+        {
+          "word": "cerca",
+          "start": 56.16,
+          "end": 56.42
+        },
+        {
+          "word": "que",
+          "start": 56.42,
+          "end": 56.62
+        },
+        {
+          "word": "los",
+          "start": 56.62,
+          "end": 56.86
+        },
+        {
+          "word": "dos.",
+          "start": 56.86,
+          "end": 57.12
+        }
+      ]
+    },
+    {
+      "start": 57.88,
+      "end": 59.02,
+      "text": "Y está pegado.",
+      "words": [
+        {
+          "word": "está",
+          "start": 57.88,
+          "end": 58.32
+        },
+        {
+          "word": "pegado.",
+          "start": 58.32,
+          "end": 59.02
+        }
+      ]
+    },
+    {
+      "start": 59.34,
+      "end": 64.48,
+      "text": "Comparte en la línea que tiene la luna con el telar y por debajo, al costado.",
+      "words": [
+        {
+          "word": "Comparte",
+          "start": 59.34,
+          "end": 59.6
+        },
+        {
+          "word": "en",
+          "start": 59.6,
+          "end": 59.78
+        },
+        {
+          "word": "la",
+          "start": 59.78,
+          "end": 59.92
+        },
+        {
+          "word": "línea",
+          "start": 59.92,
+          "end": 60.14
+        },
+        {
+          "word": "que",
+          "start": 60.14,
+          "end": 60.38
+        },
+        {
+          "word": "tiene",
+          "start": 60.38,
+          "end": 60.76
+        },
+        {
+          "word": "la",
+          "start": 60.76,
+          "end": 61.0
+        },
+        {
+          "word": "luna",
+          "start": 61.0,
+          "end": 61.24
+        },
+        {
+          "word": "con",
+          "start": 61.24,
+          "end": 61.86
+        },
+        {
+          "word": "el",
+          "start": 61.86,
+          "end": 62.34
+        },
+        {
+          "word": "telar",
+          "start": 62.34,
+          "end": 62.8
+        },
+        {
+          "word": "y",
+          "start": 62.8,
+          "end": 63.22
+        },
+        {
+          "word": "por",
+          "start": 63.22,
+          "end": 63.38
+        },
+        {
+          "word": "debajo,",
+          "start": 63.38,
+          "end": 63.84
+        },
+        {
+          "word": "al",
+          "start": 63.96,
+          "end": 64.04
+        },
+        {
+          "word": "costado.",
+          "start": 64.04,
+          "end": 64.48
+        }
+      ]
+    },
+    {
+      "start": 64.8,
+      "end": 69.22,
+      "text": "Y por debajo la luna con el marco del espejo.",
+      "words": [
+        {
+          "word": "Y",
+          "start": 64.8,
+          "end": 64.9
+        },
+        {
+          "word": "por",
+          "start": 64.9,
+          "end": 65.08
+        },
+        {
+          "word": "debajo",
+          "start": 65.08,
+          "end": 65.98
+        },
+        {
+          "word": "la",
+          "start": 65.98,
+          "end": 66.18
+        },
+        {
+          "word": "luna",
+          "start": 66.18,
+          "end": 66.4
+        },
+        {
+          "word": "con",
+          "start": 66.4,
+          "end": 66.82
+        },
+        {
+          "word": "el",
+          "start": 66.82,
+          "end": 67.42
+        },
+        {
+          "word": "marco",
+          "start": 67.42,
+          "end": 67.8
+        },
+        {
+          "word": "del",
+          "start": 67.8,
+          "end": 68.4
+        },
+        {
+          "word": "espejo.",
+          "start": 68.4,
+          "end": 69.22
+        }
+      ]
+    },
+    {
+      "start": 70.46,
+      "end": 71.62,
+      "text": "Bueno, ahora...",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 70.46,
+          "end": 70.58
+        },
+        {
+          "word": "ahora...",
+          "start": 71.36,
+          "end": 71.62
+        }
+      ]
+    },
+    {
+      "start": 71.62,
+      "end": 72.2,
+      "text": "Bueno, ahí.",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 71.62,
+          "end": 71.88
+        },
+        {
+          "word": "ahí.",
+          "start": 71.9,
+          "end": 72.2
+        }
+      ]
+    }
+  ]
+}

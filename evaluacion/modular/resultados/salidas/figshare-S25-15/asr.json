@@ -1,0 +1,958 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.48,
+      "end": 1.56,
+      "text": "El M y M?",
+      "words": [
+        {
+          "word": "El",
+          "start": 0.48,
+          "end": 0.94
+        },
+        {
+          "word": "M",
+          "start": 0.94,
+          "end": 1.12
+        },
+        {
+          "word": "y",
+          "start": 1.12,
+          "end": 1.18
+        },
+        {
+          "word": "M?",
+          "start": 1.18,
+          "end": 1.56
+        }
+      ]
+    },
+    {
+      "start": 1.74,
+      "end": 2.2,
+      "text": "Si",
+      "words": [
+        {
+          "word": "Si",
+          "start": 1.74,
+          "end": 2.2
+        }
+      ]
+    },
+    {
+      "start": 2.2,
+      "end": 4.5,
+      "text": "Mándalo entre el limón, la cebolla y la ballena",
+      "words": [
+        {
+          "word": "Mándalo",
+          "start": 2.2,
+          "end": 2.78
+        },
+        {
+          "word": "entre",
+          "start": 2.78,
+          "end": 3.26
+        },
+        {
+          "word": "el",
+          "start": 3.26,
+          "end": 3.42
+        },
+        {
+          "word": "limón,",
+          "start": 3.42,
+          "end": 3.66
+        },
+        {
+          "word": "la",
+          "start": 3.76,
+          "end": 3.9
+        },
+        {
+          "word": "cebolla",
+          "start": 3.9,
+          "end": 4.2
+        },
+        {
+          "word": "y",
+          "start": 4.2,
+          "end": 4.28
+        },
+        {
+          "word": "la",
+          "start": 4.28,
+          "end": 4.4
+        },
+        {
+          "word": "ballena",
+          "start": 4.4,
+          "end": 4.63
+        }
+      ]
+    },
+    {
+      "start": 5.62,
+      "end": 6.08,
+      "text": "Ajá",
+      "words": [
+        {
+          "word": "Ajá",
+          "start": 5.62,
+          "end": 6.08
+        }
+      ]
+    },
+    {
+      "start": 6.66,
+      "end": 7.12,
+      "text": "Eeeh...",
+      "words": [
+        {
+          "word": "Eeeh...",
+          "start": 6.66,
+          "end": 7.12
+        }
+      ]
+    },
+    {
+      "start": 7.12,
+      "end": 8.9,
+      "text": "Pero se superpone a algo o no?",
+      "words": [
+        {
+          "word": "Pero",
+          "start": 7.12,
+          "end": 7.24
+        },
+        {
+          "word": "se",
+          "start": 7.24,
+          "end": 7.48
+        },
+        {
+          "word": "superpone",
+          "start": 7.48,
+          "end": 7.94
+        },
+        {
+          "word": "a",
+          "start": 7.94,
+          "end": 8.12
+        },
+        {
+          "word": "algo",
+          "start": 8.12,
+          "end": 8.34
+        },
+        {
+          "word": "o",
+          "start": 8.34,
+          "end": 8.42
+        },
+        {
+          "word": "no?",
+          "start": 8.42,
+          "end": 8.9
+        }
+      ]
+    },
+    {
+      "start": 9.34,
+      "end": 9.68,
+      "text": "No",
+      "words": [
+        {
+          "word": "No",
+          "start": 9.34,
+          "end": 9.68
+        }
+      ]
+    },
+    {
+      "start": 9.68,
+      "end": 10.22,
+      "text": "Casi",
+      "words": [
+        {
+          "word": "Casi",
+          "start": 9.68,
+          "end": 10.22
+        }
+      ]
+    },
+    {
+      "start": 10.22,
+      "end": 11.92,
+      "text": "No se superpone a nada",
+      "words": [
+        {
+          "word": "No",
+          "start": 10.22,
+          "end": 10.38
+        },
+        {
+          "word": "se",
+          "start": 10.38,
+          "end": 10.44
+        },
+        {
+          "word": "superpone",
+          "start": 10.44,
+          "end": 10.72
+        },
+        {
+          "word": "a",
+          "start": 10.72,
+          "end": 10.94
+        },
+        {
+          "word": "nada",
+          "start": 10.94,
+          "end": 11.92
+        }
+      ]
+    },
+    {
+      "start": 12.8,
+      "end": 13.26,
+      "text": "Esta...",
+      "words": [
+        {
+          "word": "Esta...",
+          "start": 12.8,
+          "end": 13.26
+        }
+      ]
+    },
+    {
+      "start": 13.26,
+      "end": 15.22,
+      "text": "No está tocando, no llega a...",
+      "words": [
+        {
+          "word": "No",
+          "start": 13.26,
+          "end": 13.6
+        },
+        {
+          "word": "está",
+          "start": 13.6,
+          "end": 13.7
+        },
+        {
+          "word": "tocando,",
+          "start": 13.7,
+          "end": 13.94
+        },
+        {
+          "word": "no",
+          "start": 14.26,
+          "end": 14.44
+        },
+        {
+          "word": "llega",
+          "start": 14.44,
+          "end": 14.74
+        },
+        {
+          "word": "a...",
+          "start": 14.74,
+          "end": 15.22
+        }
+      ]
+    },
+    {
+      "start": 15.22,
+      "end": 16.22,
+      "text": "Esta casi pisando la cebolla",
+      "words": [
+        {
+          "word": "Esta",
+          "start": 15.22,
+          "end": 15.38
+        },
+        {
+          "word": "casi",
+          "start": 15.38,
+          "end": 15.7
+        },
+        {
+          "word": "pisando",
+          "start": 15.7,
+          "end": 16.04
+        },
+        {
+          "word": "la",
+          "start": 16.04,
+          "end": 16.22
+        }
+      ]
+    },
+    {
+      "start": 16.22,
+      "end": 18.42,
+      "text": "De pura suerte, pero esta como...",
+      "words": [
+        {
+          "word": "De",
+          "start": 16.22,
+          "end": 16.86
+        },
+        {
+          "word": "pura",
+          "start": 16.86,
+          "end": 17.06
+        },
+        {
+          "word": "suerte,",
+          "start": 17.06,
+          "end": 17.34
+        },
+        {
+          "word": "pero",
+          "start": 17.42,
+          "end": 17.5
+        },
+        {
+          "word": "esta",
+          "start": 17.5,
+          "end": 17.66
+        },
+        {
+          "word": "como...",
+          "start": 17.66,
+          "end": 18.42
+        }
+      ]
+    },
+    {
+      "start": 18.42,
+      "end": 18.96,
+      "text": "El talón...",
+      "words": [
+        {
+          "word": "El",
+          "start": 18.42,
+          "end": 18.48
+        },
+        {
+          "word": "talón...",
+          "start": 18.48,
+          "end": 18.96
+        }
+      ]
+    },
+    {
+      "start": 18.96,
+      "end": 21.3,
+      "text": "No perdón, si el talón esta pisando la cebolla",
+      "words": [
+        {
+          "word": "No",
+          "start": 18.96,
+          "end": 19.12
+        },
+        {
+          "word": "perdón,",
+          "start": 19.12,
+          "end": 19.34
+        },
+        {
+          "word": "si",
+          "start": 19.46,
+          "end": 19.54
+        },
+        {
+          "word": "el",
+          "start": 19.54,
+          "end": 19.58
+        },
+        {
+          "word": "talón",
+          "start": 19.58,
+          "end": 20.16
+        },
+        {
+          "word": "esta",
+          "start": 20.16,
+          "end": 20.42
+        },
+        {
+          "word": "pisando",
+          "start": 20.42,
+          "end": 20.68
+        },
+        {
+          "word": "la",
+          "start": 20.68,
+          "end": 20.82
+        },
+        {
+          "word": "cebolla",
+          "start": 20.82,
+          "end": 21.3
+        }
+      ]
+    },
+    {
+      "start": 21.3,
+      "end": 21.9,
+      "text": "Listo",
+      "words": [
+        {
+          "word": "Listo",
+          "start": 21.3,
+          "end": 21.9
+        }
+      ]
+    },
+    {
+      "start": 21.9,
+      "end": 24.0,
+      "text": "Pero como si estuviera parado con el pie derecho nomás",
+      "words": [
+        {
+          "word": "Pero",
+          "start": 21.9,
+          "end": 22.16
+        },
+        {
+          "word": "como",
+          "start": 22.16,
+          "end": 22.28
+        },
+        {
+          "word": "si",
+          "start": 22.28,
+          "end": 22.38
+        },
+        {
+          "word": "estuviera",
+          "start": 22.38,
+          "end": 22.52
+        },
+        {
+          "word": "parado",
+          "start": 22.52,
+          "end": 22.94
+        },
+        {
+          "word": "con",
+          "start": 22.94,
+          "end": 23.5
+        },
+        {
+          "word": "el",
+          "start": 23.5,
+          "end": 23.6
+        },
+        {
+          "word": "pie",
+          "start": 23.6,
+          "end": 23.72
+        },
+        {
+          "word": "derecho",
+          "start": 23.72,
+          "end": 23.98
+        },
+        {
+          "word": "nomás",
+          "start": 23.98,
+          "end": 24.21
+        }
+      ]
+    },
+    {
+      "start": 24.58,
+      "end": 26.3,
+      "text": "Y no todo el pie derecho, la parte del talón",
+      "words": [
+        {
+          "word": "Y",
+          "start": 24.58,
+          "end": 24.9
+        },
+        {
+          "word": "no",
+          "start": 24.9,
+          "end": 24.98
+        },
+        {
+          "word": "todo",
+          "start": 24.98,
+          "end": 25.08
+        },
+        {
+          "word": "el",
+          "start": 25.08,
+          "end": 25.18
+        },
+        {
+          "word": "pie",
+          "start": 25.18,
+          "end": 25.26
+        },
+        {
+          "word": "derecho,",
+          "start": 25.26,
+          "end": 25.52
+        },
+        {
+          "word": "la",
+          "start": 25.6,
+          "end": 25.68
+        },
+        {
+          "word": "parte",
+          "start": 25.68,
+          "end": 25.88
+        },
+        {
+          "word": "del",
+          "start": 25.88,
+          "end": 26.04
+        },
+        {
+          "word": "talón",
+          "start": 26.04,
+          "end": 26.3
+        }
+      ]
+    },
+    {
+      "start": 26.3,
+      "end": 27.46,
+      "text": "Si, si, si, entiendo, entiendo",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 26.3,
+          "end": 26.42
+        },
+        {
+          "word": "si,",
+          "start": 26.42,
+          "end": 26.6
+        },
+        {
+          "word": "si,",
+          "start": 26.6,
+          "end": 26.76
+        },
+        {
+          "word": "entiendo,",
+          "start": 26.76,
+          "end": 27.02
+        },
+        {
+          "word": "entiendo",
+          "start": 27.02,
+          "end": 27.46
+        }
+      ]
+    },
+    {
+      "start": 27.46,
+      "end": 29.84,
+      "text": "Pero después está casi el...",
+      "words": [
+        {
+          "word": "Pero",
+          "start": 27.46,
+          "end": 27.86
+        },
+        {
+          "word": "después",
+          "start": 27.86,
+          "end": 28.26
+        },
+        {
+          "word": "está",
+          "start": 28.26,
+          "end": 28.52
+        },
+        {
+          "word": "casi",
+          "start": 28.52,
+          "end": 28.92
+        },
+        {
+          "word": "el...",
+          "start": 28.92,
+          "end": 29.84
+        }
+      ]
+    },
+    {
+      "start": 29.84,
+      "end": 30.74,
+      "text": "El... digamos...",
+      "words": [
+        {
+          "word": "El...",
+          "start": 29.84,
+          "end": 29.9
+        },
+        {
+          "word": "digamos...",
+          "start": 29.9,
+          "end": 30.74
+        }
+      ]
+    },
+    {
+      "start": 30.74,
+      "end": 31.86,
+      "text": "La mano izquierda, viste?",
+      "words": [
+        {
+          "word": "La",
+          "start": 30.74,
+          "end": 30.88
+        },
+        {
+          "word": "mano",
+          "start": 30.88,
+          "end": 31.06
+        },
+        {
+          "word": "izquierda,",
+          "start": 31.06,
+          "end": 31.42
+        },
+        {
+          "word": "viste?",
+          "start": 31.42,
+          "end": 31.86
+        }
+      ]
+    },
+    {
+      "start": 31.98,
+      "end": 32.26,
+      "text": "Si",
+      "words": [
+        {
+          "word": "Si",
+          "start": 31.98,
+          "end": 32.26
+        }
+      ]
+    },
+    {
+      "start": 32.26,
+      "end": 33.46,
+      "text": "Es como que el...",
+      "words": [
+        {
+          "word": "Es",
+          "start": 32.26,
+          "end": 32.52
+        },
+        {
+          "word": "como",
+          "start": 32.52,
+          "end": 32.68
+        },
+        {
+          "word": "que",
+          "start": 32.68,
+          "end": 33.22
+        },
+        {
+          "word": "el...",
+          "start": 33.22,
+          "end": 33.46
+        }
+      ]
+    },
+    {
+      "start": 34.62,
+      "end": 36.16,
+      "text": "El dedo que está más cerca de la ballena",
+      "words": [
+        {
+          "word": "dedo",
+          "start": 34.62,
+          "end": 34.8
+        },
+        {
+          "word": "que",
+          "start": 34.8,
+          "end": 34.9
+        },
+        {
+          "word": "está",
+          "start": 34.9,
+          "end": 34.98
+        },
+        {
+          "word": "más",
+          "start": 34.98,
+          "end": 35.4
+        },
+        {
+          "word": "cerca",
+          "start": 35.4,
+          "end": 35.62
+        },
+        {
+          "word": "de",
+          "start": 35.62,
+          "end": 35.74
+        },
+        {
+          "word": "la",
+          "start": 35.74,
+          "end": 35.86
+        },
+        {
+          "word": "ballena",
+          "start": 35.86,
+          "end": 36.16
+        }
+      ]
+    },
+    {
+      "start": 36.16,
+      "end": 38.28,
+      "text": "Está como casi... está rozando la aleta",
+      "words": [
+        {
+          "word": "Está",
+          "start": 36.16,
+          "end": 36.34
+        },
+        {
+          "word": "como",
+          "start": 36.34,
+          "end": 36.56
+        },
+        {
+          "word": "casi...",
+          "start": 36.56,
+          "end": 36.92
+        },
+        {
+          "word": "está",
+          "start": 36.92,
+          "end": 37.16
+        },
+        {
+          "word": "rozando",
+          "start": 37.16,
+          "end": 37.6
+        },
+        {
+          "word": "la",
+          "start": 37.6,
+          "end": 37.72
+        },
+        {
+          "word": "aleta",
+          "start": 37.72,
+          "end": 38.28
+        }
+      ]
+    },
+    {
+      "start": 38.96,
+      "end": 39.44,
+      "text": "Ajá",
+      "words": [
+        {
+          "word": "Ajá",
+          "start": 38.96,
+          "end": 39.44
+        }
+      ]
+    },
+    {
+      "start": 39.44,
+      "end": 40.56,
+      "text": "Como que la está rozando",
+      "words": [
+        {
+          "word": "Como",
+          "start": 39.44,
+          "end": 39.6
+        },
+        {
+          "word": "que",
+          "start": 39.6,
+          "end": 39.86
+        },
+        {
+          "word": "la",
+          "start": 39.86,
+          "end": 40.08
+        },
+        {
+          "word": "está",
+          "start": 40.08,
+          "end": 40.14
+        },
+        {
+          "word": "rozando",
+          "start": 40.14,
+          "end": 40.56
+        }
+      ]
+    },
+    {
+      "start": 40.56,
+      "end": 42.42,
+      "text": "Y después el limón si que no lo toca",
+      "words": [
+        {
+          "word": "Y",
+          "start": 40.56,
+          "end": 40.74
+        },
+        {
+          "word": "después",
+          "start": 40.74,
+          "end": 41.16
+        },
+        {
+          "word": "el",
+          "start": 41.16,
+          "end": 41.44
+        },
+        {
+          "word": "limón",
+          "start": 41.44,
+          "end": 41.7
+        },
+        {
+          "word": "si",
+          "start": 41.7,
+          "end": 41.8
+        },
+        {
+          "word": "que",
+          "start": 41.8,
+          "end": 41.9
+        },
+        {
+          "word": "no",
+          "start": 41.9,
+          "end": 41.98
+        },
+        {
+          "word": "lo",
+          "start": 41.98,
+          "end": 42.12
+        },
+        {
+          "word": "toca",
+          "start": 42.12,
+          "end": 42.42
+        }
+      ]
+    },
+    {
+      "start": 42.42,
+      "end": 43.04,
+      "text": "Listo",
+      "words": [
+        {
+          "word": "Listo",
+          "start": 42.42,
+          "end": 43.04
+        }
+      ]
+    },
+    {
+      "start": 43.04,
+      "end": 44.7,
+      "text": "Hay como muy poca distancia que no lo toca",
+      "words": [
+        {
+          "word": "Hay",
+          "start": 43.04,
+          "end": 43.24
+        },
+        {
+          "word": "como",
+          "start": 43.24,
+          "end": 43.44
+        },
+        {
+          "word": "muy",
+          "start": 43.44,
+          "end": 43.78
+        },
+        {
+          "word": "poca",
+          "start": 43.78,
+          "end": 43.98
+        },
+        {
+          "word": "distancia",
+          "start": 43.98,
+          "end": 44.22
+        },
+        {
+          "word": "que",
+          "start": 44.22,
+          "end": 44.3
+        },
+        {
+          "word": "no",
+          "start": 44.3,
+          "end": 44.38
+        },
+        {
+          "word": "lo",
+          "start": 44.38,
+          "end": 44.52
+        },
+        {
+          "word": "toca",
+          "start": 44.52,
+          "end": 44.7
+        }
+      ]
+    },
+    {
+      "start": 44.7,
+      "end": 45.42,
+      "text": "Listo",
+      "words": [
+        {
+          "word": "Listo",
+          "start": 44.7,
+          "end": 45.42
+        }
+      ]
+    },
+    {
+      "start": 45.42,
+      "end": 45.86,
+      "text": "Si?",
+      "words": [
+        {
+          "word": "Si?",
+          "start": 45.42,
+          "end": 45.86
+        }
+      ]
+    },
+    {
+      "start": 46.34,
+      "end": 46.42,
+      "text": "Bueno",
+      "words": [
+        {
+          "word": "Bueno",
+          "start": 46.34,
+          "end": 46.42
+        }
+      ]
+    }
+  ]
+}

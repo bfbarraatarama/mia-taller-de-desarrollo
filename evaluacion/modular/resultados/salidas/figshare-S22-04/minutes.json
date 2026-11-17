@@ -1,0 +1,64 @@
+{
+  "resumen": "La reunión se centró en la ubicación de un clavo para una cortadora de pasto. Se discutió sobre el alineamiento del clavo con la cabeza de la cortadora y su distancia respecto a la misma.",
+  "temas": [
+    {
+      "texto": "Alineación del clavo con la cortadora",
+      "ids_intervenciones": [
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000021",
+        "I000023",
+        "I000024",
+        "I000025"
+      ],
+      "id_ancla": "I000025"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "Determinar la distancia exacta entre el clavo y la cortadora",
+      "ids_intervenciones": [
+        "I000026",
+        "I000027",
+        "I000028",
+        "I000029"
+      ],
+      "id_ancla": "I000029"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Ubicar el clavo sobre la cortadora de pasto para verificar su alineación",
+      "ids_intervenciones": [
+        "I000018",
+        "I000020",
+        "I000021",
+        "I000023",
+        "I000024",
+        "I000025",
+        "I000026",
+        "I000027",
+        "I000028"
+      ],
+      "id_ancla": "I000028",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

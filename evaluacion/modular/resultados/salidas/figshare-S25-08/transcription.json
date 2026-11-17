@@ -1,0 +1,440 @@
+{
+  "segments": [
+    {
+      "start": 0.68,
+      "end": 6.2,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ok, el limón, ponelo exactamente en el medio de la cruz.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 56
+      }
+    },
+    {
+      "start": 7.02,
+      "end": 8.02,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Exactamente, ¿está tocando algo?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 32
+      }
+    },
+    {
+      "start": 8.66,
+      "end": 10.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está tocando algo, no, no está tocando nada, pero...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 52
+      }
+    },
+    {
+      "start": 10.98,
+      "end": 11.66,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿De la cruz de qué?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 19
+      }
+    },
+    {
+      "start": 12.12,
+      "end": 14.6,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "De la cruz que está entre la monja, la luna, el cuadro y el ojo.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 64
+      }
+    },
+    {
+      "start": 14.7,
+      "end": 15.82,
+      "speaker": null,
+      "name": null,
+      "text": "Ah, está bien, no de la cruz de la monja.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 41
+      }
+    },
+    {
+      "start": 16.06,
+      "end": 19.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, eh... la parte de abajo del león...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 39
+      }
+    },
+    {
+      "start": 19.8,
+      "end": 20.54,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Del león, que león?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 20
+      }
+    },
+    {
+      "start": 20.6,
+      "end": 21.56,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Perdón, del limón.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 18
+      }
+    },
+    {
+      "start": 22.2,
+      "end": 23.54,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La parte de abajo del limón...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 23.54,
+      "end": 29.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "O sea, el limón no toca con nada, pero la parte de abajo está a un milímetro, medio milímetro de la luna azul.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 110
+      }
+    },
+    {
+      "start": 30.6,
+      "end": 34.17,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y la parte de arriba está a medio milímetro de las pestañas.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 60
+      }
+    },
+    {
+      "start": 34.96,
+      "end": 38.64,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está equistante más o menos de la luna y del ojo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 49
+      }
+    },
+    {
+      "start": 38.82,
+      "end": 40.66,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Equistante de la luna y del ojo, sí.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 36
+      }
+    },
+    {
+      "start": 40.98,
+      "end": 49.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "También las hojas del limón de la izquierda están casi rozando, casi casi casi rozando el aura de la monja.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 107
+      }
+    },
+    {
+      "start": 49.58,
+      "end": 50.36,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está bien.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 10
+      }
+    },
+    {
+      "start": 51.14,
+      "end": 58.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí, están apenas más apenas más separado el limón del cuadro que del resto de las cosas, apenas.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 96
+      }
+    },
+    {
+      "start": 59.22,
+      "end": 62.72,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Al cuadro no lo rosa, al resto de las cosas sí les pasa muy cerca.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 66
+      }
+    },
+    {
+      "start": 63.0,
+      "end": 63.82,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está bien.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 10
+      }
+    },
+    {
+      "start": 65.2,
+      "end": 65.6,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "A ver ahí.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 10
+      }
+    }
+  ]
+}

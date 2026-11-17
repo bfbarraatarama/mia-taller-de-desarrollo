@@ -1,0 +1,62 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Tengo la cebolla entre la lima y la ballena",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 43
+      }
+    },
+    {
+      "start": 14.06,
+      "end": 17.56,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y toca al confite?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 18
+      }
+    },
+    {
+      "start": 41.56,
+      "end": 42.96,
+      "speaker": null,
+      "name": null,
+      "text": "No",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 2
+      }
+    }
+  ]
+}

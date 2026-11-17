@@ -1,0 +1,1323 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 11.7,
+      "text": "El espejo está en la misma línea que la luna amarilla y en la misma línea que la limusina esta negra.",
+      "words": [
+        {
+          "word": "El",
+          "start": 0.0,
+          "end": 1.14
+        },
+        {
+          "word": "espejo",
+          "start": 1.14,
+          "end": 1.86
+        },
+        {
+          "word": "está",
+          "start": 1.86,
+          "end": 2.36
+        },
+        {
+          "word": "en",
+          "start": 2.36,
+          "end": 4.08
+        },
+        {
+          "word": "la",
+          "start": 4.08,
+          "end": 4.2
+        },
+        {
+          "word": "misma",
+          "start": 4.2,
+          "end": 4.62
+        },
+        {
+          "word": "línea",
+          "start": 4.62,
+          "end": 5.3
+        },
+        {
+          "word": "que",
+          "start": 5.3,
+          "end": 5.84
+        },
+        {
+          "word": "la",
+          "start": 5.84,
+          "end": 6.02
+        },
+        {
+          "word": "luna",
+          "start": 6.02,
+          "end": 6.28
+        },
+        {
+          "word": "amarilla",
+          "start": 6.28,
+          "end": 7.16
+        },
+        {
+          "word": "y",
+          "start": 7.16,
+          "end": 7.94
+        },
+        {
+          "word": "en",
+          "start": 7.94,
+          "end": 7.98
+        },
+        {
+          "word": "la",
+          "start": 7.98,
+          "end": 8.18
+        },
+        {
+          "word": "misma",
+          "start": 8.18,
+          "end": 8.36
+        },
+        {
+          "word": "línea",
+          "start": 8.36,
+          "end": 8.72
+        },
+        {
+          "word": "que",
+          "start": 8.72,
+          "end": 9.32
+        },
+        {
+          "word": "la",
+          "start": 9.32,
+          "end": 10.0
+        },
+        {
+          "word": "limusina",
+          "start": 10.0,
+          "end": 10.62
+        },
+        {
+          "word": "esta",
+          "start": 10.62,
+          "end": 10.98
+        },
+        {
+          "word": "negra.",
+          "start": 10.98,
+          "end": 11.7
+        }
+      ]
+    },
+    {
+      "start": 12.66,
+      "end": 15.18,
+      "text": "Y referencia a ver...",
+      "words": [
+        {
+          "word": "Y",
+          "start": 12.66,
+          "end": 13.42
+        },
+        {
+          "word": "referencia",
+          "start": 13.42,
+          "end": 14.12
+        },
+        {
+          "word": "a",
+          "start": 14.12,
+          "end": 14.36
+        },
+        {
+          "word": "ver...",
+          "start": 14.36,
+          "end": 15.18
+        }
+      ]
+    },
+    {
+      "start": 16.0,
+      "end": 20.28,
+      "text": "Usemos el cuadro de la luna azul también, ¿no? como referencia.",
+      "words": [
+        {
+          "word": "Usemos",
+          "start": 15.72,
+          "end": 16.1
+        },
+        {
+          "word": "el",
+          "start": 16.1,
+          "end": 17.08
+        },
+        {
+          "word": "cuadro",
+          "start": 17.08,
+          "end": 17.42
+        },
+        {
+          "word": "de",
+          "start": 17.42,
+          "end": 17.58
+        },
+        {
+          "word": "la",
+          "start": 17.58,
+          "end": 17.72
+        },
+        {
+          "word": "luna",
+          "start": 17.72,
+          "end": 17.94
+        },
+        {
+          "word": "azul",
+          "start": 17.94,
+          "end": 18.18
+        },
+        {
+          "word": "también,",
+          "start": 18.18,
+          "end": 18.68
+        },
+        {
+          "word": "¿no?",
+          "start": 19.34,
+          "end": 19.56
+        },
+        {
+          "word": "como",
+          "start": 19.56,
+          "end": 19.72
+        },
+        {
+          "word": "referencia.",
+          "start": 19.72,
+          "end": 20.28
+        }
+      ]
+    },
+    {
+      "start": 20.54,
+      "end": 22.46,
+      "text": "No, no entra acá.",
+      "words": [
+        {
+          "word": "No,",
+          "start": 20.54,
+          "end": 20.72
+        },
+        {
+          "word": "no",
+          "start": 20.72,
+          "end": 20.9
+        },
+        {
+          "word": "entra",
+          "start": 20.9,
+          "end": 21.3
+        },
+        {
+          "word": "acá.",
+          "start": 21.3,
+          "end": 22.46
+        }
+      ]
+    },
+    {
+      "start": 22.92,
+      "end": 26.08,
+      "text": "Pero entonces, ¿está a la altura de la luna amarilla?",
+      "words": [
+        {
+          "word": "Pero",
+          "start": 22.92,
+          "end": 23.68
+        },
+        {
+          "word": "entonces,",
+          "start": 23.68,
+          "end": 24.14
+        },
+        {
+          "word": "¿está",
+          "start": 24.4,
+          "end": 24.54
+        },
+        {
+          "word": "a",
+          "start": 24.54,
+          "end": 24.7
+        },
+        {
+          "word": "la",
+          "start": 24.7,
+          "end": 24.88
+        },
+        {
+          "word": "altura",
+          "start": 24.88,
+          "end": 25.12
+        },
+        {
+          "word": "de",
+          "start": 25.12,
+          "end": 25.34
+        },
+        {
+          "word": "la",
+          "start": 25.34,
+          "end": 25.46
+        },
+        {
+          "word": "luna",
+          "start": 25.46,
+          "end": 25.62
+        },
+        {
+          "word": "amarilla?",
+          "start": 25.62,
+          "end": 26.08
+        }
+      ]
+    },
+    {
+      "start": 26.46,
+      "end": 27.02,
+      "text": "Sobre.",
+      "words": [
+        {
+          "word": "Sobre.",
+          "start": 26.46,
+          "end": 27.02
+        }
+      ]
+    },
+    {
+      "start": 27.02,
+      "end": 34.64,
+      "text": "Ah, y sí a la altura... horizontalmente sí a la altura del auto.",
+      "words": [
+        {
+          "word": "Ah,",
+          "start": 27.02,
+          "end": 27.7
+        },
+        {
+          "word": "y",
+          "start": 29.08,
+          "end": 29.2
+        },
+        {
+          "word": "sí",
+          "start": 29.2,
+          "end": 29.36
+        },
+        {
+          "word": "a",
+          "start": 29.36,
+          "end": 29.42
+        },
+        {
+          "word": "la",
+          "start": 29.42,
+          "end": 29.56
+        },
+        {
+          "word": "altura...",
+          "start": 29.56,
+          "end": 30.78
+        },
+        {
+          "word": "horizontalmente",
+          "start": 30.78,
+          "end": 31.86
+        },
+        {
+          "word": "sí",
+          "start": 31.86,
+          "end": 32.1
+        },
+        {
+          "word": "a",
+          "start": 32.1,
+          "end": 32.16
+        },
+        {
+          "word": "la",
+          "start": 32.16,
+          "end": 32.3
+        },
+        {
+          "word": "altura",
+          "start": 32.3,
+          "end": 32.66
+        },
+        {
+          "word": "del",
+          "start": 32.66,
+          "end": 33.46
+        },
+        {
+          "word": "auto.",
+          "start": 33.46,
+          "end": 34.64
+        }
+      ]
+    },
+    {
+      "start": 35.66,
+      "end": 48.72,
+      "text": "Ahora, la rueda de adelante que se ve del coche estaría un poquito más arriba que el espejo.",
+      "words": [
+        {
+          "word": "la",
+          "start": 36.9,
+          "end": 36.98
+        },
+        {
+          "word": "rueda",
+          "start": 36.98,
+          "end": 37.98
+        },
+        {
+          "word": "de",
+          "start": 37.98,
+          "end": 41.04
+        },
+        {
+          "word": "adelante",
+          "start": 41.04,
+          "end": 41.5
+        },
+        {
+          "word": "que",
+          "start": 41.5,
+          "end": 41.78
+        },
+        {
+          "word": "se",
+          "start": 41.78,
+          "end": 42.0
+        },
+        {
+          "word": "ve",
+          "start": 42.0,
+          "end": 42.28
+        },
+        {
+          "word": "del",
+          "start": 42.28,
+          "end": 42.52
+        },
+        {
+          "word": "coche",
+          "start": 42.52,
+          "end": 43.34
+        },
+        {
+          "word": "estaría",
+          "start": 43.34,
+          "end": 45.16
+        },
+        {
+          "word": "un",
+          "start": 45.16,
+          "end": 45.44
+        },
+        {
+          "word": "poquito",
+          "start": 45.44,
+          "end": 45.92
+        },
+        {
+          "word": "más",
+          "start": 45.92,
+          "end": 46.92
+        },
+        {
+          "word": "arriba",
+          "start": 46.92,
+          "end": 47.38
+        },
+        {
+          "word": "que",
+          "start": 47.38,
+          "end": 47.82
+        },
+        {
+          "word": "el",
+          "start": 47.82,
+          "end": 48.06
+        },
+        {
+          "word": "espejo.",
+          "start": 48.06,
+          "end": 48.72
+        }
+      ]
+    },
+    {
+      "start": 48.9,
+      "end": 49.86,
+      "text": "Solamente un poquito.",
+      "words": [
+        {
+          "word": "Solamente",
+          "start": 48.9,
+          "end": 49.36
+        },
+        {
+          "word": "un",
+          "start": 49.36,
+          "end": 49.54
+        },
+        {
+          "word": "poquito.",
+          "start": 49.54,
+          "end": 49.86
+        }
+      ]
+    },
+    {
+      "start": 49.86,
+      "end": 57.56,
+      "text": "Y la punta de abajo de la luna con respecto a la parte izquierda...",
+      "words": [
+        {
+          "word": "Y",
+          "start": 49.86,
+          "end": 50.66
+        },
+        {
+          "word": "la",
+          "start": 50.66,
+          "end": 50.86
+        },
+        {
+          "word": "punta",
+          "start": 50.86,
+          "end": 51.52
+        },
+        {
+          "word": "de",
+          "start": 51.52,
+          "end": 51.94
+        },
+        {
+          "word": "abajo",
+          "start": 51.94,
+          "end": 52.24
+        },
+        {
+          "word": "de",
+          "start": 52.24,
+          "end": 52.42
+        },
+        {
+          "word": "la",
+          "start": 52.42,
+          "end": 52.58
+        },
+        {
+          "word": "luna",
+          "start": 52.58,
+          "end": 53.88
+        },
+        {
+          "word": "con",
+          "start": 53.88,
+          "end": 54.24
+        },
+        {
+          "word": "respecto",
+          "start": 54.24,
+          "end": 54.64
+        },
+        {
+          "word": "a",
+          "start": 54.64,
+          "end": 55.48
+        },
+        {
+          "word": "la",
+          "start": 55.48,
+          "end": 55.54
+        },
+        {
+          "word": "parte",
+          "start": 55.54,
+          "end": 55.76
+        },
+        {
+          "word": "izquierda...",
+          "start": 55.76,
+          "end": 57.56
+        }
+      ]
+    },
+    {
+      "start": 57.56,
+      "end": 62.86,
+      "text": "Así milimétricamente, bueno, está a 2, 3 milímetros del espejo.",
+      "words": [
+        {
+          "word": "Así",
+          "start": 57.56,
+          "end": 58.4
+        },
+        {
+          "word": "milimétricamente,",
+          "start": 58.4,
+          "end": 59.58
+        },
+        {
+          "word": "bueno,",
+          "start": 59.62,
+          "end": 59.88
+        },
+        {
+          "word": "está",
+          "start": 60.0,
+          "end": 60.12
+        },
+        {
+          "word": "a",
+          "start": 60.12,
+          "end": 60.32
+        },
+        {
+          "word": "2,",
+          "start": 60.32,
+          "end": 60.64
+        },
+        {
+          "word": "3",
+          "start": 60.64,
+          "end": 61.02
+        },
+        {
+          "word": "milímetros",
+          "start": 61.02,
+          "end": 61.52
+        },
+        {
+          "word": "del",
+          "start": 61.52,
+          "end": 61.74
+        },
+        {
+          "word": "espejo.",
+          "start": 61.74,
+          "end": 62.86
+        }
+      ]
+    },
+    {
+      "start": 63.2,
+      "end": 64.32,
+      "text": "Después empieza el espejo, digamos.",
+      "words": [
+        {
+          "word": "Después",
+          "start": 63.2,
+          "end": 63.32
+        },
+        {
+          "word": "empieza",
+          "start": 63.32,
+          "end": 63.62
+        },
+        {
+          "word": "el",
+          "start": 63.62,
+          "end": 63.8
+        },
+        {
+          "word": "espejo,",
+          "start": 63.8,
+          "end": 64.14
+        },
+        {
+          "word": "digamos.",
+          "start": 64.18,
+          "end": 64.32
+        }
+      ]
+    },
+    {
+      "start": 64.92,
+      "end": 66.34,
+      "text": "Más hacia la izquierda?",
+      "words": [
+        {
+          "word": "Más",
+          "start": 64.92,
+          "end": 65.02
+        },
+        {
+          "word": "hacia",
+          "start": 65.02,
+          "end": 65.1
+        },
+        {
+          "word": "la",
+          "start": 65.1,
+          "end": 65.24
+        },
+        {
+          "word": "izquierda?",
+          "start": 65.24,
+          "end": 66.34
+        }
+      ]
+    },
+    {
+      "start": 66.76,
+      "end": 70.0,
+      "text": "Hacia la derecha. El espejo hacia la derecha.",
+      "words": [
+        {
+          "word": "Hacia",
+          "start": 66.76,
+          "end": 67.04
+        },
+        {
+          "word": "la",
+          "start": 67.04,
+          "end": 67.44
+        },
+        {
+          "word": "derecha.",
+          "start": 67.44,
+          "end": 67.8
+        },
+        {
+          "word": "El",
+          "start": 68.08,
+          "end": 68.24
+        },
+        {
+          "word": "espejo",
+          "start": 68.24,
+          "end": 68.56
+        },
+        {
+          "word": "hacia",
+          "start": 68.56,
+          "end": 68.76
+        },
+        {
+          "word": "la",
+          "start": 68.76,
+          "end": 69.04
+        },
+        {
+          "word": "derecha.",
+          "start": 69.04,
+          "end": 70.0
+        }
+      ]
+    },
+    {
+      "start": 70.38,
+      "end": 72.18,
+      "text": "Claro, el espejo está por detrás, digamos.",
+      "words": [
+        {
+          "word": "Claro,",
+          "start": 70.38,
+          "end": 70.6
+        },
+        {
+          "word": "el",
+          "start": 70.64,
+          "end": 70.74
+        },
+        {
+          "word": "espejo",
+          "start": 70.74,
+          "end": 71.04
+        },
+        {
+          "word": "está",
+          "start": 71.04,
+          "end": 71.22
+        },
+        {
+          "word": "por",
+          "start": 71.22,
+          "end": 71.5
+        },
+        {
+          "word": "detrás,",
+          "start": 71.5,
+          "end": 71.86
+        },
+        {
+          "word": "digamos.",
+          "start": 72.02,
+          "end": 72.18
+        }
+      ]
+    },
+    {
+      "start": 72.18,
+      "end": 74.18,
+      "text": "El espejo está más cerca de...",
+      "words": [
+        {
+          "word": "El",
+          "start": 72.18,
+          "end": 72.34
+        },
+        {
+          "word": "espejo",
+          "start": 72.34,
+          "end": 72.6
+        },
+        {
+          "word": "está",
+          "start": 72.6,
+          "end": 72.78
+        },
+        {
+          "word": "más",
+          "start": 72.78,
+          "end": 73.04
+        },
+        {
+          "word": "cerca",
+          "start": 73.04,
+          "end": 73.54
+        },
+        {
+          "word": "de...",
+          "start": 73.54,
+          "end": 74.18
+        }
+      ]
+    },
+    {
+      "start": 75.62,
+      "end": 77.66,
+      "text": "Como el final del cuadro, digamos.",
+      "words": [
+        {
+          "word": "Como",
+          "start": 75.62,
+          "end": 76.18
+        },
+        {
+          "word": "el",
+          "start": 76.18,
+          "end": 76.38
+        },
+        {
+          "word": "final",
+          "start": 76.38,
+          "end": 76.58
+        },
+        {
+          "word": "del",
+          "start": 76.58,
+          "end": 76.76
+        },
+        {
+          "word": "cuadro,",
+          "start": 76.76,
+          "end": 77.18
+        },
+        {
+          "word": "digamos.",
+          "start": 77.2,
+          "end": 77.66
+        }
+      ]
+    },
+    {
+      "start": 77.94,
+      "end": 79.38,
+      "text": "El final del... ¿cómo se llamaba?",
+      "words": [
+        {
+          "word": "final",
+          "start": 77.94,
+          "end": 78.14
+        },
+        {
+          "word": "del...",
+          "start": 78.14,
+          "end": 78.54
+        },
+        {
+          "word": "¿cómo",
+          "start": 78.54,
+          "end": 78.68
+        },
+        {
+          "word": "se",
+          "start": 78.68,
+          "end": 78.82
+        },
+        {
+          "word": "llamaba?",
+          "start": 78.82,
+          "end": 79.38
+        }
+      ]
+    },
+    {
+      "start": 81.08,
+      "end": 82.2,
+      "text": "El marco...",
+      "words": [
+        {
+          "word": "El",
+          "start": 81.08,
+          "end": 81.64
+        },
+        {
+          "word": "marco...",
+          "start": 81.64,
+          "end": 82.2
+        }
+      ]
+    },
+    {
+      "start": 82.2,
+      "end": 83.42,
+      "text": "Es lo mismo.",
+      "words": [
+        {
+          "word": "Es",
+          "start": 82.2,
+          "end": 82.86
+        },
+        {
+          "word": "lo",
+          "start": 82.86,
+          "end": 83.02
+        },
+        {
+          "word": "mismo.",
+          "start": 83.02,
+          "end": 83.42
+        }
+      ]
+    },
+    {
+      "start": 84.38,
+      "end": 85.18,
+      "text": "No, pero te digo...",
+      "words": [
+        {
+          "word": "No,",
+          "start": 84.38,
+          "end": 84.56
+        },
+        {
+          "word": "pero",
+          "start": 84.6,
+          "end": 84.8
+        },
+        {
+          "word": "te",
+          "start": 84.8,
+          "end": 84.94
+        },
+        {
+          "word": "digo...",
+          "start": 84.94,
+          "end": 85.22
+        }
+      ]
+    },
+    {
+      "start": 86.88,
+      "end": 91.6,
+      "text": "La punta de la luna está más y es más cercana a la limusina.",
+      "words": [
+        {
+          "word": "La",
+          "start": 86.88,
+          "end": 87.44
+        },
+        {
+          "word": "punta",
+          "start": 87.44,
+          "end": 87.7
+        },
+        {
+          "word": "de",
+          "start": 87.7,
+          "end": 87.78
+        },
+        {
+          "word": "la",
+          "start": 87.78,
+          "end": 87.86
+        },
+        {
+          "word": "luna",
+          "start": 87.86,
+          "end": 87.94
+        },
+        {
+          "word": "está",
+          "start": 87.94,
+          "end": 88.14
+        },
+        {
+          "word": "más",
+          "start": 88.14,
+          "end": 88.34
+        },
+        {
+          "word": "y",
+          "start": 88.34,
+          "end": 88.36
+        },
+        {
+          "word": "es",
+          "start": 88.36,
+          "end": 88.66
+        },
+        {
+          "word": "más",
+          "start": 88.66,
+          "end": 89.36
+        },
+        {
+          "word": "cercana",
+          "start": 89.36,
+          "end": 90.14
+        },
+        {
+          "word": "a",
+          "start": 90.14,
+          "end": 90.66
+        },
+        {
+          "word": "la",
+          "start": 90.66,
+          "end": 91.06
+        },
+        {
+          "word": "limusina.",
+          "start": 91.06,
+          "end": 91.6
+        }
+      ]
+    },
+    {
+      "start": 93.02,
+      "end": 93.98,
+      "text": "No, para nada.",
+      "words": [
+        {
+          "word": "No,",
+          "start": 93.02,
+          "end": 93.2
+        },
+        {
+          "word": "para",
+          "start": 93.36,
+          "end": 93.64
+        },
+        {
+          "word": "nada.",
+          "start": 93.64,
+          "end": 93.98
+        }
+      ]
+    },
+    {
+      "start": 94.36,
+      "end": 101.7,
+      "text": "Tenemos la luna abajo y la punta que vos decías, si necesitas de referencia, esa punta de abajo de la luna...",
+      "words": [
+        {
+          "word": "Tenemos",
+          "start": 94.36,
+          "end": 94.62
+        },
+        {
+          "word": "la",
+          "start": 94.62,
+          "end": 94.84
+        },
+        {
+          "word": "luna",
+          "start": 94.84,
+          "end": 95.08
+        },
+        {
+          "word": "abajo",
+          "start": 95.08,
+          "end": 95.44
+        },
+        {
+          "word": "y",
+          "start": 95.44,
+          "end": 96.1
+        },
+        {
+          "word": "la",
+          "start": 96.1,
+          "end": 96.38
+        },
+        {
+          "word": "punta",
+          "start": 96.38,
+          "end": 96.68
+        },
+        {
+          "word": "que",
+          "start": 96.68,
+          "end": 96.8
+        },
+        {
+          "word": "vos",
+          "start": 96.8,
+          "end": 97.04
+        },
+        {
+          "word": "decías,",
+          "start": 97.04,
+          "end": 97.72
+        },
+        {
+          "word": "si",
+          "start": 97.76,
+          "end": 98.12
+        },
+        {
+          "word": "necesitas",
+          "start": 98.12,
+          "end": 98.58
+        },
+        {
+          "word": "de",
+          "start": 98.58,
+          "end": 98.84
+        },
+        {
+          "word": "referencia,",
+          "start": 98.84,
+          "end": 99.38
+        },
+        {
+          "word": "esa",
+          "start": 99.58,
+          "end": 99.7
+        },
+        {
+          "word": "punta",
+          "start": 99.7,
+          "end": 100.06
+        },
+        {
+          "word": "de",
+          "start": 100.06,
+          "end": 100.28
+        },
+        {
+          "word": "abajo",
+          "start": 100.28,
+          "end": 100.6
+        },
+        {
+          "word": "de",
+          "start": 100.6,
+          "end": 101.22
+        },
+        {
+          "word": "la",
+          "start": 101.22,
+          "end": 101.38
+        },
+        {
+          "word": "luna...",
+          "start": 101.38,
+          "end": 101.7
+        }
+      ]
+    },
+    {
+      "start": 102.76,
+      "end": 107.98,
+      "text": "Pues entonces, trases una línea hacia arriba y este espejo está corrido hacia la derecha...",
+      "words": [
+        {
+          "word": "Pues",
+          "start": 102.76,
+          "end": 103.28
+        },
+        {
+          "word": "entonces,",
+          "start": 103.28,
+          "end": 103.78
+        },
+        {
+          "word": "trases",
+          "start": 103.86,
+          "end": 104.06
+        },
+        {
+          "word": "una",
+          "start": 104.06,
+          "end": 104.32
+        },
+        {
+          "word": "línea",
+          "start": 104.32,
+          "end": 104.54
+        },
+        {
+          "word": "hacia",
+          "start": 104.54,
+          "end": 104.8
+        },
+        {
+          "word": "arriba",
+          "start": 104.8,
+          "end": 105.22
+        },
+        {
+          "word": "y",
+          "start": 105.22,
+          "end": 105.9
+        },
+        {
+          "word": "este",
+          "start": 105.9,
+          "end": 106.08
+        },
+        {
+          "word": "espejo",
+          "start": 106.08,
+          "end": 106.46
+        },
+        {
+          "word": "está",
+          "start": 106.46,
+          "end": 106.62
+        },
+        {
+          "word": "corrido",
+          "start": 106.62,
+          "end": 107.02
+        },
+        {
+          "word": "hacia",
+          "start": 107.02,
+          "end": 107.24
+        },
+        {
+          "word": "la",
+          "start": 107.24,
+          "end": 107.5
+        },
+        {
+          "word": "derecha...",
+          "start": 107.5,
+          "end": 107.98
+        }
+      ]
+    },
+    {
+      "start": 107.98,
+      "end": 109.94,
+      "text": "No sé, dos milímetros.",
+      "words": [
+        {
+          "word": "No",
+          "start": 107.98,
+          "end": 108.72
+        },
+        {
+          "word": "sé,",
+          "start": 108.72,
+          "end": 109.02
+        },
+        {
+          "word": "dos",
+          "start": 109.16,
+          "end": 109.36
+        },
+        {
+          "word": "milímetros.",
+          "start": 109.36,
+          "end": 109.94
+        }
+      ]
+    },
+    {
+      "start": 110.2,
+      "end": 110.88,
+      "text": "Ah, bien.",
+      "words": [
+        {
+          "word": "Ah,",
+          "start": 110.2,
+          "end": 110.24
+        }
+      ]
+    },
+    {
+      "start": 111.48,
+      "end": 113.62,
+      "text": "Vamos a ver un poquito...",
+      "words": [
+        {
+          "word": "Vamos",
+          "start": 111.48,
+          "end": 111.52
+        },
+        {
+          "word": "ver",
+          "start": 111.52,
+          "end": 111.7
+        },
+        {
+          "word": "un",
+          "start": 111.7,
+          "end": 111.92
+        },
+        {
+          "word": "poquito...",
+          "start": 111.92,
+          "end": 113.62
+        }
+      ]
+    },
+    {
+      "start": 116.56,
+      "end": 117.6,
+      "text": "Bueno, ahora ahí.",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 116.56,
+          "end": 117.08
+        },
+        {
+          "word": "ahora",
+          "start": 117.26,
+          "end": 117.44
+        },
+        {
+          "word": "ahí.",
+          "start": 117.44,
+          "end": 117.6
+        }
+      ]
+    }
+  ]
+}

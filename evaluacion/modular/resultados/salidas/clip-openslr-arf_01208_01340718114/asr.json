@@ -1,0 +1,57 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.62,
+      "end": 2.96,
+      "text": "¿Podrías comprar el disco y mandárselo a mi mamá?",
+      "words": [
+        {
+          "word": "¿Podrías",
+          "start": 0.62,
+          "end": 1.14
+        },
+        {
+          "word": "comprar",
+          "start": 1.14,
+          "end": 1.42
+        },
+        {
+          "word": "el",
+          "start": 1.42,
+          "end": 1.6
+        },
+        {
+          "word": "disco",
+          "start": 1.6,
+          "end": 1.84
+        },
+        {
+          "word": "y",
+          "start": 1.84,
+          "end": 2.04
+        },
+        {
+          "word": "mandárselo",
+          "start": 2.04,
+          "end": 2.5
+        },
+        {
+          "word": "a",
+          "start": 2.5,
+          "end": 2.52
+        },
+        {
+          "word": "mi",
+          "start": 2.52,
+          "end": 2.66
+        },
+        {
+          "word": "mamá?",
+          "start": 2.66,
+          "end": 2.96
+        }
+      ]
+    }
+  ]
+}

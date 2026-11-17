@@ -1,0 +1,39 @@
+{
+  "elemento": "ami-IS1009c",
+  "entrada_sha256": "8bbccd627e82857e1768fc7850eecb4de13b4ee7547f885bf013ff999e4426f9",
+  "configuracion": {
+    "modelo_stt": "medium",
+    "dispositivo": "cuda",
+    "modelo_minutas": "qwen2.5-7b",
+    "secciones": [
+      "resumen",
+      "temas",
+      "decisiones",
+      "problemas",
+      "acciones"
+    ]
+  },
+  "codigo_sha256": "4622740d14ef7dd701f6efd23aa4c49ff051df0cb3806d157ac06919ec2aabf3",
+  "comando": [
+    "python",
+    "-m",
+    "src.minutas",
+    "--entrada",
+    "<datos>/ami/IS1009c/transcription.json",
+    "--salida",
+    "<inferencia>/ami-IS1009c",
+    "--modelo",
+    "qwen2.5-7b",
+    "--secciones",
+    "resumen,temas,decisiones,problemas,acciones",
+    "--sobrescribir"
+  ],
+  "segundos": 501.7,
+  "codigo": 0,
+  "salidas_sha256": {
+    "minutes.json": "e9534a5ca984fa927461c723c7b477656cab95acdbf617b9b3080684c6c2d4e3",
+    "ejecucion_minutas.json": "4b13965cee3f039a7e9e5c57373b1bbb784379ea1e2f50bde6370bf555420ec9",
+    "minutes.md": "e5309e8923db241b923ed6fb72e4ef267783c2320ef1515b09e6ef967743c087"
+  },
+  "sellado": "16/11/2026, después de la corrida, contra resultados/salidas versionado en 4fd427e; minutes.md agregado el 17/11/2026 contra la copia versionada en HEAD (0bc0747)"
+}

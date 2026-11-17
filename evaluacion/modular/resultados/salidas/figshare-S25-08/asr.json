@@ -1,0 +1,1075 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.68,
+      "end": 6.2,
+      "text": "Ok, el limón, ponelo exactamente en el medio de la cruz.",
+      "words": [
+        {
+          "word": "Ok,",
+          "start": 0.68,
+          "end": 1.08
+        },
+        {
+          "word": "el",
+          "start": 1.28,
+          "end": 1.42
+        },
+        {
+          "word": "limón,",
+          "start": 1.42,
+          "end": 2.04
+        },
+        {
+          "word": "ponelo",
+          "start": 2.76,
+          "end": 3.22
+        },
+        {
+          "word": "exactamente",
+          "start": 3.22,
+          "end": 4.12
+        },
+        {
+          "word": "en",
+          "start": 4.12,
+          "end": 4.42
+        },
+        {
+          "word": "el",
+          "start": 4.42,
+          "end": 4.6
+        },
+        {
+          "word": "medio",
+          "start": 4.6,
+          "end": 4.8
+        },
+        {
+          "word": "de",
+          "start": 4.8,
+          "end": 5.0
+        },
+        {
+          "word": "la",
+          "start": 5.0,
+          "end": 5.18
+        },
+        {
+          "word": "cruz.",
+          "start": 5.18,
+          "end": 6.2
+        }
+      ]
+    },
+    {
+      "start": 7.02,
+      "end": 8.02,
+      "text": "Exactamente, ¿está tocando algo?",
+      "words": [
+        {
+          "word": "Exactamente,",
+          "start": 7.02,
+          "end": 7.42
+        },
+        {
+          "word": "¿está",
+          "start": 7.42,
+          "end": 7.54
+        },
+        {
+          "word": "tocando",
+          "start": 7.54,
+          "end": 7.8
+        },
+        {
+          "word": "algo?",
+          "start": 7.8,
+          "end": 8.02
+        }
+      ]
+    },
+    {
+      "start": 8.66,
+      "end": 10.98,
+      "text": "Está tocando algo, no, no está tocando nada, pero...",
+      "words": [
+        {
+          "word": "Está",
+          "start": 8.66,
+          "end": 9.06
+        },
+        {
+          "word": "tocando",
+          "start": 9.06,
+          "end": 9.46
+        },
+        {
+          "word": "algo,",
+          "start": 9.46,
+          "end": 9.7
+        },
+        {
+          "word": "no,",
+          "start": 9.8,
+          "end": 9.9
+        },
+        {
+          "word": "no",
+          "start": 9.9,
+          "end": 10.06
+        },
+        {
+          "word": "está",
+          "start": 10.06,
+          "end": 10.22
+        },
+        {
+          "word": "tocando",
+          "start": 10.22,
+          "end": 10.56
+        },
+        {
+          "word": "nada,",
+          "start": 10.56,
+          "end": 10.82
+        },
+        {
+          "word": "pero...",
+          "start": 10.86,
+          "end": 10.98
+        }
+      ]
+    },
+    {
+      "start": 10.98,
+      "end": 11.66,
+      "text": "¿De la cruz de qué?",
+      "words": [
+        {
+          "word": "¿De",
+          "start": 10.98,
+          "end": 11.04
+        },
+        {
+          "word": "la",
+          "start": 11.04,
+          "end": 11.24
+        },
+        {
+          "word": "cruz",
+          "start": 11.24,
+          "end": 11.36
+        },
+        {
+          "word": "de",
+          "start": 11.36,
+          "end": 11.48
+        },
+        {
+          "word": "qué?",
+          "start": 11.48,
+          "end": 11.66
+        }
+      ]
+    },
+    {
+      "start": 12.12,
+      "end": 14.6,
+      "text": "De la cruz que está entre la monja, la luna, el cuadro y el ojo.",
+      "words": [
+        {
+          "word": "De",
+          "start": 12.12,
+          "end": 12.22
+        },
+        {
+          "word": "la",
+          "start": 12.22,
+          "end": 12.36
+        },
+        {
+          "word": "cruz",
+          "start": 12.36,
+          "end": 12.56
+        },
+        {
+          "word": "que",
+          "start": 12.56,
+          "end": 12.7
+        },
+        {
+          "word": "está",
+          "start": 12.7,
+          "end": 12.78
+        },
+        {
+          "word": "entre",
+          "start": 12.78,
+          "end": 13.02
+        },
+        {
+          "word": "la",
+          "start": 13.02,
+          "end": 13.2
+        },
+        {
+          "word": "monja,",
+          "start": 13.2,
+          "end": 13.44
+        },
+        {
+          "word": "la",
+          "start": 13.54,
+          "end": 13.6
+        },
+        {
+          "word": "luna,",
+          "start": 13.6,
+          "end": 13.74
+        },
+        {
+          "word": "el",
+          "start": 13.84,
+          "end": 13.9
+        },
+        {
+          "word": "cuadro",
+          "start": 13.9,
+          "end": 14.18
+        },
+        {
+          "word": "y",
+          "start": 14.18,
+          "end": 14.24
+        },
+        {
+          "word": "el",
+          "start": 14.24,
+          "end": 14.34
+        },
+        {
+          "word": "ojo.",
+          "start": 14.34,
+          "end": 14.6
+        }
+      ]
+    },
+    {
+      "start": 14.7,
+      "end": 15.82,
+      "text": "Ah, está bien, no de la cruz de la monja.",
+      "words": [
+        {
+          "word": "no",
+          "start": 14.7,
+          "end": 14.84
+        },
+        {
+          "word": "de",
+          "start": 14.84,
+          "end": 14.92
+        },
+        {
+          "word": "la",
+          "start": 14.92,
+          "end": 15.08
+        },
+        {
+          "word": "cruz",
+          "start": 15.08,
+          "end": 15.18
+        },
+        {
+          "word": "de",
+          "start": 15.18,
+          "end": 15.28
+        },
+        {
+          "word": "la",
+          "start": 15.28,
+          "end": 15.4
+        },
+        {
+          "word": "monja.",
+          "start": 15.4,
+          "end": 15.82
+        }
+      ]
+    },
+    {
+      "start": 16.06,
+      "end": 19.0,
+      "text": "No, eh... la parte de abajo del león...",
+      "words": [
+        {
+          "word": "No,",
+          "start": 16.06,
+          "end": 16.22
+        },
+        {
+          "word": "eh...",
+          "start": 16.6,
+          "end": 17.6
+        },
+        {
+          "word": "la",
+          "start": 17.6,
+          "end": 17.84
+        },
+        {
+          "word": "parte",
+          "start": 17.84,
+          "end": 18.12
+        },
+        {
+          "word": "de",
+          "start": 18.12,
+          "end": 18.3
+        },
+        {
+          "word": "abajo",
+          "start": 18.3,
+          "end": 18.54
+        },
+        {
+          "word": "del",
+          "start": 18.54,
+          "end": 18.78
+        },
+        {
+          "word": "león...",
+          "start": 18.78,
+          "end": 19.0
+        }
+      ]
+    },
+    {
+      "start": 19.8,
+      "end": 20.54,
+      "text": "¿Del león, que león?",
+      "words": [
+        {
+          "word": "¿Del",
+          "start": 19.8,
+          "end": 19.94
+        },
+        {
+          "word": "león,",
+          "start": 19.94,
+          "end": 20.22
+        },
+        {
+          "word": "que",
+          "start": 20.28,
+          "end": 20.4
+        },
+        {
+          "word": "león?",
+          "start": 20.4,
+          "end": 20.54
+        }
+      ]
+    },
+    {
+      "start": 20.6,
+      "end": 21.56,
+      "text": "Perdón, del limón.",
+      "words": [
+        {
+          "word": "Perdón,",
+          "start": 20.6,
+          "end": 21.0
+        },
+        {
+          "word": "del",
+          "start": 21.0,
+          "end": 21.12
+        },
+        {
+          "word": "limón.",
+          "start": 21.12,
+          "end": 21.56
+        }
+      ]
+    },
+    {
+      "start": 22.2,
+      "end": 23.54,
+      "text": "La parte de abajo del limón...",
+      "words": [
+        {
+          "word": "La",
+          "start": 22.2,
+          "end": 22.28
+        },
+        {
+          "word": "parte",
+          "start": 22.28,
+          "end": 22.56
+        },
+        {
+          "word": "de",
+          "start": 22.56,
+          "end": 22.68
+        },
+        {
+          "word": "abajo",
+          "start": 22.68,
+          "end": 22.82
+        },
+        {
+          "word": "del",
+          "start": 22.82,
+          "end": 23.04
+        },
+        {
+          "word": "limón...",
+          "start": 23.04,
+          "end": 23.54
+        }
+      ]
+    },
+    {
+      "start": 23.54,
+      "end": 29.98,
+      "text": "O sea, el limón no toca con nada, pero la parte de abajo está a un milímetro, medio milímetro de la luna azul.",
+      "words": [
+        {
+          "word": "O",
+          "start": 23.54,
+          "end": 23.66
+        },
+        {
+          "word": "sea,",
+          "start": 23.66,
+          "end": 24.08
+        },
+        {
+          "word": "el",
+          "start": 24.08,
+          "end": 24.2
+        },
+        {
+          "word": "limón",
+          "start": 24.2,
+          "end": 24.4
+        },
+        {
+          "word": "no",
+          "start": 24.4,
+          "end": 24.6
+        },
+        {
+          "word": "toca",
+          "start": 24.6,
+          "end": 24.74
+        },
+        {
+          "word": "con",
+          "start": 24.74,
+          "end": 25.0
+        },
+        {
+          "word": "nada,",
+          "start": 25.0,
+          "end": 25.18
+        },
+        {
+          "word": "pero",
+          "start": 25.24,
+          "end": 25.42
+        },
+        {
+          "word": "la",
+          "start": 25.42,
+          "end": 25.62
+        },
+        {
+          "word": "parte",
+          "start": 25.62,
+          "end": 25.84
+        },
+        {
+          "word": "de",
+          "start": 25.84,
+          "end": 26.04
+        },
+        {
+          "word": "abajo",
+          "start": 26.04,
+          "end": 26.38
+        },
+        {
+          "word": "está",
+          "start": 26.38,
+          "end": 26.78
+        },
+        {
+          "word": "a",
+          "start": 26.78,
+          "end": 27.08
+        },
+        {
+          "word": "un",
+          "start": 27.08,
+          "end": 27.48
+        },
+        {
+          "word": "milímetro,",
+          "start": 27.48,
+          "end": 28.02
+        },
+        {
+          "word": "medio",
+          "start": 28.26,
+          "end": 28.36
+        },
+        {
+          "word": "milímetro",
+          "start": 28.36,
+          "end": 28.94
+        },
+        {
+          "word": "de",
+          "start": 28.94,
+          "end": 29.44
+        },
+        {
+          "word": "la",
+          "start": 29.44,
+          "end": 29.6
+        },
+        {
+          "word": "luna",
+          "start": 29.6,
+          "end": 29.86
+        },
+        {
+          "word": "azul.",
+          "start": 29.86,
+          "end": 29.98
+        }
+      ]
+    },
+    {
+      "start": 30.6,
+      "end": 33.98,
+      "text": "Y la parte de arriba está a medio milímetro de las pestañas.",
+      "words": [
+        {
+          "word": "Y",
+          "start": 30.6,
+          "end": 31.18
+        },
+        {
+          "word": "la",
+          "start": 31.18,
+          "end": 31.38
+        },
+        {
+          "word": "parte",
+          "start": 31.38,
+          "end": 31.66
+        },
+        {
+          "word": "de",
+          "start": 31.66,
+          "end": 31.9
+        },
+        {
+          "word": "arriba",
+          "start": 31.9,
+          "end": 32.16
+        },
+        {
+          "word": "está",
+          "start": 32.16,
+          "end": 32.7
+        },
+        {
+          "word": "a",
+          "start": 32.7,
+          "end": 33.0
+        },
+        {
+          "word": "medio",
+          "start": 33.0,
+          "end": 33.24
+        },
+        {
+          "word": "milímetro",
+          "start": 33.24,
+          "end": 33.6
+        },
+        {
+          "word": "de",
+          "start": 33.6,
+          "end": 33.72
+        },
+        {
+          "word": "las",
+          "start": 33.72,
+          "end": 33.88
+        },
+        {
+          "word": "pestañas.",
+          "start": 33.88,
+          "end": 34.17
+        }
+      ]
+    },
+    {
+      "start": 34.96,
+      "end": 38.64,
+      "text": "Está equistante más o menos de la luna y del ojo.",
+      "words": [
+        {
+          "word": "Está",
+          "start": 34.96,
+          "end": 35.54
+        },
+        {
+          "word": "equistante",
+          "start": 35.54,
+          "end": 36.04
+        },
+        {
+          "word": "más",
+          "start": 36.04,
+          "end": 36.24
+        },
+        {
+          "word": "o",
+          "start": 36.24,
+          "end": 36.34
+        },
+        {
+          "word": "menos",
+          "start": 36.34,
+          "end": 36.46
+        },
+        {
+          "word": "de",
+          "start": 36.46,
+          "end": 36.62
+        },
+        {
+          "word": "la",
+          "start": 36.62,
+          "end": 36.74
+        },
+        {
+          "word": "luna",
+          "start": 36.74,
+          "end": 36.96
+        },
+        {
+          "word": "y",
+          "start": 36.96,
+          "end": 38.04
+        },
+        {
+          "word": "del",
+          "start": 38.04,
+          "end": 38.26
+        },
+        {
+          "word": "ojo.",
+          "start": 38.26,
+          "end": 38.64
+        }
+      ]
+    },
+    {
+      "start": 38.82,
+      "end": 40.66,
+      "text": "Equistante de la luna y del ojo, sí.",
+      "words": [
+        {
+          "word": "Equistante",
+          "start": 38.82,
+          "end": 39.38
+        },
+        {
+          "word": "de",
+          "start": 39.38,
+          "end": 39.54
+        },
+        {
+          "word": "la",
+          "start": 39.54,
+          "end": 39.68
+        },
+        {
+          "word": "luna",
+          "start": 39.68,
+          "end": 39.84
+        },
+        {
+          "word": "y",
+          "start": 39.84,
+          "end": 39.94
+        },
+        {
+          "word": "del",
+          "start": 39.94,
+          "end": 40.2
+        },
+        {
+          "word": "ojo,",
+          "start": 40.2,
+          "end": 40.44
+        },
+        {
+          "word": "sí.",
+          "start": 40.56,
+          "end": 40.66
+        }
+      ]
+    },
+    {
+      "start": 40.98,
+      "end": 49.44,
+      "text": "También las hojas del limón de la izquierda están casi rozando, casi casi casi rozando el aura de la monja.",
+      "words": [
+        {
+          "word": "También",
+          "start": 40.98,
+          "end": 41.3
+        },
+        {
+          "word": "las",
+          "start": 41.3,
+          "end": 41.66
+        },
+        {
+          "word": "hojas",
+          "start": 41.66,
+          "end": 42.08
+        },
+        {
+          "word": "del",
+          "start": 42.08,
+          "end": 42.38
+        },
+        {
+          "word": "limón",
+          "start": 42.38,
+          "end": 42.84
+        },
+        {
+          "word": "de",
+          "start": 42.84,
+          "end": 42.98
+        },
+        {
+          "word": "la",
+          "start": 42.98,
+          "end": 43.36
+        },
+        {
+          "word": "izquierda",
+          "start": 43.36,
+          "end": 44.56
+        },
+        {
+          "word": "están",
+          "start": 44.56,
+          "end": 44.9
+        },
+        {
+          "word": "casi",
+          "start": 44.9,
+          "end": 45.44
+        },
+        {
+          "word": "rozando,",
+          "start": 45.44,
+          "end": 46.34
+        },
+        {
+          "word": "casi",
+          "start": 46.38,
+          "end": 46.68
+        },
+        {
+          "word": "casi",
+          "start": 46.68,
+          "end": 46.9
+        },
+        {
+          "word": "casi",
+          "start": 46.9,
+          "end": 47.16
+        },
+        {
+          "word": "rozando",
+          "start": 47.16,
+          "end": 47.6
+        },
+        {
+          "word": "el",
+          "start": 47.6,
+          "end": 47.96
+        },
+        {
+          "word": "aura",
+          "start": 47.96,
+          "end": 48.44
+        },
+        {
+          "word": "de",
+          "start": 48.44,
+          "end": 48.68
+        },
+        {
+          "word": "la",
+          "start": 48.68,
+          "end": 48.84
+        },
+        {
+          "word": "monja.",
+          "start": 48.84,
+          "end": 49.44
+        }
+      ]
+    },
+    {
+      "start": 49.58,
+      "end": 50.36,
+      "text": "Está bien.",
+      "words": [
+        {
+          "word": "Está",
+          "start": 49.58,
+          "end": 49.78
+        },
+        {
+          "word": "bien.",
+          "start": 49.78,
+          "end": 50.36
+        }
+      ]
+    },
+    {
+      "start": 51.14,
+      "end": 58.46,
+      "text": "Sí, están apenas más apenas más separado el limón del cuadro que del resto de las cosas, apenas.",
+      "words": [
+        {
+          "word": "Sí,",
+          "start": 51.14,
+          "end": 51.38
+        },
+        {
+          "word": "están",
+          "start": 52.08,
+          "end": 52.16
+        },
+        {
+          "word": "apenas",
+          "start": 52.16,
+          "end": 52.72
+        },
+        {
+          "word": "más",
+          "start": 52.72,
+          "end": 53.82
+        },
+        {
+          "word": "apenas",
+          "start": 53.82,
+          "end": 54.16
+        },
+        {
+          "word": "más",
+          "start": 54.16,
+          "end": 54.48
+        },
+        {
+          "word": "separado",
+          "start": 54.48,
+          "end": 55.02
+        },
+        {
+          "word": "el",
+          "start": 55.02,
+          "end": 55.2
+        },
+        {
+          "word": "limón",
+          "start": 55.2,
+          "end": 55.74
+        },
+        {
+          "word": "del",
+          "start": 55.74,
+          "end": 56.08
+        },
+        {
+          "word": "cuadro",
+          "start": 56.08,
+          "end": 56.58
+        },
+        {
+          "word": "que",
+          "start": 56.58,
+          "end": 56.72
+        },
+        {
+          "word": "del",
+          "start": 56.72,
+          "end": 56.86
+        },
+        {
+          "word": "resto",
+          "start": 56.86,
+          "end": 57.12
+        },
+        {
+          "word": "de",
+          "start": 57.12,
+          "end": 57.3
+        },
+        {
+          "word": "las",
+          "start": 57.3,
+          "end": 57.5
+        },
+        {
+          "word": "cosas,",
+          "start": 57.5,
+          "end": 57.82
+        },
+        {
+          "word": "apenas.",
+          "start": 58.02,
+          "end": 58.46
+        }
+      ]
+    },
+    {
+      "start": 59.22,
+      "end": 62.72,
+      "text": "Al cuadro no lo rosa, al resto de las cosas sí les pasa muy cerca.",
+      "words": [
+        {
+          "word": "Al",
+          "start": 59.22,
+          "end": 59.62
+        },
+        {
+          "word": "cuadro",
+          "start": 59.62,
+          "end": 59.98
+        },
+        {
+          "word": "no",
+          "start": 59.98,
+          "end": 60.14
+        },
+        {
+          "word": "lo",
+          "start": 60.14,
+          "end": 60.36
+        },
+        {
+          "word": "rosa,",
+          "start": 60.36,
+          "end": 60.66
+        },
+        {
+          "word": "al",
+          "start": 60.8,
+          "end": 60.82
+        },
+        {
+          "word": "resto",
+          "start": 60.82,
+          "end": 61.06
+        },
+        {
+          "word": "de",
+          "start": 61.06,
+          "end": 61.2
+        },
+        {
+          "word": "las",
+          "start": 61.2,
+          "end": 61.36
+        },
+        {
+          "word": "cosas",
+          "start": 61.36,
+          "end": 61.54
+        },
+        {
+          "word": "sí",
+          "start": 61.54,
+          "end": 61.74
+        },
+        {
+          "word": "les",
+          "start": 61.74,
+          "end": 61.9
+        },
+        {
+          "word": "pasa",
+          "start": 61.9,
+          "end": 62.06
+        },
+        {
+          "word": "muy",
+          "start": 62.06,
+          "end": 62.36
+        },
+        {
+          "word": "cerca.",
+          "start": 62.36,
+          "end": 62.72
+        }
+      ]
+    },
+    {
+      "start": 63.0,
+      "end": 63.82,
+      "text": "Está bien.",
+      "words": [
+        {
+          "word": "Está",
+          "start": 63.0,
+          "end": 63.04
+        },
+        {
+          "word": "bien.",
+          "start": 63.04,
+          "end": 63.82
+        }
+      ]
+    },
+    {
+      "start": 65.2,
+      "end": 65.6,
+      "text": "A ver ahí.",
+      "words": [
+        {
+          "word": "A",
+          "start": 65.2,
+          "end": 65.3
+        },
+        {
+          "word": "ver",
+          "start": 65.3,
+          "end": 65.4
+        },
+        {
+          "word": "ahí.",
+          "start": 65.4,
+          "end": 65.6
+        }
+      ]
+    }
+  ]
+}

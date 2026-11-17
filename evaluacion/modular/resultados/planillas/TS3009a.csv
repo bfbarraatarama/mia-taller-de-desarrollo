@@ -1,0 +1,13 @@
+reunion,tipo,item_id,referencia,referencia_original,recuperado,observaciones
+TS3009a,accion,TS3009a.s9553330.s.8,El individuo debe presentar sus ideas para la próxima reunión.,Individual must come up with their ideas for the next meeting.,no,
+TS3009a,accion,TS3009a.s9553330.s.9,El especialista en interfaz mirará el botón y sobre todo mirará.,The interface specialist will look at button and over all look.,no,no se habla de especialista de interfaz
+TS3009a,decision,TS3009a.s9553330.s.10,Las ideas específicas en cuanto a los componentes y materiales deben dejarse para la próxima reunión.,Specific ideas as to components and materials are to be left to the next meeting.,sí,
+TS3009a,decision,TS3009a.s9553330.s.11,También estudiarán más a fondo la idea de las tapas en la reunión de la Comisión.,They will look further at the idea of covers in the mext meeting too.,sí,"Dice ""en los prox 30 min"" en lugar de prox reu, pero la prox reu es en 30 min, así que suficientemente bien"
+TS3009a,problema,TS3009a.s9553330.s.12,*NA*,*NA*,,NO EVALUABLE
+TS3009a,resumen,TS3009a.s9553330.s.1,"Después de introducir el objetivo de control remoto, el director del proyecto demostró la tecnología SmartBoard que utilizarían.","After introducing the remote control objective, the project manager demonstrated the SmartBoard technology they would be using.",no,
+TS3009a,resumen,TS3009a.s9553330.s.2,Lo probaron dibujando animales.,They tested it by drawing animals.,sí,
+TS3009a,resumen,TS3009a.s9553330.s.3,"El director del proyecto informó al grupo del presupuesto, antes de comenzar la discusión de los remotos actuales y las ideas iniciales.","The project manager informed the group of the budget, before beginning the discussion of current remotes and initial ideas.",no,
+TS3009a,resumen,TS3009a.s9553330.s.4,Consideraron tomar lo mejor de sus diseños competidores y hacer un control remoto multifunción.,They considered taking the best of their competitors designs and making a multifunction remote.,no,
+TS3009a,resumen,TS3009a.s9553330.s.5,"Tiene que ser utilizable internacionalmente, con pocos botones.","It needs to be useable internationally, with few buttons.",sí,"No dice ""pocos botones""."
+TS3009a,resumen,TS3009a.s9553330.s.6,"Las opciones consideradas para la forma del control remoto, imaginando cómo encajaría en la mano.","The considered options for the shape of the remote control, imagining how it would fit in the hand.",sí,
+TS3009a,resumen,TS3009a.s9553330.s.7,"El grupo concluyó el debate tocando muy brevemente algunos temas de materiales, y discutió portadas remotas.","The group ended the discussion by touching very briefly on some materials issues, and discussed remote covers.",sí,

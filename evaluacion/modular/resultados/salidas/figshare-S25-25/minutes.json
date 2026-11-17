@@ -1,0 +1,59 @@
+{
+  "resumen": "La reunión se centró en la ubicación de un elemento (aorio) en relación con otros componentes del espejo. Se acordaron las coordenadas verticales y horizontales para su colocación.",
+  "temas": [
+    {
+      "texto": "Ubicación del aorio",
+      "ids_intervenciones": [
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021"
+      ],
+      "id_ancla": "I000021"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "Ubicar el aorio a la izquierda del menor a, un poquito más a la derecha hasta medio milímetro mas a la derecha y al mismo eje horizontal que si se pone un eje horizontal en el extremo de las velas no en el fuego sino donde sale el fuego.",
+      "ids_intervenciones": [
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021"
+      ],
+      "id_ancla": "I000021",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

@@ -1,0 +1,615 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 1.76,
+      "end": 9.0,
+      "text": "tengo al mimo sobre la lechusa y a la derecha de la oreja",
+      "words": [
+        {
+          "word": "tengo",
+          "start": 1.76,
+          "end": 2.22
+        },
+        {
+          "word": "al",
+          "start": 2.22,
+          "end": 2.68
+        },
+        {
+          "word": "mimo",
+          "start": 2.68,
+          "end": 4.3
+        },
+        {
+          "word": "sobre",
+          "start": 4.3,
+          "end": 4.86
+        },
+        {
+          "word": "la",
+          "start": 4.86,
+          "end": 5.12
+        },
+        {
+          "word": "lechusa",
+          "start": 5.12,
+          "end": 5.96
+        },
+        {
+          "word": "y",
+          "start": 5.96,
+          "end": 7.72
+        },
+        {
+          "word": "a",
+          "start": 7.72,
+          "end": 7.9
+        },
+        {
+          "word": "la",
+          "start": 7.9,
+          "end": 8.16
+        },
+        {
+          "word": "derecha",
+          "start": 8.16,
+          "end": 8.46
+        },
+        {
+          "word": "de",
+          "start": 8.46,
+          "end": 8.6
+        },
+        {
+          "word": "la",
+          "start": 8.6,
+          "end": 8.76
+        },
+        {
+          "word": "oreja",
+          "start": 8.76,
+          "end": 9.0
+        }
+      ]
+    },
+    {
+      "start": 11.0,
+      "end": 13.0,
+      "text": "está casi en la misma línea que la oreja",
+      "words": [
+        {
+          "word": "está",
+          "start": 11.0,
+          "end": 11.46
+        },
+        {
+          "word": "casi",
+          "start": 11.46,
+          "end": 11.92
+        },
+        {
+          "word": "en",
+          "start": 11.92,
+          "end": 12.06
+        },
+        {
+          "word": "la",
+          "start": 12.06,
+          "end": 12.12
+        },
+        {
+          "word": "misma",
+          "start": 12.12,
+          "end": 12.34
+        },
+        {
+          "word": "línea",
+          "start": 12.34,
+          "end": 12.56
+        },
+        {
+          "word": "que",
+          "start": 12.56,
+          "end": 12.68
+        },
+        {
+          "word": "la",
+          "start": 12.68,
+          "end": 12.84
+        },
+        {
+          "word": "oreja",
+          "start": 12.84,
+          "end": 13.07
+        }
+      ]
+    },
+    {
+      "start": 15.1,
+      "end": 16.48,
+      "text": "¿Más abajo o más arriba?",
+      "words": [
+        {
+          "word": "¿Más",
+          "start": 15.1,
+          "end": 15.56
+        },
+        {
+          "word": "abajo",
+          "start": 15.56,
+          "end": 15.84
+        },
+        {
+          "word": "o",
+          "start": 15.84,
+          "end": 15.9
+        },
+        {
+          "word": "más",
+          "start": 15.9,
+          "end": 16.16
+        },
+        {
+          "word": "arriba?",
+          "start": 16.16,
+          "end": 16.48
+        }
+      ]
+    },
+    {
+      "start": 17.36,
+      "end": 22.4,
+      "text": "Casi en la misma línea, trata de que quede igual ni más abajo ni más arriba que la oreja",
+      "words": [
+        {
+          "word": "Casi",
+          "start": 17.36,
+          "end": 17.82
+        },
+        {
+          "word": "en",
+          "start": 17.82,
+          "end": 17.92
+        },
+        {
+          "word": "la",
+          "start": 17.92,
+          "end": 18.02
+        },
+        {
+          "word": "misma",
+          "start": 18.02,
+          "end": 18.2
+        },
+        {
+          "word": "línea,",
+          "start": 18.2,
+          "end": 18.6
+        },
+        {
+          "word": "trata",
+          "start": 18.72,
+          "end": 18.94
+        },
+        {
+          "word": "de",
+          "start": 18.94,
+          "end": 19.1
+        },
+        {
+          "word": "que",
+          "start": 19.1,
+          "end": 19.28
+        },
+        {
+          "word": "quede",
+          "start": 19.28,
+          "end": 19.5
+        },
+        {
+          "word": "igual",
+          "start": 19.5,
+          "end": 20.24
+        },
+        {
+          "word": "ni",
+          "start": 20.24,
+          "end": 20.54
+        },
+        {
+          "word": "más",
+          "start": 20.54,
+          "end": 20.74
+        },
+        {
+          "word": "abajo",
+          "start": 20.74,
+          "end": 20.98
+        },
+        {
+          "word": "ni",
+          "start": 20.98,
+          "end": 21.1
+        },
+        {
+          "word": "más",
+          "start": 21.1,
+          "end": 21.34
+        },
+        {
+          "word": "arriba",
+          "start": 21.34,
+          "end": 21.54
+        },
+        {
+          "word": "que",
+          "start": 21.54,
+          "end": 21.68
+        },
+        {
+          "word": "la",
+          "start": 21.68,
+          "end": 21.84
+        },
+        {
+          "word": "oreja",
+          "start": 21.84,
+          "end": 22.4
+        }
+      ]
+    },
+    {
+      "start": 22.4,
+      "end": 28.06,
+      "text": "y más o menos, donde termina la rama, o sea, donde termina la parte izquierda de la lechusa",
+      "words": [
+        {
+          "word": "y",
+          "start": 22.4,
+          "end": 22.8
+        },
+        {
+          "word": "más",
+          "start": 22.8,
+          "end": 23.44
+        },
+        {
+          "word": "o",
+          "start": 23.44,
+          "end": 23.56
+        },
+        {
+          "word": "menos,",
+          "start": 23.56,
+          "end": 23.9
+        },
+        {
+          "word": "donde",
+          "start": 24.32,
+          "end": 24.52
+        },
+        {
+          "word": "termina",
+          "start": 24.52,
+          "end": 24.94
+        },
+        {
+          "word": "la",
+          "start": 24.94,
+          "end": 25.14
+        },
+        {
+          "word": "rama,",
+          "start": 25.14,
+          "end": 25.38
+        },
+        {
+          "word": "sea,",
+          "start": 25.54,
+          "end": 25.66
+        },
+        {
+          "word": "donde",
+          "start": 25.82,
+          "end": 25.9
+        },
+        {
+          "word": "termina",
+          "start": 25.9,
+          "end": 26.5
+        },
+        {
+          "word": "la",
+          "start": 26.5,
+          "end": 26.72
+        },
+        {
+          "word": "parte",
+          "start": 26.72,
+          "end": 26.94
+        },
+        {
+          "word": "izquierda",
+          "start": 26.94,
+          "end": 27.32
+        },
+        {
+          "word": "de",
+          "start": 27.32,
+          "end": 27.42
+        },
+        {
+          "word": "la",
+          "start": 27.42,
+          "end": 27.52
+        },
+        {
+          "word": "lechusa",
+          "start": 27.52,
+          "end": 28.06
+        }
+      ]
+    },
+    {
+      "start": 28.06,
+      "end": 32.06,
+      "text": "está la manito del mimo",
+      "words": [
+        {
+          "word": "está",
+          "start": 28.06,
+          "end": 28.74
+        },
+        {
+          "word": "la",
+          "start": 28.74,
+          "end": 29.52
+        },
+        {
+          "word": "manito",
+          "start": 29.52,
+          "end": 30.54
+        },
+        {
+          "word": "del",
+          "start": 30.54,
+          "end": 31.08
+        },
+        {
+          "word": "mimo",
+          "start": 31.08,
+          "end": 32.06
+        }
+      ]
+    },
+    {
+      "start": 33.06,
+      "end": 42.06,
+      "text": "y después, donde termina la lechusa, está la parte derecha del hombro del mimo",
+      "words": [
+        {
+          "word": "y",
+          "start": 33.06,
+          "end": 34.0
+        },
+        {
+          "word": "después,",
+          "start": 34.0,
+          "end": 34.94
+        },
+        {
+          "word": "donde",
+          "start": 35.68,
+          "end": 35.88
+        },
+        {
+          "word": "termina",
+          "start": 35.88,
+          "end": 36.36
+        },
+        {
+          "word": "la",
+          "start": 36.36,
+          "end": 36.54
+        },
+        {
+          "word": "lechusa,",
+          "start": 36.54,
+          "end": 38.22
+        },
+        {
+          "word": "está",
+          "start": 39.06,
+          "end": 39.18
+        },
+        {
+          "word": "la",
+          "start": 39.18,
+          "end": 39.8
+        },
+        {
+          "word": "parte",
+          "start": 39.8,
+          "end": 40.08
+        },
+        {
+          "word": "derecha",
+          "start": 40.08,
+          "end": 40.64
+        },
+        {
+          "word": "del",
+          "start": 40.64,
+          "end": 41.06
+        },
+        {
+          "word": "hombro",
+          "start": 41.06,
+          "end": 41.42
+        },
+        {
+          "word": "del",
+          "start": 41.42,
+          "end": 41.62
+        },
+        {
+          "word": "mimo",
+          "start": 41.62,
+          "end": 42.09
+        }
+      ]
+    },
+    {
+      "start": 43.0,
+      "end": 52.12,
+      "text": "o sea que está así, como haciendo el encuentro ahí entre la oreja y la lechusa",
+      "words": [
+        {
+          "word": "o",
+          "start": 43.0,
+          "end": 43.34
+        },
+        {
+          "word": "sea",
+          "start": 43.34,
+          "end": 43.52
+        },
+        {
+          "word": "que",
+          "start": 43.52,
+          "end": 43.74
+        },
+        {
+          "word": "está",
+          "start": 43.74,
+          "end": 44.54
+        },
+        {
+          "word": "así,",
+          "start": 44.54,
+          "end": 45.88
+        },
+        {
+          "word": "como",
+          "start": 46.04,
+          "end": 46.14
+        },
+        {
+          "word": "haciendo",
+          "start": 46.14,
+          "end": 47.16
+        },
+        {
+          "word": "el",
+          "start": 47.16,
+          "end": 48.76
+        },
+        {
+          "word": "encuentro",
+          "start": 48.76,
+          "end": 49.74
+        },
+        {
+          "word": "ahí",
+          "start": 49.74,
+          "end": 50.26
+        },
+        {
+          "word": "entre",
+          "start": 50.26,
+          "end": 50.64
+        },
+        {
+          "word": "la",
+          "start": 50.64,
+          "end": 50.9
+        },
+        {
+          "word": "oreja",
+          "start": 50.9,
+          "end": 51.28
+        },
+        {
+          "word": "y",
+          "start": 51.28,
+          "end": 51.42
+        },
+        {
+          "word": "la",
+          "start": 51.42,
+          "end": 51.6
+        },
+        {
+          "word": "lechusa",
+          "start": 51.6,
+          "end": 52.12
+        }
+      ]
+    },
+    {
+      "start": 52.12,
+      "end": 54.92,
+      "text": "en un punto, encuentran a las dos",
+      "words": [
+        {
+          "word": "en",
+          "start": 52.12,
+          "end": 52.44
+        },
+        {
+          "word": "un",
+          "start": 52.44,
+          "end": 52.64
+        },
+        {
+          "word": "punto,",
+          "start": 52.64,
+          "end": 53.14
+        },
+        {
+          "word": "encuentran",
+          "start": 53.82,
+          "end": 54.28
+        },
+        {
+          "word": "a",
+          "start": 54.28,
+          "end": 54.42
+        },
+        {
+          "word": "las",
+          "start": 54.42,
+          "end": 54.58
+        },
+        {
+          "word": "dos",
+          "start": 54.58,
+          "end": 54.92
+        }
+      ]
+    },
+    {
+      "start": 54.92,
+      "end": 57.04,
+      "text": "Bueno, pongo listo",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 54.92,
+          "end": 55.64
+        },
+        {
+          "word": "pongo",
+          "start": 55.9,
+          "end": 56.16
+        },
+        {
+          "word": "listo",
+          "start": 56.16,
+          "end": 57.04
+        }
+      ]
+    }
+  ]
+}

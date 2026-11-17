@@ -1,0 +1,1481 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 1.8,
+      "end": 12.12,
+      "text": "el rinoceronte amarillo, ponelo en el medio entre la fruta, la oreo y el cuadro",
+      "words": [
+        {
+          "word": "el",
+          "start": 1.8,
+          "end": 2.44
+        },
+        {
+          "word": "rinoceronte",
+          "start": 2.44,
+          "end": 3.08
+        },
+        {
+          "word": "amarillo,",
+          "start": 3.08,
+          "end": 4.42
+        },
+        {
+          "word": "ponelo",
+          "start": 4.72,
+          "end": 5.94
+        },
+        {
+          "word": "en",
+          "start": 5.94,
+          "end": 7.12
+        },
+        {
+          "word": "el",
+          "start": 7.12,
+          "end": 7.86
+        },
+        {
+          "word": "medio",
+          "start": 7.86,
+          "end": 8.24
+        },
+        {
+          "word": "entre",
+          "start": 8.24,
+          "end": 8.92
+        },
+        {
+          "word": "la",
+          "start": 8.92,
+          "end": 9.34
+        },
+        {
+          "word": "fruta,",
+          "start": 9.34,
+          "end": 9.7
+        },
+        {
+          "word": "la",
+          "start": 9.92,
+          "end": 10.14
+        },
+        {
+          "word": "oreo",
+          "start": 10.14,
+          "end": 10.48
+        },
+        {
+          "word": "y",
+          "start": 10.48,
+          "end": 10.6
+        },
+        {
+          "word": "el",
+          "start": 10.6,
+          "end": 10.82
+        },
+        {
+          "word": "cuadro",
+          "start": 10.82,
+          "end": 12.12
+        }
+      ]
+    },
+    {
+      "start": 12.12,
+      "end": 15.1,
+      "text": "Exactamente, digamos, el de queber",
+      "words": [
+        {
+          "word": "Exactamente,",
+          "start": 12.12,
+          "end": 13.28
+        },
+        {
+          "word": "digamos,",
+          "start": 13.28,
+          "end": 14.02
+        },
+        {
+          "word": "el",
+          "start": 14.62,
+          "end": 14.82
+        },
+        {
+          "word": "de",
+          "start": 14.82,
+          "end": 14.86
+        },
+        {
+          "word": "queber",
+          "start": 14.86,
+          "end": 15.1
+        }
+      ]
+    },
+    {
+      "start": 15.1,
+      "end": 19.28,
+      "text": "Digamos más o menos, si, está bastante equidistante",
+      "words": [
+        {
+          "word": "Digamos",
+          "start": 15.1,
+          "end": 15.58
+        },
+        {
+          "word": "más",
+          "start": 15.58,
+          "end": 15.78
+        },
+        {
+          "word": "o",
+          "start": 15.78,
+          "end": 15.86
+        },
+        {
+          "word": "menos,",
+          "start": 15.86,
+          "end": 16.4
+        },
+        {
+          "word": "si,",
+          "start": 16.82,
+          "end": 17.06
+        },
+        {
+          "word": "está",
+          "start": 17.16,
+          "end": 17.26
+        },
+        {
+          "word": "bastante",
+          "start": 17.26,
+          "end": 17.76
+        },
+        {
+          "word": "equidistante",
+          "start": 17.76,
+          "end": 19.28
+        }
+      ]
+    },
+    {
+      "start": 19.28,
+      "end": 24.58,
+      "text": "Ponle la distancia que hacía la fruta y hacía la oreo, es más o menos la misma",
+      "words": [
+        {
+          "word": "Ponle",
+          "start": 19.28,
+          "end": 20.38
+        },
+        {
+          "word": "la",
+          "start": 20.38,
+          "end": 20.52
+        },
+        {
+          "word": "distancia",
+          "start": 20.52,
+          "end": 21.1
+        },
+        {
+          "word": "que",
+          "start": 21.1,
+          "end": 21.3
+        },
+        {
+          "word": "hacía",
+          "start": 21.3,
+          "end": 21.62
+        },
+        {
+          "word": "la",
+          "start": 21.62,
+          "end": 21.9
+        },
+        {
+          "word": "fruta",
+          "start": 21.9,
+          "end": 22.08
+        },
+        {
+          "word": "y",
+          "start": 22.08,
+          "end": 22.62
+        },
+        {
+          "word": "hacía",
+          "start": 22.62,
+          "end": 22.84
+        },
+        {
+          "word": "la",
+          "start": 22.84,
+          "end": 23.06
+        },
+        {
+          "word": "oreo,",
+          "start": 23.06,
+          "end": 23.46
+        },
+        {
+          "word": "es",
+          "start": 23.5,
+          "end": 23.62
+        },
+        {
+          "word": "más",
+          "start": 23.62,
+          "end": 23.76
+        },
+        {
+          "word": "o",
+          "start": 23.76,
+          "end": 23.84
+        },
+        {
+          "word": "menos",
+          "start": 23.84,
+          "end": 23.98
+        },
+        {
+          "word": "la",
+          "start": 23.98,
+          "end": 24.2
+        },
+        {
+          "word": "misma",
+          "start": 24.2,
+          "end": 24.58
+        }
+      ]
+    },
+    {
+      "start": 25.68,
+      "end": 26.94,
+      "text": "Quizás, a ver",
+      "words": [
+        {
+          "word": "Quizás,",
+          "start": 25.68,
+          "end": 26.32
+        },
+        {
+          "word": "a",
+          "start": 26.32,
+          "end": 26.56
+        },
+        {
+          "word": "ver",
+          "start": 26.56,
+          "end": 26.94
+        }
+      ]
+    },
+    {
+      "start": 26.94,
+      "end": 28.28,
+      "text": "Más abajo o más arriba",
+      "words": [
+        {
+          "word": "Más",
+          "start": 26.94,
+          "end": 27.42
+        },
+        {
+          "word": "abajo",
+          "start": 27.42,
+          "end": 27.6
+        },
+        {
+          "word": "o",
+          "start": 27.6,
+          "end": 27.7
+        },
+        {
+          "word": "más",
+          "start": 27.7,
+          "end": 27.84
+        },
+        {
+          "word": "arriba",
+          "start": 27.84,
+          "end": 28.28
+        }
+      ]
+    },
+    {
+      "start": 30.0,
+      "end": 35.46,
+      "text": "Quizás medio milímetro más cerca de la fruta, pero es bastante equidistante, la verdad",
+      "words": [
+        {
+          "word": "Quizás",
+          "start": 30.0,
+          "end": 30.52
+        },
+        {
+          "word": "medio",
+          "start": 30.52,
+          "end": 30.98
+        },
+        {
+          "word": "milímetro",
+          "start": 30.98,
+          "end": 31.58
+        },
+        {
+          "word": "más",
+          "start": 31.58,
+          "end": 31.88
+        },
+        {
+          "word": "cerca",
+          "start": 31.88,
+          "end": 32.04
+        },
+        {
+          "word": "de",
+          "start": 32.04,
+          "end": 32.18
+        },
+        {
+          "word": "la",
+          "start": 32.18,
+          "end": 32.4
+        },
+        {
+          "word": "fruta,",
+          "start": 32.4,
+          "end": 32.6
+        },
+        {
+          "word": "es",
+          "start": 32.82,
+          "end": 33.18
+        },
+        {
+          "word": "bastante",
+          "start": 33.18,
+          "end": 33.52
+        },
+        {
+          "word": "equidistante,",
+          "start": 33.52,
+          "end": 34.24
+        },
+        {
+          "word": "la",
+          "start": 34.24,
+          "end": 34.52
+        },
+        {
+          "word": "verdad",
+          "start": 34.52,
+          "end": 35.46
+        }
+      ]
+    },
+    {
+      "start": 36.8,
+      "end": 47.24,
+      "text": "Y bastante centrado también, ponle que el cuerno del rinoceronte, la punta del cuerno del rinoceronte",
+      "words": [
+        {
+          "word": "Y",
+          "start": 36.8,
+          "end": 37.32
+        },
+        {
+          "word": "bastante",
+          "start": 37.32,
+          "end": 37.7
+        },
+        {
+          "word": "centrado",
+          "start": 37.7,
+          "end": 38.34
+        },
+        {
+          "word": "también,",
+          "start": 38.34,
+          "end": 38.82
+        },
+        {
+          "word": "ponle",
+          "start": 38.84,
+          "end": 39.2
+        },
+        {
+          "word": "que",
+          "start": 39.2,
+          "end": 40.44
+        },
+        {
+          "word": "el",
+          "start": 40.44,
+          "end": 42.58
+        },
+        {
+          "word": "cuerno",
+          "start": 42.58,
+          "end": 43.16
+        },
+        {
+          "word": "del",
+          "start": 43.16,
+          "end": 43.3
+        },
+        {
+          "word": "rinoceronte,",
+          "start": 43.3,
+          "end": 44.16
+        },
+        {
+          "word": "la",
+          "start": 44.16,
+          "end": 45.68
+        },
+        {
+          "word": "punta",
+          "start": 45.68,
+          "end": 46.06
+        },
+        {
+          "word": "del",
+          "start": 46.06,
+          "end": 46.14
+        },
+        {
+          "word": "cuerno",
+          "start": 46.14,
+          "end": 46.32
+        },
+        {
+          "word": "del",
+          "start": 46.32,
+          "end": 46.44
+        },
+        {
+          "word": "rinoceronte",
+          "start": 46.44,
+          "end": 47.24
+        }
+      ]
+    },
+    {
+      "start": 47.24,
+      "end": 52.78,
+      "text": "Está más o menos en el mismo eje vertical que el punto más a la izquierda de la oreo",
+      "words": [
+        {
+          "word": "Está",
+          "start": 47.24,
+          "end": 47.68
+        },
+        {
+          "word": "más",
+          "start": 47.68,
+          "end": 48.08
+        },
+        {
+          "word": "o",
+          "start": 48.08,
+          "end": 48.16
+        },
+        {
+          "word": "menos",
+          "start": 48.16,
+          "end": 48.34
+        },
+        {
+          "word": "en",
+          "start": 48.34,
+          "end": 48.5
+        },
+        {
+          "word": "el",
+          "start": 48.5,
+          "end": 48.56
+        },
+        {
+          "word": "mismo",
+          "start": 48.56,
+          "end": 48.78
+        },
+        {
+          "word": "eje",
+          "start": 48.78,
+          "end": 48.92
+        },
+        {
+          "word": "vertical",
+          "start": 48.92,
+          "end": 49.42
+        },
+        {
+          "word": "que",
+          "start": 49.42,
+          "end": 50.18
+        },
+        {
+          "word": "el",
+          "start": 50.18,
+          "end": 50.78
+        },
+        {
+          "word": "punto",
+          "start": 50.78,
+          "end": 51.02
+        },
+        {
+          "word": "más",
+          "start": 51.02,
+          "end": 51.24
+        },
+        {
+          "word": "a",
+          "start": 51.24,
+          "end": 51.3
+        },
+        {
+          "word": "la",
+          "start": 51.3,
+          "end": 51.46
+        },
+        {
+          "word": "izquierda",
+          "start": 51.46,
+          "end": 51.7
+        },
+        {
+          "word": "de",
+          "start": 51.7,
+          "end": 51.84
+        },
+        {
+          "word": "la",
+          "start": 51.84,
+          "end": 52.02
+        },
+        {
+          "word": "oreo",
+          "start": 52.02,
+          "end": 52.78
+        }
+      ]
+    },
+    {
+      "start": 52.78,
+      "end": 54.28,
+      "text": "Hasta adentro de la derecha, al rinoceronte",
+      "words": [
+        {
+          "word": "Hasta",
+          "start": 52.78,
+          "end": 53.1
+        },
+        {
+          "word": "adentro",
+          "start": 53.1,
+          "end": 53.3
+        },
+        {
+          "word": "de",
+          "start": 53.3,
+          "end": 53.38
+        },
+        {
+          "word": "la",
+          "start": 53.38,
+          "end": 53.5
+        },
+        {
+          "word": "derecha,",
+          "start": 53.5,
+          "end": 53.72
+        },
+        {
+          "word": "al",
+          "start": 53.72,
+          "end": 53.84
+        },
+        {
+          "word": "rinoceronte",
+          "start": 53.84,
+          "end": 54.28
+        }
+      ]
+    },
+    {
+      "start": 55.18,
+      "end": 56.54,
+      "text": "Cómo hasta adentro de la derecha",
+      "words": [
+        {
+          "word": "Cómo",
+          "start": 55.18,
+          "end": 55.66
+        },
+        {
+          "word": "hasta",
+          "start": 55.66,
+          "end": 55.82
+        },
+        {
+          "word": "adentro",
+          "start": 55.82,
+          "end": 55.94
+        },
+        {
+          "word": "la",
+          "start": 55.94,
+          "end": 56.14
+        },
+        {
+          "word": "derecha",
+          "start": 56.14,
+          "end": 56.54
+        }
+      ]
+    },
+    {
+      "start": 56.54,
+      "end": 60.54,
+      "text": "Está en realidad bastante centrado respecto a la oreo y respecto a la fruta",
+      "words": [
+        {
+          "word": "Está",
+          "start": 56.54,
+          "end": 57.42
+        },
+        {
+          "word": "en",
+          "start": 57.42,
+          "end": 57.44
+        },
+        {
+          "word": "realidad",
+          "start": 57.44,
+          "end": 57.78
+        },
+        {
+          "word": "bastante",
+          "start": 57.78,
+          "end": 58.16
+        },
+        {
+          "word": "centrado",
+          "start": 58.16,
+          "end": 58.7
+        },
+        {
+          "word": "respecto",
+          "start": 58.7,
+          "end": 59.12
+        },
+        {
+          "word": "a",
+          "start": 59.12,
+          "end": 59.26
+        },
+        {
+          "word": "la",
+          "start": 59.26,
+          "end": 59.42
+        },
+        {
+          "word": "oreo",
+          "start": 59.42,
+          "end": 59.6
+        },
+        {
+          "word": "y",
+          "start": 59.6,
+          "end": 59.74
+        },
+        {
+          "word": "respecto",
+          "start": 59.74,
+          "end": 59.92
+        },
+        {
+          "word": "a",
+          "start": 59.92,
+          "end": 60.02
+        },
+        {
+          "word": "la",
+          "start": 60.02,
+          "end": 60.18
+        },
+        {
+          "word": "fruta",
+          "start": 60.18,
+          "end": 60.54
+        }
+      ]
+    },
+    {
+      "start": 62.78,
+      "end": 69.0,
+      "text": "Si vos dijiste que el cuerno, la punta del cuerno está más o menos a la altura del extremo izquierdo de la oreo, no?",
+      "words": [
+        {
+          "word": "Si",
+          "start": 62.78,
+          "end": 63.34
+        },
+        {
+          "word": "vos",
+          "start": 63.34,
+          "end": 63.5
+        },
+        {
+          "word": "dijiste",
+          "start": 63.5,
+          "end": 63.8
+        },
+        {
+          "word": "que",
+          "start": 63.8,
+          "end": 64.56
+        },
+        {
+          "word": "el",
+          "start": 64.56,
+          "end": 64.72
+        },
+        {
+          "word": "cuerno,",
+          "start": 64.72,
+          "end": 65.16
+        },
+        {
+          "word": "la",
+          "start": 65.18,
+          "end": 65.34
+        },
+        {
+          "word": "punta",
+          "start": 65.34,
+          "end": 65.54
+        },
+        {
+          "word": "del",
+          "start": 65.54,
+          "end": 65.62
+        },
+        {
+          "word": "cuerno",
+          "start": 65.62,
+          "end": 65.94
+        },
+        {
+          "word": "está",
+          "start": 65.94,
+          "end": 66.12
+        },
+        {
+          "word": "más",
+          "start": 66.12,
+          "end": 66.3
+        },
+        {
+          "word": "o",
+          "start": 66.3,
+          "end": 66.36
+        },
+        {
+          "word": "menos",
+          "start": 66.36,
+          "end": 66.44
+        },
+        {
+          "word": "a",
+          "start": 66.44,
+          "end": 66.52
+        },
+        {
+          "word": "la",
+          "start": 66.52,
+          "end": 66.6
+        },
+        {
+          "word": "altura",
+          "start": 66.6,
+          "end": 66.82
+        },
+        {
+          "word": "del",
+          "start": 66.82,
+          "end": 67.1
+        },
+        {
+          "word": "extremo",
+          "start": 67.1,
+          "end": 67.46
+        },
+        {
+          "word": "izquierdo",
+          "start": 67.46,
+          "end": 67.94
+        },
+        {
+          "word": "de",
+          "start": 67.94,
+          "end": 68.36
+        },
+        {
+          "word": "la",
+          "start": 68.36,
+          "end": 68.54
+        },
+        {
+          "word": "oreo,",
+          "start": 68.54,
+          "end": 68.76
+        },
+        {
+          "word": "no?",
+          "start": 68.76,
+          "end": 69.0
+        }
+      ]
+    },
+    {
+      "start": 69.1,
+      "end": 70.8,
+      "text": "Si, si, si te lo haces en una línea vertical",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 69.1,
+          "end": 69.32
+        },
+        {
+          "word": "si,",
+          "start": 69.32,
+          "end": 69.5
+        },
+        {
+          "word": "si",
+          "start": 69.5,
+          "end": 69.54
+        },
+        {
+          "word": "te",
+          "start": 69.54,
+          "end": 69.62
+        },
+        {
+          "word": "lo",
+          "start": 69.62,
+          "end": 69.64
+        },
+        {
+          "word": "haces",
+          "start": 69.64,
+          "end": 69.72
+        },
+        {
+          "word": "en",
+          "start": 69.72,
+          "end": 69.88
+        },
+        {
+          "word": "una",
+          "start": 69.88,
+          "end": 70.34
+        },
+        {
+          "word": "vertical",
+          "start": 70.34,
+          "end": 70.8
+        }
+      ]
+    },
+    {
+      "start": 70.8,
+      "end": 80.46,
+      "text": "Entonces, claro, entonces tengo que, el culo del rinoceronte sobrepasa bastante la fruta, bastante es dos milímetros",
+      "words": [
+        {
+          "word": "Entonces,",
+          "start": 70.8,
+          "end": 71.24
+        },
+        {
+          "word": "claro,",
+          "start": 71.24,
+          "end": 72.0
+        },
+        {
+          "word": "entonces",
+          "start": 72.48,
+          "end": 72.86
+        },
+        {
+          "word": "tengo",
+          "start": 72.86,
+          "end": 73.14
+        },
+        {
+          "word": "que,",
+          "start": 73.14,
+          "end": 73.68
+        },
+        {
+          "word": "el",
+          "start": 74.94,
+          "end": 75.12
+        },
+        {
+          "word": "culo",
+          "start": 75.12,
+          "end": 75.42
+        },
+        {
+          "word": "del",
+          "start": 75.42,
+          "end": 76.28
+        },
+        {
+          "word": "rinoceronte",
+          "start": 76.28,
+          "end": 76.64
+        },
+        {
+          "word": "sobrepasa",
+          "start": 76.64,
+          "end": 77.24
+        },
+        {
+          "word": "bastante",
+          "start": 77.24,
+          "end": 77.68
+        },
+        {
+          "word": "la",
+          "start": 77.68,
+          "end": 78.0
+        },
+        {
+          "word": "fruta,",
+          "start": 78.0,
+          "end": 78.3
+        },
+        {
+          "word": "bastante",
+          "start": 78.68,
+          "end": 78.92
+        },
+        {
+          "word": "es",
+          "start": 78.92,
+          "end": 79.84
+        },
+        {
+          "word": "dos",
+          "start": 79.84,
+          "end": 80.1
+        },
+        {
+          "word": "milímetros",
+          "start": 80.1,
+          "end": 80.46
+        }
+      ]
+    },
+    {
+      "start": 80.46,
+      "end": 84.52,
+      "text": "Sobrepasa bastante la fruta, si, no sobrepasa mucho la oreo",
+      "words": [
+        {
+          "word": "Sobrepasa",
+          "start": 80.46,
+          "end": 80.76
+        },
+        {
+          "word": "bastante",
+          "start": 80.76,
+          "end": 81.26
+        },
+        {
+          "word": "la",
+          "start": 81.26,
+          "end": 81.64
+        },
+        {
+          "word": "fruta,",
+          "start": 81.64,
+          "end": 82.46
+        },
+        {
+          "word": "si,",
+          "start": 82.62,
+          "end": 82.92
+        },
+        {
+          "word": "no",
+          "start": 82.94,
+          "end": 83.12
+        },
+        {
+          "word": "sobrepasa",
+          "start": 83.12,
+          "end": 83.62
+        },
+        {
+          "word": "mucho",
+          "start": 83.62,
+          "end": 83.86
+        },
+        {
+          "word": "la",
+          "start": 83.86,
+          "end": 84.06
+        },
+        {
+          "word": "oreo",
+          "start": 84.06,
+          "end": 84.52
+        }
+      ]
+    },
+    {
+      "start": 84.52,
+      "end": 86.04,
+      "text": "No, la cola, ponle",
+      "words": [
+        {
+          "word": "No,",
+          "start": 84.52,
+          "end": 84.96
+        },
+        {
+          "word": "la",
+          "start": 85.24,
+          "end": 85.44
+        },
+        {
+          "word": "cola,",
+          "start": 85.44,
+          "end": 85.68
+        },
+        {
+          "word": "ponle",
+          "start": 85.88,
+          "end": 86.04
+        }
+      ]
+    },
+    {
+      "start": 86.04,
+      "end": 89.4,
+      "text": "Si, la colita no sobrepasa mucho la oreo",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 86.04,
+          "end": 86.4
+        },
+        {
+          "word": "la",
+          "start": 86.8,
+          "end": 87.0
+        },
+        {
+          "word": "colita",
+          "start": 87.0,
+          "end": 87.5
+        },
+        {
+          "word": "no",
+          "start": 87.5,
+          "end": 87.74
+        },
+        {
+          "word": "sobrepasa",
+          "start": 87.74,
+          "end": 88.22
+        },
+        {
+          "word": "mucho",
+          "start": 88.22,
+          "end": 88.5
+        },
+        {
+          "word": "la",
+          "start": 88.5,
+          "end": 88.86
+        },
+        {
+          "word": "oreo",
+          "start": 88.86,
+          "end": 89.4
+        }
+      ]
+    },
+    {
+      "start": 89.4,
+      "end": 109.18,
+      "text": "Y ponle que entonces que si trazo una línea, a ver, en los pies del rinoceronte está más o menos a la misma altura que el extremo de abajo del espejo, no del cuadro del espejo, sino del espejo en sí",
+      "words": [
+        {
+          "word": "Y",
+          "start": 89.4,
+          "end": 89.68
+        },
+        {
+          "word": "ponle",
+          "start": 89.68,
+          "end": 90.02
+        },
+        {
+          "word": "que",
+          "start": 90.02,
+          "end": 90.2
+        },
+        {
+          "word": "entonces",
+          "start": 90.2,
+          "end": 90.62
+        },
+        {
+          "word": "que",
+          "start": 90.62,
+          "end": 92.08
+        },
+        {
+          "word": "si",
+          "start": 92.08,
+          "end": 92.38
+        },
+        {
+          "word": "trazo",
+          "start": 92.38,
+          "end": 92.98
+        },
+        {
+          "word": "una",
+          "start": 92.98,
+          "end": 93.4
+        },
+        {
+          "word": "línea,",
+          "start": 93.4,
+          "end": 94.36
+        },
+        {
+          "word": "a",
+          "start": 95.96,
+          "end": 96.18
+        },
+        {
+          "word": "ver,",
+          "start": 96.18,
+          "end": 97.38
+        },
+        {
+          "word": "los",
+          "start": 98.76,
+          "end": 98.96
+        },
+        {
+          "word": "pies",
+          "start": 98.96,
+          "end": 99.1
+        },
+        {
+          "word": "del",
+          "start": 99.1,
+          "end": 99.26
+        },
+        {
+          "word": "rinoceronte",
+          "start": 99.26,
+          "end": 100.1
+        },
+        {
+          "word": "está",
+          "start": 100.1,
+          "end": 100.44
+        },
+        {
+          "word": "más",
+          "start": 100.44,
+          "end": 100.7
+        },
+        {
+          "word": "o",
+          "start": 100.7,
+          "end": 100.9
+        },
+        {
+          "word": "menos",
+          "start": 100.9,
+          "end": 101.9
+        },
+        {
+          "word": "a",
+          "start": 101.9,
+          "end": 102.92
+        },
+        {
+          "word": "la",
+          "start": 102.92,
+          "end": 103.02
+        },
+        {
+          "word": "misma",
+          "start": 103.02,
+          "end": 103.14
+        },
+        {
+          "word": "altura",
+          "start": 103.14,
+          "end": 103.62
+        },
+        {
+          "word": "que",
+          "start": 103.62,
+          "end": 104.22
+        },
+        {
+          "word": "el",
+          "start": 104.22,
+          "end": 104.42
+        },
+        {
+          "word": "extremo",
+          "start": 104.42,
+          "end": 104.8
+        },
+        {
+          "word": "de",
+          "start": 104.8,
+          "end": 104.92
+        },
+        {
+          "word": "abajo",
+          "start": 104.92,
+          "end": 105.16
+        },
+        {
+          "word": "del",
+          "start": 105.16,
+          "end": 105.56
+        },
+        {
+          "word": "espejo,",
+          "start": 105.56,
+          "end": 106.04
+        },
+        {
+          "word": "no",
+          "start": 106.06,
+          "end": 106.24
+        },
+        {
+          "word": "del",
+          "start": 106.24,
+          "end": 106.88
+        },
+        {
+          "word": "cuadro",
+          "start": 106.88,
+          "end": 107.4
+        },
+        {
+          "word": "del",
+          "start": 107.4,
+          "end": 107.5
+        },
+        {
+          "word": "espejo,",
+          "start": 107.5,
+          "end": 107.74
+        },
+        {
+          "word": "sino",
+          "start": 107.78,
+          "end": 107.94
+        },
+        {
+          "word": "del",
+          "start": 107.94,
+          "end": 108.12
+        },
+        {
+          "word": "espejo",
+          "start": 108.12,
+          "end": 108.78
+        },
+        {
+          "word": "en",
+          "start": 108.78,
+          "end": 109.04
+        },
+        {
+          "word": "sí",
+          "start": 109.04,
+          "end": 109.18
+        }
+      ]
+    },
+    {
+      "start": 109.18,
+      "end": 110.68,
+      "text": "Claro, del espejo en sí",
+      "words": [
+        {
+          "word": "Claro,",
+          "start": 109.18,
+          "end": 109.64
+        },
+        {
+          "word": "del",
+          "start": 109.7,
+          "end": 109.84
+        },
+        {
+          "word": "espejo",
+          "start": 109.84,
+          "end": 110.18
+        },
+        {
+          "word": "en",
+          "start": 110.18,
+          "end": 110.4
+        },
+        {
+          "word": "sí",
+          "start": 110.4,
+          "end": 110.68
+        }
+      ]
+    },
+    {
+      "start": 110.68,
+      "end": 111.78,
+      "text": "Del vidrio, exactamente",
+      "words": [
+        {
+          "word": "Del",
+          "start": 110.68,
+          "end": 110.94
+        },
+        {
+          "word": "vidrio,",
+          "start": 110.94,
+          "end": 111.32
+        },
+        {
+          "word": "exactamente",
+          "start": 111.38,
+          "end": 111.78
+        }
+      ]
+    },
+    {
+      "start": 111.78,
+      "end": 113.12,
+      "text": "¿Y la fruta un poco más abajo?",
+      "words": [
+        {
+          "word": "la",
+          "start": 111.78,
+          "end": 111.98
+        },
+        {
+          "word": "fruta",
+          "start": 111.98,
+          "end": 112.34
+        },
+        {
+          "word": "un",
+          "start": 112.34,
+          "end": 112.46
+        },
+        {
+          "word": "poco",
+          "start": 112.46,
+          "end": 112.6
+        },
+        {
+          "word": "más",
+          "start": 112.6,
+          "end": 112.8
+        },
+        {
+          "word": "abajo?",
+          "start": 112.8,
+          "end": 113.12
+        }
+      ]
+    },
+    {
+      "start": 114.24,
+      "end": 117.32,
+      "text": "No, no sé, está más o menos a la misma altura",
+      "words": [
+        {
+          "word": "No,",
+          "start": 114.24,
+          "end": 114.64
+        },
+        {
+          "word": "sé,",
+          "start": 115.0,
+          "end": 115.82
+        },
+        {
+          "word": "está",
+          "start": 115.94,
+          "end": 116.1
+        },
+        {
+          "word": "más",
+          "start": 116.1,
+          "end": 116.32
+        },
+        {
+          "word": "o",
+          "start": 116.32,
+          "end": 116.38
+        },
+        {
+          "word": "menos",
+          "start": 116.38,
+          "end": 116.56
+        },
+        {
+          "word": "a",
+          "start": 116.56,
+          "end": 116.68
+        },
+        {
+          "word": "la",
+          "start": 116.68,
+          "end": 116.78
+        },
+        {
+          "word": "misma",
+          "start": 116.78,
+          "end": 116.88
+        },
+        {
+          "word": "altura",
+          "start": 116.88,
+          "end": 117.32
+        }
+      ]
+    }
+  ]
+}

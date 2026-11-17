@@ -1,0 +1,31 @@
+{
+  "resumen": "La reunión se centró en la posición de un objeto (M) entre tres elementos: limón, cebolla y ballena. Se discutió si el M superponía a alguno de ellos, llegando a la conclusión de que no lo hacía completamente, pero rozaba ligeramente la aleta de la ballena con su dedo más cercano.",
+  "temas": [
+    {
+      "texto": "Posición del objeto M entre limón, cebolla y ballena",
+      "ids_intervenciones": [
+        "I000003",
+        "I000012",
+        "I000015",
+        "I000025",
+        "I000026",
+        "I000029"
+      ],
+      "id_ancla": "I000029"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "Determinar la posición exacta del objeto M sin superponerse a los otros elementos.",
+      "ids_intervenciones": [
+        "I000012",
+        "I000015",
+        "I000026",
+        "I000029"
+      ],
+      "id_ancla": "I000029"
+    }
+  ],
+  "acciones": []
+}

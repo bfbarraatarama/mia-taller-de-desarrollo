@@ -1,0 +1,41 @@
+{
+  "resumen": "En la reunión se discutió sobre la posición de un elemento en relación a otros objetos, pero no se tomaron decisiones ni se asignaron acciones.",
+  "temas": [
+    {
+      "texto": "La cebolla está sustando al M&M.",
+      "ids_intervenciones": [
+        "I000002",
+        "I000005"
+      ],
+      "id_ancla": "I000005"
+    },
+    {
+      "texto": "Va entre el M&M, el limón y la ballena.",
+      "ids_intervenciones": [
+        "I000003",
+        "I000004",
+        "I000005"
+      ],
+      "id_ancla": "I000005"
+    },
+    {
+      "texto": "Estás centrada, de manera vertical, al limón y a la ballena.",
+      "ids_intervenciones": [
+        "I000004",
+        "I000005"
+      ],
+      "id_ancla": "I000005"
+    },
+    {
+      "texto": "La misma distancia entre los dos.",
+      "ids_intervenciones": [
+        "I000006",
+        "I000005"
+      ],
+      "id_ancla": "I000005"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": []
+}

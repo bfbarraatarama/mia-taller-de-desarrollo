@@ -1,0 +1,52 @@
+{
+  "resumen": "La reunión se centró en la posición de una luna azul en un diseño, discutiendo su relación con un telar y una orejita. Se acordó que la luna azul está cerca del telar y la orejita, rozando sus bordes.",
+  "temas": [
+    {
+      "texto": "La posición de la luna azul en el diseño",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010"
+      ],
+      "id_ancla": "I000010"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "La luna azul está rozando los bordes del telar y la orejita.",
+      "ids_intervenciones": [
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017"
+      ],
+      "id_ancla": "I000017"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Revisar la posición de la luna azul para asegurar que no esté rozando los bordes del telar y la orejita.",
+      "ids_intervenciones": [
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017"
+      ],
+      "id_ancla": "I000017",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

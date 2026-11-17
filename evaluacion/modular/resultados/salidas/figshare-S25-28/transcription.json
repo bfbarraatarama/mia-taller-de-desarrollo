@@ -1,0 +1,860 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ok, el avión ponerlo en la mitad de todo el",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 43
+      }
+    },
+    {
+      "start": 6.0,
+      "end": 6.72,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "menjunge.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 44,
+        "end": 53
+      }
+    },
+    {
+      "start": 7.74,
+      "end": 15.3,
+      "speaker": null,
+      "name": null,
+      "text": "De manera que la parte de atrás del avión, digamos el a la trasera,",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 67
+      }
+    },
+    {
+      "start": 16.96,
+      "end": 21.66,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "quedaría un poco por encima del norte del bombillo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 51
+      }
+    },
+    {
+      "start": 21.78,
+      "end": 22.8,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No está tocando entonces.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 22.92,
+      "end": 25.26,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No está tocando, está a medio milímetro.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 40
+      }
+    },
+    {
+      "start": 29.66,
+      "end": 34.3,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Vos ves que el foco tiene un borde negro.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 41
+      }
+    },
+    {
+      "start": 34.54,
+      "end": 38.26,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "El borde negro se ve redondeado o con piquitos arriba de todo?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 62
+      }
+    },
+    {
+      "start": 39.32,
+      "end": 43.48,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Porque el dibujo del avión tiene un sobreborde del color del fondo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 67
+      }
+    },
+    {
+      "start": 45.28,
+      "end": 51.8,
+      "speaker": null,
+      "name": null,
+      "text": "El borde del foco, la parte superior la ves lisa, la ves suave o la ves como dentada.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 85
+      }
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "name": null,
+      "text": "Y ahora que lo decís, puede ser que haya unos mínimos dientes.",
+      "overlap": null,
+      "ambiguous": true,
+      "timing": "unknown",
+      "speakers_detected": null,
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 62
+      }
+    },
+    {
+      "start": 56.66,
+      "end": 59.88,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Si no lo verías totalmente redondeado, porque es redondeado el foco.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 68
+      }
+    },
+    {
+      "start": 59.88,
+      "end": 61.32,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Puede ser que haya unos mínimos dientes.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 40
+      }
+    },
+    {
+      "start": 61.36,
+      "end": 62.24,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿Cuántos dientes ves?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 21
+      }
+    },
+    {
+      "start": 63.02,
+      "end": 63.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Dos.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 4
+      }
+    },
+    {
+      "start": 63.78,
+      "end": 64.12,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿Dos?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 5
+      }
+    },
+    {
+      "start": 64.38,
+      "end": 64.8,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Tres.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 5
+      }
+    },
+    {
+      "start": 65.12,
+      "end": 65.72,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿Dos o tres?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 65.84,
+      "end": 66.62,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Dos creo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 9
+      }
+    },
+    {
+      "start": 70.12,
+      "end": 78.52,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La punta, la trompa del avión está un poco superpuesta a la hebilla metálica del cinturón.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 90
+      }
+    },
+    {
+      "start": 78.52,
+      "end": 79.8,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Y el eje",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 9
+      }
+    },
+    {
+      "start": 79.8,
+      "end": 83.54,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "vertical del avión coincide con el del cinturón o con el del foco?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 10,
+        "end": 76
+      }
+    },
+    {
+      "start": 84.98,
+      "end": 98.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El eje vertical del avión, el centro del avión lo largo es casi como si fuera una continuación de lo que tiene adentro el bombillo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 131
+      }
+    },
+    {
+      "start": 100.72,
+      "end": 105.54,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "0,1 milímetros hacia la izquierda, pero casi una continuación.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 62
+      }
+    },
+    {
+      "start": 106.96,
+      "end": 107.18,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Eso.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 4
+      }
+    },
+    {
+      "start": 107.18,
+      "end": 110.36,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Está bien como suelto que estoy tratando de ver.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 23,
+        "start": 0,
+        "end": 48
+      }
+    },
+    {
+      "start": 110.6,
+      "end": 118.92,
+      "speaker": null,
+      "name": null,
+      "text": "Y está claramente el ala, las alas están, el ala derecha está más cerca del caballo que la izquierda de la piña.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 0,
+        "end": 112
+      }
+    },
+    {
+      "start": 119.08,
+      "end": 122.16,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Estoy tratando de poner, de ver los dos piquitos que viste vos.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 25,
+        "start": 0,
+        "end": 63
+      }
+    },
+    {
+      "start": 122.28,
+      "end": 123.62,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "A ver, dos piquitos que hay.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 26,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 125.22,
+      "end": 128.48,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Eso, vos calcula que la trompa está...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 27,
+        "start": 0,
+        "end": 38
+      }
+    },
+    {
+      "start": 128.48,
+      "end": 134.1,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿La punta exacta está tocando el cosito de la hebilla que se mete en el cinturón?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 28,
+        "start": 0,
+        "end": 81
+      }
+    },
+    {
+      "start": 135.48,
+      "end": 138.54,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, no la está, está muy cerca pero no la está tocando.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 29,
+        "start": 0,
+        "end": 55
+      }
+    },
+    {
+      "start": 138.88,
+      "end": 140.12,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿Está ahí apuntando a eso?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 30,
+        "start": 0,
+        "end": 26
+      }
+    },
+    {
+      "start": 140.2,
+      "end": 141.72,
+      "speaker": null,
+      "name": null,
+      "text": "Sí, está apuntando a eso.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 31,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 142.28,
+      "end": 143.04,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿Y no la está tocando?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 32,
+        "start": 0,
+        "end": 22
+      }
+    },
+    {
+      "start": 143.7,
+      "end": 152.32,
+      "speaker": null,
+      "name": null,
+      "text": "No, no la está tocando. Apenas la trompa, digamos la parte izquierda de la trompa está superpuesta a la parte metálica de la hebilla.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 33,
+        "start": 0,
+        "end": 133
+      }
+    },
+    {
+      "start": 152.74,
+      "end": 153.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Un poquito.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 34,
+        "start": 0,
+        "end": 11
+      }
+    }
+  ]
+}

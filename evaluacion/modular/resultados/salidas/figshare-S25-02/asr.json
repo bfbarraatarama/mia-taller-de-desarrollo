@@ -1,0 +1,333 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.78,
+      "end": 4.0,
+      "text": "Bueno, ganamos 34 centavos, tranqui.",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 0.78,
+          "end": 1.32
+        },
+        {
+          "word": "ganamos",
+          "start": 1.38,
+          "end": 1.68
+        },
+        {
+          "word": "34",
+          "start": 1.68,
+          "end": 2.12
+        },
+        {
+          "word": "centavos,",
+          "start": 2.12,
+          "end": 2.7
+        },
+        {
+          "word": "tranqui.",
+          "start": 2.7,
+          "end": 4.0
+        }
+      ]
+    },
+    {
+      "start": 6.0,
+      "end": 6.86,
+      "text": "¿Cómo es la movida?",
+      "words": [
+        {
+          "word": "¿Cómo",
+          "start": 6.0,
+          "end": 6.16
+        },
+        {
+          "word": "es",
+          "start": 6.16,
+          "end": 6.28
+        },
+        {
+          "word": "la",
+          "start": 6.28,
+          "end": 6.46
+        },
+        {
+          "word": "movida?",
+          "start": 6.46,
+          "end": 6.86
+        }
+      ]
+    },
+    {
+      "start": 7.58,
+      "end": 9.68,
+      "text": "Hay algo que es como una podadora de césped.",
+      "words": [
+        {
+          "word": "Hay",
+          "start": 7.58,
+          "end": 7.88
+        },
+        {
+          "word": "algo",
+          "start": 7.88,
+          "end": 8.04
+        },
+        {
+          "word": "que",
+          "start": 8.04,
+          "end": 8.16
+        },
+        {
+          "word": "es",
+          "start": 8.16,
+          "end": 8.28
+        },
+        {
+          "word": "como",
+          "start": 8.28,
+          "end": 8.38
+        },
+        {
+          "word": "una",
+          "start": 8.38,
+          "end": 8.52
+        },
+        {
+          "word": "podadora",
+          "start": 8.52,
+          "end": 9.02
+        },
+        {
+          "word": "de",
+          "start": 9.02,
+          "end": 9.3
+        },
+        {
+          "word": "césped.",
+          "start": 9.3,
+          "end": 9.68
+        }
+      ]
+    },
+    {
+      "start": 10.8,
+      "end": 15.14,
+      "text": "Bueno, eso tiene que ir a media distancia entre los dos leones.",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 10.8,
+          "end": 11.0
+        },
+        {
+          "word": "eso",
+          "start": 11.06,
+          "end": 11.24
+        },
+        {
+          "word": "tiene",
+          "start": 11.24,
+          "end": 11.46
+        },
+        {
+          "word": "que",
+          "start": 11.46,
+          "end": 11.68
+        },
+        {
+          "word": "ir",
+          "start": 11.68,
+          "end": 12.42
+        },
+        {
+          "word": "a",
+          "start": 12.42,
+          "end": 13.16
+        },
+        {
+          "word": "media",
+          "start": 13.16,
+          "end": 13.34
+        },
+        {
+          "word": "distancia",
+          "start": 13.34,
+          "end": 13.98
+        },
+        {
+          "word": "entre",
+          "start": 13.98,
+          "end": 14.26
+        },
+        {
+          "word": "los",
+          "start": 14.26,
+          "end": 14.44
+        },
+        {
+          "word": "dos",
+          "start": 14.44,
+          "end": 14.64
+        },
+        {
+          "word": "leones.",
+          "start": 14.64,
+          "end": 15.14
+        }
+      ]
+    },
+    {
+      "start": 16.04,
+      "end": 17.34,
+      "text": "¿Y el eje vertical?",
+      "words": [
+        {
+          "word": "¿Y",
+          "start": 16.04,
+          "end": 16.34
+        },
+        {
+          "word": "el",
+          "start": 16.34,
+          "end": 16.48
+        },
+        {
+          "word": "eje",
+          "start": 16.48,
+          "end": 17.0
+        },
+        {
+          "word": "vertical?",
+          "start": 17.0,
+          "end": 17.34
+        }
+      ]
+    },
+    {
+      "start": 17.6,
+      "end": 18.34,
+      "text": "Sí, sí, sí.",
+      "words": [
+        {
+          "word": "Sí,",
+          "start": 17.6,
+          "end": 17.84
+        },
+        {
+          "word": "sí,",
+          "start": 18.04,
+          "end": 18.06
+        },
+        {
+          "word": "sí.",
+          "start": 18.06,
+          "end": 18.34
+        }
+      ]
+    },
+    {
+      "start": 18.98,
+      "end": 20.44,
+      "text": "Como la altura de los...",
+      "words": [
+        {
+          "word": "Como",
+          "start": 18.98,
+          "end": 19.14
+        },
+        {
+          "word": "la",
+          "start": 19.14,
+          "end": 19.28
+        },
+        {
+          "word": "altura",
+          "start": 19.28,
+          "end": 19.58
+        },
+        {
+          "word": "de",
+          "start": 19.58,
+          "end": 19.74
+        },
+        {
+          "word": "los...",
+          "start": 19.74,
+          "end": 20.44
+        }
+      ]
+    },
+    {
+      "start": 21.0,
+      "end": 24.0,
+      "text": "¿Hay igual distancia entre un león y el otro?",
+      "words": [
+        {
+          "word": "¿Hay",
+          "start": 20.75,
+          "end": 21.02
+        },
+        {
+          "word": "distancia",
+          "start": 21.02,
+          "end": 21.34
+        },
+        {
+          "word": "entre",
+          "start": 21.34,
+          "end": 21.66
+        },
+        {
+          "word": "un",
+          "start": 21.66,
+          "end": 22.68
+        },
+        {
+          "word": "león",
+          "start": 22.68,
+          "end": 23.54
+        },
+        {
+          "word": "y",
+          "start": 23.54,
+          "end": 23.6
+        },
+        {
+          "word": "el",
+          "start": 23.6,
+          "end": 23.82
+        },
+        {
+          "word": "otro?",
+          "start": 23.82,
+          "end": 24.0
+        }
+      ]
+    },
+    {
+      "start": 24.12,
+      "end": 24.68,
+      "text": "Más o menos.",
+      "words": [
+        {
+          "word": "Más",
+          "start": 24.12,
+          "end": 24.38
+        },
+        {
+          "word": "o",
+          "start": 24.38,
+          "end": 24.48
+        },
+        {
+          "word": "menos.",
+          "start": 24.48,
+          "end": 24.68
+        }
+      ]
+    }
+  ]
+}

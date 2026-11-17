@@ -1,0 +1,520 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.04,
+      "text": "bueno agarras la luna azul y la pones sobre el espejo a la izquierda del telar",
+      "words": [
+        {
+          "word": "bueno",
+          "start": 0.0,
+          "end": 0.96
+        },
+        {
+          "word": "agarras",
+          "start": 0.96,
+          "end": 1.24
+        },
+        {
+          "word": "la",
+          "start": 1.24,
+          "end": 1.36
+        },
+        {
+          "word": "luna",
+          "start": 1.36,
+          "end": 1.64
+        },
+        {
+          "word": "azul",
+          "start": 1.64,
+          "end": 2.28
+        },
+        {
+          "word": "y",
+          "start": 2.28,
+          "end": 3.52
+        },
+        {
+          "word": "la",
+          "start": 3.52,
+          "end": 3.76
+        },
+        {
+          "word": "pones",
+          "start": 3.76,
+          "end": 4.0
+        },
+        {
+          "word": "sobre",
+          "start": 4.0,
+          "end": 4.26
+        },
+        {
+          "word": "el",
+          "start": 4.26,
+          "end": 4.48
+        },
+        {
+          "word": "espejo",
+          "start": 4.48,
+          "end": 4.74
+        },
+        {
+          "word": "a",
+          "start": 4.74,
+          "end": 4.84
+        },
+        {
+          "word": "la",
+          "start": 4.84,
+          "end": 4.96
+        },
+        {
+          "word": "izquierda",
+          "start": 4.96,
+          "end": 5.22
+        },
+        {
+          "word": "del",
+          "start": 5.22,
+          "end": 5.42
+        },
+        {
+          "word": "telar",
+          "start": 5.42,
+          "end": 6.04
+        }
+      ]
+    },
+    {
+      "start": 6.04,
+      "end": 11.36,
+      "text": "muy cerca de ambas no llega para sobre el espejo entonces a la izquierda bien",
+      "words": [
+        {
+          "word": "muy",
+          "start": 6.04,
+          "end": 6.38
+        },
+        {
+          "word": "cerca",
+          "start": 6.38,
+          "end": 6.74
+        },
+        {
+          "word": "de",
+          "start": 6.74,
+          "end": 6.86
+        },
+        {
+          "word": "ambas",
+          "start": 6.86,
+          "end": 7.94
+        },
+        {
+          "word": "no",
+          "start": 7.94,
+          "end": 8.48
+        },
+        {
+          "word": "para",
+          "start": 8.48,
+          "end": 8.6
+        },
+        {
+          "word": "sobre",
+          "start": 8.6,
+          "end": 8.88
+        },
+        {
+          "word": "el",
+          "start": 8.88,
+          "end": 9.1
+        },
+        {
+          "word": "espejo",
+          "start": 9.1,
+          "end": 9.48
+        },
+        {
+          "word": "entonces",
+          "start": 9.48,
+          "end": 10.3
+        },
+        {
+          "word": "a",
+          "start": 10.3,
+          "end": 10.6
+        },
+        {
+          "word": "la",
+          "start": 10.6,
+          "end": 10.8
+        },
+        {
+          "word": "izquierda",
+          "start": 10.8,
+          "end": 11.2
+        },
+        {
+          "word": "bien",
+          "start": 11.2,
+          "end": 11.48
+        }
+      ]
+    },
+    {
+      "start": 12.12,
+      "end": 18.74,
+      "text": "está muy cerca de ambas, no tapa nada pero no entiendo entonces arriba o no?",
+      "words": [
+        {
+          "word": "está",
+          "start": 12.12,
+          "end": 12.32
+        },
+        {
+          "word": "muy",
+          "start": 12.32,
+          "end": 12.62
+        },
+        {
+          "word": "cerca",
+          "start": 12.62,
+          "end": 12.96
+        },
+        {
+          "word": "de",
+          "start": 12.96,
+          "end": 13.0
+        },
+        {
+          "word": "ambas,",
+          "start": 13.0,
+          "end": 13.32
+        },
+        {
+          "word": "no",
+          "start": 13.72,
+          "end": 13.88
+        },
+        {
+          "word": "tapa",
+          "start": 13.88,
+          "end": 14.16
+        },
+        {
+          "word": "nada",
+          "start": 14.16,
+          "end": 15.2
+        },
+        {
+          "word": "pero",
+          "start": 15.2,
+          "end": 15.96
+        },
+        {
+          "word": "no",
+          "start": 15.96,
+          "end": 16.88
+        },
+        {
+          "word": "entiendo",
+          "start": 16.88,
+          "end": 17.24
+        },
+        {
+          "word": "entonces",
+          "start": 17.24,
+          "end": 17.66
+        },
+        {
+          "word": "arriba",
+          "start": 17.66,
+          "end": 18.16
+        },
+        {
+          "word": "o",
+          "start": 18.16,
+          "end": 18.3
+        },
+        {
+          "word": "no?",
+          "start": 18.3,
+          "end": 18.74
+        }
+      ]
+    },
+    {
+      "start": 18.96,
+      "end": 21.82,
+      "text": "si si arriba del espejo a la izquierda del telar",
+      "words": [
+        {
+          "word": "si",
+          "start": 18.96,
+          "end": 19.06
+        },
+        {
+          "word": "si",
+          "start": 19.06,
+          "end": 19.22
+        },
+        {
+          "word": "arriba",
+          "start": 19.22,
+          "end": 19.38
+        },
+        {
+          "word": "del",
+          "start": 19.38,
+          "end": 19.56
+        },
+        {
+          "word": "espejo",
+          "start": 19.56,
+          "end": 19.78
+        },
+        {
+          "word": "a",
+          "start": 19.78,
+          "end": 19.9
+        },
+        {
+          "word": "la",
+          "start": 19.9,
+          "end": 20.0
+        },
+        {
+          "word": "izquierda",
+          "start": 20.0,
+          "end": 20.22
+        },
+        {
+          "word": "del",
+          "start": 20.22,
+          "end": 20.4
+        },
+        {
+          "word": "telar",
+          "start": 20.4,
+          "end": 21.82
+        }
+      ]
+    },
+    {
+      "start": 22.5,
+      "end": 23.1,
+      "text": "si",
+      "words": [
+        {
+          "word": "si",
+          "start": 22.5,
+          "end": 23.1
+        }
+      ]
+    },
+    {
+      "start": 24.4,
+      "end": 26.48,
+      "text": "arriba del espejo o para?",
+      "words": [
+        {
+          "word": "arriba",
+          "start": 24.4,
+          "end": 25.0
+        },
+        {
+          "word": "del",
+          "start": 25.0,
+          "end": 25.24
+        },
+        {
+          "word": "espejo",
+          "start": 25.24,
+          "end": 26.04
+        },
+        {
+          "word": "o",
+          "start": 26.04,
+          "end": 26.12
+        },
+        {
+          "word": "para?",
+          "start": 26.12,
+          "end": 26.48
+        }
+      ]
+    },
+    {
+      "start": 26.58,
+      "end": 28.16,
+      "text": "ah ya entendí ya entendí",
+      "words": [
+        {
+          "word": "ah",
+          "start": 26.58,
+          "end": 27.14
+        },
+        {
+          "word": "ya",
+          "start": 27.14,
+          "end": 27.24
+        },
+        {
+          "word": "entendí",
+          "start": 27.24,
+          "end": 27.58
+        },
+        {
+          "word": "ya",
+          "start": 27.58,
+          "end": 27.6
+        },
+        {
+          "word": "entendí",
+          "start": 27.6,
+          "end": 28.16
+        }
+      ]
+    },
+    {
+      "start": 28.16,
+      "end": 29.86,
+      "text": "arriba sin superponerlo",
+      "words": [
+        {
+          "word": "arriba",
+          "start": 28.16,
+          "end": 28.4
+        },
+        {
+          "word": "sin",
+          "start": 28.4,
+          "end": 28.7
+        },
+        {
+          "word": "superponerlo",
+          "start": 28.7,
+          "end": 29.86
+        }
+      ]
+    },
+    {
+      "start": 29.86,
+      "end": 31.76,
+      "text": "sin superponer ninguna de las dos",
+      "words": [
+        {
+          "word": "sin",
+          "start": 29.86,
+          "end": 30.14
+        },
+        {
+          "word": "superponer",
+          "start": 30.14,
+          "end": 30.68
+        },
+        {
+          "word": "ninguna",
+          "start": 30.68,
+          "end": 31.04
+        },
+        {
+          "word": "de",
+          "start": 31.04,
+          "end": 31.16
+        },
+        {
+          "word": "las",
+          "start": 31.16,
+          "end": 31.34
+        },
+        {
+          "word": "dos",
+          "start": 31.34,
+          "end": 31.76
+        }
+      ]
+    },
+    {
+      "start": 31.76,
+      "end": 38.26,
+      "text": "está justo tocando ambas cosas pero no tapa nada de ninguna de las dos",
+      "words": [
+        {
+          "word": "está",
+          "start": 31.76,
+          "end": 32.16
+        },
+        {
+          "word": "justo",
+          "start": 32.16,
+          "end": 33.08
+        },
+        {
+          "word": "tocando",
+          "start": 33.08,
+          "end": 34.26
+        },
+        {
+          "word": "ambas",
+          "start": 34.26,
+          "end": 35.68
+        },
+        {
+          "word": "cosas",
+          "start": 35.68,
+          "end": 36.0
+        },
+        {
+          "word": "pero",
+          "start": 36.0,
+          "end": 36.28
+        },
+        {
+          "word": "no",
+          "start": 36.28,
+          "end": 36.48
+        },
+        {
+          "word": "tapa",
+          "start": 36.48,
+          "end": 36.76
+        },
+        {
+          "word": "nada",
+          "start": 36.76,
+          "end": 37.34
+        },
+        {
+          "word": "de",
+          "start": 37.34,
+          "end": 37.6
+        },
+        {
+          "word": "ninguna",
+          "start": 37.6,
+          "end": 37.78
+        },
+        {
+          "word": "de",
+          "start": 37.78,
+          "end": 37.92
+        },
+        {
+          "word": "las",
+          "start": 37.92,
+          "end": 38.08
+        },
+        {
+          "word": "dos",
+          "start": 38.08,
+          "end": 38.26
+        }
+      ]
+    }
+  ]
+}

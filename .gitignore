@@ -72,7 +72,13 @@ hito-2/muestra/uba_games_figshare/
 /evaluacion/asociacion/**/*.wav
 /evaluacion/stt/generado/
 /evaluacion/modular/datos/
+/evaluacion/modular/datos.preparando/
+/evaluacion/modular/datos.anterior/
+/evaluacion/modular/resultados/salidas.publicando/
+/evaluacion/modular/resultados/salidas.anterior/
 /evaluacion/modular/inferencia/
+/evaluacion/escenarios/datos/
+/evaluacion/escenarios/corridas/
 /evaluacion/modular/**/*.wav
 # Protección frente a residuos locales de la arquitectura anterior.
 /PoC/
@@ -86,3 +92,4 @@ feli.md
 resultados/
 !/evaluacion/diarizacion/resultados/
 !/evaluacion/modular/resultados/
+!/evaluacion/escenarios/resultados/

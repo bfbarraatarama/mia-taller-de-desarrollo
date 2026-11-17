@@ -1,0 +1,188 @@
+{
+  "segments": [
+    {
+      "start": 1.7,
+      "end": 3.34,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Ahora tienes que poner la oreja",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 31
+      }
+    },
+    {
+      "start": 3.34,
+      "end": 4.1,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "a",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 32,
+        "end": 33
+      }
+    },
+    {
+      "start": 4.1,
+      "end": 6.8,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "la izquierda del león amarillo y arriba del mimo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 34,
+        "end": 83
+      }
+    },
+    {
+      "start": 9.16,
+      "end": 9.58,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Tiene",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 5
+      }
+    },
+    {
+      "start": 9.58,
+      "end": 15.34,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "que estar el lóbulo de la oreja casi tocando el gorro del mimo y el extremo derecho",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 6,
+        "end": 89
+      }
+    },
+    {
+      "start": 15.34,
+      "end": 18.14,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "de la oreja, lo que está más a la derecha tiene que estar casi tocando el león.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 79
+      }
+    },
+    {
+      "start": 19.8,
+      "end": 23.36,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Tiene que estar separado por medio milímetro.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 45
+      }
+    },
+    {
+      "start": 23.36,
+      "end": 25.5,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Tiene que estar más o menos a la derecha.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 41
+      }
+    }
+  ]
+}

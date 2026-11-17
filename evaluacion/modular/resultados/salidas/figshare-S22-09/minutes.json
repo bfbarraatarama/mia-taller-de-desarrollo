@@ -1,0 +1,115 @@
+{
+  "resumen": "Se discutió la posición de un ojo y una pestanita en relación a un limón. Se aclararon algunas dudas, pero no se tomaron decisiones formales sobre la ubicación de las pestañas y hojas del limón.",
+  "temas": [
+    {
+      "texto": "Posición del ojo y pestanita en relación al limón",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024",
+        "I000025",
+        "I000026",
+        "I000027",
+        "I000028",
+        "I000029",
+        "I000030",
+        "I000031",
+        "I000032",
+        "I000033",
+        "I000034",
+        "I000035",
+        "I000036",
+        "I000037",
+        "I000038",
+        "I000039"
+      ],
+      "id_ancla": "I000029"
+    },
+    {
+      "texto": "Ubicación de las pestañas y hojas del limón",
+      "ids_intervenciones": [
+        "I000046",
+        "I000047",
+        "I000048",
+        "I000049",
+        "I000050",
+        "I000051",
+        "I000052",
+        "I000053",
+        "I000054",
+        "I000055",
+        "I000056",
+        "I000057",
+        "I000058",
+        "I000059"
+      ],
+      "id_ancla": "I000059"
+    }
+  ],
+  "decisiones": [
+    {
+      "texto": "El ojo está sobre el limón y la pestanita toca la punta de la hojita verde del mismo.",
+      "ids_intervenciones": [
+        "I000023",
+        "I000025",
+        "I000029"
+      ],
+      "id_ancla": "I000029"
+    }
+  ],
+  "problemas": [
+    {
+      "texto": "Dudas sobre la ubicación de las pestañas y hojas del limón.",
+      "ids_intervenciones": [
+        "I000046",
+        "I000047",
+        "I000048",
+        "I000049",
+        "I000050",
+        "I000051",
+        "I000052",
+        "I000053",
+        "I000054",
+        "I000055",
+        "I000056",
+        "I000057",
+        "I000058",
+        "I000059"
+      ],
+      "id_ancla": "I000059"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Continuar la discusión sobre el tema.",
+      "ids_intervenciones": [
+        "I000061",
+        "I000062"
+      ],
+      "id_ancla": "I000062",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

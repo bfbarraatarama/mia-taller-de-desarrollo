@@ -1,0 +1,43 @@
+{
+  "resumen": "La reunión se centró en la colocación de elementos para un diseño, especificando la posición del mimo y su relación con la lechusa. Se acordó que el mimo debe estar alineado con la oreja de la lechusa, y que su mano debe encontrarse en una posición equilibrada entre la oreja y la parte derecha del hombro de la lechusa.",
+  "temas": [
+    {
+      "texto": "Colocación del mimo y su relación con la lechusa",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013"
+      ],
+      "id_ancla": "I000013"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "Poner el mimo alineado con la oreja de la lechusa y su mano en una posición equilibrada entre la oreja y la parte derecha del hombro de la lechusa.",
+      "ids_intervenciones": [
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013"
+      ],
+      "id_ancla": "I000013",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

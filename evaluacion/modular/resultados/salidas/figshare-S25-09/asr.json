@@ -1,0 +1,2138 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.78,
+      "text": "Ehh... sos muy bueno describiendo y yo sos muy malo se ve",
+      "words": [
+        {
+          "word": "Ehh...",
+          "start": 0.0,
+          "end": 0.78
+        },
+        {
+          "word": "sos",
+          "start": 0.78,
+          "end": 0.94
+        },
+        {
+          "word": "muy",
+          "start": 0.94,
+          "end": 1.12
+        },
+        {
+          "word": "bueno",
+          "start": 1.12,
+          "end": 1.28
+        },
+        {
+          "word": "describiendo",
+          "start": 1.28,
+          "end": 1.7
+        },
+        {
+          "word": "y",
+          "start": 1.7,
+          "end": 1.78
+        },
+        {
+          "word": "yo",
+          "start": 1.78,
+          "end": 1.88
+        },
+        {
+          "word": "sos",
+          "start": 1.88,
+          "end": 2.02
+        },
+        {
+          "word": "muy",
+          "start": 2.02,
+          "end": 2.2
+        },
+        {
+          "word": "malo",
+          "start": 2.2,
+          "end": 2.52
+        },
+        {
+          "word": "se",
+          "start": 2.52,
+          "end": 2.64
+        },
+        {
+          "word": "ve",
+          "start": 2.64,
+          "end": 2.78
+        }
+      ]
+    },
+    {
+      "start": 2.78,
+      "end": 3.8,
+      "text": "El ojo...",
+      "words": [
+        {
+          "word": "El",
+          "start": 2.78,
+          "end": 3.04
+        },
+        {
+          "word": "ojo...",
+          "start": 3.04,
+          "end": 3.8
+        }
+      ]
+    },
+    {
+      "start": 5.14,
+      "end": 5.94,
+      "text": "Viste el ojo?",
+      "words": [
+        {
+          "word": "Viste",
+          "start": 5.14,
+          "end": 5.34
+        },
+        {
+          "word": "el",
+          "start": 5.34,
+          "end": 5.46
+        },
+        {
+          "word": "ojo?",
+          "start": 5.46,
+          "end": 5.94
+        }
+      ]
+    },
+    {
+      "start": 6.14,
+      "end": 7.38,
+      "text": "Mandalo arriba del limón",
+      "words": [
+        {
+          "word": "Mandalo",
+          "start": 6.14,
+          "end": 6.4
+        },
+        {
+          "word": "arriba",
+          "start": 6.4,
+          "end": 6.6
+        },
+        {
+          "word": "del",
+          "start": 6.6,
+          "end": 6.76
+        },
+        {
+          "word": "limón",
+          "start": 6.76,
+          "end": 7.38
+        }
+      ]
+    },
+    {
+      "start": 7.38,
+      "end": 8.0,
+      "text": "Listo",
+      "words": [
+        {
+          "word": "Listo",
+          "start": 7.38,
+          "end": 8.0
+        }
+      ]
+    },
+    {
+      "start": 8.0,
+      "end": 10.1,
+      "text": "De tal manera que la pupila",
+      "words": [
+        {
+          "word": "De",
+          "start": 8.0,
+          "end": 8.22
+        },
+        {
+          "word": "tal",
+          "start": 8.22,
+          "end": 8.34
+        },
+        {
+          "word": "manera",
+          "start": 8.34,
+          "end": 8.62
+        },
+        {
+          "word": "que",
+          "start": 8.62,
+          "end": 9.04
+        },
+        {
+          "word": "la",
+          "start": 9.04,
+          "end": 9.4
+        },
+        {
+          "word": "pupila",
+          "start": 9.4,
+          "end": 10.1
+        }
+      ]
+    },
+    {
+      "start": 10.1,
+      "end": 10.86,
+      "text": "Si",
+      "words": [
+        {
+          "word": "Si",
+          "start": 10.1,
+          "end": 10.86
+        }
+      ]
+    },
+    {
+      "start": 12.38,
+      "end": 12.78,
+      "text": "Quede...",
+      "words": [
+        {
+          "word": "Quede...",
+          "start": 12.38,
+          "end": 12.78
+        }
+      ]
+    },
+    {
+      "start": 12.78,
+      "end": 15.78,
+      "text": "Poner en el centro del limón un poco a la izquierda",
+      "words": [
+        {
+          "word": "Poner",
+          "start": 12.78,
+          "end": 12.98
+        },
+        {
+          "word": "en",
+          "start": 12.98,
+          "end": 13.1
+        },
+        {
+          "word": "el",
+          "start": 13.1,
+          "end": 13.2
+        },
+        {
+          "word": "centro",
+          "start": 13.2,
+          "end": 13.4
+        },
+        {
+          "word": "del",
+          "start": 13.4,
+          "end": 13.56
+        },
+        {
+          "word": "limón",
+          "start": 13.56,
+          "end": 14.04
+        },
+        {
+          "word": "un",
+          "start": 14.04,
+          "end": 14.36
+        },
+        {
+          "word": "poco",
+          "start": 14.36,
+          "end": 14.48
+        },
+        {
+          "word": "a",
+          "start": 14.48,
+          "end": 14.6
+        },
+        {
+          "word": "la",
+          "start": 14.6,
+          "end": 14.76
+        },
+        {
+          "word": "izquierda",
+          "start": 14.76,
+          "end": 15.78
+        }
+      ]
+    },
+    {
+      "start": 15.78,
+      "end": 17.68,
+      "text": "Es decir que el... el...",
+      "words": [
+        {
+          "word": "Es",
+          "start": 15.78,
+          "end": 16.08
+        },
+        {
+          "word": "decir",
+          "start": 16.08,
+          "end": 16.3
+        },
+        {
+          "word": "que",
+          "start": 16.3,
+          "end": 16.68
+        },
+        {
+          "word": "el...",
+          "start": 16.68,
+          "end": 17.5
+        },
+        {
+          "word": "el...",
+          "start": 17.5,
+          "end": 17.68
+        }
+      ]
+    },
+    {
+      "start": 17.68,
+      "end": 20.58,
+      "text": "El centro de la pupila va... va... va...",
+      "words": [
+        {
+          "word": "centro",
+          "start": 17.68,
+          "end": 17.78
+        },
+        {
+          "word": "de",
+          "start": 17.78,
+          "end": 17.88
+        },
+        {
+          "word": "la",
+          "start": 17.88,
+          "end": 18.0
+        },
+        {
+          "word": "pupila",
+          "start": 18.0,
+          "end": 18.82
+        },
+        {
+          "word": "va...",
+          "start": 18.82,
+          "end": 20.08
+        },
+        {
+          "word": "va...",
+          "start": 20.08,
+          "end": 20.1
+        },
+        {
+          "word": "va...",
+          "start": 20.1,
+          "end": 20.58
+        }
+      ]
+    },
+    {
+      "start": 20.58,
+      "end": 21.3,
+      "text": "Si, lo que está blanco",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 20.58,
+          "end": 20.72
+        },
+        {
+          "word": "lo",
+          "start": 20.74,
+          "end": 20.8
+        },
+        {
+          "word": "que",
+          "start": 20.8,
+          "end": 20.92
+        },
+        {
+          "word": "está",
+          "start": 20.92,
+          "end": 21.02
+        },
+        {
+          "word": "blanco",
+          "start": 21.02,
+          "end": 21.3
+        }
+      ]
+    },
+    {
+      "start": 21.9,
+      "end": 23.82,
+      "text": "Claro, lo que está negro en realidad",
+      "words": [
+        {
+          "word": "Claro,",
+          "start": 21.9,
+          "end": 22.3
+        },
+        {
+          "word": "lo",
+          "start": 22.32,
+          "end": 22.5
+        },
+        {
+          "word": "que",
+          "start": 22.5,
+          "end": 23.08
+        },
+        {
+          "word": "está",
+          "start": 23.08,
+          "end": 23.16
+        },
+        {
+          "word": "negro",
+          "start": 23.16,
+          "end": 23.36
+        },
+        {
+          "word": "en",
+          "start": 23.36,
+          "end": 23.5
+        },
+        {
+          "word": "realidad",
+          "start": 23.5,
+          "end": 23.82
+        }
+      ]
+    },
+    {
+      "start": 23.82,
+      "end": 26.8,
+      "text": "Lo negro coincide con el cabito del limón, viste?",
+      "words": [
+        {
+          "word": "Lo",
+          "start": 23.82,
+          "end": 24.02
+        },
+        {
+          "word": "negro",
+          "start": 24.02,
+          "end": 24.4
+        },
+        {
+          "word": "coincide",
+          "start": 24.4,
+          "end": 25.24
+        },
+        {
+          "word": "con",
+          "start": 25.24,
+          "end": 25.44
+        },
+        {
+          "word": "el",
+          "start": 25.44,
+          "end": 25.62
+        },
+        {
+          "word": "cabito",
+          "start": 25.62,
+          "end": 25.98
+        },
+        {
+          "word": "del",
+          "start": 25.98,
+          "end": 26.14
+        },
+        {
+          "word": "limón,",
+          "start": 26.14,
+          "end": 26.42
+        },
+        {
+          "word": "viste?",
+          "start": 26.42,
+          "end": 26.8
+        }
+      ]
+    },
+    {
+      "start": 27.02,
+      "end": 27.38,
+      "text": "Si",
+      "words": [
+        {
+          "word": "Si",
+          "start": 27.02,
+          "end": 27.38
+        }
+      ]
+    },
+    {
+      "start": 27.38,
+      "end": 28.8,
+      "text": "A la misma altura",
+      "words": [
+        {
+          "word": "A",
+          "start": 27.38,
+          "end": 27.8
+        },
+        {
+          "word": "la",
+          "start": 27.8,
+          "end": 27.96
+        },
+        {
+          "word": "misma",
+          "start": 27.96,
+          "end": 28.2
+        },
+        {
+          "word": "altura",
+          "start": 28.2,
+          "end": 28.8
+        }
+      ]
+    },
+    {
+      "start": 28.8,
+      "end": 29.2,
+      "text": "Si",
+      "words": [
+        {
+          "word": "Si",
+          "start": 28.8,
+          "end": 29.2
+        }
+      ]
+    },
+    {
+      "start": 29.2,
+      "end": 30.5,
+      "text": "Pero está...",
+      "words": [
+        {
+          "word": "Pero",
+          "start": 29.2,
+          "end": 29.92
+        },
+        {
+          "word": "está...",
+          "start": 29.92,
+          "end": 30.5
+        }
+      ]
+    },
+    {
+      "start": 32.52,
+      "end": 34.64,
+      "text": "Y a ver, Jaime, darte más...",
+      "words": [
+        {
+          "word": "Y",
+          "start": 32.52,
+          "end": 32.84
+        },
+        {
+          "word": "a",
+          "start": 32.84,
+          "end": 32.92
+        },
+        {
+          "word": "ver,",
+          "start": 32.92,
+          "end": 33.08
+        },
+        {
+          "word": "Jaime,",
+          "start": 33.24,
+          "end": 33.28
+        },
+        {
+          "word": "darte",
+          "start": 33.48,
+          "end": 33.54
+        },
+        {
+          "word": "más...",
+          "start": 33.54,
+          "end": 34.64
+        }
+      ]
+    },
+    {
+      "start": 34.64,
+      "end": 35.06,
+      "text": "Más indicación",
+      "words": [
+        {
+          "word": "Más",
+          "start": 34.64,
+          "end": 34.84
+        },
+        {
+          "word": "indicación",
+          "start": 34.84,
+          "end": 35.06
+        }
+      ]
+    },
+    {
+      "start": 35.06,
+      "end": 36.34,
+      "text": "Y hacia arriba qué onda?",
+      "words": [
+        {
+          "word": "Y",
+          "start": 35.06,
+          "end": 35.3
+        },
+        {
+          "word": "hacia",
+          "start": 35.3,
+          "end": 35.52
+        },
+        {
+          "word": "arriba",
+          "start": 35.52,
+          "end": 35.8
+        },
+        {
+          "word": "qué",
+          "start": 35.8,
+          "end": 36.02
+        },
+        {
+          "word": "onda?",
+          "start": 36.02,
+          "end": 36.34
+        }
+      ]
+    },
+    {
+      "start": 36.62,
+      "end": 36.66,
+      "text": "Eso, estoy...",
+      "words": [
+        {
+          "word": "Eso,",
+          "start": 36.62,
+          "end": 36.66
+        }
+      ]
+    },
+    {
+      "start": 36.66,
+      "end": 38.14,
+      "text": "En respecto a la regla, ponele",
+      "words": [
+        {
+          "word": "En",
+          "start": 36.66,
+          "end": 36.7
+        },
+        {
+          "word": "respecto",
+          "start": 36.7,
+          "end": 36.96
+        },
+        {
+          "word": "a",
+          "start": 36.96,
+          "end": 37.08
+        },
+        {
+          "word": "la",
+          "start": 37.08,
+          "end": 37.26
+        },
+        {
+          "word": "regla,",
+          "start": 37.26,
+          "end": 37.48
+        },
+        {
+          "word": "ponele",
+          "start": 37.66,
+          "end": 38.14
+        }
+      ]
+    },
+    {
+      "start": 38.14,
+      "end": 40.12,
+      "text": "Pero la regla está re lejo",
+      "words": [
+        {
+          "word": "Pero",
+          "start": 38.14,
+          "end": 38.94
+        },
+        {
+          "word": "la",
+          "start": 38.94,
+          "end": 39.08
+        },
+        {
+          "word": "regla",
+          "start": 39.08,
+          "end": 39.14
+        },
+        {
+          "word": "está",
+          "start": 39.14,
+          "end": 39.26
+        },
+        {
+          "word": "re",
+          "start": 39.26,
+          "end": 39.42
+        },
+        {
+          "word": "lejo",
+          "start": 39.42,
+          "end": 40.12
+        }
+      ]
+    },
+    {
+      "start": 40.12,
+      "end": 44.5,
+      "text": "Si, está bien, pero estoy hablando de hacia arriba o hacia abajo, no de derecha a izquierda",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 40.12,
+          "end": 40.82
+        },
+        {
+          "word": "está",
+          "start": 40.86,
+          "end": 41.02
+        },
+        {
+          "word": "bien,",
+          "start": 41.02,
+          "end": 41.16
+        },
+        {
+          "word": "pero",
+          "start": 41.2,
+          "end": 41.36
+        },
+        {
+          "word": "estoy",
+          "start": 41.36,
+          "end": 41.46
+        },
+        {
+          "word": "hablando",
+          "start": 41.46,
+          "end": 41.76
+        },
+        {
+          "word": "de",
+          "start": 41.76,
+          "end": 42.1
+        },
+        {
+          "word": "hacia",
+          "start": 42.1,
+          "end": 42.38
+        },
+        {
+          "word": "arriba",
+          "start": 42.38,
+          "end": 42.64
+        },
+        {
+          "word": "o",
+          "start": 42.64,
+          "end": 42.76
+        },
+        {
+          "word": "hacia",
+          "start": 42.76,
+          "end": 42.98
+        },
+        {
+          "word": "abajo,",
+          "start": 42.98,
+          "end": 43.16
+        },
+        {
+          "word": "no",
+          "start": 43.24,
+          "end": 43.32
+        },
+        {
+          "word": "de",
+          "start": 43.32,
+          "end": 43.52
+        },
+        {
+          "word": "derecha",
+          "start": 43.52,
+          "end": 43.74
+        },
+        {
+          "word": "a",
+          "start": 43.74,
+          "end": 43.86
+        },
+        {
+          "word": "izquierda",
+          "start": 43.86,
+          "end": 44.5
+        }
+      ]
+    },
+    {
+      "start": 44.5,
+      "end": 46.52,
+      "text": "Si, si, no, hacia arriba o hacia abajo pone...",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 44.5,
+          "end": 44.78
+        },
+        {
+          "word": "si,",
+          "start": 44.78,
+          "end": 44.92
+        },
+        {
+          "word": "no,",
+          "start": 44.92,
+          "end": 45.04
+        },
+        {
+          "word": "hacia",
+          "start": 45.1,
+          "end": 45.22
+        },
+        {
+          "word": "arriba",
+          "start": 45.22,
+          "end": 45.34
+        },
+        {
+          "word": "o",
+          "start": 45.34,
+          "end": 45.38
+        },
+        {
+          "word": "hacia",
+          "start": 45.38,
+          "end": 45.56
+        },
+        {
+          "word": "abajo",
+          "start": 45.56,
+          "end": 45.74
+        },
+        {
+          "word": "pone...",
+          "start": 45.74,
+          "end": 46.52
+        }
+      ]
+    },
+    {
+      "start": 46.52,
+      "end": 47.68,
+      "text": "De tal manera que la...",
+      "words": [
+        {
+          "word": "tal",
+          "start": 46.52,
+          "end": 46.62
+        },
+        {
+          "word": "manera",
+          "start": 46.62,
+          "end": 46.86
+        },
+        {
+          "word": "que",
+          "start": 46.86,
+          "end": 47.06
+        },
+        {
+          "word": "la...",
+          "start": 47.06,
+          "end": 47.68
+        }
+      ]
+    },
+    {
+      "start": 47.68,
+      "end": 48.8,
+      "text": "Viste las pestañas de arriba?",
+      "words": [
+        {
+          "word": "Viste",
+          "start": 47.68,
+          "end": 47.76
+        },
+        {
+          "word": "las",
+          "start": 47.76,
+          "end": 48.02
+        },
+        {
+          "word": "pestañas",
+          "start": 48.02,
+          "end": 48.34
+        },
+        {
+          "word": "de",
+          "start": 48.34,
+          "end": 48.5
+        },
+        {
+          "word": "arriba?",
+          "start": 48.5,
+          "end": 48.8
+        }
+      ]
+    },
+    {
+      "start": 48.94,
+      "end": 49.06,
+      "text": "Si",
+      "words": [
+        {
+          "word": "Si",
+          "start": 48.94,
+          "end": 49.06
+        }
+      ]
+    },
+    {
+      "start": 49.06,
+      "end": 51.52,
+      "text": "Tiene 1, 2, 3 de izquierda a derecha, tiene 6",
+      "words": [
+        {
+          "word": "Tiene",
+          "start": 49.06,
+          "end": 49.26
+        },
+        {
+          "word": "1,",
+          "start": 49.26,
+          "end": 49.5
+        },
+        {
+          "word": "2,",
+          "start": 49.5,
+          "end": 49.7
+        },
+        {
+          "word": "3",
+          "start": 49.7,
+          "end": 49.84
+        },
+        {
+          "word": "de",
+          "start": 49.84,
+          "end": 50.0
+        },
+        {
+          "word": "izquierda",
+          "start": 50.0,
+          "end": 50.2
+        },
+        {
+          "word": "a",
+          "start": 50.2,
+          "end": 50.22
+        },
+        {
+          "word": "derecha,",
+          "start": 50.22,
+          "end": 50.64
+        },
+        {
+          "word": "tiene",
+          "start": 50.76,
+          "end": 50.86
+        },
+        {
+          "word": "6",
+          "start": 50.86,
+          "end": 51.52
+        }
+      ]
+    },
+    {
+      "start": 51.52,
+      "end": 55.6,
+      "text": "La tercera está casi tocando el... el... el borde negro del limón",
+      "words": [
+        {
+          "word": "La",
+          "start": 51.52,
+          "end": 52.0
+        },
+        {
+          "word": "tercera",
+          "start": 52.0,
+          "end": 52.38
+        },
+        {
+          "word": "está",
+          "start": 52.38,
+          "end": 52.58
+        },
+        {
+          "word": "casi",
+          "start": 52.58,
+          "end": 52.9
+        },
+        {
+          "word": "tocando",
+          "start": 52.9,
+          "end": 53.34
+        },
+        {
+          "word": "el...",
+          "start": 53.34,
+          "end": 54.08
+        },
+        {
+          "word": "el...",
+          "start": 54.08,
+          "end": 54.26
+        },
+        {
+          "word": "borde",
+          "start": 54.26,
+          "end": 54.42
+        },
+        {
+          "word": "negro",
+          "start": 54.42,
+          "end": 54.64
+        },
+        {
+          "word": "del",
+          "start": 54.64,
+          "end": 54.82
+        },
+        {
+          "word": "limón",
+          "start": 54.82,
+          "end": 55.6
+        }
+      ]
+    },
+    {
+      "start": 55.6,
+      "end": 56.7,
+      "text": "Pero no la toca",
+      "words": [
+        {
+          "word": "Pero",
+          "start": 55.6,
+          "end": 55.94
+        },
+        {
+          "word": "no",
+          "start": 55.94,
+          "end": 56.08
+        },
+        {
+          "word": "la",
+          "start": 56.08,
+          "end": 56.24
+        },
+        {
+          "word": "toca",
+          "start": 56.24,
+          "end": 56.7
+        }
+      ]
+    },
+    {
+      "start": 56.7,
+      "end": 58.62,
+      "text": "Entonces para de las pestañas de abajo",
+      "words": [
+        {
+          "word": "Entonces",
+          "start": 56.7,
+          "end": 57.24
+        },
+        {
+          "word": "para",
+          "start": 57.24,
+          "end": 57.46
+        },
+        {
+          "word": "de",
+          "start": 57.46,
+          "end": 57.62
+        },
+        {
+          "word": "las",
+          "start": 57.62,
+          "end": 57.76
+        },
+        {
+          "word": "pestañas",
+          "start": 57.76,
+          "end": 58.12
+        },
+        {
+          "word": "de",
+          "start": 58.12,
+          "end": 58.32
+        },
+        {
+          "word": "abajo",
+          "start": 58.32,
+          "end": 58.62
+        }
+      ]
+    },
+    {
+      "start": 58.62,
+      "end": 59.2,
+      "text": "De arriba",
+      "words": [
+        {
+          "word": "De",
+          "start": 58.62,
+          "end": 58.8
+        },
+        {
+          "word": "arriba",
+          "start": 58.8,
+          "end": 59.2
+        }
+      ]
+    },
+    {
+      "start": 59.2,
+      "end": 62.78,
+      "text": "Las pestañas de arriba, de izquierda a derecha, la tercera...",
+      "words": [
+        {
+          "word": "Las",
+          "start": 59.2,
+          "end": 60.0
+        },
+        {
+          "word": "pestañas",
+          "start": 60.0,
+          "end": 60.3
+        },
+        {
+          "word": "de",
+          "start": 60.3,
+          "end": 60.48
+        },
+        {
+          "word": "arriba,",
+          "start": 60.48,
+          "end": 60.76
+        },
+        {
+          "word": "de",
+          "start": 60.94,
+          "end": 61.06
+        },
+        {
+          "word": "izquierda",
+          "start": 61.06,
+          "end": 61.32
+        },
+        {
+          "word": "a",
+          "start": 61.32,
+          "end": 61.5
+        },
+        {
+          "word": "derecha,",
+          "start": 61.5,
+          "end": 61.68
+        },
+        {
+          "word": "la",
+          "start": 61.68,
+          "end": 61.9
+        },
+        {
+          "word": "tercera...",
+          "start": 61.9,
+          "end": 62.78
+        }
+      ]
+    },
+    {
+      "start": 62.78,
+      "end": 64.9,
+      "text": "De izquierda a derecha a la tercera, si?",
+      "words": [
+        {
+          "word": "De",
+          "start": 62.78,
+          "end": 62.82
+        },
+        {
+          "word": "izquierda",
+          "start": 62.82,
+          "end": 63.72
+        },
+        {
+          "word": "a",
+          "start": 63.72,
+          "end": 63.84
+        },
+        {
+          "word": "derecha",
+          "start": 63.84,
+          "end": 64.02
+        },
+        {
+          "word": "a",
+          "start": 64.02,
+          "end": 64.1
+        },
+        {
+          "word": "la",
+          "start": 64.1,
+          "end": 64.28
+        },
+        {
+          "word": "tercera,",
+          "start": 64.28,
+          "end": 64.6
+        },
+        {
+          "word": "si?",
+          "start": 64.64,
+          "end": 64.9
+        }
+      ]
+    },
+    {
+      "start": 65.1,
+      "end": 67.62,
+      "text": "La tercera está casi tocando el borde del limón",
+      "words": [
+        {
+          "word": "La",
+          "start": 65.1,
+          "end": 65.2
+        },
+        {
+          "word": "tercera",
+          "start": 65.2,
+          "end": 65.68
+        },
+        {
+          "word": "está",
+          "start": 65.68,
+          "end": 65.9
+        },
+        {
+          "word": "casi",
+          "start": 65.9,
+          "end": 66.16
+        },
+        {
+          "word": "tocando",
+          "start": 66.16,
+          "end": 66.46
+        },
+        {
+          "word": "el",
+          "start": 66.46,
+          "end": 66.66
+        },
+        {
+          "word": "borde",
+          "start": 66.66,
+          "end": 66.82
+        },
+        {
+          "word": "del",
+          "start": 66.82,
+          "end": 67.02
+        },
+        {
+          "word": "limón",
+          "start": 67.02,
+          "end": 67.62
+        }
+      ]
+    },
+    {
+      "start": 68.24,
+      "end": 69.12,
+      "text": "Y pues entonces el...",
+      "words": [
+        {
+          "word": "Y",
+          "start": 68.24,
+          "end": 68.56
+        },
+        {
+          "word": "pues",
+          "start": 68.56,
+          "end": 68.68
+        },
+        {
+          "word": "entonces",
+          "start": 68.68,
+          "end": 69.0
+        },
+        {
+          "word": "el...",
+          "start": 69.0,
+          "end": 69.12
+        }
+      ]
+    },
+    {
+      "start": 69.12,
+      "end": 72.18,
+      "text": "No el borde de todo el limón, el borde del... del... del amarillo",
+      "words": [
+        {
+          "word": "No",
+          "start": 69.12,
+          "end": 69.34
+        },
+        {
+          "word": "el",
+          "start": 69.34,
+          "end": 69.44
+        },
+        {
+          "word": "borde",
+          "start": 69.44,
+          "end": 69.72
+        },
+        {
+          "word": "de",
+          "start": 69.72,
+          "end": 69.94
+        },
+        {
+          "word": "todo",
+          "start": 69.94,
+          "end": 70.12
+        },
+        {
+          "word": "el",
+          "start": 70.12,
+          "end": 70.22
+        },
+        {
+          "word": "limón,",
+          "start": 70.22,
+          "end": 70.34
+        },
+        {
+          "word": "el",
+          "start": 70.42,
+          "end": 70.46
+        },
+        {
+          "word": "borde",
+          "start": 70.46,
+          "end": 70.82
+        },
+        {
+          "word": "del...",
+          "start": 70.82,
+          "end": 71.74
+        },
+        {
+          "word": "del...",
+          "start": 71.74,
+          "end": 71.88
+        },
+        {
+          "word": "amarillo",
+          "start": 71.88,
+          "end": 72.18
+        }
+      ]
+    },
+    {
+      "start": 72.18,
+      "end": 74.62,
+      "text": "Entonces el ojo está abajo del limón",
+      "words": [
+        {
+          "word": "Entonces",
+          "start": 72.18,
+          "end": 72.62
+        },
+        {
+          "word": "el",
+          "start": 72.62,
+          "end": 72.84
+        },
+        {
+          "word": "ojo",
+          "start": 72.84,
+          "end": 73.12
+        },
+        {
+          "word": "está",
+          "start": 73.12,
+          "end": 73.4
+        },
+        {
+          "word": "abajo",
+          "start": 73.4,
+          "end": 73.84
+        },
+        {
+          "word": "del",
+          "start": 73.84,
+          "end": 74.02
+        },
+        {
+          "word": "limón",
+          "start": 74.02,
+          "end": 74.62
+        }
+      ]
+    },
+    {
+      "start": 75.68,
+      "end": 77.12,
+      "text": "O está arriba del limón",
+      "words": [
+        {
+          "word": "O",
+          "start": 75.68,
+          "end": 76.1
+        },
+        {
+          "word": "está",
+          "start": 76.1,
+          "end": 76.26
+        },
+        {
+          "word": "arriba",
+          "start": 76.26,
+          "end": 76.6
+        },
+        {
+          "word": "del",
+          "start": 76.6,
+          "end": 76.76
+        },
+        {
+          "word": "limón",
+          "start": 76.76,
+          "end": 77.12
+        }
+      ]
+    },
+    {
+      "start": 77.12,
+      "end": 80.28,
+      "text": "El borde superior del limón, digo, viste que el limón...",
+      "words": [
+        {
+          "word": "El",
+          "start": 77.12,
+          "end": 77.5
+        },
+        {
+          "word": "borde",
+          "start": 77.5,
+          "end": 77.86
+        },
+        {
+          "word": "superior",
+          "start": 77.86,
+          "end": 78.24
+        },
+        {
+          "word": "del",
+          "start": 78.24,
+          "end": 78.4
+        },
+        {
+          "word": "limón,",
+          "start": 78.4,
+          "end": 78.7
+        },
+        {
+          "word": "digo,",
+          "start": 78.7,
+          "end": 78.92
+        },
+        {
+          "word": "viste",
+          "start": 79.02,
+          "end": 79.14
+        },
+        {
+          "word": "que",
+          "start": 79.14,
+          "end": 79.36
+        },
+        {
+          "word": "el",
+          "start": 79.36,
+          "end": 79.62
+        },
+        {
+          "word": "limón...",
+          "start": 79.62,
+          "end": 80.28
+        }
+      ]
+    },
+    {
+      "start": 80.28,
+      "end": 82.62,
+      "text": "Si, pero entonces las pestañas de abajo...",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 80.28,
+          "end": 80.48
+        },
+        {
+          "word": "pero",
+          "start": 80.58,
+          "end": 80.88
+        },
+        {
+          "word": "las",
+          "start": 80.88,
+          "end": 81.1
+        },
+        {
+          "word": "pestañas",
+          "start": 81.1,
+          "end": 82.12
+        },
+        {
+          "word": "de",
+          "start": 82.12,
+          "end": 82.34
+        },
+        {
+          "word": "abajo...",
+          "start": 82.34,
+          "end": 82.62
+        }
+      ]
+    },
+    {
+      "start": 83.18,
+      "end": 84.48,
+      "text": "No, la de arriba estoy hablando yo",
+      "words": [
+        {
+          "word": "No,",
+          "start": 83.18,
+          "end": 83.24
+        },
+        {
+          "word": "la",
+          "start": 83.32,
+          "end": 83.38
+        },
+        {
+          "word": "de",
+          "start": 83.38,
+          "end": 83.46
+        },
+        {
+          "word": "arriba",
+          "start": 83.46,
+          "end": 83.58
+        },
+        {
+          "word": "estoy",
+          "start": 83.58,
+          "end": 83.7
+        },
+        {
+          "word": "hablando",
+          "start": 83.7,
+          "end": 83.9
+        },
+        {
+          "word": "yo",
+          "start": 83.9,
+          "end": 84.48
+        }
+      ]
+    },
+    {
+      "start": 84.48,
+      "end": 87.66,
+      "text": "Y pues entonces el ojo está abajo del limón o arriba del limón",
+      "words": [
+        {
+          "word": "Y",
+          "start": 84.48,
+          "end": 84.98
+        },
+        {
+          "word": "pues",
+          "start": 84.98,
+          "end": 85.1
+        },
+        {
+          "word": "entonces",
+          "start": 85.1,
+          "end": 85.42
+        },
+        {
+          "word": "el",
+          "start": 85.42,
+          "end": 85.56
+        },
+        {
+          "word": "ojo",
+          "start": 85.56,
+          "end": 86.12
+        },
+        {
+          "word": "está",
+          "start": 86.12,
+          "end": 86.3
+        },
+        {
+          "word": "abajo",
+          "start": 86.3,
+          "end": 86.58
+        },
+        {
+          "word": "del",
+          "start": 86.58,
+          "end": 86.74
+        },
+        {
+          "word": "limón",
+          "start": 86.74,
+          "end": 86.94
+        },
+        {
+          "word": "o",
+          "start": 86.94,
+          "end": 87.1
+        },
+        {
+          "word": "arriba",
+          "start": 87.1,
+          "end": 87.3
+        },
+        {
+          "word": "del",
+          "start": 87.3,
+          "end": 87.48
+        },
+        {
+          "word": "limón",
+          "start": 87.48,
+          "end": 87.66
+        }
+      ]
+    },
+    {
+      "start": 87.66,
+      "end": 88.9,
+      "text": "El ojo está sobre el limón",
+      "words": [
+        {
+          "word": "El",
+          "start": 87.66,
+          "end": 87.88
+        },
+        {
+          "word": "ojo",
+          "start": 87.88,
+          "end": 88.08
+        },
+        {
+          "word": "está",
+          "start": 88.08,
+          "end": 88.24
+        },
+        {
+          "word": "sobre",
+          "start": 88.24,
+          "end": 88.44
+        },
+        {
+          "word": "el",
+          "start": 88.44,
+          "end": 88.6
+        },
+        {
+          "word": "limón",
+          "start": 88.6,
+          "end": 88.9
+        }
+      ]
+    },
+    {
+      "start": 88.9,
+      "end": 89.6,
+      "text": "Sobre el limón",
+      "words": [
+        {
+          "word": "Sobre",
+          "start": 88.9,
+          "end": 89.28
+        },
+        {
+          "word": "el",
+          "start": 89.28,
+          "end": 89.4
+        },
+        {
+          "word": "limón",
+          "start": 89.4,
+          "end": 89.6
+        }
+      ]
+    },
+    {
+      "start": 89.6,
+      "end": 91.64,
+      "text": "Está superpuesto el limón eso",
+      "words": [
+        {
+          "word": "Está",
+          "start": 89.6,
+          "end": 90.48
+        },
+        {
+          "word": "superpuesto",
+          "start": 90.48,
+          "end": 91.04
+        },
+        {
+          "word": "el",
+          "start": 91.04,
+          "end": 91.14
+        },
+        {
+          "word": "limón",
+          "start": 91.14,
+          "end": 91.38
+        },
+        {
+          "word": "eso",
+          "start": 91.38,
+          "end": 91.64
+        }
+      ]
+    },
+    {
+      "start": 91.64,
+      "end": 92.66,
+      "text": "Ah, superpuesto",
+      "words": [
+        {
+          "word": "Ah,",
+          "start": 91.64,
+          "end": 92.14
+        },
+        {
+          "word": "superpuesto",
+          "start": 92.26,
+          "end": 92.66
+        }
+      ]
+    },
+    {
+      "start": 93.18,
+      "end": 94.62,
+      "text": "Ah, está, superpuesto el limón",
+      "words": [
+        {
+          "word": "Ah,",
+          "start": 93.18,
+          "end": 93.28
+        },
+        {
+          "word": "está,",
+          "start": 93.28,
+          "end": 93.32
+        },
+        {
+          "word": "superpuesto",
+          "start": 93.32,
+          "end": 94.06
+        },
+        {
+          "word": "el",
+          "start": 94.06,
+          "end": 94.18
+        },
+        {
+          "word": "limón",
+          "start": 94.18,
+          "end": 94.62
+        }
+      ]
+    },
+    {
+      "start": 94.62,
+      "end": 95.84,
+      "text": "Ahí va",
+      "words": [
+        {
+          "word": "Ahí",
+          "start": 94.62,
+          "end": 94.9
+        },
+        {
+          "word": "va",
+          "start": 94.9,
+          "end": 95.84
+        }
+      ]
+    },
+    {
+      "start": 95.84,
+      "end": 97.46,
+      "text": "Ahí va, superpuesto el limón",
+      "words": [
+        {
+          "word": "Ahí",
+          "start": 95.84,
+          "end": 96.34
+        },
+        {
+          "word": "va,",
+          "start": 96.34,
+          "end": 96.6
+        },
+        {
+          "word": "superpuesto",
+          "start": 96.86,
+          "end": 97.24
+        },
+        {
+          "word": "el",
+          "start": 97.24,
+          "end": 97.46
+        }
+      ]
+    },
+    {
+      "start": 97.46,
+      "end": 101.56,
+      "text": "De manera que la tercera pestaña...",
+      "words": [
+        {
+          "word": "De",
+          "start": 97.46,
+          "end": 97.94
+        },
+        {
+          "word": "manera",
+          "start": 97.94,
+          "end": 98.3
+        },
+        {
+          "word": "que",
+          "start": 98.3,
+          "end": 98.86
+        },
+        {
+          "word": "la",
+          "start": 98.86,
+          "end": 99.26
+        },
+        {
+          "word": "tercera",
+          "start": 99.26,
+          "end": 100.3
+        },
+        {
+          "word": "pestaña...",
+          "start": 100.3,
+          "end": 101.56
+        }
+      ]
+    },
+    {
+      "start": 101.56,
+      "end": 106.88,
+      "text": "De manera que primero, la pupila está bastante bien centrada con el cabito de arriba",
+      "words": [
+        {
+          "word": "De",
+          "start": 101.56,
+          "end": 101.84
+        },
+        {
+          "word": "manera",
+          "start": 101.84,
+          "end": 102.06
+        },
+        {
+          "word": "que",
+          "start": 102.06,
+          "end": 102.28
+        },
+        {
+          "word": "primero,",
+          "start": 102.28,
+          "end": 102.74
+        },
+        {
+          "word": "la",
+          "start": 102.82,
+          "end": 103.36
+        },
+        {
+          "word": "pupila",
+          "start": 103.36,
+          "end": 103.84
+        },
+        {
+          "word": "está",
+          "start": 103.84,
+          "end": 104.42
+        },
+        {
+          "word": "bastante",
+          "start": 104.42,
+          "end": 104.92
+        },
+        {
+          "word": "bien",
+          "start": 104.92,
+          "end": 105.18
+        },
+        {
+          "word": "centrada",
+          "start": 105.18,
+          "end": 105.56
+        },
+        {
+          "word": "con",
+          "start": 105.56,
+          "end": 105.78
+        },
+        {
+          "word": "el",
+          "start": 105.78,
+          "end": 105.92
+        },
+        {
+          "word": "cabito",
+          "start": 105.92,
+          "end": 106.26
+        },
+        {
+          "word": "de",
+          "start": 106.26,
+          "end": 106.66
+        },
+        {
+          "word": "arriba",
+          "start": 106.66,
+          "end": 106.88
+        }
+      ]
+    },
+    {
+      "start": 106.88,
+      "end": 107.8,
+      "text": "Si, si, si",
+      "words": [
+        {
+          "word": "si,",
+          "start": 106.88,
+          "end": 107.24
+        },
+        {
+          "word": "si",
+          "start": 107.3,
+          "end": 107.8
+        }
+      ]
+    },
+    {
+      "start": 107.8,
+      "end": 112.88,
+      "text": "Y la tercera pestaña de izquierda a derecha de las de arriba está casi tocando el borde negro",
+      "words": [
+        {
+          "word": "Y",
+          "start": 107.8,
+          "end": 108.1
+        },
+        {
+          "word": "la",
+          "start": 108.1,
+          "end": 108.34
+        },
+        {
+          "word": "tercera",
+          "start": 108.34,
+          "end": 108.56
+        },
+        {
+          "word": "pestaña",
+          "start": 108.56,
+          "end": 109.18
+        },
+        {
+          "word": "de",
+          "start": 109.18,
+          "end": 109.44
+        },
+        {
+          "word": "izquierda",
+          "start": 109.44,
+          "end": 109.76
+        },
+        {
+          "word": "a",
+          "start": 109.76,
+          "end": 109.86
+        },
+        {
+          "word": "derecha",
+          "start": 109.86,
+          "end": 110.12
+        },
+        {
+          "word": "de",
+          "start": 110.12,
+          "end": 110.24
+        },
+        {
+          "word": "las",
+          "start": 110.24,
+          "end": 110.38
+        },
+        {
+          "word": "de",
+          "start": 110.38,
+          "end": 110.54
+        },
+        {
+          "word": "arriba",
+          "start": 110.54,
+          "end": 110.88
+        },
+        {
+          "word": "está",
+          "start": 110.88,
+          "end": 111.32
+        },
+        {
+          "word": "casi",
+          "start": 111.32,
+          "end": 111.68
+        },
+        {
+          "word": "tocando",
+          "start": 111.68,
+          "end": 112.0
+        },
+        {
+          "word": "el",
+          "start": 112.0,
+          "end": 112.16
+        },
+        {
+          "word": "borde",
+          "start": 112.16,
+          "end": 112.38
+        },
+        {
+          "word": "negro",
+          "start": 112.38,
+          "end": 112.88
+        }
+      ]
+    },
+    {
+      "start": 113.58,
+      "end": 114.62,
+      "text": "Del amarillo, no?",
+      "words": [
+        {
+          "word": "Del",
+          "start": 113.58,
+          "end": 114.1
+        },
+        {
+          "word": "amarillo,",
+          "start": 114.1,
+          "end": 114.54
+        },
+        {
+          "word": "no?",
+          "start": 114.6,
+          "end": 114.62
+        }
+      ]
+    },
+    {
+      "start": 114.78,
+      "end": 115.98,
+      "text": "Listo, listo",
+      "words": [
+        {
+          "word": "Listo,",
+          "start": 114.78,
+          "end": 114.92
+        },
+        {
+          "word": "listo",
+          "start": 114.92,
+          "end": 115.98
+        }
+      ]
+    },
+    {
+      "start": 115.98,
+      "end": 116.38,
+      "text": "Ahí va",
+      "words": [
+        {
+          "word": "Ahí",
+          "start": 115.98,
+          "end": 116.24
+        },
+        {
+          "word": "va",
+          "start": 116.24,
+          "end": 116.38
+        }
+      ]
+    }
+  ]
+}

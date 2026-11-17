@@ -1,0 +1,42 @@
+{
+  "resumen": "La reunión se centró en la descripción detallada de la posición y relación entre una sombra, un bichito y varias lunas. Se discutió sobre cómo la sombra del bichito debe estar posicionada en relación con las lunas amarilla y azul.",
+  "temas": [
+    {
+      "texto": "La descripción detallada de la posición y relación entre una sombra, un bichito y varias lunas.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008"
+      ],
+      "id_ancla": "I000008"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "La sombra del lado derecho está tocando o está sobre la línea negra de la luna amarilla",
+      "ids_intervenciones": [
+        "I000006"
+      ],
+      "id_ancla": "I000006",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "La sombra del lado izquierdo está tocando el borde de la luna azul y la pasa un poco también. Está un poco superpuesta con la luna azul.",
+      "ids_intervenciones": [
+        "I000007",
+        "I000008"
+      ],
+      "id_ancla": "I000008",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

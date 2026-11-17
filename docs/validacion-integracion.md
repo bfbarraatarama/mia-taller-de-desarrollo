@@ -144,3 +144,5 @@ El autor de las notas de referencia evaluó las minutas de las corridas 01 y 02,
 ## Límites y evaluación posterior
 
 La evaluación formal en la RTX 3050 Laptop de 6 GB consta en la sección anterior. Las validaciones de instalación y portabilidad se documentan por separado; no se infieren de estas cinco corridas. El manifiesto de muestra de Hito 2 y el de Figshare no acreditan por sí solos que se haya congelado la muestra combinada específica de §2.3. La reunión autorizada de evaluación, sus notas previas independientes, las muestras modulares concretas y los siete escenarios deben identificarse con sus propios hashes y registros. No se deben convertir ejecuciones cortas, resultados previos ni pruebas simuladas en un veredicto GO. Los umbrales y casos se deben tomar directamente del documento de Hito 3, sin crear una segunda definición normativa.
+
+La muestra modular de §2.3 se congeló después con su propio manifiesto SHA-256 y se evaluó en la RTX 3050 Laptop de referencia: el criterio «Funcionamiento modular» se cumple (4/4 módulos al 100 %). Procedimiento, resultados y limitaciones en [Evaluación modular](../evaluacion/modular/README.md).

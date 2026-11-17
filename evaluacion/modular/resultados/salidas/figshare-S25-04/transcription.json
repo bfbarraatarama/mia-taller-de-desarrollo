@@ -1,0 +1,731 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.76,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ok, hay algo no veo bien que es, es como un clavo?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 50
+      }
+    },
+    {
+      "start": 2.92,
+      "end": 4.84,
+      "speaker": null,
+      "name": null,
+      "text": "Si, es lo único que tengo, si no tiene que ser el clavo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 55
+      }
+    },
+    {
+      "start": 4.84,
+      "end": 6.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ok, un clavo que está como inclinado?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 37
+      }
+    },
+    {
+      "start": 7.08,
+      "end": 7.58,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 7.58,
+      "end": 11.72,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ok, ese clavo tenés que superponerlo a la podadora",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 50
+      }
+    },
+    {
+      "start": 11.72,
+      "end": 13.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Exactamente, superpuesto?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 13.12,
+      "end": 14.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Superpuesto a la podadora, si",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 14.74,
+      "end": 19.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "De manera que la punta del clavo, la punta de abajo del clavo",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 61
+      }
+    },
+    {
+      "start": 19.0,
+      "end": 22.8,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Exceda un poco la figura de la podadora",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 39
+      }
+    },
+    {
+      "start": 22.8,
+      "end": 23.76,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Un poco? Cuánto?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 23.8,
+      "end": 27.02,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Un poco, ponéle la parte de arriba del clavo",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 44
+      }
+    },
+    {
+      "start": 27.02,
+      "end": 27.62,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 27.62,
+      "end": 31.76,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Excede a penitas a la podadora y la punta de abajo del clavo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 60
+      }
+    },
+    {
+      "start": 31.76,
+      "end": 34.56,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Excede a penitas a la podadora también",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 38
+      }
+    },
+    {
+      "start": 34.56,
+      "end": 35.64,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Más o menos",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 11
+      }
+    },
+    {
+      "start": 36.22,
+      "end": 37.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La rueda está tapada o no está tapada?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 38
+      }
+    },
+    {
+      "start": 38.02,
+      "end": 40.72,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, la rueda no está tapada, es un poco más hacia la derecha",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 60
+      }
+    },
+    {
+      "start": 40.72,
+      "end": 41.24,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está bien",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 9
+      }
+    },
+    {
+      "start": 41.24,
+      "end": 42.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Un poco más hacia la derecha",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 42.74,
+      "end": 44.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "A cuánta distancia de la rueda?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 31
+      }
+    },
+    {
+      "start": 47.1,
+      "end": 47.9,
+      "speaker": null,
+      "name": null,
+      "text": "Un milímetro",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 47.9,
+      "end": 51.8,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Se ve, de la figura, de lo que sobra de la podadora a la derecha",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 64
+      }
+    },
+    {
+      "start": 51.8,
+      "end": 53.06,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Se ve un poquito",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 53.52,
+      "end": 56.14,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ponéle de la parte de arriba de la podadora no se ve nada",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 23,
+        "start": 0,
+        "end": 57
+      }
+    },
+    {
+      "start": 56.14,
+      "end": 57.82,
+      "speaker": null,
+      "name": null,
+      "text": "De la parte de abajo azul de la podadora",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 0,
+        "end": 40
+      }
+    },
+    {
+      "start": 57.82,
+      "end": 60.0,
+      "speaker": null,
+      "name": null,
+      "text": "De la parte de arriba significa, tiene dos barras la podadora",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 25,
+        "start": 0,
+        "end": 61
+      }
+    },
+    {
+      "start": 60.0,
+      "end": 63.54,
+      "speaker": null,
+      "name": null,
+      "text": "Claro, de esas barras de arriba no se ve nada porque está superpuesto el clavo",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 26,
+        "start": 0,
+        "end": 78
+      }
+    },
+    {
+      "start": 63.54,
+      "end": 68.04,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "De la parte de abajo de la podadora hacia la derecha se ve un poquito",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 27,
+        "start": 0,
+        "end": 69
+      }
+    },
+    {
+      "start": 69.06,
+      "end": 71.88,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y la punta sobre sale poco, dijiste?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 28,
+        "start": 0,
+        "end": 36
+      }
+    },
+    {
+      "start": 72.06,
+      "end": 76.28,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La punta sobre sale entera casi",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 29,
+        "start": 0,
+        "end": 31
+      }
+    },
+    {
+      "start": 76.28,
+      "end": 78.08,
+      "speaker": null,
+      "name": null,
+      "text": "El triángulo de la punta",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 30,
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "start": 78.08,
+      "end": 79.56,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El triángulo de la punta sobre sale entero",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 31,
+        "start": 0,
+        "end": 42
+      }
+    }
+  ]
+}

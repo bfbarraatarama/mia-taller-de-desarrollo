@@ -1,0 +1,261 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 12.44,
+      "text": "bueno tenés que agarrar la cebolla y ponerla arriba de la ballenita entre el coso verde ese y el M&M",
+      "words": [
+        {
+          "word": "bueno",
+          "start": 0.0,
+          "end": 1.04
+        },
+        {
+          "word": "tenés",
+          "start": 1.04,
+          "end": 1.36
+        },
+        {
+          "word": "que",
+          "start": 1.36,
+          "end": 1.52
+        },
+        {
+          "word": "agarrar",
+          "start": 1.52,
+          "end": 1.94
+        },
+        {
+          "word": "la",
+          "start": 1.94,
+          "end": 2.6
+        },
+        {
+          "word": "cebolla",
+          "start": 2.6,
+          "end": 3.74
+        },
+        {
+          "word": "y",
+          "start": 3.74,
+          "end": 4.0
+        },
+        {
+          "word": "ponerla",
+          "start": 4.0,
+          "end": 4.78
+        },
+        {
+          "word": "arriba",
+          "start": 4.78,
+          "end": 5.72
+        },
+        {
+          "word": "de",
+          "start": 5.72,
+          "end": 5.86
+        },
+        {
+          "word": "la",
+          "start": 5.86,
+          "end": 6.02
+        },
+        {
+          "word": "ballenita",
+          "start": 6.02,
+          "end": 6.64
+        },
+        {
+          "word": "entre",
+          "start": 6.64,
+          "end": 8.92
+        },
+        {
+          "word": "el",
+          "start": 8.92,
+          "end": 9.58
+        },
+        {
+          "word": "coso",
+          "start": 9.58,
+          "end": 9.94
+        },
+        {
+          "word": "verde",
+          "start": 9.94,
+          "end": 10.16
+        },
+        {
+          "word": "ese",
+          "start": 10.16,
+          "end": 10.62
+        },
+        {
+          "word": "y",
+          "start": 10.62,
+          "end": 10.8
+        },
+        {
+          "word": "el",
+          "start": 10.8,
+          "end": 11.08
+        },
+        {
+          "word": "M",
+          "start": 11.08,
+          "end": 11.28
+        },
+        {
+          "word": "&M",
+          "start": 11.28,
+          "end": 12.44
+        }
+      ]
+    },
+    {
+      "start": 12.44,
+      "end": 15.52,
+      "text": "pero más que nada es como cerca de la ballena",
+      "words": [
+        {
+          "word": "pero",
+          "start": 12.44,
+          "end": 13.26
+        },
+        {
+          "word": "más",
+          "start": 13.26,
+          "end": 13.44
+        },
+        {
+          "word": "que",
+          "start": 13.44,
+          "end": 13.62
+        },
+        {
+          "word": "nada",
+          "start": 13.62,
+          "end": 13.86
+        },
+        {
+          "word": "es",
+          "start": 13.86,
+          "end": 14.18
+        },
+        {
+          "word": "como",
+          "start": 14.18,
+          "end": 14.4
+        },
+        {
+          "word": "cerca",
+          "start": 14.4,
+          "end": 14.58
+        },
+        {
+          "word": "de",
+          "start": 14.58,
+          "end": 14.7
+        },
+        {
+          "word": "la",
+          "start": 14.7,
+          "end": 14.84
+        },
+        {
+          "word": "ballena",
+          "start": 14.84,
+          "end": 15.52
+        }
+      ]
+    },
+    {
+      "start": 15.52,
+      "end": 22.2,
+      "text": "sobre la ballena, a la derecha del M&M, abajo del limón, cerca de la ballena",
+      "words": [
+        {
+          "word": "sobre",
+          "start": 15.52,
+          "end": 16.04
+        },
+        {
+          "word": "la",
+          "start": 16.04,
+          "end": 16.26
+        },
+        {
+          "word": "ballena,",
+          "start": 16.26,
+          "end": 17.04
+        },
+        {
+          "word": "a",
+          "start": 17.14,
+          "end": 18.52
+        },
+        {
+          "word": "la",
+          "start": 18.52,
+          "end": 18.88
+        },
+        {
+          "word": "derecha",
+          "start": 18.88,
+          "end": 19.14
+        },
+        {
+          "word": "del",
+          "start": 19.14,
+          "end": 19.26
+        },
+        {
+          "word": "M",
+          "start": 19.26,
+          "end": 19.52
+        },
+        {
+          "word": "&M,",
+          "start": 19.52,
+          "end": 19.96
+        },
+        {
+          "word": "abajo",
+          "start": 20.16,
+          "end": 20.3
+        },
+        {
+          "word": "del",
+          "start": 20.3,
+          "end": 20.46
+        },
+        {
+          "word": "limón,",
+          "start": 20.46,
+          "end": 21.08
+        },
+        {
+          "word": "cerca",
+          "start": 21.24,
+          "end": 21.5
+        },
+        {
+          "word": "de",
+          "start": 21.5,
+          "end": 21.66
+        },
+        {
+          "word": "la",
+          "start": 21.66,
+          "end": 21.74
+        },
+        {
+          "word": "ballena",
+          "start": 21.74,
+          "end": 22.2
+        }
+      ]
+    }
+  ]
+}

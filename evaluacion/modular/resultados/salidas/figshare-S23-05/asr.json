@@ -1,0 +1,395 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 1.06,
+      "end": 15.4,
+      "text": "tenés que agarrar el león azul y lo tenés que ir llevando a la izquierda del mimo, abajo del clavo, pero un poquito más arriba",
+      "words": [
+        {
+          "word": "tenés",
+          "start": 1.06,
+          "end": 1.72
+        },
+        {
+          "word": "que",
+          "start": 1.72,
+          "end": 1.86
+        },
+        {
+          "word": "agarrar",
+          "start": 1.86,
+          "end": 2.18
+        },
+        {
+          "word": "el",
+          "start": 2.18,
+          "end": 2.38
+        },
+        {
+          "word": "león",
+          "start": 2.38,
+          "end": 2.64
+        },
+        {
+          "word": "azul",
+          "start": 2.64,
+          "end": 3.68
+        },
+        {
+          "word": "y",
+          "start": 3.68,
+          "end": 5.78
+        },
+        {
+          "word": "lo",
+          "start": 5.78,
+          "end": 6.18
+        },
+        {
+          "word": "tenés",
+          "start": 6.18,
+          "end": 6.5
+        },
+        {
+          "word": "que",
+          "start": 6.5,
+          "end": 6.98
+        },
+        {
+          "word": "ir",
+          "start": 6.98,
+          "end": 7.24
+        },
+        {
+          "word": "llevando",
+          "start": 7.24,
+          "end": 7.68
+        },
+        {
+          "word": "a",
+          "start": 7.68,
+          "end": 9.14
+        },
+        {
+          "word": "la",
+          "start": 9.14,
+          "end": 9.3
+        },
+        {
+          "word": "izquierda",
+          "start": 9.3,
+          "end": 9.74
+        },
+        {
+          "word": "del",
+          "start": 9.74,
+          "end": 10.0
+        },
+        {
+          "word": "mimo,",
+          "start": 10.0,
+          "end": 10.94
+        },
+        {
+          "word": "abajo",
+          "start": 11.4,
+          "end": 11.84
+        },
+        {
+          "word": "del",
+          "start": 11.84,
+          "end": 12.08
+        },
+        {
+          "word": "clavo,",
+          "start": 12.08,
+          "end": 12.5
+        },
+        {
+          "word": "pero",
+          "start": 12.68,
+          "end": 12.74
+        },
+        {
+          "word": "un",
+          "start": 12.74,
+          "end": 12.98
+        },
+        {
+          "word": "poquito",
+          "start": 12.98,
+          "end": 13.32
+        },
+        {
+          "word": "más",
+          "start": 13.32,
+          "end": 13.74
+        },
+        {
+          "word": "arriba",
+          "start": 13.74,
+          "end": 15.4
+        }
+      ]
+    },
+    {
+      "start": 15.4,
+      "end": 21.0,
+      "text": "ponéle que no sé, menos de un centímetro más arriba que el mimo",
+      "words": [
+        {
+          "word": "ponéle",
+          "start": 15.4,
+          "end": 16.42
+        },
+        {
+          "word": "que",
+          "start": 16.42,
+          "end": 16.44
+        },
+        {
+          "word": "no",
+          "start": 16.44,
+          "end": 16.64
+        },
+        {
+          "word": "sé,",
+          "start": 16.64,
+          "end": 17.74
+        },
+        {
+          "word": "menos",
+          "start": 18.08,
+          "end": 18.34
+        },
+        {
+          "word": "de",
+          "start": 18.34,
+          "end": 18.6
+        },
+        {
+          "word": "un",
+          "start": 18.6,
+          "end": 18.74
+        },
+        {
+          "word": "centímetro",
+          "start": 18.74,
+          "end": 19.2
+        },
+        {
+          "word": "más",
+          "start": 19.2,
+          "end": 19.58
+        },
+        {
+          "word": "arriba",
+          "start": 19.58,
+          "end": 19.8
+        },
+        {
+          "word": "que",
+          "start": 19.8,
+          "end": 19.88
+        },
+        {
+          "word": "el",
+          "start": 19.88,
+          "end": 20.1
+        },
+        {
+          "word": "mimo",
+          "start": 20.1,
+          "end": 21.0
+        }
+      ]
+    },
+    {
+      "start": 21.8,
+      "end": 26.0,
+      "text": "o sea, encuentra la intersección y vuelve un centímetro más arriba",
+      "words": [
+        {
+          "word": "o",
+          "start": 21.8,
+          "end": 22.46
+        },
+        {
+          "word": "sea,",
+          "start": 22.46,
+          "end": 22.94
+        },
+        {
+          "word": "encuentra",
+          "start": 23.06,
+          "end": 23.32
+        },
+        {
+          "word": "la",
+          "start": 23.32,
+          "end": 23.52
+        },
+        {
+          "word": "intersección",
+          "start": 23.52,
+          "end": 24.24
+        },
+        {
+          "word": "y",
+          "start": 24.24,
+          "end": 24.88
+        },
+        {
+          "word": "vuelve",
+          "start": 24.88,
+          "end": 25.04
+        },
+        {
+          "word": "centímetro",
+          "start": 25.04,
+          "end": 25.32
+        },
+        {
+          "word": "más",
+          "start": 25.32,
+          "end": 25.36
+        },
+        {
+          "word": "arriba",
+          "start": 25.36,
+          "end": 26.0
+        }
+      ]
+    },
+    {
+      "start": 26.68,
+      "end": 29.82,
+      "text": "digamos a la misma altura que la podadora o un poco más arriba o más abajo?",
+      "words": [
+        {
+          "word": "digamos",
+          "start": 26.68,
+          "end": 27.04
+        },
+        {
+          "word": "a",
+          "start": 27.04,
+          "end": 27.22
+        },
+        {
+          "word": "la",
+          "start": 27.22,
+          "end": 27.44
+        },
+        {
+          "word": "misma",
+          "start": 27.44,
+          "end": 27.78
+        },
+        {
+          "word": "altura",
+          "start": 27.78,
+          "end": 27.86
+        },
+        {
+          "word": "que",
+          "start": 27.86,
+          "end": 28.04
+        },
+        {
+          "word": "la",
+          "start": 28.04,
+          "end": 28.22
+        },
+        {
+          "word": "podadora",
+          "start": 28.22,
+          "end": 28.66
+        },
+        {
+          "word": "o",
+          "start": 28.66,
+          "end": 28.82
+        },
+        {
+          "word": "un",
+          "start": 28.82,
+          "end": 28.88
+        },
+        {
+          "word": "poco",
+          "start": 28.88,
+          "end": 29.02
+        },
+        {
+          "word": "más",
+          "start": 29.02,
+          "end": 29.18
+        },
+        {
+          "word": "arriba",
+          "start": 29.18,
+          "end": 29.4
+        },
+        {
+          "word": "o",
+          "start": 29.4,
+          "end": 29.52
+        },
+        {
+          "word": "más",
+          "start": 29.52,
+          "end": 29.62
+        },
+        {
+          "word": "abajo?",
+          "start": 29.62,
+          "end": 29.82
+        }
+      ]
+    },
+    {
+      "start": 30.0,
+      "end": 31.64,
+      "text": "eh sí, a la misma altura que la podadora",
+      "words": [
+        {
+          "word": "sí,",
+          "start": 30.0,
+          "end": 30.3
+        },
+        {
+          "word": "la",
+          "start": 30.44,
+          "end": 30.52
+        },
+        {
+          "word": "misma",
+          "start": 30.52,
+          "end": 30.64
+        },
+        {
+          "word": "altura",
+          "start": 30.64,
+          "end": 30.92
+        },
+        {
+          "word": "que",
+          "start": 30.92,
+          "end": 31.02
+        },
+        {
+          "word": "la",
+          "start": 31.02,
+          "end": 31.18
+        },
+        {
+          "word": "podadora",
+          "start": 31.18,
+          "end": 31.64
+        }
+      ]
+    }
+  ]
+}
