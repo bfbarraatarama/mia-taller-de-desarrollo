@@ -47,7 +47,7 @@ def test_hypothesis_recorta_segmentos_que_empiezan_despues_del_limite(tmp_path):
 def test_wer_de_textos_normalizados():
     ref = wer.normalize("Uno, dos, tres, cuatro.")
     hyp = wer.normalize("uno dos TRES")
-    assert wer.jiwer.wer(ref, hyp) == pytest.approx(0.25)
+    assert wer.word_error_rate(ref, hyp) == pytest.approx(0.25)
 
 
 def test_seleccion_cordeba_es_determinista_y_respeta_exclusiones():

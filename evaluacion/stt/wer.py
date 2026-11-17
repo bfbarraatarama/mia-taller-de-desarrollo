@@ -22,11 +22,11 @@ import sys
 import unicodedata
 from pathlib import Path
 
-import jiwer
 import pandas as pd
 
 from src.rutas import ARCHIVO_ASR
 
+from evaluacion.modular.metricas_stt import errores
 from evaluacion.stt.ejemplos import (
     CORDEBA_CACHE,
     HUMYN_CACHE,
@@ -56,6 +56,11 @@ def parse_timestamp(value: str) -> float:
     """Convert 'HH:MM:SS.mmm' to seconds."""
     h, m, s = value.split(":")
     return int(h) * 3600 + int(m) * 60 + float(s)
+
+
+def word_error_rate(reference: str, hypothesis: str) -> float:
+    """WER of two normalized texts, using the alignment shared with evaluacion/modular."""
+    return errores(reference.split(), hypothesis.split())["wer"]
 
 
 def load_hypothesis(test_id: str, until: float, base: Path = OUTPUT_BASE) -> str:
@@ -126,7 +131,7 @@ def main() -> int:
             logger.warning(f"SKIP {test_id}: ground truth not found")
             continue
         ref, until = entry
-        results[test_id] = jiwer.wer(ref, load_hypothesis(test_id, until))
+        results[test_id] = word_error_rate(ref, load_hypothesis(test_id, until))
         RESULTADOS_ASR.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(OUTPUT_BASE / test_id / ARCHIVO_ASR, RESULTADOS_ASR / f"{test_id}.json")
         logger.info(f"{test_id}: WER = {results[test_id]:.2%}")
