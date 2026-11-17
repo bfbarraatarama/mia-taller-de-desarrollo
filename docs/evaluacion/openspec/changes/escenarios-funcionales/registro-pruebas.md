@@ -33,7 +33,26 @@ Las comprobaciones automáticas verifican lo que se ve en los archivos; la calid
 | Procesable | Sí: el pipeline lo procesó completo, con minuta | |
 | La aplicación lo ofrece al reiniciar | Pendiente del recorrido del tercero | |
 
+## Nivel 2 · happy path (17/11/2026)
+
+Reunión de prueba del #14 (OSM LatAm, 339 s, SHA-256 `c9377dd2…`) reproducida por el audio del sistema y grabada con la captura de la aplicación (`resultados/happy_path.json`).
+
+| | Resultado |
+|---|---|
+| Grabación | Guardada en el directorio elegido: 350,04 s, estado «completa»; reproducción de 14:50:53 a 14:56:32 |
+| Captura | Sistema −30,9 dBFS RMS (pico −8,7); sin pérdidas (0,005 s faltantes, 0 desbordes); sin desincronización; salida procesable |
+| Micrófono | −∞ dBFS (muestras en cero) durante los 350 s. El operador declara que la grabación se hizo en un lugar muy silencioso y sin habla local. La prueba «ambas fuentes registran señal» queda en FALLA por el micrófono; no afecta el contenido procesado |
+| Proceso | Completado en 215,4 s (diarización 33,9 s, transcripción 58,5 s, minuta 122,5 s): 3 hablantes y 49 intervenciones (con el WAV directo, corrida 01 del #14: 3 y 52); minuta con 2 temas, 1 decisión, 2 problemas y 3 acciones |
+| Calidad y varios archivos | Medidos en el #14 (corridas 01 y 02) |
+| Pendiente manual | Avance de cada etapa y fichas, en la interfaz |
+
+Observación: el responsable de la acción del foro sale «Rafael» en esta corrida (sin fichas, el nombre lo toma el modelo del habla) y «Jorge» en la corrida 01 del #14, donde el operador nombró las fichas; en el audio, Marta le dice «Rafael» a ese hablante. Lo juzga la evaluación de calidad del #14.
+
+## Nivel 2 · 2.1.1 terminología especializada (17/11/2026)
+
+Transcripción de la corrida 01 del #14 (WAV directo de OSM LatAm; `resultados/terminologia.json`): audio conservado con su SHA-256 y sin adaptación terminológica (Whisper sin prompt inicial ni vocabulario propio). Términos: Discourse, la plataforma del foro, sale «discurso» y «discurs» (00:21 y 01:14); OpenStreetMap, mapatón, notatón, wiki, Telegram, TikTok, Instagram, Mapillary, stickers, logo contest y podcasts salen bien; StreetComplete sale en dos palabras; dos fragmentos dudosos (04:19 y 05:00). Sin transcripción de referencia: la lista la confirma el tercero.
+
 ## Pendiente
 
 - Recorrido del tercero (`evaluacion/escenarios/PROTOCOLO.md`): las comprobaciones manuales y la confirmación con la aplicación abierta.
-- Happy path (reunión de prueba del #14) y 2.1.1 (grabación con terminología especializada).
+- Confirmaciones del tercero para el happy path (interfaz) y para la lista de términos de 2.1.1.

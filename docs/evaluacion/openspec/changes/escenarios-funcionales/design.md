@@ -44,6 +44,26 @@ Motivo: castellano, ya verificada con hash, supera el bloque del LLM y además e
 
 Motivo: reproducible y comparable con la misma tarea limpia.
 
+### D5. Happy path
+
+| Alternativa | Descripción | Resultado |
+|---|---|---|
+| **A** | **Reproducir la reunión de prueba del #14 (OSM LatAm) por el audio del sistema y grabarla con la captura de la aplicación en un directorio elegido; procesarla** | **Elegida** |
+| B | Usar solo las corridas del #14 (WAV directo) | Descartada: no ejercita «guarda la grabación en el directorio elegido» |
+| C | Grabar una reunión propia | Descartada: requiere personas, consentimiento y notas nuevas |
+
+Motivo: cubre la grabación con la aplicación; la calidad y los varios archivos ya están medidos en el #14 y no se repiten.
+
+### D6. Entrada de 2.1.1 (terminología)
+
+| Alternativa | Descripción | Resultado |
+|---|---|---|
+| **A** | **La reunión de OSM, con la transcripción de la corrida 01 del #14 (WAV directo)** | **Elegida** |
+| B | Un tramo de ICSI o AMI | Descartada: en inglés |
+| C | Grabar un guion con jerga | Descartada: habla leída, requiere grabar |
+
+Motivo: tiene jerga y anglicismos de OpenStreetMap; no hay que grabar ni volver a inferir.
+
 ## Precisiones
 
 | Tema | Precisión |
@@ -57,3 +77,5 @@ Motivo: reproducible y comparable con la misma tarea limpia.
 | Interfaz | La aplicación busca grabaciones interrumpidas en la carpeta de su campo «salida» al iniciar: el protocolo indica elegir la carpeta de la prueba y reabrir |
 | Carpeta por corrida (revisión del #24) | `correr` usa una carpeta nueva para cada escenario; la de una corrida anterior se conserva como `<escenario>.anterior`. `comprobar` recibe el código de salida de la corrida evaluada: con código distinto de 0, «Termina o informa la falla» solo es «sí» si la aplicación informó el error y no quedó como completada |
 | Superposición (revisión del #24) | Los segundos superpuestos cuentan solo dos o más etiquetas distintas a la vez; los turnos de una misma etiqueta se unen antes. Sobre las corridas del 16/11 el resultado no cambia (15,187 s en 2.1.2) |
+| Happy path (17/11/2026) | La reunión se reprodujo con `pw-play` por la salida del sistema y se grabó con `src.captura.captura --duracion 350` en `corridas/happy-path/grabaciones/`; se procesó con `src.pipeline ejecutar` (sin fichas: la línea de comandos las saltea). El micrófono registró −∞ dBFS (muestras en cero); el operador declara un lugar muy silencioso sin habla local |
+| 2.1.1 sin referencia | No hay transcripción de referencia de la reunión: la lista de términos es una propuesta que confirma el tercero escuchando el audio |

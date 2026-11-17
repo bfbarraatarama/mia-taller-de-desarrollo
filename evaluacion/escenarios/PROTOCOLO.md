@@ -20,8 +20,13 @@ En la aplicación, elegir como directorio de salida una carpeta nueva por escena
 
 | Escenario | Entrada | «Entonces» de §2.1 | Automático | Tercero (sí/no) | Observaciones |
 |---|---|---|---|---|---|
-| Happy path | Reunión de prueba del #14 (pendiente) | Graba en el directorio elegido; se ve el avance de cada etapa; aparece una ficha por hablante con fragmento y texto; transcripción con nombres y marcas temporales; minuta con temas, decisiones y acciones con responsable y marca temporal; recupera los 2 temas y la acción sin inventar; la misma reunión en varios archivos da una sola transcripción y una sola minuta | — | | Pendiente de la entrada |
-| 2.1.1 Terminología | Grabación con terminología y anglicismos (pendiente) | Transcribe sin adaptación terminológica y conserva el audio | — | | Pendiente de la entrada |
+| Happy path | `evaluacion/integral/muestras/osm-latam-20220730/audio.wav` (reunión de prueba del #14) | Grabar unos 30 s desde la interfaz en un directorio elegido: queda guardada ahí | ver `happy_path.json` | | |
+| | Procesar el audio de la reunión: se ve el avance de cada etapa | manual | | |
+| | Aparece una ficha por hablante con fragmento de audio y texto; escuchar y escribir el nombre. Comprobar que el nombre corresponde a quien habla (en el audio, Marta le dice «Rafael» a uno de ellos) | manual | | |
+| | Transcripción con nombres y marcas temporales; minuta con temas, decisiones y acciones con responsable y marca temporal | ver `happy_path.json` | | |
+| | Recupera los 2 temas y la acción sin inventar; la misma reunión en varios archivos da una sola transcripción y una sola minuta | ver `calidad.md` del #14 | | |
+| 2.1.1 Terminología | La misma reunión de OSM | Transcribe sin adaptación terminológica y conserva el audio | ver `terminologia.json` | | |
+| | | Escuchar y confirmar la lista de términos de `terminologia.json` (por ejemplo, Discourse → «discurso») | manual | | |
 | 2.1.2 Voces y superposición | `evaluacion/modular/datos/figshare/S25/12/audio.wav` | Conserva etiquetas, intervalos y solapamientos | ver reporte | | |
 | | | Marca las intervenciones de hablante ambiguo (en el visor de la transcripción) | ver reporte | | |
 | | | Si separa a una persona en dos etiquetas, ponerles el mismo nombre en las fichas: se tratan como una sola | manual | | |

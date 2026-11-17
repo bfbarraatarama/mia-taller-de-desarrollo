@@ -1,0 +1,117 @@
+{
+  "escenario": "2.1.1 Terminología especializada",
+  "entrada": "OSM LatAm 2022-07-30 (339 s), procesada como WAV directo en la corrida 01 del #14: evaluacion/integral/resultados/baseline/corridas/01",
+  "transcription_sha256": "ae43f58508af4bb0c24b1a559ca6720f30bb32c4098d6f36d6e1d98a9a96c17e",
+  "comprobaciones": [
+    {
+      "comprobacion": "Conserva el audio",
+      "resultado": "sí",
+      "evidencia": "copia conservada con el SHA-256 de la entrada (ecd4b4781bf614fb…)"
+    },
+    {
+      "comprobacion": "Transcribe sin adaptación terminológica",
+      "resultado": "sí",
+      "evidencia": "src/stt no usa prompt inicial ni vocabulario propio; corrida completada"
+    }
+  ],
+  "terminos": [
+    {
+      "termino": "Discourse (plataforma del foro de OSM)",
+      "marcas": [
+        "00:21",
+        "01:14"
+      ],
+      "transcripcion": [
+        "discurso",
+        "discurs"
+      ],
+      "propuesta": "mal transcrito"
+    },
+    {
+      "termino": "OpenStreetMap",
+      "marcas": [
+        "00:15"
+      ],
+      "transcripcion": [
+        "OpenStreetMap"
+      ],
+      "propuesta": "correcto"
+    },
+    {
+      "termino": "mapatón, notatón",
+      "marcas": [
+        "00:27",
+        "01:38",
+        "02:19"
+      ],
+      "transcripcion": [
+        "mapatón",
+        "notatón"
+      ],
+      "propuesta": "correcto"
+    },
+    {
+      "termino": "wiki, log, Telegram, stickers, logo contest, apps, podcasts",
+      "marcas": [
+        "varias"
+      ],
+      "transcripcion": [
+        "correctos; «telegram» en minúscula"
+      ],
+      "propuesta": "correcto"
+    },
+    {
+      "termino": "TikTok, Instagram, like",
+      "marcas": [
+        "02:52",
+        "04:27",
+        "05:22"
+      ],
+      "transcripcion": [
+        "correctos"
+      ],
+      "propuesta": "correcto"
+    },
+    {
+      "termino": "Mapillary",
+      "marcas": [
+        "03:27"
+      ],
+      "transcripcion": [
+        "Mapillary"
+      ],
+      "propuesta": "correcto"
+    },
+    {
+      "termino": "StreetComplete",
+      "marcas": [
+        "03:27"
+      ],
+      "transcripcion": [
+        "Street Complete"
+      ],
+      "propuesta": "separado en dos palabras"
+    },
+    {
+      "termino": "grupo local de Bogotá",
+      "marcas": [
+        "04:19"
+      ],
+      "transcripcion": [
+        "por mapa en Bogotá"
+      ],
+      "propuesta": "dudoso (¿nombre de un grupo?)"
+    },
+    {
+      "termino": "fragmento sobre la wiki",
+      "marcas": [
+        "05:00"
+      ],
+      "transcripcion": [
+        "comodita del Wiki"
+      ],
+      "propuesta": "dudoso (¿«cómo editar la wiki»?)"
+    }
+  ],
+  "nota": "Sin transcripción de referencia: la lista es una propuesta que confirma el tercero escuchando el audio (protocolo)."
+}
