@@ -1,0 +1,213 @@
+{
+  "escenarios": {
+    "2.1.2": {
+      "escenario": "2.1.2",
+      "detalle": {
+        "estado": "completado",
+        "etiquetas_detectadas": 2,
+        "segundos_superpuestos_diarizacion": 15.187,
+        "intervenciones": 69,
+        "intervenciones_ambiguas": 48,
+        "intervenciones_overlap": 23
+      },
+      "comprobaciones": [
+        {
+          "comprobacion": "Conserva el audio",
+          "resultado": "sí",
+          "evidencia": "1 de 1 fuentes conservadas con su SHA-256"
+        },
+        {
+          "comprobacion": "Termina o informa la falla",
+          "resultado": "sí",
+          "evidencia": "pipeline completado"
+        },
+        {
+          "comprobacion": "Conserva los solapamientos de la diarización",
+          "resultado": "sí",
+          "evidencia": "15.187 s con dos o más etiquetas"
+        },
+        {
+          "comprobacion": "Marca intervenciones de hablante ambiguo",
+          "resultado": "sí",
+          "evidencia": "48 ambiguous y 23 overlap de 69"
+        },
+        {
+          "comprobacion": "Mismo nombre en dos etiquetas: una sola persona",
+          "resultado": "manual",
+          "evidencia": "se comprueba en las fichas (protocolo)"
+        }
+      ],
+      "veredicto_automatico": "sí",
+      "pendientes_manuales": 1,
+      "corrida": {
+        "escenario": "2.1.2",
+        "codigo": 0,
+        "segundos": 252.1
+      }
+    },
+    "2.1.3": {
+      "escenario": "2.1.3",
+      "detalle": {
+        "estado": "completado",
+        "etiquetas_detectadas": 6,
+        "segundos_superpuestos_diarizacion": 14.412,
+        "intervenciones": 214,
+        "intervenciones_ambiguas": 60,
+        "intervenciones_overlap": 20
+      },
+      "comprobaciones": [
+        {
+          "comprobacion": "Conserva el audio",
+          "resultado": "sí",
+          "evidencia": "1 de 1 fuentes conservadas con su SHA-256"
+        },
+        {
+          "comprobacion": "Termina o informa la falla",
+          "resultado": "sí",
+          "evidencia": "pipeline completado"
+        },
+        {
+          "comprobacion": "Etiqueta a cada hablante detectado",
+          "resultado": "sí",
+          "evidencia": "6 etiquetas en la diarización"
+        },
+        {
+          "comprobacion": "Marca como ambiguas las intervenciones sin hablante",
+          "resultado": "sí",
+          "evidencia": "21 sin hablante; 60 ambiguas en total"
+        },
+        {
+          "comprobacion": "Ficha y nombre para cada hablante",
+          "resultado": "manual",
+          "evidencia": "se comprueba en las fichas (protocolo)"
+        }
+      ],
+      "veredicto_automatico": "sí",
+      "pendientes_manuales": 1,
+      "corrida": {
+        "escenario": "2.1.3",
+        "codigo": 0,
+        "segundos": 601.9
+      }
+    },
+    "2.1.4": {
+      "escenario": "2.1.4",
+      "detalle": {
+        "estado": "completado",
+        "etiquetas_detectadas": 2,
+        "segundos_superpuestos_diarizacion": 0.59,
+        "intervenciones": 10,
+        "intervenciones_ambiguas": 5,
+        "intervenciones_overlap": 1
+      },
+      "comprobaciones": [
+        {
+          "comprobacion": "Conserva el audio",
+          "resultado": "sí",
+          "evidencia": "1 de 1 fuentes conservadas con su SHA-256"
+        },
+        {
+          "comprobacion": "Termina o informa la falla",
+          "resultado": "sí",
+          "evidencia": "pipeline completado"
+        },
+        {
+          "comprobacion": "Conserva los resultados",
+          "resultado": "sí",
+          "evidencia": "transcripción y minuta presentes"
+        }
+      ],
+      "veredicto_automatico": "sí",
+      "pendientes_manuales": 0,
+      "corrida": {
+        "escenario": "2.1.4",
+        "codigo": 0,
+        "segundos": 61.7
+      }
+    },
+    "2.1.5": {
+      "escenario": "2.1.5",
+      "detalle": {
+        "estado": "completado",
+        "etiquetas_detectadas": 2,
+        "segundos_superpuestos_diarizacion": 146.59,
+        "intervenciones": 1100,
+        "intervenciones_ambiguas": 538,
+        "intervenciones_overlap": 223,
+        "bloques_extraccion": 27
+      },
+      "comprobaciones": [
+        {
+          "comprobacion": "Conserva el audio",
+          "resultado": "sí",
+          "evidencia": "30 de 30 fuentes conservadas con su SHA-256"
+        },
+        {
+          "comprobacion": "Termina o informa la falla",
+          "resultado": "sí",
+          "evidencia": "pipeline completado"
+        },
+        {
+          "comprobacion": "Procesa la minuta por fragmentos",
+          "resultado": "sí",
+          "evidencia": "27 bloques de extracción"
+        },
+        {
+          "comprobacion": "Una sola transcripción para todos los archivos, en orden",
+          "resultado": "sí",
+          "evidencia": "30 archivos en una reunión"
+        }
+      ],
+      "veredicto_automatico": "sí",
+      "pendientes_manuales": 0,
+      "corrida": {
+        "escenario": "2.1.5",
+        "codigo": 0,
+        "segundos": 3605.2
+      }
+    }
+  },
+  "entradas": {
+    "2.1.2": [
+      "d9fb6dad141516a2202abead9c08824a3d1aeaa9f4f29a5ad7d7acdebc344f86"
+    ],
+    "2.1.3": [
+      "395768148dab1fcfbddaf35f886d3c360d61efa59bc3836804e243894565d589"
+    ],
+    "2.1.4": [
+      "7b5a86d3246cccbc2ec2cfdbd7b335304f5fdf4fd46aab44016bd730eb1a4785"
+    ],
+    "2.1.5": [
+      "d3044be25393b263bbf7af5a9c365b2c001bbc9b6c0c041f04d531a3b5583340",
+      "b23470a69a85d290bd7752348cecc51dd2b9afd79ac24758774c1c7d1ff477c5",
+      "2326c9dea8e6d62cc6e6706223bd8715ad9c34eeecbd33506a2045f46f987d63",
+      "78ed1dba151bb19ab3277d7c3463f698c7a2ab0970c2a24beb9f3607837de144",
+      "be2bce7c2152b135e9030ca03e058c8f37660c79035f841e815fa6dd53cded90",
+      "4d718d2072964ff9e8bada147a02f89101c1ae9c6b97d5ddfffc71349c81dc78",
+      "35be0a223ecdb417070fd78b2ee7c8cdcf508124827aad4d68e81c7c88399b23",
+      "05d17052c50ae15aa27ae96bdba9ed2b0876bf1da73d23e140d929fa1ef23e99",
+      "c7cd0cca480c43b2ee985af8d6f2e1752c9966402a1a416563f5794faa565a1c",
+      "f5f5a285754b93784f23bb89627449d5bc84f4e615623bcaff7912004ba27a97",
+      "61caa3f902cc7929196c28dcb347ccb29de15319410676ded08d56f0f2d7a311",
+      "d9fb6dad141516a2202abead9c08824a3d1aeaa9f4f29a5ad7d7acdebc344f86",
+      "176e40bca6c83c55f2d658dd0e5943d3503058fa308a11079d9d57c843fb28b3",
+      "934b9ac6d197f258cb0edc2e0dbddfc38bb9d30c2853e80ffbb292050e501e0e",
+      "0363f87fe60b18b92d60a895946755de99dc5638a95f6cc9423ddd8ee857ce81",
+      "8a60bdc88c7752718bfbcaca737b98d308f1b745e96c409d5ec952cee1850aa2",
+      "a31599c1c4bef11795df310b449898f8f10f09b3758f3a75c67d28e884358dc9",
+      "f87c3a83eb21c73c827762c5e25e90a51bf2b0076952724b3c55881eb2cba441",
+      "b01fefb29ebaf6a7ff0eb645bde60248bf481a3576fb9d714a850505ea3ee44a",
+      "b8a989f226473f4e1da562d5de047c1971c88653440b40b0bfd37b2b2f000e62",
+      "08dbb75760d6f1ef85d7beb231195036bb0a0bbfad3af108d08efdbb3742da82",
+      "268c594047e9d6a1d02651977502cb1bd6f4807880077e69530e65f50fc87107",
+      "6072d1707d6e19af47e5bdc198ddceb706cc70b7b7ccf6b1774089c3ac51b283",
+      "120dd3bc9a68127263130d1d9d0017831ee721a7993bacaa4ab03ef8c470c5ff",
+      "72e49a39ae8dc0e2785a7ea62310d34410ef5177d12b8d6a0e44f8e0fb305525",
+      "d9beddf14f5ac12a967eac49108e82d21f703f38528aa6ae4a0ed6ec4695966f",
+      "0f5b3216666e98572bbdb3a19ef6211bf188f789451925305bd5d7cd5973a07b",
+      "03ba72f4695fb1b9a0ee7aa0aa16fec21b6a1c4d0dbfa2d12875d7a6960d7808",
+      "9abc2b4865beb578482197b3650ead1341bc5f7bbf4e14ffa11c56cd0f648e1d",
+      "e5ec8753e2a949d746310aff846a656129810dba4ae765508891d214da87ac07"
+    ]
+  }
+}
