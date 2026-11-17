@@ -23,7 +23,9 @@ La [definición del Hito 3](../hito-3/definicion-de-la-poc.md) es la fuente de a
 ## Evidencia y alcance de la validación
 
 - [Validación de la integración](validacion-integracion.md): procedimientos, resultados funcionales, límites y evaluación pendiente.
+- [Evaluación integral del baseline](../evaluacion/integral/README.md): protocolo reproducible de calidad y latencia.
 - [Hito 2](../hito-2/README.md): fuentes y análisis de viabilidad, preservados como entregable académico anterior.
 - [Criterios de aceptación del Hito 3](../hito-3/definicion-de-la-poc.md#23-criterios-de-aceptación): referencia normativa de la evaluación de la PoC.
+- [Evaluación modular](../evaluacion/modular/README.md): muestra congelada de §2.3, contratos de los cuatro módulos y métricas sin umbral (issue #13).
 
 La documentación de `src/` remite a estas guías. Los procedimientos y resultados específicos de evaluación se encuentran en `evaluacion/`. Los registros originales de OpenSpec describen el estado de cada etapa durante su desarrollo; conservan sus rutas y comandos históricos como evidencia, no como instrucciones vigentes. Sus configuraciones apuntan a las ubicaciones actuales; ejecutar su CLI desde `docs/diarizacion/` o `docs/asociacion/`, respectivamente.

@@ -10,6 +10,7 @@ salida = "evaluacion/modular/datos"                    # audio y derivados: loca
 manifiesto = "evaluacion/modular/muestra.manifest.json"  # se versiona
 inferencia = "evaluacion/modular/inferencia"            # salidas de los módulos: locales, no se versionan
 resultados = "evaluacion/modular/resultados"            # reportes de evaluar: se versionan
+salidas = "evaluacion/modular/resultados/salidas"       # JSON de los módulos publicados por evaluar: se versionan
 
 # Configuración de la inferencia (D15: baseline de §3.1.1).
 [modelos]

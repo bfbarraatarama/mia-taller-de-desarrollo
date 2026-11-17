@@ -1,0 +1,1337 @@
+{
+  "gpu_objetivo_reportada": true,
+  "tipo": "formal",
+  "equipo_declarado": "Máquina de Matías: RTX 3050 Laptop, 6 GB VRAM, 31 GB RAM",
+  "duracion_audio_s": 339.0,
+  "sha256_muestra": "0e08fc297e55b17708d21becf962f05d960b86a3e07f5c454f128752d2955bbf",
+  "corridas": [
+    {
+      "version": 1,
+      "corrida": 1,
+      "modalidad": "unico",
+      "estado": "completada",
+      "inicio_utc": "2026-11-17T12:02:02.632082+00:00",
+      "operador": "Matías Caccia",
+      "condiciones": "Notebook conectada a la red eléctrica (batería 98 %), Fedora 43; GPU sin otros procesos al iniciar (nvidia-smi: 44 MiB, 0 %, 48 °C); carga del sistema 0,17; Ollama local con qwen2.5:7b; sin otras aplicaciones pesadas durante las corridas",
+      "sha256_muestra": "0e08fc297e55b17708d21becf962f05d960b86a3e07f5c454f128752d2955bbf",
+      "entorno": {
+        "sistema": "Linux",
+        "version_sistema": "7.2.11-100.fc43.x86_64",
+        "arquitectura": "x86_64",
+        "python": "3.12.16",
+        "commit": "8330e1a3afb1450f02dbe8a519c97b48b7673cbe",
+        "arbol_con_cambios": false,
+        "ffmpeg": "ffmpeg version 7.1.5 Copyright (c) 2000-2026 the FFmpeg developers",
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU, 6144 MiB, 580.178.04"
+      },
+      "latencia_s": 261.0299521491397,
+      "ollama_antes": {
+        "version": "0.30.10",
+        "digest_qwen": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "qwen_residente": false
+      },
+      "identificacion": {
+        "fichas": true,
+        "etiquetado_confirmado": true,
+        "tiempo_s": 45.445419245865196
+      },
+      "workflow": {
+        "solicitud": {
+          "dispositivo_diarizacion": "cuda",
+          "num_speakers": null,
+          "modelo_stt": "medium",
+          "dispositivo_stt": "cuda",
+          "minutas": {
+            "modelo": "qwen2.5-7b",
+            "temperatura": 0.0,
+            "num_ctx": 16384,
+            "max_tokens_salida": 4096,
+            "max_caracteres_bloque": 12000,
+            "reintentos_formato": 2,
+            "secciones": [
+              "resumen",
+              "temas",
+              "decisiones",
+              "problemas",
+              "acciones"
+            ]
+          },
+          "identificacion": "pausa"
+        },
+        "tiempos": {
+          "inicio_utc": "2026-11-17T12:02:02.966430+00:00",
+          "latencia_activa_s": 260.862,
+          "espera_identificacion_s": 45.612,
+          "etapas": {
+            "preparar": {
+              "estado": "ejecutada",
+              "tiempo_s": 0.168
+            },
+            "diarizar": {
+              "estado": "ejecutada",
+              "tiempo_s": 31.782
+            },
+            "transcribir": {
+              "estado": "ejecutada",
+              "tiempo_s": 58.379
+            },
+            "asociar": {
+              "estado": "ejecutada",
+              "tiempo_s": 0.032
+            },
+            "minuta": {
+              "estado": "ejecutada",
+              "tiempo_s": 170.351
+            }
+          },
+          "fin_utc": "2026-11-17T12:07:09.440574+00:00",
+          "medicion_cerrada": true,
+          "latencia_tramo_s": 170.47,
+          "preparacion_identificacion_s": 0.023,
+          "identificacion_desde_utc": "2026-11-17T12:03:33.358503+00:00",
+          "identificacion_hasta_utc": "2026-11-17T12:04:18.970225+00:00"
+        },
+        "checkpoints": {
+          "preparar": {
+            "clave": "73543c7c482ffb2baf4a6b8b7119714b7cef404de437460e994393b4a9c15891",
+            "archivos": {
+              "audio.wav": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+              "ingesta.json": "c604500b9dc02ac8dee3b26831a0778feefc4c95107cefb14fb038cd4c73b059"
+            },
+            "versiones": {
+              "python": "3.12.16"
+            },
+            "dispositivo": null
+          },
+          "diarizar": {
+            "clave": "fec74e833e0c5d52dc81f44a8818296bb5e1b8b7b76a756262e1b7e9f771e19b",
+            "archivos": {
+              "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+              "diarization.meta.json": "f01be492f8f2ed58f54031335c693ad4c888afe0355419f373248eb8ef9f091f"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "pyannote.audio": "4.0.7",
+              "torch": "2.8.0+cu128",
+              "torchcodec": "0.7.0"
+            },
+            "dispositivo": null
+          },
+          "transcribir": {
+            "clave": "9bbb11bb43d32ef8b1cfe0c3749937d04fdb82cf33905fca760b15be36d34033",
+            "archivos": {
+              "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "openai-whisper": "20250625",
+              "torch": "2.8.0+cu128"
+            },
+            "dispositivo": "cuda"
+          },
+          "asociar": {
+            "clave": "dc2eecae40620b67d642ed44b912178ffb8ed586897599ecb189c8a813ca44fe",
+            "archivos": {
+              "transcription.json": "ae43f58508af4bb0c24b1a559ca6720f30bb32c4098d6f36d6e1d98a9a96c17e",
+              "transcription.meta.json": "cc7aa3b77d88d911410bff2ce76c21a2011b602d8936b7f2a26adc6c3e4ba66b",
+              "speakers.json": "262bf87908e5e4f79c49e0524b0c8c5e2f396c13a1846bf5431c2d59d7b66974"
+            },
+            "versiones": {
+              "python": "3.12.16"
+            },
+            "dispositivo": null
+          },
+          "minuta": {
+            "clave": "e1c3db818429dfea101619bf685cb34d5ed45703346b591f01989645d871133b",
+            "archivos": {
+              "minutes.json": "4a7ebdb41e3b0ec629559b5c7d6fbdb1800646bb09c41c5de179d1b3fd6b6314",
+              "minutes.md": "8e7177079b5516ab195200771600270753c8d841c896fe4d9101c91cd41df7f2",
+              "ejecucion_minutas.json": "829aed947644353de55989ce5d695e1d64e2d2ea5e530eca475e2fffd5036526"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "pydantic": "2.14.1",
+              "ollama": "0.6.3",
+              "boto3": "1.43.125"
+            },
+            "dispositivo": null
+          }
+        },
+        "fuentes": [
+          {
+            "orden": 1,
+            "sha256_fuente": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+            "inicio_muestra": 0,
+            "fin_muestra": 5424000
+          }
+        ],
+        "sha256_audio": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+        "diarizacion": {
+          "run_id": "20261117T090203-7df967",
+          "inicio": "2026-11-17T09:02:03-03:00",
+          "audio": {
+            "duracion_s": 339.0,
+            "sha256": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed"
+          },
+          "modo_dispositivo": "cuda",
+          "dispositivo": "cuda",
+          "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+          "modelo": "pyannote/speaker-diarization-community-1",
+          "versiones": {
+            "python": "3.12.16",
+            "torch": "2.8.0+cu128",
+            "pyannote.audio": "4.0.7"
+          },
+          "num_speakers": null,
+          "tolerancia_fin_s": 0.05,
+          "exceso_fin_max_s": 0.0,
+          "hablantes": 3,
+          "segmentos": 58,
+          "segmentos_corregidos": 0,
+          "segmentos_descartados": 0,
+          "tiempo_s": 30.809,
+          "vram_pico_mib": 1628.8,
+          "diarization_sha256": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440"
+        },
+        "asociacion": {
+          "version": "0.4.0",
+          "fecha": "2026-11-17T09:04:19-03:00",
+          "duracion_audio_s": 339.0,
+          "sha256": {
+            "audio.wav": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+            "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+            "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae",
+            "transcription.json": "ae43f58508af4bb0c24b1a559ca6720f30bb32c4098d6f36d6e1d98a9a96c17e",
+            "speakers.json": "262bf87908e5e4f79c49e0524b0c8c5e2f396c13a1846bf5431c2d59d7b66974"
+          },
+          "etiquetado": true,
+          "umbrales": {
+            "hueco_max_s": 0.25,
+            "overlap_min_s": 0.2,
+            "segundo_hablante_min": 0.3,
+            "propio_min": 0.5
+          },
+          "semilla_fragmentos": 15734045363488668934,
+          "reglas": [
+            "D1 máxima superposición",
+            "D2 empates por continuidad",
+            "D3 huecos de hasta 0,25 s",
+            "D4 cortes por hablante y segmento de Whisper",
+            "D5 marcas overlap y ambiguous global y local",
+            "preservación literal con respaldo de segmento y hablantes detectados"
+          ],
+          "recortes_asr": {
+            "segmentos_recortados": 0,
+            "intervalos_segmento_descartados": 0,
+            "palabras_recortadas": 0,
+            "palabras_descartadas": 0
+          },
+          "conteos": {
+            "palabras": 700,
+            "palabras_por_empate": 0,
+            "palabras_por_hueco": 0,
+            "palabras_sin_hablante": 0,
+            "segmentos_respaldo": 5,
+            "segmentos_sin_tiempo": 1,
+            "intervenciones": 52,
+            "intervenciones_sin_hablante": 4,
+            "intervenciones_sin_tiempo": 1,
+            "intervenciones_overlap": 0,
+            "intervenciones_ambiguous": 19
+          }
+        },
+        "sha256_manifiestos_originales": {
+          "workflow.json": "afebc3fc0825d58f6fecc4039ad708a89d51fdc3c966281df1b65cf19908d554",
+          "ingesta.json": "c604500b9dc02ac8dee3b26831a0778feefc4c95107cefb14fb038cd4c73b059",
+          "diarization.meta.json": "f01be492f8f2ed58f54031335c693ad4c888afe0355419f373248eb8ef9f091f",
+          "transcription.meta.json": "cc7aa3b77d88d911410bff2ce76c21a2011b602d8936b7f2a26adc6c3e4ba66b"
+        }
+      },
+      "ollama_despues": {
+        "version": "0.30.10",
+        "digest_qwen": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "qwen_residente": true
+      },
+      "revision_diarizacion_cache": "3533c8cf8e369892e6b79ff1bf80f7b0286a54ee",
+      "tiempo_total_s": 306.4753713950049,
+      "fin_utc": "2026-11-17T12:07:09.631561+00:00",
+      "artefactos": {
+        "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+        "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae",
+        "transcription.json": "ae43f58508af4bb0c24b1a559ca6720f30bb32c4098d6f36d6e1d98a9a96c17e",
+        "speakers.json": "262bf87908e5e4f79c49e0524b0c8c5e2f396c13a1846bf5431c2d59d7b66974",
+        "minutes.json": "4a7ebdb41e3b0ec629559b5c7d6fbdb1800646bb09c41c5de179d1b3fd6b6314",
+        "minutes.md": "8e7177079b5516ab195200771600270753c8d841c896fe4d9101c91cd41df7f2",
+        "ejecucion_minutas.json": "829aed947644353de55989ce5d695e1d64e2d2ea5e530eca475e2fffd5036526"
+      }
+    },
+    {
+      "version": 1,
+      "corrida": 2,
+      "modalidad": "multiple",
+      "estado": "completada",
+      "inicio_utc": "2026-11-17T12:07:09.650347+00:00",
+      "operador": "Matías Caccia",
+      "condiciones": "Notebook conectada a la red eléctrica (batería 98 %), Fedora 43; GPU sin otros procesos al iniciar (nvidia-smi: 44 MiB, 0 %, 48 °C); carga del sistema 0,17; Ollama local con qwen2.5:7b; sin otras aplicaciones pesadas durante las corridas",
+      "sha256_muestra": "0e08fc297e55b17708d21becf962f05d960b86a3e07f5c454f128752d2955bbf",
+      "entorno": {
+        "sistema": "Linux",
+        "version_sistema": "7.2.11-100.fc43.x86_64",
+        "arquitectura": "x86_64",
+        "python": "3.12.16",
+        "commit": "8330e1a3afb1450f02dbe8a519c97b48b7673cbe",
+        "arbol_con_cambios": false,
+        "ffmpeg": "ffmpeg version 7.1.5 Copyright (c) 2000-2026 the FFmpeg developers",
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU, 6144 MiB, 580.178.04"
+      },
+      "latencia_s": 256.8795662180055,
+      "ollama_antes": {
+        "version": "0.30.10",
+        "digest_qwen": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "qwen_residente": false
+      },
+      "identificacion": {
+        "fichas": true,
+        "etiquetado_confirmado": true,
+        "tiempo_s": 19.797377676935866
+      },
+      "workflow": {
+        "solicitud": {
+          "dispositivo_diarizacion": "cuda",
+          "num_speakers": null,
+          "modelo_stt": "medium",
+          "dispositivo_stt": "cuda",
+          "minutas": {
+            "modelo": "qwen2.5-7b",
+            "temperatura": 0.0,
+            "num_ctx": 16384,
+            "max_tokens_salida": 4096,
+            "max_caracteres_bloque": 12000,
+            "reintentos_formato": 2,
+            "secciones": [
+              "resumen",
+              "temas",
+              "decisiones",
+              "problemas",
+              "acciones"
+            ]
+          },
+          "identificacion": "pausa"
+        },
+        "tiempos": {
+          "inicio_utc": "2026-11-17T12:07:09.978783+00:00",
+          "latencia_activa_s": 256.716,
+          "espera_identificacion_s": 19.96,
+          "etapas": {
+            "preparar": {
+              "estado": "ejecutada",
+              "tiempo_s": 0.33
+            },
+            "diarizar": {
+              "estado": "ejecutada",
+              "tiempo_s": 33.526
+            },
+            "transcribir": {
+              "estado": "ejecutada",
+              "tiempo_s": 59.152
+            },
+            "asociar": {
+              "estado": "ejecutada",
+              "tiempo_s": 0.034
+            },
+            "minuta": {
+              "estado": "ejecutada",
+              "tiempo_s": 163.54
+            }
+          },
+          "fin_utc": "2026-11-17T12:11:46.654640+00:00",
+          "medicion_cerrada": true,
+          "latencia_tramo_s": 163.654,
+          "preparacion_identificacion_s": 0.016,
+          "identificacion_desde_utc": "2026-11-17T12:08:43.040953+00:00",
+          "identificacion_hasta_utc": "2026-11-17T12:09:03.000973+00:00"
+        },
+        "checkpoints": {
+          "preparar": {
+            "clave": "c25e36811a3425de34e5ea52db739d1e71b516c7dfb5a32fe697979f0fda9dbf",
+            "archivos": {
+              "audio.wav": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+              "ingesta.json": "25729b13a265bbe6696b306c6f65c64150108e06e831e25e060727c9591dd366"
+            },
+            "versiones": {
+              "python": "3.12.16"
+            },
+            "dispositivo": null
+          },
+          "diarizar": {
+            "clave": "fec74e833e0c5d52dc81f44a8818296bb5e1b8b7b76a756262e1b7e9f771e19b",
+            "archivos": {
+              "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+              "diarization.meta.json": "050b756ac7758def1990b6d72b987930f6f7984bfb01269dfc571d31f73a14bf"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "pyannote.audio": "4.0.7",
+              "torch": "2.8.0+cu128",
+              "torchcodec": "0.7.0"
+            },
+            "dispositivo": null
+          },
+          "transcribir": {
+            "clave": "9bbb11bb43d32ef8b1cfe0c3749937d04fdb82cf33905fca760b15be36d34033",
+            "archivos": {
+              "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "openai-whisper": "20250625",
+              "torch": "2.8.0+cu128"
+            },
+            "dispositivo": "cuda"
+          },
+          "asociar": {
+            "clave": "2c9900c08b73313201802c66dfc7c8db4994b2e3b03db5b03c68365504abea50",
+            "archivos": {
+              "transcription.json": "70322cfa0051c26d575e9936f47da11c1dc5ddbb7096864223122069624c81af",
+              "transcription.meta.json": "f1d188ec0bc7a15e17d896ae30c7fc84e8410e40ea860a81b6e4ef2763087d36",
+              "speakers.json": "80dbe8ed381b1ea3222e287f49207601d6a06d84013537f8fa5ed579b188839b"
+            },
+            "versiones": {
+              "python": "3.12.16"
+            },
+            "dispositivo": null
+          },
+          "minuta": {
+            "clave": "9b3db60c19e3d7be20aa6d5656e3bdb7faa953a264bc2215fd7a77debf56e9a8",
+            "archivos": {
+              "minutes.json": "66d2c17093dcd74bbbb49d4d9cd4af1ea5c354a0855018a51edc6212d4dd7b11",
+              "minutes.md": "0125bd564eab04cdee910469efb41277a94126108eb51ce06ca2a9c494c77367",
+              "ejecucion_minutas.json": "4ea7f9b1c49c390b30d4434c2f22ac1a2fa1bfa593ee8ae46ededaf7efd43d37"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "pydantic": "2.14.1",
+              "ollama": "0.6.3",
+              "boto3": "1.43.125"
+            },
+            "dispositivo": null
+          }
+        },
+        "fuentes": [
+          {
+            "orden": 1,
+            "sha256_fuente": "8c54a7d19b3caa162a1de5d69eae981792bd0dce12d40fdf803989102eae1762",
+            "inicio_muestra": 0,
+            "fin_muestra": 1808000
+          },
+          {
+            "orden": 2,
+            "sha256_fuente": "824d0082f38834aa301cba783184dcce3cddb3ed54b28532a256fd3617cd257d",
+            "inicio_muestra": 1808000,
+            "fin_muestra": 3616000
+          },
+          {
+            "orden": 3,
+            "sha256_fuente": "4b99f48ada3d70d4e40feaeaf0657d4dadd89332c273c0180a1540d37e03df9c",
+            "inicio_muestra": 3616000,
+            "fin_muestra": 5424000
+          }
+        ],
+        "sha256_audio": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+        "diarizacion": {
+          "run_id": "20261117T090710-8b49e5",
+          "inicio": "2026-11-17T09:07:10-03:00",
+          "audio": {
+            "duracion_s": 339.0,
+            "sha256": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed"
+          },
+          "modo_dispositivo": "cuda",
+          "dispositivo": "cuda",
+          "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+          "modelo": "pyannote/speaker-diarization-community-1",
+          "versiones": {
+            "python": "3.12.16",
+            "torch": "2.8.0+cu128",
+            "pyannote.audio": "4.0.7"
+          },
+          "num_speakers": null,
+          "tolerancia_fin_s": 0.05,
+          "exceso_fin_max_s": 0.0,
+          "hablantes": 3,
+          "segmentos": 58,
+          "segmentos_corregidos": 0,
+          "segmentos_descartados": 0,
+          "tiempo_s": 32.229,
+          "vram_pico_mib": 1628.8,
+          "diarization_sha256": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440"
+        },
+        "asociacion": {
+          "version": "0.4.0",
+          "fecha": "2026-11-17T09:09:03-03:00",
+          "duracion_audio_s": 339.0,
+          "sha256": {
+            "audio.wav": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+            "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+            "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae",
+            "transcription.json": "70322cfa0051c26d575e9936f47da11c1dc5ddbb7096864223122069624c81af",
+            "speakers.json": "80dbe8ed381b1ea3222e287f49207601d6a06d84013537f8fa5ed579b188839b"
+          },
+          "etiquetado": true,
+          "umbrales": {
+            "hueco_max_s": 0.25,
+            "overlap_min_s": 0.2,
+            "segundo_hablante_min": 0.3,
+            "propio_min": 0.5
+          },
+          "semilla_fragmentos": 15734045363488668934,
+          "reglas": [
+            "D1 máxima superposición",
+            "D2 empates por continuidad",
+            "D3 huecos de hasta 0,25 s",
+            "D4 cortes por hablante y segmento de Whisper",
+            "D5 marcas overlap y ambiguous global y local",
+            "preservación literal con respaldo de segmento y hablantes detectados"
+          ],
+          "recortes_asr": {
+            "segmentos_recortados": 0,
+            "intervalos_segmento_descartados": 0,
+            "palabras_recortadas": 0,
+            "palabras_descartadas": 0
+          },
+          "conteos": {
+            "palabras": 700,
+            "palabras_por_empate": 0,
+            "palabras_por_hueco": 0,
+            "palabras_sin_hablante": 0,
+            "segmentos_respaldo": 5,
+            "segmentos_sin_tiempo": 1,
+            "intervenciones": 52,
+            "intervenciones_sin_hablante": 4,
+            "intervenciones_sin_tiempo": 1,
+            "intervenciones_overlap": 0,
+            "intervenciones_ambiguous": 19
+          }
+        },
+        "sha256_manifiestos_originales": {
+          "workflow.json": "d022a25c70c2ecb47aca314fd5128113eef9fe7dbf945ee9a1965146630838b7",
+          "ingesta.json": "25729b13a265bbe6696b306c6f65c64150108e06e831e25e060727c9591dd366",
+          "diarization.meta.json": "050b756ac7758def1990b6d72b987930f6f7984bfb01269dfc571d31f73a14bf",
+          "transcription.meta.json": "f1d188ec0bc7a15e17d896ae30c7fc84e8410e40ea860a81b6e4ef2763087d36"
+        }
+      },
+      "ollama_despues": {
+        "version": "0.30.10",
+        "digest_qwen": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "qwen_residente": true
+      },
+      "revision_diarizacion_cache": "3533c8cf8e369892e6b79ff1bf80f7b0286a54ee",
+      "tiempo_total_s": 276.67694389494136,
+      "fin_utc": "2026-11-17T12:11:46.731741+00:00",
+      "artefactos": {
+        "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+        "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae",
+        "transcription.json": "70322cfa0051c26d575e9936f47da11c1dc5ddbb7096864223122069624c81af",
+        "speakers.json": "80dbe8ed381b1ea3222e287f49207601d6a06d84013537f8fa5ed579b188839b",
+        "minutes.json": "66d2c17093dcd74bbbb49d4d9cd4af1ea5c354a0855018a51edc6212d4dd7b11",
+        "minutes.md": "0125bd564eab04cdee910469efb41277a94126108eb51ce06ca2a9c494c77367",
+        "ejecucion_minutas.json": "4ea7f9b1c49c390b30d4434c2f22ac1a2fa1bfa593ee8ae46ededaf7efd43d37"
+      }
+    },
+    {
+      "version": 1,
+      "corrida": 3,
+      "modalidad": "unico",
+      "estado": "completada",
+      "inicio_utc": "2026-11-17T12:11:46.750816+00:00",
+      "operador": "Matías Caccia",
+      "condiciones": "Notebook conectada a la red eléctrica (batería 98 %), Fedora 43; GPU sin otros procesos al iniciar (nvidia-smi: 44 MiB, 0 %, 48 °C); carga del sistema 0,17; Ollama local con qwen2.5:7b; sin otras aplicaciones pesadas durante las corridas",
+      "sha256_muestra": "0e08fc297e55b17708d21becf962f05d960b86a3e07f5c454f128752d2955bbf",
+      "entorno": {
+        "sistema": "Linux",
+        "version_sistema": "7.2.11-100.fc43.x86_64",
+        "arquitectura": "x86_64",
+        "python": "3.12.16",
+        "commit": "8330e1a3afb1450f02dbe8a519c97b48b7673cbe",
+        "arbol_con_cambios": false,
+        "ffmpeg": "ffmpeg version 7.1.5 Copyright (c) 2000-2026 the FFmpeg developers",
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU, 6144 MiB, 580.178.04"
+      },
+      "latencia_s": 230.42194830300286,
+      "ollama_antes": {
+        "version": "0.30.10",
+        "digest_qwen": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "qwen_residente": false
+      },
+      "identificacion": {
+        "fichas": true,
+        "etiquetado_confirmado": true,
+        "tiempo_s": 12.968375765020028
+      },
+      "workflow": {
+        "solicitud": {
+          "dispositivo_diarizacion": "cuda",
+          "num_speakers": null,
+          "modelo_stt": "medium",
+          "dispositivo_stt": "cuda",
+          "minutas": {
+            "modelo": "qwen2.5-7b",
+            "temperatura": 0.0,
+            "num_ctx": 16384,
+            "max_tokens_salida": 4096,
+            "max_caracteres_bloque": 12000,
+            "reintentos_formato": 2,
+            "secciones": [
+              "resumen",
+              "temas",
+              "decisiones",
+              "problemas",
+              "acciones"
+            ]
+          },
+          "identificacion": "pausa"
+        },
+        "tiempos": {
+          "inicio_utc": "2026-11-17T12:11:46.931403+00:00",
+          "latencia_activa_s": 230.267,
+          "espera_identificacion_s": 13.123,
+          "etapas": {
+            "preparar": {
+              "estado": "ejecutada",
+              "tiempo_s": 0.159
+            },
+            "diarizar": {
+              "estado": "ejecutada",
+              "tiempo_s": 32.836
+            },
+            "transcribir": {
+              "estado": "ejecutada",
+              "tiempo_s": 59.601
+            },
+            "asociar": {
+              "estado": "ejecutada",
+              "tiempo_s": 0.036
+            },
+            "minuta": {
+              "estado": "ejecutada",
+              "tiempo_s": 137.498
+            }
+          },
+          "fin_utc": "2026-11-17T12:15:50.320771+00:00",
+          "medicion_cerrada": true,
+          "latencia_tramo_s": 137.617,
+          "preparacion_identificacion_s": 0.017,
+          "identificacion_desde_utc": "2026-11-17T12:13:19.581274+00:00",
+          "identificacion_hasta_utc": "2026-11-17T12:13:32.703950+00:00"
+        },
+        "checkpoints": {
+          "preparar": {
+            "clave": "73543c7c482ffb2baf4a6b8b7119714b7cef404de437460e994393b4a9c15891",
+            "archivos": {
+              "audio.wav": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+              "ingesta.json": "c604500b9dc02ac8dee3b26831a0778feefc4c95107cefb14fb038cd4c73b059"
+            },
+            "versiones": {
+              "python": "3.12.16"
+            },
+            "dispositivo": null
+          },
+          "diarizar": {
+            "clave": "fec74e833e0c5d52dc81f44a8818296bb5e1b8b7b76a756262e1b7e9f771e19b",
+            "archivos": {
+              "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+              "diarization.meta.json": "8ee00fdcdd21ae78b94c1fa7a388ae2ddc4965179e5463f59e5e0783222ed481"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "pyannote.audio": "4.0.7",
+              "torch": "2.8.0+cu128",
+              "torchcodec": "0.7.0"
+            },
+            "dispositivo": null
+          },
+          "transcribir": {
+            "clave": "9bbb11bb43d32ef8b1cfe0c3749937d04fdb82cf33905fca760b15be36d34033",
+            "archivos": {
+              "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "openai-whisper": "20250625",
+              "torch": "2.8.0+cu128"
+            },
+            "dispositivo": "cuda"
+          },
+          "asociar": {
+            "clave": "a4ba1ff9838d9b0966615ff9544095add445e515e61e83aaf35b8ad44156be13",
+            "archivos": {
+              "transcription.json": "857a19ceeb30d9231c3d7a4dddd3c581e49fb5d70cdc9f8b893e1969d37aeb00",
+              "transcription.meta.json": "0f476fd0d5a6ffa3d52158dda00b45b8d451fba545c4a79f14a9d157fbf312ed",
+              "speakers.json": "b9d09ca46f1eb4004d67234546f681724fa4a7bff86abb123735d1496bad68b9"
+            },
+            "versiones": {
+              "python": "3.12.16"
+            },
+            "dispositivo": null
+          },
+          "minuta": {
+            "clave": "aca66daa8eb41ee9c6c934715ec56efa67bd73cabeb10ccecf6447ae7632ecf6",
+            "archivos": {
+              "minutes.json": "220ebe569f607c8832463db0acd4074ee1e3ea6395402d5a87bf883abbd988c3",
+              "minutes.md": "0c9b2da044ba369fb17f850dde7bd34e834ba5f460481a773f4608518fad6493",
+              "ejecucion_minutas.json": "173c7c661251c3e68424fe37133c39a76ae2b7b7e6e64fb80acbd8fc7d79940c"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "pydantic": "2.14.1",
+              "ollama": "0.6.3",
+              "boto3": "1.43.125"
+            },
+            "dispositivo": null
+          }
+        },
+        "fuentes": [
+          {
+            "orden": 1,
+            "sha256_fuente": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+            "inicio_muestra": 0,
+            "fin_muestra": 5424000
+          }
+        ],
+        "sha256_audio": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+        "diarizacion": {
+          "run_id": "20261117T091147-53c250",
+          "inicio": "2026-11-17T09:11:47-03:00",
+          "audio": {
+            "duracion_s": 339.0,
+            "sha256": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed"
+          },
+          "modo_dispositivo": "cuda",
+          "dispositivo": "cuda",
+          "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+          "modelo": "pyannote/speaker-diarization-community-1",
+          "versiones": {
+            "python": "3.12.16",
+            "torch": "2.8.0+cu128",
+            "pyannote.audio": "4.0.7"
+          },
+          "num_speakers": null,
+          "tolerancia_fin_s": 0.05,
+          "exceso_fin_max_s": 0.0,
+          "hablantes": 3,
+          "segmentos": 58,
+          "segmentos_corregidos": 0,
+          "segmentos_descartados": 0,
+          "tiempo_s": 31.379,
+          "vram_pico_mib": 1628.8,
+          "diarization_sha256": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440"
+        },
+        "asociacion": {
+          "version": "0.4.0",
+          "fecha": "2026-11-17T09:13:32-03:00",
+          "duracion_audio_s": 339.0,
+          "sha256": {
+            "audio.wav": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+            "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+            "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae",
+            "transcription.json": "857a19ceeb30d9231c3d7a4dddd3c581e49fb5d70cdc9f8b893e1969d37aeb00",
+            "speakers.json": "b9d09ca46f1eb4004d67234546f681724fa4a7bff86abb123735d1496bad68b9"
+          },
+          "etiquetado": true,
+          "umbrales": {
+            "hueco_max_s": 0.25,
+            "overlap_min_s": 0.2,
+            "segundo_hablante_min": 0.3,
+            "propio_min": 0.5
+          },
+          "semilla_fragmentos": 15734045363488668934,
+          "reglas": [
+            "D1 máxima superposición",
+            "D2 empates por continuidad",
+            "D3 huecos de hasta 0,25 s",
+            "D4 cortes por hablante y segmento de Whisper",
+            "D5 marcas overlap y ambiguous global y local",
+            "preservación literal con respaldo de segmento y hablantes detectados"
+          ],
+          "recortes_asr": {
+            "segmentos_recortados": 0,
+            "intervalos_segmento_descartados": 0,
+            "palabras_recortadas": 0,
+            "palabras_descartadas": 0
+          },
+          "conteos": {
+            "palabras": 700,
+            "palabras_por_empate": 0,
+            "palabras_por_hueco": 0,
+            "palabras_sin_hablante": 0,
+            "segmentos_respaldo": 5,
+            "segmentos_sin_tiempo": 1,
+            "intervenciones": 52,
+            "intervenciones_sin_hablante": 4,
+            "intervenciones_sin_tiempo": 1,
+            "intervenciones_overlap": 0,
+            "intervenciones_ambiguous": 19
+          }
+        },
+        "sha256_manifiestos_originales": {
+          "workflow.json": "22a9f92d44ff7530ffa182404e65d19726a13618cd64576e74f000394767b84f",
+          "ingesta.json": "c604500b9dc02ac8dee3b26831a0778feefc4c95107cefb14fb038cd4c73b059",
+          "diarization.meta.json": "8ee00fdcdd21ae78b94c1fa7a388ae2ddc4965179e5463f59e5e0783222ed481",
+          "transcription.meta.json": "0f476fd0d5a6ffa3d52158dda00b45b8d451fba545c4a79f14a9d157fbf312ed"
+        }
+      },
+      "ollama_despues": {
+        "version": "0.30.10",
+        "digest_qwen": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "qwen_residente": true
+      },
+      "revision_diarizacion_cache": "3533c8cf8e369892e6b79ff1bf80f7b0286a54ee",
+      "tiempo_total_s": 243.3903240680229,
+      "fin_utc": "2026-11-17T12:15:50.405687+00:00",
+      "artefactos": {
+        "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+        "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae",
+        "transcription.json": "857a19ceeb30d9231c3d7a4dddd3c581e49fb5d70cdc9f8b893e1969d37aeb00",
+        "speakers.json": "b9d09ca46f1eb4004d67234546f681724fa4a7bff86abb123735d1496bad68b9",
+        "minutes.json": "220ebe569f607c8832463db0acd4074ee1e3ea6395402d5a87bf883abbd988c3",
+        "minutes.md": "0c9b2da044ba369fb17f850dde7bd34e834ba5f460481a773f4608518fad6493",
+        "ejecucion_minutas.json": "173c7c661251c3e68424fe37133c39a76ae2b7b7e6e64fb80acbd8fc7d79940c"
+      }
+    },
+    {
+      "version": 1,
+      "corrida": 4,
+      "modalidad": "multiple",
+      "estado": "completada",
+      "inicio_utc": "2026-11-17T12:15:50.426066+00:00",
+      "operador": "Matías Caccia",
+      "condiciones": "Notebook conectada a la red eléctrica (batería 98 %), Fedora 43; GPU sin otros procesos al iniciar (nvidia-smi: 44 MiB, 0 %, 48 °C); carga del sistema 0,17; Ollama local con qwen2.5:7b; sin otras aplicaciones pesadas durante las corridas",
+      "sha256_muestra": "0e08fc297e55b17708d21becf962f05d960b86a3e07f5c454f128752d2955bbf",
+      "entorno": {
+        "sistema": "Linux",
+        "version_sistema": "7.2.11-100.fc43.x86_64",
+        "arquitectura": "x86_64",
+        "python": "3.12.16",
+        "commit": "8330e1a3afb1450f02dbe8a519c97b48b7673cbe",
+        "arbol_con_cambios": false,
+        "ffmpeg": "ffmpeg version 7.1.5 Copyright (c) 2000-2026 the FFmpeg developers",
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU, 6144 MiB, 580.178.04"
+      },
+      "latencia_s": 230.83652343205176,
+      "ollama_antes": {
+        "version": "0.30.10",
+        "digest_qwen": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "qwen_residente": false
+      },
+      "identificacion": {
+        "fichas": true,
+        "etiquetado_confirmado": true,
+        "tiempo_s": 263.5286105480045
+      },
+      "workflow": {
+        "solicitud": {
+          "dispositivo_diarizacion": "cuda",
+          "num_speakers": null,
+          "modelo_stt": "medium",
+          "dispositivo_stt": "cuda",
+          "minutas": {
+            "modelo": "qwen2.5-7b",
+            "temperatura": 0.0,
+            "num_ctx": 16384,
+            "max_tokens_salida": 4096,
+            "max_caracteres_bloque": 12000,
+            "reintentos_formato": 2,
+            "secciones": [
+              "resumen",
+              "temas",
+              "decisiones",
+              "problemas",
+              "acciones"
+            ]
+          },
+          "identificacion": "pausa"
+        },
+        "tiempos": {
+          "inicio_utc": "2026-11-17T12:15:50.574527+00:00",
+          "latencia_activa_s": 230.661,
+          "espera_identificacion_s": 263.703,
+          "etapas": {
+            "preparar": {
+              "estado": "ejecutada",
+              "tiempo_s": 0.342
+            },
+            "diarizar": {
+              "estado": "ejecutada",
+              "tiempo_s": 33.162
+            },
+            "transcribir": {
+              "estado": "ejecutada",
+              "tiempo_s": 60.039
+            },
+            "asociar": {
+              "estado": "ejecutada",
+              "tiempo_s": 0.037
+            },
+            "minuta": {
+              "estado": "ejecutada",
+              "tiempo_s": 136.941
+            }
+          },
+          "fin_utc": "2026-11-17T12:24:04.938439+00:00",
+          "medicion_cerrada": true,
+          "latencia_tramo_s": 137.065,
+          "preparacion_identificacion_s": 0.017,
+          "identificacion_desde_utc": "2026-11-17T12:17:24.170931+00:00",
+          "identificacion_hasta_utc": "2026-11-17T12:21:47.873945+00:00"
+        },
+        "checkpoints": {
+          "preparar": {
+            "clave": "c25e36811a3425de34e5ea52db739d1e71b516c7dfb5a32fe697979f0fda9dbf",
+            "archivos": {
+              "audio.wav": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+              "ingesta.json": "25729b13a265bbe6696b306c6f65c64150108e06e831e25e060727c9591dd366"
+            },
+            "versiones": {
+              "python": "3.12.16"
+            },
+            "dispositivo": null
+          },
+          "diarizar": {
+            "clave": "fec74e833e0c5d52dc81f44a8818296bb5e1b8b7b76a756262e1b7e9f771e19b",
+            "archivos": {
+              "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+              "diarization.meta.json": "392963c274788a2e94090d730ad683d1bbd98e0665c2e9cbf63cfb518e1b6952"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "pyannote.audio": "4.0.7",
+              "torch": "2.8.0+cu128",
+              "torchcodec": "0.7.0"
+            },
+            "dispositivo": null
+          },
+          "transcribir": {
+            "clave": "9bbb11bb43d32ef8b1cfe0c3749937d04fdb82cf33905fca760b15be36d34033",
+            "archivos": {
+              "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "openai-whisper": "20250625",
+              "torch": "2.8.0+cu128"
+            },
+            "dispositivo": "cuda"
+          },
+          "asociar": {
+            "clave": "48bdc29340deff7c0f7b13e733b62e6367c70daaf3b1d86d63246c6359fc095f",
+            "archivos": {
+              "transcription.json": "6861813ac6cd3f6c7b41f4a05af0f2faebc527f32586ed1ea10f64fcb44c6060",
+              "transcription.meta.json": "4b63ebd05a5d05aa4363759881c05a6bd0356c08648e174cefd2698fb158be79",
+              "speakers.json": "c3863a5251608dd05bb1a21bb5a2dcf1133b97332c6eee243cde96d06d2795c7"
+            },
+            "versiones": {
+              "python": "3.12.16"
+            },
+            "dispositivo": null
+          },
+          "minuta": {
+            "clave": "0061bc2b0ee7f1a198be0b03c3949b7af83da80c7ce5fd8a60dd1bc41a9ec60b",
+            "archivos": {
+              "minutes.json": "324aac34af44e54ea828ca47295ad92ad1ff70f27364d28f9778fe2020f655f2",
+              "minutes.md": "33ee3b9735007e07976d65af158d9c55031adb50f6130ff8e9b8db42cd704e00",
+              "ejecucion_minutas.json": "d5d00ac24a9a9ed4926d24f22eb7a8e1e1c6ea7842505ebeed229b54960b7dc9"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "pydantic": "2.14.1",
+              "ollama": "0.6.3",
+              "boto3": "1.43.125"
+            },
+            "dispositivo": null
+          }
+        },
+        "fuentes": [
+          {
+            "orden": 1,
+            "sha256_fuente": "8c54a7d19b3caa162a1de5d69eae981792bd0dce12d40fdf803989102eae1762",
+            "inicio_muestra": 0,
+            "fin_muestra": 1808000
+          },
+          {
+            "orden": 2,
+            "sha256_fuente": "824d0082f38834aa301cba783184dcce3cddb3ed54b28532a256fd3617cd257d",
+            "inicio_muestra": 1808000,
+            "fin_muestra": 3616000
+          },
+          {
+            "orden": 3,
+            "sha256_fuente": "4b99f48ada3d70d4e40feaeaf0657d4dadd89332c273c0180a1540d37e03df9c",
+            "inicio_muestra": 3616000,
+            "fin_muestra": 5424000
+          }
+        ],
+        "sha256_audio": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+        "diarizacion": {
+          "run_id": "20261117T091550-8c130b",
+          "inicio": "2026-11-17T09:15:50-03:00",
+          "audio": {
+            "duracion_s": 339.0,
+            "sha256": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed"
+          },
+          "modo_dispositivo": "cuda",
+          "dispositivo": "cuda",
+          "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+          "modelo": "pyannote/speaker-diarization-community-1",
+          "versiones": {
+            "python": "3.12.16",
+            "torch": "2.8.0+cu128",
+            "pyannote.audio": "4.0.7"
+          },
+          "num_speakers": null,
+          "tolerancia_fin_s": 0.05,
+          "exceso_fin_max_s": 0.0,
+          "hablantes": 3,
+          "segmentos": 58,
+          "segmentos_corregidos": 0,
+          "segmentos_descartados": 0,
+          "tiempo_s": 31.974,
+          "vram_pico_mib": 1628.8,
+          "diarization_sha256": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440"
+        },
+        "asociacion": {
+          "version": "0.4.0",
+          "fecha": "2026-11-17T09:21:47-03:00",
+          "duracion_audio_s": 339.0,
+          "sha256": {
+            "audio.wav": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+            "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+            "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae",
+            "transcription.json": "6861813ac6cd3f6c7b41f4a05af0f2faebc527f32586ed1ea10f64fcb44c6060",
+            "speakers.json": "c3863a5251608dd05bb1a21bb5a2dcf1133b97332c6eee243cde96d06d2795c7"
+          },
+          "etiquetado": true,
+          "umbrales": {
+            "hueco_max_s": 0.25,
+            "overlap_min_s": 0.2,
+            "segundo_hablante_min": 0.3,
+            "propio_min": 0.5
+          },
+          "semilla_fragmentos": 15734045363488668934,
+          "reglas": [
+            "D1 máxima superposición",
+            "D2 empates por continuidad",
+            "D3 huecos de hasta 0,25 s",
+            "D4 cortes por hablante y segmento de Whisper",
+            "D5 marcas overlap y ambiguous global y local",
+            "preservación literal con respaldo de segmento y hablantes detectados"
+          ],
+          "recortes_asr": {
+            "segmentos_recortados": 0,
+            "intervalos_segmento_descartados": 0,
+            "palabras_recortadas": 0,
+            "palabras_descartadas": 0
+          },
+          "conteos": {
+            "palabras": 700,
+            "palabras_por_empate": 0,
+            "palabras_por_hueco": 0,
+            "palabras_sin_hablante": 0,
+            "segmentos_respaldo": 5,
+            "segmentos_sin_tiempo": 1,
+            "intervenciones": 52,
+            "intervenciones_sin_hablante": 4,
+            "intervenciones_sin_tiempo": 1,
+            "intervenciones_overlap": 0,
+            "intervenciones_ambiguous": 19
+          }
+        },
+        "sha256_manifiestos_originales": {
+          "workflow.json": "cbdb7611d34e794e4acdcd50c18f98908590ac6b92019d5427592b823fa4d624",
+          "ingesta.json": "25729b13a265bbe6696b306c6f65c64150108e06e831e25e060727c9591dd366",
+          "diarization.meta.json": "392963c274788a2e94090d730ad683d1bbd98e0665c2e9cbf63cfb518e1b6952",
+          "transcription.meta.json": "4b63ebd05a5d05aa4363759881c05a6bd0356c08648e174cefd2698fb158be79"
+        }
+      },
+      "ollama_despues": {
+        "version": "0.30.10",
+        "digest_qwen": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "qwen_residente": true
+      },
+      "revision_diarizacion_cache": "3533c8cf8e369892e6b79ff1bf80f7b0286a54ee",
+      "tiempo_total_s": 494.36513398005627,
+      "fin_utc": "2026-11-17T12:24:05.040193+00:00",
+      "artefactos": {
+        "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+        "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae",
+        "transcription.json": "6861813ac6cd3f6c7b41f4a05af0f2faebc527f32586ed1ea10f64fcb44c6060",
+        "speakers.json": "c3863a5251608dd05bb1a21bb5a2dcf1133b97332c6eee243cde96d06d2795c7",
+        "minutes.json": "324aac34af44e54ea828ca47295ad92ad1ff70f27364d28f9778fe2020f655f2",
+        "minutes.md": "33ee3b9735007e07976d65af158d9c55031adb50f6130ff8e9b8db42cd704e00",
+        "ejecucion_minutas.json": "d5d00ac24a9a9ed4926d24f22eb7a8e1e1c6ea7842505ebeed229b54960b7dc9"
+      }
+    },
+    {
+      "version": 1,
+      "corrida": 5,
+      "modalidad": "unico",
+      "estado": "completada",
+      "inicio_utc": "2026-11-17T12:24:05.060849+00:00",
+      "operador": "Matías Caccia",
+      "condiciones": "Notebook conectada a la red eléctrica (batería 98 %), Fedora 43; GPU sin otros procesos al iniciar (nvidia-smi: 44 MiB, 0 %, 48 °C); carga del sistema 0,17; Ollama local con qwen2.5:7b; sin otras aplicaciones pesadas durante las corridas",
+      "sha256_muestra": "0e08fc297e55b17708d21becf962f05d960b86a3e07f5c454f128752d2955bbf",
+      "entorno": {
+        "sistema": "Linux",
+        "version_sistema": "7.2.11-100.fc43.x86_64",
+        "arquitectura": "x86_64",
+        "python": "3.12.16",
+        "commit": "8330e1a3afb1450f02dbe8a519c97b48b7673cbe",
+        "arbol_con_cambios": false,
+        "ffmpeg": "ffmpeg version 7.1.5 Copyright (c) 2000-2026 the FFmpeg developers",
+        "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU, 6144 MiB, 580.178.04"
+      },
+      "latencia_s": 229.5186872370541,
+      "ollama_antes": {
+        "version": "0.30.10",
+        "digest_qwen": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "qwen_residente": false
+      },
+      "identificacion": {
+        "fichas": true,
+        "etiquetado_confirmado": true,
+        "tiempo_s": 61.27182154706679
+      },
+      "workflow": {
+        "solicitud": {
+          "dispositivo_diarizacion": "cuda",
+          "num_speakers": null,
+          "modelo_stt": "medium",
+          "dispositivo_stt": "cuda",
+          "minutas": {
+            "modelo": "qwen2.5-7b",
+            "temperatura": 0.0,
+            "num_ctx": 16384,
+            "max_tokens_salida": 4096,
+            "max_caracteres_bloque": 12000,
+            "reintentos_formato": 2,
+            "secciones": [
+              "resumen",
+              "temas",
+              "decisiones",
+              "problemas",
+              "acciones"
+            ]
+          },
+          "identificacion": "pausa"
+        },
+        "tiempos": {
+          "inicio_utc": "2026-11-17T12:24:05.352293+00:00",
+          "latencia_activa_s": 229.37,
+          "espera_identificacion_s": 61.419,
+          "etapas": {
+            "preparar": {
+              "estado": "ejecutada",
+              "tiempo_s": 0.168
+            },
+            "diarizar": {
+              "estado": "ejecutada",
+              "tiempo_s": 32.608
+            },
+            "transcribir": {
+              "estado": "ejecutada",
+              "tiempo_s": 59.704
+            },
+            "asociar": {
+              "estado": "ejecutada",
+              "tiempo_s": 0.044
+            },
+            "minuta": {
+              "estado": "ejecutada",
+              "tiempo_s": 136.709
+            }
+          },
+          "fin_utc": "2026-11-17T12:28:56.141854+00:00",
+          "medicion_cerrada": true,
+          "latencia_tramo_s": 136.833,
+          "preparacion_identificacion_s": 0.019,
+          "identificacion_desde_utc": "2026-11-17T12:25:37.889722+00:00",
+          "identificacion_hasta_utc": "2026-11-17T12:26:39.308507+00:00"
+        },
+        "checkpoints": {
+          "preparar": {
+            "clave": "73543c7c482ffb2baf4a6b8b7119714b7cef404de437460e994393b4a9c15891",
+            "archivos": {
+              "audio.wav": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+              "ingesta.json": "c604500b9dc02ac8dee3b26831a0778feefc4c95107cefb14fb038cd4c73b059"
+            },
+            "versiones": {
+              "python": "3.12.16"
+            },
+            "dispositivo": null
+          },
+          "diarizar": {
+            "clave": "fec74e833e0c5d52dc81f44a8818296bb5e1b8b7b76a756262e1b7e9f771e19b",
+            "archivos": {
+              "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+              "diarization.meta.json": "8560c37ee7cf142281be8d3a7368c0bc9234d2ccc5f0e4feb59151d38b872ba0"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "pyannote.audio": "4.0.7",
+              "torch": "2.8.0+cu128",
+              "torchcodec": "0.7.0"
+            },
+            "dispositivo": null
+          },
+          "transcribir": {
+            "clave": "9bbb11bb43d32ef8b1cfe0c3749937d04fdb82cf33905fca760b15be36d34033",
+            "archivos": {
+              "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "openai-whisper": "20250625",
+              "torch": "2.8.0+cu128"
+            },
+            "dispositivo": "cuda"
+          },
+          "asociar": {
+            "clave": "a4ba1ff9838d9b0966615ff9544095add445e515e61e83aaf35b8ad44156be13",
+            "archivos": {
+              "transcription.json": "857a19ceeb30d9231c3d7a4dddd3c581e49fb5d70cdc9f8b893e1969d37aeb00",
+              "transcription.meta.json": "112bda24b92e92e2c3ed28d02023f3a1bb2f38536ac640be7330f8a076e247c1",
+              "speakers.json": "b9d09ca46f1eb4004d67234546f681724fa4a7bff86abb123735d1496bad68b9"
+            },
+            "versiones": {
+              "python": "3.12.16"
+            },
+            "dispositivo": null
+          },
+          "minuta": {
+            "clave": "aca66daa8eb41ee9c6c934715ec56efa67bd73cabeb10ccecf6447ae7632ecf6",
+            "archivos": {
+              "minutes.json": "220ebe569f607c8832463db0acd4074ee1e3ea6395402d5a87bf883abbd988c3",
+              "minutes.md": "0c9b2da044ba369fb17f850dde7bd34e834ba5f460481a773f4608518fad6493",
+              "ejecucion_minutas.json": "9f0adb18270a81f91ccc4dceca3aa35cd2c9248e01ae41e6fe0dc89e922df1fd"
+            },
+            "versiones": {
+              "python": "3.12.16",
+              "pydantic": "2.14.1",
+              "ollama": "0.6.3",
+              "boto3": "1.43.125"
+            },
+            "dispositivo": null
+          }
+        },
+        "fuentes": [
+          {
+            "orden": 1,
+            "sha256_fuente": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+            "inicio_muestra": 0,
+            "fin_muestra": 5424000
+          }
+        ],
+        "sha256_audio": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+        "diarizacion": {
+          "run_id": "20261117T092405-02f541",
+          "inicio": "2026-11-17T09:24:05-03:00",
+          "audio": {
+            "duracion_s": 339.0,
+            "sha256": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed"
+          },
+          "modo_dispositivo": "cuda",
+          "dispositivo": "cuda",
+          "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+          "modelo": "pyannote/speaker-diarization-community-1",
+          "versiones": {
+            "python": "3.12.16",
+            "torch": "2.8.0+cu128",
+            "pyannote.audio": "4.0.7"
+          },
+          "num_speakers": null,
+          "tolerancia_fin_s": 0.05,
+          "exceso_fin_max_s": 0.0,
+          "hablantes": 3,
+          "segmentos": 58,
+          "segmentos_corregidos": 0,
+          "segmentos_descartados": 0,
+          "tiempo_s": 31.674,
+          "vram_pico_mib": 1628.8,
+          "diarization_sha256": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440"
+        },
+        "asociacion": {
+          "version": "0.4.0",
+          "fecha": "2026-11-17T09:26:39-03:00",
+          "duracion_audio_s": 339.0,
+          "sha256": {
+            "audio.wav": "ecd4b4781bf614fbf1b27491fe48eb30d5fe900edea4009f1657d09ee5e7f2ed",
+            "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+            "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae",
+            "transcription.json": "857a19ceeb30d9231c3d7a4dddd3c581e49fb5d70cdc9f8b893e1969d37aeb00",
+            "speakers.json": "b9d09ca46f1eb4004d67234546f681724fa4a7bff86abb123735d1496bad68b9"
+          },
+          "etiquetado": true,
+          "umbrales": {
+            "hueco_max_s": 0.25,
+            "overlap_min_s": 0.2,
+            "segundo_hablante_min": 0.3,
+            "propio_min": 0.5
+          },
+          "semilla_fragmentos": 15734045363488668934,
+          "reglas": [
+            "D1 máxima superposición",
+            "D2 empates por continuidad",
+            "D3 huecos de hasta 0,25 s",
+            "D4 cortes por hablante y segmento de Whisper",
+            "D5 marcas overlap y ambiguous global y local",
+            "preservación literal con respaldo de segmento y hablantes detectados"
+          ],
+          "recortes_asr": {
+            "segmentos_recortados": 0,
+            "intervalos_segmento_descartados": 0,
+            "palabras_recortadas": 0,
+            "palabras_descartadas": 0
+          },
+          "conteos": {
+            "palabras": 700,
+            "palabras_por_empate": 0,
+            "palabras_por_hueco": 0,
+            "palabras_sin_hablante": 0,
+            "segmentos_respaldo": 5,
+            "segmentos_sin_tiempo": 1,
+            "intervenciones": 52,
+            "intervenciones_sin_hablante": 4,
+            "intervenciones_sin_tiempo": 1,
+            "intervenciones_overlap": 0,
+            "intervenciones_ambiguous": 19
+          }
+        },
+        "sha256_manifiestos_originales": {
+          "workflow.json": "f3e887fc5de0a3d24f03a5d1020c00a3ff131f5ae7c3c6e3261d3bfda4123d14",
+          "ingesta.json": "c604500b9dc02ac8dee3b26831a0778feefc4c95107cefb14fb038cd4c73b059",
+          "diarization.meta.json": "8560c37ee7cf142281be8d3a7368c0bc9234d2ccc5f0e4feb59151d38b872ba0",
+          "transcription.meta.json": "112bda24b92e92e2c3ed28d02023f3a1bb2f38536ac640be7330f8a076e247c1"
+        }
+      },
+      "ollama_despues": {
+        "version": "0.30.10",
+        "digest_qwen": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+        "qwen_residente": true
+      },
+      "revision_diarizacion_cache": "3533c8cf8e369892e6b79ff1bf80f7b0286a54ee",
+      "tiempo_total_s": 290.7905087841209,
+      "fin_utc": "2026-11-17T12:28:56.211531+00:00",
+      "artefactos": {
+        "diarization.json": "da5a8ee5429fbd06455f79f9b66153edd91525458a6baaa6421f6acce8354440",
+        "asr.json": "f443790c804f350c9f478d5b55649be00c65bedd6b99e0e0e64c2dfbe1e505ae",
+        "transcription.json": "857a19ceeb30d9231c3d7a4dddd3c581e49fb5d70cdc9f8b893e1969d37aeb00",
+        "speakers.json": "b9d09ca46f1eb4004d67234546f681724fa4a7bff86abb123735d1496bad68b9",
+        "minutes.json": "220ebe569f607c8832463db0acd4074ee1e3ea6395402d5a87bf883abbd988c3",
+        "minutes.md": "0c9b2da044ba369fb17f850dde7bd34e834ba5f460481a773f4608518fad6493",
+        "ejecucion_minutas.json": "9f0adb18270a81f91ccc4dceca3aa35cd2c9248e01ae41e6fe0dc89e922df1fd"
+      }
+    }
+  ],
+  "maximo_s": 261.0299521491397,
+  "umbral_s": 1800,
+  "cumple_umbral_latencia": true,
+  "calidad": "Ver juicio independiente en calidad.md."
+}

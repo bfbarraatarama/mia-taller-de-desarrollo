@@ -1,0 +1,112 @@
+{
+  "resumen": "Se discutió la posición del cinturón en relación al avión, acordando que el eje vertical debe estar centrado y que el centro del cinturón no es exactamente donde termina la hebilla. La reunión también se centró en ajustar el cinturón para evitar que tape o toque el extremo derecho del ala.",
+  "temas": [
+    {
+      "texto": "Posición del cinturón en relación al avión",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024",
+        "I000025",
+        "I000026",
+        "I000027",
+        "I000028",
+        "I000029",
+        "I000030",
+        "I000031",
+        "I000032",
+        "I000033",
+        "I000034",
+        "I000035",
+        "I000036",
+        "I000037",
+        "I000038",
+        "I000039",
+        "I000040",
+        "I000041",
+        "I000042",
+        "I000043"
+      ],
+      "id_ancla": "I000043"
+    },
+    {
+      "texto": "Ajuste del cinturón",
+      "ids_intervenciones": [
+        "I000042",
+        "I000043",
+        "I000044",
+        "I000045",
+        "I000046",
+        "I000047",
+        "I000048",
+        "I000049",
+        "I000050"
+      ],
+      "id_ancla": "I000044"
+    }
+  ],
+  "decisiones": [
+    {
+      "texto": "El eje vertical del cinturón debe estar centrado y el centro del cinturón no es exactamente donde termina la hebilla.",
+      "ids_intervenciones": [
+        "I000036",
+        "I000037",
+        "I000038",
+        "I000039",
+        "I000040"
+      ],
+      "id_ancla": "I000040"
+    }
+  ],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "Subir o bajar el cinturón de tal manera que el ala derecha del avión no esté tapada y el eje vertical del cinturón esté centrado.",
+      "ids_intervenciones": [
+        "I000042",
+        "I000043"
+      ],
+      "id_ancla": "I000043",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Ajustar el cinturón para que no tape ni toque el extremo derecho del ala.",
+      "ids_intervenciones": [
+        "I000042",
+        "I000043",
+        "I000044",
+        "I000045",
+        "I000046",
+        "I000047",
+        "I000048",
+        "I000049",
+        "I000050"
+      ],
+      "id_ancla": "I000044",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "segments": [
+    {
+      "start": 1.06,
+      "end": 15.4,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "tenés que agarrar el león azul y lo tenés que ir llevando a la izquierda del mimo, abajo del clavo, pero un poquito más arriba",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 126
+      }
+    },
+    {
+      "start": 15.4,
+      "end": 21.0,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "ponéle que no sé, menos de un centímetro más arriba que el mimo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 63
+      }
+    },
+    {
+      "start": 21.8,
+      "end": 26.0,
+      "speaker": null,
+      "name": null,
+      "text": "o sea, encuentra la intersección y vuelve un centímetro más arriba",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 66
+      }
+    },
+    {
+      "start": 26.68,
+      "end": 29.82,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "digamos a la misma altura que la podadora o un poco más arriba o más abajo?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 75
+      }
+    },
+    {
+      "start": 30.0,
+      "end": 31.64,
+      "speaker": null,
+      "name": null,
+      "text": "eh sí, a la misma altura que la podadora",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 40
+      }
+    }
+  ]
+}

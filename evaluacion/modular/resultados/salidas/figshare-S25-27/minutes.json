@@ -1,0 +1,35 @@
+{
+  "resumen": "Se discutió la posición del foco en relación al caballo y el mono, asegurando que la parte metálica sobresale un milímetro más o menos las patas del caballo hacia abajo. El centro del foco apunta a una manchita blanca del lomo del mono, ubicada entre sus dos manchas blancas.",
+  "temas": [
+    {
+      "texto": "Posición del foco en relación al caballo y el mono",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009"
+      ],
+      "id_ancla": "I000009"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "El centro del foco apunta a una manchita blanca del lomo del mono, ubicada entre sus dos manchas blancas.",
+      "ids_intervenciones": [
+        "I000007",
+        "I000008",
+        "I000009"
+      ],
+      "id_ancla": "I000009",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

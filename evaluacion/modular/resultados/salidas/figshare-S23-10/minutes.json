@@ -1,0 +1,28 @@
+{
+  "resumen": "La reunión discutió sobre la visibilidad de un objeto en una imagen, específicamente si se veía el rostro de una monja a través de un espejo. Se propuso tapar la cabeza de la monja con el espejo para ocultarla.",
+  "temas": [
+    {
+      "texto": "Visibilidad del rostro de una monja en una imagen a través de un espejo.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004"
+      ],
+      "id_ancla": "I000004"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "La monja sigue siendo visiblemente parcialmente en la imagen, incluso tapada con el espejo.",
+      "ids_intervenciones": [
+        "I000002",
+        "I000003",
+        "I000004"
+      ],
+      "id_ancla": "I000004"
+    }
+  ],
+  "acciones": []
+}

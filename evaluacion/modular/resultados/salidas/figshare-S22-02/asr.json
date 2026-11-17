@@ -1,0 +1,1111 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 7.2,
+      "text": "está la cortadora de pasto, así era ¿no?",
+      "words": [
+        {
+          "word": "está",
+          "start": 0.0,
+          "end": 1.32
+        },
+        {
+          "word": "la",
+          "start": 1.32,
+          "end": 3.32
+        },
+        {
+          "word": "cortadora",
+          "start": 3.32,
+          "end": 3.94
+        },
+        {
+          "word": "de",
+          "start": 3.94,
+          "end": 5.74
+        },
+        {
+          "word": "pasto,",
+          "start": 5.74,
+          "end": 6.38
+        },
+        {
+          "word": "así",
+          "start": 6.38,
+          "end": 6.62
+        },
+        {
+          "word": "era",
+          "start": 6.62,
+          "end": 6.8
+        },
+        {
+          "word": "¿no?",
+          "start": 6.8,
+          "end": 7.2
+        }
+      ]
+    },
+    {
+      "start": 9.42,
+      "end": 16.84,
+      "text": "está debajo del león amarillo y sobre el león azul a la misma altura del clavo",
+      "words": [
+        {
+          "word": "está",
+          "start": 9.42,
+          "end": 10.1
+        },
+        {
+          "word": "debajo",
+          "start": 10.1,
+          "end": 10.78
+        },
+        {
+          "word": "del",
+          "start": 10.78,
+          "end": 11.0
+        },
+        {
+          "word": "león",
+          "start": 11.0,
+          "end": 11.42
+        },
+        {
+          "word": "amarillo",
+          "start": 11.42,
+          "end": 12.02
+        },
+        {
+          "word": "y",
+          "start": 12.02,
+          "end": 12.24
+        },
+        {
+          "word": "sobre",
+          "start": 12.24,
+          "end": 12.48
+        },
+        {
+          "word": "el",
+          "start": 12.48,
+          "end": 12.62
+        },
+        {
+          "word": "león",
+          "start": 12.62,
+          "end": 12.88
+        },
+        {
+          "word": "azul",
+          "start": 12.88,
+          "end": 13.16
+        },
+        {
+          "word": "a",
+          "start": 13.16,
+          "end": 13.42
+        },
+        {
+          "word": "la",
+          "start": 13.42,
+          "end": 13.54
+        },
+        {
+          "word": "misma",
+          "start": 13.54,
+          "end": 13.66
+        },
+        {
+          "word": "altura",
+          "start": 13.66,
+          "end": 14.02
+        },
+        {
+          "word": "del",
+          "start": 14.02,
+          "end": 15.46
+        },
+        {
+          "word": "clavo",
+          "start": 15.46,
+          "end": 16.84
+        }
+      ]
+    },
+    {
+      "start": 16.84,
+      "end": 20.26,
+      "text": "y a ver si por ejemplo",
+      "words": [
+        {
+          "word": "y",
+          "start": 16.84,
+          "end": 17.46
+        },
+        {
+          "word": "a",
+          "start": 17.46,
+          "end": 17.64
+        },
+        {
+          "word": "ver",
+          "start": 17.64,
+          "end": 17.88
+        },
+        {
+          "word": "si",
+          "start": 17.88,
+          "end": 18.14
+        },
+        {
+          "word": "por",
+          "start": 18.14,
+          "end": 18.3
+        },
+        {
+          "word": "ejemplo",
+          "start": 18.3,
+          "end": 20.26
+        }
+      ]
+    },
+    {
+      "start": 20.26,
+      "end": 23.86,
+      "text": "está equidistante de los dos leones",
+      "words": [
+        {
+          "word": "está",
+          "start": 20.26,
+          "end": 21.38
+        },
+        {
+          "word": "equidistante",
+          "start": 21.38,
+          "end": 22.7
+        },
+        {
+          "word": "de",
+          "start": 22.7,
+          "end": 22.84
+        },
+        {
+          "word": "los",
+          "start": 22.84,
+          "end": 22.98
+        },
+        {
+          "word": "dos",
+          "start": 22.98,
+          "end": 23.14
+        },
+        {
+          "word": "leones",
+          "start": 23.14,
+          "end": 23.86
+        }
+      ]
+    },
+    {
+      "start": 23.86,
+      "end": 30.9,
+      "text": "está como la misma altura en el mismo renglón del clavo entre los dos leones",
+      "words": [
+        {
+          "word": "está",
+          "start": 23.86,
+          "end": 24.36
+        },
+        {
+          "word": "como",
+          "start": 24.36,
+          "end": 25.08
+        },
+        {
+          "word": "la",
+          "start": 25.08,
+          "end": 25.32
+        },
+        {
+          "word": "misma",
+          "start": 25.32,
+          "end": 25.48
+        },
+        {
+          "word": "altura",
+          "start": 25.48,
+          "end": 25.86
+        },
+        {
+          "word": "en",
+          "start": 25.86,
+          "end": 26.1
+        },
+        {
+          "word": "el",
+          "start": 26.1,
+          "end": 26.16
+        },
+        {
+          "word": "mismo",
+          "start": 26.16,
+          "end": 26.44
+        },
+        {
+          "word": "renglón",
+          "start": 26.44,
+          "end": 26.86
+        },
+        {
+          "word": "del",
+          "start": 26.86,
+          "end": 27.14
+        },
+        {
+          "word": "clavo",
+          "start": 27.14,
+          "end": 27.8
+        },
+        {
+          "word": "entre",
+          "start": 27.8,
+          "end": 28.78
+        },
+        {
+          "word": "los",
+          "start": 28.78,
+          "end": 29.46
+        },
+        {
+          "word": "dos",
+          "start": 29.46,
+          "end": 29.62
+        },
+        {
+          "word": "leones",
+          "start": 29.62,
+          "end": 30.9
+        }
+      ]
+    },
+    {
+      "start": 31.92,
+      "end": 34.2,
+      "text": "pero es engañoso el clavo",
+      "words": [
+        {
+          "word": "pero",
+          "start": 31.92,
+          "end": 32.52
+        },
+        {
+          "word": "es",
+          "start": 32.52,
+          "end": 33.06
+        },
+        {
+          "word": "engañoso",
+          "start": 33.06,
+          "end": 33.56
+        },
+        {
+          "word": "el",
+          "start": 33.56,
+          "end": 33.66
+        },
+        {
+          "word": "clavo",
+          "start": 33.66,
+          "end": 34.2
+        }
+      ]
+    },
+    {
+      "start": 36.74,
+      "end": 39.44,
+      "text": "debajo del león amarillo y sobre el león azul",
+      "words": [
+        {
+          "word": "debajo",
+          "start": 36.74,
+          "end": 37.34
+        },
+        {
+          "word": "del",
+          "start": 37.34,
+          "end": 37.6
+        },
+        {
+          "word": "león",
+          "start": 37.6,
+          "end": 37.82
+        },
+        {
+          "word": "amarillo",
+          "start": 37.82,
+          "end": 38.34
+        },
+        {
+          "word": "y",
+          "start": 38.34,
+          "end": 38.58
+        },
+        {
+          "word": "sobre",
+          "start": 38.58,
+          "end": 38.78
+        },
+        {
+          "word": "el",
+          "start": 38.78,
+          "end": 38.94
+        },
+        {
+          "word": "león",
+          "start": 38.94,
+          "end": 39.16
+        },
+        {
+          "word": "azul",
+          "start": 39.16,
+          "end": 39.44
+        }
+      ]
+    },
+    {
+      "start": 39.44,
+      "end": 43.44,
+      "text": "sí, para ser bien preciso",
+      "words": [
+        {
+          "word": "sí,",
+          "start": 39.44,
+          "end": 39.68
+        },
+        {
+          "word": "para",
+          "start": 39.84,
+          "end": 40.32
+        },
+        {
+          "word": "ser",
+          "start": 40.32,
+          "end": 40.66
+        },
+        {
+          "word": "bien",
+          "start": 40.66,
+          "end": 41.98
+        },
+        {
+          "word": "preciso",
+          "start": 41.98,
+          "end": 43.44
+        }
+      ]
+    },
+    {
+      "start": 44.04,
+      "end": 48.18,
+      "text": "por ejemplo la patita del león amarillo, la punta de la cortadora",
+      "words": [
+        {
+          "word": "por",
+          "start": 44.04,
+          "end": 44.64
+        },
+        {
+          "word": "ejemplo",
+          "start": 44.64,
+          "end": 44.96
+        },
+        {
+          "word": "la",
+          "start": 44.96,
+          "end": 45.16
+        },
+        {
+          "word": "patita",
+          "start": 45.16,
+          "end": 45.52
+        },
+        {
+          "word": "del",
+          "start": 45.52,
+          "end": 45.66
+        },
+        {
+          "word": "león",
+          "start": 45.66,
+          "end": 45.86
+        },
+        {
+          "word": "amarillo,",
+          "start": 45.86,
+          "end": 46.48
+        },
+        {
+          "word": "la",
+          "start": 46.82,
+          "end": 46.96
+        },
+        {
+          "word": "punta",
+          "start": 46.96,
+          "end": 47.22
+        },
+        {
+          "word": "de",
+          "start": 47.22,
+          "end": 47.34
+        },
+        {
+          "word": "la",
+          "start": 47.34,
+          "end": 47.48
+        },
+        {
+          "word": "cortadora",
+          "start": 47.48,
+          "end": 48.18
+        }
+      ]
+    },
+    {
+      "start": 48.18,
+      "end": 53.48,
+      "text": "sí, termina exactamente donde termina la patita, la pasa",
+      "words": [
+        {
+          "word": "sí,",
+          "start": 48.18,
+          "end": 48.66
+        },
+        {
+          "word": "termina",
+          "start": 48.8,
+          "end": 50.52
+        },
+        {
+          "word": "exactamente",
+          "start": 50.52,
+          "end": 51.22
+        },
+        {
+          "word": "donde",
+          "start": 51.22,
+          "end": 51.44
+        },
+        {
+          "word": "termina",
+          "start": 51.44,
+          "end": 51.76
+        },
+        {
+          "word": "la",
+          "start": 51.76,
+          "end": 51.96
+        },
+        {
+          "word": "patita,",
+          "start": 51.96,
+          "end": 52.44
+        },
+        {
+          "word": "la",
+          "start": 52.54,
+          "end": 52.8
+        },
+        {
+          "word": "pasa",
+          "start": 52.8,
+          "end": 53.48
+        }
+      ]
+    },
+    {
+      "start": 54.56,
+      "end": 60.7,
+      "text": "no, es exactamente donde está la patita de frente",
+      "words": [
+        {
+          "word": "no,",
+          "start": 54.56,
+          "end": 55.08
+        },
+        {
+          "word": "es",
+          "start": 55.28,
+          "end": 55.44
+        },
+        {
+          "word": "exactamente",
+          "start": 55.44,
+          "end": 56.02
+        },
+        {
+          "word": "donde",
+          "start": 56.02,
+          "end": 56.38
+        },
+        {
+          "word": "está",
+          "start": 56.38,
+          "end": 56.84
+        },
+        {
+          "word": "la",
+          "start": 56.84,
+          "end": 57.28
+        },
+        {
+          "word": "patita",
+          "start": 57.28,
+          "end": 58.62
+        },
+        {
+          "word": "de",
+          "start": 58.62,
+          "end": 60.24
+        },
+        {
+          "word": "frente",
+          "start": 60.24,
+          "end": 60.7
+        }
+      ]
+    },
+    {
+      "start": 60.7,
+      "end": 62.84,
+      "text": "la pata de derecha, digamos, del león amarillo",
+      "words": [
+        {
+          "word": "la",
+          "start": 60.7,
+          "end": 60.98
+        },
+        {
+          "word": "pata",
+          "start": 60.98,
+          "end": 61.28
+        },
+        {
+          "word": "de",
+          "start": 61.28,
+          "end": 61.5
+        },
+        {
+          "word": "derecha,",
+          "start": 61.5,
+          "end": 61.76
+        },
+        {
+          "word": "digamos,",
+          "start": 61.96,
+          "end": 62.08
+        },
+        {
+          "word": "del",
+          "start": 62.12,
+          "end": 62.16
+        },
+        {
+          "word": "león",
+          "start": 62.16,
+          "end": 62.32
+        },
+        {
+          "word": "amarillo",
+          "start": 62.32,
+          "end": 62.84
+        }
+      ]
+    },
+    {
+      "start": 62.84,
+      "end": 65.28,
+      "text": "sí, la pata de frente, o sea la pata que está más hacia la izquierda",
+      "words": [
+        {
+          "word": "sí,",
+          "start": 62.84,
+          "end": 63.12
+        },
+        {
+          "word": "la",
+          "start": 63.26,
+          "end": 63.36
+        },
+        {
+          "word": "pata",
+          "start": 63.36,
+          "end": 63.58
+        },
+        {
+          "word": "sea",
+          "start": 63.6,
+          "end": 63.74
+        },
+        {
+          "word": "la",
+          "start": 63.74,
+          "end": 63.86
+        },
+        {
+          "word": "pata",
+          "start": 63.86,
+          "end": 64.14
+        },
+        {
+          "word": "que",
+          "start": 64.14,
+          "end": 64.2
+        },
+        {
+          "word": "está",
+          "start": 64.2,
+          "end": 64.36
+        },
+        {
+          "word": "más",
+          "start": 64.36,
+          "end": 64.58
+        },
+        {
+          "word": "hacia",
+          "start": 64.58,
+          "end": 64.74
+        },
+        {
+          "word": "la",
+          "start": 64.74,
+          "end": 64.94
+        },
+        {
+          "word": "izquierda",
+          "start": 64.94,
+          "end": 65.28
+        }
+      ]
+    },
+    {
+      "start": 65.28,
+      "end": 70.22,
+      "text": "va con la última ruedita de la cortadora de pasto",
+      "words": [
+        {
+          "word": "va",
+          "start": 65.28,
+          "end": 65.48
+        },
+        {
+          "word": "con",
+          "start": 65.48,
+          "end": 66.02
+        },
+        {
+          "word": "la",
+          "start": 66.02,
+          "end": 66.32
+        },
+        {
+          "word": "última",
+          "start": 66.32,
+          "end": 67.06
+        },
+        {
+          "word": "ruedita",
+          "start": 67.06,
+          "end": 67.78
+        },
+        {
+          "word": "de",
+          "start": 67.78,
+          "end": 68.24
+        },
+        {
+          "word": "la",
+          "start": 68.24,
+          "end": 68.44
+        },
+        {
+          "word": "cortadora",
+          "start": 68.44,
+          "end": 68.86
+        },
+        {
+          "word": "de",
+          "start": 68.86,
+          "end": 69.08
+        },
+        {
+          "word": "pasto",
+          "start": 69.08,
+          "end": 70.22
+        }
+      ]
+    },
+    {
+      "start": 70.22,
+      "end": 78.9,
+      "text": "ah, la pata que vemos de frente, o sea las patas delanteras están con las rueditas delanteras",
+      "words": [
+        {
+          "word": "ah,",
+          "start": 70.22,
+          "end": 70.7
+        },
+        {
+          "word": "la",
+          "start": 70.84,
+          "end": 70.9
+        },
+        {
+          "word": "pata",
+          "start": 70.9,
+          "end": 71.42
+        },
+        {
+          "word": "que",
+          "start": 71.42,
+          "end": 71.52
+        },
+        {
+          "word": "vemos",
+          "start": 71.52,
+          "end": 71.78
+        },
+        {
+          "word": "de",
+          "start": 71.78,
+          "end": 72.1
+        },
+        {
+          "word": "frente,",
+          "start": 72.1,
+          "end": 72.5
+        },
+        {
+          "word": "o",
+          "start": 72.64,
+          "end": 72.66
+        },
+        {
+          "word": "sea",
+          "start": 72.66,
+          "end": 72.8
+        },
+        {
+          "word": "las",
+          "start": 72.8,
+          "end": 72.94
+        },
+        {
+          "word": "patas",
+          "start": 72.94,
+          "end": 73.18
+        },
+        {
+          "word": "delanteras",
+          "start": 73.18,
+          "end": 73.96
+        },
+        {
+          "word": "están",
+          "start": 73.96,
+          "end": 74.38
+        },
+        {
+          "word": "con",
+          "start": 74.38,
+          "end": 75.72
+        },
+        {
+          "word": "las",
+          "start": 75.72,
+          "end": 75.98
+        },
+        {
+          "word": "rueditas",
+          "start": 75.98,
+          "end": 76.86
+        },
+        {
+          "word": "delanteras",
+          "start": 76.86,
+          "end": 78.9
+        }
+      ]
+    },
+    {
+      "start": 78.9,
+      "end": 80.42,
+      "text": "no, las traseras",
+      "words": [
+        {
+          "word": "no,",
+          "start": 78.9,
+          "end": 79.26
+        },
+        {
+          "word": "las",
+          "start": 79.26,
+          "end": 79.68
+        },
+        {
+          "word": "traseras",
+          "start": 79.68,
+          "end": 80.42
+        }
+      ]
+    },
+    {
+      "start": 80.42,
+      "end": 82.34,
+      "text": "ah, por yo no veo rueditas",
+      "words": [
+        {
+          "word": "ah,",
+          "start": 80.42,
+          "end": 80.6
+        },
+        {
+          "word": "por",
+          "start": 80.74,
+          "end": 80.86
+        },
+        {
+          "word": "yo",
+          "start": 80.86,
+          "end": 80.98
+        },
+        {
+          "word": "no",
+          "start": 80.98,
+          "end": 81.16
+        },
+        {
+          "word": "veo",
+          "start": 81.16,
+          "end": 81.3
+        },
+        {
+          "word": "rueditas",
+          "start": 81.3,
+          "end": 82.34
+        }
+      ]
+    },
+    {
+      "start": 82.34,
+      "end": 85.8,
+      "text": "no se ven las rueditas, pero sería que estuvieran ahí",
+      "words": [
+        {
+          "word": "no",
+          "start": 82.34,
+          "end": 83.0
+        },
+        {
+          "word": "se",
+          "start": 83.0,
+          "end": 83.28
+        },
+        {
+          "word": "ven",
+          "start": 83.28,
+          "end": 83.38
+        },
+        {
+          "word": "las",
+          "start": 83.38,
+          "end": 83.58
+        },
+        {
+          "word": "rueditas,",
+          "start": 83.58,
+          "end": 83.94
+        },
+        {
+          "word": "pero",
+          "start": 84.16,
+          "end": 84.22
+        },
+        {
+          "word": "sería",
+          "start": 84.22,
+          "end": 84.46
+        },
+        {
+          "word": "que",
+          "start": 84.46,
+          "end": 84.66
+        },
+        {
+          "word": "estuvieran",
+          "start": 84.66,
+          "end": 85.08
+        },
+        {
+          "word": "ahí",
+          "start": 85.08,
+          "end": 85.8
+        }
+      ]
+    },
+    {
+      "start": 86.54,
+      "end": 88.42,
+      "text": "está bien, sí creo que es ahí",
+      "words": [
+        {
+          "word": "está",
+          "start": 86.54,
+          "end": 87.02
+        },
+        {
+          "word": "bien,",
+          "start": 87.02,
+          "end": 87.4
+        },
+        {
+          "word": "sí",
+          "start": 87.48,
+          "end": 87.68
+        },
+        {
+          "word": "creo",
+          "start": 87.68,
+          "end": 87.8
+        },
+        {
+          "word": "que",
+          "start": 87.8,
+          "end": 88.0
+        },
+        {
+          "word": "es",
+          "start": 88.0,
+          "end": 88.08
+        },
+        {
+          "word": "ahí",
+          "start": 88.08,
+          "end": 88.42
+        }
+      ]
+    },
+    {
+      "start": 88.42,
+      "end": 90.5,
+      "text": "no sé si estamos siendo muy quisquillosos",
+      "words": [
+        {
+          "word": "no",
+          "start": 88.42,
+          "end": 89.36
+        },
+        {
+          "word": "sé",
+          "start": 89.36,
+          "end": 89.5
+        },
+        {
+          "word": "si",
+          "start": 89.5,
+          "end": 89.6
+        },
+        {
+          "word": "estamos",
+          "start": 89.6,
+          "end": 89.8
+        },
+        {
+          "word": "siendo",
+          "start": 89.8,
+          "end": 90.04
+        },
+        {
+          "word": "muy",
+          "start": 90.04,
+          "end": 90.3
+        },
+        {
+          "word": "quisquillosos",
+          "start": 90.3,
+          "end": 90.54
+        }
+      ]
+    },
+    {
+      "start": 91.04,
+      "end": 91.5,
+      "text": "listo?",
+      "words": [
+        {
+          "word": "listo?",
+          "start": 91.04,
+          "end": 91.5
+        }
+      ]
+    },
+    {
+      "start": 91.5,
+      "end": 93.66,
+      "text": "voy a bajar un poquito",
+      "words": [
+        {
+          "word": "voy",
+          "start": 91.5,
+          "end": 91.62
+        },
+        {
+          "word": "a",
+          "start": 91.62,
+          "end": 91.76
+        },
+        {
+          "word": "bajar",
+          "start": 91.76,
+          "end": 92.02
+        },
+        {
+          "word": "un",
+          "start": 92.02,
+          "end": 93.66
+        }
+      ]
+    },
+    {
+      "start": 93.66,
+      "end": 95.04,
+      "text": "sí, dale, pongo listo",
+      "words": [
+        {
+          "word": "sí,",
+          "start": 93.66,
+          "end": 94.02
+        },
+        {
+          "word": "dale,",
+          "start": 94.12,
+          "end": 94.26
+        },
+        {
+          "word": "pongo",
+          "start": 94.28,
+          "end": 94.48
+        },
+        {
+          "word": "listo",
+          "start": 94.48,
+          "end": 95.04
+        }
+      ]
+    }
+  ]
+}

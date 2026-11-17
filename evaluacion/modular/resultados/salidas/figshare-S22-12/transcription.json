@@ -1,0 +1,639 @@
+{
+  "segments": [
+    {
+      "start": 3.38,
+      "end": 8.0,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "está esta sirenita amarilla sobre una plancha celeste",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 53
+      }
+    },
+    {
+      "start": 9.24,
+      "end": 10.62,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "tapando la otra vez?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 20
+      }
+    },
+    {
+      "start": 10.92,
+      "end": 14.7,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "no, está como sentada en el cable",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 33
+      }
+    },
+    {
+      "start": 14.7,
+      "end": 16.16,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "ah, sentada en el cable",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 16.16,
+      "end": 18.0,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "si, y para que te des una idea",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 22.18,
+      "end": 24.98,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "su rodilla no llega al final del cable",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 38
+      }
+    },
+    {
+      "start": 24.98,
+      "end": 25.98,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "o sea está",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 10
+      }
+    },
+    {
+      "start": 25.98,
+      "end": 27.21,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "un poquito más hacia la izquierda",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 11,
+        "end": 44
+      }
+    },
+    {
+      "start": 27.21,
+      "end": 28.15,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "si",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 29.99,
+      "end": 33.31,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "y la punta negra de la colita",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 33.31,
+      "end": 33.85,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "es",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 30,
+        "end": 32
+      }
+    },
+    {
+      "start": 33.85,
+      "end": 35.85,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "lo único que sobresale de la plancha",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 33,
+        "end": 69
+      }
+    },
+    {
+      "start": 35.85,
+      "end": 37.25,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "sobresale exactamente?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 22
+      }
+    },
+    {
+      "start": 37.53,
+      "end": 39.37,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "solamente la punta negra de la colita",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 37
+      }
+    },
+    {
+      "start": 39.37,
+      "end": 39.67,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "pero",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 4
+      }
+    },
+    {
+      "start": 39.67,
+      "end": 44.19,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "la punta negra termina en la línea del fin de la plancha?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 5,
+        "end": 62
+      }
+    },
+    {
+      "start": 44.69,
+      "end": 46.89,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "si, del fin de la plancha no",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 46.89,
+      "end": 48.49,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "si la sentada arriba",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 20
+      }
+    },
+    {
+      "start": 48.49,
+      "end": 50.07,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "no, no, si, yo entiendo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 52.25,
+      "end": 56.13,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "seria el fin de la parte en donde está caliente la plancha",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 58
+      }
+    },
+    {
+      "start": 56.13,
+      "end": 58.19,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "la parte de arriba y la parte de abajo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 38
+      }
+    },
+    {
+      "start": 58.77,
+      "end": 60.49,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "en el fin de la plancha",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 60.49,
+      "end": 62.01,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "en el son de apoya",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 18
+      }
+    },
+    {
+      "start": 62.01,
+      "end": 64.67,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "te preguntaba por la puntita negra esa que me decía",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 51
+      }
+    },
+    {
+      "start": 64.67,
+      "end": 67.35,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "eso es lo que sobresale fuera de la",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 35
+      }
+    },
+    {
+      "start": 67.35,
+      "end": 68.15,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "bueno, creo que",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 15
+      }
+    },
+    {
+      "start": 68.15,
+      "end": 68.85,
+      "speaker": null,
+      "name": null,
+      "text": "del apoyo de la plancha",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 23
+      }
+    }
+  ]
+}

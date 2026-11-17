@@ -1,0 +1,109 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 7.9,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "bueno, es la podadora, tenés que ponerla en el medio de los dos leones",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 70
+      }
+    },
+    {
+      "start": 8.88,
+      "end": 12.0,
+      "speaker": null,
+      "name": null,
+      "text": "y bueno, a la izquierda del clavo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 33
+      }
+    },
+    {
+      "start": 12.86,
+      "end": 13.92,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "justo en el medio?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 18
+      }
+    },
+    {
+      "start": 14.12,
+      "end": 17.02,
+      "speaker": null,
+      "name": null,
+      "text": "si, justo en el medio",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 21
+      }
+    },
+    {
+      "start": 17.02,
+      "end": 18.58,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "intersectando los tres",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 22
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "resumen": "La reunión se centró en la ubicación y disposición de un candelabro, una pata llamada menoraz y llamas de velas. Se acordaron las posiciones relativas de estos elementos con respecto a un rinoceronte y un jarrón.",
+  "temas": [
+    {
+      "texto": "Ubicación del candelabro",
+      "ids_intervenciones": [
+        "I000016",
+        "I000024",
+        "I000025",
+        "I000026",
+        "I000027",
+        "I000028",
+        "I000030",
+        "I000031"
+      ],
+      "id_ancla": "I000031"
+    },
+    {
+      "texto": "Ubicación de la pata menoraz",
+      "ids_intervenciones": [
+        "I000018",
+        "I000019",
+        "I000020"
+      ],
+      "id_ancla": "I000020"
+    },
+    {
+      "texto": "Ubicación de las llamas",
+      "ids_intervenciones": [
+        "I000038",
+        "I000039",
+        "I000040",
+        "I000041",
+        "I000042"
+      ],
+      "id_ancla": "I000042"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "La ubicación del candelabro no se ajusta correctamente con la boca del jarrón.",
+      "ids_intervenciones": [
+        "I000038",
+        "I000039",
+        "I000040"
+      ],
+      "id_ancla": "I000040"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Revisar la ubicación del candelabro para que no sobrepase la boca del jarrón.",
+      "ids_intervenciones": [
+        "I000038",
+        "I000039",
+        "I000040"
+      ],
+      "id_ancla": "I000040",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "resumen": "Se discutió la posición del león en relación al clavo y el mimo, estableciendo que el león debe estar abajo del clavo y a la izquierda del mimo. Se acordó que las patas del león deben estar a la altura de la mitad de las bolas del mimo.",
+  "temas": [
+    {
+      "texto": "Posición del león en relación al clavo y el mimo",
+      "ids_intervenciones": [
+        "I000003",
+        "I000005",
+        "I000006",
+        "I000013",
+        "I000024",
+        "I000029",
+        "I000030",
+        "I000031",
+        "I000032",
+        "I000033",
+        "I000034",
+        "I000035",
+        "I000036",
+        "I000037",
+        "I000038",
+        "I000041"
+      ],
+      "id_ancla": "I000041"
+    },
+    {
+      "texto": "Colocación del león y el mimo en relación al clavo",
+      "ids_intervenciones": [
+        "I000041",
+        "I000042",
+        "I000043",
+        "I000044",
+        "I000045",
+        "I000046",
+        "I000047",
+        "I000048",
+        "I000049",
+        "I000050",
+        "I000051",
+        "I000052",
+        "I000053",
+        "I000054",
+        "I000055",
+        "I000056"
+      ],
+      "id_ancla": "I000056"
+    }
+  ],
+  "decisiones": [
+    {
+      "texto": "El león debe estar abajo del clavo y a la izquierda del mimo.",
+      "ids_intervenciones": [
+        "I000035",
+        "I000041"
+      ],
+      "id_ancla": "I000041"
+    },
+    {
+      "texto": "Las patas del león deben estar a la altura de la mitad de las bolas del mimo.",
+      "ids_intervenciones": [
+        "I000020",
+        "I000038"
+      ],
+      "id_ancla": "I000038"
+    }
+  ],
+  "problemas": [
+    {
+      "texto": "Diferencias en la colocación de los ejes verticales y horizontales entre el león, el mimo y el clavo.",
+      "ids_intervenciones": [
+        "I000043",
+        "I000049",
+        "I000050",
+        "I000051",
+        "I000052",
+        "I000053",
+        "I000054",
+        "I000056"
+      ],
+      "id_ancla": "I000056"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Revisar la colocación del león y el mimo en relación al clavo.",
+      "ids_intervenciones": [
+        "I000041",
+        "I000042",
+        "I000043",
+        "I000044",
+        "I000045",
+        "I000046",
+        "I000047",
+        "I000048",
+        "I000049",
+        "I000050",
+        "I000051",
+        "I000052",
+        "I000053",
+        "I000054",
+        "I000055",
+        "I000056"
+      ],
+      "id_ancla": "I000056",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

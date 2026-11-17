@@ -1,0 +1,27 @@
+{
+  "resumen": "La reunión se centró en la ubicación del espejo y su relación con el auto, pero no se tomaron decisiones ni se identificaron problemas específicos.",
+  "temas": [
+    {
+      "texto": "Ubicación del espejo",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002"
+      ],
+      "id_ancla": "I000002"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "Determinar la ubicación exacta del espejo en relación con el auto",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002"
+      ],
+      "id_ancla": "I000002",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

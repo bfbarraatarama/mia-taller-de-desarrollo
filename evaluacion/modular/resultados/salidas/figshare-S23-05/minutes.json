@@ -1,0 +1,29 @@
+{
+  "resumen": "La reunión se centró en la colocación de un objeto (el león azul) en relación con otros elementos (mimo y clavo). Se acordó que el león azul debe estar a la misma altura que la podadora, ligeramente más arriba o abajo.",
+  "temas": [
+    {
+      "texto": "Colocación del león azul",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005"
+      ],
+      "id_ancla": "I000005"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "Colocar el león azul a la misma altura que la podadora, ligeramente más arriba o abajo.",
+      "ids_intervenciones": [
+        "I000005"
+      ],
+      "id_ancla": "I000005",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

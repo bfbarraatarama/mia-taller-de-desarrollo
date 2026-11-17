@@ -1,0 +1,738 @@
+{
+  "segments": [
+    {
+      "start": 0.48,
+      "end": 1.56,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El M y M?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 9
+      }
+    },
+    {
+      "start": 1.74,
+      "end": 2.2,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 2.2,
+      "end": 4.63,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Mándalo entre el limón, la cebolla y la ballena",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 47
+      }
+    },
+    {
+      "start": 5.62,
+      "end": 6.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ajá",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 6.66,
+      "end": 7.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Eeeh...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 7
+      }
+    },
+    {
+      "start": 7.12,
+      "end": 8.9,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Pero se superpone a algo o no?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 9.34,
+      "end": 9.68,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 9.68,
+      "end": 10.22,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Casi",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 4
+      }
+    },
+    {
+      "start": 10.22,
+      "end": 11.92,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No se superpone a nada",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 22
+      }
+    },
+    {
+      "start": 12.8,
+      "end": 13.26,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Esta...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 7
+      }
+    },
+    {
+      "start": 13.26,
+      "end": 15.22,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No está tocando, no llega a...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 15.22,
+      "end": 16.22,
+      "speaker": null,
+      "name": null,
+      "text": "Esta casi pisando la cebolla",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 16.22,
+      "end": 18.42,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "De pura suerte, pero esta como...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 33
+      }
+    },
+    {
+      "start": 18.42,
+      "end": 18.96,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El talón...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 11
+      }
+    },
+    {
+      "start": 18.96,
+      "end": 21.3,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No perdón, si el talón esta pisando la cebolla",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 46
+      }
+    },
+    {
+      "start": 21.3,
+      "end": 21.9,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Listo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 5
+      }
+    },
+    {
+      "start": 21.9,
+      "end": 24.21,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Pero como si estuviera parado con el pie derecho nomás",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 54
+      }
+    },
+    {
+      "start": 24.58,
+      "end": 26.3,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y no todo el pie derecho, la parte del talón",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 44
+      }
+    },
+    {
+      "start": 26.3,
+      "end": 27.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si, si, si, entiendo, entiendo",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 27.46,
+      "end": 29.84,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Pero después está casi el...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 29.84,
+      "end": 30.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El... digamos...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 30.74,
+      "end": 31.86,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La mano izquierda, viste?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 31.98,
+      "end": 32.26,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 32.26,
+      "end": 33.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Es como que el...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 23,
+        "start": 0,
+        "end": 17
+      }
+    },
+    {
+      "start": 34.62,
+      "end": 36.16,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El dedo que está más cerca de la ballena",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 0,
+        "end": 40
+      }
+    },
+    {
+      "start": 36.16,
+      "end": 38.28,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está como casi... está rozando la aleta",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 25,
+        "start": 0,
+        "end": 39
+      }
+    },
+    {
+      "start": 38.96,
+      "end": 39.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ajá",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 26,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 39.44,
+      "end": 40.56,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Como que la está rozando",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 27,
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "start": 40.56,
+      "end": 42.42,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y después el limón si que no lo toca",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 28,
+        "start": 0,
+        "end": 36
+      }
+    },
+    {
+      "start": 42.42,
+      "end": 43.04,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Listo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 29,
+        "start": 0,
+        "end": 5
+      }
+    },
+    {
+      "start": 43.04,
+      "end": 44.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Hay como muy poca distancia que no lo toca",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 30,
+        "start": 0,
+        "end": 42
+      }
+    },
+    {
+      "start": 44.7,
+      "end": 45.42,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Listo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 31,
+        "start": 0,
+        "end": 5
+      }
+    },
+    {
+      "start": 45.42,
+      "end": 45.86,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 32,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 46.34,
+      "end": 46.42,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 33,
+        "start": 0,
+        "end": 5
+      }
+    }
+  ]
+}

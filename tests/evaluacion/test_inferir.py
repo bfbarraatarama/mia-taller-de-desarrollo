@@ -22,7 +22,9 @@ class EjecutorFalso:
         self.comandos.append(comando)
         carpeta.mkdir(parents=True, exist_ok=True)
         for nombre in ARCHIVOS_ESPERADOS[fuente]:
-            (carpeta / nombre).write_text("{}", encoding="utf-8")
+            (carpeta / nombre).write_text(f'{{"archivo": "{nombre}"}}', encoding="utf-8")
+        if fuente == "figshare":
+            (carpeta / "workflow.json").write_text('{"estado": "completado"}', encoding="utf-8")
         return 0
 
 
@@ -97,3 +99,37 @@ def test_fallo_de_un_modulo_no_se_reutiliza(tmp_path):
     resumen = inferir(config, ejecutar=falla)
     assert resumen["ejecutados"] == 3 and resumen["fallidos"] == ["ami-r1", "clip-c1", "figshare-S22-01"]
     assert inferir(config, ejecutar=EjecutorFalso()) == {"ejecutados": 3, "reutilizados": 0}
+
+
+def test_cambio_de_codigo_vuelve_a_inferir(tmp_path, monkeypatch):
+    config = config_en(tmp_path)
+    inferir(config, ejecutar=EjecutorFalso())
+    original = __import__("evaluacion.modular.inferencia", fromlist=["huella_codigo"]).huella_codigo
+    # Cambia solo el código de las minutas: se rehacen AMI y Figshare (usan la Etapa 5), no el clip.
+    monkeypatch.setattr("evaluacion.modular.inferencia.huella_codigo",
+                        lambda tipo: original(tipo) + ("x" if tipo in ("ami", "figshare") else ""))
+    otro = EjecutorFalso()
+    assert inferir(config, ejecutar=otro) == {"ejecutados": 2, "reutilizados": 1}
+    assert {c[2] for c in otro.comandos} == {"src.pipeline", "src.minutas"}
+
+
+def test_huella_de_codigo_por_tipo():
+    from evaluacion.modular.inferencia import huella_codigo
+    assert len({huella_codigo(t) for t in ("clip", "figshare", "ami")}) == 3
+    assert huella_codigo("clip") == huella_codigo("clip")
+
+
+def test_salida_alterada_no_se_reutiliza(tmp_path):
+    config = config_en(tmp_path)
+    inferir(config, ejecutar=EjecutorFalso())
+    (config.inferencia / "clip-c1" / "asr.json").write_text('{"cambiado": true}', encoding="utf-8")
+    otro = EjecutorFalso()
+    assert inferir(config, ejecutar=otro) == {"ejecutados": 1, "reutilizados": 2}
+    assert [c[2] for c in otro.comandos] == ["src.stt"]
+
+
+def test_pipeline_no_completado_no_se_reutiliza(tmp_path):
+    config = config_en(tmp_path)
+    inferir(config, ejecutar=EjecutorFalso())
+    (config.inferencia / "figshare-S22-01" / "workflow.json").write_text('{"estado": "cancelado"}', encoding="utf-8")
+    assert inferir(config, ejecutar=EjecutorFalso()) == {"ejecutados": 1, "reutilizados": 2}

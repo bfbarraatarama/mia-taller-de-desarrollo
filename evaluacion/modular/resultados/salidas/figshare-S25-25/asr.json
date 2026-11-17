@@ -1,0 +1,777 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.64,
+      "text": "del aorio?",
+      "words": [
+        {
+          "word": "del",
+          "start": 0.0,
+          "end": 0.74
+        },
+        {
+          "word": "aorio?",
+          "start": 0.74,
+          "end": 1.64
+        }
+      ]
+    },
+    {
+      "start": 1.64,
+      "end": 2.18,
+      "text": "ajá",
+      "words": [
+        {
+          "word": "ajá",
+          "start": 1.64,
+          "end": 2.18
+        }
+      ]
+    },
+    {
+      "start": 2.18,
+      "end": 5.7,
+      "text": "va a ir abajo del espejo y a la izquierda del menor a",
+      "words": [
+        {
+          "word": "va",
+          "start": 2.18,
+          "end": 2.38
+        },
+        {
+          "word": "a",
+          "start": 2.38,
+          "end": 2.42
+        },
+        {
+          "word": "ir",
+          "start": 2.42,
+          "end": 2.46
+        },
+        {
+          "word": "abajo",
+          "start": 2.46,
+          "end": 2.7
+        },
+        {
+          "word": "del",
+          "start": 2.7,
+          "end": 2.88
+        },
+        {
+          "word": "espejo",
+          "start": 2.88,
+          "end": 3.34
+        },
+        {
+          "word": "y",
+          "start": 3.34,
+          "end": 3.52
+        },
+        {
+          "word": "a",
+          "start": 3.52,
+          "end": 3.54
+        },
+        {
+          "word": "la",
+          "start": 3.54,
+          "end": 3.76
+        },
+        {
+          "word": "izquierda",
+          "start": 3.76,
+          "end": 4.38
+        },
+        {
+          "word": "del",
+          "start": 4.38,
+          "end": 5.2
+        },
+        {
+          "word": "menor",
+          "start": 5.2,
+          "end": 5.44
+        },
+        {
+          "word": "a",
+          "start": 5.44,
+          "end": 5.7
+        }
+      ]
+    },
+    {
+      "start": 5.7,
+      "end": 6.04,
+      "text": "listo",
+      "words": [
+        {
+          "word": "listo",
+          "start": 5.7,
+          "end": 6.04
+        }
+      ]
+    },
+    {
+      "start": 6.76,
+      "end": 9.54,
+      "text": "de tal manera que la parte",
+      "words": [
+        {
+          "word": "de",
+          "start": 6.76,
+          "end": 6.98
+        },
+        {
+          "word": "tal",
+          "start": 6.98,
+          "end": 7.12
+        },
+        {
+          "word": "manera",
+          "start": 7.12,
+          "end": 7.52
+        },
+        {
+          "word": "que",
+          "start": 7.52,
+          "end": 8.62
+        },
+        {
+          "word": "la",
+          "start": 8.62,
+          "end": 8.98
+        },
+        {
+          "word": "parte",
+          "start": 8.98,
+          "end": 9.54
+        }
+      ]
+    },
+    {
+      "start": 11.2,
+      "end": 11.76,
+      "text": "eee",
+      "words": [
+        {
+          "word": "eee",
+          "start": 11.2,
+          "end": 11.76
+        }
+      ]
+    },
+    {
+      "start": 11.76,
+      "end": 13.52,
+      "text": "a la izquierda",
+      "words": [
+        {
+          "word": "a",
+          "start": 11.76,
+          "end": 12.3
+        },
+        {
+          "word": "la",
+          "start": 12.3,
+          "end": 12.92
+        },
+        {
+          "word": "izquierda",
+          "start": 12.92,
+          "end": 13.52
+        }
+      ]
+    },
+    {
+      "start": 13.52,
+      "end": 15.24,
+      "text": "el extremo izquierdo del aorio",
+      "words": [
+        {
+          "word": "el",
+          "start": 13.52,
+          "end": 13.9
+        },
+        {
+          "word": "extremo",
+          "start": 13.9,
+          "end": 14.14
+        },
+        {
+          "word": "izquierdo",
+          "start": 14.14,
+          "end": 14.42
+        },
+        {
+          "word": "del",
+          "start": 14.42,
+          "end": 14.56
+        },
+        {
+          "word": "aorio",
+          "start": 14.56,
+          "end": 15.24
+        }
+      ]
+    },
+    {
+      "start": 15.24,
+      "end": 15.78,
+      "text": "si",
+      "words": [
+        {
+          "word": "si",
+          "start": 15.24,
+          "end": 15.78
+        }
+      ]
+    },
+    {
+      "start": 15.78,
+      "end": 17.98,
+      "text": "está mas o menos a la misma",
+      "words": [
+        {
+          "word": "está",
+          "start": 15.78,
+          "end": 16.46
+        },
+        {
+          "word": "mas",
+          "start": 16.46,
+          "end": 16.66
+        },
+        {
+          "word": "o",
+          "start": 16.66,
+          "end": 16.76
+        },
+        {
+          "word": "menos",
+          "start": 16.76,
+          "end": 16.96
+        },
+        {
+          "word": "a",
+          "start": 16.96,
+          "end": 17.42
+        },
+        {
+          "word": "la",
+          "start": 17.42,
+          "end": 17.58
+        },
+        {
+          "word": "misma",
+          "start": 17.58,
+          "end": 17.98
+        }
+      ]
+    },
+    {
+      "start": 18.74,
+      "end": 22.0,
+      "text": "el mismo eje vertical que la oreja izquierda del espejo",
+      "words": [
+        {
+          "word": "el",
+          "start": 18.74,
+          "end": 19.3
+        },
+        {
+          "word": "mismo",
+          "start": 19.3,
+          "end": 19.54
+        },
+        {
+          "word": "eje",
+          "start": 19.54,
+          "end": 19.74
+        },
+        {
+          "word": "vertical",
+          "start": 19.74,
+          "end": 20.18
+        },
+        {
+          "word": "que",
+          "start": 20.18,
+          "end": 20.42
+        },
+        {
+          "word": "la",
+          "start": 20.42,
+          "end": 20.68
+        },
+        {
+          "word": "oreja",
+          "start": 20.68,
+          "end": 21.0
+        },
+        {
+          "word": "izquierda",
+          "start": 21.0,
+          "end": 21.46
+        },
+        {
+          "word": "del",
+          "start": 21.46,
+          "end": 21.86
+        },
+        {
+          "word": "espejo",
+          "start": 21.86,
+          "end": 22.14
+        }
+      ]
+    },
+    {
+      "start": 23.26,
+      "end": 23.82,
+      "text": "ok",
+      "words": [
+        {
+          "word": "ok",
+          "start": 23.26,
+          "end": 23.82
+        }
+      ]
+    },
+    {
+      "start": 23.82,
+      "end": 26.9,
+      "text": "un poquito mas a la derecha hasta medio mililímetro mas a la derecha",
+      "words": [
+        {
+          "word": "un",
+          "start": 23.82,
+          "end": 24.3
+        },
+        {
+          "word": "poquito",
+          "start": 24.3,
+          "end": 24.54
+        },
+        {
+          "word": "mas",
+          "start": 24.54,
+          "end": 24.72
+        },
+        {
+          "word": "a",
+          "start": 24.72,
+          "end": 24.82
+        },
+        {
+          "word": "la",
+          "start": 24.82,
+          "end": 24.92
+        },
+        {
+          "word": "derecha",
+          "start": 24.92,
+          "end": 25.14
+        },
+        {
+          "word": "hasta",
+          "start": 25.14,
+          "end": 25.34
+        },
+        {
+          "word": "medio",
+          "start": 25.34,
+          "end": 25.52
+        },
+        {
+          "word": "mililímetro",
+          "start": 25.52,
+          "end": 25.82
+        },
+        {
+          "word": "mas",
+          "start": 25.82,
+          "end": 25.98
+        },
+        {
+          "word": "a",
+          "start": 25.98,
+          "end": 26.06
+        },
+        {
+          "word": "la",
+          "start": 26.06,
+          "end": 26.22
+        },
+        {
+          "word": "derecha",
+          "start": 26.22,
+          "end": 26.9
+        }
+      ]
+    },
+    {
+      "start": 26.9,
+      "end": 27.7,
+      "text": "listo",
+      "words": [
+        {
+          "word": "listo",
+          "start": 26.9,
+          "end": 27.7
+        }
+      ]
+    },
+    {
+      "start": 27.7,
+      "end": 30.6,
+      "text": "y el eje horizontal de la oreja",
+      "words": [
+        {
+          "word": "y",
+          "start": 27.7,
+          "end": 28.26
+        },
+        {
+          "word": "el",
+          "start": 28.26,
+          "end": 28.44
+        },
+        {
+          "word": "eje",
+          "start": 28.44,
+          "end": 28.88
+        },
+        {
+          "word": "horizontal",
+          "start": 28.88,
+          "end": 29.54
+        },
+        {
+          "word": "de",
+          "start": 29.54,
+          "end": 29.7
+        },
+        {
+          "word": "la",
+          "start": 29.7,
+          "end": 29.84
+        },
+        {
+          "word": "oreja",
+          "start": 29.84,
+          "end": 30.6
+        }
+      ]
+    },
+    {
+      "start": 30.6,
+      "end": 30.66,
+      "text": "si",
+      "words": [
+        {
+          "word": "si",
+          "start": 30.6,
+          "end": 30.66
+        }
+      ]
+    },
+    {
+      "start": 30.66,
+      "end": 36.32,
+      "text": "está a la misma altura que si yo pongo un eje horizontal en el extremo de las velas",
+      "words": [
+        {
+          "word": "está",
+          "start": 30.66,
+          "end": 31.26
+        },
+        {
+          "word": "a",
+          "start": 31.26,
+          "end": 32.06
+        },
+        {
+          "word": "la",
+          "start": 32.06,
+          "end": 32.24
+        },
+        {
+          "word": "misma",
+          "start": 32.24,
+          "end": 32.4
+        },
+        {
+          "word": "altura",
+          "start": 32.4,
+          "end": 32.84
+        },
+        {
+          "word": "que",
+          "start": 32.84,
+          "end": 33.12
+        },
+        {
+          "word": "si",
+          "start": 33.12,
+          "end": 33.32
+        },
+        {
+          "word": "yo",
+          "start": 33.32,
+          "end": 33.58
+        },
+        {
+          "word": "pongo",
+          "start": 33.58,
+          "end": 34.08
+        },
+        {
+          "word": "un",
+          "start": 34.08,
+          "end": 34.34
+        },
+        {
+          "word": "eje",
+          "start": 34.34,
+          "end": 34.5
+        },
+        {
+          "word": "horizontal",
+          "start": 34.5,
+          "end": 35.08
+        },
+        {
+          "word": "en",
+          "start": 35.08,
+          "end": 35.44
+        },
+        {
+          "word": "el",
+          "start": 35.44,
+          "end": 35.62
+        },
+        {
+          "word": "extremo",
+          "start": 35.62,
+          "end": 35.88
+        },
+        {
+          "word": "de",
+          "start": 35.88,
+          "end": 35.96
+        },
+        {
+          "word": "las",
+          "start": 35.96,
+          "end": 36.12
+        },
+        {
+          "word": "velas",
+          "start": 36.12,
+          "end": 36.32
+        }
+      ]
+    },
+    {
+      "start": 36.32,
+      "end": 39.0,
+      "text": "no en el fuego sino donde sale el fuego",
+      "words": [
+        {
+          "word": "no",
+          "start": 36.32,
+          "end": 36.48
+        },
+        {
+          "word": "en",
+          "start": 36.48,
+          "end": 36.6
+        },
+        {
+          "word": "el",
+          "start": 36.6,
+          "end": 36.76
+        },
+        {
+          "word": "fuego",
+          "start": 36.76,
+          "end": 37.02
+        },
+        {
+          "word": "sino",
+          "start": 37.02,
+          "end": 37.34
+        },
+        {
+          "word": "donde",
+          "start": 37.34,
+          "end": 37.64
+        },
+        {
+          "word": "sale",
+          "start": 37.64,
+          "end": 37.84
+        },
+        {
+          "word": "el",
+          "start": 37.84,
+          "end": 38.04
+        },
+        {
+          "word": "fuego",
+          "start": 38.04,
+          "end": 39.0
+        }
+      ]
+    },
+    {
+      "start": 39.0,
+      "end": 39.68,
+      "text": "ok",
+      "words": [
+        {
+          "word": "ok",
+          "start": 39.0,
+          "end": 39.68
+        }
+      ]
+    },
+    {
+      "start": 39.68,
+      "end": 45.38,
+      "text": "si en la parte celeste en el extremo celeste yo pongo ahí una recta y pasa por el mismo eje horizontal que era",
+      "words": [
+        {
+          "word": "si",
+          "start": 39.68,
+          "end": 40.02
+        },
+        {
+          "word": "en",
+          "start": 40.02,
+          "end": 40.14
+        },
+        {
+          "word": "la",
+          "start": 40.14,
+          "end": 40.2
+        },
+        {
+          "word": "parte",
+          "start": 40.2,
+          "end": 40.36
+        },
+        {
+          "word": "celeste",
+          "start": 40.36,
+          "end": 40.68
+        },
+        {
+          "word": "en",
+          "start": 40.68,
+          "end": 40.88
+        },
+        {
+          "word": "el",
+          "start": 40.88,
+          "end": 40.9
+        },
+        {
+          "word": "extremo",
+          "start": 40.9,
+          "end": 41.1
+        },
+        {
+          "word": "celeste",
+          "start": 41.1,
+          "end": 41.52
+        },
+        {
+          "word": "yo",
+          "start": 41.52,
+          "end": 41.78
+        },
+        {
+          "word": "pongo",
+          "start": 41.78,
+          "end": 42.02
+        },
+        {
+          "word": "ahí",
+          "start": 42.02,
+          "end": 42.18
+        },
+        {
+          "word": "una",
+          "start": 42.18,
+          "end": 42.42
+        },
+        {
+          "word": "recta",
+          "start": 42.42,
+          "end": 43.04
+        },
+        {
+          "word": "y",
+          "start": 43.04,
+          "end": 43.18
+        },
+        {
+          "word": "pasa",
+          "start": 43.18,
+          "end": 43.4
+        },
+        {
+          "word": "por",
+          "start": 43.4,
+          "end": 43.64
+        },
+        {
+          "word": "el",
+          "start": 43.64,
+          "end": 43.76
+        },
+        {
+          "word": "mismo",
+          "start": 43.76,
+          "end": 44.08
+        },
+        {
+          "word": "eje",
+          "start": 44.08,
+          "end": 44.48
+        },
+        {
+          "word": "horizontal",
+          "start": 44.48,
+          "end": 44.84
+        },
+        {
+          "word": "que",
+          "start": 44.84,
+          "end": 44.98
+        },
+        {
+          "word": "era",
+          "start": 44.98,
+          "end": 45.38
+        }
+      ]
+    },
+    {
+      "start": 45.38,
+      "end": 45.6,
+      "text": "ok",
+      "words": [
+        {
+          "word": "ok",
+          "start": 45.38,
+          "end": 45.6
+        }
+      ]
+    }
+  ]
+}

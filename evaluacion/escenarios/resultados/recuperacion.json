@@ -1,0 +1,18 @@
+{
+  "archivo": "2026_11_16_19_49_08.wav",
+  "grabado_s": 130.0,
+  "duracion_wav_s": 129.75,
+  "perdido_s": 0.25,
+  "wav_valido": true,
+  "listada_como_interrumpida": true,
+  "cumple_perdida": true,
+  "senal": "SIGKILL",
+  "medicion": "inicio = aparición del .json «grabando» (sondeo cada 50 ms); corte = envío de SIGKILL",
+  "procesable": true,
+  "proceso": {
+    "codigo": 0,
+    "estado": "completado"
+  },
+  "cumple": true,
+  "pendiente_manual": "que la aplicación, al reiniciar, la liste y ofrezca procesarla (protocolo del tercero)"
+}

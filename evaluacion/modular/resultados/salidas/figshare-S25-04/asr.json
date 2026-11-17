@@ -1,0 +1,1449 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.76,
+      "text": "Ok, hay algo no veo bien que es, es como un clavo?",
+      "words": [
+        {
+          "word": "Ok,",
+          "start": 0.0,
+          "end": 0.62
+        },
+        {
+          "word": "hay",
+          "start": 0.78,
+          "end": 0.98
+        },
+        {
+          "word": "algo",
+          "start": 0.98,
+          "end": 1.24
+        },
+        {
+          "word": "no",
+          "start": 1.24,
+          "end": 1.38
+        },
+        {
+          "word": "veo",
+          "start": 1.38,
+          "end": 1.52
+        },
+        {
+          "word": "bien",
+          "start": 1.52,
+          "end": 1.68
+        },
+        {
+          "word": "que",
+          "start": 1.68,
+          "end": 1.78
+        },
+        {
+          "word": "es,",
+          "start": 1.78,
+          "end": 1.88
+        },
+        {
+          "word": "es",
+          "start": 1.94,
+          "end": 1.96
+        },
+        {
+          "word": "como",
+          "start": 1.96,
+          "end": 2.1
+        },
+        {
+          "word": "un",
+          "start": 2.1,
+          "end": 2.34
+        },
+        {
+          "word": "clavo?",
+          "start": 2.34,
+          "end": 2.76
+        }
+      ]
+    },
+    {
+      "start": 2.92,
+      "end": 4.84,
+      "text": "Si, es lo único que tengo, si no tiene que ser el clavo",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 2.92,
+          "end": 3.2
+        },
+        {
+          "word": "es",
+          "start": 3.26,
+          "end": 3.38
+        },
+        {
+          "word": "lo",
+          "start": 3.38,
+          "end": 3.48
+        },
+        {
+          "word": "único",
+          "start": 3.48,
+          "end": 3.6
+        },
+        {
+          "word": "que",
+          "start": 3.6,
+          "end": 3.74
+        },
+        {
+          "word": "tengo,",
+          "start": 3.74,
+          "end": 3.84
+        },
+        {
+          "word": "si",
+          "start": 3.96,
+          "end": 4.02
+        },
+        {
+          "word": "no",
+          "start": 4.02,
+          "end": 4.1
+        },
+        {
+          "word": "tiene",
+          "start": 4.1,
+          "end": 4.12
+        },
+        {
+          "word": "que",
+          "start": 4.12,
+          "end": 4.26
+        },
+        {
+          "word": "el",
+          "start": 4.26,
+          "end": 4.42
+        },
+        {
+          "word": "clavo",
+          "start": 4.42,
+          "end": 4.84
+        }
+      ]
+    },
+    {
+      "start": 4.84,
+      "end": 6.98,
+      "text": "Ok, un clavo que está como inclinado?",
+      "words": [
+        {
+          "word": "Ok,",
+          "start": 4.84,
+          "end": 5.3
+        },
+        {
+          "word": "un",
+          "start": 5.3,
+          "end": 5.5
+        },
+        {
+          "word": "clavo",
+          "start": 5.5,
+          "end": 5.76
+        },
+        {
+          "word": "que",
+          "start": 5.76,
+          "end": 5.94
+        },
+        {
+          "word": "está",
+          "start": 5.94,
+          "end": 6.02
+        },
+        {
+          "word": "como",
+          "start": 6.02,
+          "end": 6.26
+        },
+        {
+          "word": "inclinado?",
+          "start": 6.26,
+          "end": 6.98
+        }
+      ]
+    },
+    {
+      "start": 7.08,
+      "end": 7.58,
+      "text": "Si",
+      "words": [
+        {
+          "word": "Si",
+          "start": 7.08,
+          "end": 7.58
+        }
+      ]
+    },
+    {
+      "start": 7.58,
+      "end": 11.72,
+      "text": "Ok, ese clavo tenés que superponerlo a la podadora",
+      "words": [
+        {
+          "word": "Ok,",
+          "start": 7.58,
+          "end": 7.92
+        },
+        {
+          "word": "ese",
+          "start": 8.04,
+          "end": 8.26
+        },
+        {
+          "word": "clavo",
+          "start": 8.26,
+          "end": 8.6
+        },
+        {
+          "word": "tenés",
+          "start": 8.6,
+          "end": 8.88
+        },
+        {
+          "word": "que",
+          "start": 8.88,
+          "end": 9.16
+        },
+        {
+          "word": "superponerlo",
+          "start": 9.16,
+          "end": 10.22
+        },
+        {
+          "word": "a",
+          "start": 10.22,
+          "end": 10.4
+        },
+        {
+          "word": "la",
+          "start": 10.4,
+          "end": 10.58
+        },
+        {
+          "word": "podadora",
+          "start": 10.58,
+          "end": 11.72
+        }
+      ]
+    },
+    {
+      "start": 11.72,
+      "end": 13.0,
+      "text": "Exactamente, superpuesto?",
+      "words": [
+        {
+          "word": "Exactamente,",
+          "start": 11.72,
+          "end": 12.46
+        },
+        {
+          "word": "superpuesto?",
+          "start": 12.58,
+          "end": 13.0
+        }
+      ]
+    },
+    {
+      "start": 13.12,
+      "end": 14.74,
+      "text": "Superpuesto a la podadora, si",
+      "words": [
+        {
+          "word": "Superpuesto",
+          "start": 13.12,
+          "end": 13.56
+        },
+        {
+          "word": "a",
+          "start": 13.56,
+          "end": 13.68
+        },
+        {
+          "word": "la",
+          "start": 13.68,
+          "end": 13.8
+        },
+        {
+          "word": "podadora,",
+          "start": 13.8,
+          "end": 14.24
+        },
+        {
+          "word": "si",
+          "start": 14.24,
+          "end": 14.74
+        }
+      ]
+    },
+    {
+      "start": 14.74,
+      "end": 19.0,
+      "text": "De manera que la punta del clavo, la punta de abajo del clavo",
+      "words": [
+        {
+          "word": "De",
+          "start": 14.74,
+          "end": 15.08
+        },
+        {
+          "word": "manera",
+          "start": 15.08,
+          "end": 15.38
+        },
+        {
+          "word": "que",
+          "start": 15.38,
+          "end": 15.62
+        },
+        {
+          "word": "la",
+          "start": 15.62,
+          "end": 15.9
+        },
+        {
+          "word": "punta",
+          "start": 15.9,
+          "end": 16.28
+        },
+        {
+          "word": "del",
+          "start": 16.28,
+          "end": 16.56
+        },
+        {
+          "word": "clavo,",
+          "start": 16.56,
+          "end": 16.84
+        },
+        {
+          "word": "la",
+          "start": 16.94,
+          "end": 17.06
+        },
+        {
+          "word": "punta",
+          "start": 17.06,
+          "end": 17.28
+        },
+        {
+          "word": "de",
+          "start": 17.28,
+          "end": 17.46
+        },
+        {
+          "word": "abajo",
+          "start": 17.46,
+          "end": 17.76
+        },
+        {
+          "word": "del",
+          "start": 17.76,
+          "end": 18.06
+        },
+        {
+          "word": "clavo",
+          "start": 18.06,
+          "end": 19.0
+        }
+      ]
+    },
+    {
+      "start": 19.0,
+      "end": 22.8,
+      "text": "Exceda un poco la figura de la podadora",
+      "words": [
+        {
+          "word": "Exceda",
+          "start": 19.0,
+          "end": 19.9
+        },
+        {
+          "word": "un",
+          "start": 19.9,
+          "end": 20.2
+        },
+        {
+          "word": "poco",
+          "start": 20.2,
+          "end": 20.56
+        },
+        {
+          "word": "la",
+          "start": 20.56,
+          "end": 20.96
+        },
+        {
+          "word": "figura",
+          "start": 20.96,
+          "end": 21.42
+        },
+        {
+          "word": "de",
+          "start": 21.42,
+          "end": 22.06
+        },
+        {
+          "word": "la",
+          "start": 22.06,
+          "end": 22.24
+        },
+        {
+          "word": "podadora",
+          "start": 22.24,
+          "end": 22.8
+        }
+      ]
+    },
+    {
+      "start": 22.8,
+      "end": 23.76,
+      "text": "Un poco? Cuánto?",
+      "words": [
+        {
+          "word": "Un",
+          "start": 22.8,
+          "end": 22.96
+        },
+        {
+          "word": "poco?",
+          "start": 22.96,
+          "end": 23.22
+        },
+        {
+          "word": "Cuánto?",
+          "start": 23.54,
+          "end": 23.76
+        }
+      ]
+    },
+    {
+      "start": 23.8,
+      "end": 27.02,
+      "text": "Un poco, ponéle la parte de arriba del clavo",
+      "words": [
+        {
+          "word": "Un",
+          "start": 23.8,
+          "end": 24.06
+        },
+        {
+          "word": "poco,",
+          "start": 24.06,
+          "end": 24.3
+        },
+        {
+          "word": "ponéle",
+          "start": 24.48,
+          "end": 24.76
+        },
+        {
+          "word": "la",
+          "start": 24.76,
+          "end": 25.2
+        },
+        {
+          "word": "parte",
+          "start": 25.2,
+          "end": 25.56
+        },
+        {
+          "word": "de",
+          "start": 25.56,
+          "end": 25.86
+        },
+        {
+          "word": "arriba",
+          "start": 25.86,
+          "end": 26.2
+        },
+        {
+          "word": "del",
+          "start": 26.2,
+          "end": 26.5
+        },
+        {
+          "word": "clavo",
+          "start": 26.5,
+          "end": 27.02
+        }
+      ]
+    },
+    {
+      "start": 27.02,
+      "end": 27.62,
+      "text": "Si",
+      "words": [
+        {
+          "word": "Si",
+          "start": 27.02,
+          "end": 27.62
+        }
+      ]
+    },
+    {
+      "start": 27.62,
+      "end": 31.76,
+      "text": "Excede a penitas a la podadora y la punta de abajo del clavo",
+      "words": [
+        {
+          "word": "Excede",
+          "start": 27.62,
+          "end": 28.34
+        },
+        {
+          "word": "a",
+          "start": 28.34,
+          "end": 28.7
+        },
+        {
+          "word": "penitas",
+          "start": 28.7,
+          "end": 29.2
+        },
+        {
+          "word": "a",
+          "start": 29.2,
+          "end": 29.36
+        },
+        {
+          "word": "la",
+          "start": 29.36,
+          "end": 29.52
+        },
+        {
+          "word": "podadora",
+          "start": 29.52,
+          "end": 30.0
+        },
+        {
+          "word": "y",
+          "start": 30.0,
+          "end": 30.46
+        },
+        {
+          "word": "la",
+          "start": 30.46,
+          "end": 30.66
+        },
+        {
+          "word": "punta",
+          "start": 30.66,
+          "end": 30.94
+        },
+        {
+          "word": "de",
+          "start": 30.94,
+          "end": 31.08
+        },
+        {
+          "word": "abajo",
+          "start": 31.08,
+          "end": 31.24
+        },
+        {
+          "word": "del",
+          "start": 31.24,
+          "end": 31.44
+        },
+        {
+          "word": "clavo",
+          "start": 31.44,
+          "end": 31.76
+        }
+      ]
+    },
+    {
+      "start": 31.76,
+      "end": 34.56,
+      "text": "Excede a penitas a la podadora también",
+      "words": [
+        {
+          "word": "Excede",
+          "start": 31.76,
+          "end": 32.28
+        },
+        {
+          "word": "a",
+          "start": 32.28,
+          "end": 32.56
+        },
+        {
+          "word": "penitas",
+          "start": 32.56,
+          "end": 33.0
+        },
+        {
+          "word": "a",
+          "start": 33.0,
+          "end": 33.14
+        },
+        {
+          "word": "la",
+          "start": 33.14,
+          "end": 33.3
+        },
+        {
+          "word": "podadora",
+          "start": 33.3,
+          "end": 33.78
+        },
+        {
+          "word": "también",
+          "start": 33.78,
+          "end": 34.56
+        }
+      ]
+    },
+    {
+      "start": 34.56,
+      "end": 35.64,
+      "text": "Más o menos",
+      "words": [
+        {
+          "word": "Más",
+          "start": 34.56,
+          "end": 35.0
+        },
+        {
+          "word": "o",
+          "start": 35.0,
+          "end": 35.16
+        },
+        {
+          "word": "menos",
+          "start": 35.16,
+          "end": 35.64
+        }
+      ]
+    },
+    {
+      "start": 36.22,
+      "end": 37.98,
+      "text": "La rueda está tapada o no está tapada?",
+      "words": [
+        {
+          "word": "La",
+          "start": 36.22,
+          "end": 36.62
+        },
+        {
+          "word": "rueda",
+          "start": 36.62,
+          "end": 37.0
+        },
+        {
+          "word": "está",
+          "start": 37.0,
+          "end": 37.14
+        },
+        {
+          "word": "tapada",
+          "start": 37.14,
+          "end": 37.54
+        },
+        {
+          "word": "o",
+          "start": 37.54,
+          "end": 37.6
+        },
+        {
+          "word": "no",
+          "start": 37.6,
+          "end": 37.74
+        },
+        {
+          "word": "está",
+          "start": 37.74,
+          "end": 37.84
+        },
+        {
+          "word": "tapada?",
+          "start": 37.84,
+          "end": 37.98
+        }
+      ]
+    },
+    {
+      "start": 38.02,
+      "end": 40.72,
+      "text": "No, la rueda no está tapada, es un poco más hacia la derecha",
+      "words": [
+        {
+          "word": "No,",
+          "start": 38.02,
+          "end": 38.18
+        },
+        {
+          "word": "la",
+          "start": 38.28,
+          "end": 38.36
+        },
+        {
+          "word": "rueda",
+          "start": 38.36,
+          "end": 38.54
+        },
+        {
+          "word": "no",
+          "start": 38.54,
+          "end": 38.72
+        },
+        {
+          "word": "está",
+          "start": 38.72,
+          "end": 38.9
+        },
+        {
+          "word": "tapada,",
+          "start": 38.9,
+          "end": 39.3
+        },
+        {
+          "word": "es",
+          "start": 39.3,
+          "end": 39.5
+        },
+        {
+          "word": "un",
+          "start": 39.5,
+          "end": 39.62
+        },
+        {
+          "word": "poco",
+          "start": 39.62,
+          "end": 39.72
+        },
+        {
+          "word": "más",
+          "start": 39.72,
+          "end": 39.94
+        },
+        {
+          "word": "hacia",
+          "start": 39.94,
+          "end": 40.1
+        },
+        {
+          "word": "la",
+          "start": 40.1,
+          "end": 40.38
+        },
+        {
+          "word": "derecha",
+          "start": 40.38,
+          "end": 40.72
+        }
+      ]
+    },
+    {
+      "start": 40.72,
+      "end": 41.24,
+      "text": "Está bien",
+      "words": [
+        {
+          "word": "Está",
+          "start": 40.72,
+          "end": 40.88
+        },
+        {
+          "word": "bien",
+          "start": 40.88,
+          "end": 41.24
+        }
+      ]
+    },
+    {
+      "start": 41.24,
+      "end": 42.74,
+      "text": "Un poco más hacia la derecha",
+      "words": [
+        {
+          "word": "Un",
+          "start": 41.24,
+          "end": 41.48
+        },
+        {
+          "word": "poco",
+          "start": 41.48,
+          "end": 41.62
+        },
+        {
+          "word": "más",
+          "start": 41.62,
+          "end": 41.86
+        },
+        {
+          "word": "hacia",
+          "start": 41.86,
+          "end": 42.0
+        },
+        {
+          "word": "la",
+          "start": 42.0,
+          "end": 42.24
+        },
+        {
+          "word": "derecha",
+          "start": 42.24,
+          "end": 42.74
+        }
+      ]
+    },
+    {
+      "start": 42.74,
+      "end": 44.7,
+      "text": "A cuánta distancia de la rueda?",
+      "words": [
+        {
+          "word": "A",
+          "start": 42.74,
+          "end": 43.28
+        },
+        {
+          "word": "cuánta",
+          "start": 43.28,
+          "end": 43.54
+        },
+        {
+          "word": "distancia",
+          "start": 43.54,
+          "end": 43.78
+        },
+        {
+          "word": "de",
+          "start": 43.78,
+          "end": 43.94
+        },
+        {
+          "word": "la",
+          "start": 43.94,
+          "end": 44.1
+        },
+        {
+          "word": "rueda?",
+          "start": 44.1,
+          "end": 44.7
+        }
+      ]
+    },
+    {
+      "start": 47.1,
+      "end": 47.9,
+      "text": "Un milímetro",
+      "words": [
+        {
+          "word": "Un",
+          "start": 47.1,
+          "end": 47.5
+        },
+        {
+          "word": "milímetro",
+          "start": 47.5,
+          "end": 47.9
+        }
+      ]
+    },
+    {
+      "start": 47.9,
+      "end": 51.8,
+      "text": "Se ve, de la figura, de lo que sobra de la podadora a la derecha",
+      "words": [
+        {
+          "word": "Se",
+          "start": 47.9,
+          "end": 48.42
+        },
+        {
+          "word": "ve,",
+          "start": 48.42,
+          "end": 48.64
+        },
+        {
+          "word": "de",
+          "start": 48.74,
+          "end": 48.9
+        },
+        {
+          "word": "la",
+          "start": 48.9,
+          "end": 49.06
+        },
+        {
+          "word": "figura,",
+          "start": 49.06,
+          "end": 49.44
+        },
+        {
+          "word": "de",
+          "start": 49.86,
+          "end": 50.02
+        },
+        {
+          "word": "lo",
+          "start": 50.02,
+          "end": 50.18
+        },
+        {
+          "word": "que",
+          "start": 50.18,
+          "end": 50.34
+        },
+        {
+          "word": "sobra",
+          "start": 50.34,
+          "end": 50.52
+        },
+        {
+          "word": "de",
+          "start": 50.52,
+          "end": 50.66
+        },
+        {
+          "word": "la",
+          "start": 50.66,
+          "end": 50.8
+        },
+        {
+          "word": "podadora",
+          "start": 50.8,
+          "end": 51.12
+        },
+        {
+          "word": "a",
+          "start": 51.12,
+          "end": 51.32
+        },
+        {
+          "word": "la",
+          "start": 51.32,
+          "end": 51.52
+        },
+        {
+          "word": "derecha",
+          "start": 51.52,
+          "end": 51.8
+        }
+      ]
+    },
+    {
+      "start": 51.8,
+      "end": 53.06,
+      "text": "Se ve un poquito",
+      "words": [
+        {
+          "word": "Se",
+          "start": 51.8,
+          "end": 52.0
+        },
+        {
+          "word": "ve",
+          "start": 52.0,
+          "end": 52.2
+        },
+        {
+          "word": "un",
+          "start": 52.2,
+          "end": 52.52
+        },
+        {
+          "word": "poquito",
+          "start": 52.52,
+          "end": 53.06
+        }
+      ]
+    },
+    {
+      "start": 53.52,
+      "end": 56.14,
+      "text": "Ponéle de la parte de arriba de la podadora no se ve nada",
+      "words": [
+        {
+          "word": "Ponéle",
+          "start": 53.52,
+          "end": 53.92
+        },
+        {
+          "word": "de",
+          "start": 53.92,
+          "end": 54.02
+        },
+        {
+          "word": "la",
+          "start": 54.02,
+          "end": 54.14
+        },
+        {
+          "word": "parte",
+          "start": 54.14,
+          "end": 54.32
+        },
+        {
+          "word": "de",
+          "start": 54.32,
+          "end": 54.5
+        },
+        {
+          "word": "arriba",
+          "start": 54.5,
+          "end": 54.66
+        },
+        {
+          "word": "de",
+          "start": 54.66,
+          "end": 54.78
+        },
+        {
+          "word": "la",
+          "start": 54.78,
+          "end": 54.94
+        },
+        {
+          "word": "podadora",
+          "start": 54.94,
+          "end": 55.32
+        },
+        {
+          "word": "no",
+          "start": 55.32,
+          "end": 55.52
+        },
+        {
+          "word": "se",
+          "start": 55.52,
+          "end": 55.66
+        },
+        {
+          "word": "ve",
+          "start": 55.66,
+          "end": 55.74
+        },
+        {
+          "word": "nada",
+          "start": 55.74,
+          "end": 56.14
+        }
+      ]
+    },
+    {
+      "start": 56.14,
+      "end": 57.82,
+      "text": "De la parte de abajo azul de la podadora",
+      "words": [
+        {
+          "word": "De",
+          "start": 56.14,
+          "end": 56.7
+        },
+        {
+          "word": "la",
+          "start": 56.7,
+          "end": 56.8
+        },
+        {
+          "word": "parte",
+          "start": 56.8,
+          "end": 56.96
+        },
+        {
+          "word": "de",
+          "start": 56.96,
+          "end": 57.1
+        },
+        {
+          "word": "abajo",
+          "start": 57.1,
+          "end": 57.34
+        },
+        {
+          "word": "azul",
+          "start": 57.34,
+          "end": 57.7
+        },
+        {
+          "word": "de",
+          "start": 57.7,
+          "end": 57.82
+        }
+      ]
+    },
+    {
+      "start": 57.82,
+      "end": 60.0,
+      "text": "De la parte de arriba significa, tiene dos barras la podadora",
+      "words": [
+        {
+          "word": "parte",
+          "start": 57.82,
+          "end": 57.92
+        },
+        {
+          "word": "de",
+          "start": 57.92,
+          "end": 58.2
+        },
+        {
+          "word": "arriba",
+          "start": 58.2,
+          "end": 58.28
+        },
+        {
+          "word": "significa,",
+          "start": 58.28,
+          "end": 58.76
+        },
+        {
+          "word": "tiene",
+          "start": 58.92,
+          "end": 59.12
+        },
+        {
+          "word": "dos",
+          "start": 59.12,
+          "end": 59.34
+        },
+        {
+          "word": "barras",
+          "start": 59.34,
+          "end": 59.52
+        },
+        {
+          "word": "la",
+          "start": 59.52,
+          "end": 59.66
+        },
+        {
+          "word": "podadora",
+          "start": 59.66,
+          "end": 60.0
+        }
+      ]
+    },
+    {
+      "start": 60.0,
+      "end": 63.54,
+      "text": "Claro, de esas barras de arriba no se ve nada porque está superpuesto el clavo",
+      "words": [
+        {
+          "word": "Claro,",
+          "start": 60.0,
+          "end": 60.44
+        },
+        {
+          "word": "esas",
+          "start": 60.64,
+          "end": 60.78
+        },
+        {
+          "word": "barras",
+          "start": 60.78,
+          "end": 61.04
+        },
+        {
+          "word": "de",
+          "start": 61.04,
+          "end": 61.22
+        },
+        {
+          "word": "arriba",
+          "start": 61.22,
+          "end": 61.5
+        },
+        {
+          "word": "no",
+          "start": 61.5,
+          "end": 61.88
+        },
+        {
+          "word": "se",
+          "start": 61.88,
+          "end": 62.0
+        },
+        {
+          "word": "ve",
+          "start": 62.0,
+          "end": 62.12
+        },
+        {
+          "word": "nada",
+          "start": 62.12,
+          "end": 62.32
+        },
+        {
+          "word": "porque",
+          "start": 62.32,
+          "end": 62.52
+        },
+        {
+          "word": "está",
+          "start": 62.52,
+          "end": 62.66
+        },
+        {
+          "word": "superpuesto",
+          "start": 62.66,
+          "end": 63.14
+        },
+        {
+          "word": "el",
+          "start": 63.14,
+          "end": 63.34
+        },
+        {
+          "word": "clavo",
+          "start": 63.34,
+          "end": 63.54
+        }
+      ]
+    },
+    {
+      "start": 63.54,
+      "end": 68.04,
+      "text": "De la parte de abajo de la podadora hacia la derecha se ve un poquito",
+      "words": [
+        {
+          "word": "De",
+          "start": 63.54,
+          "end": 63.72
+        },
+        {
+          "word": "la",
+          "start": 63.72,
+          "end": 63.86
+        },
+        {
+          "word": "parte",
+          "start": 63.86,
+          "end": 64.08
+        },
+        {
+          "word": "de",
+          "start": 64.08,
+          "end": 64.34
+        },
+        {
+          "word": "abajo",
+          "start": 64.34,
+          "end": 64.58
+        },
+        {
+          "word": "de",
+          "start": 64.58,
+          "end": 64.72
+        },
+        {
+          "word": "la",
+          "start": 64.72,
+          "end": 64.82
+        },
+        {
+          "word": "podadora",
+          "start": 64.82,
+          "end": 65.36
+        },
+        {
+          "word": "hacia",
+          "start": 65.36,
+          "end": 65.66
+        },
+        {
+          "word": "la",
+          "start": 65.66,
+          "end": 65.92
+        },
+        {
+          "word": "derecha",
+          "start": 65.92,
+          "end": 66.22
+        },
+        {
+          "word": "se",
+          "start": 66.22,
+          "end": 66.4
+        },
+        {
+          "word": "ve",
+          "start": 66.4,
+          "end": 66.68
+        },
+        {
+          "word": "un",
+          "start": 66.68,
+          "end": 67.62
+        },
+        {
+          "word": "poquito",
+          "start": 67.62,
+          "end": 68.04
+        }
+      ]
+    },
+    {
+      "start": 69.06,
+      "end": 71.88,
+      "text": "Y la punta sobre sale poco, dijiste?",
+      "words": [
+        {
+          "word": "Y",
+          "start": 69.06,
+          "end": 69.46
+        },
+        {
+          "word": "la",
+          "start": 69.46,
+          "end": 69.6
+        },
+        {
+          "word": "punta",
+          "start": 69.6,
+          "end": 70.9
+        },
+        {
+          "word": "sobre",
+          "start": 70.9,
+          "end": 71.08
+        },
+        {
+          "word": "sale",
+          "start": 71.08,
+          "end": 71.12
+        },
+        {
+          "word": "poco,",
+          "start": 71.12,
+          "end": 71.46
+        },
+        {
+          "word": "dijiste?",
+          "start": 71.46,
+          "end": 71.88
+        }
+      ]
+    },
+    {
+      "start": 72.06,
+      "end": 76.28,
+      "text": "La punta sobre sale entera casi",
+      "words": [
+        {
+          "word": "La",
+          "start": 72.06,
+          "end": 72.08
+        },
+        {
+          "word": "punta",
+          "start": 72.08,
+          "end": 74.46
+        },
+        {
+          "word": "sobre",
+          "start": 74.46,
+          "end": 74.86
+        },
+        {
+          "word": "sale",
+          "start": 74.86,
+          "end": 75.02
+        },
+        {
+          "word": "entera",
+          "start": 75.02,
+          "end": 75.84
+        },
+        {
+          "word": "casi",
+          "start": 75.84,
+          "end": 76.28
+        }
+      ]
+    },
+    {
+      "start": 76.28,
+      "end": 78.08,
+      "text": "El triángulo de la punta",
+      "words": [
+        {
+          "word": "El",
+          "start": 76.28,
+          "end": 76.96
+        },
+        {
+          "word": "triángulo",
+          "start": 76.96,
+          "end": 77.88
+        },
+        {
+          "word": "de",
+          "start": 77.88,
+          "end": 78.0
+        },
+        {
+          "word": "la",
+          "start": 78.0,
+          "end": 78.08
+        }
+      ]
+    },
+    {
+      "start": 78.08,
+      "end": 79.56,
+      "text": "El triángulo de la punta sobre sale entero",
+      "words": [
+        {
+          "word": "El",
+          "start": 78.08,
+          "end": 78.1
+        },
+        {
+          "word": "triángulo",
+          "start": 78.1,
+          "end": 78.5
+        },
+        {
+          "word": "de",
+          "start": 78.5,
+          "end": 78.64
+        },
+        {
+          "word": "la",
+          "start": 78.64,
+          "end": 78.74
+        },
+        {
+          "word": "punta",
+          "start": 78.74,
+          "end": 78.94
+        },
+        {
+          "word": "sobre",
+          "start": 78.94,
+          "end": 79.16
+        },
+        {
+          "word": "sale",
+          "start": 79.16,
+          "end": 79.28
+        },
+        {
+          "word": "entero",
+          "start": 79.28,
+          "end": 79.56
+        }
+      ]
+    }
+  ]
+}

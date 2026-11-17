@@ -1,0 +1,622 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 7.2,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "está la cortadora de pasto, así era ¿no?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 40
+      }
+    },
+    {
+      "start": 9.42,
+      "end": 16.84,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "está debajo del león amarillo y sobre el león azul a la misma altura del clavo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 78
+      }
+    },
+    {
+      "start": 16.84,
+      "end": 20.26,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "y a ver si por ejemplo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 22
+      }
+    },
+    {
+      "start": 20.26,
+      "end": 23.86,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "está equidistante de los dos leones",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 35
+      }
+    },
+    {
+      "start": 23.86,
+      "end": 30.9,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "está como la misma altura en el mismo renglón del clavo entre los dos leones",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 76
+      }
+    },
+    {
+      "start": 31.92,
+      "end": 34.2,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "pero es engañoso el clavo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 36.74,
+      "end": 39.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "debajo del león amarillo y sobre el león azul",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 45
+      }
+    },
+    {
+      "start": 39.44,
+      "end": 43.44,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "sí, para ser bien preciso",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 44.04,
+      "end": 48.18,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "por ejemplo la patita del león amarillo, la punta de la cortadora",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 65
+      }
+    },
+    {
+      "start": 48.18,
+      "end": 53.48,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "sí, termina exactamente donde termina la patita, la pasa",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 56
+      }
+    },
+    {
+      "start": 54.56,
+      "end": 60.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "no, es exactamente donde está la patita de frente",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 49
+      }
+    },
+    {
+      "start": 60.7,
+      "end": 60.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "la",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 60.98,
+      "end": 62.84,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "pata de derecha, digamos, del león amarillo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 3,
+        "end": 46
+      }
+    },
+    {
+      "start": 62.84,
+      "end": 65.28,
+      "speaker": null,
+      "name": null,
+      "text": "sí, la pata de frente, o sea la pata que está más hacia la izquierda",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 68
+      }
+    },
+    {
+      "start": 65.28,
+      "end": 70.22,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "va con la última ruedita de la cortadora de pasto",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 49
+      }
+    },
+    {
+      "start": 70.22,
+      "end": 78.9,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "ah, la pata que vemos de frente, o sea las patas delanteras están con las rueditas delanteras",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 93
+      }
+    },
+    {
+      "start": 78.9,
+      "end": 80.42,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "no, las traseras",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 80.42,
+      "end": 82.34,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "ah, por yo no veo rueditas",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 26
+      }
+    },
+    {
+      "start": 82.34,
+      "end": 83.0,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "no",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 83.0,
+      "end": 85.8,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "se ven las rueditas, pero sería que estuvieran ahí",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 3,
+        "end": 53
+      }
+    },
+    {
+      "start": 86.54,
+      "end": 88.42,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "está bien, sí creo que es ahí",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 88.42,
+      "end": 90.54,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "no sé si estamos siendo muy quisquillosos",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 41
+      }
+    },
+    {
+      "start": 91.04,
+      "end": 91.5,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "listo?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 6
+      }
+    },
+    {
+      "start": 91.5,
+      "end": 93.66,
+      "speaker": null,
+      "name": null,
+      "text": "voy a bajar un poquito",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 22
+      }
+    },
+    {
+      "start": 93.66,
+      "end": 94.02,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "sí,",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 94.12,
+      "end": 95.04,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "dale, pongo listo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 4,
+        "end": 21
+      }
+    }
+  ]
+}

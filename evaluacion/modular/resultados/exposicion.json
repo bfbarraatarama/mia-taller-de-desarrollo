@@ -1,0 +1,110 @@
+{
+  "modelos": {
+    "whisper": "Whisper medium (Etapa 3, transcripción)",
+    "pyannote": "pyannote/speaker-diarization-community-1 (Etapa 2, diarización)",
+    "qwen": "qwen2.5:7b (Etapa 5, minutas)"
+  },
+  "fuentes": {
+    "ami": {
+      "elementos": 3,
+      "modulos": [
+        "minutas"
+      ],
+      "desarrollo": {
+        "estado": "no usada",
+        "evidencia": "Las 3 reuniones elegidas solo aparecen en las tablas del Hito 2 (hito-2/muestra/ami/reuniones.csv). AMI se usó en el EDA del Hito 2; la Etapa 5 no se desarrolló con estas reuniones."
+      },
+      "entrenamiento": {
+        "qwen": {
+          "estado": "no se puede descartar",
+          "evidencia": "Las transcripciones y los resúmenes de AMI en inglés son públicos y los datos de entrenamiento de Qwen2.5 no. La entrada evaluada es una traducción automática nueva al castellano (D6): reduce, pero no elimina, la posibilidad de que el modelo reconozca el contenido."
+        }
+      }
+    },
+    "common_voice": {
+      "elementos": 2,
+      "modulos": [
+        "stt"
+      ],
+      "desarrollo": {
+        "estado": "no usada",
+        "evidencia": "Los 2 clips elegidos no aparecen en el repositorio fuera de la evaluación modular. Common Voice solo se usó en el EDA del Hito 2."
+      },
+      "entrenamiento": {
+        "whisper": {
+          "estado": "no se puede descartar",
+          "evidencia": "Los datos de entrenamiento de Whisper no son públicos y el artículo de Whisper usa Common Voice como conjunto de evaluación sin informar si se superpone con el entrenamiento. Se usó el split test oficial (D2); la versión 26.0 incluye clips anteriores a 2022."
+        }
+      }
+    },
+    "figshare": {
+      "elementos": 74,
+      "modulos": [
+        "asociacion",
+        "diarizacion",
+        "minutas",
+        "stt"
+      ],
+      "desarrollo": {
+        "estado": "a confirmar",
+        "evidencia": "S26 quedó fuera de la muestra por ser material de desarrollo (ver excluidos). S22 y S23 eran el alcance de evaluación aprobado de la Etapa 2 hasta el 08/11/2026, cuando se reemplazó por S26 (docs/diarizacion/openspec/changes/etapa-2-diarizacion/design.md, sección 11, y tasks.md); en el repositorio no hay resultados ni decisiones tomadas con ellas. Falta que la responsable de la Etapa 2 confirme que no se usaron localmente. En el Hito 2 las 9 sesiones solo se decodificaron (30 s cada una) en la auditoría acústica."
+      },
+      "entrenamiento": {
+        "pyannote": {
+          "estado": "no se puede descartar",
+          "evidencia": "La tarjeta de pyannote/speaker-diarization-community-1 no lista sus datos de entrenamiento; informa resultados en AISHELL-4, AliMeeting, AMI, DIHARD 3, Ego4D, MSDWild, RAMC, REPERE y VoxConverse, sin UBA Games."
+        },
+        "qwen": {
+          "estado": "no se puede descartar",
+          "evidencia": "Qwen2.5 no publicó sus datos de entrenamiento (unos 18 billones de tokens según su informe técnico). En Figshare la Etapa 5 solo se evalúa por contrato, sin medir contenido."
+        },
+        "whisper": {
+          "estado": "no se puede descartar",
+          "evidencia": "Los datos de entrenamiento de Whisper no son públicos; la distribución de UBA Games en Figshare es pública."
+        }
+      }
+    },
+    "openslr": {
+      "elementos": 3,
+      "modulos": [
+        "stt"
+      ],
+      "desarrollo": {
+        "estado": "no usada",
+        "evidencia": "Los 3 clips elegidos (arf_03398, arm_03397 y arf_01208) no están entre los 44 de la muestra de audio del Hito 2 (en_muestra_de_audio = False en hito-2/muestra/slr61/transcripciones.csv). OpenSLR 61 solo se usó en el EDA del Hito 2; ninguna etapa se desarrolló ni se ajustó con él."
+      },
+      "entrenamiento": {
+        "whisper": {
+          "estado": "no se puede descartar",
+          "evidencia": "OpenAI no publicó los datos de entrenamiento de Whisper (680 000 h de audio de la web; Radford et al., 2022). OpenSLR 61 se publicó en 2020 (Guevara-Rukoz et al., LREC 2020), antes del entrenamiento."
+        }
+      }
+    }
+  },
+  "excluidos": {
+    "S26": {
+      "motivo": "material de desarrollo de la diarización y la asociación (D3); además, transcripción incompleta",
+      "en_la_muestra": false
+    },
+    "S27": {
+      "motivo": "transcripción incompleta según el README de origen (D5)",
+      "en_la_muestra": false
+    },
+    "S28": {
+      "motivo": "no está en la distribución de Figshare v2",
+      "en_la_muestra": false
+    },
+    "S29": {
+      "motivo": "transcripción incompleta según el README de origen (D5)",
+      "en_la_muestra": false
+    },
+    "S30": {
+      "motivo": "transcripción incompleta según el README de origen (D5)",
+      "en_la_muestra": false
+    }
+  },
+  "pendientes": [
+    "figshare: desarrollo"
+  ],
+  "contenido_sha256_muestra": "68b317117c84676f835d58473e8a9c82aa94cefb87d26f6cde487a919416b456"
+}

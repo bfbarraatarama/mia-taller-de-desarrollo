@@ -1,0 +1,152 @@
+{
+  "resumen": "La reunión se centró en la descripción y ubicación del ojo dentro de un limón, incluyendo la posición exacta de la pupila, las pestañas y el borde del amarillo. Se discutió sobre si el ojo está abajo, arriba o superpuesto al limón, llegando a la conclusión de que está superpuesto. También se mencionó la posición de una tercera pestaña en relación al borde negro del amarillo. Se identificó un problema para determinar la posición exacta del ojo y las pestañas con respecto al limón.",
+  "temas": [
+    {
+      "texto": "Descripción del ojo en relación al limón",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024",
+        "I000025",
+        "I000026",
+        "I000027",
+        "I000028",
+        "I000029",
+        "I000030",
+        "I000031",
+        "I000032",
+        "I000033",
+        "I000034",
+        "I000035",
+        "I000036",
+        "I000037",
+        "I000038",
+        "I000039",
+        "I000040",
+        "I000041",
+        "I000042",
+        "I000043",
+        "I000044"
+      ],
+      "id_ancla": "I000044"
+    },
+    {
+      "texto": "Posición relativa del ojo y las pestañas con respecto al limón",
+      "ids_intervenciones": [
+        "I000043",
+        "I000044",
+        "I000045",
+        "I000046",
+        "I000047",
+        "I000048",
+        "I000049",
+        "I000050",
+        "I000051",
+        "I000052",
+        "I000053",
+        "I000054",
+        "I000055",
+        "I000056",
+        "I000057",
+        "I000058",
+        "I000059",
+        "I000060",
+        "I000061",
+        "I000062",
+        "I000063"
+      ],
+      "id_ancla": "I000063"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "La regla está muy lejos para medir la posición exacta de las pestañas.",
+      "ids_intervenciones": [
+        "I000026",
+        "I000027",
+        "I000028"
+      ],
+      "id_ancla": "I000028"
+    },
+    {
+      "texto": "Determinar la posición exacta del ojo y las pestañas con respecto al limón.",
+      "ids_intervenciones": [
+        "I000043",
+        "I000044",
+        "I000045",
+        "I000046",
+        "I000047",
+        "I000048",
+        "I000049",
+        "I000050",
+        "I000051",
+        "I000052",
+        "I000053",
+        "I000054",
+        "I000055",
+        "I000056",
+        "I000057",
+        "I000058",
+        "I000059",
+        "I000060",
+        "I000061",
+        "I000062",
+        "I000063"
+      ],
+      "id_ancla": "I000063"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Continuar discutiendo la posición de los ojos y las pestañas con respecto al limón.",
+      "ids_intervenciones": [
+        "I000043",
+        "I000044",
+        "I000045",
+        "I000046",
+        "I000047",
+        "I000048",
+        "I000049",
+        "I000050",
+        "I000051",
+        "I000052",
+        "I000053",
+        "I000054",
+        "I000055",
+        "I000056",
+        "I000057",
+        "I000058",
+        "I000059",
+        "I000060",
+        "I000061",
+        "I000062",
+        "I000063"
+      ],
+      "id_ancla": "I000063",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "elemento": "figshare-S25-23",
+  "entrada_sha256": "6072d1707d6e19af47e5bdc198ddceb706cc70b7b7ccf6b1774089c3ac51b283",
+  "configuracion": {
+    "modelo_stt": "medium",
+    "dispositivo": "cuda",
+    "modelo_minutas": "qwen2.5-7b",
+    "secciones": [
+      "resumen",
+      "temas",
+      "decisiones",
+      "problemas",
+      "acciones"
+    ]
+  },
+  "codigo_sha256": "5937aef12b1f20c17db3d7bfb7467bc63cceb2dc7e7a3b33755f2d88263a262c",
+  "comando": [
+    "python",
+    "-m",
+    "src.pipeline",
+    "ejecutar",
+    "<datos>/figshare/S25/23/audio.wav",
+    "--salida",
+    "<inferencia>/figshare-S25-23",
+    "--modelo-stt",
+    "medium",
+    "--dispositivo-stt",
+    "cuda",
+    "--dispositivo-diarizacion",
+    "cuda",
+    "--modelo",
+    "qwen2.5-7b",
+    "--secciones",
+    "resumen,temas,decisiones,problemas,acciones"
+  ],
+  "segundos": 46.3,
+  "codigo": 0,
+  "salidas_sha256": {
+    "diarization.json": "3dde2b6a236c141facf67fe6b2e910edd5c95541e47dfd0757469df657c24d44",
+    "asr.json": "af36a8b2b62d451afa796e0f7db1c2b1a0a7b49988042d063381441502d2d6cf",
+    "transcription.json": "7602a63c86038ad7457a259426509bd44c77629d1a98ec20753a91639524335f",
+    "minutes.json": "f65a0f9062dea6b74d386b32d39089645729bc1466653de4e7f1f11b4aecf89e",
+    "ejecucion_minutas.json": "361d6a8c84be0a75530010a6d3ed4e18c1f1f4b5170082e93539814846896123",
+    "minutes.md": "c92f39401b9d0355ca4d50b4d30f0aa58219d36ebf92eab98b5dffdeee1a3979"
+  },
+  "sellado": "16/11/2026, después de la corrida, contra resultados/salidas versionado en 4fd427e; minutes.md agregado el 17/11/2026 contra la copia versionada en HEAD (0bc0747)"
+}

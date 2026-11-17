@@ -1,0 +1,174 @@
+{
+  "segments": [
+    {
+      "start": 0.487,
+      "end": 1.027,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 2.495,
+      "end": 3.98,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 5.245,
+      "end": 5.887,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 6.376,
+      "end": 7.22,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 7.574,
+      "end": 8.198,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 9.194,
+      "end": 9.953,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 10.291,
+      "end": 11.557,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 10.375,
+      "end": 11.287,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 11.624,
+      "end": 13.025,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 12.282,
+      "end": 12.637,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 14.645,
+      "end": 16.467,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 17.058,
+      "end": 20.686,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 20.888,
+      "end": 22.255,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 21.378,
+      "end": 21.665,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 22.778,
+      "end": 25.647,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 24.652,
+      "end": 25.107,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 25.985,
+      "end": 26.339,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 28.432,
+      "end": 31.587,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 32.161,
+      "end": 32.465,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 32.633,
+      "end": 34.169,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 34.844,
+      "end": 35.232,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 36.599,
+      "end": 40.227,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 41.003,
+      "end": 44.311,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 45.037,
+      "end": 47.753,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 48.04,
+      "end": 48.344,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 49.778,
+      "end": 50.74,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 51.247,
+      "end": 52.006,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 52.664,
+      "end": 54.014,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 54.436,
+      "end": 54.858,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 55.145,
+      "end": 57.153,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 55.6,
+      "end": 56.613,
+      "speaker": "SPEAKER_01"
+    },
+    {
+      "start": 57.406,
+      "end": 65.557,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 65.86,
+      "end": 68.797,
+      "speaker": "SPEAKER_00"
+    },
+    {
+      "start": 70.231,
+      "end": 72.891,
+      "speaker": "SPEAKER_00"
+    }
+  ]
+}

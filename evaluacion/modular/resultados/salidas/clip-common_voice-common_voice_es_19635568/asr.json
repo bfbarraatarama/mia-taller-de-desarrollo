@@ -1,0 +1,47 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.16,
+      "text": "Nacido en el barrio de la Boca",
+      "words": [
+        {
+          "word": "Nacido",
+          "start": 0.0,
+          "end": 0.64
+        },
+        {
+          "word": "en",
+          "start": 0.64,
+          "end": 0.78
+        },
+        {
+          "word": "el",
+          "start": 0.78,
+          "end": 0.92
+        },
+        {
+          "word": "barrio",
+          "start": 0.92,
+          "end": 1.42
+        },
+        {
+          "word": "de",
+          "start": 1.42,
+          "end": 1.62
+        },
+        {
+          "word": "la",
+          "start": 1.62,
+          "end": 1.78
+        },
+        {
+          "word": "Boca",
+          "start": 1.78,
+          "end": 2.16
+        }
+      ]
+    }
+  ]
+}

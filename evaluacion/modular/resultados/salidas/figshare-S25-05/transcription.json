@@ -1,0 +1,1291 @@
+{
+  "segments": [
+    {
+      "start": 0.9,
+      "end": 2.4,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ahora el león azul",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 18
+      }
+    },
+    {
+      "start": 2.4,
+      "end": 2.88,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "lo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 19,
+        "end": 21
+      }
+    },
+    {
+      "start": 2.88,
+      "end": 5.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "tenes que mandar abajo del clavo y a la izquierda del mimo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 22,
+        "end": 81
+      }
+    },
+    {
+      "start": 5.96,
+      "end": 7.48,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Abajo del clavo y listo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "start": 9.66,
+      "end": 15.68,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El centro vertical del león tiene que estar un poco a la derecha del centro vertical del clavo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 95
+      }
+    },
+    {
+      "start": 17.36,
+      "end": 24.76,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "De tal manera que el extremo izquierdo del clavo y el extremo izquierdo del león supera un poco el extremo izquierdo del clavo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 127
+      }
+    },
+    {
+      "start": 25.3,
+      "end": 27.14,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si está un poco más a la derecha que el...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 42
+      }
+    },
+    {
+      "start": 27.62,
+      "end": 33.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si yo trazo una recta en el extremo izquierdo del clavo, está más a la izquierda que el extremo izquierdo del león.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 115
+      }
+    },
+    {
+      "start": 33.72,
+      "end": 34.2,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está más a la",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 13
+      }
+    },
+    {
+      "start": 34.2,
+      "end": 35.08,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "izquierda... claro.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 14,
+        "end": 33
+      }
+    },
+    {
+      "start": 35.2,
+      "end": 36.28,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "El león está más a la derecha.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 36.34,
+      "end": 37.02,
+      "speaker": null,
+      "name": null,
+      "text": "Listo, listo, listo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 20
+      }
+    },
+    {
+      "start": 37.14,
+      "end": 44.18,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y además el eje horizontal del león está un poco más arriba que el eje horizontal del mimo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 91
+      }
+    },
+    {
+      "start": 44.38,
+      "end": 49.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Suponete que el eje horizontal del león traza una línea que pasa por las cejas del mimo, ponlele.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 97
+      }
+    },
+    {
+      "start": 53.12,
+      "end": 55.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "O por el cosito del gorrito.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 55.62,
+      "end": 56.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Se entiende?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 13
+      }
+    },
+    {
+      "start": 56.98,
+      "end": 58.84,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Las patas del león como están con",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 34
+      }
+    },
+    {
+      "start": 58.84,
+      "end": 59.58,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "referencia al gorrito?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 35,
+        "end": 57
+      }
+    },
+    {
+      "start": 59.58,
+      "end": 59.92,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Las patas",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 9
+      }
+    },
+    {
+      "start": 59.92,
+      "end": 64.48,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "del león estarían a la altura de la mitad de las bolas del mimo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 10,
+        "end": 74
+      }
+    },
+    {
+      "start": 64.56,
+      "end": 66.22,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿La mitad de las bolas?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 66.24,
+      "end": 66.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 66.46,
+      "end": 68.0,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "que tienen la mano, no.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 3,
+        "end": 26
+      }
+    },
+    {
+      "start": 68.88,
+      "end": 69.32,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "De",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 69.32,
+      "end": 70.18,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "la mano del mimo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 3,
+        "end": 20
+      }
+    },
+    {
+      "start": 70.96,
+      "end": 71.4,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿Se",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 71.4,
+      "end": 72.62,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "entiende? Las patas delante.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 4,
+        "end": 32
+      }
+    },
+    {
+      "start": 73.1,
+      "end": 74.28,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La pata de atrás estaría...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 27
+      }
+    },
+    {
+      "start": 74.28,
+      "end": 74.48,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Entonces",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 8
+      }
+    },
+    {
+      "start": 74.48,
+      "end": 76.14,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "el león está casi superpuesto al mimo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 9,
+        "end": 47
+      }
+    },
+    {
+      "start": 76.32,
+      "end": 78.18,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, el león está a la izquierda del mimo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 41
+      }
+    },
+    {
+      "start": 78.42,
+      "end": 80.52,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si, pero está muy cerca.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "start": 80.92,
+      "end": 81.8,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No está cerca, no.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 23,
+        "start": 0,
+        "end": 18
+      }
+    },
+    {
+      "start": 82.28,
+      "end": 85.78,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El león está abajo del clavo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 86.48,
+      "end": 90.42,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El centro del león está un poco corridos a la derecha, pero sí está abajo del clavo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 25,
+        "start": 0,
+        "end": 84
+      }
+    },
+    {
+      "start": 91.12,
+      "end": 92.78,
+      "speaker": null,
+      "name": null,
+      "text": "El centro del león está un poco corridos...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 26,
+        "start": 0,
+        "end": 43
+      }
+    },
+    {
+      "start": 92.78,
+      "end": 98.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El eje vertical del león está un poco corridos a la derecha respecto al eje vertical del clavo, pero está abajo igual.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 27,
+        "start": 0,
+        "end": 118
+      }
+    },
+    {
+      "start": 98.72,
+      "end": 101.24,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está como a 3 centímetros del mimo, no está cerca.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 28,
+        "start": 0,
+        "end": 50
+      }
+    },
+    {
+      "start": 102.24,
+      "end": 102.64,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Opa.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [],
+      "source": {
+        "segment": 29,
+        "start": 0,
+        "end": 4
+      }
+    },
+    {
+      "start": 102.96,
+      "end": 103.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Se entiende?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 30,
+        "start": 0,
+        "end": 13
+      }
+    },
+    {
+      "start": 103.84,
+      "end": 105.64,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está abajo del clavo y a la izquierda del mimo.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 31,
+        "start": 0,
+        "end": 47
+      }
+    },
+    {
+      "start": 107.64,
+      "end": 107.68,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Sí.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 32,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 108.66,
+      "end": 114.24,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Pero si las patas del león están a la altura de las bolas del mimo...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 33,
+        "start": 0,
+        "end": 69
+      }
+    },
+    {
+      "start": 114.94,
+      "end": 116.26,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ah, ¿vos decís la pata de atrás?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 34,
+        "start": 0,
+        "end": 32
+      }
+    },
+    {
+      "start": 117.2,
+      "end": 118.9,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, vos volvamos de nuevo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 35,
+        "start": 0,
+        "end": 26
+      }
+    },
+    {
+      "start": 119.18,
+      "end": 121.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Pon el león abajo del clavo y a la izquierda del mimo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 36,
+        "start": 0,
+        "end": 54
+      }
+    },
+    {
+      "start": 121.58,
+      "end": 125.64,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Como si fuera en el centro de esa cruz que marca el clavo y el mimo.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 37,
+        "start": 0,
+        "end": 68
+      }
+    },
+    {
+      "start": 125.64,
+      "end": 126.0,
+      "speaker": null,
+      "name": null,
+      "text": "Estoy ahí, estoy ahí.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 38,
+        "start": 0,
+        "end": 21
+      }
+    },
+    {
+      "start": 126.5,
+      "end": 131.3,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ahora, corre lo levemente hacia la derecha, cosa de que con ello coincidan los ejes verticales del clavo y del león.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 39,
+        "start": 0,
+        "end": 116
+      }
+    },
+    {
+      "start": 131.3,
+      "end": 132.64,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El león está poquito a la derecha",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 40,
+        "start": 0,
+        "end": 33
+      }
+    },
+    {
+      "start": 132.64,
+      "end": 133.0,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "y",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 40,
+        "start": 34,
+        "end": 35
+      }
+    },
+    {
+      "start": 133.0,
+      "end": 133.78,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "un poco hacia arriba.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 40,
+        "start": 36,
+        "end": 57
+      }
+    },
+    {
+      "start": 134.26,
+      "end": 137.5,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Es decir, los ejes horizontales del mimo y del león tampoco coinciden.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 41,
+        "start": 0,
+        "end": 70
+      }
+    },
+    {
+      "start": 138.0,
+      "end": 141.14,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El león está un poco más cerca del mimo y un poco más cerca del clavo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 42,
+        "start": 0,
+        "end": 70
+      }
+    },
+    {
+      "start": 141.94,
+      "end": 143.28,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Bueno, déjame ver ahí.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 43,
+        "start": 0,
+        "end": 22
+      }
+    },
+    {
+      "start": 143.66,
+      "end": 144.44,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Bueno, fracassiate.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 44,
+        "start": 0,
+        "end": 19
+      }
+    }
+  ]
+}

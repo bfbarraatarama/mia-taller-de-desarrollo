@@ -1,0 +1,37 @@
+{
+  "resumen": "La reunión se centró en la colocación de una oreja en relación con un mimo y un león, con el objetivo de que esté cerca del mimo. Se acordó que la oreja debe estar prácticamente tocando el mimo.",
+  "temas": [
+    {
+      "texto": "Colocación de una oreja en relación con un mimo y un león.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012"
+      ],
+      "id_ancla": "I000012"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "La oreja debe estar prácticamente tocando el mimo.",
+      "ids_intervenciones": [
+        "I000005",
+        "I000012"
+      ],
+      "id_ancla": "I000012",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "resumen": "La reunión se centró en la posición del mono y su oreja en relación al cinturón y a una frutilla. Se acordó que el mono esté más cerca del cinturón que de la frutilla, con una distancia aproximada de 1 a 3 cm. La oreja del mono se colocaría en el medio entre los dos agujeros del cinturón.",
+  "temas": [
+    {
+      "texto": "Posición del mono y su oreja",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022"
+      ],
+      "id_ancla": "I000022"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "Diferencia en la percepción de las distancias entre los participantes.",
+      "ids_intervenciones": [
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014"
+      ],
+      "id_ancla": "I000014"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Colocar el mono más cerca del cinturón que de la frutilla, con una distancia aproximada de 1 a 3 cm.",
+      "ids_intervenciones": [
+        "I000009",
+        "I000010",
+        "I000012",
+        "I000013",
+        "I000014"
+      ],
+      "id_ancla": "I000014",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Colocar la oreja del mono en el medio entre los dos agujeros del cinturón.",
+      "ids_intervenciones": [
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021"
+      ],
+      "id_ancla": "I000021",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}
