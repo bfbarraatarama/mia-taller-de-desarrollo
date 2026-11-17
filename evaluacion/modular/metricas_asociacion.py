@@ -1,6 +1,6 @@
 """Atribución de palabras de la asociación en Figshare, sin umbral (requisito «Atribución de palabras», D10).
 
-Para cada palabra se toma el hablante de su intervención en la Etapa 4 y el canal de la frase de referencia activo en su punto
+Para cada palabra se toma el hablante de su intervención en la transcripción guardada por la Etapa 4 y el canal de la frase de referencia activo en su punto
 medio. Las etiquetas de la diarización se traducen a canales con la misma correspondencia que la evaluación de la
 diarización (`optimal_mapping` del DER estricto), no por su nombre. Las palabras se separan según cuántos canales
 hablan en ese instante: uno (`sin_superposicion`), dos o más (`con_superposicion`, vale cualquiera de ellos) o
@@ -17,38 +17,33 @@ from pyannote.core import Segment, Timeline
 from pyannote.metrics.diarization import DiarizationErrorRate
 
 from evaluacion.diarizacion.der import anotacion
-from src.asociacion.asociacion import asociar
+from src.asociacion.contrato import validar_asr
 from src.asociacion.texto import alinear
 
 from .audio import FS
 from .metricas_diar import referencia_tarea
 
 
-def palabras_asignadas(carpeta: Path, audio: Path | None = None) -> tuple[list[tuple[float, float, str | None]], dict[str, int]]:
-    """(inicio, fin, hablante) de cada palabra según las intervenciones de `asociar()`, y lo que fue por respaldo.
+def palabras_asignadas(transcripcion: list[dict], asr: dict) -> tuple[list[tuple[float, float, str | None]], dict[str, int]]:
+    """(inicio, fin, hablante) de cada palabra según la transcripción guardada, y lo que fue por respaldo.
 
-    No repite las reglas de la asociación: cada intervención con `timing` «word» indica en `source` el segmento y el
-    tramo de su texto, y `alinear()` da el tramo de cada palabra; la palabra toma el hablante de su intervención.
-    Las intervenciones por segmento («segment» o «unknown») no tienen tiempos por palabra y se cuentan aparte.
-    Falla si la cantidad de palabras no coincide con los conteos de `asociar()`.
+    Se evalúa lo persistido, no se vuelve a ejecutar la asociación: cada intervención con `timing` «word» indica en
+    `source` el segmento y el tramo de su texto, y `alinear()` sobre el ASR normalizado da el tramo de cada palabra;
+    la palabra toma el hablante de su intervención. Las intervenciones por segmento («segment» o «unknown») no
+    tienen tiempos por palabra y se cuentan aparte.
     """
-    a = asociar(carpeta, audio=audio)
-    palabras, respaldo = [], {"intervenciones": 0, "palabras": 0}
-    alineadas = {}
-    for i in a.intervenciones:
-        seg = a.asr["segments"][i.source["segment"]]
-        if i.timing != "word":
+    palabras, respaldo, alineadas = [], {"intervenciones": 0, "palabras": 0}, {}
+    for i in transcripcion:
+        if i.get("timing") != "word":
             respaldo["intervenciones"] += 1
-            respaldo["palabras"] += len(i.text.split())
+            respaldo["palabras"] += len(i["text"].split())
             continue
-        indice = i.source["segment"]
-        if indice not in alineadas:
-            alineadas[indice] = alinear(seg) or []
-        for w in alineadas[indice]:
-            if i.source["start"] <= w["char_start"] and w["char_end"] <= i.source["end"]:
-                palabras.append((w["start"], w["end"], i.speaker))
-    if len(palabras) != a.conteos["palabras"]:
-        raise RuntimeError(f"{carpeta}: {len(palabras)} palabras reconstruidas y {a.conteos['palabras']} según asociar()")
+        fuente = i["source"]
+        if fuente["segment"] not in alineadas:
+            alineadas[fuente["segment"]] = alinear(asr["segments"][fuente["segment"]]) or []
+        for w in alineadas[fuente["segment"]]:
+            if fuente["start"] <= w["char_start"] and w["char_end"] <= fuente["end"]:
+                palabras.append((w["start"], w["end"], i["speaker"]))
     palabras.sort(key=lambda p: (p[0], p[1]))
     return palabras, respaldo
 
@@ -141,15 +136,16 @@ def metricas_asociacion(elementos: list[dict], inferencia: Path, cache: Path, da
             sin_referencia.append(e["id"])
             continue
         carpeta = Path(inferencia) / e["id"]
-        audio = Path(datos) / next(r for r in e["archivos"] if r.endswith("audio.wav"))
         necesarios = ("diarization.json", "asr.json", "transcription.json")
-        if not (audio.is_file() and all((carpeta / n).is_file() for n in necesarios)):
+        if not all((carpeta / n).is_file() for n in necesarios):
             faltantes.append(e["id"])
             continue
+        duracion = e["cuadros"] / FS
         diar = json.loads((carpeta / "diarization.json").read_text(encoding="utf-8"))["segments"]
         trans = json.loads((carpeta / "transcription.json").read_text(encoding="utf-8"))["segments"]
-        palabras, respaldo = palabras_asignadas(carpeta, audio)
-        r = atribucion(palabras, referencia_tarea(e, cache), diar, e["cuadros"] / FS, trans)
+        asr, _ = validar_asr(json.loads((carpeta / "asr.json").read_text(encoding="utf-8")), duracion)
+        palabras, respaldo = palabras_asignadas(trans, asr)
+        r = atribucion(palabras, referencia_tarea(e, cache), diar, duracion, trans)
         r["respaldo"] = respaldo
         por_archivo[e["id"]] = r
         _acumular(por_sesion.setdefault(e["sesion"], {}), r)

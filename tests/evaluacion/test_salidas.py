@@ -16,7 +16,7 @@ def test_publicar_salidas(tmp_path):
     (inferencia / "clip-c1" / "inferencia.log").write_text("ruta /home/x")  # tampoco
     (inferencia / "clip-c1" / "inferencia.json").write_text("{}")
     destino = tmp_path / "salidas"
-    assert publicar_salidas(inferencia, destino) == 9
+    assert publicar_salidas(inferencia, destino) == 13  # 9 JSON, 2 minutes.md (Figshare, AMI) y 2 inferencia.json más
     publicados = sorted(p.relative_to(destino).as_posix() for p in destino.rglob("*") if p.is_file())
     assert "clip-c1/asr.json" in publicados and "clip-c1/inferencia.json" in publicados
     assert all(Path(p).name in ARCHIVOS for p in publicados)

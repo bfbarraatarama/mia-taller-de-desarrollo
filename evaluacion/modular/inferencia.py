@@ -24,8 +24,9 @@ from .muestra import verificar_muestra
 RAIZ = Path(__file__).resolve().parents[2]
 ARCHIVOS_ESPERADOS = {
     "clip": ("asr.json",),
-    "figshare": ("diarization.json", "asr.json", "transcription.json", "minutes.json", "ejecucion_minutas.json"),
-    "ami": ("minutes.json", "ejecucion_minutas.json"),
+    "figshare": ("diarization.json", "asr.json", "transcription.json", "minutes.json", "minutes.md",
+                 "ejecucion_minutas.json"),
+    "ami": ("minutes.json", "minutes.md", "ejecucion_minutas.json"),
 }
 
 
@@ -48,6 +49,30 @@ def huella_codigo(tipo: str) -> str:
         for archivo in archivos:
             h.update(archivo.relative_to(RAIZ).as_posix().encode() + b"\0" + archivo.read_bytes() + b"\0")
     return h.hexdigest()
+
+
+def verificar_salidas(elementos: list[dict], origen: Path) -> list[str]:
+    """Problemas de integridad de las salidas guardadas: cada archivo esperado tiene que coincidir con el SHA-256
+    que registró `inferir` en su `inferencia.json`. Lo usa `evaluar` antes de publicar o evaluar."""
+    problemas = []
+    for elemento in sorted(elementos, key=lambda e: e["id"]):
+        carpeta, tipo = Path(origen) / elemento["id"], _tipo(elemento)
+        try:
+            registrados = json.loads((carpeta / "inferencia.json").read_text(encoding="utf-8")).get("salidas_sha256")
+        except (OSError, ValueError):
+            registrados = None
+        if not registrados:
+            problemas.append(f"{elemento['id']}: sin SHA-256 registrados de sus salidas (inferencia.json)")
+            continue
+        for nombre in ARCHIVOS_ESPERADOS[tipo]:
+            ruta = carpeta / nombre
+            if nombre not in registrados:
+                problemas.append(f"{elemento['id']}/{nombre}: sin SHA-256 registrado")
+            elif not ruta.is_file():
+                problemas.append(f"{elemento['id']}/{nombre}: falta")
+            elif (encontrado := hashlib.sha256(ruta.read_bytes()).hexdigest()) != registrados[nombre]:
+                problemas.append(f"{elemento['id']}/{nombre}: SHA-256 registrado {registrados[nombre]}, encontrado {encontrado}")
+    return problemas
 
 
 class MuestraAlterada(Exception):

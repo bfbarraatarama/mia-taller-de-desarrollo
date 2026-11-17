@@ -10,6 +10,7 @@ from pathlib import Path
 
 from evaluacion.modular.__main__ import main
 from evaluacion.modular.contratos import evaluar_contratos
+from evaluacion.modular.inferencia import _hashes_salidas
 from evaluacion.modular.muestra import construir_manifiesto
 from src.asociacion.asociacion import asociar
 from src.minutas.entrada import leer_transcripcion
@@ -49,6 +50,7 @@ def minuta(carpeta: Path, transcripcion: Path) -> None:
                                         "problemas": [], "acciones": [{**elemento, "responsable": None,
                                                                        "plazo": None}]})
     escribir(carpeta / "ejecucion_minutas.json", {"secciones": SECCIONES})
+    (carpeta / "minutes.md").write_text("# Minuta\n\nSe saludan.\n", encoding="utf-8")
 
 
 def armar(tmp_path: Path) -> tuple[Path, Path, Path]:
@@ -62,6 +64,8 @@ def armar(tmp_path: Path) -> tuple[Path, Path, Path]:
         {"id": "ami-r1", "fuente": "ami", "modulos": ["minutas"], "archivos": {}},
     ]
     escribir(datos / "ami/r1/transcription.json", TRANS)
+    escribir(datos / "ami/r1/referencia_minuta.json", {"sintetico": True, "items": [
+        {"tipo": "resumen", "item_id": "r1.s.1", "texto": "Se saludan.", "texto_original": "They greet."}]})
     escribir(inferencia / "clip-c1/asr.json", ASR)
     fig = inferencia / "figshare-S22-01"
     escribir(fig / "asr.json", ASR)
@@ -71,6 +75,10 @@ def armar(tmp_path: Path) -> tuple[Path, Path, Path]:
     escribir(fig / "transcription.json", {"segments": [i.a_dict() for i in a.intervenciones]})
     minuta(fig, fig / "transcription.json")
     minuta(inferencia / "ami-r1", datos / "ami/r1/transcription.json")
+    for elemento in elementos:  # salidas selladas como las deja inferir (SHA-256 de cada archivo esperado)
+        tipo = {"openslr": "clip"}.get(elemento["fuente"], elemento["fuente"])
+        escribir(inferencia / elemento["id"] / "inferencia.json",
+                 {"codigo": 0, "salidas_sha256": _hashes_salidas(inferencia / elemento["id"], tipo)})
     manifiesto = tmp_path / "manifiesto.json"
     escribir(manifiesto, construir_manifiesto(20261010, {}, elementos, {}))
     return manifiesto, datos, inferencia
@@ -159,3 +167,21 @@ def test_transcripcion_que_no_corresponde_al_asr(tmp_path):
     asociacion = evaluar_contratos(manifiesto, datos, inferencia, REQUERIDAS)["modulos"]["asociacion"]
     assert (asociacion["validas"], asociacion["total"]) == (0, 1)
     assert any("source" in v["regla"] for v in asociacion["violaciones"])
+
+
+def test_salida_alterada_no_se_evalua_ni_se_publica(tmp_path, capsys):
+    """Revisión del #21: evaluar verifica los SHA-256 de las salidas (también minutes.md) antes de publicar."""
+    manifiesto, datos, inferencia = armar(tmp_path)
+    (inferencia / "ami-r1" / "minutes.md").write_text("# Otra minuta\n", encoding="utf-8")
+    config = tmp_path / "config.toml"
+    config.write_text(
+        (RAIZ / "evaluacion/modular/config.toml").read_text(encoding="utf-8")
+        .replace('salida = "evaluacion/modular/datos"', f'salida = "{datos}"')
+        .replace('manifiesto = "evaluacion/modular/muestra.manifest.json"', f'manifiesto = "{manifiesto}"')
+        .replace('inferencia = "evaluacion/modular/inferencia"', f'inferencia = "{inferencia}"')
+        .replace('resultados = "evaluacion/modular/resultados"', f'resultados = "{tmp_path / "resultados"}"')
+        .replace('salidas = "evaluacion/modular/resultados/salidas"', f'salidas = "{tmp_path / "salidas"}"'),
+        encoding="utf-8")
+    assert main(["evaluar", "--config", str(config)]) == 1
+    assert "ami-r1/minutes.md" in capsys.readouterr().err
+    assert not (tmp_path / "salidas").exists() and not (tmp_path / "resultados" / "contratos.json").exists()

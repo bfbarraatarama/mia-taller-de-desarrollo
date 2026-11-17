@@ -161,6 +161,15 @@ def evaluar(args) -> int:
         print("La muestra no coincide con su manifiesto; no se evalúa:\n" + "\n".join(f"- {p}" for p in problemas),
               file=sys.stderr)
         return 1
+    from .inferencia import verificar_salidas
+
+    elementos = json.loads(config.manifiesto.read_text(encoding="utf-8"))["contenido"]["elementos"]
+    origen_previo = config.inferencia if config.inferencia.is_dir() else config.salidas
+    problemas = verificar_salidas(elementos, origen_previo) if origen_previo.is_dir() else []
+    if problemas:
+        print("Salidas que no coinciden con sus SHA-256 registrados; no se publica ni se evalúa:\n"
+              + "\n".join(f"- {p}" for p in problemas), file=sys.stderr)
+        return 1
     if config.inferencia.is_dir():
         from .salidas import publicar_salidas
 

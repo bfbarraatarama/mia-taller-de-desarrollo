@@ -52,13 +52,31 @@ def test_intervenciones_marcadas_sobre_superposicion_real():
                                    "overlap": 1, "overlap_sobre_superposicion_real": 1}
 
 
+def persistidas(carpeta):
+    """(transcripción como la guarda la Etapa 4, ASR normalizado como lo recibe) de una reunión de prueba."""
+    from src.asociacion.asociacion import asociar
+    a = asociar(carpeta)
+    return [i.a_dict() for i in a.intervenciones], a.asr
+
+
 def test_palabras_asignadas_coinciden_con_la_asociacion(tmp_path):
     carpeta = crear_reunion(tmp_path, 4.0, [(0.0, 2.0, "SPEAKER_00"), (1.5, 4.0, "SPEAKER_01")],
                             [segmento(("hola", 0.2, 0.6), ("che", 1.6, 1.9), ("bien", 2.5, 3.0))])
-    palabras, respaldo = palabras_asignadas(carpeta)
+    palabras, respaldo = palabras_asignadas(*persistidas(carpeta))
     assert [p[2] for p in palabras] == ["SPEAKER_00", "SPEAKER_00", "SPEAKER_01"]  # «che»: empate, sigue D2
     assert [p[:2] for p in palabras] == [(0.2, 0.6), (1.6, 1.9), (2.5, 3.0)]
     assert respaldo == {"intervenciones": 0, "palabras": 0}
+
+
+def test_atribucion_sale_de_la_transcripcion_persistida(tmp_path):
+    """Revisión del #21: cambiar el hablante en la transcripción guardada cambia la atribución evaluada."""
+    carpeta = crear_reunion(tmp_path, 4.0, [(0.0, 2.0, "SPEAKER_00"), (1.5, 4.0, "SPEAKER_01")],
+                            [segmento(("hola", 0.2, 0.6), ("che", 1.6, 1.9), ("bien", 2.5, 3.0))])
+    transcripcion, asr = persistidas(carpeta)
+    ultima = next(i for i in transcripcion if i["speaker"] == "SPEAKER_01")
+    ultima["speaker"] = "SPEAKER_00"
+    palabras, _ = palabras_asignadas(transcripcion, asr)
+    assert [p[2] for p in palabras] == ["SPEAKER_00", "SPEAKER_00", "SPEAKER_00"]
 
 
 def test_segmento_por_respaldo_se_cuenta_aparte(tmp_path):
@@ -67,7 +85,7 @@ def test_segmento_por_respaldo_se_cuenta_aparte(tmp_path):
             "words": [{"word": "quiero", "start": 0.4, "end": 0.7}, {"word": "eso.", "start": 0.7, "end": 1.0}]}
     carpeta = crear_reunion(tmp_path, 4.0, [(0.0, 4.0, "SPEAKER_00")],
                             [roto, segmento(("bien", 2.5, 3.0))])
-    palabras, respaldo = palabras_asignadas(carpeta)
+    palabras, respaldo = palabras_asignadas(*persistidas(carpeta))
     assert [p[2] for p in palabras] == ["SPEAKER_00"] and palabras[0][:2] == (2.5, 3.0)
     assert respaldo == {"intervenciones": 1, "palabras": 3}
 
