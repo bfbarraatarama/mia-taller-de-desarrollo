@@ -60,6 +60,8 @@ pyannote 4 lee el audio con TorchCodec, que carga las **bibliotecas compartidas*
    - Para usar otra carpeta, se define `DIARIZACION_FFMPEG_DLL_DIR` en el entorno de la consola antes de ejecutar. Ponerla en `.env` no sirve, porque el `.pth` corre antes de que se lea.
    - Para deshacerlo, se borra `ffmpeg_dll_dir.pth`. Si se recrea el venv, hay que repetir este paso.
 
+> **Instalaciones alternativas (p.ej. WinGet):** si `ffmpeg.exe` o `ffprobe.exe` están en `PATH` (por ejemplo, instalados con `winget install Gyan.FFmpeg.Shared`), el verificador detecta automáticamente el directorio de DLL a través del ejecutable y reporta un **AVISO** (no FALLA) si no hay `.pth`. Si torchcodec falla al decodificar, registrar la carpeta con `DIARIZACION_FFMPEG_DLL_DIR` y crear el `.pth` según el procedimiento anterior.
+
 #### Linux
 
 > Una compañera pasó `verificar_entorno.py` sin fallas en Ubuntu 24.04, lo que incluye la decodificación con TorchCodec, y corrió la evaluación en CUDA. No informó cuál de las dos opciones de FFmpeg de abajo usó.
@@ -94,6 +96,8 @@ La verificación del entorno confirma que TorchCodec puede decodificar audio.
 & $py -m pytest tests/diarizacion                                 # pruebas de nivel 1
 ```
 
+> **Windows — codificación de salida:** la CLI de diarización (`diarizar.py` y `contrato.py`) reconfigura `sys.stdout` y `sys.stderr` a UTF-8 inmediatamente después de parsear argumentos. Esto evita `UnicodeEncodeError` al imprimir mensajes de error en español cuando el encoding por defecto del sistema es `cp1252`.
+
 `verificar_entorno.py` imprime OK, AVISO o FALLA por cada punto y termina con `0` si no hay fallas:
 
 | Comprobación | Qué mira |
@@ -102,7 +106,8 @@ La verificación del entorno confirma que TorchCodec puede decodificar audio.
 | Versiones | dependencias directas y versiones instaladas frente a `constraints.txt` de la raíz; `pip check`; avisos por paquetes adicionales |
 | Importaciones | `torch`, `torchaudio`, `torchcodec`, `pyannote.audio`, `pyannote.metrics`, `dotenv`, `numpy` y `pandas`, sin el aviso "torchcodec is not installed correctly" |
 | CPU/GPU | variante del wheel (`+cpu`/`+cu128`), `torch.cuda.is_available()`, nombre de la GPU; con `--gpu`, falla si no hay CUDA |
-| FFmpeg | la FFmpeg de la consola (informativo); en Windows, que exista `ffmpeg_dll_dir.pth` y que la carpeta tenga `avcodec-*.dll` |
+| FFmpeg | la FFmpeg de la consola (informativo); en Windows, que exista `ffmpeg_dll_dir.pth` y que la carpeta tenga `avcodec-*.dll`; busca en este orden: `DIARIZACION_FFMPEG_DLL_DIR`, ruta del README y directorio del ejecutable en PATH (WinGet) |
+| libarchive | que `cargar_libarchive()` cargue la biblioteca del sistema; en Windows busca `archiveint.dll` vía System32 y la variable `LIBARCHIVE` como ruta explícita |
 | Decodificación | TorchCodec decodifica un WAV sintético (y el de `--wav`) y la cantidad de muestras coincide con la cabecera |
 | Token | que haya `HF_TOKEN` en el entorno o en `.env`, sin mostrarlo |
 

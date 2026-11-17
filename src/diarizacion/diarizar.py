@@ -244,6 +244,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--device", choices=MODOS, default="auto", help="dispositivo (por defecto: auto)")
     parser.add_argument("--num-speakers", type=_entero_positivo, help="cantidad exacta de hablantes (opcional)")
     args = parser.parse_args(argv)
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
+    if hasattr(sys.stderr, 'reconfigure'):
+        sys.stderr.reconfigure(encoding='utf-8')
 
     try:
         r = diarizar(args.audio, salida=args.salida, device=args.device, num_speakers=args.num_speakers)

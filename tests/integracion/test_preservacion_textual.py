@@ -57,13 +57,13 @@ def test_de_stt_a_minutas_y_visores(tmp_path):
     assert filas[0]['hablantes_detectados'] == [{'hablante': 'A', 'nombre': 'Lucía'},
                                                 {'hablante': 'B', 'nombre': 'Martín'}]
     assert 'actividad vocal, no autores' in prompt
-    md = resultado.markdown.read_text()
+    md = resultado.markdown.read_text(encoding='utf-8')
     assert '[00:00.125–00:00.875, aprox.]' in md
     assert 'falta de ubicación temporal (una intervención)' in md
     assert '<li>' in minuta_html(md)
-    meta = json.loads(resultado.manifiesto.read_text())
+    meta = json.loads(resultado.manifiesto.read_text(encoding='utf-8'))
     assert (meta['intervenciones'], meta['intervenciones_sin_ubicacion_excluidas']) == (2, 1)
-    contenido = ruta.read_text()
+    contenido = ruta.read_text(encoding='utf-8')
     html = transcripcion_html(contenido)
     for texto in ('Texto ilocalizable.', 'Sin ubicación temporal verificable', 'No aprobar el cambio.',
                   'resolución temporal por segmento', 'Lucía (A)', 'Martín (B)', 'atribución ambigua'):

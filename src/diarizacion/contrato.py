@@ -116,6 +116,10 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("audio", type=Path, help="WAV de entrada (se usa su duración)")
     parser.add_argument("--meta", type=Path, help="diarization.meta.json: comprueba además el par")
     args = parser.parse_args(argv)
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8')
+    if hasattr(sys.stderr, 'reconfigure'):
+        sys.stderr.reconfigure(encoding='utf-8')
 
     from .entrada import validar_audio  # solo biblioteca estándar
     from .errores import DiarizacionError

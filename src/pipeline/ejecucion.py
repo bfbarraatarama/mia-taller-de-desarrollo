@@ -96,7 +96,13 @@ def _exclusivo(carpeta: Path):
             if os.name == 'nt':
                 import msvcrt
                 archivo.seek(0)
-                if archivo.read(1) != b'0':
+                try:
+                    data = archivo.read(1)
+                except PermissionError:
+                    # open() tuvo éxito → la ACL permite acceso; read() falla solo si otro
+                    # descriptor mantiene un byte-range lock sobre el byte 0.
+                    raise ReunionOcupada('Otra ejecución está utilizando esta reunión.')
+                if data != b'0':
                     archivo.seek(0)
                     archivo.write(b'0')
                     archivo.flush()

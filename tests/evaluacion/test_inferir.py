@@ -34,9 +34,9 @@ def config_en(tmp_path):
     ruta = tmp_path / "config.toml"
     ruta.write_text(
         (RAIZ / "evaluacion/modular/config.toml").read_text(encoding="utf-8")
-        .replace('salida = "evaluacion/modular/datos"', f'salida = "{datos}"')
-        .replace('manifiesto = "evaluacion/modular/muestra.manifest.json"', f'manifiesto = "{manifiesto}"')
-        .replace('inferencia = "evaluacion/modular/inferencia"', f'inferencia = "{inferencia}"'),
+        .replace('salida = "evaluacion/modular/datos"', f'salida = "{datos.as_posix()}"')
+        .replace('manifiesto = "evaluacion/modular/muestra.manifest.json"', f'manifiesto = "{manifiesto.as_posix()}"')
+        .replace('inferencia = "evaluacion/modular/inferencia"', f'inferencia = "{inferencia.as_posix()}"'),
         encoding="utf-8")
     return cargar_config(ruta)
 
@@ -48,11 +48,11 @@ def test_comandos_por_fuente(tmp_path):
     por_modulo = {c[2]: c for c in falso.comandos}
     assert set(por_modulo) == {"src.stt", "src.pipeline", "src.minutas"}
     pipeline = por_modulo["src.pipeline"]
-    assert pipeline[3] == "ejecutar" and pipeline[4].endswith("figshare/S22/01/audio.wav")
+    assert pipeline[3] == "ejecutar" and Path(pipeline[4]).as_posix().endswith("figshare/S22/01/audio.wav")
     assert pipeline[pipeline.index("--modelo") + 1] == "qwen2.5-7b"
     assert pipeline[pipeline.index("--secciones") + 1] == "resumen,temas,decisiones,problemas,acciones"
     assert por_modulo["src.stt"][por_modulo["src.stt"].index("--model") + 1] == "medium"
-    assert por_modulo["src.minutas"][por_modulo["src.minutas"].index("--entrada") + 1].endswith(
+    assert Path(por_modulo["src.minutas"][por_modulo["src.minutas"].index("--entrada") + 1]).as_posix().endswith(
         "ami/r1/transcription.json")
     registro = json.loads((config.inferencia / "figshare-S22-01" / "inferencia.json").read_text(encoding="utf-8"))
     assert registro["codigo"] == 0 and registro["configuracion"]["modelo_stt"] == "medium"

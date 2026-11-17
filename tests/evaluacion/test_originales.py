@@ -69,8 +69,8 @@ def test_preparar_no_escribe_con_original_invalido(tmp_path, capsys):
     config = tmp_path / "config.toml"
     config.write_text(
         (raiz / "evaluacion/modular/config.toml").read_text(encoding="utf-8")
-        .replace('cache = "hito-2/.cache"', f'cache = "{tmp_path / "cache"}"')
-        .replace('salida = "evaluacion/modular/datos"', f'salida = "{tmp_path / "datos"}"'),
+        .replace('cache = "hito-2/.cache"', f'cache = "{(tmp_path / "cache").as_posix()}"')
+        .replace('salida = "evaluacion/modular/datos"', f'salida = "{(tmp_path / "datos").as_posix()}"'),
         encoding="utf-8")
     assert main(["preparar", "--config", str(config)]) == 1
     assert "descargar_fuentes.py" in capsys.readouterr().err

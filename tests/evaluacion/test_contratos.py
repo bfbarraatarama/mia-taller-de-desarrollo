@@ -132,11 +132,11 @@ def test_evaluar_por_linea_de_comandos(tmp_path, capsys):
     config = tmp_path / "config.toml"
     config.write_text(
         (RAIZ / "evaluacion/modular/config.toml").read_text(encoding="utf-8")
-        .replace('salida = "evaluacion/modular/datos"', f'salida = "{datos}"')
-        .replace('manifiesto = "evaluacion/modular/muestra.manifest.json"', f'manifiesto = "{manifiesto}"')
-        .replace('inferencia = "evaluacion/modular/inferencia"', f'inferencia = "{inferencia}"')
-        .replace('resultados = "evaluacion/modular/resultados"', f'resultados = "{resultados}"')
-        .replace('salidas = "evaluacion/modular/resultados/salidas"', f'salidas = "{tmp_path / "salidas"}"'),
+        .replace('salida = "evaluacion/modular/datos"', f'salida = "{datos.as_posix()}"')
+        .replace('manifiesto = "evaluacion/modular/muestra.manifest.json"', f'manifiesto = "{manifiesto.as_posix()}"')
+        .replace('inferencia = "evaluacion/modular/inferencia"', f'inferencia = "{inferencia.as_posix()}"')
+        .replace('resultados = "evaluacion/modular/resultados"', f'resultados = "{resultados.as_posix()}"')
+        .replace('salidas = "evaluacion/modular/resultados/salidas"', f'salidas = "{(tmp_path / "salidas").as_posix()}"'),
         encoding="utf-8")
     assert main(["evaluar", "--config", str(config)]) == 0
     reporte = json.loads((resultados / "contratos.json").read_text(encoding="utf-8"))
@@ -176,11 +176,11 @@ def test_salida_alterada_no_se_evalua_ni_se_publica(tmp_path, capsys):
     config = tmp_path / "config.toml"
     config.write_text(
         (RAIZ / "evaluacion/modular/config.toml").read_text(encoding="utf-8")
-        .replace('salida = "evaluacion/modular/datos"', f'salida = "{datos}"')
-        .replace('manifiesto = "evaluacion/modular/muestra.manifest.json"', f'manifiesto = "{manifiesto}"')
-        .replace('inferencia = "evaluacion/modular/inferencia"', f'inferencia = "{inferencia}"')
-        .replace('resultados = "evaluacion/modular/resultados"', f'resultados = "{tmp_path / "resultados"}"')
-        .replace('salidas = "evaluacion/modular/resultados/salidas"', f'salidas = "{tmp_path / "salidas"}"'),
+        .replace('salida = "evaluacion/modular/datos"', f'salida = "{datos.as_posix()}"')
+        .replace('manifiesto = "evaluacion/modular/muestra.manifest.json"', f'manifiesto = "{manifiesto.as_posix()}"')
+        .replace('inferencia = "evaluacion/modular/inferencia"', f'inferencia = "{inferencia.as_posix()}"')
+        .replace('resultados = "evaluacion/modular/resultados"', f'resultados = "{(tmp_path / "resultados").as_posix()}"')
+        .replace('salidas = "evaluacion/modular/resultados/salidas"', f'salidas = "{(tmp_path / "salidas").as_posix()}"'),
         encoding="utf-8")
     assert main(["evaluar", "--config", str(config)]) == 1
     assert "ami-r1/minutes.md" in capsys.readouterr().err

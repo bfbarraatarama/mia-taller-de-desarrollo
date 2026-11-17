@@ -56,7 +56,7 @@ def config(secciones=('temas',), **kwargs):
 def ejecutar(tmp_path, cliente, cfg, datos=None):
     r = generar_minuta(datos if datos is not None else entrada(), tmp_path,
                        configuracion=cfg, cliente=cliente)
-    return json.loads(r.json.read_text()), json.loads(r.manifiesto.read_text())
+    return json.loads(r.json.read_text(encoding='utf-8')), json.loads(r.manifiesto.read_text(encoding='utf-8'))
 
 
 def todos_ids(minuta, seccion='temas'):
