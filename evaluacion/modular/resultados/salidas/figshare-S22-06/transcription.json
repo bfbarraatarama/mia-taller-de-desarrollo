@@ -1,0 +1,225 @@
+{
+  "segments": [
+    {
+      "start": 2.84,
+      "end": 12.68,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ok, la media luna amarilla está debajo del ojo y sobre la regla.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 64
+      }
+    },
+    {
+      "start": 13.06,
+      "end": 13.58,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 19.2,
+      "end": 19.72,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "A",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 1
+      }
+    },
+    {
+      "start": 19.72,
+      "end": 20.24,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "ver...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 2,
+        "end": 8
+      }
+    },
+    {
+      "start": 20.24,
+      "end": 22.84,
+      "speaker": null,
+      "name": null,
+      "text": "Como muy simétrica la distancia entre uno y otro, ¿viste?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 57
+      }
+    },
+    {
+      "start": 23.28,
+      "end": 23.8,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 23.92,
+      "end": 28.8,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Lo que está distante del ojo está distante de la punta más alta de la regla, digamos.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 85
+      }
+    },
+    {
+      "start": 28.8,
+      "end": 38.16,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Bueno, y digamos donde terminan las dos puntas del ojo, termina la media luna.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 78
+      }
+    },
+    {
+      "start": 38.28,
+      "end": 38.72,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Claro.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 6
+      }
+    },
+    {
+      "start": 39.02,
+      "end": 40.6,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Dale, listo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 12
+      }
+    }
+  ]
+}

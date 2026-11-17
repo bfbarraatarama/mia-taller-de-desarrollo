@@ -1,0 +1,961 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 3.38,
+      "end": 8.0,
+      "text": "está esta sirenita amarilla sobre una plancha celeste",
+      "words": [
+        {
+          "word": "está",
+          "start": 3.38,
+          "end": 3.92
+        },
+        {
+          "word": "esta",
+          "start": 3.92,
+          "end": 4.22
+        },
+        {
+          "word": "sirenita",
+          "start": 4.22,
+          "end": 4.8
+        },
+        {
+          "word": "amarilla",
+          "start": 4.8,
+          "end": 5.58
+        },
+        {
+          "word": "sobre",
+          "start": 5.58,
+          "end": 6.4
+        },
+        {
+          "word": "una",
+          "start": 6.4,
+          "end": 6.7
+        },
+        {
+          "word": "plancha",
+          "start": 6.7,
+          "end": 7.06
+        },
+        {
+          "word": "celeste",
+          "start": 7.06,
+          "end": 8.0
+        }
+      ]
+    },
+    {
+      "start": 9.24,
+      "end": 10.62,
+      "text": "tapando la otra vez?",
+      "words": [
+        {
+          "word": "tapando",
+          "start": 9.24,
+          "end": 9.78
+        },
+        {
+          "word": "la",
+          "start": 9.78,
+          "end": 9.96
+        },
+        {
+          "word": "otra",
+          "start": 9.96,
+          "end": 10.16
+        },
+        {
+          "word": "vez?",
+          "start": 10.16,
+          "end": 10.62
+        }
+      ]
+    },
+    {
+      "start": 10.92,
+      "end": 14.7,
+      "text": "no, está como sentada en el cable",
+      "words": [
+        {
+          "word": "no,",
+          "start": 10.92,
+          "end": 11.46
+        },
+        {
+          "word": "está",
+          "start": 11.56,
+          "end": 12.4
+        },
+        {
+          "word": "como",
+          "start": 12.4,
+          "end": 12.92
+        },
+        {
+          "word": "sentada",
+          "start": 12.92,
+          "end": 13.62
+        },
+        {
+          "word": "en",
+          "start": 13.62,
+          "end": 13.9
+        },
+        {
+          "word": "el",
+          "start": 13.9,
+          "end": 14.22
+        },
+        {
+          "word": "cable",
+          "start": 14.22,
+          "end": 14.7
+        }
+      ]
+    },
+    {
+      "start": 14.7,
+      "end": 16.16,
+      "text": "ah, sentada en el cable",
+      "words": [
+        {
+          "word": "ah,",
+          "start": 14.7,
+          "end": 15.6
+        },
+        {
+          "word": "sentada",
+          "start": 15.68,
+          "end": 15.84
+        },
+        {
+          "word": "en",
+          "start": 15.84,
+          "end": 15.96
+        },
+        {
+          "word": "el",
+          "start": 15.96,
+          "end": 16.14
+        },
+        {
+          "word": "cable",
+          "start": 16.14,
+          "end": 16.16
+        }
+      ]
+    },
+    {
+      "start": 16.16,
+      "end": 18.0,
+      "text": "si, y para que te des una idea",
+      "words": [
+        {
+          "word": "si,",
+          "start": 16.16,
+          "end": 16.7
+        },
+        {
+          "word": "y",
+          "start": 16.7,
+          "end": 16.88
+        },
+        {
+          "word": "para",
+          "start": 16.88,
+          "end": 17.0
+        },
+        {
+          "word": "que",
+          "start": 17.0,
+          "end": 17.2
+        },
+        {
+          "word": "te",
+          "start": 17.2,
+          "end": 17.26
+        },
+        {
+          "word": "des",
+          "start": 17.26,
+          "end": 17.36
+        },
+        {
+          "word": "una",
+          "start": 17.36,
+          "end": 17.58
+        },
+        {
+          "word": "idea",
+          "start": 17.58,
+          "end": 18.0
+        }
+      ]
+    },
+    {
+      "start": 22.18,
+      "end": 24.98,
+      "text": "su rodilla no llega al final del cable",
+      "words": [
+        {
+          "word": "su",
+          "start": 22.18,
+          "end": 22.72
+        },
+        {
+          "word": "rodilla",
+          "start": 22.72,
+          "end": 23.26
+        },
+        {
+          "word": "no",
+          "start": 23.26,
+          "end": 23.58
+        },
+        {
+          "word": "llega",
+          "start": 23.58,
+          "end": 23.74
+        },
+        {
+          "word": "al",
+          "start": 23.74,
+          "end": 23.9
+        },
+        {
+          "word": "final",
+          "start": 23.9,
+          "end": 24.1
+        },
+        {
+          "word": "del",
+          "start": 24.1,
+          "end": 24.36
+        },
+        {
+          "word": "cable",
+          "start": 24.36,
+          "end": 24.98
+        }
+      ]
+    },
+    {
+      "start": 24.98,
+      "end": 27.0,
+      "text": "o sea está un poquito más hacia la izquierda",
+      "words": [
+        {
+          "word": "o",
+          "start": 24.98,
+          "end": 25.72
+        },
+        {
+          "word": "sea",
+          "start": 25.72,
+          "end": 25.82
+        },
+        {
+          "word": "está",
+          "start": 25.82,
+          "end": 25.98
+        },
+        {
+          "word": "un",
+          "start": 25.98,
+          "end": 26.14
+        },
+        {
+          "word": "poquito",
+          "start": 26.14,
+          "end": 26.36
+        },
+        {
+          "word": "más",
+          "start": 26.36,
+          "end": 26.58
+        },
+        {
+          "word": "hacia",
+          "start": 26.58,
+          "end": 26.74
+        },
+        {
+          "word": "la",
+          "start": 26.74,
+          "end": 26.94
+        },
+        {
+          "word": "izquierda",
+          "start": 26.94,
+          "end": 27.21
+        }
+      ]
+    },
+    {
+      "start": 27.21,
+      "end": 28.15,
+      "text": "si",
+      "words": [
+        {
+          "word": "si",
+          "start": 27.21,
+          "end": 28.15
+        }
+      ]
+    },
+    {
+      "start": 29.99,
+      "end": 35.85,
+      "text": "y la punta negra de la colita es lo único que sobresale de la plancha",
+      "words": [
+        {
+          "word": "y",
+          "start": 29.99,
+          "end": 30.55
+        },
+        {
+          "word": "la",
+          "start": 30.55,
+          "end": 30.93
+        },
+        {
+          "word": "punta",
+          "start": 30.93,
+          "end": 31.31
+        },
+        {
+          "word": "negra",
+          "start": 31.31,
+          "end": 31.61
+        },
+        {
+          "word": "de",
+          "start": 31.61,
+          "end": 31.89
+        },
+        {
+          "word": "la",
+          "start": 31.89,
+          "end": 32.09
+        },
+        {
+          "word": "colita",
+          "start": 32.09,
+          "end": 33.31
+        },
+        {
+          "word": "es",
+          "start": 33.31,
+          "end": 33.85
+        },
+        {
+          "word": "lo",
+          "start": 33.85,
+          "end": 34.05
+        },
+        {
+          "word": "único",
+          "start": 34.05,
+          "end": 34.23
+        },
+        {
+          "word": "que",
+          "start": 34.23,
+          "end": 34.43
+        },
+        {
+          "word": "sobresale",
+          "start": 34.43,
+          "end": 35.01
+        },
+        {
+          "word": "de",
+          "start": 35.01,
+          "end": 35.19
+        },
+        {
+          "word": "la",
+          "start": 35.19,
+          "end": 35.43
+        },
+        {
+          "word": "plancha",
+          "start": 35.43,
+          "end": 35.85
+        }
+      ]
+    },
+    {
+      "start": 35.85,
+      "end": 37.25,
+      "text": "sobresale exactamente?",
+      "words": [
+        {
+          "word": "sobresale",
+          "start": 35.85,
+          "end": 36.43
+        },
+        {
+          "word": "exactamente?",
+          "start": 36.43,
+          "end": 37.25
+        }
+      ]
+    },
+    {
+      "start": 37.53,
+      "end": 39.37,
+      "text": "solamente la punta negra de la colita",
+      "words": [
+        {
+          "word": "solamente",
+          "start": 37.53,
+          "end": 37.91
+        },
+        {
+          "word": "la",
+          "start": 37.91,
+          "end": 38.17
+        },
+        {
+          "word": "punta",
+          "start": 38.17,
+          "end": 38.49
+        },
+        {
+          "word": "negra",
+          "start": 38.49,
+          "end": 38.77
+        },
+        {
+          "word": "de",
+          "start": 38.77,
+          "end": 38.87
+        },
+        {
+          "word": "la",
+          "start": 38.87,
+          "end": 39.05
+        },
+        {
+          "word": "colita",
+          "start": 39.05,
+          "end": 39.37
+        }
+      ]
+    },
+    {
+      "start": 39.37,
+      "end": 44.19,
+      "text": "pero la punta negra termina en la línea del fin de la plancha?",
+      "words": [
+        {
+          "word": "pero",
+          "start": 39.37,
+          "end": 39.67
+        },
+        {
+          "word": "la",
+          "start": 39.67,
+          "end": 39.95
+        },
+        {
+          "word": "punta",
+          "start": 39.95,
+          "end": 40.23
+        },
+        {
+          "word": "negra",
+          "start": 40.23,
+          "end": 40.47
+        },
+        {
+          "word": "termina",
+          "start": 40.47,
+          "end": 41.19
+        },
+        {
+          "word": "en",
+          "start": 41.19,
+          "end": 41.63
+        },
+        {
+          "word": "la",
+          "start": 41.63,
+          "end": 41.91
+        },
+        {
+          "word": "línea",
+          "start": 41.91,
+          "end": 42.23
+        },
+        {
+          "word": "del",
+          "start": 42.23,
+          "end": 43.23
+        },
+        {
+          "word": "fin",
+          "start": 43.23,
+          "end": 43.43
+        },
+        {
+          "word": "de",
+          "start": 43.43,
+          "end": 43.59
+        },
+        {
+          "word": "la",
+          "start": 43.59,
+          "end": 43.75
+        },
+        {
+          "word": "plancha?",
+          "start": 43.75,
+          "end": 44.19
+        }
+      ]
+    },
+    {
+      "start": 44.69,
+      "end": 46.89,
+      "text": "si, del fin de la plancha no",
+      "words": [
+        {
+          "word": "si,",
+          "start": 44.69,
+          "end": 45.25
+        },
+        {
+          "word": "del",
+          "start": 45.27,
+          "end": 45.41
+        },
+        {
+          "word": "fin",
+          "start": 45.41,
+          "end": 45.59
+        },
+        {
+          "word": "de",
+          "start": 45.59,
+          "end": 45.75
+        },
+        {
+          "word": "la",
+          "start": 45.75,
+          "end": 45.89
+        },
+        {
+          "word": "plancha",
+          "start": 45.89,
+          "end": 46.13
+        },
+        {
+          "word": "no",
+          "start": 46.13,
+          "end": 46.89
+        }
+      ]
+    },
+    {
+      "start": 46.89,
+      "end": 48.49,
+      "text": "si la sentada arriba",
+      "words": [
+        {
+          "word": "si",
+          "start": 46.89,
+          "end": 47.51
+        },
+        {
+          "word": "la",
+          "start": 47.51,
+          "end": 47.69
+        },
+        {
+          "word": "sentada",
+          "start": 47.69,
+          "end": 48.07
+        },
+        {
+          "word": "arriba",
+          "start": 48.07,
+          "end": 48.49
+        }
+      ]
+    },
+    {
+      "start": 48.49,
+      "end": 50.07,
+      "text": "no, no, si, yo entiendo",
+      "words": [
+        {
+          "word": "no,",
+          "start": 48.49,
+          "end": 48.99
+        },
+        {
+          "word": "no,",
+          "start": 49.11,
+          "end": 49.17
+        },
+        {
+          "word": "si,",
+          "start": 49.19,
+          "end": 49.33
+        },
+        {
+          "word": "yo",
+          "start": 49.33,
+          "end": 49.55
+        },
+        {
+          "word": "entiendo",
+          "start": 49.55,
+          "end": 50.07
+        }
+      ]
+    },
+    {
+      "start": 52.25,
+      "end": 56.13,
+      "text": "seria el fin de la parte en donde está caliente la plancha",
+      "words": [
+        {
+          "word": "seria",
+          "start": 52.25,
+          "end": 52.81
+        },
+        {
+          "word": "el",
+          "start": 52.81,
+          "end": 53.03
+        },
+        {
+          "word": "fin",
+          "start": 53.03,
+          "end": 53.21
+        },
+        {
+          "word": "de",
+          "start": 53.21,
+          "end": 53.41
+        },
+        {
+          "word": "la",
+          "start": 53.41,
+          "end": 53.53
+        },
+        {
+          "word": "parte",
+          "start": 53.53,
+          "end": 53.99
+        },
+        {
+          "word": "en",
+          "start": 53.99,
+          "end": 54.45
+        },
+        {
+          "word": "donde",
+          "start": 54.45,
+          "end": 54.69
+        },
+        {
+          "word": "está",
+          "start": 54.69,
+          "end": 54.89
+        },
+        {
+          "word": "caliente",
+          "start": 54.89,
+          "end": 55.33
+        },
+        {
+          "word": "la",
+          "start": 55.33,
+          "end": 55.61
+        },
+        {
+          "word": "plancha",
+          "start": 55.61,
+          "end": 56.13
+        }
+      ]
+    },
+    {
+      "start": 56.13,
+      "end": 58.13,
+      "text": "la parte de arriba y la parte de abajo",
+      "words": [
+        {
+          "word": "la",
+          "start": 56.13,
+          "end": 56.59
+        },
+        {
+          "word": "parte",
+          "start": 56.59,
+          "end": 56.81
+        },
+        {
+          "word": "de",
+          "start": 56.81,
+          "end": 57.05
+        },
+        {
+          "word": "arriba",
+          "start": 57.05,
+          "end": 57.25
+        },
+        {
+          "word": "y",
+          "start": 57.25,
+          "end": 57.51
+        },
+        {
+          "word": "la",
+          "start": 57.51,
+          "end": 57.63
+        },
+        {
+          "word": "parte",
+          "start": 57.63,
+          "end": 57.79
+        },
+        {
+          "word": "de",
+          "start": 57.79,
+          "end": 57.99
+        },
+        {
+          "word": "abajo",
+          "start": 57.99,
+          "end": 58.19
+        }
+      ]
+    },
+    {
+      "start": 58.77,
+      "end": 60.49,
+      "text": "en el fin de la plancha",
+      "words": [
+        {
+          "word": "en",
+          "start": 58.77,
+          "end": 59.17
+        },
+        {
+          "word": "el",
+          "start": 59.17,
+          "end": 59.39
+        },
+        {
+          "word": "fin",
+          "start": 59.39,
+          "end": 59.51
+        },
+        {
+          "word": "de",
+          "start": 59.51,
+          "end": 59.71
+        },
+        {
+          "word": "la",
+          "start": 59.71,
+          "end": 59.89
+        },
+        {
+          "word": "plancha",
+          "start": 59.89,
+          "end": 60.49
+        }
+      ]
+    },
+    {
+      "start": 60.49,
+      "end": 62.01,
+      "text": "en el son de apoya",
+      "words": [
+        {
+          "word": "en",
+          "start": 60.49,
+          "end": 60.83
+        },
+        {
+          "word": "el",
+          "start": 60.83,
+          "end": 61.01
+        },
+        {
+          "word": "son",
+          "start": 61.01,
+          "end": 61.05
+        },
+        {
+          "word": "de",
+          "start": 61.05,
+          "end": 61.39
+        },
+        {
+          "word": "apoya",
+          "start": 61.39,
+          "end": 62.01
+        }
+      ]
+    },
+    {
+      "start": 62.01,
+      "end": 64.67,
+      "text": "te preguntaba por la puntita negra esa que me decía",
+      "words": [
+        {
+          "word": "te",
+          "start": 62.01,
+          "end": 62.61
+        },
+        {
+          "word": "preguntaba",
+          "start": 62.61,
+          "end": 63.03
+        },
+        {
+          "word": "por",
+          "start": 63.03,
+          "end": 63.21
+        },
+        {
+          "word": "la",
+          "start": 63.21,
+          "end": 63.41
+        },
+        {
+          "word": "puntita",
+          "start": 63.41,
+          "end": 63.73
+        },
+        {
+          "word": "negra",
+          "start": 63.73,
+          "end": 64.03
+        },
+        {
+          "word": "esa",
+          "start": 64.03,
+          "end": 64.17
+        },
+        {
+          "word": "que",
+          "start": 64.17,
+          "end": 64.27
+        },
+        {
+          "word": "me",
+          "start": 64.27,
+          "end": 64.47
+        },
+        {
+          "word": "decía",
+          "start": 64.47,
+          "end": 64.67
+        }
+      ]
+    },
+    {
+      "start": 64.67,
+      "end": 67.35,
+      "text": "eso es lo que sobresale fuera de la",
+      "words": [
+        {
+          "word": "eso",
+          "start": 64.67,
+          "end": 64.93
+        },
+        {
+          "word": "es",
+          "start": 64.93,
+          "end": 64.97
+        },
+        {
+          "word": "lo",
+          "start": 64.97,
+          "end": 65.09
+        },
+        {
+          "word": "que",
+          "start": 65.09,
+          "end": 65.27
+        },
+        {
+          "word": "sobresale",
+          "start": 65.27,
+          "end": 65.73
+        },
+        {
+          "word": "fuera",
+          "start": 65.73,
+          "end": 66.01
+        },
+        {
+          "word": "de",
+          "start": 66.01,
+          "end": 66.21
+        },
+        {
+          "word": "la",
+          "start": 66.21,
+          "end": 67.35
+        }
+      ]
+    },
+    {
+      "start": 67.35,
+      "end": 68.15,
+      "text": "bueno, creo que",
+      "words": [
+        {
+          "word": "bueno,",
+          "start": 67.35,
+          "end": 67.53
+        },
+        {
+          "word": "que",
+          "start": 67.81,
+          "end": 68.15
+        }
+      ]
+    },
+    {
+      "start": 68.15,
+      "end": 68.85,
+      "text": "del apoyo de la plancha",
+      "words": [
+        {
+          "word": "del",
+          "start": 68.15,
+          "end": 68.35
+        },
+        {
+          "word": "apoyo",
+          "start": 68.35,
+          "end": 68.59
+        },
+        {
+          "word": "de",
+          "start": 68.59,
+          "end": 68.75
+        },
+        {
+          "word": "la",
+          "start": 68.75,
+          "end": 68.85
+        }
+      ]
+    }
+  ]
+}

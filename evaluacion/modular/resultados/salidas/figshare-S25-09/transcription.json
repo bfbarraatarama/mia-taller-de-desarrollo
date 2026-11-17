@@ -1,0 +1,1463 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 0.94,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Ehh... sos",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 10
+      }
+    },
+    {
+      "start": 0.94,
+      "end": 2.78,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "muy bueno describiendo y yo sos muy malo se ve",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 11,
+        "end": 57
+      }
+    },
+    {
+      "start": 2.78,
+      "end": 3.8,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "El ojo...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 9
+      }
+    },
+    {
+      "start": 5.14,
+      "end": 5.94,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Viste el ojo?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 13
+      }
+    },
+    {
+      "start": 6.14,
+      "end": 7.38,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Mandalo arriba del limón",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "start": 7.38,
+      "end": 8.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Listo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 5
+      }
+    },
+    {
+      "start": 8.0,
+      "end": 10.1,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "De tal manera que la pupila",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 27
+      }
+    },
+    {
+      "start": 10.1,
+      "end": 10.86,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 12.38,
+      "end": 12.78,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Quede...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 8
+      }
+    },
+    {
+      "start": 12.78,
+      "end": 15.78,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Poner en el centro del limón un poco a la izquierda",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 51
+      }
+    },
+    {
+      "start": 15.78,
+      "end": 17.68,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Es decir que el... el...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "start": 17.68,
+      "end": 20.58,
+      "speaker": null,
+      "name": null,
+      "text": "El centro de la pupila va... va... va...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 40
+      }
+    },
+    {
+      "start": 20.58,
+      "end": 21.3,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Si, lo que está blanco",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 22
+      }
+    },
+    {
+      "start": 21.9,
+      "end": 23.82,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Claro, lo que está negro en realidad",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 36
+      }
+    },
+    {
+      "start": 23.82,
+      "end": 26.8,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Lo negro coincide con el cabito del limón, viste?",
+      "overlap": true,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 49
+      }
+    },
+    {
+      "start": 27.02,
+      "end": 27.38,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Si",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 27.38,
+      "end": 28.8,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "A la misma altura",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 17
+      }
+    },
+    {
+      "start": 28.8,
+      "end": 29.2,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Si",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 29.2,
+      "end": 30.5,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Pero está...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 32.52,
+      "end": 34.64,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Y a ver, Jaime, darte más...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 34.64,
+      "end": 35.06,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Más indicación",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 14
+      }
+    },
+    {
+      "start": 35.06,
+      "end": 35.52,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Y hacia",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 7
+      }
+    },
+    {
+      "start": 35.52,
+      "end": 36.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "arriba qué onda?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 8,
+        "end": 24
+      }
+    },
+    {
+      "start": 36.62,
+      "end": 36.66,
+      "speaker": null,
+      "name": null,
+      "text": "Eso, estoy...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 13
+      }
+    },
+    {
+      "start": 36.66,
+      "end": 38.14,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "En respecto a la regla, ponele",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 38.14,
+      "end": 40.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Pero la regla está re lejo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 23,
+        "start": 0,
+        "end": 26
+      }
+    },
+    {
+      "start": 40.12,
+      "end": 44.5,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si, está bien, pero estoy hablando de hacia arriba o hacia abajo, no de derecha a izquierda",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 0,
+        "end": 91
+      }
+    },
+    {
+      "start": 44.5,
+      "end": 46.52,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Si, si, no, hacia arriba o hacia abajo pone...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 25,
+        "start": 0,
+        "end": 46
+      }
+    },
+    {
+      "start": 46.52,
+      "end": 47.68,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "De tal manera que la...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 26,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 47.68,
+      "end": 48.8,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Viste las pestañas de arriba?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 27,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 48.94,
+      "end": 49.06,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Si",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 28,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 49.06,
+      "end": 51.52,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Tiene 1, 2, 3 de izquierda a derecha, tiene 6",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 29,
+        "start": 0,
+        "end": 45
+      }
+    },
+    {
+      "start": 51.52,
+      "end": 55.6,
+      "speaker": null,
+      "name": null,
+      "text": "La tercera está casi tocando el... el... el borde negro del limón",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 30,
+        "start": 0,
+        "end": 65
+      }
+    },
+    {
+      "start": 55.6,
+      "end": 56.7,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Pero no la toca",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 31,
+        "start": 0,
+        "end": 15
+      }
+    },
+    {
+      "start": 56.7,
+      "end": 58.62,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Entonces para de las pestañas de abajo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 32,
+        "start": 0,
+        "end": 38
+      }
+    },
+    {
+      "start": 58.62,
+      "end": 59.2,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "De arriba",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 33,
+        "start": 0,
+        "end": 9
+      }
+    },
+    {
+      "start": 59.2,
+      "end": 62.78,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Las pestañas de arriba, de izquierda a derecha, la tercera...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 34,
+        "start": 0,
+        "end": 61
+      }
+    },
+    {
+      "start": 62.78,
+      "end": 64.9,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "De izquierda a derecha a la tercera, si?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 35,
+        "start": 0,
+        "end": 40
+      }
+    },
+    {
+      "start": 65.1,
+      "end": 67.62,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "La tercera está casi tocando el borde del limón",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 36,
+        "start": 0,
+        "end": 47
+      }
+    },
+    {
+      "start": 68.24,
+      "end": 69.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y pues entonces el...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 37,
+        "start": 0,
+        "end": 21
+      }
+    },
+    {
+      "start": 69.12,
+      "end": 72.18,
+      "speaker": null,
+      "name": null,
+      "text": "No el borde de todo el limón, el borde del... del... del amarillo",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 38,
+        "start": 0,
+        "end": 65
+      }
+    },
+    {
+      "start": 72.18,
+      "end": 72.62,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Entonces",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 39,
+        "start": 0,
+        "end": 8
+      }
+    },
+    {
+      "start": 72.62,
+      "end": 74.62,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "el ojo está abajo del limón",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 39,
+        "start": 9,
+        "end": 36
+      }
+    },
+    {
+      "start": 75.68,
+      "end": 77.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "O está arriba del limón",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 40,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 77.12,
+      "end": 80.28,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "El borde superior del limón, digo, viste que el limón...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 41,
+        "start": 0,
+        "end": 56
+      }
+    },
+    {
+      "start": 80.28,
+      "end": 82.62,
+      "speaker": null,
+      "name": null,
+      "text": "Si, pero entonces las pestañas de abajo...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 42,
+        "start": 0,
+        "end": 42
+      }
+    },
+    {
+      "start": 83.18,
+      "end": 84.48,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, la de arriba estoy hablando yo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 43,
+        "start": 0,
+        "end": 34
+      }
+    },
+    {
+      "start": 84.48,
+      "end": 87.66,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y pues entonces el ojo está abajo del limón o arriba del limón",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 44,
+        "start": 0,
+        "end": 62
+      }
+    },
+    {
+      "start": 87.66,
+      "end": 88.9,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "El ojo está sobre el limón",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 45,
+        "start": 0,
+        "end": 26
+      }
+    },
+    {
+      "start": 88.9,
+      "end": 89.6,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Sobre el limón",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 46,
+        "start": 0,
+        "end": 14
+      }
+    },
+    {
+      "start": 89.6,
+      "end": 91.64,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Está superpuesto el limón eso",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 47,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 91.64,
+      "end": 92.66,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ah, superpuesto",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 48,
+        "start": 0,
+        "end": 15
+      }
+    },
+    {
+      "start": 93.18,
+      "end": 94.62,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ah, está, superpuesto el limón",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 49,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 94.62,
+      "end": 95.84,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ahí va",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 50,
+        "start": 0,
+        "end": 6
+      }
+    },
+    {
+      "start": 95.84,
+      "end": 97.46,
+      "speaker": null,
+      "name": null,
+      "text": "Ahí va, superpuesto el limón",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 51,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 97.46,
+      "end": 101.56,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "De manera que la tercera pestaña...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 52,
+        "start": 0,
+        "end": 35
+      }
+    },
+    {
+      "start": 101.56,
+      "end": 106.88,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "De manera que primero, la pupila está bastante bien centrada con el cabito de arriba",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 53,
+        "start": 0,
+        "end": 84
+      }
+    },
+    {
+      "start": 106.88,
+      "end": 107.8,
+      "speaker": null,
+      "name": null,
+      "text": "Si, si, si",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 54,
+        "start": 0,
+        "end": 10
+      }
+    },
+    {
+      "start": 107.8,
+      "end": 112.88,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Y la tercera pestaña de izquierda a derecha de las de arriba está casi tocando el borde negro",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 55,
+        "start": 0,
+        "end": 93
+      }
+    },
+    {
+      "start": 113.58,
+      "end": 114.62,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Del amarillo, no?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 56,
+        "start": 0,
+        "end": 17
+      }
+    },
+    {
+      "start": 114.78,
+      "end": 114.92,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Listo,",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 57,
+        "start": 0,
+        "end": 6
+      }
+    },
+    {
+      "start": 114.92,
+      "end": 115.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "listo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 57,
+        "start": 7,
+        "end": 12
+      }
+    },
+    {
+      "start": 115.98,
+      "end": 116.38,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ahí va",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 58,
+        "start": 0,
+        "end": 6
+      }
+    }
+  ]
+}

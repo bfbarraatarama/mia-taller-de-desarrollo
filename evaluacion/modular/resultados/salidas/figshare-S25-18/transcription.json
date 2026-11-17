@@ -1,0 +1,381 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 8.4,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ok, la luna azul, ponela entre el telar y el espejo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 52
+      }
+    },
+    {
+      "start": 9.3,
+      "end": 11.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Entre, digamos, sobre ellos.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 12.48,
+      "end": 16.84,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Claro, está arriba del cuadro y a la izquierda del telar.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 57
+      }
+    },
+    {
+      "start": 16.86,
+      "end": 18.52,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No está superpuesto.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 20
+      }
+    },
+    {
+      "start": 18.6,
+      "end": 20.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No está superpuesto con nada.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 20.76,
+      "end": 28.06,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "De todas maneras, está esa orejita que está en la parte de arriba del cuadro,",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 77
+      }
+    },
+    {
+      "start": 28.06,
+      "end": 32.76,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "está casi casi, es como si la luna estuviera casi apoyada ahí, o apoyada ahí, ponele.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 85
+      }
+    },
+    {
+      "start": 33.02,
+      "end": 34.36,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Como si los bordes se rozaran.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 34.6,
+      "end": 35.8,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Llegan a rozarse los bordes.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 36.12,
+      "end": 38.18,
+      "speaker": null,
+      "name": null,
+      "text": "Sí, ponele, sí, llegan a rozarse los bordes.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 44
+      }
+    },
+    {
+      "start": 38.18,
+      "end": 38.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y con el telar?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 15
+      }
+    },
+    {
+      "start": 39.0,
+      "end": 43.66,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y con el telar también, hay medio milímetro de separación pero está casi apoyado.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 81
+      }
+    },
+    {
+      "start": 44.28,
+      "end": 46.52,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y con la oreja también, ¿hay tanta distancia?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 45
+      }
+    },
+    {
+      "start": 47.56,
+      "end": 48.86,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Con la oreja...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 15
+      }
+    },
+    {
+      "start": 49.56,
+      "end": 53.2,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, en realidad hay muy muy poca distancia con los dos, hay menos con la oreja.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 79
+      }
+    },
+    {
+      "start": 53.24,
+      "end": 56.24,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Con la oreja es como si estuviera la luna apoyada.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 50
+      }
+    },
+    {
+      "start": 56.86,
+      "end": 60.04,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El borde de la luna apoyada y con el telar es como si estuviera rozando.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 72
+      }
+    }
+  ]
+}

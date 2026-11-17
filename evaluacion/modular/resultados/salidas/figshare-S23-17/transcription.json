@@ -1,0 +1,134 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 8.4,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "bueno vas a tener que agarrar el alien y ponerlo debajo del espejo y las",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 72
+      }
+    },
+    {
+      "start": 8.4,
+      "end": 13.22,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "manitos serían como si estuviera o sea encaja justo con con el autito este",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 74
+      }
+    },
+    {
+      "start": 13.22,
+      "end": 17.42,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "agarrando la trompa del auto claro como si lo estuviera agarrando y la otra",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 75
+      }
+    },
+    {
+      "start": 17.42,
+      "end": 21.36,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "mano está como si estuviera agarrando la mano",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 45
+      }
+    },
+    {
+      "start": 21.36,
+      "end": 28.04,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "de la que está en el telar, tienen que estar justo como si estuviera",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 68
+      }
+    },
+    {
+      "start": 28.04,
+      "end": 29.68,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "agarrándolo con pinzas",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 22
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 12.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "bueno tenés que agarrar la cebolla y ponerla arriba de la ballenita entre el coso verde ese y el M&M",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 100
+      }
+    },
+    {
+      "start": 12.44,
+      "end": 15.52,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "pero más que nada es como cerca de la ballena",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 45
+      }
+    },
+    {
+      "start": 15.52,
+      "end": 22.2,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "sobre la ballena, a la derecha del M&M, abajo del limón, cerca de la ballena",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 76
+      }
+    }
+  ]
+}

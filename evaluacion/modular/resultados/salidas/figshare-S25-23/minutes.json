@@ -1,0 +1,54 @@
+{
+  "resumen": "La reunión se centró en la colocación de un rinoceronte azul y una fruta, con el objetivo de que el eje horizontal del rinoceronte estuviera más arriba que el de la fruta. Se discutió sobre la posición exacta de la cola del rinoceronte y su relación con las semillas de la fruta. También se mencionó que el curo estaba superpuesto a la fruta, y que la pata trasera del rinoceronte tocaba el borde negro de la fruta sin llegar al color rosa.",
+  "temas": [
+    {
+      "texto": "Colocación del rinoceronte azul",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016"
+      ],
+      "id_ancla": "I000016"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "La posición exacta de la cola del rinoceronte en relación con las semillas de la fruta no está clara.",
+      "ids_intervenciones": [
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016"
+      ],
+      "id_ancla": "I000016"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Revisar la posición exacta de la cola del rinoceronte en relación con las semillas de la fruta.",
+      "ids_intervenciones": [
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016"
+      ],
+      "id_ancla": "I000016",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

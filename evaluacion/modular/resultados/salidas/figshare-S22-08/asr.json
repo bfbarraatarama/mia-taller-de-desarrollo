@@ -1,0 +1,586 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 1.64,
+      "end": 2.92,
+      "text": "que maraña",
+      "words": [
+        {
+          "word": "que",
+          "start": 1.64,
+          "end": 2.28
+        },
+        {
+          "word": "maraña",
+          "start": 2.28,
+          "end": 2.92
+        }
+      ]
+    },
+    {
+      "start": 5.04,
+      "end": 6.0,
+      "text": "es un limon",
+      "words": [
+        {
+          "word": "es",
+          "start": 5.04,
+          "end": 5.68
+        },
+        {
+          "word": "un",
+          "start": 5.68,
+          "end": 5.92
+        },
+        {
+          "word": "limon",
+          "start": 5.92,
+          "end": 6.24
+        }
+      ]
+    },
+    {
+      "start": 7.74,
+      "end": 11.24,
+      "text": "esta en el centro del centro",
+      "words": [
+        {
+          "word": "esta",
+          "start": 7.74,
+          "end": 8.38
+        },
+        {
+          "word": "en",
+          "start": 8.38,
+          "end": 9.02
+        },
+        {
+          "word": "el",
+          "start": 9.02,
+          "end": 9.26
+        },
+        {
+          "word": "centro",
+          "start": 9.26,
+          "end": 9.72
+        },
+        {
+          "word": "del",
+          "start": 9.72,
+          "end": 10.26
+        },
+        {
+          "word": "centro",
+          "start": 10.26,
+          "end": 11.24
+        }
+      ]
+    },
+    {
+      "start": 11.24,
+      "end": 12.86,
+      "text": "en el centro de todas las cosas",
+      "words": [
+        {
+          "word": "en",
+          "start": 11.24,
+          "end": 11.66
+        },
+        {
+          "word": "el",
+          "start": 11.66,
+          "end": 11.72
+        },
+        {
+          "word": "centro",
+          "start": 11.72,
+          "end": 11.96
+        },
+        {
+          "word": "de",
+          "start": 11.96,
+          "end": 12.22
+        },
+        {
+          "word": "todas",
+          "start": 12.22,
+          "end": 12.32
+        },
+        {
+          "word": "las",
+          "start": 12.32,
+          "end": 12.52
+        },
+        {
+          "word": "cosas",
+          "start": 12.52,
+          "end": 12.86
+        }
+      ]
+    },
+    {
+      "start": 12.86,
+      "end": 15.74,
+      "text": "claro, arriba el ojo abajo la luna azul",
+      "words": [
+        {
+          "word": "claro,",
+          "start": 12.86,
+          "end": 13.86
+        },
+        {
+          "word": "arriba",
+          "start": 13.86,
+          "end": 14.18
+        },
+        {
+          "word": "el",
+          "start": 14.18,
+          "end": 14.32
+        },
+        {
+          "word": "ojo",
+          "start": 14.32,
+          "end": 14.52
+        },
+        {
+          "word": "abajo",
+          "start": 14.52,
+          "end": 14.8
+        },
+        {
+          "word": "la",
+          "start": 14.8,
+          "end": 14.96
+        },
+        {
+          "word": "luna",
+          "start": 14.96,
+          "end": 15.54
+        },
+        {
+          "word": "azul",
+          "start": 15.54,
+          "end": 15.74
+        }
+      ]
+    },
+    {
+      "start": 15.74,
+      "end": 17.22,
+      "text": "toca alguna cosa?",
+      "words": [
+        {
+          "word": "toca",
+          "start": 15.74,
+          "end": 16.14
+        },
+        {
+          "word": "alguna",
+          "start": 16.14,
+          "end": 16.72
+        },
+        {
+          "word": "cosa?",
+          "start": 16.72,
+          "end": 17.22
+        }
+      ]
+    },
+    {
+      "start": 18.94,
+      "end": 20.48,
+      "text": "casi a la luna azul",
+      "words": [
+        {
+          "word": "casi",
+          "start": 18.94,
+          "end": 19.46
+        },
+        {
+          "word": "a",
+          "start": 19.46,
+          "end": 19.82
+        },
+        {
+          "word": "la",
+          "start": 19.82,
+          "end": 19.92
+        },
+        {
+          "word": "luna",
+          "start": 19.92,
+          "end": 20.18
+        },
+        {
+          "word": "azul",
+          "start": 20.18,
+          "end": 20.48
+        }
+      ]
+    },
+    {
+      "start": 20.48,
+      "end": 21.78,
+      "text": "pero no",
+      "words": [
+        {
+          "word": "pero",
+          "start": 20.48,
+          "end": 20.82
+        },
+        {
+          "word": "no",
+          "start": 20.82,
+          "end": 21.78
+        }
+      ]
+    },
+    {
+      "start": 21.78,
+      "end": 24.52,
+      "text": "y para mi me quedan las hojitas",
+      "words": [
+        {
+          "word": "y",
+          "start": 21.78,
+          "end": 22.34
+        },
+        {
+          "word": "para",
+          "start": 22.34,
+          "end": 22.52
+        },
+        {
+          "word": "mi",
+          "start": 22.52,
+          "end": 22.84
+        },
+        {
+          "word": "me",
+          "start": 22.84,
+          "end": 22.94
+        },
+        {
+          "word": "quedan",
+          "start": 22.94,
+          "end": 23.58
+        },
+        {
+          "word": "las",
+          "start": 23.58,
+          "end": 23.96
+        },
+        {
+          "word": "hojitas",
+          "start": 23.96,
+          "end": 24.52
+        }
+      ]
+    },
+    {
+      "start": 24.52,
+      "end": 26.7,
+      "text": "me quedan casi tocando esa uriola",
+      "words": [
+        {
+          "word": "me",
+          "start": 24.52,
+          "end": 24.68
+        },
+        {
+          "word": "quedan",
+          "start": 24.68,
+          "end": 24.92
+        },
+        {
+          "word": "casi",
+          "start": 24.92,
+          "end": 25.18
+        },
+        {
+          "word": "tocando",
+          "start": 25.18,
+          "end": 25.62
+        },
+        {
+          "word": "esa",
+          "start": 25.62,
+          "end": 26.02
+        },
+        {
+          "word": "uriola",
+          "start": 26.02,
+          "end": 26.7
+        }
+      ]
+    },
+    {
+      "start": 26.7,
+      "end": 29.04,
+      "text": "que esta alrededor de la monja",
+      "words": [
+        {
+          "word": "que",
+          "start": 26.7,
+          "end": 27.82
+        },
+        {
+          "word": "esta",
+          "start": 27.82,
+          "end": 28.0
+        },
+        {
+          "word": "alrededor",
+          "start": 28.0,
+          "end": 28.32
+        },
+        {
+          "word": "de",
+          "start": 28.32,
+          "end": 28.52
+        },
+        {
+          "word": "la",
+          "start": 28.52,
+          "end": 28.74
+        },
+        {
+          "word": "monja",
+          "start": 28.74,
+          "end": 29.04
+        }
+      ]
+    },
+    {
+      "start": 29.04,
+      "end": 29.98,
+      "text": "el aura de la monja",
+      "words": [
+        {
+          "word": "el",
+          "start": 29.04,
+          "end": 29.22
+        },
+        {
+          "word": "aura",
+          "start": 29.22,
+          "end": 29.46
+        },
+        {
+          "word": "de",
+          "start": 29.46,
+          "end": 29.64
+        },
+        {
+          "word": "la",
+          "start": 29.64,
+          "end": 29.76
+        },
+        {
+          "word": "monja",
+          "start": 29.76,
+          "end": 29.98
+        }
+      ]
+    },
+    {
+      "start": 29.98,
+      "end": 30.78,
+      "text": "asi pues",
+      "words": [
+        {
+          "word": "asi",
+          "start": 29.98,
+          "end": 30.34
+        },
+        {
+          "word": "pues",
+          "start": 30.34,
+          "end": 30.78
+        }
+      ]
+    },
+    {
+      "start": 30.78,
+      "end": 33.16,
+      "text": "que las hojitas esten justo",
+      "words": [
+        {
+          "word": "que",
+          "start": 30.78,
+          "end": 31.04
+        },
+        {
+          "word": "las",
+          "start": 31.04,
+          "end": 31.3
+        },
+        {
+          "word": "hojitas",
+          "start": 31.3,
+          "end": 32.1
+        },
+        {
+          "word": "esten",
+          "start": 32.1,
+          "end": 32.58
+        },
+        {
+          "word": "justo",
+          "start": 32.58,
+          "end": 33.16
+        }
+      ]
+    },
+    {
+      "start": 33.16,
+      "end": 36.64,
+      "text": "en la linea en donde comienza esa pintura",
+      "words": [
+        {
+          "word": "en",
+          "start": 33.16,
+          "end": 33.86
+        },
+        {
+          "word": "la",
+          "start": 33.86,
+          "end": 34.04
+        },
+        {
+          "word": "linea",
+          "start": 34.04,
+          "end": 34.98
+        },
+        {
+          "word": "en",
+          "start": 34.98,
+          "end": 35.1
+        },
+        {
+          "word": "donde",
+          "start": 35.1,
+          "end": 35.36
+        },
+        {
+          "word": "comienza",
+          "start": 35.36,
+          "end": 35.94
+        },
+        {
+          "word": "esa",
+          "start": 35.94,
+          "end": 36.2
+        },
+        {
+          "word": "pintura",
+          "start": 36.2,
+          "end": 36.64
+        }
+      ]
+    },
+    {
+      "start": 36.64,
+      "end": 38.4,
+      "text": "y a las pestañas no las toca?",
+      "words": [
+        {
+          "word": "y",
+          "start": 36.64,
+          "end": 36.82
+        },
+        {
+          "word": "a",
+          "start": 36.82,
+          "end": 36.94
+        },
+        {
+          "word": "las",
+          "start": 36.94,
+          "end": 37.12
+        },
+        {
+          "word": "pestañas",
+          "start": 37.12,
+          "end": 37.78
+        },
+        {
+          "word": "no",
+          "start": 37.78,
+          "end": 37.9
+        },
+        {
+          "word": "las",
+          "start": 37.9,
+          "end": 38.14
+        },
+        {
+          "word": "toca?",
+          "start": 38.14,
+          "end": 38.4
+        }
+      ]
+    },
+    {
+      "start": 38.64,
+      "end": 40.46,
+      "text": "no, al marco tampoco",
+      "words": [
+        {
+          "word": "no,",
+          "start": 38.64,
+          "end": 39.24
+        },
+        {
+          "word": "al",
+          "start": 39.54,
+          "end": 39.56
+        },
+        {
+          "word": "marco",
+          "start": 39.56,
+          "end": 39.88
+        },
+        {
+          "word": "tampoco",
+          "start": 39.88,
+          "end": 40.46
+        }
+      ]
+    },
+    {
+      "start": 40.46,
+      "end": 43.02,
+      "text": "creo que esta bien listo",
+      "words": [
+        {
+          "word": "creo",
+          "start": 40.46,
+          "end": 41.62
+        },
+        {
+          "word": "que",
+          "start": 41.62,
+          "end": 41.84
+        },
+        {
+          "word": "esta",
+          "start": 41.84,
+          "end": 41.94
+        },
+        {
+          "word": "bien",
+          "start": 41.94,
+          "end": 42.28
+        },
+        {
+          "word": "listo",
+          "start": 42.28,
+          "end": 43.02
+        }
+      ]
+    }
+  ]
+}

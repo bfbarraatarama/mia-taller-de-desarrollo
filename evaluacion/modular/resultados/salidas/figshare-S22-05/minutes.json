@@ -1,0 +1,29 @@
+{
+  "resumen": "La reunión se centró en la ubicación del león azul y su relación con el mimo, pero no se tomaron decisiones ni se plantearon problemas específicos.",
+  "temas": [
+    {
+      "texto": "Ubicación del león azul",
+      "ids_intervenciones": [
+        "I000002",
+        "I000003",
+        "I000004"
+      ],
+      "id_ancla": "I000004"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "El responsable de definir la ubicación del león azul debe continuar con el diseño.",
+      "ids_intervenciones": [
+        "I000002",
+        "I000003",
+        "I000004"
+      ],
+      "id_ancla": "I000004",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

@@ -1,0 +1,633 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.94,
+      "text": "tener que mandar el foco a la derecha del caballo y abajo del mono",
+      "words": [
+        {
+          "word": "tener",
+          "start": 0.0,
+          "end": 0.64
+        },
+        {
+          "word": "que",
+          "start": 0.64,
+          "end": 0.8
+        },
+        {
+          "word": "mandar",
+          "start": 0.8,
+          "end": 1.24
+        },
+        {
+          "word": "el",
+          "start": 1.24,
+          "end": 1.6
+        },
+        {
+          "word": "foco",
+          "start": 1.6,
+          "end": 2.06
+        },
+        {
+          "word": "a",
+          "start": 2.06,
+          "end": 2.86
+        },
+        {
+          "word": "la",
+          "start": 2.86,
+          "end": 3.0
+        },
+        {
+          "word": "derecha",
+          "start": 3.0,
+          "end": 3.16
+        },
+        {
+          "word": "del",
+          "start": 3.16,
+          "end": 3.36
+        },
+        {
+          "word": "caballo",
+          "start": 3.36,
+          "end": 3.64
+        },
+        {
+          "word": "y",
+          "start": 3.64,
+          "end": 3.8
+        },
+        {
+          "word": "abajo",
+          "start": 3.8,
+          "end": 4.04
+        },
+        {
+          "word": "del",
+          "start": 4.04,
+          "end": 4.26
+        },
+        {
+          "word": "mono",
+          "start": 4.26,
+          "end": 4.94
+        }
+      ]
+    },
+    {
+      "start": 6.32,
+      "end": 9.2,
+      "text": "de tal manera que",
+      "words": [
+        {
+          "word": "de",
+          "start": 6.32,
+          "end": 6.84
+        },
+        {
+          "word": "tal",
+          "start": 6.84,
+          "end": 7.0
+        },
+        {
+          "word": "manera",
+          "start": 7.0,
+          "end": 7.42
+        },
+        {
+          "word": "que",
+          "start": 7.42,
+          "end": 9.2
+        }
+      ]
+    },
+    {
+      "start": 9.9,
+      "end": 15.5,
+      "text": "la parte metálica del foco, el foco está casi centrado con el caballo, pero la",
+      "words": [
+        {
+          "word": "la",
+          "start": 9.9,
+          "end": 10.42
+        },
+        {
+          "word": "parte",
+          "start": 10.42,
+          "end": 10.76
+        },
+        {
+          "word": "metálica",
+          "start": 10.76,
+          "end": 11.3
+        },
+        {
+          "word": "del",
+          "start": 11.3,
+          "end": 11.56
+        },
+        {
+          "word": "foco,",
+          "start": 11.56,
+          "end": 12.1
+        },
+        {
+          "word": "el",
+          "start": 12.1,
+          "end": 12.3
+        },
+        {
+          "word": "foco",
+          "start": 12.3,
+          "end": 12.54
+        },
+        {
+          "word": "está",
+          "start": 12.54,
+          "end": 12.76
+        },
+        {
+          "word": "casi",
+          "start": 12.76,
+          "end": 13.0
+        },
+        {
+          "word": "centrado",
+          "start": 13.0,
+          "end": 13.56
+        },
+        {
+          "word": "con",
+          "start": 13.56,
+          "end": 13.74
+        },
+        {
+          "word": "el",
+          "start": 13.74,
+          "end": 13.92
+        },
+        {
+          "word": "caballo,",
+          "start": 13.92,
+          "end": 14.84
+        },
+        {
+          "word": "pero",
+          "start": 14.84,
+          "end": 15.4
+        },
+        {
+          "word": "la",
+          "start": 15.4,
+          "end": 15.5
+        }
+      ]
+    },
+    {
+      "start": 15.5,
+      "end": 20.2,
+      "text": "parte metálica sobresale un milímetro más o menos las patas del caballo",
+      "words": [
+        {
+          "word": "parte",
+          "start": 15.5,
+          "end": 15.8
+        },
+        {
+          "word": "metálica",
+          "start": 15.8,
+          "end": 16.62
+        },
+        {
+          "word": "sobresale",
+          "start": 16.62,
+          "end": 17.76
+        },
+        {
+          "word": "un",
+          "start": 17.76,
+          "end": 18.38
+        },
+        {
+          "word": "milímetro",
+          "start": 18.38,
+          "end": 18.8
+        },
+        {
+          "word": "más",
+          "start": 18.8,
+          "end": 19.0
+        },
+        {
+          "word": "o",
+          "start": 19.0,
+          "end": 19.12
+        },
+        {
+          "word": "menos",
+          "start": 19.12,
+          "end": 19.22
+        },
+        {
+          "word": "las",
+          "start": 19.22,
+          "end": 19.44
+        },
+        {
+          "word": "patas",
+          "start": 19.44,
+          "end": 19.66
+        },
+        {
+          "word": "del",
+          "start": 19.66,
+          "end": 19.84
+        },
+        {
+          "word": "caballo",
+          "start": 19.84,
+          "end": 20.2
+        }
+      ]
+    },
+    {
+      "start": 20.2,
+      "end": 28.52,
+      "text": "hacia abajo, claro, es casi como que la parte superior del foco coincide con la",
+      "words": [
+        {
+          "word": "hacia",
+          "start": 20.2,
+          "end": 20.42
+        },
+        {
+          "word": "abajo,",
+          "start": 20.42,
+          "end": 20.86
+        },
+        {
+          "word": "claro,",
+          "start": 20.94,
+          "end": 21.34
+        },
+        {
+          "word": "es",
+          "start": 21.68,
+          "end": 21.8
+        },
+        {
+          "word": "casi",
+          "start": 21.8,
+          "end": 22.02
+        },
+        {
+          "word": "como",
+          "start": 22.02,
+          "end": 22.24
+        },
+        {
+          "word": "que",
+          "start": 22.24,
+          "end": 22.4
+        },
+        {
+          "word": "la",
+          "start": 22.4,
+          "end": 22.52
+        },
+        {
+          "word": "parte",
+          "start": 22.52,
+          "end": 22.72
+        },
+        {
+          "word": "superior",
+          "start": 22.72,
+          "end": 23.04
+        },
+        {
+          "word": "del",
+          "start": 23.04,
+          "end": 23.24
+        },
+        {
+          "word": "foco",
+          "start": 23.24,
+          "end": 23.8
+        },
+        {
+          "word": "coincide",
+          "start": 23.8,
+          "end": 24.28
+        },
+        {
+          "word": "con",
+          "start": 24.28,
+          "end": 28.52
+        }
+      ]
+    },
+    {
+      "start": 28.52,
+      "end": 32.4,
+      "text": "respecto al mono tenemos que",
+      "words": [
+        {
+          "word": "respecto",
+          "start": 28.52,
+          "end": 29.02
+        },
+        {
+          "word": "al",
+          "start": 29.02,
+          "end": 29.26
+        },
+        {
+          "word": "mono",
+          "start": 29.26,
+          "end": 29.76
+        },
+        {
+          "word": "tenemos",
+          "start": 29.76,
+          "end": 30.64
+        },
+        {
+          "word": "que",
+          "start": 30.64,
+          "end": 32.4
+        }
+      ]
+    },
+    {
+      "start": 35.4,
+      "end": 42.1,
+      "text": "el centro del foco como que apunta a la primer manchita del mono",
+      "words": [
+        {
+          "word": "el",
+          "start": 35.4,
+          "end": 35.88
+        },
+        {
+          "word": "centro",
+          "start": 35.88,
+          "end": 36.24
+        },
+        {
+          "word": "del",
+          "start": 36.24,
+          "end": 36.46
+        },
+        {
+          "word": "foco",
+          "start": 36.46,
+          "end": 37.32
+        },
+        {
+          "word": "como",
+          "start": 37.32,
+          "end": 37.98
+        },
+        {
+          "word": "que",
+          "start": 37.98,
+          "end": 38.22
+        },
+        {
+          "word": "apunta",
+          "start": 38.22,
+          "end": 38.52
+        },
+        {
+          "word": "a",
+          "start": 38.52,
+          "end": 38.76
+        },
+        {
+          "word": "la",
+          "start": 38.76,
+          "end": 38.92
+        },
+        {
+          "word": "primer",
+          "start": 38.92,
+          "end": 39.12
+        },
+        {
+          "word": "manchita",
+          "start": 39.12,
+          "end": 39.54
+        },
+        {
+          "word": "del",
+          "start": 39.54,
+          "end": 39.68
+        },
+        {
+          "word": "mono",
+          "start": 39.68,
+          "end": 42.1
+        }
+      ]
+    },
+    {
+      "start": 42.1,
+      "end": 47.34,
+      "text": "sentiste las tres manchitas blancas que tiene el lomo? está un poquito más a la izquierda pero apunta ahí",
+      "words": [
+        {
+          "word": "sentiste",
+          "start": 42.1,
+          "end": 42.74
+        },
+        {
+          "word": "las",
+          "start": 42.74,
+          "end": 43.18
+        },
+        {
+          "word": "tres",
+          "start": 43.18,
+          "end": 43.34
+        },
+        {
+          "word": "manchitas",
+          "start": 43.34,
+          "end": 43.66
+        },
+        {
+          "word": "blancas",
+          "start": 43.66,
+          "end": 43.92
+        },
+        {
+          "word": "que",
+          "start": 43.92,
+          "end": 44.08
+        },
+        {
+          "word": "tiene",
+          "start": 44.08,
+          "end": 44.14
+        },
+        {
+          "word": "el",
+          "start": 44.14,
+          "end": 44.26
+        },
+        {
+          "word": "lomo?",
+          "start": 44.26,
+          "end": 44.46
+        },
+        {
+          "word": "está",
+          "start": 44.78,
+          "end": 45.26
+        },
+        {
+          "word": "un",
+          "start": 45.26,
+          "end": 45.34
+        },
+        {
+          "word": "poquito",
+          "start": 45.34,
+          "end": 45.52
+        },
+        {
+          "word": "más",
+          "start": 45.52,
+          "end": 45.72
+        },
+        {
+          "word": "a",
+          "start": 45.72,
+          "end": 45.8
+        },
+        {
+          "word": "la",
+          "start": 45.8,
+          "end": 45.96
+        },
+        {
+          "word": "izquierda",
+          "start": 45.96,
+          "end": 46.4
+        },
+        {
+          "word": "pero",
+          "start": 46.4,
+          "end": 46.58
+        },
+        {
+          "word": "apunta",
+          "start": 46.58,
+          "end": 46.94
+        },
+        {
+          "word": "ahí",
+          "start": 46.94,
+          "end": 47.34
+        }
+      ]
+    },
+    {
+      "start": 47.34,
+      "end": 58.14,
+      "text": "ahí o a la izquierda? es como que apunta entre medio de las dos manchas de la",
+      "words": [
+        {
+          "word": "ahí",
+          "start": 47.34,
+          "end": 47.6
+        },
+        {
+          "word": "o",
+          "start": 47.6,
+          "end": 47.8
+        },
+        {
+          "word": "a",
+          "start": 47.8,
+          "end": 47.9
+        },
+        {
+          "word": "la",
+          "start": 47.9,
+          "end": 48.0
+        },
+        {
+          "word": "izquierda?",
+          "start": 48.0,
+          "end": 48.58
+        },
+        {
+          "word": "es",
+          "start": 50.6,
+          "end": 50.62
+        },
+        {
+          "word": "como",
+          "start": 50.62,
+          "end": 50.78
+        },
+        {
+          "word": "que",
+          "start": 50.78,
+          "end": 50.98
+        },
+        {
+          "word": "apunta",
+          "start": 50.98,
+          "end": 51.2
+        },
+        {
+          "word": "entre",
+          "start": 51.2,
+          "end": 51.44
+        },
+        {
+          "word": "medio",
+          "start": 51.44,
+          "end": 51.66
+        },
+        {
+          "word": "de",
+          "start": 51.66,
+          "end": 52.84
+        },
+        {
+          "word": "las",
+          "start": 52.84,
+          "end": 53.04
+        },
+        {
+          "word": "dos",
+          "start": 53.04,
+          "end": 53.22
+        },
+        {
+          "word": "manchas",
+          "start": 53.22,
+          "end": 53.54
+        },
+        {
+          "word": "de",
+          "start": 53.54,
+          "end": 57.92
+        },
+        {
+          "word": "la",
+          "start": 57.92,
+          "end": 58.14
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2480 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.9,
+      "end": 5.74,
+      "text": "Ahora el león azul lo tenes que mandar abajo del clavo y a la izquierda del mimo.",
+      "words": [
+        {
+          "word": "Ahora",
+          "start": 0.9,
+          "end": 1.38
+        },
+        {
+          "word": "el",
+          "start": 1.38,
+          "end": 1.5
+        },
+        {
+          "word": "león",
+          "start": 1.5,
+          "end": 1.82
+        },
+        {
+          "word": "azul",
+          "start": 1.82,
+          "end": 2.4
+        },
+        {
+          "word": "lo",
+          "start": 2.4,
+          "end": 2.88
+        },
+        {
+          "word": "tenes",
+          "start": 2.88,
+          "end": 3.06
+        },
+        {
+          "word": "que",
+          "start": 3.06,
+          "end": 3.12
+        },
+        {
+          "word": "mandar",
+          "start": 3.12,
+          "end": 3.36
+        },
+        {
+          "word": "abajo",
+          "start": 3.36,
+          "end": 3.72
+        },
+        {
+          "word": "del",
+          "start": 3.72,
+          "end": 3.94
+        },
+        {
+          "word": "clavo",
+          "start": 3.94,
+          "end": 4.28
+        },
+        {
+          "word": "y",
+          "start": 4.28,
+          "end": 4.44
+        },
+        {
+          "word": "a",
+          "start": 4.44,
+          "end": 4.48
+        },
+        {
+          "word": "la",
+          "start": 4.48,
+          "end": 4.64
+        },
+        {
+          "word": "izquierda",
+          "start": 4.64,
+          "end": 4.86
+        },
+        {
+          "word": "del",
+          "start": 4.86,
+          "end": 5.06
+        },
+        {
+          "word": "mimo.",
+          "start": 5.06,
+          "end": 5.74
+        }
+      ]
+    },
+    {
+      "start": 5.96,
+      "end": 7.48,
+      "text": "Abajo del clavo y listo.",
+      "words": [
+        {
+          "word": "Abajo",
+          "start": 5.96,
+          "end": 6.16
+        },
+        {
+          "word": "del",
+          "start": 6.16,
+          "end": 6.32
+        },
+        {
+          "word": "clavo",
+          "start": 6.32,
+          "end": 6.56
+        },
+        {
+          "word": "y",
+          "start": 6.56,
+          "end": 6.72
+        },
+        {
+          "word": "listo.",
+          "start": 6.72,
+          "end": 7.48
+        }
+      ]
+    },
+    {
+      "start": 9.66,
+      "end": 15.68,
+      "text": "El centro vertical del león tiene que estar un poco a la derecha del centro vertical del clavo.",
+      "words": [
+        {
+          "word": "El",
+          "start": 9.66,
+          "end": 10.14
+        },
+        {
+          "word": "centro",
+          "start": 10.14,
+          "end": 10.62
+        },
+        {
+          "word": "vertical",
+          "start": 10.62,
+          "end": 11.38
+        },
+        {
+          "word": "del",
+          "start": 11.38,
+          "end": 11.62
+        },
+        {
+          "word": "león",
+          "start": 11.62,
+          "end": 12.32
+        },
+        {
+          "word": "tiene",
+          "start": 12.32,
+          "end": 12.66
+        },
+        {
+          "word": "que",
+          "start": 12.66,
+          "end": 12.94
+        },
+        {
+          "word": "estar",
+          "start": 12.94,
+          "end": 12.96
+        },
+        {
+          "word": "un",
+          "start": 12.96,
+          "end": 13.24
+        },
+        {
+          "word": "poco",
+          "start": 13.24,
+          "end": 13.42
+        },
+        {
+          "word": "a",
+          "start": 13.42,
+          "end": 13.56
+        },
+        {
+          "word": "la",
+          "start": 13.56,
+          "end": 13.74
+        },
+        {
+          "word": "derecha",
+          "start": 13.74,
+          "end": 13.98
+        },
+        {
+          "word": "del",
+          "start": 13.98,
+          "end": 14.2
+        },
+        {
+          "word": "centro",
+          "start": 14.2,
+          "end": 14.54
+        },
+        {
+          "word": "vertical",
+          "start": 14.54,
+          "end": 15.06
+        },
+        {
+          "word": "del",
+          "start": 15.06,
+          "end": 15.28
+        },
+        {
+          "word": "clavo.",
+          "start": 15.28,
+          "end": 15.68
+        }
+      ]
+    },
+    {
+      "start": 17.36,
+      "end": 24.76,
+      "text": "De tal manera que el extremo izquierdo del clavo y el extremo izquierdo del león supera un poco el extremo izquierdo del clavo.",
+      "words": [
+        {
+          "word": "De",
+          "start": 17.36,
+          "end": 17.6
+        },
+        {
+          "word": "tal",
+          "start": 17.6,
+          "end": 17.74
+        },
+        {
+          "word": "manera",
+          "start": 17.74,
+          "end": 18.2
+        },
+        {
+          "word": "que",
+          "start": 18.2,
+          "end": 18.68
+        },
+        {
+          "word": "el",
+          "start": 18.68,
+          "end": 18.9
+        },
+        {
+          "word": "extremo",
+          "start": 18.9,
+          "end": 19.26
+        },
+        {
+          "word": "izquierdo",
+          "start": 19.26,
+          "end": 19.52
+        },
+        {
+          "word": "del",
+          "start": 19.52,
+          "end": 19.72
+        },
+        {
+          "word": "clavo",
+          "start": 19.72,
+          "end": 20.48
+        },
+        {
+          "word": "y",
+          "start": 20.48,
+          "end": 20.86
+        },
+        {
+          "word": "el",
+          "start": 20.86,
+          "end": 21.44
+        },
+        {
+          "word": "extremo",
+          "start": 21.44,
+          "end": 21.78
+        },
+        {
+          "word": "izquierdo",
+          "start": 21.78,
+          "end": 22.04
+        },
+        {
+          "word": "del",
+          "start": 22.04,
+          "end": 22.16
+        },
+        {
+          "word": "león",
+          "start": 22.16,
+          "end": 22.82
+        },
+        {
+          "word": "supera",
+          "start": 22.82,
+          "end": 23.26
+        },
+        {
+          "word": "un",
+          "start": 23.26,
+          "end": 23.38
+        },
+        {
+          "word": "poco",
+          "start": 23.38,
+          "end": 23.5
+        },
+        {
+          "word": "el",
+          "start": 23.5,
+          "end": 23.62
+        },
+        {
+          "word": "extremo",
+          "start": 23.62,
+          "end": 23.86
+        },
+        {
+          "word": "izquierdo",
+          "start": 23.86,
+          "end": 24.16
+        },
+        {
+          "word": "del",
+          "start": 24.16,
+          "end": 24.48
+        },
+        {
+          "word": "clavo.",
+          "start": 24.48,
+          "end": 24.76
+        }
+      ]
+    },
+    {
+      "start": 25.3,
+      "end": 27.14,
+      "text": "Si está un poco más a la derecha que el...",
+      "words": [
+        {
+          "word": "Si",
+          "start": 25.3,
+          "end": 25.48
+        },
+        {
+          "word": "está",
+          "start": 25.48,
+          "end": 25.54
+        },
+        {
+          "word": "un",
+          "start": 25.54,
+          "end": 25.64
+        },
+        {
+          "word": "poco",
+          "start": 25.64,
+          "end": 25.84
+        },
+        {
+          "word": "más",
+          "start": 25.84,
+          "end": 26.08
+        },
+        {
+          "word": "a",
+          "start": 26.08,
+          "end": 26.12
+        },
+        {
+          "word": "la",
+          "start": 26.12,
+          "end": 26.32
+        },
+        {
+          "word": "derecha",
+          "start": 26.32,
+          "end": 26.64
+        },
+        {
+          "word": "que",
+          "start": 26.64,
+          "end": 26.96
+        },
+        {
+          "word": "el...",
+          "start": 26.96,
+          "end": 27.14
+        }
+      ]
+    },
+    {
+      "start": 27.62,
+      "end": 33.44,
+      "text": "Si yo trazo una recta en el extremo izquierdo del clavo, está más a la izquierda que el extremo izquierdo del león.",
+      "words": [
+        {
+          "word": "Si",
+          "start": 27.62,
+          "end": 28.06
+        },
+        {
+          "word": "yo",
+          "start": 28.06,
+          "end": 28.34
+        },
+        {
+          "word": "trazo",
+          "start": 28.34,
+          "end": 28.64
+        },
+        {
+          "word": "una",
+          "start": 28.64,
+          "end": 28.86
+        },
+        {
+          "word": "recta",
+          "start": 28.86,
+          "end": 29.4
+        },
+        {
+          "word": "en",
+          "start": 29.4,
+          "end": 30.08
+        },
+        {
+          "word": "el",
+          "start": 30.08,
+          "end": 30.16
+        },
+        {
+          "word": "extremo",
+          "start": 30.16,
+          "end": 30.48
+        },
+        {
+          "word": "izquierdo",
+          "start": 30.48,
+          "end": 30.8
+        },
+        {
+          "word": "del",
+          "start": 30.8,
+          "end": 30.98
+        },
+        {
+          "word": "clavo,",
+          "start": 30.98,
+          "end": 31.4
+        },
+        {
+          "word": "está",
+          "start": 31.66,
+          "end": 31.68
+        },
+        {
+          "word": "más",
+          "start": 31.68,
+          "end": 31.82
+        },
+        {
+          "word": "a",
+          "start": 31.82,
+          "end": 31.92
+        },
+        {
+          "word": "la",
+          "start": 31.92,
+          "end": 32.02
+        },
+        {
+          "word": "izquierda",
+          "start": 32.02,
+          "end": 32.22
+        },
+        {
+          "word": "que",
+          "start": 32.22,
+          "end": 32.28
+        },
+        {
+          "word": "el",
+          "start": 32.28,
+          "end": 32.44
+        },
+        {
+          "word": "extremo",
+          "start": 32.44,
+          "end": 32.72
+        },
+        {
+          "word": "izquierdo",
+          "start": 32.72,
+          "end": 32.98
+        },
+        {
+          "word": "del",
+          "start": 32.98,
+          "end": 33.22
+        },
+        {
+          "word": "león.",
+          "start": 33.22,
+          "end": 33.44
+        }
+      ]
+    },
+    {
+      "start": 33.72,
+      "end": 35.08,
+      "text": "Está más a la izquierda... claro.",
+      "words": [
+        {
+          "word": "Está",
+          "start": 33.72,
+          "end": 33.74
+        },
+        {
+          "word": "más",
+          "start": 33.74,
+          "end": 34.04
+        },
+        {
+          "word": "a",
+          "start": 34.04,
+          "end": 34.12
+        },
+        {
+          "word": "la",
+          "start": 34.12,
+          "end": 34.2
+        },
+        {
+          "word": "izquierda...",
+          "start": 34.2,
+          "end": 34.74
+        },
+        {
+          "word": "claro.",
+          "start": 34.74,
+          "end": 35.08
+        }
+      ]
+    },
+    {
+      "start": 35.2,
+      "end": 36.28,
+      "text": "El león está más a la derecha.",
+      "words": [
+        {
+          "word": "El",
+          "start": 35.2,
+          "end": 35.28
+        },
+        {
+          "word": "león",
+          "start": 35.28,
+          "end": 35.36
+        },
+        {
+          "word": "está",
+          "start": 35.36,
+          "end": 35.5
+        },
+        {
+          "word": "más",
+          "start": 35.5,
+          "end": 35.68
+        },
+        {
+          "word": "a",
+          "start": 35.68,
+          "end": 35.82
+        },
+        {
+          "word": "la",
+          "start": 35.82,
+          "end": 35.94
+        },
+        {
+          "word": "derecha.",
+          "start": 35.94,
+          "end": 36.28
+        }
+      ]
+    },
+    {
+      "start": 36.34,
+      "end": 37.02,
+      "text": "Listo, listo, listo.",
+      "words": [
+        {
+          "word": "Listo,",
+          "start": 36.34,
+          "end": 36.7
+        },
+        {
+          "word": "listo,",
+          "start": 36.74,
+          "end": 37.02
+        }
+      ]
+    },
+    {
+      "start": 37.14,
+      "end": 44.18,
+      "text": "Y además el eje horizontal del león está un poco más arriba que el eje horizontal del mimo.",
+      "words": [
+        {
+          "word": "Y",
+          "start": 37.14,
+          "end": 37.24
+        },
+        {
+          "word": "además",
+          "start": 37.24,
+          "end": 37.64
+        },
+        {
+          "word": "el",
+          "start": 37.64,
+          "end": 39.64
+        },
+        {
+          "word": "eje",
+          "start": 39.64,
+          "end": 39.88
+        },
+        {
+          "word": "horizontal",
+          "start": 39.88,
+          "end": 40.36
+        },
+        {
+          "word": "del",
+          "start": 40.36,
+          "end": 40.54
+        },
+        {
+          "word": "león",
+          "start": 40.54,
+          "end": 40.74
+        },
+        {
+          "word": "está",
+          "start": 40.74,
+          "end": 40.9
+        },
+        {
+          "word": "un",
+          "start": 40.9,
+          "end": 41.1
+        },
+        {
+          "word": "poco",
+          "start": 41.1,
+          "end": 41.26
+        },
+        {
+          "word": "más",
+          "start": 41.26,
+          "end": 41.5
+        },
+        {
+          "word": "arriba",
+          "start": 41.5,
+          "end": 41.92
+        },
+        {
+          "word": "que",
+          "start": 41.92,
+          "end": 42.5
+        },
+        {
+          "word": "el",
+          "start": 42.5,
+          "end": 42.62
+        },
+        {
+          "word": "eje",
+          "start": 42.62,
+          "end": 42.78
+        },
+        {
+          "word": "horizontal",
+          "start": 42.78,
+          "end": 43.28
+        },
+        {
+          "word": "del",
+          "start": 43.28,
+          "end": 43.62
+        },
+        {
+          "word": "mimo.",
+          "start": 43.62,
+          "end": 44.18
+        }
+      ]
+    },
+    {
+      "start": 44.38,
+      "end": 49.7,
+      "text": "Suponete que el eje horizontal del león traza una línea que pasa por las cejas del mimo, ponlele.",
+      "words": [
+        {
+          "word": "Suponete",
+          "start": 44.38,
+          "end": 44.72
+        },
+        {
+          "word": "que",
+          "start": 44.72,
+          "end": 44.82
+        },
+        {
+          "word": "el",
+          "start": 44.82,
+          "end": 44.9
+        },
+        {
+          "word": "eje",
+          "start": 44.9,
+          "end": 45.04
+        },
+        {
+          "word": "horizontal",
+          "start": 45.04,
+          "end": 45.42
+        },
+        {
+          "word": "del",
+          "start": 45.42,
+          "end": 45.58
+        },
+        {
+          "word": "león",
+          "start": 45.58,
+          "end": 46.54
+        },
+        {
+          "word": "traza",
+          "start": 46.54,
+          "end": 46.94
+        },
+        {
+          "word": "una",
+          "start": 46.94,
+          "end": 47.16
+        },
+        {
+          "word": "línea",
+          "start": 47.16,
+          "end": 47.4
+        },
+        {
+          "word": "que",
+          "start": 47.4,
+          "end": 47.86
+        },
+        {
+          "word": "pasa",
+          "start": 47.86,
+          "end": 48.08
+        },
+        {
+          "word": "por",
+          "start": 48.08,
+          "end": 48.28
+        },
+        {
+          "word": "las",
+          "start": 48.28,
+          "end": 48.56
+        },
+        {
+          "word": "cejas",
+          "start": 48.56,
+          "end": 48.76
+        },
+        {
+          "word": "del",
+          "start": 48.76,
+          "end": 48.94
+        },
+        {
+          "word": "mimo,",
+          "start": 48.94,
+          "end": 49.16
+        },
+        {
+          "word": "ponlele.",
+          "start": 49.18,
+          "end": 49.7
+        }
+      ]
+    },
+    {
+      "start": 53.12,
+      "end": 55.12,
+      "text": "O por el cosito del gorrito.",
+      "words": [
+        {
+          "word": "O",
+          "start": 53.12,
+          "end": 53.56
+        },
+        {
+          "word": "por",
+          "start": 53.56,
+          "end": 54.0
+        },
+        {
+          "word": "el",
+          "start": 54.0,
+          "end": 54.14
+        },
+        {
+          "word": "cosito",
+          "start": 54.14,
+          "end": 54.46
+        },
+        {
+          "word": "del",
+          "start": 54.46,
+          "end": 54.62
+        },
+        {
+          "word": "gorrito.",
+          "start": 54.62,
+          "end": 55.12
+        }
+      ]
+    },
+    {
+      "start": 55.62,
+      "end": 56.08,
+      "text": "¿Se entiende?",
+      "words": [
+        {
+          "word": "¿Se",
+          "start": 55.62,
+          "end": 55.82
+        },
+        {
+          "word": "entiende?",
+          "start": 55.82,
+          "end": 56.08
+        }
+      ]
+    },
+    {
+      "start": 56.98,
+      "end": 59.58,
+      "text": "¿Las patas del león como están con referencia al gorrito?",
+      "words": [
+        {
+          "word": "¿Las",
+          "start": 56.98,
+          "end": 57.42
+        },
+        {
+          "word": "patas",
+          "start": 57.42,
+          "end": 57.7
+        },
+        {
+          "word": "del",
+          "start": 57.7,
+          "end": 57.88
+        },
+        {
+          "word": "león",
+          "start": 57.88,
+          "end": 58.16
+        },
+        {
+          "word": "como",
+          "start": 58.16,
+          "end": 58.38
+        },
+        {
+          "word": "están",
+          "start": 58.38,
+          "end": 58.58
+        },
+        {
+          "word": "con",
+          "start": 58.58,
+          "end": 58.84
+        },
+        {
+          "word": "referencia",
+          "start": 58.84,
+          "end": 59.36
+        },
+        {
+          "word": "al",
+          "start": 59.36,
+          "end": 59.56
+        },
+        {
+          "word": "gorrito?",
+          "start": 59.56,
+          "end": 59.58
+        }
+      ]
+    },
+    {
+      "start": 59.58,
+      "end": 64.48,
+      "text": "Las patas del león estarían a la altura de la mitad de las bolas del mimo.",
+      "words": [
+        {
+          "word": "Las",
+          "start": 59.58,
+          "end": 59.72
+        },
+        {
+          "word": "patas",
+          "start": 59.72,
+          "end": 59.92
+        },
+        {
+          "word": "del",
+          "start": 59.92,
+          "end": 60.0
+        },
+        {
+          "word": "león",
+          "start": 60.0,
+          "end": 60.18
+        },
+        {
+          "word": "estarían",
+          "start": 60.18,
+          "end": 60.54
+        },
+        {
+          "word": "a",
+          "start": 60.54,
+          "end": 60.56
+        },
+        {
+          "word": "la",
+          "start": 60.56,
+          "end": 60.82
+        },
+        {
+          "word": "altura",
+          "start": 60.82,
+          "end": 60.9
+        },
+        {
+          "word": "de",
+          "start": 60.9,
+          "end": 62.46
+        },
+        {
+          "word": "la",
+          "start": 62.46,
+          "end": 62.58
+        },
+        {
+          "word": "mitad",
+          "start": 62.58,
+          "end": 62.86
+        },
+        {
+          "word": "de",
+          "start": 62.86,
+          "end": 63.1
+        },
+        {
+          "word": "las",
+          "start": 63.1,
+          "end": 63.54
+        },
+        {
+          "word": "bolas",
+          "start": 63.54,
+          "end": 63.76
+        },
+        {
+          "word": "del",
+          "start": 63.76,
+          "end": 64.04
+        },
+        {
+          "word": "mimo.",
+          "start": 64.04,
+          "end": 64.48
+        }
+      ]
+    },
+    {
+      "start": 64.56,
+      "end": 66.22,
+      "text": "¿La mitad de las bolas?",
+      "words": [
+        {
+          "word": "¿La",
+          "start": 64.56,
+          "end": 64.88
+        },
+        {
+          "word": "mitad",
+          "start": 64.88,
+          "end": 64.94
+        },
+        {
+          "word": "de",
+          "start": 64.94,
+          "end": 65.08
+        },
+        {
+          "word": "las",
+          "start": 65.08,
+          "end": 65.92
+        },
+        {
+          "word": "bolas?",
+          "start": 65.92,
+          "end": 66.22
+        }
+      ]
+    },
+    {
+      "start": 66.24,
+      "end": 68.0,
+      "text": "La que tienen la mano, no.",
+      "words": [
+        {
+          "word": "La",
+          "start": 66.24,
+          "end": 66.46
+        },
+        {
+          "word": "que",
+          "start": 66.46,
+          "end": 67.12
+        },
+        {
+          "word": "tienen",
+          "start": 67.12,
+          "end": 67.3
+        },
+        {
+          "word": "la",
+          "start": 67.3,
+          "end": 67.52
+        },
+        {
+          "word": "mano,",
+          "start": 67.52,
+          "end": 67.76
+        },
+        {
+          "word": "no.",
+          "start": 67.8,
+          "end": 68.0
+        }
+      ]
+    },
+    {
+      "start": 68.88,
+      "end": 70.18,
+      "text": "De la mano del mimo.",
+      "words": [
+        {
+          "word": "De",
+          "start": 68.88,
+          "end": 69.32
+        },
+        {
+          "word": "la",
+          "start": 69.32,
+          "end": 69.44
+        },
+        {
+          "word": "mano",
+          "start": 69.44,
+          "end": 69.64
+        },
+        {
+          "word": "del",
+          "start": 69.64,
+          "end": 69.86
+        },
+        {
+          "word": "mimo.",
+          "start": 69.86,
+          "end": 70.18
+        }
+      ]
+    },
+    {
+      "start": 70.96,
+      "end": 72.62,
+      "text": "¿Se entiende? Las patas delante.",
+      "words": [
+        {
+          "word": "¿Se",
+          "start": 70.96,
+          "end": 71.4
+        },
+        {
+          "word": "entiende?",
+          "start": 71.4,
+          "end": 71.62
+        },
+        {
+          "word": "Las",
+          "start": 71.64,
+          "end": 71.78
+        },
+        {
+          "word": "patas",
+          "start": 71.78,
+          "end": 72.06
+        },
+        {
+          "word": "delante.",
+          "start": 72.06,
+          "end": 72.62
+        }
+      ]
+    },
+    {
+      "start": 73.1,
+      "end": 74.28,
+      "text": "La pata de atrás estaría...",
+      "words": [
+        {
+          "word": "La",
+          "start": 73.1,
+          "end": 73.38
+        },
+        {
+          "word": "pata",
+          "start": 73.38,
+          "end": 73.58
+        },
+        {
+          "word": "de",
+          "start": 73.58,
+          "end": 73.72
+        },
+        {
+          "word": "atrás",
+          "start": 73.72,
+          "end": 73.86
+        },
+        {
+          "word": "estaría...",
+          "start": 73.86,
+          "end": 74.28
+        }
+      ]
+    },
+    {
+      "start": 74.28,
+      "end": 76.14,
+      "text": "Entonces el león está casi superpuesto al mimo.",
+      "words": [
+        {
+          "word": "Entonces",
+          "start": 74.28,
+          "end": 74.48
+        },
+        {
+          "word": "el",
+          "start": 74.48,
+          "end": 74.66
+        },
+        {
+          "word": "león",
+          "start": 74.66,
+          "end": 74.88
+        },
+        {
+          "word": "está",
+          "start": 74.88,
+          "end": 75.04
+        },
+        {
+          "word": "casi",
+          "start": 75.04,
+          "end": 75.3
+        },
+        {
+          "word": "superpuesto",
+          "start": 75.3,
+          "end": 75.74
+        },
+        {
+          "word": "al",
+          "start": 75.74,
+          "end": 75.88
+        },
+        {
+          "word": "mimo.",
+          "start": 75.88,
+          "end": 76.14
+        }
+      ]
+    },
+    {
+      "start": 76.32,
+      "end": 78.18,
+      "text": "No, el león está a la izquierda del mimo.",
+      "words": [
+        {
+          "word": "No,",
+          "start": 76.32,
+          "end": 76.52
+        },
+        {
+          "word": "el",
+          "start": 76.58,
+          "end": 76.62
+        },
+        {
+          "word": "león",
+          "start": 76.62,
+          "end": 76.76
+        },
+        {
+          "word": "está",
+          "start": 76.76,
+          "end": 76.88
+        },
+        {
+          "word": "a",
+          "start": 76.88,
+          "end": 76.98
+        },
+        {
+          "word": "la",
+          "start": 76.98,
+          "end": 77.08
+        },
+        {
+          "word": "izquierda",
+          "start": 77.08,
+          "end": 77.3
+        },
+        {
+          "word": "del",
+          "start": 77.3,
+          "end": 77.48
+        },
+        {
+          "word": "mimo.",
+          "start": 77.48,
+          "end": 78.18
+        }
+      ]
+    },
+    {
+      "start": 78.42,
+      "end": 80.52,
+      "text": "Si, pero está muy cerca.",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 78.42,
+          "end": 78.86
+        },
+        {
+          "word": "pero",
+          "start": 79.46,
+          "end": 79.7
+        },
+        {
+          "word": "está",
+          "start": 79.7,
+          "end": 79.84
+        },
+        {
+          "word": "muy",
+          "start": 79.84,
+          "end": 80.12
+        },
+        {
+          "word": "cerca.",
+          "start": 80.12,
+          "end": 80.52
+        }
+      ]
+    },
+    {
+      "start": 80.92,
+      "end": 81.8,
+      "text": "No está cerca, no.",
+      "words": [
+        {
+          "word": "No",
+          "start": 80.92,
+          "end": 81.1
+        },
+        {
+          "word": "está",
+          "start": 81.1,
+          "end": 81.24
+        },
+        {
+          "word": "cerca,",
+          "start": 81.24,
+          "end": 81.52
+        },
+        {
+          "word": "no.",
+          "start": 81.78,
+          "end": 81.8
+        }
+      ]
+    },
+    {
+      "start": 82.36,
+      "end": 85.78,
+      "text": "El león está abajo del clavo.",
+      "words": [
+        {
+          "word": "El",
+          "start": 82.28,
+          "end": 82.48
+        },
+        {
+          "word": "león",
+          "start": 82.48,
+          "end": 84.58
+        },
+        {
+          "word": "está",
+          "start": 84.58,
+          "end": 84.74
+        },
+        {
+          "word": "abajo",
+          "start": 84.74,
+          "end": 84.98
+        },
+        {
+          "word": "del",
+          "start": 84.98,
+          "end": 85.16
+        },
+        {
+          "word": "clavo.",
+          "start": 85.16,
+          "end": 85.78
+        }
+      ]
+    },
+    {
+      "start": 86.48,
+      "end": 90.42,
+      "text": "El centro del león está un poco corridos a la derecha, pero sí está abajo del clavo.",
+      "words": [
+        {
+          "word": "El",
+          "start": 86.48,
+          "end": 86.88
+        },
+        {
+          "word": "centro",
+          "start": 86.88,
+          "end": 87.26
+        },
+        {
+          "word": "del",
+          "start": 87.26,
+          "end": 87.36
+        },
+        {
+          "word": "león",
+          "start": 87.36,
+          "end": 87.44
+        },
+        {
+          "word": "está",
+          "start": 87.44,
+          "end": 87.58
+        },
+        {
+          "word": "un",
+          "start": 87.58,
+          "end": 87.66
+        },
+        {
+          "word": "poco",
+          "start": 87.66,
+          "end": 87.76
+        },
+        {
+          "word": "corridos",
+          "start": 87.76,
+          "end": 88.1
+        },
+        {
+          "word": "a",
+          "start": 88.1,
+          "end": 88.22
+        },
+        {
+          "word": "la",
+          "start": 88.22,
+          "end": 88.38
+        },
+        {
+          "word": "derecha,",
+          "start": 88.38,
+          "end": 88.68
+        },
+        {
+          "word": "pero",
+          "start": 88.74,
+          "end": 88.84
+        },
+        {
+          "word": "sí",
+          "start": 88.84,
+          "end": 89.0
+        },
+        {
+          "word": "está",
+          "start": 89.0,
+          "end": 89.1
+        },
+        {
+          "word": "abajo",
+          "start": 89.1,
+          "end": 89.34
+        },
+        {
+          "word": "del",
+          "start": 89.34,
+          "end": 89.54
+        },
+        {
+          "word": "clavo.",
+          "start": 89.54,
+          "end": 90.42
+        }
+      ]
+    },
+    {
+      "start": 91.12,
+      "end": 92.78,
+      "text": "El centro del león está un poco corridos...",
+      "words": [
+        {
+          "word": "centro",
+          "start": 91.12,
+          "end": 91.22
+        },
+        {
+          "word": "del",
+          "start": 91.22,
+          "end": 91.44
+        },
+        {
+          "word": "león",
+          "start": 91.44,
+          "end": 92.06
+        },
+        {
+          "word": "está",
+          "start": 92.06,
+          "end": 92.26
+        },
+        {
+          "word": "un",
+          "start": 92.26,
+          "end": 92.5
+        },
+        {
+          "word": "poco",
+          "start": 92.5,
+          "end": 92.66
+        },
+        {
+          "word": "corridos...",
+          "start": 92.66,
+          "end": 92.78
+        }
+      ]
+    },
+    {
+      "start": 92.78,
+      "end": 98.0,
+      "text": "El eje vertical del león está un poco corridos a la derecha respecto al eje vertical del clavo, pero está abajo igual.",
+      "words": [
+        {
+          "word": "El",
+          "start": 92.78,
+          "end": 92.94
+        },
+        {
+          "word": "eje",
+          "start": 92.94,
+          "end": 93.12
+        },
+        {
+          "word": "vertical",
+          "start": 93.12,
+          "end": 93.52
+        },
+        {
+          "word": "del",
+          "start": 93.52,
+          "end": 93.68
+        },
+        {
+          "word": "león",
+          "start": 93.68,
+          "end": 94.14
+        },
+        {
+          "word": "está",
+          "start": 94.14,
+          "end": 94.54
+        },
+        {
+          "word": "un",
+          "start": 94.54,
+          "end": 94.72
+        },
+        {
+          "word": "poco",
+          "start": 94.72,
+          "end": 94.98
+        },
+        {
+          "word": "corridos",
+          "start": 94.98,
+          "end": 95.34
+        },
+        {
+          "word": "a",
+          "start": 95.34,
+          "end": 95.46
+        },
+        {
+          "word": "la",
+          "start": 95.46,
+          "end": 95.6
+        },
+        {
+          "word": "derecha",
+          "start": 95.6,
+          "end": 95.82
+        },
+        {
+          "word": "respecto",
+          "start": 95.82,
+          "end": 96.14
+        },
+        {
+          "word": "al",
+          "start": 96.14,
+          "end": 96.26
+        },
+        {
+          "word": "eje",
+          "start": 96.26,
+          "end": 96.4
+        },
+        {
+          "word": "vertical",
+          "start": 96.4,
+          "end": 96.72
+        },
+        {
+          "word": "del",
+          "start": 96.72,
+          "end": 96.88
+        },
+        {
+          "word": "clavo,",
+          "start": 96.88,
+          "end": 97.08
+        },
+        {
+          "word": "pero",
+          "start": 97.26,
+          "end": 97.32
+        },
+        {
+          "word": "está",
+          "start": 97.32,
+          "end": 97.5
+        },
+        {
+          "word": "abajo",
+          "start": 97.5,
+          "end": 97.7
+        },
+        {
+          "word": "igual.",
+          "start": 97.7,
+          "end": 98.0
+        }
+      ]
+    },
+    {
+      "start": 98.72,
+      "end": 101.24,
+      "text": "Está como a 3 centímetros del mimo, no está cerca.",
+      "words": [
+        {
+          "word": "Está",
+          "start": 98.72,
+          "end": 98.84
+        },
+        {
+          "word": "como",
+          "start": 98.84,
+          "end": 99.06
+        },
+        {
+          "word": "a",
+          "start": 99.06,
+          "end": 99.2
+        },
+        {
+          "word": "3",
+          "start": 99.2,
+          "end": 99.28
+        },
+        {
+          "word": "centímetros",
+          "start": 99.28,
+          "end": 99.72
+        },
+        {
+          "word": "del",
+          "start": 99.72,
+          "end": 99.96
+        },
+        {
+          "word": "mimo,",
+          "start": 99.96,
+          "end": 100.12
+        },
+        {
+          "word": "no",
+          "start": 100.18,
+          "end": 100.32
+        },
+        {
+          "word": "está",
+          "start": 100.32,
+          "end": 100.66
+        },
+        {
+          "word": "cerca.",
+          "start": 100.66,
+          "end": 101.24
+        }
+      ]
+    },
+    {
+      "start": 102.24,
+      "end": 102.64,
+      "text": "Opa.",
+      "words": [
+        {
+          "word": "Opa.",
+          "start": 102.24,
+          "end": 102.64
+        }
+      ]
+    },
+    {
+      "start": 102.96,
+      "end": 103.46,
+      "text": "¿Se entiende?",
+      "words": [
+        {
+          "word": "¿Se",
+          "start": 102.96,
+          "end": 103.12
+        },
+        {
+          "word": "entiende?",
+          "start": 103.12,
+          "end": 103.46
+        }
+      ]
+    },
+    {
+      "start": 103.84,
+      "end": 105.64,
+      "text": "Está abajo del clavo y a la izquierda del mimo.",
+      "words": [
+        {
+          "word": "Está",
+          "start": 103.84,
+          "end": 104.06
+        },
+        {
+          "word": "abajo",
+          "start": 104.06,
+          "end": 104.36
+        },
+        {
+          "word": "del",
+          "start": 104.36,
+          "end": 104.5
+        },
+        {
+          "word": "clavo",
+          "start": 104.5,
+          "end": 104.7
+        },
+        {
+          "word": "y",
+          "start": 104.7,
+          "end": 104.84
+        },
+        {
+          "word": "a",
+          "start": 104.84,
+          "end": 104.86
+        },
+        {
+          "word": "la",
+          "start": 104.86,
+          "end": 104.98
+        },
+        {
+          "word": "izquierda",
+          "start": 104.98,
+          "end": 105.16
+        },
+        {
+          "word": "del",
+          "start": 105.16,
+          "end": 105.34
+        },
+        {
+          "word": "mimo.",
+          "start": 105.34,
+          "end": 105.64
+        }
+      ]
+    },
+    {
+      "start": 107.64,
+      "end": 107.68,
+      "text": "Sí.",
+      "words": [
+        {
+          "word": "Sí.",
+          "start": 107.64,
+          "end": 107.68
+        }
+      ]
+    },
+    {
+      "start": 108.66,
+      "end": 114.24,
+      "text": "Pero si las patas del león están a la altura de las bolas del mimo...",
+      "words": [
+        {
+          "word": "Pero",
+          "start": 108.66,
+          "end": 109.02
+        },
+        {
+          "word": "si",
+          "start": 109.02,
+          "end": 109.38
+        },
+        {
+          "word": "las",
+          "start": 109.38,
+          "end": 109.54
+        },
+        {
+          "word": "patas",
+          "start": 109.54,
+          "end": 109.84
+        },
+        {
+          "word": "del",
+          "start": 109.84,
+          "end": 110.02
+        },
+        {
+          "word": "león",
+          "start": 110.02,
+          "end": 110.4
+        },
+        {
+          "word": "están",
+          "start": 110.4,
+          "end": 111.1
+        },
+        {
+          "word": "a",
+          "start": 111.1,
+          "end": 112.34
+        },
+        {
+          "word": "la",
+          "start": 112.34,
+          "end": 112.44
+        },
+        {
+          "word": "altura",
+          "start": 112.44,
+          "end": 112.68
+        },
+        {
+          "word": "de",
+          "start": 112.68,
+          "end": 112.84
+        },
+        {
+          "word": "las",
+          "start": 112.84,
+          "end": 113.0
+        },
+        {
+          "word": "bolas",
+          "start": 113.0,
+          "end": 113.22
+        },
+        {
+          "word": "del",
+          "start": 113.22,
+          "end": 113.42
+        },
+        {
+          "word": "mimo...",
+          "start": 113.42,
+          "end": 114.24
+        }
+      ]
+    },
+    {
+      "start": 114.94,
+      "end": 116.26,
+      "text": "Ah, ¿vos decís la pata de atrás?",
+      "words": [
+        {
+          "word": "Ah,",
+          "start": 114.94,
+          "end": 115.26
+        },
+        {
+          "word": "¿vos",
+          "start": 115.26,
+          "end": 115.46
+        },
+        {
+          "word": "decís",
+          "start": 115.46,
+          "end": 115.6
+        },
+        {
+          "word": "la",
+          "start": 115.6,
+          "end": 115.7
+        },
+        {
+          "word": "pata",
+          "start": 115.7,
+          "end": 115.88
+        },
+        {
+          "word": "de",
+          "start": 115.88,
+          "end": 115.98
+        },
+        {
+          "word": "atrás?",
+          "start": 115.98,
+          "end": 116.26
+        }
+      ]
+    },
+    {
+      "start": 117.2,
+      "end": 118.9,
+      "text": "No, vos volvamos de nuevo.",
+      "words": [
+        {
+          "word": "No,",
+          "start": 117.2,
+          "end": 117.56
+        },
+        {
+          "word": "vos",
+          "start": 118.08,
+          "end": 118.22
+        },
+        {
+          "word": "volvamos",
+          "start": 118.22,
+          "end": 118.52
+        },
+        {
+          "word": "de",
+          "start": 118.52,
+          "end": 118.62
+        },
+        {
+          "word": "nuevo.",
+          "start": 118.62,
+          "end": 118.9
+        }
+      ]
+    },
+    {
+      "start": 119.18,
+      "end": 121.34,
+      "text": "Pon el león abajo del clavo y a la izquierda del mimo.",
+      "words": [
+        {
+          "word": "Pon",
+          "start": 119.18,
+          "end": 119.34
+        },
+        {
+          "word": "el",
+          "start": 119.34,
+          "end": 119.46
+        },
+        {
+          "word": "león",
+          "start": 119.46,
+          "end": 119.8
+        },
+        {
+          "word": "abajo",
+          "start": 119.8,
+          "end": 120.12
+        },
+        {
+          "word": "del",
+          "start": 120.12,
+          "end": 120.26
+        },
+        {
+          "word": "clavo",
+          "start": 120.26,
+          "end": 120.42
+        },
+        {
+          "word": "y",
+          "start": 120.42,
+          "end": 120.52
+        },
+        {
+          "word": "a",
+          "start": 120.52,
+          "end": 120.56
+        },
+        {
+          "word": "la",
+          "start": 120.56,
+          "end": 120.64
+        },
+        {
+          "word": "izquierda",
+          "start": 120.64,
+          "end": 120.82
+        },
+        {
+          "word": "del",
+          "start": 120.82,
+          "end": 121.0
+        },
+        {
+          "word": "mimo.",
+          "start": 121.0,
+          "end": 121.34
+        }
+      ]
+    },
+    {
+      "start": 121.58,
+      "end": 125.64,
+      "text": "Como si fuera en el centro de esa cruz que marca el clavo y el mimo.",
+      "words": [
+        {
+          "word": "Como",
+          "start": 121.58,
+          "end": 121.74
+        },
+        {
+          "word": "si",
+          "start": 121.74,
+          "end": 121.9
+        },
+        {
+          "word": "fuera",
+          "start": 121.9,
+          "end": 122.02
+        },
+        {
+          "word": "en",
+          "start": 122.02,
+          "end": 122.18
+        },
+        {
+          "word": "el",
+          "start": 122.18,
+          "end": 122.28
+        },
+        {
+          "word": "centro",
+          "start": 122.28,
+          "end": 122.66
+        },
+        {
+          "word": "de",
+          "start": 122.66,
+          "end": 123.88
+        },
+        {
+          "word": "esa",
+          "start": 123.88,
+          "end": 124.12
+        },
+        {
+          "word": "cruz",
+          "start": 124.12,
+          "end": 124.38
+        },
+        {
+          "word": "que",
+          "start": 124.38,
+          "end": 124.56
+        },
+        {
+          "word": "marca",
+          "start": 124.56,
+          "end": 124.78
+        },
+        {
+          "word": "el",
+          "start": 124.78,
+          "end": 124.92
+        },
+        {
+          "word": "clavo",
+          "start": 124.92,
+          "end": 125.14
+        },
+        {
+          "word": "y",
+          "start": 125.14,
+          "end": 125.34
+        },
+        {
+          "word": "el",
+          "start": 125.34,
+          "end": 125.46
+        },
+        {
+          "word": "mimo.",
+          "start": 125.46,
+          "end": 125.64
+        }
+      ]
+    },
+    {
+      "start": 125.64,
+      "end": 126.0,
+      "text": "Estoy ahí, estoy ahí.",
+      "words": [
+        {
+          "word": "ahí,",
+          "start": 125.64,
+          "end": 125.82
+        },
+        {
+          "word": "estoy",
+          "start": 125.92,
+          "end": 126.0
+        }
+      ]
+    },
+    {
+      "start": 126.5,
+      "end": 131.3,
+      "text": "Ahora, corre lo levemente hacia la derecha, cosa de que con ello coincidan los ejes verticales del clavo y del león.",
+      "words": [
+        {
+          "word": "Ahora,",
+          "start": 126.5,
+          "end": 126.82
+        },
+        {
+          "word": "corre",
+          "start": 127.06,
+          "end": 127.08
+        },
+        {
+          "word": "lo",
+          "start": 127.08,
+          "end": 127.24
+        },
+        {
+          "word": "levemente",
+          "start": 127.24,
+          "end": 127.6
+        },
+        {
+          "word": "hacia",
+          "start": 127.6,
+          "end": 127.76
+        },
+        {
+          "word": "la",
+          "start": 127.76,
+          "end": 127.92
+        },
+        {
+          "word": "derecha,",
+          "start": 127.92,
+          "end": 128.36
+        },
+        {
+          "word": "cosa",
+          "start": 128.52,
+          "end": 128.6
+        },
+        {
+          "word": "de",
+          "start": 128.6,
+          "end": 128.74
+        },
+        {
+          "word": "que",
+          "start": 128.74,
+          "end": 128.88
+        },
+        {
+          "word": "con",
+          "start": 128.88,
+          "end": 128.94
+        },
+        {
+          "word": "ello",
+          "start": 128.94,
+          "end": 129.0
+        },
+        {
+          "word": "coincidan",
+          "start": 129.0,
+          "end": 129.38
+        },
+        {
+          "word": "los",
+          "start": 129.38,
+          "end": 129.52
+        },
+        {
+          "word": "ejes",
+          "start": 129.52,
+          "end": 129.68
+        },
+        {
+          "word": "verticales",
+          "start": 129.68,
+          "end": 130.14
+        },
+        {
+          "word": "del",
+          "start": 130.14,
+          "end": 130.26
+        },
+        {
+          "word": "clavo",
+          "start": 130.26,
+          "end": 130.52
+        },
+        {
+          "word": "y",
+          "start": 130.52,
+          "end": 130.62
+        },
+        {
+          "word": "del",
+          "start": 130.62,
+          "end": 130.9
+        },
+        {
+          "word": "león.",
+          "start": 130.9,
+          "end": 131.3
+        }
+      ]
+    },
+    {
+      "start": 131.3,
+      "end": 133.78,
+      "text": "El león está poquito a la derecha y un poco hacia arriba.",
+      "words": [
+        {
+          "word": "El",
+          "start": 131.3,
+          "end": 131.48
+        },
+        {
+          "word": "león",
+          "start": 131.48,
+          "end": 131.64
+        },
+        {
+          "word": "está",
+          "start": 131.64,
+          "end": 131.82
+        },
+        {
+          "word": "poquito",
+          "start": 131.82,
+          "end": 131.98
+        },
+        {
+          "word": "a",
+          "start": 131.98,
+          "end": 132.1
+        },
+        {
+          "word": "la",
+          "start": 132.1,
+          "end": 132.22
+        },
+        {
+          "word": "derecha",
+          "start": 132.22,
+          "end": 132.64
+        },
+        {
+          "word": "y",
+          "start": 132.64,
+          "end": 133.0
+        },
+        {
+          "word": "un",
+          "start": 133.0,
+          "end": 133.16
+        },
+        {
+          "word": "poco",
+          "start": 133.16,
+          "end": 133.28
+        },
+        {
+          "word": "hacia",
+          "start": 133.28,
+          "end": 133.5
+        },
+        {
+          "word": "arriba.",
+          "start": 133.5,
+          "end": 133.78
+        }
+      ]
+    },
+    {
+      "start": 134.26,
+      "end": 137.5,
+      "text": "Es decir, los ejes horizontales del mimo y del león tampoco coinciden.",
+      "words": [
+        {
+          "word": "Es",
+          "start": 134.26,
+          "end": 134.34
+        },
+        {
+          "word": "decir,",
+          "start": 134.34,
+          "end": 134.58
+        },
+        {
+          "word": "los",
+          "start": 134.78,
+          "end": 134.84
+        },
+        {
+          "word": "ejes",
+          "start": 134.84,
+          "end": 135.04
+        },
+        {
+          "word": "horizontales",
+          "start": 135.04,
+          "end": 135.58
+        },
+        {
+          "word": "del",
+          "start": 135.58,
+          "end": 135.84
+        },
+        {
+          "word": "mimo",
+          "start": 135.84,
+          "end": 136.12
+        },
+        {
+          "word": "y",
+          "start": 136.12,
+          "end": 136.24
+        },
+        {
+          "word": "del",
+          "start": 136.24,
+          "end": 136.42
+        },
+        {
+          "word": "león",
+          "start": 136.42,
+          "end": 136.6
+        },
+        {
+          "word": "tampoco",
+          "start": 136.6,
+          "end": 136.88
+        },
+        {
+          "word": "coinciden.",
+          "start": 136.88,
+          "end": 137.5
+        }
+      ]
+    },
+    {
+      "start": 138.06,
+      "end": 141.14,
+      "text": "El león está un poco más cerca del mimo y un poco más cerca del clavo.",
+      "words": [
+        {
+          "word": "El",
+          "start": 138.0,
+          "end": 138.18
+        },
+        {
+          "word": "león",
+          "start": 138.18,
+          "end": 138.36
+        },
+        {
+          "word": "está",
+          "start": 138.36,
+          "end": 138.52
+        },
+        {
+          "word": "un",
+          "start": 138.52,
+          "end": 138.62
+        },
+        {
+          "word": "poco",
+          "start": 138.62,
+          "end": 138.78
+        },
+        {
+          "word": "más",
+          "start": 138.78,
+          "end": 139.04
+        },
+        {
+          "word": "cerca",
+          "start": 139.04,
+          "end": 139.3
+        },
+        {
+          "word": "del",
+          "start": 139.3,
+          "end": 139.56
+        },
+        {
+          "word": "mimo",
+          "start": 139.56,
+          "end": 139.72
+        },
+        {
+          "word": "y",
+          "start": 139.72,
+          "end": 139.86
+        },
+        {
+          "word": "un",
+          "start": 139.86,
+          "end": 139.92
+        },
+        {
+          "word": "poco",
+          "start": 139.92,
+          "end": 140.04
+        },
+        {
+          "word": "más",
+          "start": 140.04,
+          "end": 140.24
+        },
+        {
+          "word": "cerca",
+          "start": 140.24,
+          "end": 140.4
+        },
+        {
+          "word": "del",
+          "start": 140.4,
+          "end": 140.54
+        },
+        {
+          "word": "clavo.",
+          "start": 140.54,
+          "end": 141.14
+        }
+      ]
+    },
+    {
+      "start": 141.94,
+      "end": 143.28,
+      "text": "Bueno, déjame ver ahí.",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 141.94,
+          "end": 142.3
+        },
+        {
+          "word": "déjame",
+          "start": 142.48,
+          "end": 142.74
+        },
+        {
+          "word": "ver",
+          "start": 142.74,
+          "end": 142.94
+        },
+        {
+          "word": "ahí.",
+          "start": 142.94,
+          "end": 143.28
+        }
+      ]
+    },
+    {
+      "start": 143.66,
+      "end": 144.44,
+      "text": "Bueno, fracassiate.",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 143.66,
+          "end": 143.68
+        },
+        {
+          "word": "fracassiate.",
+          "start": 143.78,
+          "end": 144.44
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "segments": [
+    {
+      "start": 0.68,
+      "end": 6.22,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "bueno vas a tener que agarrar el coso este de no sé que religión es que tiene muchas velas",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 90
+      }
+    },
+    {
+      "start": 8.84,
+      "end": 15.68,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "y ponerlo arriba del jarrón va intersectado con el rinoceronte",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 62
+      }
+    },
+    {
+      "start": 15.68,
+      "end": 20.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "o sea que coincida digamos la base con la abertura del jarrón",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 61
+      }
+    },
+    {
+      "start": 23.08,
+      "end": 24.94,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "y en el medio del rinoceronte?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 24.94,
+      "end": 29.1,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "no un poquito más abajo con el medio",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 36
+      }
+    },
+    {
+      "start": 29.1,
+      "end": 36.84,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "mira las patas del rinoceronte coinciden con la estrella",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 56
+      }
+    }
+  ]
+}

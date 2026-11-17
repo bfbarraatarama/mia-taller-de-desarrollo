@@ -1,0 +1,324 @@
+{
+  "resumen": "La reunión revisó las actas de la última sesión, donde se discutieron los requisitos del control remoto para un nuevo producto. Se acordó que el diseño debe ser simple y atractivo, incluyendo botones de encendido-apagado, bloqueo de canal y temporizador. Se mencionaron características adicionales como cambio de canales, volumen, subtítulos, ajustes de imagen y reconocimiento de voz. El equipo presentó el diseño, enfatizando materiales resistentes y reciclables para garantizar eficiencia y durabilidad. Se decidió usar batería como fuente de energía y optar por botones en lugar de ruedas de desplazamiento debido a su menor costo. Se acordó que la característica estrella será el reconocimiento de voz, aunque existen dudas sobre su implementación. Se asignaron tareas para los diseñadores y el experto en marketing.",
+  "temas": [
+    {
+      "texto": "Requisitos del control remoto",
+      "ids_intervenciones": [
+        "I000008",
+        "I000014",
+        "I000026",
+        "I000037"
+      ],
+      "id_ancla": "I000037"
+    },
+    {
+      "texto": "Funcionalidades del control remoto",
+      "ids_intervenciones": [
+        "I000056",
+        "I000057",
+        "I000059",
+        "I000060",
+        "I000061",
+        "I000062",
+        "I000063",
+        "I000064",
+        "I000065",
+        "I000066",
+        "I000067",
+        "I000068",
+        "I000069",
+        "I000070",
+        "I000071",
+        "I000072",
+        "I000073",
+        "I000074",
+        "I000075",
+        "I000076",
+        "I000077",
+        "I000080",
+        "I000081",
+        "I000082",
+        "I000083",
+        "I000084",
+        "I000085",
+        "I000086",
+        "I000087",
+        "I000088",
+        "I000089",
+        "I000090",
+        "I000091",
+        "I000092",
+        "I000093",
+        "I000094",
+        "I000095",
+        "I000096",
+        "I000097",
+        "I000098",
+        "I000099",
+        "I000100",
+        "I000102"
+      ],
+      "id_ancla": "I000102"
+    },
+    {
+      "texto": "Presentación del diseño del mando a distancia",
+      "ids_intervenciones": [
+        "I000112",
+        "I000116",
+        "I000137"
+      ],
+      "id_ancla": "I000137"
+    },
+    {
+      "texto": "Presentación del diseño y funcionamiento del control remoto",
+      "ids_intervenciones": [
+        "I000149",
+        "I000152",
+        "I000167",
+        "I000181",
+        "I000182"
+      ],
+      "id_ancla": "I000182"
+    },
+    {
+      "texto": "Características del control remoto",
+      "ids_intervenciones": [
+        "I000196",
+        "I000204",
+        "I000213",
+        "I000218",
+        "I000227"
+      ],
+      "id_ancla": "I000213"
+    },
+    {
+      "texto": "Fuente de energía",
+      "ids_intervenciones": [
+        "I000231",
+        "I000232"
+      ],
+      "id_ancla": "I000232"
+    },
+    {
+      "texto": "Diseño de moda brillante, colorido, moderno y fuerte.",
+      "ids_intervenciones": [
+        "I000243",
+        "I000244",
+        "I000245",
+        "I000246",
+        "I000247",
+        "I000248"
+      ],
+      "id_ancla": "I000248"
+    },
+    {
+      "texto": "Concepto de interfaz de usuario, tipo de interfaz y suplementos.",
+      "ids_intervenciones": [
+        "I000252",
+        "I000253",
+        "I000254",
+        "I000255",
+        "I000256",
+        "I000257",
+        "I000258",
+        "I000259"
+      ],
+      "id_ancla": "I000259"
+    },
+    {
+      "texto": "Investigación sobre el reconocimiento del habla.",
+      "ids_intervenciones": [
+        "I000263",
+        "I000264",
+        "I000265",
+        "I000266",
+        "I000267",
+        "I000268",
+        "I000269",
+        "I000270",
+        "I000271"
+      ],
+      "id_ancla": "I000271"
+    },
+    {
+      "texto": "Próxima reunión en treinta minutos.",
+      "ids_intervenciones": [
+        "I000276",
+        "I000277",
+        "I000278"
+      ],
+      "id_ancla": "I000278"
+    }
+  ],
+  "decisiones": [
+    {
+      "texto": "Se asignaron tres presentaciones al equipo.",
+      "ids_intervenciones": [
+        "I000037",
+        "I000042",
+        "I000046"
+      ],
+      "id_ancla": "I000046"
+    },
+    {
+      "texto": "Decisión de utilizar botones en lugar de ruedas de desplazamiento para reducir costos",
+      "ids_intervenciones": [
+        "I000189",
+        "I000190",
+        "I000191",
+        "I000192"
+      ],
+      "id_ancla": "I000192"
+    },
+    {
+      "texto": "El reconocimiento de voz será la característica estrella del control remoto.",
+      "ids_intervenciones": [
+        "I000213",
+        "I000216"
+      ],
+      "id_ancla": "I000213"
+    },
+    {
+      "texto": "Se utilizará batería como fuente de energía para el control remoto.",
+      "ids_intervenciones": [
+        "I000231",
+        "I000232"
+      ],
+      "id_ancla": "I000232"
+    },
+    {
+      "texto": "El reconocimiento del habla será investigado más tarde si es posible.",
+      "ids_intervenciones": [
+        "I000271",
+        "I000273",
+        "I000274"
+      ],
+      "id_ancla": "I000274"
+    }
+  ],
+  "problemas": [
+    {
+      "texto": "Se discutió la cantidad de interruptores de canal, con el diseñador de interfaz sugiriendo nueve y el gerente de proyecto confirmándolo.",
+      "ids_intervenciones": [
+        "I000053",
+        "I000054",
+        "I000055",
+        "I000056"
+      ],
+      "id_ancla": "I000056"
+    },
+    {
+      "texto": "La presentación incluye demasiadas opciones para el control remoto.",
+      "ids_intervenciones": [
+        "I000105",
+        "I000106"
+      ],
+      "id_ancla": "I000106"
+    },
+    {
+      "texto": "Necesidad de reducir la cantidad de opciones presentadas",
+      "ids_intervenciones": [
+        "I000106",
+        "I000114"
+      ],
+      "id_ancla": "I000114"
+    },
+    {
+      "texto": "Duda sobre la posibilidad de lograr desplazamiento con pulsación repetida en pergamino y pulsador",
+      "ids_intervenciones": [
+        "I000187"
+      ],
+      "id_ancla": "I000187"
+    },
+    {
+      "texto": "Existen dudas sobre la implementación del reconocimiento de voz.",
+      "ids_intervenciones": [
+        "I000216",
+        "I000219"
+      ],
+      "id_ancla": "I000216"
+    },
+    {
+      "texto": "No se está seguro de lo que significan los suplementos.",
+      "ids_intervenciones": [
+        "I000260",
+        "I000261"
+      ],
+      "id_ancla": "I000261"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "El diseñador de interfaz presentará su diseño.",
+      "ids_intervenciones": [
+        "I000037",
+        "I000042",
+        "I000048"
+      ],
+      "id_ancla": "I000048",
+      "responsable": "B",
+      "plazo": null
+    },
+    {
+      "texto": "Reducir la variedad de opciones en el control remoto.",
+      "ids_intervenciones": [
+        "I000105",
+        "I000106"
+      ],
+      "id_ancla": "I000106",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Ir a la siguiente diapositiva",
+      "ids_intervenciones": [
+        "I000126",
+        "I000136",
+        "I000147",
+        "I000149"
+      ],
+      "id_ancla": "I000149",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Presentación de la propuesta del experto en marketing",
+      "ids_intervenciones": [
+        "I000193",
+        "I000194",
+        "I000195"
+      ],
+      "id_ancla": "I000195",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "El diseñador industrial se encargará de enseñar el funcionamiento del reconocimiento de voz.",
+      "ids_intervenciones": [
+        "I000222"
+      ],
+      "id_ancla": "I000222",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "El diseño industrial se encargará de crear un diseño compacto, brillante y moderno.",
+      "ids_intervenciones": [
+        "I000243"
+      ],
+      "id_ancla": "I000243",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "El experto en marketing realizará una evaluación del producto.",
+      "ids_intervenciones": [
+        "I000279",
+        "I000284"
+      ],
+      "id_ancla": "I000284",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

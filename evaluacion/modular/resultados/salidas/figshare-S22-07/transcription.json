@@ -1,0 +1,109 @@
+{
+  "segments": [
+    {
+      "start": 1.06,
+      "end": 8.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Tengo a la media luna azul debajo de la media luna amarilla",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 59
+      }
+    },
+    {
+      "start": 11.74,
+      "end": 21.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Más o menos... está ubicada igual, o sea, ponle un centímetro y medio",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 69
+      }
+    },
+    {
+      "start": 21.7,
+      "end": 23.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Está más alta que el espejo?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 23.56,
+      "end": 26.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está en la misma línea que el espejo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 36
+      }
+    },
+    {
+      "start": 27.62,
+      "end": 36.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Mira, la parte de abajo de la media luna azul está muy poquito por debajo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 73
+      }
+    }
+  ]
+}

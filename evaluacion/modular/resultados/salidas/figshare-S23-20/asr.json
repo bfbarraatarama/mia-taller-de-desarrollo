@@ -1,0 +1,487 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 1.78,
+      "end": 9.9,
+      "text": "El espejo, primero llevarlo a la intersección entre la limusina y la luna de la parte de",
+      "words": [
+        {
+          "word": "El",
+          "start": 1.78,
+          "end": 2.22
+        },
+        {
+          "word": "espejo,",
+          "start": 2.22,
+          "end": 2.66
+        },
+        {
+          "word": "primero",
+          "start": 2.66,
+          "end": 3.7
+        },
+        {
+          "word": "llevarlo",
+          "start": 3.7,
+          "end": 5.78
+        },
+        {
+          "word": "a",
+          "start": 5.78,
+          "end": 5.9
+        },
+        {
+          "word": "la",
+          "start": 5.9,
+          "end": 6.1
+        },
+        {
+          "word": "intersección",
+          "start": 6.1,
+          "end": 6.7
+        },
+        {
+          "word": "entre",
+          "start": 6.7,
+          "end": 7.08
+        },
+        {
+          "word": "la",
+          "start": 7.08,
+          "end": 7.34
+        },
+        {
+          "word": "limusina",
+          "start": 7.34,
+          "end": 8.02
+        },
+        {
+          "word": "y",
+          "start": 8.02,
+          "end": 8.88
+        },
+        {
+          "word": "la",
+          "start": 8.88,
+          "end": 9.04
+        },
+        {
+          "word": "luna",
+          "start": 9.04,
+          "end": 9.24
+        },
+        {
+          "word": "de",
+          "start": 9.24,
+          "end": 9.44
+        },
+        {
+          "word": "la",
+          "start": 9.44,
+          "end": 9.56
+        },
+        {
+          "word": "parte",
+          "start": 9.56,
+          "end": 9.72
+        },
+        {
+          "word": "de",
+          "start": 9.72,
+          "end": 9.9
+        }
+      ]
+    },
+    {
+      "start": 9.9,
+      "end": 15.48,
+      "text": "arriba a la derecha, o sea, está a la derecha del auto y arriba de la luna amarilla.",
+      "words": [
+        {
+          "word": "arriba",
+          "start": 9.9,
+          "end": 10.06
+        },
+        {
+          "word": "a",
+          "start": 10.06,
+          "end": 10.2
+        },
+        {
+          "word": "la",
+          "start": 10.2,
+          "end": 10.36
+        },
+        {
+          "word": "derecha,",
+          "start": 10.36,
+          "end": 10.96
+        },
+        {
+          "word": "o",
+          "start": 11.02,
+          "end": 11.1
+        },
+        {
+          "word": "sea,",
+          "start": 11.1,
+          "end": 11.42
+        },
+        {
+          "word": "está",
+          "start": 11.62,
+          "end": 11.74
+        },
+        {
+          "word": "a",
+          "start": 11.74,
+          "end": 11.92
+        },
+        {
+          "word": "la",
+          "start": 11.92,
+          "end": 12.12
+        },
+        {
+          "word": "derecha",
+          "start": 12.12,
+          "end": 12.66
+        },
+        {
+          "word": "del",
+          "start": 12.66,
+          "end": 12.88
+        },
+        {
+          "word": "auto",
+          "start": 12.88,
+          "end": 13.26
+        },
+        {
+          "word": "y",
+          "start": 13.26,
+          "end": 13.72
+        },
+        {
+          "word": "arriba",
+          "start": 13.72,
+          "end": 14.02
+        },
+        {
+          "word": "de",
+          "start": 14.02,
+          "end": 14.24
+        },
+        {
+          "word": "la",
+          "start": 14.24,
+          "end": 14.36
+        },
+        {
+          "word": "luna",
+          "start": 14.36,
+          "end": 14.58
+        },
+        {
+          "word": "amarilla.",
+          "start": 14.58,
+          "end": 15.48
+        }
+      ]
+    },
+    {
+      "start": 15.62,
+      "end": 22.5,
+      "text": "Y después, justo en el medio, viste la parte izquierda como la manijita esa que tiene el",
+      "words": [
+        {
+          "word": "Y",
+          "start": 15.62,
+          "end": 16.02
+        },
+        {
+          "word": "después,",
+          "start": 16.02,
+          "end": 17.12
+        },
+        {
+          "word": "en",
+          "start": 18.66,
+          "end": 18.82
+        },
+        {
+          "word": "el",
+          "start": 18.82,
+          "end": 19.0
+        },
+        {
+          "word": "medio,",
+          "start": 19.0,
+          "end": 19.34
+        },
+        {
+          "word": "viste",
+          "start": 19.54,
+          "end": 19.68
+        },
+        {
+          "word": "la",
+          "start": 19.68,
+          "end": 19.9
+        },
+        {
+          "word": "parte",
+          "start": 19.9,
+          "end": 20.28
+        },
+        {
+          "word": "izquierda",
+          "start": 20.28,
+          "end": 21.14
+        },
+        {
+          "word": "como",
+          "start": 21.14,
+          "end": 21.4
+        },
+        {
+          "word": "la",
+          "start": 21.4,
+          "end": 21.62
+        },
+        {
+          "word": "manijita",
+          "start": 21.62,
+          "end": 21.98
+        },
+        {
+          "word": "esa",
+          "start": 21.98,
+          "end": 22.14
+        },
+        {
+          "word": "que",
+          "start": 22.14,
+          "end": 22.26
+        },
+        {
+          "word": "tiene",
+          "start": 22.26,
+          "end": 22.42
+        },
+        {
+          "word": "el",
+          "start": 22.42,
+          "end": 22.64
+        }
+      ]
+    },
+    {
+      "start": 22.64,
+      "end": 29.08,
+      "text": "espejo, va justo en el medio, digamos. No, esa manijita, digamos, ponela...",
+      "words": [
+        {
+          "word": "espejo,",
+          "start": 22.64,
+          "end": 23.12
+        },
+        {
+          "word": "va",
+          "start": 23.86,
+          "end": 24.4
+        },
+        {
+          "word": "justo",
+          "start": 24.4,
+          "end": 24.7
+        },
+        {
+          "word": "en",
+          "start": 24.7,
+          "end": 24.9
+        },
+        {
+          "word": "el",
+          "start": 24.9,
+          "end": 25.06
+        },
+        {
+          "word": "medio,",
+          "start": 25.06,
+          "end": 25.26
+        },
+        {
+          "word": "esa",
+          "start": 26.62,
+          "end": 26.88
+        },
+        {
+          "word": "manijita,",
+          "start": 26.88,
+          "end": 27.62
+        },
+        {
+          "word": "ponela...",
+          "start": 28.92,
+          "end": 29.28
+        }
+      ]
+    },
+    {
+      "start": 30.98,
+      "end": 35.12,
+      "text": "Viste donde termina la rueda del auto y la cola del auto?",
+      "words": [
+        {
+          "word": "Viste",
+          "start": 30.98,
+          "end": 31.18
+        },
+        {
+          "word": "donde",
+          "start": 31.18,
+          "end": 31.4
+        },
+        {
+          "word": "termina",
+          "start": 31.4,
+          "end": 32.32
+        },
+        {
+          "word": "la",
+          "start": 32.32,
+          "end": 33.1
+        },
+        {
+          "word": "rueda",
+          "start": 33.1,
+          "end": 33.48
+        },
+        {
+          "word": "del",
+          "start": 33.48,
+          "end": 33.7
+        },
+        {
+          "word": "auto",
+          "start": 33.7,
+          "end": 34.06
+        },
+        {
+          "word": "y",
+          "start": 34.06,
+          "end": 34.28
+        },
+        {
+          "word": "la",
+          "start": 34.28,
+          "end": 34.5
+        },
+        {
+          "word": "cola",
+          "start": 34.5,
+          "end": 34.64
+        },
+        {
+          "word": "del",
+          "start": 34.64,
+          "end": 34.84
+        },
+        {
+          "word": "auto?",
+          "start": 34.84,
+          "end": 35.12
+        }
+      ]
+    },
+    {
+      "start": 35.12,
+      "end": 42.92,
+      "text": "Sí. Bueno, ahí si trazas una línea recta hacia la derecha, ahí empieza el bultito del espejo.",
+      "words": [
+        {
+          "word": "Sí.",
+          "start": 35.12,
+          "end": 35.52
+        },
+        {
+          "word": "Bueno,",
+          "start": 35.82,
+          "end": 36.44
+        },
+        {
+          "word": "si",
+          "start": 37.26,
+          "end": 37.8
+        },
+        {
+          "word": "trazas",
+          "start": 37.8,
+          "end": 38.06
+        },
+        {
+          "word": "una",
+          "start": 38.06,
+          "end": 38.28
+        },
+        {
+          "word": "línea",
+          "start": 38.28,
+          "end": 38.66
+        },
+        {
+          "word": "recta",
+          "start": 38.66,
+          "end": 39.14
+        },
+        {
+          "word": "hacia",
+          "start": 39.14,
+          "end": 39.28
+        },
+        {
+          "word": "la",
+          "start": 39.28,
+          "end": 39.56
+        },
+        {
+          "word": "derecha,",
+          "start": 39.56,
+          "end": 40.14
+        },
+        {
+          "word": "ahí",
+          "start": 40.32,
+          "end": 40.64
+        },
+        {
+          "word": "empieza",
+          "start": 40.64,
+          "end": 41.24
+        },
+        {
+          "word": "el",
+          "start": 41.24,
+          "end": 41.8
+        },
+        {
+          "word": "bultito",
+          "start": 41.8,
+          "end": 42.44
+        },
+        {
+          "word": "del",
+          "start": 42.44,
+          "end": 42.6
+        },
+        {
+          "word": "espejo.",
+          "start": 42.6,
+          "end": 42.96
+        }
+      ]
+    }
+  ]
+}

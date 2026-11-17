@@ -1,0 +1,367 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.68,
+      "end": 6.22,
+      "text": "bueno vas a tener que agarrar el coso este de no sé que religión es que tiene muchas velas",
+      "words": [
+        {
+          "word": "bueno",
+          "start": 0.68,
+          "end": 1.34
+        },
+        {
+          "word": "vas",
+          "start": 1.34,
+          "end": 1.54
+        },
+        {
+          "word": "a",
+          "start": 1.54,
+          "end": 1.74
+        },
+        {
+          "word": "tener",
+          "start": 1.74,
+          "end": 1.86
+        },
+        {
+          "word": "que",
+          "start": 1.86,
+          "end": 2.04
+        },
+        {
+          "word": "agarrar",
+          "start": 2.04,
+          "end": 2.44
+        },
+        {
+          "word": "el",
+          "start": 2.44,
+          "end": 2.9
+        },
+        {
+          "word": "coso",
+          "start": 2.9,
+          "end": 3.2
+        },
+        {
+          "word": "este",
+          "start": 3.2,
+          "end": 3.4
+        },
+        {
+          "word": "de",
+          "start": 3.4,
+          "end": 3.82
+        },
+        {
+          "word": "no",
+          "start": 3.82,
+          "end": 3.94
+        },
+        {
+          "word": "sé",
+          "start": 3.94,
+          "end": 4.1
+        },
+        {
+          "word": "que",
+          "start": 4.1,
+          "end": 4.28
+        },
+        {
+          "word": "religión",
+          "start": 4.28,
+          "end": 4.7
+        },
+        {
+          "word": "es",
+          "start": 4.7,
+          "end": 4.86
+        },
+        {
+          "word": "que",
+          "start": 4.86,
+          "end": 5.02
+        },
+        {
+          "word": "tiene",
+          "start": 5.02,
+          "end": 5.2
+        },
+        {
+          "word": "muchas",
+          "start": 5.2,
+          "end": 5.58
+        },
+        {
+          "word": "velas",
+          "start": 5.58,
+          "end": 6.22
+        }
+      ]
+    },
+    {
+      "start": 8.84,
+      "end": 15.68,
+      "text": "y ponerlo arriba del jarrón va intersectado con el rinoceronte",
+      "words": [
+        {
+          "word": "y",
+          "start": 8.84,
+          "end": 9.5
+        },
+        {
+          "word": "ponerlo",
+          "start": 9.5,
+          "end": 10.16
+        },
+        {
+          "word": "arriba",
+          "start": 10.16,
+          "end": 10.56
+        },
+        {
+          "word": "del",
+          "start": 10.56,
+          "end": 12.04
+        },
+        {
+          "word": "jarrón",
+          "start": 12.04,
+          "end": 13.1
+        },
+        {
+          "word": "va",
+          "start": 13.1,
+          "end": 13.88
+        },
+        {
+          "word": "intersectado",
+          "start": 13.88,
+          "end": 14.4
+        },
+        {
+          "word": "con",
+          "start": 14.4,
+          "end": 14.72
+        },
+        {
+          "word": "el",
+          "start": 14.72,
+          "end": 15.04
+        },
+        {
+          "word": "rinoceronte",
+          "start": 15.04,
+          "end": 15.68
+        }
+      ]
+    },
+    {
+      "start": 15.68,
+      "end": 20.0,
+      "text": "o sea que coincida digamos la base con la abertura del jarrón",
+      "words": [
+        {
+          "word": "o",
+          "start": 15.68,
+          "end": 15.88
+        },
+        {
+          "word": "sea",
+          "start": 15.88,
+          "end": 16.5
+        },
+        {
+          "word": "que",
+          "start": 16.5,
+          "end": 16.76
+        },
+        {
+          "word": "coincida",
+          "start": 16.76,
+          "end": 17.12
+        },
+        {
+          "word": "digamos",
+          "start": 17.12,
+          "end": 17.46
+        },
+        {
+          "word": "la",
+          "start": 17.46,
+          "end": 17.66
+        },
+        {
+          "word": "base",
+          "start": 17.66,
+          "end": 17.9
+        },
+        {
+          "word": "con",
+          "start": 17.9,
+          "end": 18.32
+        },
+        {
+          "word": "la",
+          "start": 18.32,
+          "end": 18.5
+        },
+        {
+          "word": "abertura",
+          "start": 18.5,
+          "end": 18.86
+        },
+        {
+          "word": "del",
+          "start": 18.86,
+          "end": 19.08
+        },
+        {
+          "word": "jarrón",
+          "start": 19.08,
+          "end": 20.0
+        }
+      ]
+    },
+    {
+      "start": 23.08,
+      "end": 24.94,
+      "text": "y en el medio del rinoceronte?",
+      "words": [
+        {
+          "word": "y",
+          "start": 23.08,
+          "end": 23.56
+        },
+        {
+          "word": "en",
+          "start": 23.56,
+          "end": 23.74
+        },
+        {
+          "word": "el",
+          "start": 23.74,
+          "end": 23.9
+        },
+        {
+          "word": "medio",
+          "start": 23.9,
+          "end": 24.04
+        },
+        {
+          "word": "del",
+          "start": 24.04,
+          "end": 24.22
+        },
+        {
+          "word": "rinoceronte?",
+          "start": 24.22,
+          "end": 24.94
+        }
+      ]
+    },
+    {
+      "start": 24.94,
+      "end": 29.1,
+      "text": "no un poquito más abajo con el medio",
+      "words": [
+        {
+          "word": "no",
+          "start": 24.94,
+          "end": 25.68
+        },
+        {
+          "word": "un",
+          "start": 25.68,
+          "end": 25.94
+        },
+        {
+          "word": "poquito",
+          "start": 25.94,
+          "end": 26.22
+        },
+        {
+          "word": "más",
+          "start": 26.22,
+          "end": 27.42
+        },
+        {
+          "word": "abajo",
+          "start": 27.42,
+          "end": 28.44
+        },
+        {
+          "word": "con",
+          "start": 28.44,
+          "end": 28.6
+        },
+        {
+          "word": "el",
+          "start": 28.6,
+          "end": 28.82
+        },
+        {
+          "word": "medio",
+          "start": 28.82,
+          "end": 29.1
+        }
+      ]
+    },
+    {
+      "start": 29.1,
+      "end": 36.84,
+      "text": "mira las patas del rinoceronte coinciden con la estrella",
+      "words": [
+        {
+          "word": "mira",
+          "start": 29.1,
+          "end": 30.32
+        },
+        {
+          "word": "las",
+          "start": 30.32,
+          "end": 30.46
+        },
+        {
+          "word": "patas",
+          "start": 30.46,
+          "end": 31.22
+        },
+        {
+          "word": "del",
+          "start": 31.22,
+          "end": 31.88
+        },
+        {
+          "word": "rinoceronte",
+          "start": 31.88,
+          "end": 32.56
+        },
+        {
+          "word": "coinciden",
+          "start": 32.56,
+          "end": 33.22
+        },
+        {
+          "word": "con",
+          "start": 33.22,
+          "end": 33.82
+        },
+        {
+          "word": "la",
+          "start": 33.82,
+          "end": 36.24
+        },
+        {
+          "word": "estrella",
+          "start": 36.24,
+          "end": 36.84
+        }
+      ]
+    }
+  ]
+}

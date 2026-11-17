@@ -1,0 +1,39 @@
+{
+  "resumen": "La reunión se centró en la ubicación exacta de un mimo dentro del diseño, con el hablante describiendo su posición relativa a elementos como el búho y la oreja.",
+  "temas": [
+    {
+      "texto": "Ubicación del mimo",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008"
+      ],
+      "id_ancla": "I000007"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "El hablante debe especificar la ubicación del mimo.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008"
+      ],
+      "id_ancla": "I000007",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

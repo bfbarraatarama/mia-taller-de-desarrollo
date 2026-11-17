@@ -1,0 +1,35 @@
+{
+  "elemento": "clip-common_voice-common_voice_es_38141239",
+  "entrada_sha256": "add5b8fe8581d09e8ae5ec91d587af1346d74e23e0b8b96df0139c4617f32c81",
+  "configuracion": {
+    "modelo_stt": "medium",
+    "dispositivo": "cuda",
+    "modelo_minutas": "qwen2.5-7b",
+    "secciones": [
+      "resumen",
+      "temas",
+      "decisiones",
+      "problemas",
+      "acciones"
+    ]
+  },
+  "codigo_sha256": "ab99c8dea7e7699f22e9e44eccbc995ef95d4fb9c4c11cf5f657befb0b55e038",
+  "comando": [
+    "python",
+    "-m",
+    "src.stt",
+    "<datos>/clips/clip-common_voice-common_voice_es_38141239/audio.wav",
+    "-o",
+    "<inferencia>/clip-common_voice-common_voice_es_38141239/asr.json",
+    "--model",
+    "medium",
+    "--device",
+    "cuda"
+  ],
+  "segundos": 12.5,
+  "codigo": 0,
+  "salidas_sha256": {
+    "asr.json": "48939b1722f9c10f6935c7a900b1f4cb78d4aeba34a19d845571ca664909d62c"
+  },
+  "sellado": "16/11/2026, después de la corrida, contra resultados/salidas versionado en 4fd427e"
+}

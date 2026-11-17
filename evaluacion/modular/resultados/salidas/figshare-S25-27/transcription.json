@@ -1,0 +1,205 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.94,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "tener que mandar el foco a la derecha del caballo y abajo del mono",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 66
+      }
+    },
+    {
+      "start": 6.32,
+      "end": 9.2,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "de tal manera que",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 17
+      }
+    },
+    {
+      "start": 9.9,
+      "end": 15.5,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "la parte metálica del foco, el foco está casi centrado con el caballo, pero la",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 78
+      }
+    },
+    {
+      "start": 15.5,
+      "end": 20.2,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "parte metálica sobresale un milímetro más o menos las patas del caballo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 71
+      }
+    },
+    {
+      "start": 20.2,
+      "end": 28.52,
+      "speaker": null,
+      "name": null,
+      "text": "hacia abajo, claro, es casi como que la parte superior del foco coincide con la",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 79
+      }
+    },
+    {
+      "start": 28.52,
+      "end": 32.4,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "respecto al mono tenemos que",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 35.4,
+      "end": 42.1,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "el centro del foco como que apunta a la primer manchita del mono",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 64
+      }
+    },
+    {
+      "start": 42.1,
+      "end": 47.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "sentiste las tres manchitas blancas que tiene el lomo? está un poquito más a la izquierda pero apunta ahí",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 105
+      }
+    },
+    {
+      "start": 47.34,
+      "end": 58.14,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "ahí o a la izquierda? es como que apunta entre medio de las dos manchas de la",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 77
+      }
+    }
+  ]
+}

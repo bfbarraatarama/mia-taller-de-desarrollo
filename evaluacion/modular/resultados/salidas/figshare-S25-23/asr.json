@@ -1,0 +1,1197 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.96,
+      "text": "el rinoceronte azul mandalo arriba del menor a y a la izquierda de la fruta",
+      "words": [
+        {
+          "word": "el",
+          "start": 0.0,
+          "end": 0.74
+        },
+        {
+          "word": "rinoceronte",
+          "start": 0.74,
+          "end": 1.22
+        },
+        {
+          "word": "azul",
+          "start": 1.22,
+          "end": 1.8
+        },
+        {
+          "word": "mandalo",
+          "start": 1.8,
+          "end": 2.68
+        },
+        {
+          "word": "arriba",
+          "start": 2.68,
+          "end": 3.1
+        },
+        {
+          "word": "del",
+          "start": 3.1,
+          "end": 3.86
+        },
+        {
+          "word": "menor",
+          "start": 3.86,
+          "end": 4.12
+        },
+        {
+          "word": "a",
+          "start": 4.12,
+          "end": 4.22
+        },
+        {
+          "word": "y",
+          "start": 4.22,
+          "end": 4.4
+        },
+        {
+          "word": "a",
+          "start": 4.4,
+          "end": 4.46
+        },
+        {
+          "word": "la",
+          "start": 4.46,
+          "end": 4.58
+        },
+        {
+          "word": "izquierda",
+          "start": 4.58,
+          "end": 4.8
+        },
+        {
+          "word": "de",
+          "start": 4.8,
+          "end": 4.9
+        },
+        {
+          "word": "la",
+          "start": 4.9,
+          "end": 5.02
+        },
+        {
+          "word": "fruta",
+          "start": 5.02,
+          "end": 5.96
+        }
+      ]
+    },
+    {
+      "start": 6.56,
+      "end": 12.64,
+      "text": "que la pata de atrás del rinoceronte, que está más atrás de todas",
+      "words": [
+        {
+          "word": "que",
+          "start": 6.56,
+          "end": 7.08
+        },
+        {
+          "word": "la",
+          "start": 7.08,
+          "end": 7.68
+        },
+        {
+          "word": "pata",
+          "start": 7.68,
+          "end": 8.34
+        },
+        {
+          "word": "de",
+          "start": 8.34,
+          "end": 9.04
+        },
+        {
+          "word": "atrás",
+          "start": 9.04,
+          "end": 9.14
+        },
+        {
+          "word": "del",
+          "start": 9.14,
+          "end": 9.28
+        },
+        {
+          "word": "rinoceronte,",
+          "start": 9.28,
+          "end": 10.0
+        },
+        {
+          "word": "que",
+          "start": 10.0,
+          "end": 11.38
+        },
+        {
+          "word": "está",
+          "start": 11.38,
+          "end": 11.54
+        },
+        {
+          "word": "más",
+          "start": 11.54,
+          "end": 11.76
+        },
+        {
+          "word": "atrás",
+          "start": 11.76,
+          "end": 12.0
+        },
+        {
+          "word": "de",
+          "start": 12.0,
+          "end": 12.16
+        },
+        {
+          "word": "todas",
+          "start": 12.16,
+          "end": 12.64
+        }
+      ]
+    },
+    {
+      "start": 12.64,
+      "end": 16.7,
+      "text": "está sobre el borde negro de la fruta",
+      "words": [
+        {
+          "word": "está",
+          "start": 12.64,
+          "end": 13.52
+        },
+        {
+          "word": "sobre",
+          "start": 13.52,
+          "end": 14.26
+        },
+        {
+          "word": "el",
+          "start": 14.26,
+          "end": 14.58
+        },
+        {
+          "word": "borde",
+          "start": 14.58,
+          "end": 14.8
+        },
+        {
+          "word": "negro",
+          "start": 14.8,
+          "end": 15.02
+        },
+        {
+          "word": "de",
+          "start": 15.02,
+          "end": 15.16
+        },
+        {
+          "word": "la",
+          "start": 15.16,
+          "end": 15.3
+        },
+        {
+          "word": "fruta",
+          "start": 15.3,
+          "end": 16.7
+        }
+      ]
+    },
+    {
+      "start": 16.7,
+      "end": 25.34,
+      "text": "a ver, brá, ponelo ahí, ahora el eje horizontal del rinoceronte está más",
+      "words": [
+        {
+          "word": "a",
+          "start": 16.7,
+          "end": 17.48
+        },
+        {
+          "word": "ver,",
+          "start": 17.48,
+          "end": 18.44
+        },
+        {
+          "word": "brá,",
+          "start": 18.62,
+          "end": 18.8
+        },
+        {
+          "word": "ponelo",
+          "start": 18.92,
+          "end": 19.1
+        },
+        {
+          "word": "ahí,",
+          "start": 19.1,
+          "end": 19.9
+        },
+        {
+          "word": "ahora",
+          "start": 19.9,
+          "end": 20.6
+        },
+        {
+          "word": "el",
+          "start": 20.6,
+          "end": 22.3
+        },
+        {
+          "word": "eje",
+          "start": 22.3,
+          "end": 22.74
+        },
+        {
+          "word": "horizontal",
+          "start": 22.74,
+          "end": 23.48
+        },
+        {
+          "word": "del",
+          "start": 23.48,
+          "end": 23.66
+        },
+        {
+          "word": "rinoceronte",
+          "start": 23.66,
+          "end": 24.54
+        },
+        {
+          "word": "está",
+          "start": 24.54,
+          "end": 25.16
+        },
+        {
+          "word": "más",
+          "start": 25.16,
+          "end": 25.34
+        }
+      ]
+    },
+    {
+      "start": 25.34,
+      "end": 31.7,
+      "text": "arriba que el de la fruta de esta manera que la punta de la colita está más o",
+      "words": [
+        {
+          "word": "arriba",
+          "start": 25.34,
+          "end": 25.72
+        },
+        {
+          "word": "que",
+          "start": 25.72,
+          "end": 26.14
+        },
+        {
+          "word": "el",
+          "start": 26.14,
+          "end": 26.26
+        },
+        {
+          "word": "de",
+          "start": 26.26,
+          "end": 26.36
+        },
+        {
+          "word": "la",
+          "start": 26.36,
+          "end": 26.54
+        },
+        {
+          "word": "fruta",
+          "start": 26.54,
+          "end": 28.04
+        },
+        {
+          "word": "de",
+          "start": 28.04,
+          "end": 28.4
+        },
+        {
+          "word": "esta",
+          "start": 28.4,
+          "end": 28.5
+        },
+        {
+          "word": "manera",
+          "start": 28.5,
+          "end": 28.76
+        },
+        {
+          "word": "que",
+          "start": 28.76,
+          "end": 28.96
+        },
+        {
+          "word": "la",
+          "start": 28.96,
+          "end": 29.1
+        },
+        {
+          "word": "punta",
+          "start": 29.1,
+          "end": 29.4
+        },
+        {
+          "word": "de",
+          "start": 29.4,
+          "end": 29.52
+        },
+        {
+          "word": "la",
+          "start": 29.52,
+          "end": 29.68
+        },
+        {
+          "word": "colita",
+          "start": 29.68,
+          "end": 30.54
+        },
+        {
+          "word": "está",
+          "start": 30.54,
+          "end": 31.32
+        },
+        {
+          "word": "más",
+          "start": 31.32,
+          "end": 31.54
+        },
+        {
+          "word": "o",
+          "start": 31.54,
+          "end": 31.7
+        }
+      ]
+    },
+    {
+      "start": 31.7,
+      "end": 37.0,
+      "text": "menos en el mismo eje horizontal que la mitad de la de las semillitas",
+      "words": [
+        {
+          "word": "menos",
+          "start": 31.7,
+          "end": 32.02
+        },
+        {
+          "word": "en",
+          "start": 32.02,
+          "end": 32.3
+        },
+        {
+          "word": "el",
+          "start": 32.3,
+          "end": 33.52
+        },
+        {
+          "word": "mismo",
+          "start": 33.52,
+          "end": 33.88
+        },
+        {
+          "word": "eje",
+          "start": 33.88,
+          "end": 34.14
+        },
+        {
+          "word": "horizontal",
+          "start": 34.14,
+          "end": 34.8
+        },
+        {
+          "word": "que",
+          "start": 34.8,
+          "end": 35.18
+        },
+        {
+          "word": "la",
+          "start": 35.18,
+          "end": 35.34
+        },
+        {
+          "word": "mitad",
+          "start": 35.34,
+          "end": 35.54
+        },
+        {
+          "word": "de",
+          "start": 35.54,
+          "end": 35.72
+        },
+        {
+          "word": "la",
+          "start": 35.72,
+          "end": 35.94
+        },
+        {
+          "word": "las",
+          "start": 35.94,
+          "end": 36.1
+        },
+        {
+          "word": "semillitas",
+          "start": 36.1,
+          "end": 37.0
+        }
+      ]
+    },
+    {
+      "start": 37.0,
+      "end": 41.98,
+      "text": "¿entiende eso? la punta de la colita está más o menos en el mismo eje horizontal",
+      "words": [
+        {
+          "word": "¿entiende",
+          "start": 37.0,
+          "end": 37.6
+        },
+        {
+          "word": "eso?",
+          "start": 37.6,
+          "end": 37.8
+        },
+        {
+          "word": "la",
+          "start": 38.52,
+          "end": 38.96
+        },
+        {
+          "word": "punta",
+          "start": 38.96,
+          "end": 39.52
+        },
+        {
+          "word": "de",
+          "start": 39.52,
+          "end": 39.66
+        },
+        {
+          "word": "la",
+          "start": 39.66,
+          "end": 39.84
+        },
+        {
+          "word": "colita",
+          "start": 39.84,
+          "end": 40.16
+        },
+        {
+          "word": "está",
+          "start": 40.16,
+          "end": 40.36
+        },
+        {
+          "word": "más",
+          "start": 40.36,
+          "end": 40.52
+        },
+        {
+          "word": "o",
+          "start": 40.52,
+          "end": 40.64
+        },
+        {
+          "word": "menos",
+          "start": 40.64,
+          "end": 40.82
+        },
+        {
+          "word": "en",
+          "start": 40.82,
+          "end": 40.98
+        },
+        {
+          "word": "el",
+          "start": 40.98,
+          "end": 41.06
+        },
+        {
+          "word": "mismo",
+          "start": 41.06,
+          "end": 41.2
+        },
+        {
+          "word": "eje",
+          "start": 41.2,
+          "end": 41.46
+        },
+        {
+          "word": "horizontal",
+          "start": 41.46,
+          "end": 41.98
+        }
+      ]
+    },
+    {
+      "start": 43.34,
+      "end": 48.9,
+      "text": "exactamente la punta de la cola está, si vos traslás una horizontal en la punta de la",
+      "words": [
+        {
+          "word": "exactamente",
+          "start": 43.34,
+          "end": 43.78
+        },
+        {
+          "word": "la",
+          "start": 43.78,
+          "end": 44.06
+        },
+        {
+          "word": "punta",
+          "start": 44.06,
+          "end": 44.38
+        },
+        {
+          "word": "de",
+          "start": 44.38,
+          "end": 44.5
+        },
+        {
+          "word": "la",
+          "start": 44.5,
+          "end": 44.64
+        },
+        {
+          "word": "cola",
+          "start": 44.64,
+          "end": 45.02
+        },
+        {
+          "word": "está,",
+          "start": 45.02,
+          "end": 46.1
+        },
+        {
+          "word": "si",
+          "start": 46.78,
+          "end": 46.84
+        },
+        {
+          "word": "vos",
+          "start": 46.84,
+          "end": 46.94
+        },
+        {
+          "word": "traslás",
+          "start": 46.94,
+          "end": 47.1
+        },
+        {
+          "word": "una",
+          "start": 47.1,
+          "end": 47.48
+        },
+        {
+          "word": "horizontal",
+          "start": 47.48,
+          "end": 48.1
+        },
+        {
+          "word": "en",
+          "start": 48.1,
+          "end": 48.26
+        },
+        {
+          "word": "la",
+          "start": 48.26,
+          "end": 48.42
+        },
+        {
+          "word": "punta",
+          "start": 48.42,
+          "end": 48.64
+        },
+        {
+          "word": "de",
+          "start": 48.64,
+          "end": 48.78
+        },
+        {
+          "word": "la",
+          "start": 48.78,
+          "end": 48.9
+        }
+      ]
+    },
+    {
+      "start": 48.9,
+      "end": 52.32,
+      "text": "cola pasa por el mismo eje horizontal que de las semillas",
+      "words": [
+        {
+          "word": "cola",
+          "start": 48.9,
+          "end": 49.14
+        },
+        {
+          "word": "pasa",
+          "start": 49.14,
+          "end": 49.7
+        },
+        {
+          "word": "por",
+          "start": 49.7,
+          "end": 49.96
+        },
+        {
+          "word": "el",
+          "start": 49.96,
+          "end": 50.08
+        },
+        {
+          "word": "mismo",
+          "start": 50.08,
+          "end": 50.28
+        },
+        {
+          "word": "eje",
+          "start": 50.28,
+          "end": 50.44
+        },
+        {
+          "word": "horizontal",
+          "start": 50.44,
+          "end": 51.0
+        },
+        {
+          "word": "que",
+          "start": 51.0,
+          "end": 51.26
+        },
+        {
+          "word": "de",
+          "start": 51.26,
+          "end": 51.6
+        },
+        {
+          "word": "las",
+          "start": 51.6,
+          "end": 51.78
+        },
+        {
+          "word": "semillas",
+          "start": 51.78,
+          "end": 52.32
+        }
+      ]
+    },
+    {
+      "start": 52.32,
+      "end": 56.46,
+      "text": "ok pero ¿qué parte de las semillas? ¿del medio de las semillas? si yo traslás una",
+      "words": [
+        {
+          "word": "ok",
+          "start": 52.32,
+          "end": 52.8
+        },
+        {
+          "word": "pero",
+          "start": 52.8,
+          "end": 52.92
+        },
+        {
+          "word": "¿qué",
+          "start": 52.92,
+          "end": 53.08
+        },
+        {
+          "word": "parte",
+          "start": 53.08,
+          "end": 53.36
+        },
+        {
+          "word": "de",
+          "start": 53.36,
+          "end": 53.46
+        },
+        {
+          "word": "las",
+          "start": 53.46,
+          "end": 53.62
+        },
+        {
+          "word": "semillas?",
+          "start": 53.62,
+          "end": 54.04
+        },
+        {
+          "word": "¿del",
+          "start": 54.44,
+          "end": 54.64
+        },
+        {
+          "word": "medio",
+          "start": 54.64,
+          "end": 54.98
+        },
+        {
+          "word": "de",
+          "start": 54.98,
+          "end": 55.14
+        },
+        {
+          "word": "las",
+          "start": 55.14,
+          "end": 55.28
+        },
+        {
+          "word": "semillas?",
+          "start": 55.28,
+          "end": 55.64
+        },
+        {
+          "word": "si",
+          "start": 55.66,
+          "end": 55.84
+        },
+        {
+          "word": "yo",
+          "start": 55.84,
+          "end": 56.04
+        },
+        {
+          "word": "traslás",
+          "start": 56.04,
+          "end": 56.2
+        },
+        {
+          "word": "una",
+          "start": 56.2,
+          "end": 56.46
+        }
+      ]
+    },
+    {
+      "start": 56.46,
+      "end": 60.64,
+      "text": "cruz en el medio de las semillas, la horizontal está a la misma altura que el extremo de la cola",
+      "words": [
+        {
+          "word": "cruz",
+          "start": 56.46,
+          "end": 56.68
+        },
+        {
+          "word": "en",
+          "start": 56.68,
+          "end": 56.8
+        },
+        {
+          "word": "el",
+          "start": 56.8,
+          "end": 56.88
+        },
+        {
+          "word": "medio",
+          "start": 56.88,
+          "end": 56.96
+        },
+        {
+          "word": "de",
+          "start": 56.96,
+          "end": 57.06
+        },
+        {
+          "word": "las",
+          "start": 57.06,
+          "end": 57.18
+        },
+        {
+          "word": "semillas,",
+          "start": 57.18,
+          "end": 57.58
+        },
+        {
+          "word": "la",
+          "start": 57.74,
+          "end": 57.84
+        },
+        {
+          "word": "horizontal",
+          "start": 57.84,
+          "end": 58.4
+        },
+        {
+          "word": "está",
+          "start": 58.4,
+          "end": 59.04
+        },
+        {
+          "word": "a",
+          "start": 59.04,
+          "end": 59.1
+        },
+        {
+          "word": "la",
+          "start": 59.1,
+          "end": 59.16
+        },
+        {
+          "word": "misma",
+          "start": 59.16,
+          "end": 59.26
+        },
+        {
+          "word": "altura",
+          "start": 59.26,
+          "end": 59.46
+        },
+        {
+          "word": "que",
+          "start": 59.46,
+          "end": 59.58
+        },
+        {
+          "word": "el",
+          "start": 59.58,
+          "end": 59.8
+        },
+        {
+          "word": "extremo",
+          "start": 59.8,
+          "end": 60.06
+        },
+        {
+          "word": "de",
+          "start": 60.06,
+          "end": 60.18
+        },
+        {
+          "word": "la",
+          "start": 60.18,
+          "end": 60.34
+        },
+        {
+          "word": "cola",
+          "start": 60.34,
+          "end": 60.64
+        }
+      ]
+    },
+    {
+      "start": 61.76,
+      "end": 67.0,
+      "text": "ok entonces el rinoceronte está bastante más arriba que el fuego",
+      "words": [
+        {
+          "word": "ok",
+          "start": 61.76,
+          "end": 62.24
+        },
+        {
+          "word": "entonces",
+          "start": 62.24,
+          "end": 62.72
+        },
+        {
+          "word": "el",
+          "start": 62.72,
+          "end": 64.12
+        },
+        {
+          "word": "rinoceronte",
+          "start": 64.12,
+          "end": 64.6
+        },
+        {
+          "word": "está",
+          "start": 64.6,
+          "end": 64.78
+        },
+        {
+          "word": "bastante",
+          "start": 64.78,
+          "end": 65.16
+        },
+        {
+          "word": "más",
+          "start": 65.16,
+          "end": 65.4
+        },
+        {
+          "word": "arriba",
+          "start": 65.4,
+          "end": 65.78
+        },
+        {
+          "word": "que",
+          "start": 65.78,
+          "end": 66.14
+        },
+        {
+          "word": "el",
+          "start": 66.14,
+          "end": 66.32
+        },
+        {
+          "word": "fuego",
+          "start": 66.32,
+          "end": 67.0
+        }
+      ]
+    },
+    {
+      "start": 67.0,
+      "end": 75.6,
+      "text": "si, está lejos de quemarse y el curo está superpuesto a la fruta",
+      "words": [
+        {
+          "word": "si,",
+          "start": 67.0,
+          "end": 67.5
+        },
+        {
+          "word": "está",
+          "start": 67.84,
+          "end": 68.28
+        },
+        {
+          "word": "lejos",
+          "start": 68.28,
+          "end": 68.6
+        },
+        {
+          "word": "de",
+          "start": 68.6,
+          "end": 68.7
+        },
+        {
+          "word": "quemarse",
+          "start": 68.7,
+          "end": 69.28
+        },
+        {
+          "word": "y",
+          "start": 69.28,
+          "end": 70.24
+        },
+        {
+          "word": "el",
+          "start": 70.24,
+          "end": 70.36
+        },
+        {
+          "word": "curo",
+          "start": 70.36,
+          "end": 70.58
+        },
+        {
+          "word": "está",
+          "start": 70.58,
+          "end": 74.0
+        },
+        {
+          "word": "superpuesto",
+          "start": 74.0,
+          "end": 74.6
+        },
+        {
+          "word": "a",
+          "start": 74.6,
+          "end": 74.72
+        },
+        {
+          "word": "la",
+          "start": 74.72,
+          "end": 74.88
+        },
+        {
+          "word": "fruta",
+          "start": 74.88,
+          "end": 75.6
+        }
+      ]
+    },
+    {
+      "start": 76.78,
+      "end": 79.84,
+      "text": "la cola está superpuesta al curo también",
+      "words": [
+        {
+          "word": "la",
+          "start": 76.78,
+          "end": 77.26
+        },
+        {
+          "word": "cola",
+          "start": 77.26,
+          "end": 77.52
+        },
+        {
+          "word": "está",
+          "start": 77.52,
+          "end": 78.5
+        },
+        {
+          "word": "superpuesta",
+          "start": 78.5,
+          "end": 78.76
+        },
+        {
+          "word": "al",
+          "start": 78.76,
+          "end": 79.14
+        },
+        {
+          "word": "curo",
+          "start": 79.14,
+          "end": 79.32
+        },
+        {
+          "word": "también",
+          "start": 79.32,
+          "end": 79.84
+        }
+      ]
+    },
+    {
+      "start": 81.74,
+      "end": 87.76,
+      "text": "la pata de atrás, la que está más atrás de todo, está sobre el borde de la fruta, el borde negro",
+      "words": [
+        {
+          "word": "la",
+          "start": 81.74,
+          "end": 82.14
+        },
+        {
+          "word": "pata",
+          "start": 82.14,
+          "end": 82.54
+        },
+        {
+          "word": "de",
+          "start": 82.54,
+          "end": 82.62
+        },
+        {
+          "word": "atrás,",
+          "start": 82.62,
+          "end": 82.86
+        },
+        {
+          "word": "la",
+          "start": 82.86,
+          "end": 83.0
+        },
+        {
+          "word": "que",
+          "start": 83.0,
+          "end": 83.08
+        },
+        {
+          "word": "está",
+          "start": 83.08,
+          "end": 83.22
+        },
+        {
+          "word": "más",
+          "start": 83.22,
+          "end": 83.38
+        },
+        {
+          "word": "atrás",
+          "start": 83.38,
+          "end": 83.58
+        },
+        {
+          "word": "de",
+          "start": 83.58,
+          "end": 83.72
+        },
+        {
+          "word": "todo,",
+          "start": 83.72,
+          "end": 84.0
+        },
+        {
+          "word": "sobre",
+          "start": 85.14,
+          "end": 85.7
+        },
+        {
+          "word": "el",
+          "start": 85.7,
+          "end": 85.88
+        },
+        {
+          "word": "borde",
+          "start": 85.88,
+          "end": 86.4
+        },
+        {
+          "word": "de",
+          "start": 86.4,
+          "end": 86.56
+        },
+        {
+          "word": "la",
+          "start": 86.56,
+          "end": 86.74
+        },
+        {
+          "word": "fruta,",
+          "start": 86.74,
+          "end": 87.0
+        },
+        {
+          "word": "el",
+          "start": 87.02,
+          "end": 87.2
+        },
+        {
+          "word": "borde",
+          "start": 87.2,
+          "end": 87.46
+        },
+        {
+          "word": "negro",
+          "start": 87.46,
+          "end": 87.76
+        }
+      ]
+    },
+    {
+      "start": 87.76,
+      "end": 89.46,
+      "text": "no llega a lo rosa",
+      "words": [
+        {
+          "word": "no",
+          "start": 87.76,
+          "end": 88.16
+        },
+        {
+          "word": "llega",
+          "start": 88.16,
+          "end": 88.4
+        },
+        {
+          "word": "a",
+          "start": 88.4,
+          "end": 88.48
+        },
+        {
+          "word": "lo",
+          "start": 88.48,
+          "end": 88.56
+        },
+        {
+          "word": "rosa",
+          "start": 88.56,
+          "end": 89.46
+        }
+      ]
+    }
+  ]
+}

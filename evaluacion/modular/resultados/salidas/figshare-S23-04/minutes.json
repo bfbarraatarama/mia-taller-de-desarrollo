@@ -1,0 +1,30 @@
+{
+  "resumen": "La reunión se centró en la colocación de un clavo sobre una podadora, con algunas dudas sobre su posición exacta.",
+  "temas": [
+    {
+      "texto": "Colocación del clavo sobre la podadora",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007"
+      ],
+      "id_ancla": "I000007"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "Duda sobre la posición exacta del clavo en relación con el manubrio de la podadora.",
+      "ids_intervenciones": [
+        "I000006",
+        "I000007"
+      ],
+      "id_ancla": "I000007"
+    }
+  ],
+  "acciones": []
+}

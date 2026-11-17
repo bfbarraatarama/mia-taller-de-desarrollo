@@ -4,8 +4,9 @@ Cada elemento se corre con el comando de su etapa, en un proceso aparte (libera 
 - clip: `python -m src.stt` (Etapa 3);
 - tarea de Figshare: `python -m src.pipeline ejecutar`, la cadena real 2→3→4→5;
 - reunión de AMI: `python -m src.minutas` (Etapa 5) sobre su `transcription.json` traducido.
-Al terminar bien se escribe `inferencia.json`; una salida con el mismo insumo, la misma configuración y todos sus
-archivos se reutiliza salvo `rehacer`.
+Al terminar bien se escribe `inferencia.json`; una salida con el mismo insumo, la misma configuración, el mismo
+código de sus etapas (`huella_codigo`) y todos sus archivos se reutiliza salvo `rehacer`. En Figshare, el pipeline
+vuelve a correr en la misma carpeta y reutiliza por su cuenta las etapas que siguen vigentes.
 """
 
 from __future__ import annotations
@@ -23,9 +24,55 @@ from .muestra import verificar_muestra
 RAIZ = Path(__file__).resolve().parents[2]
 ARCHIVOS_ESPERADOS = {
     "clip": ("asr.json",),
-    "figshare": ("diarization.json", "asr.json", "transcription.json", "minutes.json", "ejecucion_minutas.json"),
-    "ami": ("minutes.json", "ejecucion_minutas.json"),
+    "figshare": ("diarization.json", "asr.json", "transcription.json", "minutes.json", "minutes.md",
+                 "ejecucion_minutas.json"),
+    "ami": ("minutes.json", "minutes.md", "ejecucion_minutas.json"),
 }
+
+
+# Código del que depende cada tipo de elemento: si cambia, su salida deja de ser vigente.
+CODIGO = {
+    "clip": ("src/stt", "src/tiempos.py"),
+    "figshare": ("src/ingesta", "src/diarizacion", "src/stt", "src/asociacion", "src/minutas", "src/pipeline",
+                 "src/tiempos.py", "src/rutas.py"),
+    "ami": ("src/minutas",),
+}
+
+
+def huella_codigo(tipo: str) -> str:
+    """SHA-256 del código (y los prompts) de las etapas que usa un tipo de elemento."""
+    h = hashlib.sha256()
+    for relativa in CODIGO[tipo]:
+        ruta = RAIZ / relativa
+        archivos = [ruta] if ruta.is_file() else sorted(
+            p for p in ruta.rglob("*") if p.is_file() and p.suffix in (".py", ".md", ".json") and "__pycache__" not in p.parts)
+        for archivo in archivos:
+            h.update(archivo.relative_to(RAIZ).as_posix().encode() + b"\0" + archivo.read_bytes() + b"\0")
+    return h.hexdigest()
+
+
+def verificar_salidas(elementos: list[dict], origen: Path) -> list[str]:
+    """Problemas de integridad de las salidas guardadas: cada archivo esperado tiene que coincidir con el SHA-256
+    que registró `inferir` en su `inferencia.json`. Lo usa `evaluar` antes de publicar o evaluar."""
+    problemas = []
+    for elemento in sorted(elementos, key=lambda e: e["id"]):
+        carpeta, tipo = Path(origen) / elemento["id"], _tipo(elemento)
+        try:
+            registrados = json.loads((carpeta / "inferencia.json").read_text(encoding="utf-8")).get("salidas_sha256")
+        except (OSError, ValueError):
+            registrados = None
+        if not registrados:
+            problemas.append(f"{elemento['id']}: sin SHA-256 registrados de sus salidas (inferencia.json)")
+            continue
+        for nombre in ARCHIVOS_ESPERADOS[tipo]:
+            ruta = carpeta / nombre
+            if nombre not in registrados:
+                problemas.append(f"{elemento['id']}/{nombre}: sin SHA-256 registrado")
+            elif not ruta.is_file():
+                problemas.append(f"{elemento['id']}/{nombre}: falta")
+            elif (encontrado := hashlib.sha256(ruta.read_bytes()).hexdigest()) != registrados[nombre]:
+                problemas.append(f"{elemento['id']}/{nombre}: SHA-256 registrado {registrados[nombre]}, encontrado {encontrado}")
+    return problemas
 
 
 class MuestraAlterada(Exception):
@@ -74,14 +121,31 @@ def _sin_rutas(comando: list[str], config) -> list[str]:
     return salida
 
 
-def _vigente(carpeta: Path, tipo: str, sha: str, modelos: dict) -> bool:
+def _hashes_salidas(carpeta: Path, tipo: str) -> dict[str, str] | None:
+    """SHA-256 de cada archivo esperado; None si falta alguno."""
+    if not all((carpeta / n).is_file() for n in ARCHIVOS_ESPERADOS[tipo]):
+        return None
+    return {n: hashlib.sha256((carpeta / n).read_bytes()).hexdigest() for n in ARCHIVOS_ESPERADOS[tipo]}
+
+
+def _pipeline_completado(carpeta: Path) -> bool:
+    try:
+        return json.loads((carpeta / "workflow.json").read_text(encoding="utf-8")).get("estado") == "completado"
+    except (OSError, ValueError):
+        return False
+
+
+def _vigente(carpeta: Path, tipo: str, sha: str, modelos: dict, codigo: str) -> bool:
+    """Mismo insumo, configuración y código; salidas intactas (SHA-256 del registro) y, en Figshare, pipeline completo."""
     try:
         registro = json.loads((carpeta / "inferencia.json").read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return False
     return (registro.get("codigo") == 0 and registro.get("entrada_sha256") == sha
-            and registro.get("configuracion") == modelos
-            and all((carpeta / n).is_file() for n in ARCHIVOS_ESPERADOS[tipo]))
+            and registro.get("configuracion") == modelos and registro.get("codigo_sha256") == codigo
+            and registro.get("salidas_sha256") is not None
+            and registro["salidas_sha256"] == _hashes_salidas(carpeta, tipo)
+            and (tipo != "figshare" or _pipeline_completado(carpeta)))
 
 
 def inferir(config, *, rehacer: bool = False, ejecutar=ejecutar_proceso, avisar=lambda *_: None) -> dict:
@@ -95,7 +159,8 @@ def inferir(config, *, rehacer: bool = False, ejecutar=ejecutar_proceso, avisar=
         tipo, carpeta = _tipo(elemento), Path(config.inferencia) / elemento["id"]
         entrada = _entrada(elemento, Path(config.salida))
         sha = hashlib.sha256(entrada.read_bytes()).hexdigest()
-        if not rehacer and _vigente(carpeta, tipo, sha, config.modelos):
+        huella = huella_codigo(tipo)
+        if not rehacer and _vigente(carpeta, tipo, sha, config.modelos, huella):
             resumen["reutilizados"] += 1
             continue
         if rehacer and carpeta.exists():
@@ -107,13 +172,16 @@ def inferir(config, *, rehacer: bool = False, ejecutar=ejecutar_proceso, avisar=
         codigo = ejecutar(comando, carpeta, tipo)
         resumen["ejecutados"] += 1
         faltan = [n for n in ARCHIVOS_ESPERADOS[tipo] if not (carpeta / n).is_file()]
+        if tipo == "figshare" and not faltan and not _pipeline_completado(carpeta):
+            faltan.append("workflow.json con estado «completado»")
         if codigo != 0 or faltan:
             fallidos.append(elemento["id"])
             avisar(f"    falló (código {codigo}; faltan {', '.join(faltan) or 'nada'}); ver {carpeta / 'inferencia.log'}")
             continue
         carpeta.mkdir(parents=True, exist_ok=True)
         (carpeta / "inferencia.json").write_text(json.dumps({
-            "elemento": elemento["id"], "entrada_sha256": sha, "configuracion": config.modelos,
+            "elemento": elemento["id"], "entrada_sha256": sha, "configuracion": config.modelos, "codigo_sha256": huella,
+            "salidas_sha256": _hashes_salidas(carpeta, tipo),
             "comando": _sin_rutas(comando, config), "segundos": round(time.time() - inicio, 1), "codigo": codigo,
         }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if fallidos:

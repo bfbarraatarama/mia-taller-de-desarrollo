@@ -1,0 +1,37 @@
+{
+  "resumen": "La reunión trataba sobre la ubicación de un objeto en una escena, pero no se llegó a acuerdos claros sobre el tema.",
+  "temas": [
+    {
+      "texto": "Ubicación del objeto en la escena",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008"
+      ],
+      "id_ancla": "I000008"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "No se logró acuerdos claros sobre la ubicación del objeto.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008"
+      ],
+      "id_ancla": "I000008"
+    }
+  ],
+  "acciones": []
+}

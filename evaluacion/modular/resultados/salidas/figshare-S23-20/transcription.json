@@ -1,0 +1,119 @@
+{
+  "segments": [
+    {
+      "start": 1.78,
+      "end": 9.9,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El espejo, primero llevarlo a la intersección entre la limusina y la luna de la parte de",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 88
+      }
+    },
+    {
+      "start": 9.9,
+      "end": 15.48,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "arriba a la derecha, o sea, está a la derecha del auto y arriba de la luna amarilla.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 84
+      }
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "name": null,
+      "text": "Y después, justo en el medio, viste la parte izquierda como la manijita esa que tiene el",
+      "overlap": null,
+      "ambiguous": true,
+      "timing": "unknown",
+      "speakers_detected": null,
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 88
+      }
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "name": null,
+      "text": "espejo, va justo en el medio, digamos. No, esa manijita, digamos, ponela...",
+      "overlap": null,
+      "ambiguous": true,
+      "timing": "unknown",
+      "speakers_detected": null,
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 75
+      }
+    },
+    {
+      "start": 30.98,
+      "end": 35.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Viste donde termina la rueda del auto y la cola del auto?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 57
+      }
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "name": null,
+      "text": "Sí. Bueno, ahí si trazas una línea recta hacia la derecha, ahí empieza el bultito del espejo.",
+      "overlap": null,
+      "ambiguous": true,
+      "timing": "unknown",
+      "speakers_detected": null,
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 93
+      }
+    }
+  ]
+}

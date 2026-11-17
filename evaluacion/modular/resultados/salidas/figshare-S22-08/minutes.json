@@ -1,0 +1,36 @@
+{
+  "resumen": "La reunión discutió sobre la ubicación y el contacto de las hojitas con una pintura, asegurando que no tocan elementos como el marco o la luna azul. Se confirmó que están en un lugar central.",
+  "temas": [
+    {
+      "texto": "Ubicación y contacto de las hojitas",
+      "ids_intervenciones": [
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023"
+      ],
+      "id_ancla": "I000023"
+    }
+  ],
+  "decisiones": [
+    {
+      "texto": "Las hojitas no tocan el marco, la luna azul ni las pestañas.",
+      "ids_intervenciones": [
+        "I000021",
+        "I000022",
+        "I000023"
+      ],
+      "id_ancla": "I000023"
+    }
+  ],
+  "problemas": [],
+  "acciones": []
+}

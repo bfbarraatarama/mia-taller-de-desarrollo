@@ -122,3 +122,5 @@ En un entorno aislado con Python 3.13.5, `python -m compileall -q src tests eval
 ## Límites y evaluación posterior
 
 No consta una instalación nueva integral en CPU o Windows ni una evaluación completa en la RTX 3050 Laptop de 6 GB prevista por la definición de la PoC. El manifiesto de muestra de Hito 2 y el de Figshare no acreditan por sí solos que se haya congelado la muestra combinada específica de §2.3. La reunión consentida de evaluación, sus notas previas independientes, las muestras modulares concretas y los siete escenarios deben identificarse con sus propios hashes y registros. No se deben convertir ejecuciones cortas, resultados previos ni pruebas simuladas en un veredicto GO. Los umbrales y casos se deben tomar directamente del documento de Hito 3, sin crear una segunda definición normativa.
+
+La muestra modular de §2.3 se congeló después con su propio manifiesto SHA-256 y se evaluó en la RTX 3050 Laptop de referencia: el criterio «Funcionamiento modular» se cumple (4/4 módulos al 100 %). Procedimiento, resultados y limitaciones en [Evaluación modular](../evaluacion/modular/README.md).

@@ -1,0 +1,35 @@
+{
+  "resumen": "La reunión se centró en la colocación de un objeto llamado 'alien' bajo un espejo, con las manos del personaje imaginario agarrando el auto y una mano en un telar.",
+  "temas": [
+    {
+      "texto": "Colocación del 'alien' bajo un espejo.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006"
+      ],
+      "id_ancla": "I000006"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "El 'alien' debe ser colocado debajo del espejo con las manos en posiciones específicas.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006"
+      ],
+      "id_ancla": "I000006",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

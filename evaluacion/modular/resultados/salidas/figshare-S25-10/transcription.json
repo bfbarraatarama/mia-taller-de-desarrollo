@@ -1,0 +1,694 @@
+{
+  "segments": [
+    {
+      "start": 3.14,
+      "end": 7.98,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Ok, el cuadro superponelo a la monja.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 37
+      }
+    },
+    {
+      "start": 8.4,
+      "end": 9.02,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Perfectamente.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 14
+      }
+    },
+    {
+      "start": 10.18,
+      "end": 11.72,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Y casi te diría que sí.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 13.28,
+      "end": 14.34,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿Alguna trindicación?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 21
+      }
+    },
+    {
+      "start": 15.6,
+      "end": 16.38,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿De los extremos?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 17
+      }
+    },
+    {
+      "start": 16.64,
+      "end": 18.9,
+      "speaker": null,
+      "name": null,
+      "text": "No, ves lo que sobre...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 18.9,
+      "end": 24.32,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Ves que de izquierda y derecha hay como unas orejas que sobresalen del cuadro en el medio.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 90
+      }
+    },
+    {
+      "start": 25.34,
+      "end": 25.66,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Listo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 6
+      }
+    },
+    {
+      "start": 25.66,
+      "end": 34.84,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "La oreja izquierda está casi rozando la parte izquierda de la ureola.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 69
+      }
+    },
+    {
+      "start": 35.06,
+      "end": 40.72,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Ponle que hay menos de medio milímetro de separación, pero es casi perfectamente superpuesto.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 93
+      }
+    },
+    {
+      "start": 43.86,
+      "end": 44.7,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "La oreja",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 8
+      }
+    },
+    {
+      "start": 44.7,
+      "end": 48.68,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "de abajo del medio está tocando el borde de la monja o se está sobrepasando",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 9,
+        "end": 84
+      }
+    },
+    {
+      "start": 48.68,
+      "end": 49.08,
+      "speaker": null,
+      "name": null,
+      "text": "o está de la izquierda.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 49.14,
+      "end": 50.66,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "No, está del lado de adentro.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 50.66,
+      "end": 55.94,
+      "speaker": null,
+      "name": null,
+      "text": "No está sobrepasando, pero está metido medio milímetro.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 55
+      }
+    },
+    {
+      "start": 58.16,
+      "end": 60.58,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Y la cabeza de la monja se ve o está tapada completamente?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 59
+      }
+    },
+    {
+      "start": 60.92,
+      "end": 61.48,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "La cabeza",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 9
+      }
+    },
+    {
+      "start": 61.48,
+      "end": 63.96,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "se ve un cachito negro.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 10,
+        "end": 33
+      }
+    },
+    {
+      "start": 65.04,
+      "end": 66.48,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, creo que más que eso.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 67.18,
+      "end": 67.92,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Se te ocurre algo más?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 68.76,
+      "end": 72.4,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La oreja de arriba está bastante centrada respecto a la cabeza de la monja.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 75
+      }
+    },
+    {
+      "start": 72.7,
+      "end": 73.66,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí, está",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 8
+      }
+    },
+    {
+      "start": 73.66,
+      "end": 77.56,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "un milímetro corrida hacia la derecha o medio milímetro.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 9,
+        "end": 65
+      }
+    },
+    {
+      "start": 77.64,
+      "end": 78.72,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "No está exactamente centrada.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 78.72,
+      "end": 80.24,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Claro, el cosito blanco.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "start": 82.52,
+      "end": 90.88,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "La oreja de arriba no está exactamente centrada con respecto a la parte negra de arriba de",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 90
+      }
+    },
+    {
+      "start": 90.88,
+      "end": 94.4,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "la monja, sino que está apenas hacia la derecha.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 23,
+        "start": 0,
+        "end": 48
+      }
+    },
+    {
+      "start": 94.5,
+      "end": 100.42,
+      "speaker": null,
+      "name": null,
+      "text": "O sea, de lo negro de la monja que está arriba se ve un poquito más de la izquierda que de",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 0,
+        "end": 90
+      }
+    },
+    {
+      "start": 100.42,
+      "end": 101.08,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "la derecha.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 25,
+        "start": 0,
+        "end": 11
+      }
+    },
+    {
+      "start": 101.34,
+      "end": 102.98,
+      "speaker": null,
+      "name": null,
+      "text": "Bueno, ya debemos estar ubicados.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 26,
+        "start": 0,
+        "end": 33
+      }
+    }
+  ]
+}

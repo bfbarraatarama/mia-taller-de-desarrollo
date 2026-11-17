@@ -1,0 +1,297 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 7.9,
+      "text": "tengo al m&m parado sobre la cebolla y casi tocando la lima",
+      "words": [
+        {
+          "word": "tengo",
+          "start": 0.0,
+          "end": 0.9
+        },
+        {
+          "word": "al",
+          "start": 0.9,
+          "end": 1.38
+        },
+        {
+          "word": "m",
+          "start": 1.38,
+          "end": 1.58
+        },
+        {
+          "word": "&m",
+          "start": 1.58,
+          "end": 2.94
+        },
+        {
+          "word": "parado",
+          "start": 2.94,
+          "end": 3.82
+        },
+        {
+          "word": "sobre",
+          "start": 3.82,
+          "end": 4.08
+        },
+        {
+          "word": "la",
+          "start": 4.08,
+          "end": 4.32
+        },
+        {
+          "word": "cebolla",
+          "start": 4.32,
+          "end": 5.14
+        },
+        {
+          "word": "y",
+          "start": 5.14,
+          "end": 5.6
+        },
+        {
+          "word": "casi",
+          "start": 5.6,
+          "end": 5.82
+        },
+        {
+          "word": "tocando",
+          "start": 5.82,
+          "end": 6.46
+        },
+        {
+          "word": "la",
+          "start": 6.46,
+          "end": 6.88
+        },
+        {
+          "word": "lima",
+          "start": 6.88,
+          "end": 7.9
+        }
+      ]
+    },
+    {
+      "start": 7.9,
+      "end": 14.28,
+      "text": "y la manito izquierda está casi tocando la cola de la ballena",
+      "words": [
+        {
+          "word": "y",
+          "start": 7.9,
+          "end": 8.92
+        },
+        {
+          "word": "la",
+          "start": 8.92,
+          "end": 9.1
+        },
+        {
+          "word": "manito",
+          "start": 9.1,
+          "end": 10.16
+        },
+        {
+          "word": "izquierda",
+          "start": 10.16,
+          "end": 11.64
+        },
+        {
+          "word": "está",
+          "start": 11.64,
+          "end": 11.92
+        },
+        {
+          "word": "casi",
+          "start": 11.92,
+          "end": 12.24
+        },
+        {
+          "word": "tocando",
+          "start": 12.24,
+          "end": 12.58
+        },
+        {
+          "word": "la",
+          "start": 12.58,
+          "end": 12.8
+        },
+        {
+          "word": "cola",
+          "start": 12.8,
+          "end": 12.94
+        },
+        {
+          "word": "de",
+          "start": 12.94,
+          "end": 13.08
+        },
+        {
+          "word": "la",
+          "start": 13.08,
+          "end": 13.24
+        },
+        {
+          "word": "ballena",
+          "start": 13.24,
+          "end": 14.28
+        }
+      ]
+    },
+    {
+      "start": 14.28,
+      "end": 17.28,
+      "text": "se me va para cualquiera de estos, ahí está",
+      "words": [
+        {
+          "word": "se",
+          "start": 14.28,
+          "end": 14.82
+        },
+        {
+          "word": "me",
+          "start": 14.82,
+          "end": 14.98
+        },
+        {
+          "word": "va",
+          "start": 14.98,
+          "end": 15.08
+        },
+        {
+          "word": "para",
+          "start": 15.08,
+          "end": 15.42
+        },
+        {
+          "word": "cualquiera",
+          "start": 15.42,
+          "end": 15.9
+        },
+        {
+          "word": "de",
+          "start": 15.9,
+          "end": 16.18
+        },
+        {
+          "word": "estos,",
+          "start": 16.18,
+          "end": 16.36
+        },
+        {
+          "word": "ahí",
+          "start": 16.36,
+          "end": 16.66
+        },
+        {
+          "word": "está",
+          "start": 16.66,
+          "end": 17.28
+        }
+      ]
+    },
+    {
+      "start": 17.28,
+      "end": 19.96,
+      "text": "no está tocando la cola de la ballena?",
+      "words": [
+        {
+          "word": "no",
+          "start": 17.28,
+          "end": 17.92
+        },
+        {
+          "word": "está",
+          "start": 17.92,
+          "end": 18.12
+        },
+        {
+          "word": "tocando",
+          "start": 18.12,
+          "end": 18.44
+        },
+        {
+          "word": "la",
+          "start": 18.44,
+          "end": 18.64
+        },
+        {
+          "word": "cola",
+          "start": 18.64,
+          "end": 18.78
+        },
+        {
+          "word": "de",
+          "start": 18.78,
+          "end": 18.94
+        },
+        {
+          "word": "la",
+          "start": 18.94,
+          "end": 19.12
+        },
+        {
+          "word": "ballena?",
+          "start": 19.12,
+          "end": 19.96
+        }
+      ]
+    },
+    {
+      "start": 21.46,
+      "end": 24.58,
+      "text": "está virtualmente tocando la, casi la toca",
+      "words": [
+        {
+          "word": "está",
+          "start": 21.46,
+          "end": 22.14
+        },
+        {
+          "word": "virtualmente",
+          "start": 22.14,
+          "end": 22.82
+        },
+        {
+          "word": "tocando",
+          "start": 22.82,
+          "end": 23.26
+        },
+        {
+          "word": "la,",
+          "start": 23.26,
+          "end": 23.8
+        },
+        {
+          "word": "casi",
+          "start": 23.8,
+          "end": 24.08
+        },
+        {
+          "word": "la",
+          "start": 24.08,
+          "end": 24.36
+        },
+        {
+          "word": "toca",
+          "start": 24.36,
+          "end": 24.58
+        }
+      ]
+    },
+    {
+      "start": 24.58,
+      "end": 25.22,
+      "text": "ok",
+      "words": [
+        {
+          "word": "ok",
+          "start": 24.58,
+          "end": 25.22
+        }
+      ]
+    }
+  ]
+}

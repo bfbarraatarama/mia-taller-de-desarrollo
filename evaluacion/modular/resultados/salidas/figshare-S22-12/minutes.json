@@ -1,0 +1,41 @@
+{
+  "resumen": "La reunión se centró en la descripción detallada de una sirenita amarilla sobre una plancha celeste. Se discutió la posición de su cola y cómo sobresale del apoyo de la plancha.",
+  "temas": [
+    {
+      "texto": "Descripción de la sirenita amarilla en una plancha celeste.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021",
+        "I000022",
+        "I000023",
+        "I000024",
+        "I000025",
+        "I000026",
+        "I000027"
+      ],
+      "id_ancla": "I000027"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": []
+}

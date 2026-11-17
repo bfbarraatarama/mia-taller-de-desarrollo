@@ -1,0 +1,368 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 2.84,
+      "end": 12.68,
+      "text": "Ok, la media luna amarilla está debajo del ojo y sobre la regla.",
+      "words": [
+        {
+          "word": "Ok,",
+          "start": 2.84,
+          "end": 3.36
+        },
+        {
+          "word": "la",
+          "start": 4.02,
+          "end": 4.22
+        },
+        {
+          "word": "media",
+          "start": 4.22,
+          "end": 4.54
+        },
+        {
+          "word": "luna",
+          "start": 4.54,
+          "end": 4.92
+        },
+        {
+          "word": "amarilla",
+          "start": 4.92,
+          "end": 5.98
+        },
+        {
+          "word": "está",
+          "start": 5.98,
+          "end": 9.44
+        },
+        {
+          "word": "debajo",
+          "start": 9.44,
+          "end": 9.82
+        },
+        {
+          "word": "del",
+          "start": 9.82,
+          "end": 9.98
+        },
+        {
+          "word": "ojo",
+          "start": 9.98,
+          "end": 10.58
+        },
+        {
+          "word": "y",
+          "start": 10.58,
+          "end": 10.8
+        },
+        {
+          "word": "sobre",
+          "start": 10.8,
+          "end": 11.1
+        },
+        {
+          "word": "la",
+          "start": 11.1,
+          "end": 11.4
+        },
+        {
+          "word": "regla.",
+          "start": 11.4,
+          "end": 12.68
+        }
+      ]
+    },
+    {
+      "start": 13.06,
+      "end": 13.58,
+      "text": "Sí.",
+      "words": [
+        {
+          "word": "Sí.",
+          "start": 13.06,
+          "end": 13.58
+        }
+      ]
+    },
+    {
+      "start": 19.2,
+      "end": 20.24,
+      "text": "A ver...",
+      "words": [
+        {
+          "word": "A",
+          "start": 19.2,
+          "end": 19.72
+        },
+        {
+          "word": "ver...",
+          "start": 19.72,
+          "end": 20.24
+        }
+      ]
+    },
+    {
+      "start": 20.24,
+      "end": 22.84,
+      "text": "Como muy simétrica la distancia entre uno y otro, ¿viste?",
+      "words": [
+        {
+          "word": "muy",
+          "start": 20.24,
+          "end": 20.48
+        },
+        {
+          "word": "simétrica",
+          "start": 20.48,
+          "end": 21.04
+        },
+        {
+          "word": "la",
+          "start": 21.04,
+          "end": 21.26
+        },
+        {
+          "word": "distancia",
+          "start": 21.26,
+          "end": 21.62
+        },
+        {
+          "word": "entre",
+          "start": 21.62,
+          "end": 21.86
+        },
+        {
+          "word": "uno",
+          "start": 21.86,
+          "end": 22.0
+        },
+        {
+          "word": "y",
+          "start": 22.0,
+          "end": 22.1
+        },
+        {
+          "word": "otro,",
+          "start": 22.1,
+          "end": 22.36
+        },
+        {
+          "word": "¿viste?",
+          "start": 22.46,
+          "end": 22.84
+        }
+      ]
+    },
+    {
+      "start": 23.28,
+      "end": 23.8,
+      "text": "Sí.",
+      "words": [
+        {
+          "word": "Sí.",
+          "start": 23.28,
+          "end": 23.8
+        }
+      ]
+    },
+    {
+      "start": 23.92,
+      "end": 28.8,
+      "text": "Lo que está distante del ojo está distante de la punta más alta de la regla, digamos.",
+      "words": [
+        {
+          "word": "Lo",
+          "start": 23.92,
+          "end": 24.12
+        },
+        {
+          "word": "que",
+          "start": 24.12,
+          "end": 24.28
+        },
+        {
+          "word": "está",
+          "start": 24.28,
+          "end": 24.52
+        },
+        {
+          "word": "distante",
+          "start": 24.52,
+          "end": 24.98
+        },
+        {
+          "word": "del",
+          "start": 24.98,
+          "end": 25.14
+        },
+        {
+          "word": "ojo",
+          "start": 25.14,
+          "end": 25.38
+        },
+        {
+          "word": "está",
+          "start": 25.38,
+          "end": 25.6
+        },
+        {
+          "word": "distante",
+          "start": 25.6,
+          "end": 26.04
+        },
+        {
+          "word": "de",
+          "start": 26.04,
+          "end": 26.22
+        },
+        {
+          "word": "la",
+          "start": 26.22,
+          "end": 26.38
+        },
+        {
+          "word": "punta",
+          "start": 26.38,
+          "end": 27.12
+        },
+        {
+          "word": "más",
+          "start": 27.12,
+          "end": 27.58
+        },
+        {
+          "word": "alta",
+          "start": 27.58,
+          "end": 27.82
+        },
+        {
+          "word": "de",
+          "start": 27.82,
+          "end": 28.0
+        },
+        {
+          "word": "la",
+          "start": 28.0,
+          "end": 28.18
+        },
+        {
+          "word": "regla,",
+          "start": 28.18,
+          "end": 28.44
+        },
+        {
+          "word": "digamos.",
+          "start": 28.48,
+          "end": 28.8
+        }
+      ]
+    },
+    {
+      "start": 28.8,
+      "end": 38.16,
+      "text": "Bueno, y digamos donde terminan las dos puntas del ojo, termina la media luna.",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 28.8,
+          "end": 30.18
+        },
+        {
+          "word": "y",
+          "start": 32.12,
+          "end": 32.22
+        },
+        {
+          "word": "digamos",
+          "start": 32.22,
+          "end": 32.76
+        },
+        {
+          "word": "donde",
+          "start": 32.76,
+          "end": 33.76
+        },
+        {
+          "word": "terminan",
+          "start": 33.76,
+          "end": 34.64
+        },
+        {
+          "word": "las",
+          "start": 34.64,
+          "end": 34.86
+        },
+        {
+          "word": "dos",
+          "start": 34.86,
+          "end": 35.06
+        },
+        {
+          "word": "puntas",
+          "start": 35.06,
+          "end": 35.28
+        },
+        {
+          "word": "del",
+          "start": 35.28,
+          "end": 35.42
+        },
+        {
+          "word": "ojo,",
+          "start": 35.42,
+          "end": 35.74
+        },
+        {
+          "word": "termina",
+          "start": 36.06,
+          "end": 36.32
+        },
+        {
+          "word": "la",
+          "start": 36.32,
+          "end": 37.58
+        },
+        {
+          "word": "media",
+          "start": 37.58,
+          "end": 37.76
+        },
+        {
+          "word": "luna.",
+          "start": 37.76,
+          "end": 38.16
+        }
+      ]
+    },
+    {
+      "start": 38.28,
+      "end": 38.72,
+      "text": "Claro.",
+      "words": [
+        {
+          "word": "Claro.",
+          "start": 38.28,
+          "end": 38.72
+        }
+      ]
+    },
+    {
+      "start": 39.02,
+      "end": 40.6,
+      "text": "Dale, listo.",
+      "words": [
+        {
+          "word": "Dale,",
+          "start": 39.02,
+          "end": 39.48
+        },
+        {
+          "word": "listo.",
+          "start": 39.84,
+          "end": 40.6
+        }
+      ]
+    }
+  ]
+}

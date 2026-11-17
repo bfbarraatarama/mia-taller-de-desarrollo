@@ -1,0 +1,520 @@
+{
+  "resumen": "La reunión abordó la distribución de oficinas y espacios en el departamento, considerando preferencias individuales, vistas, tranquilidad del lugar y privacidad. Se acordaron cambios en las asignaciones de habitaciones para diferentes personalidades, incluyendo Gisella, Maggie, Bruno y Paola. También se discutió la separación del salón de las oficinas y su uso como espacio para estudiantes, así como la posibilidad de alojar profesores con visitantes. Se confirmó que el nuevo plan es solo marginalmente mejor que el antiguo pero los grupos estarían felices con este resultado.",
+  "temas": [
+    {
+      "texto": "Distribución de oficinas",
+      "ids_intervenciones": [
+        "I000001",
+        "I000004"
+      ],
+      "id_ancla": "I000004"
+    },
+    {
+      "texto": "Distribución de vistas",
+      "ids_intervenciones": [
+        "I000054",
+        "I000063",
+        "I000072",
+        "I000081",
+        "I000099"
+      ],
+      "id_ancla": "I000099"
+    },
+    {
+      "texto": "Espacio para el salón",
+      "ids_intervenciones": [
+        "I000064",
+        "I000073",
+        "I000082",
+        "I000105",
+        "I000106"
+      ],
+      "id_ancla": "I000106"
+    },
+    {
+      "texto": "Distribución del salón y oficinas",
+      "ids_intervenciones": [
+        "I000107",
+        "I000109",
+        "I000113",
+        "I000128"
+      ],
+      "id_ancla": "I000128"
+    },
+    {
+      "texto": "Separación del salón de las oficinas",
+      "ids_intervenciones": [
+        "I000154",
+        "I000163",
+        "I000178",
+        "I000191",
+        "I000194"
+      ],
+      "id_ancla": "I000194"
+    },
+    {
+      "texto": "Organización del espacio en el edificio",
+      "ids_intervenciones": [
+        "I000214",
+        "I000215",
+        "I000216",
+        "I000217",
+        "I000218",
+        "I000219",
+        "I000220",
+        "I000221",
+        "I000222",
+        "I000223",
+        "I000224",
+        "I000225",
+        "I000226",
+        "I000227",
+        "I000228",
+        "I000229",
+        "I000230",
+        "I000231",
+        "I000232",
+        "I000233",
+        "I000234",
+        "I000235",
+        "I000236",
+        "I000237",
+        "I000238",
+        "I000239",
+        "I000240",
+        "I000241",
+        "I000242",
+        "I000243",
+        "I000244",
+        "I000245",
+        "I000246",
+        "I000247",
+        "I000248",
+        "I000249",
+        "I000250",
+        "I000251",
+        "I000252",
+        "I000253",
+        "I000254",
+        "I000255",
+        "I000256",
+        "I000257",
+        "I000258"
+      ],
+      "id_ancla": "I000232"
+    },
+    {
+      "texto": "Distribución de espacios para visitantes",
+      "ids_intervenciones": [
+        "I000277",
+        "I000283",
+        "I000291",
+        "I000313",
+        "I000342"
+      ],
+      "id_ancla": "I000342"
+    },
+    {
+      "texto": "Alojamiento de profesores y oficinas dobles",
+      "ids_intervenciones": [
+        "I000318",
+        "I000334",
+        "I000336",
+        "I000340",
+        "I000342"
+      ],
+      "id_ancla": "I000342"
+    },
+    {
+      "texto": "Reasignación de espacios para los miembros del equipo",
+      "ids_intervenciones": [
+        "I000358",
+        "I000369",
+        "I000372",
+        "I000381",
+        "I000384",
+        "I000387",
+        "I000390",
+        "I000393",
+        "I000395"
+      ],
+      "id_ancla": "I000395"
+    },
+    {
+      "texto": "Distribución de oficinas",
+      "ids_intervenciones": [
+        "I000412",
+        "I000413",
+        "I000414",
+        "I000415",
+        "I000416",
+        "I000417",
+        "I000418",
+        "I000419",
+        "I000420",
+        "I000421",
+        "I000422",
+        "I000423",
+        "I000425",
+        "I000426",
+        "I000427",
+        "I000428",
+        "I000429",
+        "I000430",
+        "I000431",
+        "I000432",
+        "I000433",
+        "I000434",
+        "I000435",
+        "I000436",
+        "I000437",
+        "I000438",
+        "I000439",
+        "I000440",
+        "I000441",
+        "I000442",
+        "I000443",
+        "I000445",
+        "I000446",
+        "I000447",
+        "I000448",
+        "I000449",
+        "I000450",
+        "I000451",
+        "I000452",
+        "I000453",
+        "I000454",
+        "I000455",
+        "I000456",
+        "I000457",
+        "I000458",
+        "I000459",
+        "I000460",
+        "I000461",
+        "I000462",
+        "I000463",
+        "I000464",
+        "I000465",
+        "I000466",
+        "I000467",
+        "I000468",
+        "I000469",
+        "I000470",
+        "I000471",
+        "I000472",
+        "I000473",
+        "I000474",
+        "I000475",
+        "I000476",
+        "I000477"
+      ],
+      "id_ancla": "I000477"
+    },
+    {
+      "texto": "Capacidad del nuevo espacio",
+      "ids_intervenciones": [
+        "I000482",
+        "I000491",
+        "I000497"
+      ],
+      "id_ancla": "I000497"
+    }
+  ],
+  "decisiones": [
+    {
+      "texto": "Susan prefiere oficinas privadas.",
+      "ids_intervenciones": [
+        "I000046"
+      ],
+      "id_ancla": "I000046"
+    },
+    {
+      "texto": "La sala de lectura tiene la mejor vista a las montañas.",
+      "ids_intervenciones": [
+        "I000079",
+        "I000083",
+        "I000085"
+      ],
+      "id_ancla": "I000085"
+    },
+    {
+      "texto": "Colocar el salón en una habitación tranquila y las oficinas de Gisella por separado.",
+      "ids_intervenciones": [
+        "I000107",
+        "I000109",
+        "I000128"
+      ],
+      "id_ancla": "I000128"
+    },
+    {
+      "texto": "Gisella mantendrá su actual disposición con un espacio para visitantes.",
+      "ids_intervenciones": [
+        "I000234",
+        "I000235"
+      ],
+      "id_ancla": "I000235"
+    },
+    {
+      "texto": "Se mantendrá la sala de lectura y se asignarán oficinas dobles a ciertos grupos.",
+      "ids_intervenciones": [
+        "I000318",
+        "I000326",
+        "I000342"
+      ],
+      "id_ancla": "I000342"
+    },
+    {
+      "texto": "Reasignar Gisella a una habitación individual y reubicar Maggie y Bruno",
+      "ids_intervenciones": [
+        "I000384",
+        "I000387"
+      ],
+      "id_ancla": "I000387"
+    },
+    {
+      "texto": "Maggie puede compartir la oficina con Bruno.",
+      "ids_intervenciones": [
+        "I000458",
+        "I000459",
+        "I000460",
+        "I000461",
+        "I000462"
+      ],
+      "id_ancla": "I000462"
+    },
+    {
+      "texto": "Circular la copia final a todos, incluyendo números sobre el espacio.",
+      "ids_intervenciones": [
+        "I000518",
+        "I000519",
+        "I000524"
+      ],
+      "id_ancla": "I000524"
+    }
+  ],
+  "problemas": [
+    {
+      "texto": "Limitaciones para crear particiones en la habitación.",
+      "ids_intervenciones": [
+        "I000091",
+        "I000092",
+        "I000093"
+      ],
+      "id_ancla": "I000093"
+    },
+    {
+      "texto": "Limitaciones de privacidad durante discusiones delicadas.",
+      "ids_intervenciones": [
+        "I000131",
+        "I000146"
+      ],
+      "id_ancla": "I000146"
+    },
+    {
+      "texto": "Separación acústica insuficiente para un salón con estudiantes ruidosos.",
+      "ids_intervenciones": [
+        "I000165",
+        "I000189"
+      ],
+      "id_ancla": "I000189"
+    },
+    {
+      "texto": "Se propuso un plan alternativo con una sala de administración separada y dos lugares de repuesto para visitantes.",
+      "ids_intervenciones": [
+        "I000275",
+        "I000276",
+        "I000277"
+      ],
+      "id_ancla": "I000277"
+    },
+    {
+      "texto": "El uso de la sala de lectura y su importancia para los grupos.",
+      "ids_intervenciones": [
+        "I000289",
+        "I000317"
+      ],
+      "id_ancla": "I000317"
+    },
+    {
+      "texto": "No se pudo juntar a Maggie y Bruno en la misma habitación",
+      "ids_intervenciones": [
+        "I000392"
+      ],
+      "id_ancla": "I000392"
+    },
+    {
+      "texto": "Existen dudas sobre el espacio por persona y la relación de género en las oficinas.",
+      "ids_intervenciones": [
+        "I000412",
+        "I000413",
+        "I000414",
+        "I000415",
+        "I000416",
+        "I000417",
+        "I000418",
+        "I000421",
+        "I000422",
+        "I000423",
+        "I000425",
+        "I000426",
+        "I000427",
+        "I000428",
+        "I000429",
+        "I000430",
+        "I000431",
+        "I000432",
+        "I000433",
+        "I000434",
+        "I000435",
+        "I000436",
+        "I000437",
+        "I000438",
+        "I000439",
+        "I000440",
+        "I000441",
+        "I000442",
+        "I000443",
+        "I000445",
+        "I000446",
+        "I000447",
+        "I000448",
+        "I000449",
+        "I000450",
+        "I000451",
+        "I000452",
+        "I000453",
+        "I000454",
+        "I000455",
+        "I000456",
+        "I000457",
+        "I000463",
+        "I000464",
+        "I000465",
+        "I000466",
+        "I000467",
+        "I000468",
+        "I000469",
+        "I000470",
+        "I000471",
+        "I000472"
+      ],
+      "id_ancla": "I000472"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "No se ha consultado explícitamente a los miembros del personal sobre preferencias de espacio.",
+      "ids_intervenciones": [
+        "I000049",
+        "I000051"
+      ],
+      "id_ancla": "I000051",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Propuesta de ubicar un salón en la parte superior derecha de la habitación.",
+      "ids_intervenciones": [
+        "I000107",
+        "I000108"
+      ],
+      "id_ancla": "I000108",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Manejar los lugares de visita de manera flexible entre diferentes personas.",
+      "ids_intervenciones": [
+        "I000129",
+        "I000137"
+      ],
+      "id_ancla": "I000137",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Explorar opciones de separación no permanentes para el salón.",
+      "ids_intervenciones": [
+        "I000155",
+        "I000174",
+        "I000191"
+      ],
+      "id_ancla": "I000191",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Resumir brevemente las diferencias entre las dos propuestas.",
+      "ids_intervenciones": [
+        "I000259",
+        "I000261",
+        "I000263",
+        "I000264",
+        "I000265",
+        "I000267"
+      ],
+      "id_ancla": "I000267",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Revisar la propuesta de distribución de espacios y hacer los cambios necesarios.",
+      "ids_intervenciones": [
+        "I000323",
+        "I000324"
+      ],
+      "id_ancla": "I000324",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Reasignar Gisella a una habitación individual",
+      "ids_intervenciones": [
+        "I000384",
+        "I000387"
+      ],
+      "id_ancla": "I000387",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Reubicar Maggie y Bruno en la habitación grande",
+      "ids_intervenciones": [
+        "I000393"
+      ],
+      "id_ancla": "I000393",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Considerar la posibilidad de asignar un visitante con Nikos y Yalina",
+      "ids_intervenciones": [
+        "I000402"
+      ],
+      "id_ancla": "I000402",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Investigar la relación de género y el espacio por persona dentro de las normas universitarias.",
+      "ids_intervenciones": [
+        "I000470",
+        "I000471"
+      ],
+      "id_ancla": "I000471",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Guardar la propuesta final.",
+      "ids_intervenciones": [
+        "I000515",
+        "I000516",
+        "I000517"
+      ],
+      "id_ancla": "I000515",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}
