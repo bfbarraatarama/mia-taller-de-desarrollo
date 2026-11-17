@@ -1,0 +1,103 @@
+{
+  "resumen": "La reunión abordó mejoras en la comunicación y los materiales de capacitación, propuso el uso del foro de OpenStreetMap para discusiones específicas y la creación de un servidor para videos de capacitación. También se discutió la creación de contenido para redes sociales, incluyendo videos e Instagram.",
+  "temas": [
+    {
+      "texto": "Utilizar el foro de OpenStreetMap para discusiones más puntuales.",
+      "ids_intervenciones": [
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013"
+      ],
+      "id_ancla": "I000013"
+    },
+    {
+      "texto": "Crear un servidor para videos de capacitación.",
+      "ids_intervenciones": [
+        "I000035",
+        "I000036",
+        "I000037",
+        "I000038",
+        "I000039",
+        "I000014"
+      ],
+      "id_ancla": "I000014"
+    },
+    {
+      "texto": "Creación de contenido en redes sociales, incluyendo videos y podcasts.",
+      "ids_intervenciones": [
+        "I000038",
+        "I000039",
+        "I000040",
+        "I000041"
+      ],
+      "id_ancla": "I000041"
+    },
+    {
+      "texto": "Uso de Instagram y otras plataformas para aumentar alcance del contenido.",
+      "ids_intervenciones": [
+        "I000042",
+        "I000043",
+        "I000044",
+        "I000045",
+        "I000046",
+        "I000047",
+        "I000048",
+        "I000049",
+        "I000050",
+        "I000051",
+        "I000052"
+      ],
+      "id_ancla": "I000052"
+    }
+  ],
+  "decisiones": [
+    {
+      "texto": "Utilizar el foro de OpenStreetMap para discusiones más puntuales.",
+      "ids_intervenciones": [
+        "I000013",
+        "I000014"
+      ],
+      "id_ancla": "I000014"
+    }
+  ],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "Rafael iniciará el foro.",
+      "ids_intervenciones": [
+        "I000014"
+      ],
+      "id_ancla": "I000014",
+      "responsable": "Rafael",
+      "plazo": null
+    },
+    {
+      "texto": "Crear un tema sobre los mapatón latinoamérica en el foro.",
+      "ids_intervenciones": [
+        "I000023",
+        "I000024"
+      ],
+      "id_ancla": "I000024",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Hacer like en contenido de otras comunidades para generar ruido y traer gente.",
+      "ids_intervenciones": [
+        "I000051",
+        "I000052"
+      ],
+      "id_ancla": "I000052",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

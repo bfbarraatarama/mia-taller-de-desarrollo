@@ -1,0 +1,1091 @@
+{
+  "segments": [
+    {
+      "start": 1.78,
+      "end": 2.34,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "Rafael.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 7
+      }
+    },
+    {
+      "start": 5.62,
+      "end": 9.68,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "Aquí estaba pensando que quizás, por ejemplo,",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 8,
+        "end": 53
+      }
+    },
+    {
+      "start": 9.96,
+      "end": 15.74,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "como lo estoy viendo, las reuniones de la junta siempre sabemos que nos quedamos cortos.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 88
+      }
+    },
+    {
+      "start": 15.88,
+      "end": 21.76,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "Quizás pudiésemos apoyarnos en el foro de la comunidad OpenStreetMap, el que está en",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 84
+      }
+    },
+    {
+      "start": 21.76,
+      "end": 27.6,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "discurso, y quizás desarrollar los temas ahí, temas más puntuales, temas de organización",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 88
+      }
+    },
+    {
+      "start": 27.6,
+      "end": 35.78,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "mapatón, temas como para cuando decimos vamos a lo abierto, pues quizás debatir eso en el telegram",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 98
+      }
+    },
+    {
+      "start": 35.78,
+      "end": 41.64,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "es súper se pierde de vista. Empieza esto, empieza a escribir, escribir y eso no queda en el log,",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 97
+      }
+    },
+    {
+      "start": 41.9,
+      "end": 49.08,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "en cambio quizás y otra cosa de repente tú dices bueno vamos a debatirlo en el wiki, pero el wiki",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 97
+      }
+    },
+    {
+      "start": 49.08,
+      "end": 54.3,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "para realmente un usuario que está empezando se le va a hacer complicado. En cambio veo que quizás",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 98
+      }
+    },
+    {
+      "start": 54.3,
+      "end": 63.36,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "el foro es bastante amigable, tiene notificaciones por correo, es una comunicación asíncrona y",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 94
+      }
+    },
+    {
+      "start": 63.36,
+      "end": 69.1,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "pudiésemos desarrollar y aprovechar esa plataforma. Los temas que quizás queden acá abiertos,",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 93
+      }
+    },
+    {
+      "start": 69.9,
+      "end": 73.02,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "empezamos a crearlos allá y empezamos a movimientos a los temas ahí en el foro.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 79
+      }
+    },
+    {
+      "start": 74.84,
+      "end": 80.74,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "Yo estoy de acuerdo. ¿Alguien no está de acuerdo? Hagámoslo así, de que se haga en discurs la",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 93
+      }
+    },
+    {
+      "start": 80.74,
+      "end": 86.73,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "pequeña votación o debate y Rafael podrías tú iniciar este foro?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 64
+      }
+    },
+    {
+      "start": 89.54,
+      "end": 98.32,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "Sí, sí de hecho tenía pensado crear un tema de un claro nosotros todavía no tenemos como un logo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 96
+      }
+    },
+    {
+      "start": 98.32,
+      "end": 106.54,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "para los notatón y le voy a comentar a Andrés para abrir un tema respecto a un logo contest o algo así",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 102
+      }
+    },
+    {
+      "start": 106.54,
+      "end": 112.28,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "que la gente que quiera colaborar haciendo un logo para los notatón y que el premio sería",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 89
+      }
+    },
+    {
+      "start": 112.28,
+      "end": 118.52,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "no sé, primero unos stickers y hacerle llegar a unos stickers así como empezar a usar el foro pero",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 98
+      }
+    },
+    {
+      "start": 119.1,
+      "end": 125.02,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "habría que entonces definir los temas que dejamos abiertos acá para abrirlos en el foro y seguir la",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 99
+      }
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "name": null,
+      "text": "discusión allá. Pero nos referimos específicamente a qué forma va a tomar este mapatón entre dos",
+      "overlap": null,
+      "ambiguous": true,
+      "timing": "unknown",
+      "speakers_detected": null,
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 96
+      }
+    },
+    {
+      "start": 133.36,
+      "end": 136.12,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "juntas los temas y todo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "start": 136.64,
+      "end": 137.3,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "Ok, perfecto.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 25,
+        "end": 38
+      }
+    },
+    {
+      "start": 139.54,
+      "end": 146.94,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "Es cuestión de yo puedo abrir un tema sobre los mapatón latinoamérica y empezamos ahí a desarrollar",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 99
+      }
+    },
+    {
+      "start": 146.94,
+      "end": 151.34,
+      "speaker": "SPEAKER_02",
+      "name": "Juan",
+      "text": "lo que ya se lo inició la toma de decisiones que se vaya a hacer.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_02",
+          "name": "Juan"
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 65
+      }
+    },
+    {
+      "start": 153.0,
+      "end": 153.6,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "Genial.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 66,
+        "end": 73
+      }
+    },
+    {
+      "start": 155.66,
+      "end": 160.08,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "Genial, paso al tema siguiente que son los materiales de capacitación.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 70
+      }
+    },
+    {
+      "start": 160.94,
+      "end": 167.32,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "Esto es un tema que venimos discutiendo desde mucho tiempo todos estamos de acuerdo que los",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 23,
+        "start": 0,
+        "end": 91
+      }
+    },
+    {
+      "start": 167.32,
+      "end": 172.0,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "materiales actuales de capacitación son áridos para nuevos, los nuevos son más jóvenes,",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 24,
+        "start": 0,
+        "end": 87
+      }
+    },
+    {
+      "start": 172.24,
+      "end": 177.56,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "quieren videos, quieren TikTok, quieren cosas muy cortas, muy específicas y muy dinámicas.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 25,
+        "start": 0,
+        "end": 90
+      }
+    },
+    {
+      "start": 179.88,
+      "end": 185.64,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "Yo empecé a hacer videos pensando en unas, ya platicamos aunque no es un acuerdo de tener",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 26,
+        "start": 0,
+        "end": 89
+      }
+    },
+    {
+      "start": 185.64,
+      "end": 190.58,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "una sección en la wiki o en otro espacio ligado con la wiki, una especie de servidor pero que sea",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 27,
+        "start": 0,
+        "end": 97
+      }
+    },
+    {
+      "start": 190.58,
+      "end": 197.34,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "fácil de administrar. En esa perspectiva yo empecé a hacer mini videos de cualquier cosa. El otro",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 28,
+        "start": 0,
+        "end": 97
+      }
+    },
+    {
+      "start": 197.34,
+      "end": 201.92,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "día quise editar la wiki, entonces hice un video de cómo empezar a editar la wiki a nivel muy,",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 29,
+        "start": 0,
+        "end": 94
+      }
+    },
+    {
+      "start": 201.92,
+      "end": 207.36,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "muy, muy básico, considerando que Andrés ya tiene un video de cómo editar la wiki a un nivel un",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 30,
+        "start": 0,
+        "end": 95
+      }
+    },
+    {
+      "start": 207.36,
+      "end": 215.14,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "poquito más avanzado. Hice un video de Mapillary, de Street Complete, etcétera, etcétera. ¿Dónde",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 31,
+        "start": 0,
+        "end": 96
+      }
+    },
+    {
+      "start": 215.14,
+      "end": 221.84,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "tendría que ser eso? Si queremos que sea así, cómo estructurar los quiénes deberían hacer esos",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 32,
+        "start": 0,
+        "end": 94
+      }
+    },
+    {
+      "start": 221.84,
+      "end": 229.22,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "videos. ¿Tendríamos que tener una agenda de, más bien una lista de apps donde necesitamos hacer videos?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 33,
+        "start": 0,
+        "end": 103
+      }
+    },
+    {
+      "start": 229.42,
+      "end": 234.48,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "O sea, ¿cómo listamos las necesidades para que alguien haga un video de esas necesidades y luego",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 34,
+        "start": 0,
+        "end": 96
+      }
+    },
+    {
+      "start": 234.48,
+      "end": 242.26,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "tachamos ya está hecho? Y esto era una idea que creo que Juan puso en algún momento,",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 35,
+        "start": 0,
+        "end": 84
+      }
+    },
+    {
+      "start": 243.36,
+      "end": 250.36,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "de también podríamos pensar en hacer podcasts, podcasts informativos y de capacitación,",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 36,
+        "start": 0,
+        "end": 87
+      }
+    },
+    {
+      "start": 250.5,
+      "end": 253.03,
+      "speaker": "SPEAKER_00",
+      "name": "marta",
+      "text": "no sé, hablemos alrededor de ese tema en general.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": "marta"
+        }
+      ],
+      "source": {
+        "segment": 37,
+        "start": 0,
+        "end": 49
+      }
+    },
+    {
+      "start": 259.14,
+      "end": 267.06,
+      "speaker": "SPEAKER_01",
+      "name": "Frady",
+      "text": "Yo tenía la mano alante, les cuento mi experiencia pues por mapa en Bogotá que es como mi enfoque,",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": "Frady"
+        }
+      ],
+      "source": {
+        "segment": 38,
+        "start": 0,
+        "end": 98
+      }
+    },
+    {
+      "start": 267.06,
+      "end": 273.34,
+      "speaker": "SPEAKER_01",
+      "name": "Frady",
+      "text": "pero ha sido un poquito más amplio que eso. Me dio por crear la cuenta en Instagram y es la que",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": "Frady"
+        }
+      ],
+      "source": {
+        "segment": 39,
+        "start": 0,
+        "end": 95
+      }
+    },
+    {
+      "start": 273.34,
+      "end": 280.2,
+      "speaker": "SPEAKER_01",
+      "name": "Frady",
+      "text": "más se mueve, la que más like tiene, la que más llega público completamente diferente yo. Miércoles,",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": "Frady"
+        }
+      ],
+      "source": {
+        "segment": 40,
+        "start": 0,
+        "end": 100
+      }
+    },
+    {
+      "start": 280.36,
+      "end": 288.18,
+      "speaker": "SPEAKER_01",
+      "name": "Frady",
+      "text": "aquí sí se mueve y está el cual, como lo dice es mapeadora, los muchachos les gusta eso. De pronto,",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": "Frady"
+        }
+      ],
+      "source": {
+        "segment": 41,
+        "start": 0,
+        "end": 99
+      }
+    },
+    {
+      "start": 288.7,
+      "end": 294.6,
+      "speaker": "SPEAKER_01",
+      "name": "Frady",
+      "text": "mostrar cómo uno mapea un TikTok de 30 segundos, agregar una cuchita, puede llegar a tener más",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": "Frady"
+        }
+      ],
+      "source": {
+        "segment": 42,
+        "start": 0,
+        "end": 94
+      }
+    },
+    {
+      "start": 294.6,
+      "end": 300.16,
+      "speaker": "SPEAKER_01",
+      "name": "Frady",
+      "text": "alcance que un video de una junta nuestra en la que explicó durante una hora comodita del",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": "Frady"
+        }
+      ],
+      "source": {
+        "segment": 43,
+        "start": 0,
+        "end": 89
+      }
+    },
+    {
+      "start": 300.16,
+      "end": 308.54,
+      "speaker": null,
+      "name": null,
+      "text": "Wiki. Puede llegar a tener mucho más y no sé, agregar un árbol y ya empieza a instalar o",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": "Frady"
+        }
+      ],
+      "source": {
+        "segment": 44,
+        "start": 0,
+        "end": 88
+      }
+    },
+    {
+      "start": 308.54,
+      "end": 315.14,
+      "speaker": "SPEAKER_01",
+      "name": "Frady",
+      "text": "descargar así algo rápido. Podría tener mucho alcance y estarlo continuamente bombardeando.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": "Frady"
+        }
+      ],
+      "source": {
+        "segment": 45,
+        "start": 0,
+        "end": 91
+      }
+    },
+    {
+      "start": 316.62,
+      "end": 321.82,
+      "speaker": "SPEAKER_01",
+      "name": "Frady",
+      "text": "Por eso yo siempre me molesto como lo con las redes sociales, como cualquiera que publique ustedes,",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": "Frady"
+        }
+      ],
+      "source": {
+        "segment": 46,
+        "start": 0,
+        "end": 99
+      }
+    },
+    {
+      "start": 322.46,
+      "end": 328.6,
+      "speaker": null,
+      "name": null,
+      "text": "que en las otras comunidades repitimos eso. Al menos hagamos like porque eso es generar",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": "Frady"
+        }
+      ],
+      "source": {
+        "segment": 47,
+        "start": 0,
+        "end": 87
+      }
+    },
+    {
+      "start": 328.6,
+      "end": 334.92,
+      "speaker": null,
+      "name": null,
+      "text": "ruido y empezar a hacer, bueno a mover redes sociales y empezar a traer gente.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": "Frady"
+        }
+      ],
+      "source": {
+        "segment": 48,
+        "start": 0,
+        "end": 78
+      }
+    }
+  ]
+}
