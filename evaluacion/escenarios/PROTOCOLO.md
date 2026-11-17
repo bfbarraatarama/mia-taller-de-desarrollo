@@ -20,11 +20,11 @@ En la aplicación, elegir como directorio de salida una carpeta nueva por escena
 
 | Escenario | Entrada | «Entonces» de §2.1 | Automático | Tercero (sí/no) | Observaciones |
 |---|---|---|---|---|---|
-| Happy path | `evaluacion/integral/muestras/osm-latam-20220730/audio.wav` (reunión de prueba del #14) | Grabar unos 30 s desde la interfaz en un directorio elegido: queda guardada ahí | ver `happy_path.json` | | |
-| | Procesar el audio de la reunión: se ve el avance de cada etapa | manual | | |
-| | Aparece una ficha por hablante con fragmento de audio y texto; escuchar y escribir el nombre. Comprobar que el nombre corresponde a quien habla (en el audio, Marta le dice «Rafael» a uno de ellos) | manual | | |
-| | Transcripción con nombres y marcas temporales; minuta con temas, decisiones y acciones con responsable y marca temporal | ver `happy_path.json` | | |
-| | Recupera los 2 temas y la acción sin inventar; la misma reunión en varios archivos da una sola transcripción y una sola minuta | ver `calidad.md` del #14 | | |
+| Happy path · grabación | Cualquier audio que suene por el sistema | Grabar unos 30 s desde la interfaz en un directorio elegido: queda guardada ahí. Comprobación aparte del procesamiento: no es un recorrido único de grabar y procesar; ese recorrido se hizo por línea de comandos (`happy_path.json`) | manual | | |
+| Happy path · procesamiento | `evaluacion/integral/muestras/osm-latam-20220730/audio.wav` (reunión de prueba del #14), cargado desde la interfaz | Se ve el avance de cada etapa | manual | | |
+| | | Aparece una ficha por hablante con fragmento de audio y texto; escuchar y escribir el nombre. Comprobar que el nombre corresponde a quien habla (en el audio, Marta le dice «Rafael» a uno de ellos) | manual | | |
+| | | Transcripción con nombres y marcas temporales; minuta con temas, decisiones y acciones con responsable y marca temporal | ver `happy_path.json` | | |
+| | | Recupera los 2 temas y la acción sin inventar: **no** en las corridas 01 y 02 del #14; la misma reunión en varios archivos da una sola transcripción y una sola minuta | ver `calidad.md` del #14 | | |
 | 2.1.1 Terminología | La misma reunión de OSM | Transcribe sin adaptación terminológica y conserva el audio | ver `terminologia.json` | | |
 | | | Escuchar y confirmar la lista de términos de `terminologia.json` (por ejemplo, Discourse → «discurso») | manual | | |
 | 2.1.2 Voces y superposición | `evaluacion/modular/datos/figshare/S25/12/audio.wav` | Conserva etiquetas, intervalos y solapamientos | ver reporte | | |

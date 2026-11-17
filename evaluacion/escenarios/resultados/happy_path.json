@@ -70,9 +70,14 @@
       "evidencia": "#14, corridas 02 y 04 (tres cortes en orden)"
     },
     {
-      "comprobacion": "Recupera los 2 temas y la acción sin inventar",
-      "resultado": "pendiente",
-      "evidencia": "calidad.md del #14 (corridas 01 y 02)"
+      "comprobacion": "Recupera los 2 temas y la acción sin inventar, en las corridas 01 y 02 del #14 (WAV directo)",
+      "resultado": "no",
+      "evidencia": "calidad.md del #14: ninguna de las dos modalidades cumple (1/2 temas en ambas; acción 0/1 y 1/1; 2 y 1 acciones inventadas)"
+    },
+    {
+      "comprobacion": "Recupera los 2 temas y la acción sin inventar, en esta grabación",
+      "resultado": "no evaluada",
+      "evidencia": "sin evaluación independiente de su minuta"
     },
     {
       "comprobacion": "Avance de cada etapa y fichas con fragmento y texto",

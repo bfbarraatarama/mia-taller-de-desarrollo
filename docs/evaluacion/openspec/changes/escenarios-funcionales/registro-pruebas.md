@@ -43,8 +43,8 @@ Reunión de prueba del #14 (OSM LatAm, 339 s, SHA-256 `c9377dd2…`) reproducida
 | Captura | Sistema −30,9 dBFS RMS (pico −8,7); sin pérdidas (0,005 s faltantes, 0 desbordes); sin desincronización; salida procesable |
 | Micrófono | −∞ dBFS (muestras en cero) durante los 350 s. El operador declara que la grabación se hizo en un lugar muy silencioso y sin habla local. La prueba «ambas fuentes registran señal» queda en FALLA por el micrófono; no afecta el contenido procesado |
 | Proceso | Completado en 215,4 s (diarización 33,9 s, transcripción 58,5 s, minuta 122,5 s): 3 hablantes y 49 intervenciones (con el WAV directo, corrida 01 del #14: 3 y 52); minuta con 2 temas, 1 decisión, 2 problemas y 3 acciones |
-| Calidad y varios archivos | Medidos en el #14 (corridas 01 y 02) |
-| Pendiente manual | Avance de cada etapa y fichas, en la interfaz |
+| Calidad y varios archivos | En el #14, corridas 01 y 02 (WAV directo): no cumple en ninguna modalidad (`calidad.md`). La minuta de esta grabación no tiene evaluación independiente |
+| Pendiente manual | Grabación desde la interfaz y, por separado, avance de cada etapa y fichas al procesar la reunión desde la interfaz |
 
 Observación: el responsable de la acción del foro sale «Rafael» en esta corrida (sin fichas, el nombre lo toma el modelo del habla) y «Jorge» en la corrida 01 del #14, donde el operador nombró las fichas; en el audio, Marta le dice «Rafael» a ese hablante. Lo juzga la evaluación de calidad del #14.
 
