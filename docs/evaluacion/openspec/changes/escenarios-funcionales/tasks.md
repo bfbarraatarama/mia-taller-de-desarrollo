@@ -17,10 +17,10 @@ En cada tarea, primero los tests de sus escenarios. Meta: estado de 2.1.2 a 2.1.
 ## 3. Recuperación
 
 - [x] 3.1 Prueba de corte forzado con la captura · escenario: Corte forzado
-- [ ] 3.2 Corrida real en la máquina de referencia
+- [x] 3.2 Corrida real en la máquina de referencia
 
 ## 4. Cierre
 
 - [x] 4.1 Protocolo para el tercero
-- [ ] 4.2 Registro de pruebas y estado para el checkpoint
+- [x] 4.2 Registro de pruebas y estado para el checkpoint
 - [ ] 4.3 Happy path y 2.1.1 (pendientes: reunión de prueba del #14 y grabación con terminología)
