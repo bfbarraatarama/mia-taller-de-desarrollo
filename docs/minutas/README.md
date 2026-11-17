@@ -137,6 +137,9 @@ No se reemplazan archivos existentes de manera predeterminada; `--sobrescribir` 
 
 ## Pruebas técnicas
 
+Para evaluar la recuperación de ítems con AMI y comparar la fragmentación
+normal con una forzada, véase la [evaluación de fidelidad](../../evaluacion/fidelidad_minutas/README.md).
+
 ```bash
 .venv/bin/python -m pytest -q -rs tests/minutas
 .venv/bin/python -m src.minutas --help

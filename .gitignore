@@ -73,7 +73,10 @@ hito-2/muestra/uba_games_figshare/
 /evaluacion/stt/generado/
 /evaluacion/modular/datos/
 /evaluacion/modular/inferencia/
+/evaluacion/fidelidad_minutas/resultados/
+/evaluacion/fidelidad_minutas/*.gguf
 /evaluacion/modular/**/*.wav
+evaluacion/modular/resultados/planillas/*.xlsx
 # Protección frente a residuos locales de la arquitectura anterior.
 /PoC/
 /src/STT_old/

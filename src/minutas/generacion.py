@@ -27,6 +27,7 @@ from .contratos import (
     Intervencion, SECCIONES_MINUTA, modelo_minuta, validar_evidencias, validar_secciones,
 )
 from .entrada import leer_transcripcion, representar_intervenciones
+from .experimento import Bloque, ExperimentoMinutas
 from .formato import a_markdown
 from .modelos import MODELO_PREDETERMINADO, obtener_modelo
 from .proveedores import (
@@ -127,7 +128,8 @@ def _presupuesto(config: ConfiguracionMinutas, instrucciones: str,
                           and len(texto.encode("utf-8")) <= bytes_datos)
 
 
-def _partir_intervencion(intervencion: Intervencion, cabe: Callable[[str], bool], max_caracteres: int) -> list[Intervencion]:
+def _partir_intervencion(intervencion: Intervencion, cabe: Callable[[str], bool], max_caracteres: int,
+                         experimento: ExperimentoMinutas | None = None) -> list[Intervencion]:
     """Partes textuales del mismo intervalo y del mismo identificador original."""
     if cabe(representar_intervenciones([intervencion])):
         return [intervencion]
@@ -149,18 +151,22 @@ def _partir_intervencion(intervencion: Intervencion, cabe: Callable[[str], bool]
             espacio = max((i + 1 for i, c in enumerate(texto[:bajo]) if c.isspace()), default=0)
             if espacio >= bajo // 2 and espacio > 0:
                 corte = espacio
-        partes.append(intervencion.model_copy(update={"texto": texto[:corte]}))
+        parte = intervencion.model_copy(update={"texto": texto[:corte]})
+        if experimento is not None:
+            experimento.registrar_fragmento(intervencion, parte, len(intervencion.texto) - len(texto))
+        partes.append(parte)
         texto = texto[corte:]
     return partes
 
 
 def _fragmentar_intervenciones(
-    intervenciones: list[Intervencion], cabe: Callable[[str], bool], max_caracteres: int
+    intervenciones: list[Intervencion], cabe: Callable[[str], bool], max_caracteres: int,
+    experimento: ExperimentoMinutas | None = None,
 ) -> list[list[Intervencion]]:
     bloques: list[list[Intervencion]] = []
     actual: list[Intervencion] = []
     for original in intervenciones:
-        for intervencion in _partir_intervencion(original, cabe, max_caracteres):
+        for intervencion in _partir_intervencion(original, cabe, max_caracteres, experimento):
             candidato = actual + [intervencion]
             if cabe(representar_intervenciones(candidato)):
                 actual = candidato
@@ -173,6 +179,13 @@ def _fragmentar_intervenciones(
     if actual:
         bloques.append(actual)
     return bloques
+
+
+def huella_experimento(config: ConfiguracionMinutas) -> str:
+    """Fija configuración, prompts y versión de consolidación para comparar."""
+    _, _, prompts = _preparar_prompts(config.secciones)
+    datos = {"configuracion": asdict(config), "prompts": prompts, "consolidacion": VERSION_CONSOLIDACION}
+    return hashlib.sha256(json.dumps(datos, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
 
 
 def _datos_minutas(minutas: list[BaseModel]) -> str:
@@ -340,6 +353,7 @@ def generar_minuta(
     secciones: tuple[str, ...] | None = None,
     cliente: ClienteModelo | None = None,
     sobrescribir: bool = False,
+    experimento: ExperimentoMinutas | None = None,
 ) -> ResultadoMinutas:
     """Produce únicamente las secciones solicitadas en minutes.json y minutes.md."""
     inicio = time.monotonic()
@@ -367,6 +381,10 @@ def generar_minuta(
     esquema = tipo_minuta.model_json_schema()
     cabe_extraccion = _presupuesto(config, extraccion, esquema)
     cabe_consolidacion = _presupuesto(config, consolidacion, esquema)
+    grupos_experimento: list[list[Intervencion]] | None = None
+    if experimento is not None:
+        grupos_experimento = experimento.preparar(
+            intervenciones, hashlib.sha256(bytes_origen).hexdigest(), huella_experimento(config), cabe_extraccion)
     llm = cliente or construir_cliente(
         config.modelo, permitir_remoto=config.permitir_remoto,
         temperatura=config.temperatura, num_ctx=config.num_ctx,
@@ -467,13 +485,15 @@ def generar_minuta(
         ) from None
 
     def extraer(grupo: list[Intervencion], profundidad: int = 0,
-                contador: list[int] | None = None) -> list[BaseModel]:
+                contador: list[int] | None = None, padre: Bloque | None = None) -> list[BaseModel]:
         nonlocal recuperaciones_extraccion, bloques_extraccion
         if contador is None:
             contador = [0]
         try:
             resultado = pedir(extraccion, representar_intervenciones(grupo), grupo)
             bloques_extraccion += 1
+            if experimento is not None:
+                experimento.registrar_bloque(grupo, padre)
             return [resultado]
         except LimiteModelo:
             if (profundidad >= _MAX_PROFUNDIDAD_EXTRACCION
@@ -492,10 +512,13 @@ def generar_minuta(
                     raise LimiteModelo("Una extracción mínima supera el límite del modelo.") from None
                 izquierda = [original.model_copy(update={"texto": original.texto[:corte]})]
                 derecha = [original.model_copy(update={"texto": original.texto[corte:]})]
+                if experimento is not None:
+                    experimento.registrar_fragmento(original, izquierda[0], 0)
+                    experimento.registrar_fragmento(original, derecha[0], corte)
             contador[0] += 1
             recuperaciones_extraccion += 1
-            return (extraer(izquierda, profundidad + 1, contador)
-                    + extraer(derecha, profundidad + 1, contador))
+            return (extraer(izquierda, profundidad + 1, contador, padre)
+                    + extraer(derecha, profundidad + 1, contador, padre))
 
     def recuperar_union(grupo: list[BaseModel], motivo: str) -> BaseModel:
         """Conservar listas; intentar una síntesis de resúmenes con esquema reducido."""
@@ -538,8 +561,11 @@ def generar_minuta(
         return tipo_minuta.model_validate({**union.model_dump(), "resumen": resumen})
 
     try:
-        grupos = _fragmentar_intervenciones(intervenciones, cabe_extraccion, config.max_caracteres_bloque)
-        parciales = [parcial for grupo in grupos for parcial in extraer(grupo)]
+        grupos = (grupos_experimento if grupos_experimento is not None else
+                  _fragmentar_intervenciones(intervenciones, cabe_extraccion, config.max_caracteres_bloque, experimento))
+        parciales = [parcial for indice, grupo in enumerate(grupos)
+                     for parcial in extraer(grupo, padre=experimento.plan[indice]
+                                            if experimento and experimento.plan else None)]
         por_id = {i.id: i for i in intervenciones}
         while len(parciales) > 1:
             niveles_consolidacion += 1

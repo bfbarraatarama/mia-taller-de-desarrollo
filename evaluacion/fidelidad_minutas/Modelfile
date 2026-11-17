@@ -1,0 +1,11 @@
+FROM ./M-Prometheus-3B.i1-Q4_K_M.gguf
+
+TEMPLATE """{{ if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}{{ range .Messages }}<|im_start|>{{ .Role }}
+{{ .Content }}<|im_end|>
+{{ end }}<|im_start|>assistant
+"""
+PARAMETER temperature 0
+PARAMETER seed 0
+PARAMETER stop <|im_end|>
