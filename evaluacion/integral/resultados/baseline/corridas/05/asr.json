@@ -1,0 +1,4233 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 1.78,
+      "end": 9.68,
+      "text": "Rafael. Aquí estaba pensando que quizás, por ejemplo,",
+      "words": [
+        {
+          "word": "Rafael.",
+          "start": 1.78,
+          "end": 2.34
+        },
+        {
+          "word": "Aquí",
+          "start": 5.62,
+          "end": 5.96
+        },
+        {
+          "word": "estaba",
+          "start": 5.96,
+          "end": 6.18
+        },
+        {
+          "word": "pensando",
+          "start": 6.18,
+          "end": 6.88
+        },
+        {
+          "word": "que",
+          "start": 6.88,
+          "end": 8.44
+        },
+        {
+          "word": "quizás,",
+          "start": 8.44,
+          "end": 8.88
+        },
+        {
+          "word": "por",
+          "start": 9.02,
+          "end": 9.04
+        },
+        {
+          "word": "ejemplo,",
+          "start": 9.04,
+          "end": 9.68
+        }
+      ]
+    },
+    {
+      "start": 9.96,
+      "end": 15.74,
+      "text": "como lo estoy viendo, las reuniones de la junta siempre sabemos que nos quedamos cortos.",
+      "words": [
+        {
+          "word": "como",
+          "start": 9.96,
+          "end": 10.14
+        },
+        {
+          "word": "lo",
+          "start": 10.14,
+          "end": 10.32
+        },
+        {
+          "word": "estoy",
+          "start": 10.32,
+          "end": 10.4
+        },
+        {
+          "word": "viendo,",
+          "start": 10.4,
+          "end": 10.64
+        },
+        {
+          "word": "las",
+          "start": 11.6,
+          "end": 11.82
+        },
+        {
+          "word": "reuniones",
+          "start": 11.82,
+          "end": 12.2
+        },
+        {
+          "word": "de",
+          "start": 12.2,
+          "end": 12.38
+        },
+        {
+          "word": "la",
+          "start": 12.38,
+          "end": 12.5
+        },
+        {
+          "word": "junta",
+          "start": 12.5,
+          "end": 13.56
+        },
+        {
+          "word": "siempre",
+          "start": 13.56,
+          "end": 13.98
+        },
+        {
+          "word": "sabemos",
+          "start": 13.98,
+          "end": 14.28
+        },
+        {
+          "word": "que",
+          "start": 14.28,
+          "end": 14.5
+        },
+        {
+          "word": "nos",
+          "start": 14.5,
+          "end": 14.64
+        },
+        {
+          "word": "quedamos",
+          "start": 14.64,
+          "end": 14.92
+        },
+        {
+          "word": "cortos.",
+          "start": 14.92,
+          "end": 15.74
+        }
+      ]
+    },
+    {
+      "start": 15.88,
+      "end": 21.76,
+      "text": "Quizás pudiésemos apoyarnos en el foro de la comunidad OpenStreetMap, el que está en",
+      "words": [
+        {
+          "word": "Quizás",
+          "start": 15.88,
+          "end": 16.22
+        },
+        {
+          "word": "pudiésemos",
+          "start": 16.22,
+          "end": 16.84
+        },
+        {
+          "word": "apoyarnos",
+          "start": 16.84,
+          "end": 17.56
+        },
+        {
+          "word": "en",
+          "start": 17.56,
+          "end": 18.48
+        },
+        {
+          "word": "el",
+          "start": 18.48,
+          "end": 18.78
+        },
+        {
+          "word": "foro",
+          "start": 18.78,
+          "end": 19.32
+        },
+        {
+          "word": "de",
+          "start": 19.32,
+          "end": 19.72
+        },
+        {
+          "word": "la",
+          "start": 19.72,
+          "end": 19.9
+        },
+        {
+          "word": "comunidad",
+          "start": 19.9,
+          "end": 20.18
+        },
+        {
+          "word": "OpenStreetMap,",
+          "start": 20.18,
+          "end": 21.02
+        },
+        {
+          "word": "el",
+          "start": 21.24,
+          "end": 21.38
+        },
+        {
+          "word": "que",
+          "start": 21.38,
+          "end": 21.52
+        },
+        {
+          "word": "está",
+          "start": 21.52,
+          "end": 21.6
+        },
+        {
+          "word": "en",
+          "start": 21.6,
+          "end": 21.76
+        }
+      ]
+    },
+    {
+      "start": 21.76,
+      "end": 27.6,
+      "text": "discurso, y quizás desarrollar los temas ahí, temas más puntuales, temas de organización",
+      "words": [
+        {
+          "word": "discurso,",
+          "start": 21.76,
+          "end": 22.46
+        },
+        {
+          "word": "y",
+          "start": 22.68,
+          "end": 22.84
+        },
+        {
+          "word": "quizás",
+          "start": 22.84,
+          "end": 23.12
+        },
+        {
+          "word": "desarrollar",
+          "start": 23.12,
+          "end": 23.7
+        },
+        {
+          "word": "los",
+          "start": 23.7,
+          "end": 23.84
+        },
+        {
+          "word": "temas",
+          "start": 23.84,
+          "end": 24.0
+        },
+        {
+          "word": "ahí,",
+          "start": 24.0,
+          "end": 25.14
+        },
+        {
+          "word": "temas",
+          "start": 25.56,
+          "end": 25.86
+        },
+        {
+          "word": "más",
+          "start": 25.86,
+          "end": 26.14
+        },
+        {
+          "word": "puntuales,",
+          "start": 26.14,
+          "end": 26.66
+        },
+        {
+          "word": "temas",
+          "start": 26.8,
+          "end": 26.86
+        },
+        {
+          "word": "de",
+          "start": 26.86,
+          "end": 27.14
+        },
+        {
+          "word": "organización",
+          "start": 27.14,
+          "end": 27.6
+        }
+      ]
+    },
+    {
+      "start": 27.6,
+      "end": 35.78,
+      "text": "mapatón, temas como para cuando decimos vamos a lo abierto, pues quizás debatir eso en el telegram",
+      "words": [
+        {
+          "word": "mapatón,",
+          "start": 27.6,
+          "end": 28.5
+        },
+        {
+          "word": "temas",
+          "start": 28.58,
+          "end": 29.22
+        },
+        {
+          "word": "como",
+          "start": 29.22,
+          "end": 30.04
+        },
+        {
+          "word": "para",
+          "start": 30.04,
+          "end": 30.64
+        },
+        {
+          "word": "cuando",
+          "start": 30.64,
+          "end": 31.12
+        },
+        {
+          "word": "decimos",
+          "start": 31.12,
+          "end": 31.5
+        },
+        {
+          "word": "vamos",
+          "start": 31.5,
+          "end": 31.78
+        },
+        {
+          "word": "a",
+          "start": 31.78,
+          "end": 31.9
+        },
+        {
+          "word": "lo",
+          "start": 31.9,
+          "end": 32.04
+        },
+        {
+          "word": "abierto,",
+          "start": 32.04,
+          "end": 32.98
+        },
+        {
+          "word": "pues",
+          "start": 33.6,
+          "end": 33.68
+        },
+        {
+          "word": "quizás",
+          "start": 33.68,
+          "end": 34.1
+        },
+        {
+          "word": "debatir",
+          "start": 34.1,
+          "end": 34.9
+        },
+        {
+          "word": "eso",
+          "start": 34.9,
+          "end": 35.04
+        },
+        {
+          "word": "en",
+          "start": 35.04,
+          "end": 35.2
+        },
+        {
+          "word": "el",
+          "start": 35.2,
+          "end": 35.34
+        },
+        {
+          "word": "telegram",
+          "start": 35.34,
+          "end": 35.78
+        }
+      ]
+    },
+    {
+      "start": 35.78,
+      "end": 41.64,
+      "text": "es súper se pierde de vista. Empieza esto, empieza a escribir, escribir y eso no queda en el log,",
+      "words": [
+        {
+          "word": "es",
+          "start": 35.78,
+          "end": 36.22
+        },
+        {
+          "word": "súper",
+          "start": 36.22,
+          "end": 36.88
+        },
+        {
+          "word": "se",
+          "start": 36.88,
+          "end": 37.38
+        },
+        {
+          "word": "pierde",
+          "start": 37.38,
+          "end": 37.72
+        },
+        {
+          "word": "de",
+          "start": 37.72,
+          "end": 37.9
+        },
+        {
+          "word": "vista.",
+          "start": 37.9,
+          "end": 38.18
+        },
+        {
+          "word": "Empieza",
+          "start": 38.68,
+          "end": 38.82
+        },
+        {
+          "word": "esto,",
+          "start": 38.82,
+          "end": 39.18
+        },
+        {
+          "word": "empieza",
+          "start": 39.4,
+          "end": 39.5
+        },
+        {
+          "word": "a",
+          "start": 39.5,
+          "end": 39.72
+        },
+        {
+          "word": "escribir,",
+          "start": 39.72,
+          "end": 39.92
+        },
+        {
+          "word": "escribir",
+          "start": 40.06,
+          "end": 40.4
+        },
+        {
+          "word": "y",
+          "start": 40.4,
+          "end": 40.56
+        },
+        {
+          "word": "eso",
+          "start": 40.56,
+          "end": 40.76
+        },
+        {
+          "word": "no",
+          "start": 40.76,
+          "end": 41.08
+        },
+        {
+          "word": "queda",
+          "start": 41.08,
+          "end": 41.26
+        },
+        {
+          "word": "en",
+          "start": 41.26,
+          "end": 41.46
+        },
+        {
+          "word": "el",
+          "start": 41.46,
+          "end": 41.5
+        },
+        {
+          "word": "log,",
+          "start": 41.5,
+          "end": 41.64
+        }
+      ]
+    },
+    {
+      "start": 41.9,
+      "end": 49.08,
+      "text": "en cambio quizás y otra cosa de repente tú dices bueno vamos a debatirlo en el wiki, pero el wiki",
+      "words": [
+        {
+          "word": "en",
+          "start": 41.9,
+          "end": 42.18
+        },
+        {
+          "word": "cambio",
+          "start": 42.18,
+          "end": 42.64
+        },
+        {
+          "word": "quizás",
+          "start": 42.64,
+          "end": 43.9
+        },
+        {
+          "word": "y",
+          "start": 43.9,
+          "end": 44.58
+        },
+        {
+          "word": "otra",
+          "start": 44.58,
+          "end": 44.84
+        },
+        {
+          "word": "cosa",
+          "start": 44.84,
+          "end": 45.18
+        },
+        {
+          "word": "de",
+          "start": 45.18,
+          "end": 45.38
+        },
+        {
+          "word": "repente",
+          "start": 45.38,
+          "end": 45.58
+        },
+        {
+          "word": "tú",
+          "start": 45.58,
+          "end": 45.72
+        },
+        {
+          "word": "dices",
+          "start": 45.72,
+          "end": 45.84
+        },
+        {
+          "word": "bueno",
+          "start": 45.84,
+          "end": 46.16
+        },
+        {
+          "word": "vamos",
+          "start": 46.16,
+          "end": 46.42
+        },
+        {
+          "word": "a",
+          "start": 46.42,
+          "end": 46.6
+        },
+        {
+          "word": "debatirlo",
+          "start": 46.6,
+          "end": 47.12
+        },
+        {
+          "word": "en",
+          "start": 47.12,
+          "end": 47.28
+        },
+        {
+          "word": "el",
+          "start": 47.28,
+          "end": 47.42
+        },
+        {
+          "word": "wiki,",
+          "start": 47.42,
+          "end": 47.98
+        },
+        {
+          "word": "pero",
+          "start": 48.26,
+          "end": 48.36
+        },
+        {
+          "word": "el",
+          "start": 48.36,
+          "end": 48.52
+        },
+        {
+          "word": "wiki",
+          "start": 48.52,
+          "end": 49.08
+        }
+      ]
+    },
+    {
+      "start": 49.08,
+      "end": 54.2,
+      "text": "para realmente un usuario que está empezando se le va a hacer complicado. En cambio veo que quizás",
+      "words": [
+        {
+          "word": "para",
+          "start": 49.08,
+          "end": 49.56
+        },
+        {
+          "word": "realmente",
+          "start": 49.56,
+          "end": 49.9
+        },
+        {
+          "word": "un",
+          "start": 49.9,
+          "end": 50.08
+        },
+        {
+          "word": "usuario",
+          "start": 50.08,
+          "end": 50.38
+        },
+        {
+          "word": "que",
+          "start": 50.38,
+          "end": 50.5
+        },
+        {
+          "word": "está",
+          "start": 50.5,
+          "end": 50.58
+        },
+        {
+          "word": "empezando",
+          "start": 50.58,
+          "end": 51.54
+        },
+        {
+          "word": "se",
+          "start": 51.54,
+          "end": 51.76
+        },
+        {
+          "word": "le",
+          "start": 51.76,
+          "end": 51.88
+        },
+        {
+          "word": "va",
+          "start": 51.88,
+          "end": 51.98
+        },
+        {
+          "word": "a",
+          "start": 51.98,
+          "end": 52.06
+        },
+        {
+          "word": "hacer",
+          "start": 52.06,
+          "end": 52.26
+        },
+        {
+          "word": "complicado.",
+          "start": 52.26,
+          "end": 52.78
+        },
+        {
+          "word": "En",
+          "start": 52.88,
+          "end": 53.02
+        },
+        {
+          "word": "cambio",
+          "start": 53.02,
+          "end": 53.48
+        },
+        {
+          "word": "veo",
+          "start": 53.48,
+          "end": 53.78
+        },
+        {
+          "word": "que",
+          "start": 53.78,
+          "end": 54.04
+        },
+        {
+          "word": "quizás",
+          "start": 54.04,
+          "end": 54.3
+        }
+      ]
+    },
+    {
+      "start": 54.3,
+      "end": 63.36,
+      "text": "el foro es bastante amigable, tiene notificaciones por correo, es una comunicación asíncrona y",
+      "words": [
+        {
+          "word": "el",
+          "start": 54.3,
+          "end": 54.7
+        },
+        {
+          "word": "foro",
+          "start": 54.7,
+          "end": 55.22
+        },
+        {
+          "word": "es",
+          "start": 55.22,
+          "end": 55.52
+        },
+        {
+          "word": "bastante",
+          "start": 55.52,
+          "end": 55.86
+        },
+        {
+          "word": "amigable,",
+          "start": 55.86,
+          "end": 56.86
+        },
+        {
+          "word": "tiene",
+          "start": 58.1,
+          "end": 58.2
+        },
+        {
+          "word": "notificaciones",
+          "start": 58.2,
+          "end": 58.86
+        },
+        {
+          "word": "por",
+          "start": 58.86,
+          "end": 59.06
+        },
+        {
+          "word": "correo,",
+          "start": 59.06,
+          "end": 60.0
+        },
+        {
+          "word": "es",
+          "start": 60.64,
+          "end": 61.12
+        },
+        {
+          "word": "una",
+          "start": 61.12,
+          "end": 61.34
+        },
+        {
+          "word": "comunicación",
+          "start": 61.34,
+          "end": 61.92
+        },
+        {
+          "word": "asíncrona",
+          "start": 61.92,
+          "end": 62.74
+        },
+        {
+          "word": "y",
+          "start": 62.74,
+          "end": 63.36
+        }
+      ]
+    },
+    {
+      "start": 63.36,
+      "end": 69.1,
+      "text": "pudiésemos desarrollar y aprovechar esa plataforma. Los temas que quizás queden acá abiertos,",
+      "words": [
+        {
+          "word": "pudiésemos",
+          "start": 63.36,
+          "end": 63.84
+        },
+        {
+          "word": "desarrollar",
+          "start": 63.84,
+          "end": 64.58
+        },
+        {
+          "word": "y",
+          "start": 64.58,
+          "end": 64.82
+        },
+        {
+          "word": "aprovechar",
+          "start": 64.82,
+          "end": 65.64
+        },
+        {
+          "word": "esa",
+          "start": 65.64,
+          "end": 65.88
+        },
+        {
+          "word": "plataforma.",
+          "start": 65.88,
+          "end": 66.38
+        },
+        {
+          "word": "Los",
+          "start": 67.16,
+          "end": 67.32
+        },
+        {
+          "word": "temas",
+          "start": 67.32,
+          "end": 67.58
+        },
+        {
+          "word": "que",
+          "start": 67.58,
+          "end": 67.8
+        },
+        {
+          "word": "quizás",
+          "start": 67.8,
+          "end": 68.24
+        },
+        {
+          "word": "queden",
+          "start": 68.24,
+          "end": 68.5
+        },
+        {
+          "word": "acá",
+          "start": 68.5,
+          "end": 68.76
+        },
+        {
+          "word": "abiertos,",
+          "start": 68.76,
+          "end": 69.1
+        }
+      ]
+    },
+    {
+      "start": 69.9,
+      "end": 72.86,
+      "text": "empezamos a crearlos allá y empezamos a movimientos a los temas ahí en el foro.",
+      "words": [
+        {
+          "word": "empezamos",
+          "start": 69.9,
+          "end": 70.2
+        },
+        {
+          "word": "a",
+          "start": 70.2,
+          "end": 70.36
+        },
+        {
+          "word": "crearlos",
+          "start": 70.36,
+          "end": 70.58
+        },
+        {
+          "word": "allá",
+          "start": 70.58,
+          "end": 70.84
+        },
+        {
+          "word": "y",
+          "start": 70.84,
+          "end": 71.0
+        },
+        {
+          "word": "empezamos",
+          "start": 71.0,
+          "end": 71.44
+        },
+        {
+          "word": "a",
+          "start": 71.44,
+          "end": 71.56
+        },
+        {
+          "word": "movimientos",
+          "start": 71.56,
+          "end": 72.0
+        },
+        {
+          "word": "a",
+          "start": 72.0,
+          "end": 72.1
+        },
+        {
+          "word": "los",
+          "start": 72.1,
+          "end": 72.22
+        },
+        {
+          "word": "temas",
+          "start": 72.22,
+          "end": 72.36
+        },
+        {
+          "word": "ahí",
+          "start": 72.36,
+          "end": 72.54
+        },
+        {
+          "word": "en",
+          "start": 72.54,
+          "end": 72.64
+        },
+        {
+          "word": "el",
+          "start": 72.64,
+          "end": 72.76
+        },
+        {
+          "word": "foro.",
+          "start": 72.76,
+          "end": 73.02
+        }
+      ]
+    },
+    {
+      "start": 74.84,
+      "end": 80.74,
+      "text": "Yo estoy de acuerdo. ¿Alguien no está de acuerdo? Hagámoslo así, de que se haga en discurs la",
+      "words": [
+        {
+          "word": "Yo",
+          "start": 74.84,
+          "end": 74.96
+        },
+        {
+          "word": "estoy",
+          "start": 74.96,
+          "end": 75.06
+        },
+        {
+          "word": "de",
+          "start": 75.06,
+          "end": 75.28
+        },
+        {
+          "word": "acuerdo.",
+          "start": 75.28,
+          "end": 75.56
+        },
+        {
+          "word": "¿Alguien",
+          "start": 75.74,
+          "end": 75.98
+        },
+        {
+          "word": "no",
+          "start": 75.98,
+          "end": 76.2
+        },
+        {
+          "word": "está",
+          "start": 76.2,
+          "end": 76.3
+        },
+        {
+          "word": "de",
+          "start": 76.3,
+          "end": 76.54
+        },
+        {
+          "word": "acuerdo?",
+          "start": 76.54,
+          "end": 77.08
+        },
+        {
+          "word": "Hagámoslo",
+          "start": 77.72,
+          "end": 78.16
+        },
+        {
+          "word": "así,",
+          "start": 78.16,
+          "end": 78.36
+        },
+        {
+          "word": "de",
+          "start": 78.44,
+          "end": 78.56
+        },
+        {
+          "word": "que",
+          "start": 78.56,
+          "end": 78.68
+        },
+        {
+          "word": "se",
+          "start": 78.68,
+          "end": 78.86
+        },
+        {
+          "word": "haga",
+          "start": 78.86,
+          "end": 78.94
+        },
+        {
+          "word": "en",
+          "start": 78.94,
+          "end": 79.1
+        },
+        {
+          "word": "discurs",
+          "start": 79.1,
+          "end": 79.56
+        },
+        {
+          "word": "la",
+          "start": 79.56,
+          "end": 80.74
+        }
+      ]
+    },
+    {
+      "start": 80.74,
+      "end": 86.62,
+      "text": "pequeña votación o debate y Rafael podrías tú iniciar este foro?",
+      "words": [
+        {
+          "word": "pequeña",
+          "start": 80.74,
+          "end": 81.24
+        },
+        {
+          "word": "votación",
+          "start": 81.24,
+          "end": 81.96
+        },
+        {
+          "word": "o",
+          "start": 81.96,
+          "end": 82.32
+        },
+        {
+          "word": "debate",
+          "start": 82.32,
+          "end": 82.64
+        },
+        {
+          "word": "y",
+          "start": 82.64,
+          "end": 83.66
+        },
+        {
+          "word": "Rafael",
+          "start": 83.66,
+          "end": 84.14
+        },
+        {
+          "word": "podrías",
+          "start": 84.14,
+          "end": 84.82
+        },
+        {
+          "word": "tú",
+          "start": 84.82,
+          "end": 85.16
+        },
+        {
+          "word": "iniciar",
+          "start": 85.16,
+          "end": 85.6
+        },
+        {
+          "word": "este",
+          "start": 85.6,
+          "end": 86.38
+        },
+        {
+          "word": "foro?",
+          "start": 86.38,
+          "end": 86.73
+        }
+      ]
+    },
+    {
+      "start": 89.54,
+      "end": 98.32,
+      "text": "Sí, sí de hecho tenía pensado crear un tema de un claro nosotros todavía no tenemos como un logo",
+      "words": [
+        {
+          "word": "Sí,",
+          "start": 89.54,
+          "end": 89.86
+        },
+        {
+          "word": "sí",
+          "start": 89.92,
+          "end": 90.26
+        },
+        {
+          "word": "de",
+          "start": 90.26,
+          "end": 90.44
+        },
+        {
+          "word": "hecho",
+          "start": 90.44,
+          "end": 91.02
+        },
+        {
+          "word": "tenía",
+          "start": 91.02,
+          "end": 91.6
+        },
+        {
+          "word": "pensado",
+          "start": 91.6,
+          "end": 92.92
+        },
+        {
+          "word": "crear",
+          "start": 92.92,
+          "end": 93.56
+        },
+        {
+          "word": "un",
+          "start": 93.56,
+          "end": 93.76
+        },
+        {
+          "word": "tema",
+          "start": 93.76,
+          "end": 94.04
+        },
+        {
+          "word": "de",
+          "start": 94.04,
+          "end": 94.3
+        },
+        {
+          "word": "un",
+          "start": 94.3,
+          "end": 94.66
+        },
+        {
+          "word": "claro",
+          "start": 94.66,
+          "end": 95.18
+        },
+        {
+          "word": "nosotros",
+          "start": 95.18,
+          "end": 96.42
+        },
+        {
+          "word": "todavía",
+          "start": 96.42,
+          "end": 96.76
+        },
+        {
+          "word": "no",
+          "start": 96.76,
+          "end": 97.0
+        },
+        {
+          "word": "tenemos",
+          "start": 97.0,
+          "end": 97.36
+        },
+        {
+          "word": "como",
+          "start": 97.36,
+          "end": 97.8
+        },
+        {
+          "word": "un",
+          "start": 97.8,
+          "end": 98.0
+        },
+        {
+          "word": "logo",
+          "start": 98.0,
+          "end": 98.32
+        }
+      ]
+    },
+    {
+      "start": 98.32,
+      "end": 106.54,
+      "text": "para los notatón y le voy a comentar a Andrés para abrir un tema respecto a un logo contest o algo así",
+      "words": [
+        {
+          "word": "para",
+          "start": 98.32,
+          "end": 99.02
+        },
+        {
+          "word": "los",
+          "start": 99.02,
+          "end": 99.24
+        },
+        {
+          "word": "notatón",
+          "start": 99.24,
+          "end": 100.52
+        },
+        {
+          "word": "y",
+          "start": 100.52,
+          "end": 101.4
+        },
+        {
+          "word": "le",
+          "start": 101.4,
+          "end": 101.5
+        },
+        {
+          "word": "voy",
+          "start": 101.5,
+          "end": 101.62
+        },
+        {
+          "word": "a",
+          "start": 101.62,
+          "end": 101.68
+        },
+        {
+          "word": "comentar",
+          "start": 101.68,
+          "end": 101.98
+        },
+        {
+          "word": "a",
+          "start": 101.98,
+          "end": 102.08
+        },
+        {
+          "word": "Andrés",
+          "start": 102.08,
+          "end": 102.18
+        },
+        {
+          "word": "para",
+          "start": 102.18,
+          "end": 102.52
+        },
+        {
+          "word": "abrir",
+          "start": 102.52,
+          "end": 102.82
+        },
+        {
+          "word": "un",
+          "start": 102.82,
+          "end": 103.08
+        },
+        {
+          "word": "tema",
+          "start": 103.08,
+          "end": 103.78
+        },
+        {
+          "word": "respecto",
+          "start": 103.78,
+          "end": 104.36
+        },
+        {
+          "word": "a",
+          "start": 104.36,
+          "end": 104.48
+        },
+        {
+          "word": "un",
+          "start": 104.48,
+          "end": 104.88
+        },
+        {
+          "word": "logo",
+          "start": 104.88,
+          "end": 105.22
+        },
+        {
+          "word": "contest",
+          "start": 105.22,
+          "end": 105.78
+        },
+        {
+          "word": "o",
+          "start": 105.78,
+          "end": 105.98
+        },
+        {
+          "word": "algo",
+          "start": 105.98,
+          "end": 106.1
+        },
+        {
+          "word": "así",
+          "start": 106.1,
+          "end": 106.54
+        }
+      ]
+    },
+    {
+      "start": 106.54,
+      "end": 112.28,
+      "text": "que la gente que quiera colaborar haciendo un logo para los notatón y que el premio sería",
+      "words": [
+        {
+          "word": "que",
+          "start": 106.54,
+          "end": 106.98
+        },
+        {
+          "word": "la",
+          "start": 106.98,
+          "end": 107.06
+        },
+        {
+          "word": "gente",
+          "start": 107.06,
+          "end": 107.26
+        },
+        {
+          "word": "que",
+          "start": 107.26,
+          "end": 107.44
+        },
+        {
+          "word": "quiera",
+          "start": 107.44,
+          "end": 107.62
+        },
+        {
+          "word": "colaborar",
+          "start": 107.62,
+          "end": 108.42
+        },
+        {
+          "word": "haciendo",
+          "start": 108.42,
+          "end": 108.74
+        },
+        {
+          "word": "un",
+          "start": 108.74,
+          "end": 109.0
+        },
+        {
+          "word": "logo",
+          "start": 109.0,
+          "end": 109.16
+        },
+        {
+          "word": "para",
+          "start": 109.16,
+          "end": 109.4
+        },
+        {
+          "word": "los",
+          "start": 109.4,
+          "end": 109.56
+        },
+        {
+          "word": "notatón",
+          "start": 109.56,
+          "end": 110.06
+        },
+        {
+          "word": "y",
+          "start": 110.06,
+          "end": 110.3
+        },
+        {
+          "word": "que",
+          "start": 110.3,
+          "end": 111.14
+        },
+        {
+          "word": "el",
+          "start": 111.14,
+          "end": 111.54
+        },
+        {
+          "word": "premio",
+          "start": 111.54,
+          "end": 111.94
+        },
+        {
+          "word": "sería",
+          "start": 111.94,
+          "end": 112.28
+        }
+      ]
+    },
+    {
+      "start": 112.28,
+      "end": 118.38,
+      "text": "no sé, primero unos stickers y hacerle llegar a unos stickers así como empezar a usar el foro pero",
+      "words": [
+        {
+          "word": "no",
+          "start": 112.28,
+          "end": 112.32
+        },
+        {
+          "word": "sé,",
+          "start": 112.32,
+          "end": 112.98
+        },
+        {
+          "word": "primero",
+          "start": 113.06,
+          "end": 113.34
+        },
+        {
+          "word": "unos",
+          "start": 113.34,
+          "end": 113.86
+        },
+        {
+          "word": "stickers",
+          "start": 113.86,
+          "end": 114.36
+        },
+        {
+          "word": "y",
+          "start": 114.36,
+          "end": 114.96
+        },
+        {
+          "word": "hacerle",
+          "start": 114.96,
+          "end": 115.26
+        },
+        {
+          "word": "llegar",
+          "start": 115.26,
+          "end": 115.42
+        },
+        {
+          "word": "a",
+          "start": 115.42,
+          "end": 115.54
+        },
+        {
+          "word": "unos",
+          "start": 115.54,
+          "end": 115.64
+        },
+        {
+          "word": "stickers",
+          "start": 115.64,
+          "end": 116.0
+        },
+        {
+          "word": "así",
+          "start": 116.0,
+          "end": 116.26
+        },
+        {
+          "word": "como",
+          "start": 116.26,
+          "end": 116.44
+        },
+        {
+          "word": "empezar",
+          "start": 116.44,
+          "end": 116.8
+        },
+        {
+          "word": "a",
+          "start": 116.8,
+          "end": 117.74
+        },
+        {
+          "word": "usar",
+          "start": 117.74,
+          "end": 117.9
+        },
+        {
+          "word": "el",
+          "start": 117.9,
+          "end": 118.08
+        },
+        {
+          "word": "foro",
+          "start": 118.08,
+          "end": 118.22
+        },
+        {
+          "word": "pero",
+          "start": 118.22,
+          "end": 118.52
+        }
+      ]
+    },
+    {
+      "start": 119.1,
+      "end": 125.02,
+      "text": "habría que entonces definir los temas que dejamos abiertos acá para abrirlos en el foro y seguir la",
+      "words": [
+        {
+          "word": "habría",
+          "start": 119.1,
+          "end": 119.5
+        },
+        {
+          "word": "que",
+          "start": 119.5,
+          "end": 119.82
+        },
+        {
+          "word": "entonces",
+          "start": 119.82,
+          "end": 120.06
+        },
+        {
+          "word": "definir",
+          "start": 120.06,
+          "end": 120.44
+        },
+        {
+          "word": "los",
+          "start": 120.44,
+          "end": 120.6
+        },
+        {
+          "word": "temas",
+          "start": 120.6,
+          "end": 120.82
+        },
+        {
+          "word": "que",
+          "start": 120.82,
+          "end": 121.4
+        },
+        {
+          "word": "dejamos",
+          "start": 121.4,
+          "end": 121.72
+        },
+        {
+          "word": "abiertos",
+          "start": 121.72,
+          "end": 122.14
+        },
+        {
+          "word": "acá",
+          "start": 122.14,
+          "end": 122.44
+        },
+        {
+          "word": "para",
+          "start": 122.44,
+          "end": 123.12
+        },
+        {
+          "word": "abrirlos",
+          "start": 123.12,
+          "end": 123.48
+        },
+        {
+          "word": "en",
+          "start": 123.48,
+          "end": 123.64
+        },
+        {
+          "word": "el",
+          "start": 123.64,
+          "end": 123.84
+        },
+        {
+          "word": "foro",
+          "start": 123.84,
+          "end": 124.0
+        },
+        {
+          "word": "y",
+          "start": 124.0,
+          "end": 124.62
+        },
+        {
+          "word": "seguir",
+          "start": 124.62,
+          "end": 124.88
+        },
+        {
+          "word": "la",
+          "start": 124.88,
+          "end": 125.02
+        }
+      ]
+    },
+    {
+      "start": 126.2,
+      "end": 133.18,
+      "text": "discusión allá. Pero nos referimos específicamente a qué forma va a tomar este mapatón entre dos",
+      "words": [
+        {
+          "word": "discusión",
+          "start": 126.2,
+          "end": 126.8
+        },
+        {
+          "word": "Pero",
+          "start": 127.52,
+          "end": 127.78
+        },
+        {
+          "word": "nos",
+          "start": 127.78,
+          "end": 128.16
+        },
+        {
+          "word": "referimos",
+          "start": 128.16,
+          "end": 128.48
+        },
+        {
+          "word": "específicamente",
+          "start": 128.48,
+          "end": 129.38
+        },
+        {
+          "word": "a",
+          "start": 129.38,
+          "end": 130.24
+        },
+        {
+          "word": "qué",
+          "start": 130.24,
+          "end": 130.38
+        },
+        {
+          "word": "forma",
+          "start": 130.38,
+          "end": 130.66
+        },
+        {
+          "word": "va",
+          "start": 130.66,
+          "end": 130.86
+        },
+        {
+          "word": "a",
+          "start": 130.86,
+          "end": 131.0
+        },
+        {
+          "word": "tomar",
+          "start": 131.0,
+          "end": 131.16
+        },
+        {
+          "word": "este",
+          "start": 131.16,
+          "end": 131.6
+        },
+        {
+          "word": "mapatón",
+          "start": 131.6,
+          "end": 132.16
+        },
+        {
+          "word": "entre",
+          "start": 132.16,
+          "end": 133.06
+        },
+        {
+          "word": "dos",
+          "start": 133.06,
+          "end": 133.36
+        }
+      ]
+    },
+    {
+      "start": 133.36,
+      "end": 137.28,
+      "text": "juntas los temas y todo. Ok, perfecto.",
+      "words": [
+        {
+          "word": "juntas",
+          "start": 133.36,
+          "end": 134.36
+        },
+        {
+          "word": "los",
+          "start": 134.36,
+          "end": 134.6
+        },
+        {
+          "word": "temas",
+          "start": 134.6,
+          "end": 134.84
+        },
+        {
+          "word": "y",
+          "start": 134.84,
+          "end": 135.04
+        },
+        {
+          "word": "todo.",
+          "start": 135.04,
+          "end": 136.12
+        },
+        {
+          "word": "Ok,",
+          "start": 136.64,
+          "end": 136.9
+        },
+        {
+          "word": "perfecto.",
+          "start": 137.0,
+          "end": 137.3
+        }
+      ]
+    },
+    {
+      "start": 139.54,
+      "end": 146.94,
+      "text": "Es cuestión de yo puedo abrir un tema sobre los mapatón latinoamérica y empezamos ahí a desarrollar",
+      "words": [
+        {
+          "word": "Es",
+          "start": 139.54,
+          "end": 139.66
+        },
+        {
+          "word": "cuestión",
+          "start": 139.66,
+          "end": 139.86
+        },
+        {
+          "word": "de",
+          "start": 139.86,
+          "end": 140.32
+        },
+        {
+          "word": "yo",
+          "start": 140.32,
+          "end": 140.62
+        },
+        {
+          "word": "puedo",
+          "start": 140.62,
+          "end": 140.82
+        },
+        {
+          "word": "abrir",
+          "start": 140.82,
+          "end": 141.08
+        },
+        {
+          "word": "un",
+          "start": 141.08,
+          "end": 141.2
+        },
+        {
+          "word": "tema",
+          "start": 141.2,
+          "end": 141.4
+        },
+        {
+          "word": "sobre",
+          "start": 141.4,
+          "end": 141.74
+        },
+        {
+          "word": "los",
+          "start": 141.74,
+          "end": 142.04
+        },
+        {
+          "word": "mapatón",
+          "start": 142.04,
+          "end": 143.06
+        },
+        {
+          "word": "latinoamérica",
+          "start": 143.06,
+          "end": 144.34
+        },
+        {
+          "word": "y",
+          "start": 144.34,
+          "end": 144.9
+        },
+        {
+          "word": "empezamos",
+          "start": 144.9,
+          "end": 145.4
+        },
+        {
+          "word": "ahí",
+          "start": 145.4,
+          "end": 145.96
+        },
+        {
+          "word": "a",
+          "start": 145.96,
+          "end": 146.34
+        },
+        {
+          "word": "desarrollar",
+          "start": 146.34,
+          "end": 146.94
+        }
+      ]
+    },
+    {
+      "start": 146.94,
+      "end": 153.6,
+      "text": "lo que ya se lo inició la toma de decisiones que se vaya a hacer. Genial.",
+      "words": [
+        {
+          "word": "lo",
+          "start": 146.94,
+          "end": 147.38
+        },
+        {
+          "word": "que",
+          "start": 147.38,
+          "end": 147.52
+        },
+        {
+          "word": "ya",
+          "start": 147.52,
+          "end": 147.72
+        },
+        {
+          "word": "se",
+          "start": 147.72,
+          "end": 147.82
+        },
+        {
+          "word": "lo",
+          "start": 147.82,
+          "end": 148.02
+        },
+        {
+          "word": "inició",
+          "start": 148.02,
+          "end": 148.32
+        },
+        {
+          "word": "la",
+          "start": 148.32,
+          "end": 148.52
+        },
+        {
+          "word": "toma",
+          "start": 148.52,
+          "end": 148.7
+        },
+        {
+          "word": "de",
+          "start": 148.7,
+          "end": 148.88
+        },
+        {
+          "word": "decisiones",
+          "start": 148.88,
+          "end": 149.1
+        },
+        {
+          "word": "que",
+          "start": 149.1,
+          "end": 150.52
+        },
+        {
+          "word": "se",
+          "start": 150.52,
+          "end": 150.9
+        },
+        {
+          "word": "vaya",
+          "start": 150.9,
+          "end": 151.08
+        },
+        {
+          "word": "a",
+          "start": 151.08,
+          "end": 151.2
+        },
+        {
+          "word": "hacer.",
+          "start": 151.2,
+          "end": 151.34
+        },
+        {
+          "word": "Genial.",
+          "start": 153.0,
+          "end": 153.6
+        }
+      ]
+    },
+    {
+      "start": 155.66,
+      "end": 160.08,
+      "text": "Genial, paso al tema siguiente que son los materiales de capacitación.",
+      "words": [
+        {
+          "word": "Genial,",
+          "start": 155.66,
+          "end": 156.26
+        },
+        {
+          "word": "paso",
+          "start": 156.26,
+          "end": 156.72
+        },
+        {
+          "word": "al",
+          "start": 156.72,
+          "end": 156.88
+        },
+        {
+          "word": "tema",
+          "start": 156.88,
+          "end": 157.16
+        },
+        {
+          "word": "siguiente",
+          "start": 157.16,
+          "end": 157.58
+        },
+        {
+          "word": "que",
+          "start": 157.58,
+          "end": 157.82
+        },
+        {
+          "word": "son",
+          "start": 157.82,
+          "end": 158.0
+        },
+        {
+          "word": "los",
+          "start": 158.0,
+          "end": 158.32
+        },
+        {
+          "word": "materiales",
+          "start": 158.32,
+          "end": 158.84
+        },
+        {
+          "word": "de",
+          "start": 158.84,
+          "end": 159.08
+        },
+        {
+          "word": "capacitación.",
+          "start": 159.08,
+          "end": 160.08
+        }
+      ]
+    },
+    {
+      "start": 160.94,
+      "end": 167.32,
+      "text": "Esto es un tema que venimos discutiendo desde mucho tiempo todos estamos de acuerdo que los",
+      "words": [
+        {
+          "word": "Esto",
+          "start": 160.94,
+          "end": 161.48
+        },
+        {
+          "word": "es",
+          "start": 161.48,
+          "end": 161.66
+        },
+        {
+          "word": "un",
+          "start": 161.66,
+          "end": 161.76
+        },
+        {
+          "word": "tema",
+          "start": 161.76,
+          "end": 161.92
+        },
+        {
+          "word": "que",
+          "start": 161.92,
+          "end": 162.1
+        },
+        {
+          "word": "venimos",
+          "start": 162.1,
+          "end": 162.4
+        },
+        {
+          "word": "discutiendo",
+          "start": 162.4,
+          "end": 162.9
+        },
+        {
+          "word": "desde",
+          "start": 162.9,
+          "end": 163.46
+        },
+        {
+          "word": "mucho",
+          "start": 163.46,
+          "end": 163.88
+        },
+        {
+          "word": "tiempo",
+          "start": 163.88,
+          "end": 164.68
+        },
+        {
+          "word": "todos",
+          "start": 164.68,
+          "end": 165.36
+        },
+        {
+          "word": "estamos",
+          "start": 165.36,
+          "end": 166.46
+        },
+        {
+          "word": "de",
+          "start": 166.46,
+          "end": 166.72
+        },
+        {
+          "word": "acuerdo",
+          "start": 166.72,
+          "end": 166.92
+        },
+        {
+          "word": "que",
+          "start": 166.92,
+          "end": 167.12
+        },
+        {
+          "word": "los",
+          "start": 167.12,
+          "end": 167.32
+        }
+      ]
+    },
+    {
+      "start": 167.32,
+      "end": 172.0,
+      "text": "materiales actuales de capacitación son áridos para nuevos, los nuevos son más jóvenes,",
+      "words": [
+        {
+          "word": "materiales",
+          "start": 167.32,
+          "end": 167.86
+        },
+        {
+          "word": "actuales",
+          "start": 167.86,
+          "end": 168.14
+        },
+        {
+          "word": "de",
+          "start": 168.14,
+          "end": 168.32
+        },
+        {
+          "word": "capacitación",
+          "start": 168.32,
+          "end": 168.86
+        },
+        {
+          "word": "son",
+          "start": 168.86,
+          "end": 169.3
+        },
+        {
+          "word": "áridos",
+          "start": 169.3,
+          "end": 170.02
+        },
+        {
+          "word": "para",
+          "start": 170.02,
+          "end": 170.38
+        },
+        {
+          "word": "nuevos,",
+          "start": 170.38,
+          "end": 170.72
+        },
+        {
+          "word": "los",
+          "start": 170.94,
+          "end": 171.06
+        },
+        {
+          "word": "nuevos",
+          "start": 171.06,
+          "end": 171.2
+        },
+        {
+          "word": "son",
+          "start": 171.2,
+          "end": 171.42
+        },
+        {
+          "word": "más",
+          "start": 171.42,
+          "end": 171.66
+        },
+        {
+          "word": "jóvenes,",
+          "start": 171.66,
+          "end": 172.0
+        }
+      ]
+    },
+    {
+      "start": 172.24,
+      "end": 177.56,
+      "text": "quieren videos, quieren TikTok, quieren cosas muy cortas, muy específicas y muy dinámicas.",
+      "words": [
+        {
+          "word": "quieren",
+          "start": 172.24,
+          "end": 172.32
+        },
+        {
+          "word": "videos,",
+          "start": 172.32,
+          "end": 172.9
+        },
+        {
+          "word": "quieren",
+          "start": 173.14,
+          "end": 173.24
+        },
+        {
+          "word": "TikTok,",
+          "start": 173.24,
+          "end": 173.84
+        },
+        {
+          "word": "quieren",
+          "start": 174.64,
+          "end": 174.68
+        },
+        {
+          "word": "cosas",
+          "start": 174.68,
+          "end": 174.98
+        },
+        {
+          "word": "muy",
+          "start": 174.98,
+          "end": 175.22
+        },
+        {
+          "word": "cortas,",
+          "start": 175.22,
+          "end": 175.54
+        },
+        {
+          "word": "muy",
+          "start": 175.62,
+          "end": 175.78
+        },
+        {
+          "word": "específicas",
+          "start": 175.78,
+          "end": 176.52
+        },
+        {
+          "word": "y",
+          "start": 176.52,
+          "end": 176.74
+        },
+        {
+          "word": "muy",
+          "start": 176.74,
+          "end": 177.12
+        },
+        {
+          "word": "dinámicas.",
+          "start": 177.12,
+          "end": 177.56
+        }
+      ]
+    },
+    {
+      "start": 179.88,
+      "end": 185.64,
+      "text": "Yo empecé a hacer videos pensando en unas, ya platicamos aunque no es un acuerdo de tener",
+      "words": [
+        {
+          "word": "Yo",
+          "start": 179.88,
+          "end": 180.18
+        },
+        {
+          "word": "empecé",
+          "start": 180.18,
+          "end": 180.64
+        },
+        {
+          "word": "a",
+          "start": 180.64,
+          "end": 180.74
+        },
+        {
+          "word": "hacer",
+          "start": 180.74,
+          "end": 180.9
+        },
+        {
+          "word": "videos",
+          "start": 180.9,
+          "end": 181.52
+        },
+        {
+          "word": "pensando",
+          "start": 181.52,
+          "end": 182.5
+        },
+        {
+          "word": "en",
+          "start": 182.5,
+          "end": 182.9
+        },
+        {
+          "word": "unas,",
+          "start": 182.9,
+          "end": 183.38
+        },
+        {
+          "word": "ya",
+          "start": 183.78,
+          "end": 184.04
+        },
+        {
+          "word": "platicamos",
+          "start": 184.04,
+          "end": 184.54
+        },
+        {
+          "word": "aunque",
+          "start": 184.54,
+          "end": 184.72
+        },
+        {
+          "word": "no",
+          "start": 184.72,
+          "end": 184.86
+        },
+        {
+          "word": "es",
+          "start": 184.86,
+          "end": 184.96
+        },
+        {
+          "word": "un",
+          "start": 184.96,
+          "end": 185.12
+        },
+        {
+          "word": "acuerdo",
+          "start": 185.12,
+          "end": 185.28
+        },
+        {
+          "word": "de",
+          "start": 185.28,
+          "end": 185.48
+        },
+        {
+          "word": "tener",
+          "start": 185.48,
+          "end": 185.64
+        }
+      ]
+    },
+    {
+      "start": 185.64,
+      "end": 190.58,
+      "text": "una sección en la wiki o en otro espacio ligado con la wiki, una especie de servidor pero que sea",
+      "words": [
+        {
+          "word": "una",
+          "start": 185.64,
+          "end": 185.82
+        },
+        {
+          "word": "sección",
+          "start": 185.82,
+          "end": 186.3
+        },
+        {
+          "word": "en",
+          "start": 186.3,
+          "end": 186.46
+        },
+        {
+          "word": "la",
+          "start": 186.46,
+          "end": 186.66
+        },
+        {
+          "word": "wiki",
+          "start": 186.66,
+          "end": 186.88
+        },
+        {
+          "word": "o",
+          "start": 186.88,
+          "end": 187.12
+        },
+        {
+          "word": "en",
+          "start": 187.12,
+          "end": 187.3
+        },
+        {
+          "word": "otro",
+          "start": 187.3,
+          "end": 187.52
+        },
+        {
+          "word": "espacio",
+          "start": 187.52,
+          "end": 187.98
+        },
+        {
+          "word": "ligado",
+          "start": 187.98,
+          "end": 188.32
+        },
+        {
+          "word": "con",
+          "start": 188.32,
+          "end": 188.52
+        },
+        {
+          "word": "la",
+          "start": 188.52,
+          "end": 188.7
+        },
+        {
+          "word": "wiki,",
+          "start": 188.7,
+          "end": 188.92
+        },
+        {
+          "word": "una",
+          "start": 188.98,
+          "end": 189.14
+        },
+        {
+          "word": "especie",
+          "start": 189.14,
+          "end": 189.42
+        },
+        {
+          "word": "de",
+          "start": 189.42,
+          "end": 189.64
+        },
+        {
+          "word": "servidor",
+          "start": 189.64,
+          "end": 190.06
+        },
+        {
+          "word": "pero",
+          "start": 190.06,
+          "end": 190.28
+        },
+        {
+          "word": "que",
+          "start": 190.28,
+          "end": 190.44
+        },
+        {
+          "word": "sea",
+          "start": 190.44,
+          "end": 190.58
+        }
+      ]
+    },
+    {
+      "start": 190.58,
+      "end": 197.34,
+      "text": "fácil de administrar. En esa perspectiva yo empecé a hacer mini videos de cualquier cosa. El otro",
+      "words": [
+        {
+          "word": "fácil",
+          "start": 190.58,
+          "end": 190.96
+        },
+        {
+          "word": "de",
+          "start": 190.96,
+          "end": 191.86
+        },
+        {
+          "word": "administrar.",
+          "start": 191.86,
+          "end": 192.52
+        },
+        {
+          "word": "En",
+          "start": 193.36,
+          "end": 193.58
+        },
+        {
+          "word": "esa",
+          "start": 193.58,
+          "end": 193.82
+        },
+        {
+          "word": "perspectiva",
+          "start": 193.82,
+          "end": 194.32
+        },
+        {
+          "word": "yo",
+          "start": 194.32,
+          "end": 194.48
+        },
+        {
+          "word": "empecé",
+          "start": 194.48,
+          "end": 194.72
+        },
+        {
+          "word": "a",
+          "start": 194.72,
+          "end": 194.82
+        },
+        {
+          "word": "hacer",
+          "start": 194.82,
+          "end": 194.98
+        },
+        {
+          "word": "mini",
+          "start": 194.98,
+          "end": 195.28
+        },
+        {
+          "word": "videos",
+          "start": 195.28,
+          "end": 195.68
+        },
+        {
+          "word": "de",
+          "start": 195.68,
+          "end": 196.26
+        },
+        {
+          "word": "cualquier",
+          "start": 196.26,
+          "end": 196.48
+        },
+        {
+          "word": "cosa.",
+          "start": 196.48,
+          "end": 196.8
+        },
+        {
+          "word": "El",
+          "start": 197.02,
+          "end": 197.18
+        },
+        {
+          "word": "otro",
+          "start": 197.18,
+          "end": 197.34
+        }
+      ]
+    },
+    {
+      "start": 197.34,
+      "end": 201.92,
+      "text": "día quise editar la wiki, entonces hice un video de cómo empezar a editar la wiki a nivel muy,",
+      "words": [
+        {
+          "word": "día",
+          "start": 197.34,
+          "end": 197.48
+        },
+        {
+          "word": "quise",
+          "start": 197.48,
+          "end": 197.74
+        },
+        {
+          "word": "editar",
+          "start": 197.74,
+          "end": 198.02
+        },
+        {
+          "word": "la",
+          "start": 198.02,
+          "end": 198.18
+        },
+        {
+          "word": "wiki,",
+          "start": 198.18,
+          "end": 198.38
+        },
+        {
+          "word": "entonces",
+          "start": 198.48,
+          "end": 198.68
+        },
+        {
+          "word": "hice",
+          "start": 198.68,
+          "end": 198.92
+        },
+        {
+          "word": "un",
+          "start": 198.92,
+          "end": 199.2
+        },
+        {
+          "word": "video",
+          "start": 199.2,
+          "end": 199.52
+        },
+        {
+          "word": "de",
+          "start": 199.52,
+          "end": 199.76
+        },
+        {
+          "word": "cómo",
+          "start": 199.76,
+          "end": 200.1
+        },
+        {
+          "word": "empezar",
+          "start": 200.1,
+          "end": 200.52
+        },
+        {
+          "word": "a",
+          "start": 200.52,
+          "end": 200.7
+        },
+        {
+          "word": "editar",
+          "start": 200.7,
+          "end": 200.86
+        },
+        {
+          "word": "la",
+          "start": 200.86,
+          "end": 201.04
+        },
+        {
+          "word": "wiki",
+          "start": 201.04,
+          "end": 201.22
+        },
+        {
+          "word": "a",
+          "start": 201.22,
+          "end": 201.38
+        },
+        {
+          "word": "nivel",
+          "start": 201.38,
+          "end": 201.6
+        },
+        {
+          "word": "muy,",
+          "start": 201.6,
+          "end": 201.92
+        }
+      ]
+    },
+    {
+      "start": 201.92,
+      "end": 207.36,
+      "text": "muy, muy básico, considerando que Andrés ya tiene un video de cómo editar la wiki a un nivel un",
+      "words": [
+        {
+          "word": "muy,",
+          "start": 201.92,
+          "end": 202.06
+        },
+        {
+          "word": "muy",
+          "start": 202.06,
+          "end": 202.2
+        },
+        {
+          "word": "básico,",
+          "start": 202.2,
+          "end": 202.74
+        },
+        {
+          "word": "considerando",
+          "start": 202.96,
+          "end": 203.3
+        },
+        {
+          "word": "que",
+          "start": 203.3,
+          "end": 203.48
+        },
+        {
+          "word": "Andrés",
+          "start": 203.48,
+          "end": 203.72
+        },
+        {
+          "word": "ya",
+          "start": 203.72,
+          "end": 203.92
+        },
+        {
+          "word": "tiene",
+          "start": 203.92,
+          "end": 204.06
+        },
+        {
+          "word": "un",
+          "start": 204.06,
+          "end": 204.24
+        },
+        {
+          "word": "video",
+          "start": 204.24,
+          "end": 204.42
+        },
+        {
+          "word": "de",
+          "start": 204.42,
+          "end": 204.62
+        },
+        {
+          "word": "cómo",
+          "start": 204.62,
+          "end": 205.38
+        },
+        {
+          "word": "editar",
+          "start": 205.38,
+          "end": 206.28
+        },
+        {
+          "word": "la",
+          "start": 206.28,
+          "end": 206.44
+        },
+        {
+          "word": "wiki",
+          "start": 206.44,
+          "end": 206.7
+        },
+        {
+          "word": "a",
+          "start": 206.7,
+          "end": 206.9
+        },
+        {
+          "word": "un",
+          "start": 206.9,
+          "end": 207.04
+        },
+        {
+          "word": "nivel",
+          "start": 207.04,
+          "end": 207.16
+        },
+        {
+          "word": "un",
+          "start": 207.16,
+          "end": 207.36
+        }
+      ]
+    },
+    {
+      "start": 207.36,
+      "end": 215.14,
+      "text": "poquito más avanzado. Hice un video de Mapillary, de Street Complete, etcétera, etcétera. ¿Dónde",
+      "words": [
+        {
+          "word": "poquito",
+          "start": 207.36,
+          "end": 207.54
+        },
+        {
+          "word": "más",
+          "start": 207.54,
+          "end": 207.86
+        },
+        {
+          "word": "avanzado.",
+          "start": 207.86,
+          "end": 208.62
+        },
+        {
+          "word": "Hice",
+          "start": 209.16,
+          "end": 209.24
+        },
+        {
+          "word": "un",
+          "start": 209.24,
+          "end": 209.34
+        },
+        {
+          "word": "video",
+          "start": 209.34,
+          "end": 209.62
+        },
+        {
+          "word": "de",
+          "start": 209.62,
+          "end": 209.84
+        },
+        {
+          "word": "Mapillary,",
+          "start": 209.84,
+          "end": 210.48
+        },
+        {
+          "word": "de",
+          "start": 211.8,
+          "end": 211.96
+        },
+        {
+          "word": "Street",
+          "start": 211.96,
+          "end": 212.18
+        },
+        {
+          "word": "Complete,",
+          "start": 212.18,
+          "end": 212.7
+        },
+        {
+          "word": "etcétera,",
+          "start": 212.9,
+          "end": 213.14
+        },
+        {
+          "word": "etcétera.",
+          "start": 213.14,
+          "end": 214.46
+        },
+        {
+          "word": "¿Dónde",
+          "start": 214.78,
+          "end": 215.14
+        }
+      ]
+    },
+    {
+      "start": 215.14,
+      "end": 221.84,
+      "text": "tendría que ser eso? Si queremos que sea así, cómo estructurar los quiénes deberían hacer esos",
+      "words": [
+        {
+          "word": "tendría",
+          "start": 215.14,
+          "end": 215.42
+        },
+        {
+          "word": "que",
+          "start": 215.42,
+          "end": 215.6
+        },
+        {
+          "word": "ser",
+          "start": 215.6,
+          "end": 215.9
+        },
+        {
+          "word": "eso?",
+          "start": 215.9,
+          "end": 216.7
+        },
+        {
+          "word": "Si",
+          "start": 218.12,
+          "end": 218.26
+        },
+        {
+          "word": "queremos",
+          "start": 218.26,
+          "end": 218.6
+        },
+        {
+          "word": "que",
+          "start": 218.6,
+          "end": 218.82
+        },
+        {
+          "word": "sea",
+          "start": 218.82,
+          "end": 219.0
+        },
+        {
+          "word": "así,",
+          "start": 219.0,
+          "end": 219.72
+        },
+        {
+          "word": "cómo",
+          "start": 219.88,
+          "end": 219.98
+        },
+        {
+          "word": "estructurar",
+          "start": 219.98,
+          "end": 220.42
+        },
+        {
+          "word": "los",
+          "start": 220.42,
+          "end": 220.68
+        },
+        {
+          "word": "quiénes",
+          "start": 220.68,
+          "end": 221.08
+        },
+        {
+          "word": "deberían",
+          "start": 221.08,
+          "end": 221.42
+        },
+        {
+          "word": "hacer",
+          "start": 221.42,
+          "end": 221.68
+        },
+        {
+          "word": "esos",
+          "start": 221.68,
+          "end": 221.84
+        }
+      ]
+    },
+    {
+      "start": 221.84,
+      "end": 229.22,
+      "text": "videos. ¿Tendríamos que tener una agenda de, más bien una lista de apps donde necesitamos hacer videos?",
+      "words": [
+        {
+          "word": "videos.",
+          "start": 221.84,
+          "end": 222.52
+        },
+        {
+          "word": "¿Tendríamos",
+          "start": 223.46,
+          "end": 223.82
+        },
+        {
+          "word": "que",
+          "start": 223.82,
+          "end": 223.98
+        },
+        {
+          "word": "tener",
+          "start": 223.98,
+          "end": 224.16
+        },
+        {
+          "word": "una",
+          "start": 224.16,
+          "end": 224.42
+        },
+        {
+          "word": "agenda",
+          "start": 224.42,
+          "end": 224.74
+        },
+        {
+          "word": "de,",
+          "start": 224.74,
+          "end": 225.16
+        },
+        {
+          "word": "más",
+          "start": 225.18,
+          "end": 225.26
+        },
+        {
+          "word": "bien",
+          "start": 225.26,
+          "end": 225.36
+        },
+        {
+          "word": "una",
+          "start": 225.36,
+          "end": 225.58
+        },
+        {
+          "word": "lista",
+          "start": 225.58,
+          "end": 225.96
+        },
+        {
+          "word": "de",
+          "start": 225.96,
+          "end": 227.28
+        },
+        {
+          "word": "apps",
+          "start": 227.28,
+          "end": 227.62
+        },
+        {
+          "word": "donde",
+          "start": 227.62,
+          "end": 228.08
+        },
+        {
+          "word": "necesitamos",
+          "start": 228.08,
+          "end": 228.78
+        },
+        {
+          "word": "hacer",
+          "start": 228.78,
+          "end": 229.04
+        },
+        {
+          "word": "videos?",
+          "start": 229.04,
+          "end": 229.22
+        }
+      ]
+    },
+    {
+      "start": 229.42,
+      "end": 234.48,
+      "text": "O sea, ¿cómo listamos las necesidades para que alguien haga un video de esas necesidades y luego",
+      "words": [
+        {
+          "word": "O",
+          "start": 229.42,
+          "end": 229.44
+        },
+        {
+          "word": "¿cómo",
+          "start": 229.48,
+          "end": 229.82
+        },
+        {
+          "word": "listamos",
+          "start": 229.82,
+          "end": 230.42
+        },
+        {
+          "word": "las",
+          "start": 230.42,
+          "end": 230.78
+        },
+        {
+          "word": "necesidades",
+          "start": 230.78,
+          "end": 231.4
+        },
+        {
+          "word": "para",
+          "start": 231.4,
+          "end": 231.7
+        },
+        {
+          "word": "que",
+          "start": 231.7,
+          "end": 232.38
+        },
+        {
+          "word": "alguien",
+          "start": 232.38,
+          "end": 232.58
+        },
+        {
+          "word": "haga",
+          "start": 232.58,
+          "end": 232.78
+        },
+        {
+          "word": "un",
+          "start": 232.78,
+          "end": 232.94
+        },
+        {
+          "word": "video",
+          "start": 232.94,
+          "end": 233.14
+        },
+        {
+          "word": "de",
+          "start": 233.14,
+          "end": 233.38
+        },
+        {
+          "word": "esas",
+          "start": 233.38,
+          "end": 233.52
+        },
+        {
+          "word": "necesidades",
+          "start": 233.52,
+          "end": 233.98
+        },
+        {
+          "word": "y",
+          "start": 233.98,
+          "end": 234.14
+        },
+        {
+          "word": "luego",
+          "start": 234.14,
+          "end": 234.48
+        }
+      ]
+    },
+    {
+      "start": 234.48,
+      "end": 242.26,
+      "text": "tachamos ya está hecho? Y esto era una idea que creo que Juan puso en algún momento,",
+      "words": [
+        {
+          "word": "tachamos",
+          "start": 234.48,
+          "end": 234.96
+        },
+        {
+          "word": "ya",
+          "start": 234.96,
+          "end": 235.18
+        },
+        {
+          "word": "está",
+          "start": 235.18,
+          "end": 235.4
+        },
+        {
+          "word": "hecho?",
+          "start": 235.4,
+          "end": 235.92
+        },
+        {
+          "word": "Y",
+          "start": 238.18,
+          "end": 238.62
+        },
+        {
+          "word": "esto",
+          "start": 238.62,
+          "end": 238.92
+        },
+        {
+          "word": "era",
+          "start": 238.92,
+          "end": 239.08
+        },
+        {
+          "word": "una",
+          "start": 239.08,
+          "end": 239.26
+        },
+        {
+          "word": "idea",
+          "start": 239.26,
+          "end": 239.5
+        },
+        {
+          "word": "que",
+          "start": 239.5,
+          "end": 239.96
+        },
+        {
+          "word": "creo",
+          "start": 239.96,
+          "end": 240.12
+        },
+        {
+          "word": "que",
+          "start": 240.12,
+          "end": 240.48
+        },
+        {
+          "word": "Juan",
+          "start": 240.48,
+          "end": 240.64
+        },
+        {
+          "word": "puso",
+          "start": 240.64,
+          "end": 240.94
+        },
+        {
+          "word": "en",
+          "start": 240.94,
+          "end": 241.18
+        },
+        {
+          "word": "algún",
+          "start": 241.18,
+          "end": 241.3
+        },
+        {
+          "word": "momento,",
+          "start": 241.3,
+          "end": 242.26
+        }
+      ]
+    },
+    {
+      "start": 243.36,
+      "end": 250.36,
+      "text": "de también podríamos pensar en hacer podcasts, podcasts informativos y de capacitación,",
+      "words": [
+        {
+          "word": "de",
+          "start": 243.36,
+          "end": 244.02
+        },
+        {
+          "word": "también",
+          "start": 244.02,
+          "end": 244.18
+        },
+        {
+          "word": "podríamos",
+          "start": 244.18,
+          "end": 244.58
+        },
+        {
+          "word": "pensar",
+          "start": 244.58,
+          "end": 244.88
+        },
+        {
+          "word": "en",
+          "start": 244.88,
+          "end": 245.1
+        },
+        {
+          "word": "hacer",
+          "start": 245.1,
+          "end": 245.38
+        },
+        {
+          "word": "podcasts,",
+          "start": 245.38,
+          "end": 246.12
+        },
+        {
+          "word": "podcasts",
+          "start": 246.48,
+          "end": 246.82
+        },
+        {
+          "word": "informativos",
+          "start": 246.82,
+          "end": 247.68
+        },
+        {
+          "word": "y",
+          "start": 247.68,
+          "end": 249.02
+        },
+        {
+          "word": "de",
+          "start": 249.02,
+          "end": 249.34
+        },
+        {
+          "word": "capacitación,",
+          "start": 249.34,
+          "end": 250.36
+        }
+      ]
+    },
+    {
+      "start": 250.5,
+      "end": 252.86,
+      "text": "no sé, hablemos alrededor de ese tema en general.",
+      "words": [
+        {
+          "word": "no",
+          "start": 250.5,
+          "end": 250.6
+        },
+        {
+          "word": "sé,",
+          "start": 250.6,
+          "end": 251.02
+        },
+        {
+          "word": "hablemos",
+          "start": 251.16,
+          "end": 251.68
+        },
+        {
+          "word": "alrededor",
+          "start": 251.68,
+          "end": 252.08
+        },
+        {
+          "word": "de",
+          "start": 252.08,
+          "end": 252.24
+        },
+        {
+          "word": "ese",
+          "start": 252.24,
+          "end": 252.36
+        },
+        {
+          "word": "tema",
+          "start": 252.36,
+          "end": 252.52
+        },
+        {
+          "word": "en",
+          "start": 252.52,
+          "end": 252.7
+        },
+        {
+          "word": "general.",
+          "start": 252.7,
+          "end": 253.03
+        }
+      ]
+    },
+    {
+      "start": 259.14,
+      "end": 267.06,
+      "text": "Yo tenía la mano alante, les cuento mi experiencia pues por mapa en Bogotá que es como mi enfoque,",
+      "words": [
+        {
+          "word": "Yo",
+          "start": 259.14,
+          "end": 259.8
+        },
+        {
+          "word": "tenía",
+          "start": 259.8,
+          "end": 260.46
+        },
+        {
+          "word": "la",
+          "start": 260.46,
+          "end": 260.62
+        },
+        {
+          "word": "mano",
+          "start": 260.62,
+          "end": 260.74
+        },
+        {
+          "word": "alante,",
+          "start": 260.74,
+          "end": 261.16
+        },
+        {
+          "word": "les",
+          "start": 261.66,
+          "end": 262.24
+        },
+        {
+          "word": "cuento",
+          "start": 262.24,
+          "end": 262.44
+        },
+        {
+          "word": "mi",
+          "start": 262.44,
+          "end": 262.62
+        },
+        {
+          "word": "experiencia",
+          "start": 262.62,
+          "end": 263.04
+        },
+        {
+          "word": "pues",
+          "start": 263.04,
+          "end": 264.22
+        },
+        {
+          "word": "por",
+          "start": 264.22,
+          "end": 265.04
+        },
+        {
+          "word": "mapa",
+          "start": 265.04,
+          "end": 265.24
+        },
+        {
+          "word": "en",
+          "start": 265.24,
+          "end": 265.4
+        },
+        {
+          "word": "Bogotá",
+          "start": 265.4,
+          "end": 265.78
+        },
+        {
+          "word": "que",
+          "start": 265.78,
+          "end": 265.96
+        },
+        {
+          "word": "es",
+          "start": 265.96,
+          "end": 266.24
+        },
+        {
+          "word": "como",
+          "start": 266.24,
+          "end": 266.38
+        },
+        {
+          "word": "mi",
+          "start": 266.38,
+          "end": 266.6
+        },
+        {
+          "word": "enfoque,",
+          "start": 266.6,
+          "end": 267.06
+        }
+      ]
+    },
+    {
+      "start": 267.06,
+      "end": 273.34,
+      "text": "pero ha sido un poquito más amplio que eso. Me dio por crear la cuenta en Instagram y es la que",
+      "words": [
+        {
+          "word": "pero",
+          "start": 267.06,
+          "end": 267.32
+        },
+        {
+          "word": "ha",
+          "start": 267.32,
+          "end": 268.08
+        },
+        {
+          "word": "sido",
+          "start": 268.08,
+          "end": 268.34
+        },
+        {
+          "word": "un",
+          "start": 268.34,
+          "end": 268.54
+        },
+        {
+          "word": "poquito",
+          "start": 268.54,
+          "end": 268.76
+        },
+        {
+          "word": "más",
+          "start": 268.76,
+          "end": 269.02
+        },
+        {
+          "word": "amplio",
+          "start": 269.02,
+          "end": 269.26
+        },
+        {
+          "word": "que",
+          "start": 269.26,
+          "end": 269.44
+        },
+        {
+          "word": "eso.",
+          "start": 269.44,
+          "end": 270.2
+        },
+        {
+          "word": "Me",
+          "start": 270.32,
+          "end": 270.64
+        },
+        {
+          "word": "dio",
+          "start": 270.64,
+          "end": 270.74
+        },
+        {
+          "word": "por",
+          "start": 270.74,
+          "end": 270.9
+        },
+        {
+          "word": "crear",
+          "start": 270.9,
+          "end": 271.16
+        },
+        {
+          "word": "la",
+          "start": 271.16,
+          "end": 271.34
+        },
+        {
+          "word": "cuenta",
+          "start": 271.34,
+          "end": 271.52
+        },
+        {
+          "word": "en",
+          "start": 271.52,
+          "end": 271.7
+        },
+        {
+          "word": "Instagram",
+          "start": 271.7,
+          "end": 272.1
+        },
+        {
+          "word": "y",
+          "start": 272.1,
+          "end": 273.12
+        },
+        {
+          "word": "es",
+          "start": 273.12,
+          "end": 273.22
+        },
+        {
+          "word": "la",
+          "start": 273.22,
+          "end": 273.28
+        },
+        {
+          "word": "que",
+          "start": 273.28,
+          "end": 273.34
+        }
+      ]
+    },
+    {
+      "start": 273.34,
+      "end": 280.2,
+      "text": "más se mueve, la que más like tiene, la que más llega público completamente diferente yo. Miércoles,",
+      "words": [
+        {
+          "word": "más",
+          "start": 273.34,
+          "end": 273.5
+        },
+        {
+          "word": "se",
+          "start": 273.5,
+          "end": 273.66
+        },
+        {
+          "word": "mueve,",
+          "start": 273.66,
+          "end": 274.26
+        },
+        {
+          "word": "la",
+          "start": 274.4,
+          "end": 274.56
+        },
+        {
+          "word": "que",
+          "start": 274.56,
+          "end": 274.66
+        },
+        {
+          "word": "más",
+          "start": 274.66,
+          "end": 274.82
+        },
+        {
+          "word": "like",
+          "start": 274.82,
+          "end": 275.08
+        },
+        {
+          "word": "tiene,",
+          "start": 275.08,
+          "end": 275.42
+        },
+        {
+          "word": "la",
+          "start": 275.6,
+          "end": 275.8
+        },
+        {
+          "word": "que",
+          "start": 275.8,
+          "end": 275.9
+        },
+        {
+          "word": "más",
+          "start": 275.9,
+          "end": 276.06
+        },
+        {
+          "word": "llega",
+          "start": 276.06,
+          "end": 276.34
+        },
+        {
+          "word": "público",
+          "start": 276.34,
+          "end": 276.86
+        },
+        {
+          "word": "completamente",
+          "start": 276.86,
+          "end": 278.0
+        },
+        {
+          "word": "diferente",
+          "start": 278.0,
+          "end": 278.56
+        },
+        {
+          "word": "yo.",
+          "start": 278.56,
+          "end": 279.14
+        },
+        {
+          "word": "Miércoles,",
+          "start": 279.74,
+          "end": 280.2
+        }
+      ]
+    },
+    {
+      "start": 280.36,
+      "end": 288.18,
+      "text": "aquí sí se mueve y está el cual, como lo dice es mapeadora, los muchachos les gusta eso. De pronto,",
+      "words": [
+        {
+          "word": "aquí",
+          "start": 280.36,
+          "end": 280.62
+        },
+        {
+          "word": "sí",
+          "start": 280.62,
+          "end": 280.78
+        },
+        {
+          "word": "se",
+          "start": 280.78,
+          "end": 280.92
+        },
+        {
+          "word": "mueve",
+          "start": 280.92,
+          "end": 281.18
+        },
+        {
+          "word": "y",
+          "start": 281.18,
+          "end": 281.38
+        },
+        {
+          "word": "está",
+          "start": 281.38,
+          "end": 281.6
+        },
+        {
+          "word": "el",
+          "start": 281.6,
+          "end": 281.76
+        },
+        {
+          "word": "cual,",
+          "start": 281.76,
+          "end": 281.9
+        },
+        {
+          "word": "como",
+          "start": 281.92,
+          "end": 282.1
+        },
+        {
+          "word": "lo",
+          "start": 282.1,
+          "end": 282.28
+        },
+        {
+          "word": "dice",
+          "start": 282.28,
+          "end": 282.44
+        },
+        {
+          "word": "es",
+          "start": 282.44,
+          "end": 282.64
+        },
+        {
+          "word": "mapeadora,",
+          "start": 282.64,
+          "end": 283.18
+        },
+        {
+          "word": "los",
+          "start": 284.54,
+          "end": 284.74
+        },
+        {
+          "word": "muchachos",
+          "start": 284.74,
+          "end": 285.22
+        },
+        {
+          "word": "les",
+          "start": 285.22,
+          "end": 285.4
+        },
+        {
+          "word": "gusta",
+          "start": 285.4,
+          "end": 285.6
+        },
+        {
+          "word": "eso.",
+          "start": 285.6,
+          "end": 286.54
+        },
+        {
+          "word": "De",
+          "start": 287.36,
+          "end": 287.62
+        },
+        {
+          "word": "pronto,",
+          "start": 287.62,
+          "end": 288.18
+        }
+      ]
+    },
+    {
+      "start": 288.7,
+      "end": 294.6,
+      "text": "mostrar cómo uno mapea un TikTok de 30 segundos, agregar una cuchita, puede llegar a tener más",
+      "words": [
+        {
+          "word": "mostrar",
+          "start": 288.7,
+          "end": 288.94
+        },
+        {
+          "word": "cómo",
+          "start": 288.94,
+          "end": 289.16
+        },
+        {
+          "word": "uno",
+          "start": 289.16,
+          "end": 289.46
+        },
+        {
+          "word": "mapea",
+          "start": 289.46,
+          "end": 290.08
+        },
+        {
+          "word": "un",
+          "start": 290.08,
+          "end": 290.46
+        },
+        {
+          "word": "TikTok",
+          "start": 290.46,
+          "end": 290.92
+        },
+        {
+          "word": "de",
+          "start": 290.92,
+          "end": 291.48
+        },
+        {
+          "word": "30",
+          "start": 291.48,
+          "end": 291.74
+        },
+        {
+          "word": "segundos,",
+          "start": 291.74,
+          "end": 292.16
+        },
+        {
+          "word": "agregar",
+          "start": 292.32,
+          "end": 292.64
+        },
+        {
+          "word": "una",
+          "start": 292.64,
+          "end": 292.88
+        },
+        {
+          "word": "cuchita,",
+          "start": 292.88,
+          "end": 293.58
+        },
+        {
+          "word": "puede",
+          "start": 293.82,
+          "end": 293.88
+        },
+        {
+          "word": "llegar",
+          "start": 293.88,
+          "end": 294.14
+        },
+        {
+          "word": "a",
+          "start": 294.14,
+          "end": 294.22
+        },
+        {
+          "word": "tener",
+          "start": 294.22,
+          "end": 294.34
+        },
+        {
+          "word": "más",
+          "start": 294.34,
+          "end": 294.6
+        }
+      ]
+    },
+    {
+      "start": 294.6,
+      "end": 300.16,
+      "text": "alcance que un video de una junta nuestra en la que explicó durante una hora comodita del",
+      "words": [
+        {
+          "word": "alcance",
+          "start": 294.6,
+          "end": 295.0
+        },
+        {
+          "word": "que",
+          "start": 295.0,
+          "end": 295.8
+        },
+        {
+          "word": "un",
+          "start": 295.8,
+          "end": 295.98
+        },
+        {
+          "word": "video",
+          "start": 295.98,
+          "end": 296.48
+        },
+        {
+          "word": "de",
+          "start": 296.48,
+          "end": 296.72
+        },
+        {
+          "word": "una",
+          "start": 296.72,
+          "end": 296.98
+        },
+        {
+          "word": "junta",
+          "start": 296.98,
+          "end": 297.26
+        },
+        {
+          "word": "nuestra",
+          "start": 297.26,
+          "end": 297.76
+        },
+        {
+          "word": "en",
+          "start": 297.76,
+          "end": 298.02
+        },
+        {
+          "word": "la",
+          "start": 298.02,
+          "end": 298.2
+        },
+        {
+          "word": "que",
+          "start": 298.2,
+          "end": 298.42
+        },
+        {
+          "word": "explicó",
+          "start": 298.42,
+          "end": 298.76
+        },
+        {
+          "word": "durante",
+          "start": 298.76,
+          "end": 299.14
+        },
+        {
+          "word": "una",
+          "start": 299.14,
+          "end": 299.38
+        },
+        {
+          "word": "hora",
+          "start": 299.38,
+          "end": 299.56
+        },
+        {
+          "word": "comodita",
+          "start": 299.56,
+          "end": 299.96
+        },
+        {
+          "word": "del",
+          "start": 299.96,
+          "end": 300.16
+        }
+      ]
+    },
+    {
+      "start": 300.16,
+      "end": 308.54,
+      "text": "Wiki. Puede llegar a tener mucho más y no sé, agregar un árbol y ya empieza a instalar o",
+      "words": [
+        {
+          "word": "Wiki.",
+          "start": 300.16,
+          "end": 300.44
+        },
+        {
+          "word": "Puede",
+          "start": 301.18,
+          "end": 301.74
+        },
+        {
+          "word": "llegar",
+          "start": 301.74,
+          "end": 302.02
+        },
+        {
+          "word": "a",
+          "start": 302.02,
+          "end": 302.14
+        },
+        {
+          "word": "tener",
+          "start": 302.14,
+          "end": 302.32
+        },
+        {
+          "word": "mucho",
+          "start": 302.32,
+          "end": 302.78
+        },
+        {
+          "word": "más",
+          "start": 302.78,
+          "end": 303.04
+        },
+        {
+          "word": "y",
+          "start": 303.04,
+          "end": 303.36
+        },
+        {
+          "word": "no",
+          "start": 303.36,
+          "end": 303.52
+        },
+        {
+          "word": "sé,",
+          "start": 303.52,
+          "end": 303.76
+        },
+        {
+          "word": "agregar",
+          "start": 304.16,
+          "end": 304.46
+        },
+        {
+          "word": "un",
+          "start": 304.46,
+          "end": 304.64
+        },
+        {
+          "word": "árbol",
+          "start": 304.64,
+          "end": 306.2
+        },
+        {
+          "word": "y",
+          "start": 306.2,
+          "end": 306.94
+        },
+        {
+          "word": "empieza",
+          "start": 306.94,
+          "end": 307.58
+        },
+        {
+          "word": "a",
+          "start": 307.58,
+          "end": 307.86
+        },
+        {
+          "word": "instalar",
+          "start": 307.86,
+          "end": 308.1
+        },
+        {
+          "word": "o",
+          "start": 308.1,
+          "end": 308.54
+        }
+      ]
+    },
+    {
+      "start": 308.54,
+      "end": 315.14,
+      "text": "descargar así algo rápido. Podría tener mucho alcance y estarlo continuamente bombardeando.",
+      "words": [
+        {
+          "word": "descargar",
+          "start": 308.54,
+          "end": 309.32
+        },
+        {
+          "word": "así",
+          "start": 309.32,
+          "end": 309.46
+        },
+        {
+          "word": "algo",
+          "start": 309.46,
+          "end": 309.7
+        },
+        {
+          "word": "rápido.",
+          "start": 309.7,
+          "end": 310.38
+        },
+        {
+          "word": "Podría",
+          "start": 310.96,
+          "end": 311.2
+        },
+        {
+          "word": "tener",
+          "start": 311.2,
+          "end": 311.48
+        },
+        {
+          "word": "mucho",
+          "start": 311.48,
+          "end": 311.76
+        },
+        {
+          "word": "alcance",
+          "start": 311.76,
+          "end": 312.32
+        },
+        {
+          "word": "y",
+          "start": 312.32,
+          "end": 312.92
+        },
+        {
+          "word": "estarlo",
+          "start": 312.92,
+          "end": 313.34
+        },
+        {
+          "word": "continuamente",
+          "start": 313.34,
+          "end": 314.02
+        },
+        {
+          "word": "bombardeando.",
+          "start": 314.02,
+          "end": 315.14
+        }
+      ]
+    },
+    {
+      "start": 316.62,
+      "end": 321.82,
+      "text": "Por eso yo siempre me molesto como lo con las redes sociales, como cualquiera que publique ustedes,",
+      "words": [
+        {
+          "word": "Por",
+          "start": 316.62,
+          "end": 316.84
+        },
+        {
+          "word": "eso",
+          "start": 316.84,
+          "end": 317.28
+        },
+        {
+          "word": "yo",
+          "start": 317.28,
+          "end": 317.6
+        },
+        {
+          "word": "siempre",
+          "start": 317.6,
+          "end": 317.86
+        },
+        {
+          "word": "me",
+          "start": 317.86,
+          "end": 317.98
+        },
+        {
+          "word": "molesto",
+          "start": 317.98,
+          "end": 318.14
+        },
+        {
+          "word": "como",
+          "start": 318.14,
+          "end": 318.34
+        },
+        {
+          "word": "lo",
+          "start": 318.34,
+          "end": 318.52
+        },
+        {
+          "word": "con",
+          "start": 318.52,
+          "end": 318.62
+        },
+        {
+          "word": "las",
+          "start": 318.62,
+          "end": 318.84
+        },
+        {
+          "word": "redes",
+          "start": 318.84,
+          "end": 318.96
+        },
+        {
+          "word": "sociales,",
+          "start": 318.96,
+          "end": 319.3
+        },
+        {
+          "word": "como",
+          "start": 319.62,
+          "end": 319.74
+        },
+        {
+          "word": "cualquiera",
+          "start": 319.74,
+          "end": 320.36
+        },
+        {
+          "word": "que",
+          "start": 320.36,
+          "end": 320.64
+        },
+        {
+          "word": "publique",
+          "start": 320.64,
+          "end": 320.98
+        },
+        {
+          "word": "ustedes,",
+          "start": 320.98,
+          "end": 321.82
+        }
+      ]
+    },
+    {
+      "start": 322.46,
+      "end": 328.6,
+      "text": "que en las otras comunidades repitimos eso. Al menos hagamos like porque eso es generar",
+      "words": [
+        {
+          "word": "que",
+          "start": 322.46,
+          "end": 323.06
+        },
+        {
+          "word": "en",
+          "start": 323.06,
+          "end": 323.26
+        },
+        {
+          "word": "otras",
+          "start": 323.26,
+          "end": 323.68
+        },
+        {
+          "word": "comunidades",
+          "start": 323.68,
+          "end": 324.52
+        },
+        {
+          "word": "repitimos",
+          "start": 324.52,
+          "end": 325.34
+        },
+        {
+          "word": "eso.",
+          "start": 325.34,
+          "end": 325.9
+        },
+        {
+          "word": "Al",
+          "start": 326.16,
+          "end": 326.36
+        },
+        {
+          "word": "menos",
+          "start": 326.36,
+          "end": 326.56
+        },
+        {
+          "word": "hagamos",
+          "start": 326.56,
+          "end": 326.98
+        },
+        {
+          "word": "like",
+          "start": 326.98,
+          "end": 327.42
+        },
+        {
+          "word": "porque",
+          "start": 327.42,
+          "end": 327.8
+        },
+        {
+          "word": "eso",
+          "start": 327.8,
+          "end": 328.02
+        },
+        {
+          "word": "es",
+          "start": 328.02,
+          "end": 328.28
+        },
+        {
+          "word": "generar",
+          "start": 328.28,
+          "end": 328.6
+        }
+      ]
+    },
+    {
+      "start": 328.6,
+      "end": 334.92,
+      "text": "ruido y empezar a hacer, bueno a mover redes sociales y empezar a traer gente.",
+      "words": [
+        {
+          "word": "ruido",
+          "start": 328.6,
+          "end": 329.38
+        },
+        {
+          "word": "y",
+          "start": 329.38,
+          "end": 329.58
+        },
+        {
+          "word": "empezar",
+          "start": 329.58,
+          "end": 329.88
+        },
+        {
+          "word": "a",
+          "start": 329.88,
+          "end": 331.16
+        },
+        {
+          "word": "bueno",
+          "start": 331.2,
+          "end": 332.2
+        },
+        {
+          "word": "a",
+          "start": 332.2,
+          "end": 332.58
+        },
+        {
+          "word": "mover",
+          "start": 332.58,
+          "end": 332.74
+        },
+        {
+          "word": "redes",
+          "start": 332.74,
+          "end": 333.0
+        },
+        {
+          "word": "sociales",
+          "start": 333.0,
+          "end": 333.44
+        },
+        {
+          "word": "y",
+          "start": 333.44,
+          "end": 334.02
+        },
+        {
+          "word": "empezar",
+          "start": 334.02,
+          "end": 334.22
+        },
+        {
+          "word": "a",
+          "start": 334.22,
+          "end": 334.4
+        },
+        {
+          "word": "traer",
+          "start": 334.4,
+          "end": 334.6
+        },
+        {
+          "word": "gente.",
+          "start": 334.6,
+          "end": 334.92
+        }
+      ]
+    }
+  ]
+}
