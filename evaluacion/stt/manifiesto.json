@@ -1,0 +1,73 @@
+{
+  "cordeba": {
+    "k": 3,
+    "semilla": 20261010,
+    "excluidas": {
+      "CordeBA_0002": "under 100 words/min: transcript likely incomplete",
+      "CordeBA_0009": "transcript has 1-2 turns: speakers not separated",
+      "CordeBA_0012": "under 100 words/min: transcript likely incomplete",
+      "CordeBA_0016": "audio cannot be decoded (CordeBA_0016.wma)",
+      "CordeBA_0019": "transcript has 1-2 turns: speakers not separated",
+      "CordeBA_0021": "under 100 words/min: transcript likely incomplete",
+      "CordeBA_0024": "transcript has 1-2 turns: speakers not separated"
+    }
+  },
+  "grabaciones": {
+    "PER-1": {
+      "fuente": "humyn",
+      "archivo": "Spanish_Peru_1.wav",
+      "audio_sha256": "caf7343c89a15e25e86e638c6a22a83db5eaeb9c35d2570d75e9d0864d69144e",
+      "referencia_palabras": 1776,
+      "referencia_sha256": "643d64995e8f27f5aee6a9071774d2190f2b08a332404c392ae92566795f93cf",
+      "referencia_hasta_s": 659.979
+    },
+    "PER-2": {
+      "fuente": "humyn",
+      "archivo": "Spanish_Peru_2.wav",
+      "audio_sha256": "2ec3579c5fce9c7e9cb93678a369a985aad61986c823db02461a6eae415615ca",
+      "referencia_palabras": 1778,
+      "referencia_sha256": "91dae441a65ea1acd8d34068386f76e07ef424ed40f32e891a5169bed00a2b69",
+      "referencia_hasta_s": 630.0
+    },
+    "VEN-1": {
+      "fuente": "humyn",
+      "archivo": "Spanish_Venezuela_1.wav",
+      "audio_sha256": "a710e166a902a5b65044bf628baf9886ec4e9142562c1cf1353103e92c9483f5",
+      "referencia_palabras": 1552,
+      "referencia_sha256": "49a33c83105ffe9cfcc695fb827bbbcc9e66e360be3f6654b203f0c616cde4cd",
+      "referencia_hasta_s": 659.979
+    },
+    "VEN-2": {
+      "fuente": "humyn",
+      "archivo": "Spanish_Venezuela_2.wav",
+      "audio_sha256": "9ea8bdc5b2a214d50fa81afe29d899ed6e25f0348f9196117fae4a695d6ed59f",
+      "referencia_palabras": 1559,
+      "referencia_sha256": "68c232a27703da1c64709fc20140032c6f9ea8ae95bdd1d1dd745a297c723a47",
+      "referencia_hasta_s": 689.979
+    },
+    "COR-0010": {
+      "fuente": "cordeba",
+      "archivo": "CordeBA_0010.mp3",
+      "audio_sha256": "eaa5327736b94f55a5e02ca4f5791bd458a8e6e762029bdccd902cd2db7549b6",
+      "referencia_palabras": 2881,
+      "referencia_sha256": "8253cbe1ae81e92c3871911aaeacabe13ee243cde062a86a70591b0ffdc0c185",
+      "referencia_hasta_s": null
+    },
+    "COR-0014": {
+      "fuente": "cordeba",
+      "archivo": "CordeBA_0014.mp3",
+      "audio_sha256": "e7b2b8616f90a4422293983f36f40659a7e4de5befe62c4252a9cc814028f844",
+      "referencia_palabras": 2283,
+      "referencia_sha256": "680c8362ac68fd58487d2c89a1b1d38dfba952773b9511a99e5a1139b783b5fe",
+      "referencia_hasta_s": null
+    },
+    "COR-0015": {
+      "fuente": "cordeba",
+      "archivo": "CordeBA_0015.mp3",
+      "audio_sha256": "cd97249007057398a773a7aa33494dd0c20ab7dcb54e869ef613108430ad1b33",
+      "referencia_palabras": 2388,
+      "referencia_sha256": "9c4879236f0f249d52d984ca2922d076229ec8b9867e57560d2c7c92cc03c647",
+      "referencia_hasta_s": null
+    }
+  }
+}

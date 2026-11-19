@@ -59,7 +59,7 @@ El texto del segmento es la referencia del contenido reconocido. No se exige que
 
 ## Ejemplo y pruebas
 
-Desde la raíz, `.venv/bin/python -m evaluacion.stt.ejemplos_peru` genera las salidas de PER-1 y PER-2 bajo `evaluacion/stt/generado/`, cuando están disponibles los originales. El [notebook de análisis](../../notebooks/stt_asr_peru.ipynb) consume esos resultados. El notebook de validación anterior se conserva en [notebooks históricos](../../notebooks/historicos/README.md), con sus contratos originales, sin presentarlo como evaluación vigente.
+Desde la raíz, `.venv/bin/python -m evaluacion.stt.ejemplos` genera las salidas de PER-1, PER-2, VEN-1 y VEN-2 bajo `evaluacion/stt/generado/`, cuando están disponibles los originales. El [notebook de análisis](../../notebooks/stt_asr_peru.ipynb) consume esos resultados. El notebook de validación anterior se conserva en [notebooks históricos](../../notebooks/historicos/README.md), con sus contratos originales, sin presentarlo como evaluación vigente.
 
 ```bash
 .venv/bin/python -m pytest -q -rs tests/stt
