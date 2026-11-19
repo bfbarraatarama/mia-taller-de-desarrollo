@@ -11,6 +11,7 @@ Insumos: [`canvas.md`](../canvas.md) (Hito 1) y [`4-veredicto.md`](../hito-2/4-v
 | 1, Hito 3 | 2026-11-01 | Primera versión completa |
 | 2, Hito 3 | 2026-11-03 | Etapa de asociación y etiquetado de hablantes: el usuario nombra a cada hablante antes de generar la minuta (2.1, 2.2, 2.3, 3.1.3, 3.1.4, 3.2 y 4.1) |
 | 3, Hito 4 | 2026-11-16 | Admisión de reuniones externas con autorización de uso documentada para la evaluación integral (1.1, 2.1, 2.3, 3.1.2 y 3.1.5), sin modificar los umbrales ni los ensayos de captura y recuperación |
+| 4, alcance congelado | 2026-11-19 | Triage del backlog después del checkpoint: lo que no entra se suma a 1.3 con la pregunta que lo decidió, y la nueva sección 5 fija la definición de terminado, lo que entra y el compromiso público. Los criterios y umbrales de 2.3 no cambian |
 
 ---
 
@@ -33,6 +34,12 @@ La PoC es una aplicación de ejecución local que captura el audio del micrófon
 3. **Optimización del rendimiento y pruebas de carga:** la PoC demuestra el workflow; la latencia solo se registra (2.3).
 4. **Hardware de bajos recursos:** la PoC corre en las máquinas de Matías y Bruno, de iguales prestaciones, sin variantes para equipos con menos capacidad.
 5. **Comparación de modelos:** se elige una herramienta por módulo según compatibilidad, integración y memoria (3.1.1); comparar alternativas no cambia lo que la PoC demuestra.
+
+Sumados en el triage del alcance congelado (sección 5), con la pregunta que los dejó afuera:
+
+6. **Fidelidad semántica de minutas extensas (#17):** casos nuevos y medición de omisiones y contradicciones entre bloques. Pregunta 1: no cambia lo que ve el jurado, que ve una reunión de 5 minutos; 2.1.5 ya tiene evidencia.
+7. **Transcripción y diarización en un servidor:** llevar Whisper y pyannote a otra máquina, con el audio por la red. Preguntas 2 y 3: toca el pipeline y compite con el plan B de calidad.
+8. **Validación multiplataforma completa (#18):** instalaciones desde cero en Linux y Windows, CPU y GPU, con verificación automatizada. Pregunta 2: es casi una semana de trabajo; entra solo la matriz de lo ya verificado.
 
 ### 1.4 Riesgos
 
@@ -241,3 +248,45 @@ flowchart LR
 | 7, Workshop 1 | Datos listos | Muestra congelada con SHA-256; reunión de prueba y sus notas; escritura incremental; preparación y unión de audio; prueba de los tres modelos | Matías y Felipe | Manifiesto, reunión de prueba con notas y cada módulo corriendo por separado |
 | 8, Workshop 2 | *Baseline* de punta a punta | Asociación temporal con marcas de solapamiento y ambigüedad, y etiquetado de hablantes (Matías); minuta con marcas temporales, orquestación, recuperación e interfaz (Bruno) | Matías y Bruno | El happy path con la reunión de prueba, en un archivo y en varios |
 | 9, Workshop 3 | Evaluación y cierre | Criterios de 2.3, casos borde y recuperación | Luisa | La tabla de 2.3 con sí o no por fila y la decisión |
+
+---
+
+## 5. Alcance congelado
+
+Fijado el 19/11/2026, después del checkpoint del Hito 4 ([estado contra 2.3](../hito-4/estado-checkpoint.md)), con la decisión provisional **Ajustar**. De acá al Demo Day (1/12) no se agregan capacidades.
+
+### 5.1 Definición de terminado
+
+| | Terminado cuando |
+|---|---|
+| La demo corre este flujo | Desde la interfaz, la reunión de prueba (OSM LatAm, 339 s) se carga, se procesa viendo el avance de cada etapa, se nombra a los hablantes en las fichas, se revisan la transcripción y la minuta, y la minuta se copia al portapapeles. Una grabación corta desde la interfaz queda en el directorio elegido |
+| La evaluación reporta estas métricas | Los 5 criterios de 2.3, cada uno como sí, parcial o no con su número, sobre la versión final. La calidad, en las 2 modalidades y con las mismas notas de referencia, para el *baseline* y para la variante del plan B del riesgo 2. Por módulo, sobre la muestra congelada: WER y CER, DER y JER, palabras con el hablante correcto e ítems de AMI recuperados; y el WER por dataset y por país (#27) |
+| El repo se instala con estos pasos | Los del [README](../README.md): perfil `cu128` en Linux con GPU, verificado desde cero (#18), y `python -m src.verificar_entorno` sin fallas; la matriz del #18 declara lo verificado en Windows y sus límites |
+
+### 5.2 Lo que entra
+
+Cada ítem pasó las tres preguntas del triage: cambia lo que ve o mide el jurado, su esfuerzo con la evaluación incluida y su riesgo de regresión. «~» marca lo que entra solo si sobra tiempo. Responsables y fechas, según el plan de cierre del checkpoint.
+
+| Ítem | Esfuerzo | Riesgo | Responsable | Fecha |
+|---|---|---|---|---|
+| Plan B del riesgo 2: minuta desde la transcripción corregida a mano y, según el resultado, cambio de modelo o ajuste del prompt | Medio | Bajo: se evalúa como variante, sin reemplazar el *baseline* | Felipe (transcripción), Bruno (minuta), responsable de cada módulo | 21/11 y 22/11 |
+| Volver a medir la calidad en las 2 modalidades | Bajo | Ninguno | Matías (corridas), Bruno (evaluación) | 22/11 |
+| Recorrido del tercero con el protocolo de escenarios | Bajo | Ninguno | Luisa | 20/11 |
+| Botón «Copiar» en los visores de minuta y transcripción (#28) | Bajo | Bajo: solo el diálogo del visor | Matías | 19/11 |
+| Modelo de minutas en un servidor de la red: prueba entre dos máquinas, latencia medida y README | Bajo: sin cambios de código | Ninguno | Matías y Bruno | 24/11 |
+| Evaluación de STT por dataset y país (#27) | Hecho; falta integrarlo | Ninguno | Felipe | 20/11 |
+| Matriz de plataformas verificadas y cierre del #18 | Bajo | Ninguno | Luisa | 22/11 |
+| ~ Campo para la dirección del servidor de Ollama en la interfaz | Bajo | Medio: toca la validación del destino y la autorización | Matías | Solo si sobra tiempo |
+
+#### Escenario agregado: modelo de minutas en un servidor de la red
+
+No suma a la cobertura de casos borde de 2.3, que sigue en 7/7.
+
+- **Dado:** el modelo de minutas está en un Ollama de otra PC de la red, configurado con `OLLAMA_HOST`.
+- **Cuando:** el usuario pide generar la minuta.
+- **Entonces:** la aplicación lo informa como servicio externo y pide autorización; sin ella, no envía nada.
+- **Y:** con autorización, envía la transcripción, los nombres y las marcas temporales, nunca el audio, y la minuta registra el destino.
+
+### 5.3 Compromiso público
+
+> «En el Demo Day vamos a mostrar exactamente esto: una reunión real en castellano que pasa por la aplicación de punta a punta en una laptop con 6 GB de GPU (cargar, nombrar a los hablantes, ver la transcripción y la minuta con sus marcas temporales, y copiarla), y los cinco criterios de 2.3 medidos tal cual, con la calidad antes y después del ajuste.»
