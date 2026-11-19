@@ -1,8 +1,9 @@
 """Visores de instantáneas verificadas; no consultan archivos ni proveedores."""
 from __future__ import annotations
 
-from PySide6.QtWidgets import (QDialog, QPlainTextEdit, QPushButton, QTabWidget,
-                               QTextBrowser, QVBoxLayout)
+from PySide6.QtCore import QMimeData
+from PySide6.QtWidgets import (QApplication, QDialog, QHBoxLayout, QPlainTextEdit, QPushButton,
+                               QTabWidget, QTextBrowser, QVBoxLayout)
 
 from .presentacion import minuta_html, transcripcion_html
 
@@ -36,6 +37,23 @@ class DialogoResultado(QDialog):
         self.pestanas.addTab(self.lectura, 'Lectura')
         self.pestanas.addTab(self.original, 'Original (Markdown)' if minuta else 'Original (JSON)')
         lay.addWidget(self.pestanas, 1)
+        # Copia el HTML generado (escapado, sin colores del tema) y el texto: cada aplicación toma el que admite.
+        self._copia_html = html
+        self._copia_texto = contenido if minuta else self.lectura.toPlainText()
+        botones = QHBoxLayout()
+        self.boton_copiar = QPushButton('Copiar', self)
+        self.boton_copiar.setToolTip('Copia con formato (correo, documentos) y como texto (chat, editores).')
+        self.boton_copiar.clicked.connect(self._copiar)
         cerrar = QPushButton('Cerrar', self)
         cerrar.clicked.connect(self.accept)
-        lay.addWidget(cerrar)
+        botones.addWidget(self.boton_copiar)
+        botones.addStretch(1)
+        botones.addWidget(cerrar)
+        lay.addLayout(botones)
+
+    def _copiar(self):
+        datos = QMimeData()
+        datos.setHtml(f'<html><body>{self._copia_html}</body></html>')
+        datos.setText(self._copia_texto)
+        QApplication.clipboard().setMimeData(datos)
+        self.boton_copiar.setText('Copiado ✓')
