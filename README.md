@@ -145,7 +145,8 @@ inferencias ni solicita credenciales remotas. No sustituye las pruebas funcional
 La interfaz separa captura y procesamiento en dos columnas ajustables cuando hay espacio
 suficiente. El selector de tema de la barra de estado permite usar el esquema del sistema,
 claro u oscuro y recuerda la elección. Los visores permiten alternar entre una representación de lectura y el original
-verificado. La agrupación visual de transcripciones no altera el JSON canónico. Véanse las
+verificado. El botón «Copiar» de cada visor lleva la minuta o la transcripción al portapapeles,
+con formato y como texto. La agrupación visual de transcripciones no altera el JSON canónico. Véanse las
 [decisiones de diseño de la interfaz](docs/interfaz-y-presentacion.md).
 
 ### Ejecución programática
