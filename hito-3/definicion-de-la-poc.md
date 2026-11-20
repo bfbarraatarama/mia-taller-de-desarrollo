@@ -269,8 +269,8 @@ Cada ítem pasó las tres preguntas del triage: cambia lo que ve o mide el jurad
 
 | Ítem | Esfuerzo | Riesgo | Responsable | Fecha |
 |---|---|---|---|---|
-| Plan B del riesgo 2: minuta desde la transcripción corregida a mano y, según el resultado, cambio de modelo o ajuste del prompt | Medio | Bajo: se evalúa como variante, sin reemplazar el *baseline* | Felipe (transcripción), Bruno (minuta), responsable de cada módulo | 21/11 y 22/11 |
-| Volver a medir la calidad en las 2 modalidades | Bajo | Ninguno | Matías (corridas), Bruno (evaluación) | 22/11 |
+| Plan B del riesgo 2: minuta desde la transcripción corregida a mano (diagnóstico, sin ajustar nada) y, según el resultado, cambio de modelo o ajuste del prompt con casos de desarrollo distintos de la reunión de prueba, que queda solo para medir | Medio | Bajo: se evalúa como variante, sin reemplazar el *baseline* | Felipe (transcripción), Bruno (minuta), responsable de cada módulo | 21/11 y 22/11 |
+| Volver a medir la calidad en las 2 modalidades, para el *baseline* y la variante sobre los mismos casos y contra los mismos umbrales | Bajo | Ninguno | Matías (corridas), Bruno (evaluación) | 22/11 |
 | Recorrido del tercero con el protocolo de escenarios | Bajo | Ninguno | Luisa | 20/11 |
 | Botón «Copiar» en los visores de minuta y transcripción (#28) | Bajo | Bajo: solo el diálogo del visor | Matías | 19/11 |
 | Modelo de minutas en un servidor de la red: prueba entre dos máquinas, latencia medida y README | Bajo: sin cambios de código | Ninguno | Matías y Bruno | 24/11 |
