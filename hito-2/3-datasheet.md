@@ -4,7 +4,7 @@
 
 **Equipo:** Luisa, Bruno, Matías, Felipe.
 
-**Muestra:** [`hito-2/muestra/`](muestra/) · **Fecha de revisión:** 2026-10-13
+**Muestra:** [`hito-2/muestra/`](muestra/) · **Fecha de revisión:** 2026-10-13 · **Correcciones (Hito 4.5):** 2026-11-20, marcadas como tales en las respuestas 9, 13 y 14
 
 Las mediciones están en el [EDA](2-eda-de-viabilidad.md) y se regeneran desde su [notebook](notebooks/eda_viabilidad.ipynb). Los resultados normalizados y acústicos son derivados locales: no se redistribuyen originales restringidos.
 
@@ -146,6 +146,8 @@ En CORdeBA, Humyn LATAM, AMI e ICSI, las conversaciones espontáneas pueden cont
 
 Por su parte, Common Voice utiliza identificadores de colaboradores sin nombres personales, pero las grabaciones conservan la voz de cada participante, que constituye un posible medio de identificación.
 
+*Agregado en las correcciones del Hito 4.5.* La reunión de prueba de la evaluación integral (OSM LatAm, 2022-07-30, fragmento de 339 s; [`procedencia`](../evaluacion/integral/muestras/osm-latam-20220730/procedencia.json)) es una junta pública de la comunidad de OpenStreetMap, publicada en dominio público por su organización. Los participantes se nombran entre sí en el audio, y esos nombres de pila quedan versionados en las transcripciones, las fichas de hablantes y las notas de referencia de la evaluación. Se conservan porque ya son públicos y porque las evaluaciones se verifican contra esos archivos por su SHA-256; no se versionan apellidos, contactos ni otros datos personales.
+
 En consecuencia, los identificadores codificados no garantizan el anonimato, especialmente cuando se combinan datos demográficos, contenido de las conversaciones y características de la voz. Por este motivo, los datos deben tratarse considerando el riesgo de reidentificación y las condiciones de uso de cada fuente.
 
 **10. ¿Hay datos sensibles?**
@@ -172,13 +174,15 @@ Respuesta: Los criterios de selección variaron según la fuente. Para AMI e ICS
 
 **13. Si hay personas, ¿sabían que se recolectaban sus datos, y lo consintieron?**
 
-Respuesta: OpenSLR 61: voluntarios. CORdeBA: grabado "con autorización de los participantes" (ficha). Common Voice: no verificado en los archivos descargados. AMI, ICSI y Humyn: no figura en los archivos descargados. VoxConverse: videos públicos de YouTube; no sabemos. CALLHOME y Figshare v2: no verificado.
+Respuesta: OpenSLR 61: voluntarios. CORdeBA: grabado "con autorización de los participantes" (ficha). Common Voice: no verificado en los archivos descargados. AMI, ICSI y Humyn: no figura en los archivos descargados. VoxConverse: videos públicos de YouTube; no sabemos. CALLHOME y Figshare v2: no verificado. *Agregado en las correcciones del Hito 4.5.* Reunión de prueba de OSM LatAm: la junta fue grabada y publicada en dominio público por la propia comunidad; el equipo no recolectó el audio ni pidió un consentimiento propio.
 
 ## 4. Usos
 
 **14. ¿Hay algo en cómo se armó que afecte sus usos?**
 
 Respuesta: Ver EDA, L1 a L5. No sirve para evaluar el producto completo: ninguna reunión tiene castellano, hablantes y minuta a la vez. OpenSLR 61 es lectura, con 44 hablantes para 5.739 clips: se parte por hablante. Common Voice también es habla leída y requiere controlar la identidad de los colaboradores entre splits. CALLHOME tiene 140 registros que no pueden tratarse como sesiones independientes ni todos sus intervalos como referencias válidas. Figshare debe segmentarse por sus nueve sesiones, no por las 219 tareas.
+
+*Agregado en las correcciones del Hito 4.5.* Las respuestas esperadas de la evaluación de minutas no son humanas en su redacción: los ítems de las minutas de referencia de AMI, igual que sus transcripciones, se tradujeron al castellano con un modelo de traducción automática, MarianMT (`Helsinki-NLP/opus-mt-en-es`, revisión `5bc4493d`), sin revisión humana de la traducción. Cada texto queda marcado como sintético, con su original, en `traduccion.json` ([`evaluacion/modular/traduccion.py`](../evaluacion/modular/traduccion.py)). Las referencias no se construyeron a partir de la salida del sistema evaluado: son las minutas originales de AMI, y la planilla la marcó una persona que no ejecutó la inferencia. Las notas de referencia de la reunión de prueba las escribió un integrante del equipo antes de procesarla.
 
 Pyannote entrenó con AMI y VoxConverse: 91 reuniones AMI/ICSI estaban identificadas históricamente como no usadas por una configuración concreta de pyannote, pero debe contrastarse con la versión exacta del modelo evaluado. Las minutas son en inglés y el 97 % de las minutas de AMI corresponde a reuniones actuadas con el mismo guion: se parte por serie. Las observaciones acústicas son parciales; que un extracto se decodifique no garantiza la calidad del audio original completo ni de sus anotaciones.
 
