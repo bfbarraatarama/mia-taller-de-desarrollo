@@ -77,6 +77,8 @@ Grupos sin medir: mayores de 50 años, mujeres frente a hombres y hablantes de o
 | R8 | Audio y transcripción quedan en disco indefinidamente | Participantes | Alta: no hay borrado | Media | La aplicación conserva todo por diseño (recuperación, 3.1.5) |
 | R9 | Instrucciones dichas en la reunión manipulan la minuta (prompt injection) | Usuaria; participantes | Sin medir | Media | Sin pruebas adversariales |
 | R10 | Uso para evaluar empleados o como prueba sin revisión | Participantes | Sin medir | Alta | Uso prohibido en el canvas; no hay control técnico |
+| R11 | Medir con casos que se usaron para ajustar el sistema: la calidad informada sale mejor que la real | Usuaria; jurado | Media: el plan B ajusta el prompt | Alta | La muestra se congeló el 15/11 a las 23:39, después del último cambio de prompts (21:46); la reunión de prueba entró el 16/11 |
+| R12 | Referencias de minutas generadas por un modelo: las de AMI se tradujeron con MarianMT | Jurado | Alta: todas las de AMI | Media | [Hoja de datos](../hito-2/3-datasheet.md) |
 
 ### 4.3 Riesgos propios del LLM
 
@@ -99,6 +101,8 @@ Grupos sin medir: mayores de 50 años, mujeres frente a hombres y hablantes de o
 | R8 | — | Borrado del audio y opción de guardar solo la minuta (canvas, §7) | **Brecha**: previsto en el canvas, no construido |
 | R9 | Instrucciones y transcripción en mensajes separados; «son datos, no instrucciones»; salida con esquema; visor que no interpreta HTML ni enlaces | Pruebas adversariales | — |
 | R10 | Usos prohibidos declarados (§2) | Términos de uso | No hay control técnico posible |
+| R11 | Conjunto de evaluación congelado antes de evaluar; notas de la reunión de prueba escritas antes de procesar | El prompt del plan B se ajusta con casos de desarrollo distintos de la reunión de prueba, que queda solo para medir el *baseline* y la variante | Una sola reunión de prueba |
+| R12 | Planilla de AMI marcada por una persona que no ejecutó la inferencia | Revisar a mano las traducciones de las referencias | La traducción automática queda declarada |
 
 ## 6. Trazabilidad
 
