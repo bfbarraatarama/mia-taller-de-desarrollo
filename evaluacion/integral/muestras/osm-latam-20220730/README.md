@@ -2,6 +2,7 @@
 
 - Fuente: [Junta OsmLatAm Julio 2022 Argentina](https://peertube.openstreetmap.fr/videos/watch/e8177007-3a34-4926-abed-b5dbc1700631), 30 de julio de 2022. [Acta](https://wiki.openstreetmap.org/wiki/ES:LatAm/Eventos/20220730_Reuni%C3%B3n_virtual).
 - Licencia declarada por el publicador en los metadatos de PeerTube: Public Domain Dedication (id 7). No constituye consentimiento directo obtenido por el equipo.
+- Datos personales: los participantes se nombran entre sí en el audio público; sus nombres de pila quedan en las transcripciones, fichas y notas de la evaluación. No se versionan apellidos ni contactos (hoja de datos del Hito 2, respuestas 9 y 13).
 - Grabación descargada (MP4, 412657265 bytes): SHA-256 `6cab42348f0460b9eda679bdeea820c5da476417280e2b82ac2269685537423e`.
 - Fragmento continuo: 00:43:08–00:48:47 sobre el WAV completo extraído, 339 s. Se localizaron los temas y el compromiso mediante una transcripción auxiliar de Whisper `small` (38:00–62:00), anterior a las corridas del baseline; no se utiliza esa transcripción como referencia. Las notas deben contrastarse directamente con la grabación y el acta antes del procesamiento formal.
 
