@@ -220,6 +220,24 @@ de captura. Consultar
 [Reanudación y confidencialidad](docs/continuidad-y-confidencialidad.md) para la
 fundamentación de estas decisiones.
 
+#### Modelo de minutas en otra PC de la red
+
+Whisper y pyannote corren siempre en la máquina que procesa; el modelo de minutas puede
+estar en un Ollama de otra PC de la red, lo que además libera la GPU local.
+
+| Dónde | Paso |
+|---|---|
+| Servidor | `OLLAMA_HOST=0.0.0.0:11434 ollama serve`, con `qwen2.5:7b` descargado. Ollama no tiene autenticación: abrir el puerto 11434 solo a la IP del cliente y apagarlo al terminar |
+| Cliente, interfaz | `OLLAMA_HOST=http://<IP-del-servidor>:11434 pw-jack .venv/bin/python -m src.interfaz`: el panel muestra «servicio externo» y pide autorización en cada generación |
+| Cliente, línea de comandos | `OLLAMA_HOST=http://<IP-del-servidor>:11434 .venv/bin/python -m src.pipeline ejecutar … --permitir-remoto` |
+
+Sin autorización la ejecución se rechaza antes de enviar nada. Con autorización se envían
+la transcripción, los nombres y las marcas temporales, nunca el audio, y la minuta registra
+`destino: ollama_externo` en `ejecucion_minutas.json`. Prueba del 18/11/2026 con el servidor
+en otra dirección de la misma máquina (`127.0.0.2`): rechazo sin autorización, sin pedidos de
+generación al servidor; con autorización, minuta de la reunión de prueba en 135,6 s. La
+latencia entre dos máquinas de la red está pendiente de medición.
+
 Los tests sin GPU comprueban contratos y conexiones; **no demuestran** calidad de
 minutas, compatibilidad de VRAM de 6 GB o cumplimiento de los umbrales de Hito 3 §2.3.
 Esas evidencias requieren las muestras y el hardware correspondientes. Los modelos
