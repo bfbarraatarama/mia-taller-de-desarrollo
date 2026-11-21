@@ -1,0 +1,1489 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.46,
+      "text": "El caballo negro superponelo a la piña.",
+      "words": [
+        {
+          "word": "El",
+          "start": 0.0,
+          "end": 0.8
+        },
+        {
+          "word": "caballo",
+          "start": 0.8,
+          "end": 1.2
+        },
+        {
+          "word": "negro",
+          "start": 1.2,
+          "end": 1.52
+        },
+        {
+          "word": "superponelo",
+          "start": 1.52,
+          "end": 2.16
+        },
+        {
+          "word": "a",
+          "start": 2.16,
+          "end": 2.28
+        },
+        {
+          "word": "la",
+          "start": 2.28,
+          "end": 2.48
+        },
+        {
+          "word": "piña.",
+          "start": 2.48,
+          "end": 3.46
+        }
+      ]
+    },
+    {
+      "start": 6.54,
+      "end": 10.0,
+      "text": "De tal manera que",
+      "words": [
+        {
+          "word": "De",
+          "start": 6.54,
+          "end": 7.16
+        },
+        {
+          "word": "tal",
+          "start": 7.16,
+          "end": 7.48
+        },
+        {
+          "word": "manera",
+          "start": 7.48,
+          "end": 7.98
+        },
+        {
+          "word": "que",
+          "start": 7.98,
+          "end": 10.0
+        }
+      ]
+    },
+    {
+      "start": 11.12,
+      "end": 17.24,
+      "text": "la de izquierda a derecha la segunda pata, o sea la que está como apoyada en",
+      "words": [
+        {
+          "word": "la",
+          "start": 11.12,
+          "end": 11.74
+        },
+        {
+          "word": "de",
+          "start": 11.74,
+          "end": 11.92
+        },
+        {
+          "word": "izquierda",
+          "start": 11.92,
+          "end": 12.48
+        },
+        {
+          "word": "a",
+          "start": 12.48,
+          "end": 12.68
+        },
+        {
+          "word": "derecha",
+          "start": 12.68,
+          "end": 13.14
+        },
+        {
+          "word": "la",
+          "start": 13.14,
+          "end": 13.36
+        },
+        {
+          "word": "segunda",
+          "start": 13.36,
+          "end": 13.82
+        },
+        {
+          "word": "pata,",
+          "start": 13.82,
+          "end": 15.06
+        },
+        {
+          "word": "o",
+          "start": 15.24,
+          "end": 15.3
+        },
+        {
+          "word": "sea",
+          "start": 15.3,
+          "end": 15.48
+        },
+        {
+          "word": "la",
+          "start": 15.48,
+          "end": 15.72
+        },
+        {
+          "word": "que",
+          "start": 15.72,
+          "end": 15.96
+        },
+        {
+          "word": "está",
+          "start": 15.96,
+          "end": 16.46
+        },
+        {
+          "word": "como",
+          "start": 16.46,
+          "end": 16.8
+        },
+        {
+          "word": "apoyada",
+          "start": 16.8,
+          "end": 17.12
+        },
+        {
+          "word": "en",
+          "start": 17.12,
+          "end": 17.24
+        }
+      ]
+    },
+    {
+      "start": 17.24,
+      "end": 22.12,
+      "text": "el suelo digamos, está como",
+      "words": [
+        {
+          "word": "el",
+          "start": 17.24,
+          "end": 17.4
+        },
+        {
+          "word": "suelo",
+          "start": 17.4,
+          "end": 17.7
+        },
+        {
+          "word": "digamos,",
+          "start": 17.7,
+          "end": 18.46
+        },
+        {
+          "word": "está",
+          "start": 20.0,
+          "end": 20.08
+        },
+        {
+          "word": "como",
+          "start": 20.08,
+          "end": 22.12
+        }
+      ]
+    },
+    {
+      "start": 24.16,
+      "end": 29.36,
+      "text": "coincide más o menos con el borde sur de la piña. Es como si estuviera",
+      "words": [
+        {
+          "word": "coincide",
+          "start": 24.16,
+          "end": 24.78
+        },
+        {
+          "word": "más",
+          "start": 24.78,
+          "end": 25.02
+        },
+        {
+          "word": "o",
+          "start": 25.02,
+          "end": 25.14
+        },
+        {
+          "word": "menos",
+          "start": 25.14,
+          "end": 25.32
+        },
+        {
+          "word": "con",
+          "start": 25.32,
+          "end": 25.62
+        },
+        {
+          "word": "el",
+          "start": 25.62,
+          "end": 26.82
+        },
+        {
+          "word": "borde",
+          "start": 26.82,
+          "end": 27.32
+        },
+        {
+          "word": "sur",
+          "start": 27.32,
+          "end": 27.68
+        },
+        {
+          "word": "de",
+          "start": 27.68,
+          "end": 27.96
+        },
+        {
+          "word": "la",
+          "start": 27.96,
+          "end": 28.18
+        },
+        {
+          "word": "piña.",
+          "start": 28.18,
+          "end": 28.52
+        },
+        {
+          "word": "Es",
+          "start": 28.58,
+          "end": 28.74
+        },
+        {
+          "word": "como",
+          "start": 28.74,
+          "end": 28.86
+        },
+        {
+          "word": "si",
+          "start": 28.86,
+          "end": 29.08
+        },
+        {
+          "word": "estuviera",
+          "start": 29.08,
+          "end": 29.36
+        }
+      ]
+    },
+    {
+      "start": 29.36,
+      "end": 34.06,
+      "text": "apoyada sobre el borde sur. En el centro? Sí, en el centro.",
+      "words": [
+        {
+          "word": "apoyada",
+          "start": 29.36,
+          "end": 29.96
+        },
+        {
+          "word": "sobre",
+          "start": 29.96,
+          "end": 30.2
+        },
+        {
+          "word": "el",
+          "start": 30.2,
+          "end": 30.32
+        },
+        {
+          "word": "borde",
+          "start": 30.32,
+          "end": 30.56
+        },
+        {
+          "word": "sur.",
+          "start": 30.56,
+          "end": 30.78
+        },
+        {
+          "word": "el",
+          "start": 30.96,
+          "end": 31.16
+        },
+        {
+          "word": "centro?",
+          "start": 31.16,
+          "end": 31.32
+        },
+        {
+          "word": "Sí,",
+          "start": 32.96,
+          "end": 33.32
+        },
+        {
+          "word": "en",
+          "start": 33.48,
+          "end": 33.52
+        },
+        {
+          "word": "el",
+          "start": 33.52,
+          "end": 33.68
+        },
+        {
+          "word": "centro.",
+          "start": 33.68,
+          "end": 34.06
+        }
+      ]
+    },
+    {
+      "start": 35.84,
+      "end": 39.92,
+      "text": "Ves que esa pata está como inclinada. Claro, pero el extremo de la pata está en el",
+      "words": [
+        {
+          "word": "Ves",
+          "start": 35.84,
+          "end": 36.2
+        },
+        {
+          "word": "que",
+          "start": 36.2,
+          "end": 36.32
+        },
+        {
+          "word": "esa",
+          "start": 36.32,
+          "end": 36.46
+        },
+        {
+          "word": "pata",
+          "start": 36.46,
+          "end": 36.66
+        },
+        {
+          "word": "está",
+          "start": 36.66,
+          "end": 36.8
+        },
+        {
+          "word": "como",
+          "start": 36.8,
+          "end": 37.16
+        },
+        {
+          "word": "inclinada.",
+          "start": 37.16,
+          "end": 37.84
+        },
+        {
+          "word": "Claro,",
+          "start": 38.16,
+          "end": 38.26
+        },
+        {
+          "word": "pero",
+          "start": 38.36,
+          "end": 38.44
+        },
+        {
+          "word": "el",
+          "start": 38.44,
+          "end": 38.7
+        },
+        {
+          "word": "extremo",
+          "start": 38.7,
+          "end": 39.08
+        },
+        {
+          "word": "de",
+          "start": 39.08,
+          "end": 39.2
+        },
+        {
+          "word": "la",
+          "start": 39.2,
+          "end": 39.34
+        },
+        {
+          "word": "pata",
+          "start": 39.34,
+          "end": 39.52
+        },
+        {
+          "word": "está",
+          "start": 39.52,
+          "end": 39.62
+        },
+        {
+          "word": "en",
+          "start": 39.62,
+          "end": 39.76
+        },
+        {
+          "word": "el",
+          "start": 39.76,
+          "end": 39.92
+        }
+      ]
+    },
+    {
+      "start": 39.92,
+      "end": 44.64,
+      "text": "centro de la piña. Claro, donde la pata toca tierra, digamos, está más o",
+      "words": [
+        {
+          "word": "centro",
+          "start": 39.92,
+          "end": 40.18
+        },
+        {
+          "word": "de",
+          "start": 40.18,
+          "end": 40.3
+        },
+        {
+          "word": "la",
+          "start": 40.3,
+          "end": 40.5
+        },
+        {
+          "word": "Claro,",
+          "start": 40.64,
+          "end": 40.82
+        },
+        {
+          "word": "donde",
+          "start": 41.24,
+          "end": 41.44
+        },
+        {
+          "word": "la",
+          "start": 41.44,
+          "end": 41.62
+        },
+        {
+          "word": "pata",
+          "start": 41.62,
+          "end": 41.86
+        },
+        {
+          "word": "toca",
+          "start": 41.86,
+          "end": 42.16
+        },
+        {
+          "word": "tierra,",
+          "start": 42.16,
+          "end": 42.8
+        },
+        {
+          "word": "digamos,",
+          "start": 42.98,
+          "end": 43.34
+        },
+        {
+          "word": "está",
+          "start": 43.76,
+          "end": 43.98
+        },
+        {
+          "word": "más",
+          "start": 43.98,
+          "end": 44.54
+        },
+        {
+          "word": "o",
+          "start": 44.54,
+          "end": 44.64
+        }
+      ]
+    },
+    {
+      "start": 44.64,
+      "end": 48.52,
+      "text": "menos en el centro de la piña. Quizás medio milímetro hacia la izquierda pero",
+      "words": [
+        {
+          "word": "menos",
+          "start": 44.64,
+          "end": 44.82
+        },
+        {
+          "word": "en",
+          "start": 44.82,
+          "end": 44.96
+        },
+        {
+          "word": "el",
+          "start": 44.96,
+          "end": 45.1
+        },
+        {
+          "word": "centro",
+          "start": 45.1,
+          "end": 45.26
+        },
+        {
+          "word": "de",
+          "start": 45.26,
+          "end": 45.4
+        },
+        {
+          "word": "la",
+          "start": 45.4,
+          "end": 45.58
+        },
+        {
+          "word": "piña.",
+          "start": 45.58,
+          "end": 45.86
+        },
+        {
+          "word": "Quizás",
+          "start": 46.44,
+          "end": 46.8
+        },
+        {
+          "word": "medio",
+          "start": 46.8,
+          "end": 47.14
+        },
+        {
+          "word": "milímetro",
+          "start": 47.14,
+          "end": 47.58
+        },
+        {
+          "word": "hacia",
+          "start": 47.58,
+          "end": 47.74
+        },
+        {
+          "word": "la",
+          "start": 47.74,
+          "end": 48.0
+        },
+        {
+          "word": "izquierda",
+          "start": 48.0,
+          "end": 48.36
+        },
+        {
+          "word": "pero",
+          "start": 48.36,
+          "end": 48.52
+        }
+      ]
+    },
+    {
+      "start": 48.52,
+      "end": 49.92,
+      "text": "más o menos en el centro.",
+      "words": [
+        {
+          "word": "más",
+          "start": 48.52,
+          "end": 48.74
+        },
+        {
+          "word": "o",
+          "start": 48.74,
+          "end": 48.82
+        },
+        {
+          "word": "menos",
+          "start": 48.82,
+          "end": 48.96
+        },
+        {
+          "word": "en",
+          "start": 48.96,
+          "end": 49.14
+        },
+        {
+          "word": "el",
+          "start": 49.14,
+          "end": 49.32
+        },
+        {
+          "word": "centro.",
+          "start": 49.32,
+          "end": 49.92
+        }
+      ]
+    },
+    {
+      "start": 49.92,
+      "end": 60.24,
+      "text": "De manera que lo que sobresale de la piña queda un poquito más, digamos, si",
+      "words": [
+        {
+          "word": "De",
+          "start": 49.92,
+          "end": 50.34
+        },
+        {
+          "word": "manera",
+          "start": 50.34,
+          "end": 53.58
+        },
+        {
+          "word": "que",
+          "start": 53.58,
+          "end": 54.56
+        },
+        {
+          "word": "lo",
+          "start": 54.56,
+          "end": 54.88
+        },
+        {
+          "word": "que",
+          "start": 54.88,
+          "end": 55.02
+        },
+        {
+          "word": "sobresale",
+          "start": 55.02,
+          "end": 55.62
+        },
+        {
+          "word": "de",
+          "start": 55.62,
+          "end": 55.78
+        },
+        {
+          "word": "la",
+          "start": 55.78,
+          "end": 56.04
+        },
+        {
+          "word": "piña",
+          "start": 56.04,
+          "end": 57.2
+        },
+        {
+          "word": "queda",
+          "start": 57.2,
+          "end": 57.6
+        },
+        {
+          "word": "un",
+          "start": 57.6,
+          "end": 58.1
+        },
+        {
+          "word": "poquito",
+          "start": 58.1,
+          "end": 58.72
+        },
+        {
+          "word": "más,",
+          "start": 58.72,
+          "end": 59.74
+        },
+        {
+          "word": "digamos,",
+          "start": 59.76,
+          "end": 60.06
+        },
+        {
+          "word": "si",
+          "start": 60.16,
+          "end": 60.24
+        }
+      ]
+    },
+    {
+      "start": 60.24,
+      "end": 65.18,
+      "text": "trazamos un eje horizontal queda un poquito más arriba que la cabeza del",
+      "words": [
+        {
+          "word": "trazamos",
+          "start": 60.24,
+          "end": 60.58
+        },
+        {
+          "word": "un",
+          "start": 60.58,
+          "end": 60.68
+        },
+        {
+          "word": "eje",
+          "start": 60.68,
+          "end": 60.8
+        },
+        {
+          "word": "horizontal",
+          "start": 60.8,
+          "end": 61.54
+        },
+        {
+          "word": "queda",
+          "start": 61.54,
+          "end": 61.92
+        },
+        {
+          "word": "un",
+          "start": 61.92,
+          "end": 62.08
+        },
+        {
+          "word": "poquito",
+          "start": 62.08,
+          "end": 62.34
+        },
+        {
+          "word": "más",
+          "start": 62.34,
+          "end": 62.76
+        },
+        {
+          "word": "arriba",
+          "start": 62.76,
+          "end": 63.12
+        },
+        {
+          "word": "que",
+          "start": 63.12,
+          "end": 63.98
+        },
+        {
+          "word": "la",
+          "start": 63.98,
+          "end": 64.68
+        },
+        {
+          "word": "cabeza",
+          "start": 64.68,
+          "end": 64.96
+        },
+        {
+          "word": "del",
+          "start": 64.96,
+          "end": 65.18
+        }
+      ]
+    },
+    {
+      "start": 65.18,
+      "end": 70.02,
+      "text": "caballo, digamos, que el pelo del caballo. Está bien, pero el extremo del pie, esa",
+      "words": [
+        {
+          "word": "caballo,",
+          "start": 65.18,
+          "end": 65.56
+        },
+        {
+          "word": "digamos,",
+          "start": 65.7,
+          "end": 65.9
+        },
+        {
+          "word": "que",
+          "start": 65.9,
+          "end": 66.04
+        },
+        {
+          "word": "el",
+          "start": 66.04,
+          "end": 66.16
+        },
+        {
+          "word": "pelo",
+          "start": 66.16,
+          "end": 66.28
+        },
+        {
+          "word": "del",
+          "start": 66.28,
+          "end": 66.52
+        },
+        {
+          "word": "caballo.",
+          "start": 66.52,
+          "end": 67.06
+        },
+        {
+          "word": "Está",
+          "start": 67.28,
+          "end": 67.36
+        },
+        {
+          "word": "bien,",
+          "start": 67.36,
+          "end": 67.48
+        },
+        {
+          "word": "pero",
+          "start": 67.5,
+          "end": 67.6
+        },
+        {
+          "word": "el",
+          "start": 67.6,
+          "end": 67.86
+        },
+        {
+          "word": "extremo",
+          "start": 67.86,
+          "end": 68.38
+        },
+        {
+          "word": "del",
+          "start": 68.38,
+          "end": 69.3
+        },
+        {
+          "word": "pie,",
+          "start": 69.3,
+          "end": 69.72
+        }
+      ]
+    },
+    {
+      "start": 70.02,
+      "end": 74.84,
+      "text": "segunda pata que me dijiste, el extremo toca el borde. Sí, es como si estuviera apoyado sobre el borde.",
+      "words": [
+        {
+          "word": "segunda",
+          "start": 70.02,
+          "end": 70.52
+        },
+        {
+          "word": "pata",
+          "start": 70.52,
+          "end": 70.76
+        },
+        {
+          "word": "que",
+          "start": 70.76,
+          "end": 70.86
+        },
+        {
+          "word": "me",
+          "start": 70.86,
+          "end": 71.02
+        },
+        {
+          "word": "dijiste,",
+          "start": 71.02,
+          "end": 71.46
+        },
+        {
+          "word": "el",
+          "start": 71.78,
+          "end": 71.84
+        },
+        {
+          "word": "extremo",
+          "start": 71.84,
+          "end": 72.52
+        },
+        {
+          "word": "toca",
+          "start": 72.52,
+          "end": 72.72
+        },
+        {
+          "word": "el",
+          "start": 72.72,
+          "end": 72.96
+        },
+        {
+          "word": "borde.",
+          "start": 72.96,
+          "end": 73.28
+        },
+        {
+          "word": "Sí,",
+          "start": 73.66,
+          "end": 73.9
+        },
+        {
+          "word": "es",
+          "start": 73.94,
+          "end": 74.06
+        },
+        {
+          "word": "como",
+          "start": 74.06,
+          "end": 74.24
+        },
+        {
+          "word": "si",
+          "start": 74.24,
+          "end": 74.32
+        },
+        {
+          "word": "estuviera",
+          "start": 74.32,
+          "end": 74.48
+        },
+        {
+          "word": "apoyado",
+          "start": 74.48,
+          "end": 74.8
+        },
+        {
+          "word": "sobre",
+          "start": 74.8,
+          "end": 74.82
+        },
+        {
+          "word": "el",
+          "start": 74.82,
+          "end": 74.84
+        }
+      ]
+    },
+    {
+      "start": 74.84,
+      "end": 80.18,
+      "text": "Está como casi por sobrepasar la piña. Claro, claro, está ahí justo. Sí, pero nada",
+      "words": [
+        {
+          "word": "Está",
+          "start": 74.84,
+          "end": 75.0
+        },
+        {
+          "word": "como",
+          "start": 75.0,
+          "end": 75.24
+        },
+        {
+          "word": "casi",
+          "start": 75.24,
+          "end": 75.54
+        },
+        {
+          "word": "por",
+          "start": 75.54,
+          "end": 75.8
+        },
+        {
+          "word": "sobrepasar",
+          "start": 75.8,
+          "end": 76.24
+        },
+        {
+          "word": "la",
+          "start": 76.24,
+          "end": 76.4
+        },
+        {
+          "word": "piña.",
+          "start": 76.4,
+          "end": 76.98
+        },
+        {
+          "word": "Claro,",
+          "start": 77.3,
+          "end": 77.7
+        },
+        {
+          "word": "claro,",
+          "start": 77.92,
+          "end": 78.18
+        },
+        {
+          "word": "está",
+          "start": 78.26,
+          "end": 78.42
+        },
+        {
+          "word": "ahí",
+          "start": 78.42,
+          "end": 78.52
+        },
+        {
+          "word": "justo.",
+          "start": 78.52,
+          "end": 78.86
+        },
+        {
+          "word": "Sí,",
+          "start": 79.22,
+          "end": 79.3
+        },
+        {
+          "word": "pero",
+          "start": 79.42,
+          "end": 79.56
+        },
+        {
+          "word": "nada",
+          "start": 79.56,
+          "end": 80.18
+        }
+      ]
+    },
+    {
+      "start": 81.12,
+      "end": 85.84,
+      "text": "de eso sobresale. No, pero está como apoyada. Lo mueve un cacho y se va.",
+      "words": [
+        {
+          "word": "de",
+          "start": 81.12,
+          "end": 81.52
+        },
+        {
+          "word": "eso",
+          "start": 81.52,
+          "end": 81.72
+        },
+        {
+          "word": "sobresale.",
+          "start": 81.72,
+          "end": 82.4
+        },
+        {
+          "word": "No,",
+          "start": 82.48,
+          "end": 82.66
+        },
+        {
+          "word": "pero",
+          "start": 82.76,
+          "end": 82.82
+        },
+        {
+          "word": "está",
+          "start": 82.82,
+          "end": 82.96
+        },
+        {
+          "word": "como",
+          "start": 82.96,
+          "end": 83.6
+        },
+        {
+          "word": "apoyada.",
+          "start": 83.6,
+          "end": 84.2
+        },
+        {
+          "word": "Lo",
+          "start": 84.38,
+          "end": 84.5
+        },
+        {
+          "word": "mueve",
+          "start": 84.5,
+          "end": 84.66
+        },
+        {
+          "word": "un",
+          "start": 84.66,
+          "end": 84.82
+        },
+        {
+          "word": "cacho",
+          "start": 84.82,
+          "end": 85.06
+        },
+        {
+          "word": "y",
+          "start": 85.06,
+          "end": 85.52
+        },
+        {
+          "word": "se",
+          "start": 85.52,
+          "end": 85.68
+        },
+        {
+          "word": "va.",
+          "start": 85.68,
+          "end": 85.84
+        }
+      ]
+    },
+    {
+      "start": 87.24,
+      "end": 92.1,
+      "text": "De tal manera que donde estarían las bolas del caballo termina la piña ahí, digamos, tiene",
+      "words": [
+        {
+          "word": "De",
+          "start": 87.24,
+          "end": 87.64
+        },
+        {
+          "word": "tal",
+          "start": 87.64,
+          "end": 88.04
+        },
+        {
+          "word": "manera",
+          "start": 88.04,
+          "end": 88.24
+        },
+        {
+          "word": "que",
+          "start": 88.24,
+          "end": 88.42
+        },
+        {
+          "word": "donde",
+          "start": 88.42,
+          "end": 88.62
+        },
+        {
+          "word": "estarían",
+          "start": 88.62,
+          "end": 88.88
+        },
+        {
+          "word": "las",
+          "start": 88.88,
+          "end": 89.04
+        },
+        {
+          "word": "bolas",
+          "start": 89.04,
+          "end": 89.2
+        },
+        {
+          "word": "del",
+          "start": 89.2,
+          "end": 89.4
+        },
+        {
+          "word": "caballo",
+          "start": 89.4,
+          "end": 90.22
+        },
+        {
+          "word": "termina",
+          "start": 90.22,
+          "end": 90.72
+        },
+        {
+          "word": "la",
+          "start": 90.72,
+          "end": 90.92
+        },
+        {
+          "word": "piña",
+          "start": 90.92,
+          "end": 91.18
+        },
+        {
+          "word": "ahí,",
+          "start": 91.18,
+          "end": 91.5
+        },
+        {
+          "word": "digamos,",
+          "start": 91.54,
+          "end": 91.74
+        }
+      ]
+    },
+    {
+      "start": 93.92,
+      "end": 98.9,
+      "text": "justo el borde de la piña, pasa por afuera de la tercer pata y se mete",
+      "words": [
+        {
+          "word": "justo",
+          "start": 93.92,
+          "end": 94.32
+        },
+        {
+          "word": "el",
+          "start": 94.32,
+          "end": 94.72
+        },
+        {
+          "word": "borde",
+          "start": 94.72,
+          "end": 94.98
+        },
+        {
+          "word": "de",
+          "start": 94.98,
+          "end": 95.12
+        },
+        {
+          "word": "la",
+          "start": 95.12,
+          "end": 95.28
+        },
+        {
+          "word": "piña,",
+          "start": 95.28,
+          "end": 96.16
+        },
+        {
+          "word": "pasa",
+          "start": 96.58,
+          "end": 96.64
+        },
+        {
+          "word": "por",
+          "start": 96.64,
+          "end": 96.9
+        },
+        {
+          "word": "afuera",
+          "start": 96.9,
+          "end": 97.14
+        },
+        {
+          "word": "de",
+          "start": 97.14,
+          "end": 97.26
+        },
+        {
+          "word": "la",
+          "start": 97.26,
+          "end": 97.36
+        },
+        {
+          "word": "tercer",
+          "start": 97.36,
+          "end": 97.62
+        },
+        {
+          "word": "pata",
+          "start": 97.62,
+          "end": 98.24
+        },
+        {
+          "word": "y",
+          "start": 98.24,
+          "end": 98.48
+        },
+        {
+          "word": "se",
+          "start": 98.48,
+          "end": 98.68
+        },
+        {
+          "word": "mete",
+          "start": 98.68,
+          "end": 98.9
+        }
+      ]
+    },
+    {
+      "start": 98.9,
+      "end": 103.4,
+      "text": "donde estarían las bolas del caballo. Algo así, sí. Sí, yo tengo como ahí exacto como que está entrando ahí.",
+      "words": [
+        {
+          "word": "donde",
+          "start": 98.9,
+          "end": 99.1
+        },
+        {
+          "word": "estarían",
+          "start": 99.1,
+          "end": 99.32
+        },
+        {
+          "word": "las",
+          "start": 99.32,
+          "end": 99.44
+        },
+        {
+          "word": "bolas",
+          "start": 99.44,
+          "end": 99.58
+        },
+        {
+          "word": "del",
+          "start": 99.58,
+          "end": 99.76
+        },
+        {
+          "word": "caballo.",
+          "start": 99.76,
+          "end": 100.1
+        },
+        {
+          "word": "Algo",
+          "start": 100.26,
+          "end": 100.5
+        },
+        {
+          "word": "así,",
+          "start": 100.5,
+          "end": 100.76
+        },
+        {
+          "word": "sí.",
+          "start": 101.02,
+          "end": 101.46
+        },
+        {
+          "word": "Sí,",
+          "start": 101.68,
+          "end": 101.7
+        },
+        {
+          "word": "tengo",
+          "start": 101.7,
+          "end": 101.82
+        },
+        {
+          "word": "como",
+          "start": 101.82,
+          "end": 101.96
+        },
+        {
+          "word": "ahí",
+          "start": 101.96,
+          "end": 102.14
+        },
+        {
+          "word": "exacto",
+          "start": 102.14,
+          "end": 102.52
+        },
+        {
+          "word": "como",
+          "start": 102.52,
+          "end": 102.68
+        },
+        {
+          "word": "que",
+          "start": 102.68,
+          "end": 102.78
+        },
+        {
+          "word": "está",
+          "start": 102.78,
+          "end": 102.94
+        },
+        {
+          "word": "entrando",
+          "start": 102.94,
+          "end": 103.16
+        },
+        {
+          "word": "ahí.",
+          "start": 103.16,
+          "end": 103.4
+        }
+      ]
+    },
+    {
+      "start": 103.4,
+      "end": 104.64,
+      "text": "Sí, sí, sí.",
+      "words": [
+        {
+          "word": "Sí,",
+          "start": 103.4,
+          "end": 103.78
+        },
+        {
+          "word": "sí,",
+          "start": 103.78,
+          "end": 103.92
+        },
+        {
+          "word": "sí.",
+          "start": 103.92,
+          "end": 104.64
+        }
+      ]
+    },
+    {
+      "start": 106.98,
+      "end": 109.7,
+      "text": "Y... a ver qué va... bueno, yo me la juego ahí.",
+      "words": [
+        {
+          "word": "Y...",
+          "start": 106.98,
+          "end": 107.34
+        },
+        {
+          "word": "a",
+          "start": 107.34,
+          "end": 107.46
+        },
+        {
+          "word": "ver",
+          "start": 107.46,
+          "end": 107.64
+        },
+        {
+          "word": "qué",
+          "start": 107.64,
+          "end": 107.82
+        },
+        {
+          "word": "va...",
+          "start": 107.82,
+          "end": 108.24
+        },
+        {
+          "word": "bueno,",
+          "start": 108.24,
+          "end": 108.52
+        },
+        {
+          "word": "yo",
+          "start": 108.82,
+          "end": 108.94
+        },
+        {
+          "word": "me",
+          "start": 108.94,
+          "end": 109.24
+        },
+        {
+          "word": "la",
+          "start": 109.24,
+          "end": 109.38
+        },
+        {
+          "word": "juego",
+          "start": 109.38,
+          "end": 109.5
+        },
+        {
+          "word": "ahí.",
+          "start": 109.5,
+          "end": 109.7
+        }
+      ]
+    },
+    {
+      "start": 109.88,
+      "end": 110.18,
+      "text": "Dale lo que va.",
+      "words": [
+        {
+          "word": "Dale",
+          "start": 109.88,
+          "end": 109.96
+        },
+        {
+          "word": "lo",
+          "start": 109.96,
+          "end": 110.08
+        },
+        {
+          "word": "que",
+          "start": 110.08,
+          "end": 110.14
+        },
+        {
+          "word": "va.",
+          "start": 110.14,
+          "end": 110.18
+        }
+      ]
+    }
+  ]
+}

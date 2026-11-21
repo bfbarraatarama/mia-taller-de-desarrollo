@@ -1,0 +1,46 @@
+{
+  "resumen": "La reunión se centró en la ubicación de elementos visuales como planchas, cables y sombras. Se discutió sobre la posición relativa de una plancha con respecto a figuras como un limón, una sirena y una ballena.",
+  "temas": [
+    {
+      "texto": "Ubicación de la plancha",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020"
+      ],
+      "id_ancla": "I000019"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "Establecer la ubicación de la plancha",
+      "ids_intervenciones": [
+        "I000015",
+        "I000016",
+        "I000019"
+      ],
+      "id_ancla": "I000019",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "resumen": "La reunión discutió posibles maniobras de un personaje con un auto y una aminita, pero no se tomaron decisiones ni se plantearon problemas específicos. Se confirmaron algunas acciones verbales.",
+  "temas": [
+    {
+      "texto": "Maniobra del personaje con el auto",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014"
+      ],
+      "id_ancla": "I000014"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "El personaje agarrará la trompa del auto con la mano izquierda y apoyará la mano derecha en la aminita que está tejiendo, tocando su mano.",
+      "ids_intervenciones": [
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000014"
+      ],
+      "id_ancla": "I000014",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

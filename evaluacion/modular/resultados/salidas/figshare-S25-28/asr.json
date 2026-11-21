@@ -1,0 +1,1865 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.72,
+      "text": "Ok, el avión ponerlo en la mitad de todo el menjunge.",
+      "words": [
+        {
+          "word": "Ok,",
+          "start": 0.0,
+          "end": 0.9
+        },
+        {
+          "word": "el",
+          "start": 1.06,
+          "end": 1.1
+        },
+        {
+          "word": "avión",
+          "start": 1.1,
+          "end": 1.64
+        },
+        {
+          "word": "ponerlo",
+          "start": 1.64,
+          "end": 2.72
+        },
+        {
+          "word": "en",
+          "start": 2.72,
+          "end": 2.98
+        },
+        {
+          "word": "la",
+          "start": 2.98,
+          "end": 3.16
+        },
+        {
+          "word": "mitad",
+          "start": 3.16,
+          "end": 3.82
+        },
+        {
+          "word": "de",
+          "start": 3.82,
+          "end": 4.78
+        },
+        {
+          "word": "todo",
+          "start": 4.78,
+          "end": 5.08
+        },
+        {
+          "word": "el",
+          "start": 5.08,
+          "end": 6.0
+        },
+        {
+          "word": "menjunge.",
+          "start": 6.0,
+          "end": 6.72
+        }
+      ]
+    },
+    {
+      "start": 7.74,
+      "end": 15.3,
+      "text": "De manera que la parte de atrás del avión, digamos el a la trasera,",
+      "words": [
+        {
+          "word": "manera",
+          "start": 7.74,
+          "end": 8.06
+        },
+        {
+          "word": "que",
+          "start": 8.06,
+          "end": 8.72
+        },
+        {
+          "word": "la",
+          "start": 8.72,
+          "end": 12.7
+        },
+        {
+          "word": "parte",
+          "start": 12.7,
+          "end": 12.98
+        },
+        {
+          "word": "de",
+          "start": 12.98,
+          "end": 13.22
+        },
+        {
+          "word": "atrás",
+          "start": 13.22,
+          "end": 13.36
+        },
+        {
+          "word": "del",
+          "start": 13.36,
+          "end": 13.58
+        },
+        {
+          "word": "avión,",
+          "start": 13.58,
+          "end": 13.94
+        },
+        {
+          "word": "digamos",
+          "start": 14.08,
+          "end": 14.22
+        },
+        {
+          "word": "el",
+          "start": 14.22,
+          "end": 14.36
+        },
+        {
+          "word": "a",
+          "start": 14.36,
+          "end": 14.48
+        },
+        {
+          "word": "la",
+          "start": 14.48,
+          "end": 14.56
+        },
+        {
+          "word": "trasera,",
+          "start": 14.56,
+          "end": 15.3
+        }
+      ]
+    },
+    {
+      "start": 16.96,
+      "end": 21.66,
+      "text": "quedaría un poco por encima del norte del bombillo.",
+      "words": [
+        {
+          "word": "quedaría",
+          "start": 16.96,
+          "end": 17.4
+        },
+        {
+          "word": "un",
+          "start": 17.4,
+          "end": 17.7
+        },
+        {
+          "word": "poco",
+          "start": 17.7,
+          "end": 17.88
+        },
+        {
+          "word": "por",
+          "start": 17.88,
+          "end": 18.14
+        },
+        {
+          "word": "encima",
+          "start": 18.14,
+          "end": 18.78
+        },
+        {
+          "word": "del",
+          "start": 18.78,
+          "end": 20.68
+        },
+        {
+          "word": "norte",
+          "start": 20.68,
+          "end": 21.02
+        },
+        {
+          "word": "del",
+          "start": 21.02,
+          "end": 21.18
+        },
+        {
+          "word": "bombillo.",
+          "start": 21.18,
+          "end": 21.66
+        }
+      ]
+    },
+    {
+      "start": 21.78,
+      "end": 22.8,
+      "text": "No está tocando entonces.",
+      "words": [
+        {
+          "word": "No",
+          "start": 21.78,
+          "end": 21.94
+        },
+        {
+          "word": "está",
+          "start": 21.94,
+          "end": 22.06
+        },
+        {
+          "word": "tocando",
+          "start": 22.06,
+          "end": 22.4
+        },
+        {
+          "word": "entonces.",
+          "start": 22.4,
+          "end": 22.8
+        }
+      ]
+    },
+    {
+      "start": 22.92,
+      "end": 25.26,
+      "text": "No está tocando, está a medio milímetro.",
+      "words": [
+        {
+          "word": "No",
+          "start": 22.92,
+          "end": 23.1
+        },
+        {
+          "word": "está",
+          "start": 23.1,
+          "end": 23.32
+        },
+        {
+          "word": "tocando,",
+          "start": 23.32,
+          "end": 23.66
+        },
+        {
+          "word": "está",
+          "start": 23.8,
+          "end": 24.08
+        },
+        {
+          "word": "a",
+          "start": 24.08,
+          "end": 24.54
+        },
+        {
+          "word": "medio",
+          "start": 24.54,
+          "end": 24.74
+        },
+        {
+          "word": "milímetro.",
+          "start": 24.74,
+          "end": 25.26
+        }
+      ]
+    },
+    {
+      "start": 29.66,
+      "end": 34.3,
+      "text": "Vos ves que el foco tiene un borde negro.",
+      "words": [
+        {
+          "word": "Vos",
+          "start": 29.66,
+          "end": 30.22
+        },
+        {
+          "word": "ves",
+          "start": 30.22,
+          "end": 30.4
+        },
+        {
+          "word": "que",
+          "start": 30.4,
+          "end": 30.8
+        },
+        {
+          "word": "el",
+          "start": 30.8,
+          "end": 31.48
+        },
+        {
+          "word": "foco",
+          "start": 31.48,
+          "end": 31.88
+        },
+        {
+          "word": "tiene",
+          "start": 31.88,
+          "end": 33.22
+        },
+        {
+          "word": "un",
+          "start": 33.22,
+          "end": 33.42
+        },
+        {
+          "word": "borde",
+          "start": 33.42,
+          "end": 33.64
+        },
+        {
+          "word": "negro.",
+          "start": 33.64,
+          "end": 34.3
+        }
+      ]
+    },
+    {
+      "start": 34.54,
+      "end": 38.26,
+      "text": "El borde negro se ve redondeado o con piquitos arriba de todo?",
+      "words": [
+        {
+          "word": "El",
+          "start": 34.54,
+          "end": 34.78
+        },
+        {
+          "word": "borde",
+          "start": 34.78,
+          "end": 34.98
+        },
+        {
+          "word": "negro",
+          "start": 34.98,
+          "end": 35.2
+        },
+        {
+          "word": "se",
+          "start": 35.2,
+          "end": 35.36
+        },
+        {
+          "word": "ve",
+          "start": 35.36,
+          "end": 35.44
+        },
+        {
+          "word": "redondeado",
+          "start": 35.44,
+          "end": 36.16
+        },
+        {
+          "word": "o",
+          "start": 36.16,
+          "end": 36.28
+        },
+        {
+          "word": "con",
+          "start": 36.28,
+          "end": 36.5
+        },
+        {
+          "word": "piquitos",
+          "start": 36.5,
+          "end": 37.26
+        },
+        {
+          "word": "arriba",
+          "start": 37.26,
+          "end": 37.66
+        },
+        {
+          "word": "de",
+          "start": 37.66,
+          "end": 37.8
+        },
+        {
+          "word": "todo?",
+          "start": 37.8,
+          "end": 38.26
+        }
+      ]
+    },
+    {
+      "start": 39.32,
+      "end": 43.48,
+      "text": "Porque el dibujo del avión tiene un sobreborde del color del fondo.",
+      "words": [
+        {
+          "word": "Porque",
+          "start": 39.32,
+          "end": 39.58
+        },
+        {
+          "word": "el",
+          "start": 39.58,
+          "end": 39.7
+        },
+        {
+          "word": "dibujo",
+          "start": 39.7,
+          "end": 40.04
+        },
+        {
+          "word": "del",
+          "start": 40.04,
+          "end": 40.18
+        },
+        {
+          "word": "avión",
+          "start": 40.18,
+          "end": 40.46
+        },
+        {
+          "word": "tiene",
+          "start": 40.46,
+          "end": 40.86
+        },
+        {
+          "word": "un",
+          "start": 40.86,
+          "end": 41.54
+        },
+        {
+          "word": "sobreborde",
+          "start": 41.54,
+          "end": 42.32
+        },
+        {
+          "word": "del",
+          "start": 42.32,
+          "end": 42.58
+        },
+        {
+          "word": "color",
+          "start": 42.58,
+          "end": 42.78
+        },
+        {
+          "word": "del",
+          "start": 42.78,
+          "end": 43.04
+        },
+        {
+          "word": "fondo.",
+          "start": 43.04,
+          "end": 43.48
+        }
+      ]
+    },
+    {
+      "start": 45.28,
+      "end": 51.8,
+      "text": "El borde del foco, la parte superior la ves lisa, la ves suave o la ves como dentada.",
+      "words": [
+        {
+          "word": "El",
+          "start": 45.28,
+          "end": 45.84
+        },
+        {
+          "word": "borde",
+          "start": 45.84,
+          "end": 46.24
+        },
+        {
+          "word": "del",
+          "start": 46.24,
+          "end": 46.66
+        },
+        {
+          "word": "foco,",
+          "start": 46.66,
+          "end": 47.06
+        },
+        {
+          "word": "la",
+          "start": 47.52,
+          "end": 48.74
+        },
+        {
+          "word": "parte",
+          "start": 48.74,
+          "end": 48.98
+        },
+        {
+          "word": "superior",
+          "start": 48.98,
+          "end": 49.26
+        },
+        {
+          "word": "la",
+          "start": 49.26,
+          "end": 49.42
+        },
+        {
+          "word": "ves",
+          "start": 49.42,
+          "end": 49.52
+        },
+        {
+          "word": "lisa,",
+          "start": 49.52,
+          "end": 49.84
+        },
+        {
+          "word": "ves",
+          "start": 49.94,
+          "end": 50.08
+        },
+        {
+          "word": "suave",
+          "start": 50.08,
+          "end": 50.52
+        },
+        {
+          "word": "o",
+          "start": 50.52,
+          "end": 50.78
+        },
+        {
+          "word": "la",
+          "start": 50.78,
+          "end": 50.86
+        },
+        {
+          "word": "ves",
+          "start": 50.86,
+          "end": 51.02
+        },
+        {
+          "word": "como",
+          "start": 51.02,
+          "end": 51.26
+        },
+        {
+          "word": "dentada.",
+          "start": 51.26,
+          "end": 51.8
+        }
+      ]
+    },
+    {
+      "start": 52.56,
+      "end": 56.46,
+      "text": "Y ahora que lo decís, puede ser que haya unos mínimos dientes.",
+      "words": [
+        {
+          "word": "Y",
+          "start": 52.47,
+          "end": 52.78
+        },
+        {
+          "word": "ahora",
+          "start": 52.78,
+          "end": 53.08
+        },
+        {
+          "word": "que",
+          "start": 53.08,
+          "end": 53.18
+        },
+        {
+          "word": "lo",
+          "start": 53.18,
+          "end": 53.4
+        },
+        {
+          "word": "decís,",
+          "start": 53.4,
+          "end": 53.84
+        },
+        {
+          "word": "ser",
+          "start": 54.06,
+          "end": 54.34
+        },
+        {
+          "word": "que",
+          "start": 54.34,
+          "end": 54.44
+        },
+        {
+          "word": "haya",
+          "start": 54.44,
+          "end": 54.86
+        },
+        {
+          "word": "unos",
+          "start": 54.86,
+          "end": 55.22
+        },
+        {
+          "word": "mínimos",
+          "start": 55.22,
+          "end": 56.02
+        },
+        {
+          "word": "dientes.",
+          "start": 56.02,
+          "end": 56.46
+        }
+      ]
+    },
+    {
+      "start": 56.66,
+      "end": 59.88,
+      "text": "Si no lo verías totalmente redondeado, porque es redondeado el foco.",
+      "words": [
+        {
+          "word": "Si",
+          "start": 56.66,
+          "end": 56.7
+        },
+        {
+          "word": "no",
+          "start": 56.7,
+          "end": 57.66
+        },
+        {
+          "word": "lo",
+          "start": 57.66,
+          "end": 57.78
+        },
+        {
+          "word": "verías",
+          "start": 57.78,
+          "end": 57.94
+        },
+        {
+          "word": "totalmente",
+          "start": 57.94,
+          "end": 58.44
+        },
+        {
+          "word": "redondeado,",
+          "start": 58.44,
+          "end": 59.02
+        },
+        {
+          "word": "porque",
+          "start": 59.06,
+          "end": 59.18
+        },
+        {
+          "word": "es",
+          "start": 59.18,
+          "end": 59.24
+        },
+        {
+          "word": "redondeado",
+          "start": 59.24,
+          "end": 59.72
+        },
+        {
+          "word": "el",
+          "start": 59.72,
+          "end": 59.8
+        },
+        {
+          "word": "foco.",
+          "start": 59.8,
+          "end": 59.88
+        }
+      ]
+    },
+    {
+      "start": 59.88,
+      "end": 61.32,
+      "text": "Puede ser que haya unos mínimos dientes.",
+      "words": [
+        {
+          "word": "Puede",
+          "start": 59.88,
+          "end": 60.24
+        },
+        {
+          "word": "ser",
+          "start": 60.24,
+          "end": 60.44
+        },
+        {
+          "word": "que",
+          "start": 60.44,
+          "end": 60.46
+        },
+        {
+          "word": "haya",
+          "start": 60.46,
+          "end": 60.6
+        },
+        {
+          "word": "unos",
+          "start": 60.6,
+          "end": 60.76
+        },
+        {
+          "word": "mínimos",
+          "start": 60.76,
+          "end": 61.08
+        },
+        {
+          "word": "dientes.",
+          "start": 61.08,
+          "end": 61.32
+        }
+      ]
+    },
+    {
+      "start": 61.36,
+      "end": 62.24,
+      "text": "¿Cuántos dientes ves?",
+      "words": [
+        {
+          "word": "¿Cuántos",
+          "start": 61.36,
+          "end": 61.7
+        },
+        {
+          "word": "dientes",
+          "start": 61.7,
+          "end": 61.98
+        },
+        {
+          "word": "ves?",
+          "start": 61.98,
+          "end": 62.24
+        }
+      ]
+    },
+    {
+      "start": 63.02,
+      "end": 63.44,
+      "text": "Dos.",
+      "words": [
+        {
+          "word": "Dos.",
+          "start": 63.02,
+          "end": 63.44
+        }
+      ]
+    },
+    {
+      "start": 63.78,
+      "end": 64.12,
+      "text": "¿Dos?",
+      "words": [
+        {
+          "word": "¿Dos?",
+          "start": 63.78,
+          "end": 64.12
+        }
+      ]
+    },
+    {
+      "start": 64.38,
+      "end": 64.8,
+      "text": "Tres.",
+      "words": [
+        {
+          "word": "Tres.",
+          "start": 64.38,
+          "end": 64.8
+        }
+      ]
+    },
+    {
+      "start": 65.12,
+      "end": 65.72,
+      "text": "¿Dos o tres?",
+      "words": [
+        {
+          "word": "¿Dos",
+          "start": 65.12,
+          "end": 65.36
+        },
+        {
+          "word": "o",
+          "start": 65.36,
+          "end": 65.42
+        },
+        {
+          "word": "tres?",
+          "start": 65.42,
+          "end": 65.72
+        }
+      ]
+    },
+    {
+      "start": 65.84,
+      "end": 66.62,
+      "text": "Dos creo.",
+      "words": [
+        {
+          "word": "Dos",
+          "start": 65.84,
+          "end": 66.22
+        },
+        {
+          "word": "creo.",
+          "start": 66.22,
+          "end": 66.62
+        }
+      ]
+    },
+    {
+      "start": 70.12,
+      "end": 78.52,
+      "text": "La punta, la trompa del avión está un poco superpuesta a la hebilla metálica del cinturón.",
+      "words": [
+        {
+          "word": "La",
+          "start": 70.12,
+          "end": 70.74
+        },
+        {
+          "word": "punta,",
+          "start": 70.74,
+          "end": 71.36
+        },
+        {
+          "word": "la",
+          "start": 71.46,
+          "end": 72.74
+        },
+        {
+          "word": "trompa",
+          "start": 72.74,
+          "end": 73.26
+        },
+        {
+          "word": "del",
+          "start": 73.26,
+          "end": 73.44
+        },
+        {
+          "word": "avión",
+          "start": 73.44,
+          "end": 74.36
+        },
+        {
+          "word": "está",
+          "start": 74.36,
+          "end": 74.98
+        },
+        {
+          "word": "un",
+          "start": 74.98,
+          "end": 75.3
+        },
+        {
+          "word": "poco",
+          "start": 75.3,
+          "end": 75.58
+        },
+        {
+          "word": "superpuesta",
+          "start": 75.58,
+          "end": 76.42
+        },
+        {
+          "word": "a",
+          "start": 76.42,
+          "end": 76.72
+        },
+        {
+          "word": "la",
+          "start": 76.72,
+          "end": 76.84
+        },
+        {
+          "word": "hebilla",
+          "start": 76.84,
+          "end": 77.2
+        },
+        {
+          "word": "metálica",
+          "start": 77.2,
+          "end": 77.74
+        },
+        {
+          "word": "del",
+          "start": 77.74,
+          "end": 77.96
+        },
+        {
+          "word": "cinturón.",
+          "start": 77.96,
+          "end": 78.52
+        }
+      ]
+    },
+    {
+      "start": 78.52,
+      "end": 83.54,
+      "text": "¿Y el eje vertical del avión coincide con el del cinturón o con el del foco?",
+      "words": [
+        {
+          "word": "¿Y",
+          "start": 78.52,
+          "end": 79.2
+        },
+        {
+          "word": "el",
+          "start": 79.2,
+          "end": 79.32
+        },
+        {
+          "word": "eje",
+          "start": 79.32,
+          "end": 79.8
+        },
+        {
+          "word": "vertical",
+          "start": 79.8,
+          "end": 80.22
+        },
+        {
+          "word": "del",
+          "start": 80.22,
+          "end": 80.36
+        },
+        {
+          "word": "avión",
+          "start": 80.36,
+          "end": 80.88
+        },
+        {
+          "word": "coincide",
+          "start": 80.88,
+          "end": 81.36
+        },
+        {
+          "word": "con",
+          "start": 81.36,
+          "end": 81.5
+        },
+        {
+          "word": "el",
+          "start": 81.5,
+          "end": 82.08
+        },
+        {
+          "word": "del",
+          "start": 82.08,
+          "end": 82.18
+        },
+        {
+          "word": "cinturón",
+          "start": 82.18,
+          "end": 82.7
+        },
+        {
+          "word": "o",
+          "start": 82.7,
+          "end": 82.72
+        },
+        {
+          "word": "con",
+          "start": 82.72,
+          "end": 82.88
+        },
+        {
+          "word": "el",
+          "start": 82.88,
+          "end": 83.06
+        },
+        {
+          "word": "del",
+          "start": 83.06,
+          "end": 83.18
+        },
+        {
+          "word": "foco?",
+          "start": 83.18,
+          "end": 83.54
+        }
+      ]
+    },
+    {
+      "start": 84.98,
+      "end": 98.7,
+      "text": "El eje vertical del avión, el centro del avión lo largo es casi como si fuera una continuación de lo que tiene adentro el bombillo.",
+      "words": [
+        {
+          "word": "El",
+          "start": 84.98,
+          "end": 85.26
+        },
+        {
+          "word": "eje",
+          "start": 85.26,
+          "end": 85.44
+        },
+        {
+          "word": "vertical",
+          "start": 85.44,
+          "end": 86.0
+        },
+        {
+          "word": "del",
+          "start": 86.0,
+          "end": 86.34
+        },
+        {
+          "word": "avión,",
+          "start": 86.34,
+          "end": 87.44
+        },
+        {
+          "word": "el",
+          "start": 87.54,
+          "end": 89.36
+        },
+        {
+          "word": "centro",
+          "start": 89.36,
+          "end": 90.72
+        },
+        {
+          "word": "del",
+          "start": 90.72,
+          "end": 90.98
+        },
+        {
+          "word": "avión",
+          "start": 90.98,
+          "end": 91.28
+        },
+        {
+          "word": "lo",
+          "start": 91.28,
+          "end": 92.3
+        },
+        {
+          "word": "largo",
+          "start": 92.3,
+          "end": 93.0
+        },
+        {
+          "word": "es",
+          "start": 93.0,
+          "end": 93.76
+        },
+        {
+          "word": "casi",
+          "start": 93.76,
+          "end": 94.08
+        },
+        {
+          "word": "como",
+          "start": 94.08,
+          "end": 94.24
+        },
+        {
+          "word": "si",
+          "start": 94.24,
+          "end": 94.3
+        },
+        {
+          "word": "fuera",
+          "start": 94.3,
+          "end": 94.46
+        },
+        {
+          "word": "una",
+          "start": 94.46,
+          "end": 94.8
+        },
+        {
+          "word": "continuación",
+          "start": 94.8,
+          "end": 95.5
+        },
+        {
+          "word": "de",
+          "start": 95.5,
+          "end": 96.92
+        },
+        {
+          "word": "lo",
+          "start": 96.92,
+          "end": 97.1
+        },
+        {
+          "word": "que",
+          "start": 97.1,
+          "end": 97.26
+        },
+        {
+          "word": "tiene",
+          "start": 97.26,
+          "end": 97.42
+        },
+        {
+          "word": "adentro",
+          "start": 97.42,
+          "end": 97.88
+        },
+        {
+          "word": "el",
+          "start": 97.88,
+          "end": 98.0
+        },
+        {
+          "word": "bombillo.",
+          "start": 98.0,
+          "end": 98.7
+        }
+      ]
+    },
+    {
+      "start": 100.72,
+      "end": 105.54,
+      "text": "0,1 milímetros hacia la izquierda, pero casi una continuación.",
+      "words": [
+        {
+          "word": "0",
+          "start": 100.72,
+          "end": 101.32
+        },
+        {
+          "word": ",1",
+          "start": 101.32,
+          "end": 101.72
+        },
+        {
+          "word": "milímetros",
+          "start": 101.72,
+          "end": 102.14
+        },
+        {
+          "word": "hacia",
+          "start": 102.14,
+          "end": 102.38
+        },
+        {
+          "word": "la",
+          "start": 102.38,
+          "end": 102.64
+        },
+        {
+          "word": "izquierda,",
+          "start": 102.64,
+          "end": 103.16
+        },
+        {
+          "word": "pero",
+          "start": 103.4,
+          "end": 103.5
+        },
+        {
+          "word": "casi",
+          "start": 103.5,
+          "end": 103.82
+        },
+        {
+          "word": "una",
+          "start": 103.82,
+          "end": 104.12
+        },
+        {
+          "word": "continuación.",
+          "start": 104.12,
+          "end": 105.54
+        }
+      ]
+    },
+    {
+      "start": 106.96,
+      "end": 107.18,
+      "text": "Eso.",
+      "words": [
+        {
+          "word": "Eso.",
+          "start": 106.96,
+          "end": 107.18
+        }
+      ]
+    },
+    {
+      "start": 107.18,
+      "end": 110.36,
+      "text": "Está bien como suelto que estoy tratando de ver.",
+      "words": [
+        {
+          "word": "Está",
+          "start": 107.18,
+          "end": 107.86
+        },
+        {
+          "word": "bien",
+          "start": 107.86,
+          "end": 107.98
+        },
+        {
+          "word": "como",
+          "start": 107.98,
+          "end": 108.28
+        },
+        {
+          "word": "suelto",
+          "start": 108.28,
+          "end": 108.7
+        },
+        {
+          "word": "que",
+          "start": 108.7,
+          "end": 109.4
+        },
+        {
+          "word": "estoy",
+          "start": 109.4,
+          "end": 109.78
+        },
+        {
+          "word": "tratando",
+          "start": 109.78,
+          "end": 110.14
+        },
+        {
+          "word": "de",
+          "start": 110.14,
+          "end": 110.24
+        },
+        {
+          "word": "ver.",
+          "start": 110.24,
+          "end": 110.36
+        }
+      ]
+    },
+    {
+      "start": 110.6,
+      "end": 118.92,
+      "text": "Y está claramente el ala, las alas están, el ala derecha está más cerca del caballo que la izquierda de la piña.",
+      "words": [
+        {
+          "word": "está",
+          "start": 110.6,
+          "end": 110.84
+        },
+        {
+          "word": "claramente",
+          "start": 110.84,
+          "end": 111.98
+        },
+        {
+          "word": "el",
+          "start": 111.98,
+          "end": 112.26
+        },
+        {
+          "word": "ala,",
+          "start": 112.26,
+          "end": 112.84
+        },
+        {
+          "word": "las",
+          "start": 112.84,
+          "end": 113.12
+        },
+        {
+          "word": "alas",
+          "start": 113.12,
+          "end": 113.74
+        },
+        {
+          "word": "están,",
+          "start": 113.74,
+          "end": 114.1
+        },
+        {
+          "word": "el",
+          "start": 115.04,
+          "end": 115.36
+        },
+        {
+          "word": "ala",
+          "start": 115.36,
+          "end": 115.62
+        },
+        {
+          "word": "derecha",
+          "start": 115.62,
+          "end": 116.02
+        },
+        {
+          "word": "está",
+          "start": 116.02,
+          "end": 116.2
+        },
+        {
+          "word": "más",
+          "start": 116.2,
+          "end": 116.46
+        },
+        {
+          "word": "cerca",
+          "start": 116.46,
+          "end": 116.66
+        },
+        {
+          "word": "del",
+          "start": 116.66,
+          "end": 116.88
+        },
+        {
+          "word": "caballo",
+          "start": 116.88,
+          "end": 117.32
+        },
+        {
+          "word": "que",
+          "start": 117.32,
+          "end": 117.5
+        },
+        {
+          "word": "la",
+          "start": 117.5,
+          "end": 117.7
+        },
+        {
+          "word": "izquierda",
+          "start": 117.7,
+          "end": 117.98
+        },
+        {
+          "word": "de",
+          "start": 117.98,
+          "end": 118.12
+        },
+        {
+          "word": "la",
+          "start": 118.12,
+          "end": 118.3
+        },
+        {
+          "word": "piña.",
+          "start": 118.3,
+          "end": 118.92
+        }
+      ]
+    },
+    {
+      "start": 119.08,
+      "end": 122.16,
+      "text": "Estoy tratando de poner, de ver los dos piquitos que viste vos.",
+      "words": [
+        {
+          "word": "Estoy",
+          "start": 119.08,
+          "end": 119.28
+        },
+        {
+          "word": "tratando",
+          "start": 119.28,
+          "end": 119.62
+        },
+        {
+          "word": "de",
+          "start": 119.62,
+          "end": 119.76
+        },
+        {
+          "word": "poner,",
+          "start": 119.76,
+          "end": 120.1
+        },
+        {
+          "word": "de",
+          "start": 120.66,
+          "end": 120.84
+        },
+        {
+          "word": "ver",
+          "start": 120.84,
+          "end": 120.94
+        },
+        {
+          "word": "los",
+          "start": 120.94,
+          "end": 121.04
+        },
+        {
+          "word": "dos",
+          "start": 121.04,
+          "end": 121.18
+        },
+        {
+          "word": "piquitos",
+          "start": 121.18,
+          "end": 121.4
+        },
+        {
+          "word": "que",
+          "start": 121.4,
+          "end": 121.56
+        },
+        {
+          "word": "viste",
+          "start": 121.56,
+          "end": 121.82
+        },
+        {
+          "word": "vos.",
+          "start": 121.82,
+          "end": 122.16
+        }
+      ]
+    },
+    {
+      "start": 122.28,
+      "end": 123.62,
+      "text": "A ver, dos piquitos que hay.",
+      "words": [
+        {
+          "word": "ver,",
+          "start": 122.28,
+          "end": 122.54
+        },
+        {
+          "word": "dos",
+          "start": 122.72,
+          "end": 122.9
+        },
+        {
+          "word": "piquitos",
+          "start": 122.9,
+          "end": 123.26
+        },
+        {
+          "word": "que",
+          "start": 123.26,
+          "end": 123.4
+        },
+        {
+          "word": "hay.",
+          "start": 123.4,
+          "end": 123.62
+        }
+      ]
+    },
+    {
+      "start": 125.22,
+      "end": 128.48,
+      "text": "Eso, vos calcula que la trompa está...",
+      "words": [
+        {
+          "word": "Eso,",
+          "start": 125.22,
+          "end": 125.74
+        },
+        {
+          "word": "vos",
+          "start": 126.2,
+          "end": 126.48
+        },
+        {
+          "word": "calcula",
+          "start": 126.48,
+          "end": 126.9
+        },
+        {
+          "word": "que",
+          "start": 126.9,
+          "end": 127.0
+        },
+        {
+          "word": "la",
+          "start": 127.0,
+          "end": 127.22
+        },
+        {
+          "word": "trompa",
+          "start": 127.22,
+          "end": 127.56
+        },
+        {
+          "word": "está...",
+          "start": 127.56,
+          "end": 128.48
+        }
+      ]
+    },
+    {
+      "start": 128.48,
+      "end": 134.1,
+      "text": "¿La punta exacta está tocando el cosito de la hebilla que se mete en el cinturón?",
+      "words": [
+        {
+          "word": "¿La",
+          "start": 128.48,
+          "end": 128.7
+        },
+        {
+          "word": "punta",
+          "start": 128.7,
+          "end": 129.08
+        },
+        {
+          "word": "exacta",
+          "start": 129.08,
+          "end": 129.48
+        },
+        {
+          "word": "está",
+          "start": 129.48,
+          "end": 129.6
+        },
+        {
+          "word": "tocando",
+          "start": 129.6,
+          "end": 130.02
+        },
+        {
+          "word": "el",
+          "start": 130.02,
+          "end": 132.16
+        },
+        {
+          "word": "cosito",
+          "start": 132.16,
+          "end": 132.8
+        },
+        {
+          "word": "de",
+          "start": 132.8,
+          "end": 132.88
+        },
+        {
+          "word": "la",
+          "start": 132.88,
+          "end": 132.96
+        },
+        {
+          "word": "hebilla",
+          "start": 132.96,
+          "end": 133.1
+        },
+        {
+          "word": "que",
+          "start": 133.1,
+          "end": 133.22
+        },
+        {
+          "word": "se",
+          "start": 133.22,
+          "end": 133.34
+        },
+        {
+          "word": "mete",
+          "start": 133.34,
+          "end": 133.48
+        },
+        {
+          "word": "en",
+          "start": 133.48,
+          "end": 133.58
+        },
+        {
+          "word": "el",
+          "start": 133.58,
+          "end": 133.68
+        },
+        {
+          "word": "cinturón?",
+          "start": 133.68,
+          "end": 134.1
+        }
+      ]
+    },
+    {
+      "start": 135.48,
+      "end": 138.54,
+      "text": "No, no la está, está muy cerca pero no la está tocando.",
+      "words": [
+        {
+          "word": "No,",
+          "start": 135.48,
+          "end": 135.92
+        },
+        {
+          "word": "no",
+          "start": 136.06,
+          "end": 136.2
+        },
+        {
+          "word": "la",
+          "start": 136.2,
+          "end": 136.42
+        },
+        {
+          "word": "está,",
+          "start": 136.42,
+          "end": 136.56
+        },
+        {
+          "word": "está",
+          "start": 136.78,
+          "end": 137.24
+        },
+        {
+          "word": "muy",
+          "start": 137.24,
+          "end": 137.52
+        },
+        {
+          "word": "cerca",
+          "start": 137.52,
+          "end": 137.74
+        },
+        {
+          "word": "pero",
+          "start": 137.74,
+          "end": 137.92
+        },
+        {
+          "word": "no",
+          "start": 137.92,
+          "end": 138.08
+        },
+        {
+          "word": "la",
+          "start": 138.08,
+          "end": 138.2
+        },
+        {
+          "word": "está",
+          "start": 138.2,
+          "end": 138.34
+        },
+        {
+          "word": "tocando.",
+          "start": 138.34,
+          "end": 138.54
+        }
+      ]
+    },
+    {
+      "start": 138.88,
+      "end": 140.12,
+      "text": "¿Está ahí apuntando a eso?",
+      "words": [
+        {
+          "word": "¿Está",
+          "start": 138.88,
+          "end": 139.32
+        },
+        {
+          "word": "ahí",
+          "start": 139.32,
+          "end": 139.48
+        },
+        {
+          "word": "apuntando",
+          "start": 139.48,
+          "end": 139.94
+        },
+        {
+          "word": "a",
+          "start": 139.94,
+          "end": 140.02
+        },
+        {
+          "word": "eso?",
+          "start": 140.02,
+          "end": 140.12
+        }
+      ]
+    },
+    {
+      "start": 140.2,
+      "end": 141.72,
+      "text": "Sí, está apuntando a eso.",
+      "words": [
+        {
+          "word": "Sí,",
+          "start": 140.2,
+          "end": 140.42
+        },
+        {
+          "word": "está",
+          "start": 140.56,
+          "end": 140.7
+        },
+        {
+          "word": "apuntando",
+          "start": 140.7,
+          "end": 141.06
+        },
+        {
+          "word": "a",
+          "start": 141.06,
+          "end": 141.72
+        }
+      ]
+    },
+    {
+      "start": 142.28,
+      "end": 143.04,
+      "text": "¿Y no la está tocando?",
+      "words": [
+        {
+          "word": "¿Y",
+          "start": 142.28,
+          "end": 142.44
+        },
+        {
+          "word": "no",
+          "start": 142.44,
+          "end": 142.52
+        },
+        {
+          "word": "la",
+          "start": 142.52,
+          "end": 142.6
+        },
+        {
+          "word": "está",
+          "start": 142.6,
+          "end": 142.7
+        },
+        {
+          "word": "tocando?",
+          "start": 142.7,
+          "end": 143.04
+        }
+      ]
+    },
+    {
+      "start": 143.7,
+      "end": 152.32,
+      "text": "No, no la está tocando. Apenas la trompa, digamos la parte izquierda de la trompa está superpuesta a la parte metálica de la hebilla.",
+      "words": [
+        {
+          "word": "No,",
+          "start": 143.7,
+          "end": 144.14
+        },
+        {
+          "word": "no",
+          "start": 144.14,
+          "end": 144.24
+        },
+        {
+          "word": "la",
+          "start": 144.24,
+          "end": 144.38
+        },
+        {
+          "word": "está",
+          "start": 144.38,
+          "end": 144.5
+        },
+        {
+          "word": "tocando.",
+          "start": 144.5,
+          "end": 144.9
+        },
+        {
+          "word": "Apenas",
+          "start": 145.08,
+          "end": 145.34
+        },
+        {
+          "word": "la",
+          "start": 145.34,
+          "end": 145.48
+        },
+        {
+          "word": "trompa,",
+          "start": 145.48,
+          "end": 146.26
+        },
+        {
+          "word": "la",
+          "start": 146.52,
+          "end": 146.74
+        },
+        {
+          "word": "parte",
+          "start": 146.74,
+          "end": 147.02
+        },
+        {
+          "word": "izquierda",
+          "start": 147.02,
+          "end": 147.66
+        },
+        {
+          "word": "de",
+          "start": 147.66,
+          "end": 147.8
+        },
+        {
+          "word": "la",
+          "start": 147.8,
+          "end": 147.98
+        },
+        {
+          "word": "trompa",
+          "start": 147.98,
+          "end": 148.42
+        },
+        {
+          "word": "está",
+          "start": 148.42,
+          "end": 148.86
+        },
+        {
+          "word": "superpuesta",
+          "start": 148.86,
+          "end": 149.82
+        },
+        {
+          "word": "a",
+          "start": 149.82,
+          "end": 150.82
+        },
+        {
+          "word": "la",
+          "start": 150.82,
+          "end": 150.92
+        },
+        {
+          "word": "parte",
+          "start": 150.92,
+          "end": 151.14
+        },
+        {
+          "word": "metálica",
+          "start": 151.14,
+          "end": 151.56
+        },
+        {
+          "word": "de",
+          "start": 151.56,
+          "end": 151.7
+        },
+        {
+          "word": "la",
+          "start": 151.7,
+          "end": 151.8
+        },
+        {
+          "word": "hebilla.",
+          "start": 151.8,
+          "end": 152.32
+        }
+      ]
+    },
+    {
+      "start": 152.74,
+      "end": 153.0,
+      "text": "Un poquito.",
+      "words": [
+        {
+          "word": "Un",
+          "start": 152.74,
+          "end": 152.88
+        },
+        {
+          "word": "poquito.",
+          "start": 152.88,
+          "end": 153.0
+        }
+      ]
+    }
+  ]
+}

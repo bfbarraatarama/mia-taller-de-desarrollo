@@ -1,0 +1,380 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.6,
+      "end": 11.74,
+      "text": "Bueno, agarras la limusina, muy bonita, le pones entre las dos lunas. Queda bien adentro de la luna azul sin tocar la parte azul.",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 0.6,
+          "end": 1.12
+        },
+        {
+          "word": "agarras",
+          "start": 1.24,
+          "end": 1.4
+        },
+        {
+          "word": "la",
+          "start": 1.4,
+          "end": 1.58
+        },
+        {
+          "word": "limusina,",
+          "start": 1.58,
+          "end": 2.46
+        },
+        {
+          "word": "muy",
+          "start": 2.96,
+          "end": 3.2
+        },
+        {
+          "word": "bonita,",
+          "start": 3.2,
+          "end": 3.52
+        },
+        {
+          "word": "pones",
+          "start": 3.66,
+          "end": 3.88
+        },
+        {
+          "word": "entre",
+          "start": 3.88,
+          "end": 4.14
+        },
+        {
+          "word": "las",
+          "start": 4.14,
+          "end": 4.34
+        },
+        {
+          "word": "dos",
+          "start": 4.34,
+          "end": 4.52
+        },
+        {
+          "word": "lunas.",
+          "start": 4.52,
+          "end": 5.72
+        },
+        {
+          "word": "Queda",
+          "start": 5.86,
+          "end": 6.28
+        },
+        {
+          "word": "bien",
+          "start": 6.28,
+          "end": 7.04
+        },
+        {
+          "word": "adentro",
+          "start": 7.04,
+          "end": 7.76
+        },
+        {
+          "word": "de",
+          "start": 7.76,
+          "end": 8.0
+        },
+        {
+          "word": "la",
+          "start": 8.0,
+          "end": 8.28
+        },
+        {
+          "word": "luna",
+          "start": 8.28,
+          "end": 8.62
+        },
+        {
+          "word": "azul",
+          "start": 8.62,
+          "end": 8.88
+        },
+        {
+          "word": "sin",
+          "start": 8.88,
+          "end": 9.24
+        },
+        {
+          "word": "tocar",
+          "start": 9.24,
+          "end": 10.22
+        },
+        {
+          "word": "la",
+          "start": 10.22,
+          "end": 10.58
+        },
+        {
+          "word": "parte",
+          "start": 10.58,
+          "end": 10.84
+        },
+        {
+          "word": "azul.",
+          "start": 10.84,
+          "end": 11.74
+        }
+      ]
+    },
+    {
+      "start": 12.34,
+      "end": 14.62,
+      "text": "O sea, adentro de la luna azul entonces pero sin tocar.",
+      "words": [
+        {
+          "word": "O",
+          "start": 12.34,
+          "end": 12.4
+        },
+        {
+          "word": "sea,",
+          "start": 12.4,
+          "end": 12.56
+        },
+        {
+          "word": "adentro",
+          "start": 12.66,
+          "end": 12.92
+        },
+        {
+          "word": "de",
+          "start": 12.92,
+          "end": 13.04
+        },
+        {
+          "word": "la",
+          "start": 13.04,
+          "end": 13.14
+        },
+        {
+          "word": "luna",
+          "start": 13.14,
+          "end": 13.36
+        },
+        {
+          "word": "azul",
+          "start": 13.36,
+          "end": 13.52
+        },
+        {
+          "word": "entonces",
+          "start": 13.52,
+          "end": 13.86
+        },
+        {
+          "word": "pero",
+          "start": 13.86,
+          "end": 14.08
+        },
+        {
+          "word": "sin",
+          "start": 14.08,
+          "end": 14.22
+        },
+        {
+          "word": "tocar.",
+          "start": 14.22,
+          "end": 14.62
+        }
+      ]
+    },
+    {
+      "start": 14.92,
+      "end": 21.6,
+      "text": "Claro, quedará 2 milímetros de la luna amarilla y 3 de la luna azul.",
+      "words": [
+        {
+          "word": "Claro,",
+          "start": 14.92,
+          "end": 15.28
+        },
+        {
+          "word": "quedará",
+          "start": 15.5,
+          "end": 16.74
+        },
+        {
+          "word": "2",
+          "start": 16.74,
+          "end": 17.82
+        },
+        {
+          "word": "milímetros",
+          "start": 17.82,
+          "end": 18.26
+        },
+        {
+          "word": "de",
+          "start": 18.26,
+          "end": 18.46
+        },
+        {
+          "word": "la",
+          "start": 18.46,
+          "end": 18.6
+        },
+        {
+          "word": "luna",
+          "start": 18.6,
+          "end": 18.8
+        },
+        {
+          "word": "amarilla",
+          "start": 18.8,
+          "end": 19.64
+        },
+        {
+          "word": "y",
+          "start": 19.64,
+          "end": 20.04
+        },
+        {
+          "word": "3",
+          "start": 20.04,
+          "end": 20.3
+        },
+        {
+          "word": "de",
+          "start": 20.3,
+          "end": 20.42
+        },
+        {
+          "word": "la",
+          "start": 20.42,
+          "end": 20.54
+        },
+        {
+          "word": "luna",
+          "start": 20.54,
+          "end": 20.72
+        },
+        {
+          "word": "azul.",
+          "start": 20.72,
+          "end": 21.6
+        }
+      ]
+    },
+    {
+      "start": 24.74,
+      "end": 26.74,
+      "text": "O sea, como que se la va a comer.",
+      "words": [
+        {
+          "word": "O",
+          "start": 24.74,
+          "end": 25.26
+        },
+        {
+          "word": "sea,",
+          "start": 25.26,
+          "end": 25.78
+        },
+        {
+          "word": "como",
+          "start": 25.84,
+          "end": 26.0
+        },
+        {
+          "word": "que",
+          "start": 26.0,
+          "end": 26.16
+        },
+        {
+          "word": "se",
+          "start": 26.16,
+          "end": 26.24
+        },
+        {
+          "word": "la",
+          "start": 26.24,
+          "end": 26.32
+        },
+        {
+          "word": "va",
+          "start": 26.32,
+          "end": 26.46
+        },
+        {
+          "word": "a",
+          "start": 26.46,
+          "end": 26.74
+        }
+      ]
+    },
+    {
+      "start": 29.16,
+      "end": 33.3,
+      "text": "Más arriba, más abajo, justo en el medio, justo en el centro.",
+      "words": [
+        {
+          "word": "Más",
+          "start": 29.16,
+          "end": 29.56
+        },
+        {
+          "word": "arriba,",
+          "start": 29.56,
+          "end": 29.82
+        },
+        {
+          "word": "más",
+          "start": 29.96,
+          "end": 30.02
+        },
+        {
+          "word": "abajo,",
+          "start": 30.02,
+          "end": 30.36
+        },
+        {
+          "word": "justo",
+          "start": 30.54,
+          "end": 30.62
+        },
+        {
+          "word": "en",
+          "start": 30.62,
+          "end": 30.82
+        },
+        {
+          "word": "el",
+          "start": 30.82,
+          "end": 30.92
+        },
+        {
+          "word": "medio,",
+          "start": 30.92,
+          "end": 31.28
+        },
+        {
+          "word": "justo",
+          "start": 32.34,
+          "end": 32.48
+        },
+        {
+          "word": "en",
+          "start": 32.48,
+          "end": 32.68
+        },
+        {
+          "word": "el",
+          "start": 32.68,
+          "end": 32.84
+        },
+        {
+          "word": "centro.",
+          "start": 32.84,
+          "end": 33.3
+        }
+      ]
+    }
+  ]
+}

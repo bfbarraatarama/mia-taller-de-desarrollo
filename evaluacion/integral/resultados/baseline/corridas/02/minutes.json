@@ -1,0 +1,115 @@
+{
+  "resumen": "La reunión se centró en mejorar la comunicación, actualizar materiales de capacitación y crear contenido para redes sociales. Se propuso usar el foro de OpenStreetMap para discutir temas más puntuales con una pequeña votación, iniciado por Rafael. También se habló sobre la necesidad de crear videos dinámicos y podcasts informativos y de capacitación, con Marta comenzando a hacer algunos videos pero sin estructura definida aún. Fredy compartió su experiencia con Instagram, sugiriendo que los videos cortos pueden tener mayor alcance.",
+  "temas": [
+    {
+      "texto": "Usar el foro de OpenStreetMap para discutir temas más puntuales.",
+      "ids_intervenciones": [
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013"
+      ],
+      "id_ancla": "I000013"
+    },
+    {
+      "texto": "Crear videos dinámicos para la capacitación.",
+      "ids_intervenciones": [
+        "I000027",
+        "I000028",
+        "I000029",
+        "I000030",
+        "I000031",
+        "I000032",
+        "I000033",
+        "I000034",
+        "I000035",
+        "I000036",
+        "I000037",
+        "I000038",
+        "I000039",
+        "I000014"
+      ],
+      "id_ancla": "I000014"
+    },
+    {
+      "texto": "Creación de contenido para redes sociales",
+      "ids_intervenciones": [
+        "I000038",
+        "I000039",
+        "I000040",
+        "I000041",
+        "I000042",
+        "I000043",
+        "I000044",
+        "I000045",
+        "I000046",
+        "I000047",
+        "I000048",
+        "I000049",
+        "I000050",
+        "I000051",
+        "I000052"
+      ],
+      "id_ancla": "I000038"
+    }
+  ],
+  "decisiones": [
+    {
+      "texto": "Usar el foro de OpenStreetMap para discutir temas más puntuales.",
+      "ids_intervenciones": [
+        "I000013",
+        "I000014"
+      ],
+      "id_ancla": "I000014"
+    }
+  ],
+  "problemas": [
+    {
+      "texto": "Necesidad de definir cómo listar las necesidades para hacer un video y marcarlas como completadas.",
+      "ids_intervenciones": [
+        "I000038",
+        "I000039"
+      ],
+      "id_ancla": "I000039"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Rafael iniciará el proceso de crear un tema en el foro.",
+      "ids_intervenciones": [
+        "I000014",
+        "I000025"
+      ],
+      "id_ancla": "I000025",
+      "responsable": "Rafael",
+      "plazo": null
+    },
+    {
+      "texto": "Crear una lista de apps para hacer videos.",
+      "ids_intervenciones": [
+        "I000038",
+        "I000039"
+      ],
+      "id_ancla": "I000039",
+      "responsable": null,
+      "plazo": null
+    },
+    {
+      "texto": "Fredy sugirió que se debe generar ruido en las redes sociales y empezar a traer gente.",
+      "ids_intervenciones": [
+        "I000051",
+        "I000052"
+      ],
+      "id_ancla": "I000052",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

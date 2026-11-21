@@ -1,0 +1,380 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 1.08,
+      "end": 8.9,
+      "text": "Bueno, la luna azul tenéis que ponerla abajo, la luna amarilla y a la derecha del cuadro, del espejo ese.",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 1.08,
+          "end": 1.52
+        },
+        {
+          "word": "la",
+          "start": 1.78,
+          "end": 1.8
+        },
+        {
+          "word": "luna",
+          "start": 1.8,
+          "end": 2.16
+        },
+        {
+          "word": "azul",
+          "start": 2.16,
+          "end": 2.6
+        },
+        {
+          "word": "tenéis",
+          "start": 2.6,
+          "end": 3.48
+        },
+        {
+          "word": "que",
+          "start": 3.48,
+          "end": 3.74
+        },
+        {
+          "word": "ponerla",
+          "start": 3.74,
+          "end": 3.98
+        },
+        {
+          "word": "abajo,",
+          "start": 3.98,
+          "end": 4.24
+        },
+        {
+          "word": "la",
+          "start": 4.38,
+          "end": 4.4
+        },
+        {
+          "word": "luna",
+          "start": 4.4,
+          "end": 4.56
+        },
+        {
+          "word": "amarilla",
+          "start": 4.56,
+          "end": 5.12
+        },
+        {
+          "word": "y",
+          "start": 5.12,
+          "end": 5.56
+        },
+        {
+          "word": "a",
+          "start": 5.56,
+          "end": 5.64
+        },
+        {
+          "word": "la",
+          "start": 5.64,
+          "end": 5.88
+        },
+        {
+          "word": "derecha",
+          "start": 5.88,
+          "end": 6.56
+        },
+        {
+          "word": "del",
+          "start": 6.56,
+          "end": 6.9
+        },
+        {
+          "word": "cuadro,",
+          "start": 6.9,
+          "end": 7.48
+        },
+        {
+          "word": "del",
+          "start": 7.98,
+          "end": 8.16
+        },
+        {
+          "word": "espejo",
+          "start": 8.16,
+          "end": 8.56
+        },
+        {
+          "word": "ese.",
+          "start": 8.56,
+          "end": 8.9
+        }
+      ]
+    },
+    {
+      "start": 9.62,
+      "end": 14.72,
+      "text": "De tal manera que el eje vertical de la luna, digamos la luna está centrada con la luna amarilla, la luna azul.",
+      "words": [
+        {
+          "word": "De",
+          "start": 9.62,
+          "end": 9.82
+        },
+        {
+          "word": "tal",
+          "start": 9.82,
+          "end": 9.92
+        },
+        {
+          "word": "manera",
+          "start": 9.92,
+          "end": 10.26
+        },
+        {
+          "word": "que",
+          "start": 10.26,
+          "end": 10.64
+        },
+        {
+          "word": "el",
+          "start": 10.64,
+          "end": 10.84
+        },
+        {
+          "word": "eje",
+          "start": 10.84,
+          "end": 11.26
+        },
+        {
+          "word": "vertical",
+          "start": 11.26,
+          "end": 11.86
+        },
+        {
+          "word": "de",
+          "start": 11.86,
+          "end": 12.02
+        },
+        {
+          "word": "la",
+          "start": 12.02,
+          "end": 12.18
+        },
+        {
+          "word": "luna,",
+          "start": 12.18,
+          "end": 12.5
+        },
+        {
+          "word": "digamos",
+          "start": 12.52,
+          "end": 12.68
+        },
+        {
+          "word": "la",
+          "start": 12.68,
+          "end": 12.78
+        },
+        {
+          "word": "luna",
+          "start": 12.78,
+          "end": 12.94
+        },
+        {
+          "word": "está",
+          "start": 12.94,
+          "end": 13.06
+        },
+        {
+          "word": "centrada",
+          "start": 13.06,
+          "end": 13.48
+        },
+        {
+          "word": "con",
+          "start": 13.48,
+          "end": 13.66
+        },
+        {
+          "word": "la",
+          "start": 13.66,
+          "end": 13.74
+        },
+        {
+          "word": "luna",
+          "start": 13.74,
+          "end": 13.86
+        },
+        {
+          "word": "amarilla,",
+          "start": 13.86,
+          "end": 14.22
+        },
+        {
+          "word": "la",
+          "start": 14.24,
+          "end": 14.28
+        },
+        {
+          "word": "luna",
+          "start": 14.28,
+          "end": 14.46
+        },
+        {
+          "word": "azul.",
+          "start": 14.46,
+          "end": 14.72
+        }
+      ]
+    },
+    {
+      "start": 16.06,
+      "end": 20.14,
+      "text": "Y está centrada también con el espejo. Si yo trazo una cruz está justo en el medio.",
+      "words": [
+        {
+          "word": "está",
+          "start": 16.06,
+          "end": 16.22
+        },
+        {
+          "word": "centrada",
+          "start": 16.22,
+          "end": 16.5
+        },
+        {
+          "word": "también",
+          "start": 16.5,
+          "end": 16.72
+        },
+        {
+          "word": "con",
+          "start": 16.72,
+          "end": 16.88
+        },
+        {
+          "word": "el",
+          "start": 16.88,
+          "end": 17.02
+        },
+        {
+          "word": "espejo.",
+          "start": 17.02,
+          "end": 18.12
+        },
+        {
+          "word": "Si",
+          "start": 18.66,
+          "end": 18.74
+        },
+        {
+          "word": "yo",
+          "start": 18.74,
+          "end": 18.84
+        },
+        {
+          "word": "trazo",
+          "start": 18.84,
+          "end": 18.96
+        },
+        {
+          "word": "una",
+          "start": 18.96,
+          "end": 19.14
+        },
+        {
+          "word": "cruz",
+          "start": 19.14,
+          "end": 19.32
+        },
+        {
+          "word": "está",
+          "start": 19.32,
+          "end": 19.42
+        },
+        {
+          "word": "justo",
+          "start": 19.42,
+          "end": 19.68
+        },
+        {
+          "word": "en",
+          "start": 19.68,
+          "end": 19.8
+        },
+        {
+          "word": "el",
+          "start": 19.8,
+          "end": 19.9
+        },
+        {
+          "word": "medio.",
+          "start": 19.9,
+          "end": 20.14
+        }
+      ]
+    },
+    {
+      "start": 21.28,
+      "end": 23.52,
+      "text": "Ok, lo coloco bien ahí.",
+      "words": [
+        {
+          "word": "lo",
+          "start": 21.34,
+          "end": 21.86
+        },
+        {
+          "word": "coloco",
+          "start": 21.86,
+          "end": 22.26
+        },
+        {
+          "word": "bien",
+          "start": 22.26,
+          "end": 22.54
+        },
+        {
+          "word": "ahí.",
+          "start": 22.54,
+          "end": 23.52
+        }
+      ]
+    },
+    {
+      "start": 25.18,
+      "end": 26.52,
+      "text": "Ponelo que más o menos ahí.",
+      "words": [
+        {
+          "word": "Ponelo",
+          "start": 25.18,
+          "end": 25.62
+        },
+        {
+          "word": "que",
+          "start": 25.62,
+          "end": 25.8
+        },
+        {
+          "word": "más",
+          "start": 25.8,
+          "end": 26.02
+        },
+        {
+          "word": "o",
+          "start": 26.02,
+          "end": 26.16
+        },
+        {
+          "word": "menos",
+          "start": 26.16,
+          "end": 26.36
+        },
+        {
+          "word": "ahí.",
+          "start": 26.36,
+          "end": 26.52
+        }
+      ]
+    }
+  ]
+}

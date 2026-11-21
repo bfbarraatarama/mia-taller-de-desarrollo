@@ -1,0 +1,122 @@
+{
+  "resumen": "La reunión se centró en mejorar la comunicación a través del foro de OpenStreetMap y en actualizar los materiales de capacitación. Se acordó utilizar el foro para discutir temas abiertos en las reuniones, con Jorge iniciando un tema sobre el logo para los notatón. Marta presentó sus videos de capacitación y propuso una lista de aplicaciones que necesitan videos explicativos. Además, se discutió la creación de contenido audiovisual, incluyendo videos y podcasts. Marta sugirió una lista de necesidades para hacer videos y mencionó la idea de crear podcasts informativos y de capacitación. Fredy compartió su experiencia con redes sociales, destacando el alcance que pueden tener los videos cortos en comparación con los largos.",
+  "temas": [
+    {
+      "texto": "Utilizar el foro de OpenStreetMap para discutir temas abiertos en las reuniones.",
+      "ids_intervenciones": [
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019"
+      ],
+      "id_ancla": "I000013"
+    },
+    {
+      "texto": "Actualizar los materiales de capacitación para que sean más atractivos y dinámicos.",
+      "ids_intervenciones": [
+        "I000026",
+        "I000027",
+        "I000028",
+        "I000029",
+        "I000030",
+        "I000031",
+        "I000032",
+        "I000033",
+        "I000034",
+        "I000035",
+        "I000036",
+        "I000037",
+        "I000038"
+      ],
+      "id_ancla": "I000026"
+    },
+    {
+      "texto": "Creación de contenido audiovisual",
+      "ids_intervenciones": [
+        "I000037",
+        "I000038",
+        "I000039",
+        "I000040",
+        "I000041"
+      ],
+      "id_ancla": "I000041"
+    },
+    {
+      "texto": "Uso de redes sociales para difundir contenido",
+      "ids_intervenciones": [
+        "I000042",
+        "I000043",
+        "I000044",
+        "I000045",
+        "I000046",
+        "I000047",
+        "I000048",
+        "I000049",
+        "I000050",
+        "I000051",
+        "I000052"
+      ],
+      "id_ancla": "I000052"
+    }
+  ],
+  "decisiones": [
+    {
+      "texto": "Se acordó utilizar el foro de OpenStreetMap para discutir temas abiertos en las reuniones.",
+      "ids_intervenciones": [
+        "I000013",
+        "I000014"
+      ],
+      "id_ancla": "I000013"
+    }
+  ],
+  "problemas": [
+    {
+      "texto": "La falta de un espacio centralizado para los videos de capacitación.",
+      "ids_intervenciones": [
+        "I000035",
+        "I000036",
+        "I000037",
+        "I000038"
+      ],
+      "id_ancla": "I000035"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Jorge creará un tema sobre el logo para los notatón en el foro de OpenStreetMap.",
+      "ids_intervenciones": [
+        "I000015",
+        "I000016",
+        "I000017"
+      ],
+      "id_ancla": "I000015",
+      "responsable": "Jorge",
+      "plazo": null
+    },
+    {
+      "texto": "Marta continuará creando videos de capacitación y propuso una lista de aplicaciones que necesitan videos explicativos.",
+      "ids_intervenciones": [
+        "I000035",
+        "I000036",
+        "I000037",
+        "I000038"
+      ],
+      "id_ancla": "I000035",
+      "responsable": "Marta",
+      "plazo": null
+    },
+    {
+      "texto": "Fredy sugirió que las redes sociales se usen para generar ruido y traer gente.",
+      "ids_intervenciones": [
+        "I000051",
+        "I000052"
+      ],
+      "id_ancla": "I000052",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

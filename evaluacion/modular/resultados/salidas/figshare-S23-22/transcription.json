@@ -1,0 +1,163 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si, ya fue. Vamos a hacer ricas.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 32
+      }
+    },
+    {
+      "start": 7.0,
+      "end": 18.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, agarras el rinoceronte amarillo y lo ponés arriba del aureo, debajo del mango maracuyá, lo que sea eso, y a la izquierda del espejo.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 139
+      }
+    },
+    {
+      "start": 19.1,
+      "end": 25.18,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bien, justo en el medio del aureo y bueno, la fruta esa.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 56
+      }
+    },
+    {
+      "start": 25.18,
+      "end": 29.26,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si, fijate centrarlo más con el aureo que se nota más.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 54
+      }
+    },
+    {
+      "start": 30.32,
+      "end": 42.92,
+      "speaker": null,
+      "name": null,
+      "text": "Y la cola del rinoceronte, o sea el rabito de abajo, digamos, está debajo del bultito del espejo.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 97
+      }
+    },
+    {
+      "start": 42.92,
+      "end": 54.58,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "O sea, las patas del rinoceronte están a la misma altura que el extremo inferior que tiene como un pixel un poco más verde.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 123
+      }
+    },
+    {
+      "start": 55.14,
+      "end": 56.76,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, a esa altura.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 20
+      }
+    }
+  ]
+}

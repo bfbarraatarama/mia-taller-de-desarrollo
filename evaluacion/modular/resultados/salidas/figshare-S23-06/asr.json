@@ -1,0 +1,196 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 1.16,
+      "end": 7.28,
+      "text": "Bueno, es la luna amarilla y tenes que colocarla entre el ojo y la regla",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 1.16,
+          "end": 1.64
+        },
+        {
+          "word": "la",
+          "start": 1.8,
+          "end": 1.98
+        },
+        {
+          "word": "luna",
+          "start": 1.98,
+          "end": 2.38
+        },
+        {
+          "word": "amarilla",
+          "start": 2.38,
+          "end": 3.22
+        },
+        {
+          "word": "y",
+          "start": 3.22,
+          "end": 4.5
+        },
+        {
+          "word": "tenes",
+          "start": 4.5,
+          "end": 4.74
+        },
+        {
+          "word": "que",
+          "start": 4.74,
+          "end": 4.96
+        },
+        {
+          "word": "colocarla",
+          "start": 4.96,
+          "end": 5.42
+        },
+        {
+          "word": "entre",
+          "start": 5.42,
+          "end": 5.72
+        },
+        {
+          "word": "el",
+          "start": 5.72,
+          "end": 5.94
+        },
+        {
+          "word": "ojo",
+          "start": 5.94,
+          "end": 6.16
+        },
+        {
+          "word": "y",
+          "start": 6.16,
+          "end": 6.26
+        },
+        {
+          "word": "la",
+          "start": 6.26,
+          "end": 6.46
+        },
+        {
+          "word": "regla",
+          "start": 6.46,
+          "end": 7.28
+        }
+      ]
+    },
+    {
+      "start": 7.28,
+      "end": 8.18,
+      "text": "En el medio?",
+      "words": [
+        {
+          "word": "En",
+          "start": 7.28,
+          "end": 7.6
+        },
+        {
+          "word": "el",
+          "start": 7.6,
+          "end": 7.84
+        },
+        {
+          "word": "medio?",
+          "start": 7.84,
+          "end": 8.18
+        }
+      ]
+    },
+    {
+      "start": 9.3,
+      "end": 15.42,
+      "text": "Si, justo en el espacio que queda ahí, en el medio, a la misma distancia de ambas",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 9.3,
+          "end": 9.78
+        },
+        {
+          "word": "justo",
+          "start": 10.0,
+          "end": 10.08
+        },
+        {
+          "word": "en",
+          "start": 10.08,
+          "end": 10.26
+        },
+        {
+          "word": "el",
+          "start": 10.26,
+          "end": 10.4
+        },
+        {
+          "word": "espacio",
+          "start": 10.4,
+          "end": 10.66
+        },
+        {
+          "word": "que",
+          "start": 10.66,
+          "end": 10.92
+        },
+        {
+          "word": "queda",
+          "start": 10.92,
+          "end": 11.1
+        },
+        {
+          "word": "ahí,",
+          "start": 11.1,
+          "end": 12.0
+        },
+        {
+          "word": "en",
+          "start": 12.0,
+          "end": 12.26
+        },
+        {
+          "word": "el",
+          "start": 12.26,
+          "end": 12.4
+        },
+        {
+          "word": "medio,",
+          "start": 12.4,
+          "end": 13.16
+        },
+        {
+          "word": "a",
+          "start": 13.96,
+          "end": 14.02
+        },
+        {
+          "word": "la",
+          "start": 14.02,
+          "end": 14.08
+        },
+        {
+          "word": "misma",
+          "start": 14.08,
+          "end": 14.26
+        },
+        {
+          "word": "distancia",
+          "start": 14.26,
+          "end": 14.64
+        },
+        {
+          "word": "de",
+          "start": 14.64,
+          "end": 14.82
+        },
+        {
+          "word": "ambas",
+          "start": 14.82,
+          "end": 15.42
+        }
+      ]
+    }
+  ]
+}

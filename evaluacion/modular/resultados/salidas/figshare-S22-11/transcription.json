@@ -1,0 +1,138 @@
+{
+  "segments": [
+    {
+      "start": 1.76,
+      "end": 8.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Tengo eso que no sé qué es esta vez, pero bueno es el verde, es como un limón verde.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 84
+      }
+    },
+    {
+      "start": 8.1,
+      "end": 8.68,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Una lima.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 9
+      }
+    },
+    {
+      "start": 8.72,
+      "end": 17.02,
+      "speaker": null,
+      "name": null,
+      "text": "Una lima, claro. Está sobre la ballena, casi tocando la ballena. O sea, entre la ballena y la cebolla, pero más cerca de la ballena.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 132
+      }
+    },
+    {
+      "start": 17.02,
+      "end": 17.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Muy bien.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 9
+      }
+    },
+    {
+      "start": 18.88,
+      "end": 27.28,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Casi casi la toca y a los costados está muy pareja con la ballena. La colita termina un poquito después.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 104
+      }
+    },
+    {
+      "start": 27.86,
+      "end": 28.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ok.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 3
+      }
+    }
+  ]
+}

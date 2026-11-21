@@ -1,0 +1,313 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.02,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "manda el alien al medio de todo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 31
+      }
+    },
+    {
+      "start": 4.58,
+      "end": 5.1,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "si",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "name": null,
+      "text": "como si estuviese con la mano izquierda por agarrar el auto",
+      "overlap": null,
+      "ambiguous": true,
+      "timing": "unknown",
+      "speakers_detected": null,
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 59
+      }
+    },
+    {
+      "start": 10.18,
+      "end": 12.48,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "con la mano izquierda por agarrar el auto",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 41
+      }
+    },
+    {
+      "start": 12.48,
+      "end": 17.18,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "si agarrar la trompa del auto y con la mano derecha como apoyandola en la mano de la",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 84
+      }
+    },
+    {
+      "start": 17.18,
+      "end": 18.56,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "aminita que esta tejiendo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 25
+      }
+    },
+    {
+      "start": 19.56,
+      "end": 20.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "ok",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 20.08,
+      "end": 22.92,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "los dedos de la mano derecha no el gordo sino los otros",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 55
+      }
+    },
+    {
+      "start": 22.92,
+      "end": 23.38,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "si",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 23.38,
+      "end": 28.7,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "esta tocando la mano de la aminita tocando la no arriba ni nada tocando la pena",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 79
+      }
+    },
+    {
+      "start": 29.46,
+      "end": 29.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "ok",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 29.98,
+      "end": 30.66,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "se entiende",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 11
+      }
+    },
+    {
+      "start": 31.56,
+      "end": 35.26,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "y bueno y el auto esta casi tocando lo auto pero no esta tocando lo auto",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 72
+      }
+    },
+    {
+      "start": 35.26,
+      "end": 38.48,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "pero se ve como si fuera agarrar la trompa del auto por donde esta puesta la mano",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 81
+      }
+    }
+  ]
+}

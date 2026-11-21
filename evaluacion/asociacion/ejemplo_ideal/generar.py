@@ -47,12 +47,30 @@ def version_espeak() -> str:
     return m.group(0) if m else salida.strip()
 
 
+_OPCION_D: bool | None = None
+
+
+def _admite_opcion_d() -> bool:
+    """Detecta una sola vez si la versión instalada de espeak-ng acepta la opción -D."""
+    global _OPCION_D
+    if _OPCION_D is None:
+        resultado = subprocess.run(["espeak-ng", "--help"], capture_output=True, text=True)
+        ayuda = resultado.stdout + resultado.stderr
+        _OPCION_D = bool(re.search(r"(?:^|\s)-D(?:\s|,|$)", ayuda, re.MULTILINE))
+    return _OPCION_D
+
+
 def sintetizar(texto: str, voz: str, velocidad: int) -> np.ndarray:
     """Devuelve la voz a 16 kHz, sin el silencio de los extremos."""
     with tempfile.TemporaryDirectory() as tmp:
         ruta = Path(tmp) / "frase.wav"
-        subprocess.run(["espeak-ng", "-v", voz, "-s", str(velocidad), "-w", str(ruta), texto],
-                       check=True, capture_output=True)
+        cmd = ["espeak-ng"]
+        if _admite_opcion_d():
+            cmd.append("-D")
+        cmd += ["-v", voz, "-s", str(velocidad), "-w", str(ruta), texto]
+        subprocess.run(cmd, check=True, capture_output=True)
+        if not ruta.exists() or ruta.stat().st_size == 0:
+            raise RuntimeError(f"espeak-ng no generó audio para: {texto!r}")
         x, fs = sf.read(ruta, dtype="float64")
     g = gcd(FS, fs)
     x = resample_poly(x, FS // g, fs // g)

@@ -1,0 +1,286 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.54,
+      "text": "bueno tienes que agarrar esa cosa verde que parece ser un limón",
+      "words": [
+        {
+          "word": "bueno",
+          "start": 0.0,
+          "end": 1.08
+        },
+        {
+          "word": "tienes",
+          "start": 1.08,
+          "end": 1.32
+        },
+        {
+          "word": "que",
+          "start": 1.32,
+          "end": 1.5
+        },
+        {
+          "word": "agarrar",
+          "start": 1.5,
+          "end": 1.86
+        },
+        {
+          "word": "esa",
+          "start": 1.86,
+          "end": 2.14
+        },
+        {
+          "word": "cosa",
+          "start": 2.14,
+          "end": 2.84
+        },
+        {
+          "word": "verde",
+          "start": 2.84,
+          "end": 3.66
+        },
+        {
+          "word": "que",
+          "start": 3.66,
+          "end": 4.0
+        },
+        {
+          "word": "parece",
+          "start": 4.0,
+          "end": 4.26
+        },
+        {
+          "word": "ser",
+          "start": 4.26,
+          "end": 4.48
+        },
+        {
+          "word": "un",
+          "start": 4.48,
+          "end": 4.66
+        },
+        {
+          "word": "limón",
+          "start": 4.66,
+          "end": 5.54
+        }
+      ]
+    },
+    {
+      "start": 5.54,
+      "end": 8.04,
+      "text": "una caracola puede ser",
+      "words": [
+        {
+          "word": "una",
+          "start": 5.54,
+          "end": 6.82
+        },
+        {
+          "word": "caracola",
+          "start": 6.82,
+          "end": 7.44
+        },
+        {
+          "word": "puede",
+          "start": 7.44,
+          "end": 7.68
+        },
+        {
+          "word": "ser",
+          "start": 7.68,
+          "end": 8.04
+        }
+      ]
+    },
+    {
+      "start": 8.04,
+      "end": 9.58,
+      "text": "no sé qué es",
+      "words": [
+        {
+          "word": "no",
+          "start": 8.04,
+          "end": 8.42
+        },
+        {
+          "word": "sé",
+          "start": 8.42,
+          "end": 8.68
+        },
+        {
+          "word": "qué",
+          "start": 8.68,
+          "end": 8.94
+        },
+        {
+          "word": "es",
+          "start": 8.94,
+          "end": 9.58
+        }
+      ]
+    },
+    {
+      "start": 9.58,
+      "end": 12.96,
+      "text": "tienes que ponerlo arriba de la ballena",
+      "words": [
+        {
+          "word": "tienes",
+          "start": 9.58,
+          "end": 9.8
+        },
+        {
+          "word": "que",
+          "start": 9.8,
+          "end": 10.06
+        },
+        {
+          "word": "ponerlo",
+          "start": 10.06,
+          "end": 11.44
+        },
+        {
+          "word": "arriba",
+          "start": 11.44,
+          "end": 11.98
+        },
+        {
+          "word": "de",
+          "start": 11.98,
+          "end": 12.14
+        },
+        {
+          "word": "la",
+          "start": 12.14,
+          "end": 12.28
+        },
+        {
+          "word": "ballena",
+          "start": 12.28,
+          "end": 12.96
+        }
+      ]
+    },
+    {
+      "start": 12.96,
+      "end": 15.2,
+      "text": "entre la cebolla",
+      "words": [
+        {
+          "word": "entre",
+          "start": 12.96,
+          "end": 13.76
+        },
+        {
+          "word": "la",
+          "start": 13.76,
+          "end": 14.24
+        },
+        {
+          "word": "cebolla",
+          "start": 14.24,
+          "end": 15.2
+        }
+      ]
+    },
+    {
+      "start": 15.2,
+      "end": 17.84,
+      "text": "pero más que nada más cerca de la ballena",
+      "words": [
+        {
+          "word": "pero",
+          "start": 15.2,
+          "end": 15.74
+        },
+        {
+          "word": "más",
+          "start": 15.74,
+          "end": 15.98
+        },
+        {
+          "word": "que",
+          "start": 15.98,
+          "end": 16.16
+        },
+        {
+          "word": "nada",
+          "start": 16.16,
+          "end": 16.4
+        },
+        {
+          "word": "más",
+          "start": 16.4,
+          "end": 16.66
+        },
+        {
+          "word": "cerca",
+          "start": 16.66,
+          "end": 16.92
+        },
+        {
+          "word": "de",
+          "start": 16.92,
+          "end": 17.08
+        },
+        {
+          "word": "la",
+          "start": 17.08,
+          "end": 17.2
+        },
+        {
+          "word": "ballena",
+          "start": 17.2,
+          "end": 17.84
+        }
+      ]
+    },
+    {
+      "start": 17.84,
+      "end": 18.8,
+      "text": "casi pegadita",
+      "words": [
+        {
+          "word": "casi",
+          "start": 17.84,
+          "end": 18.3
+        },
+        {
+          "word": "pegadita",
+          "start": 18.3,
+          "end": 18.8
+        }
+      ]
+    },
+    {
+      "start": 18.8,
+      "end": 20.34,
+      "text": "casi tocando la ballenita",
+      "words": [
+        {
+          "word": "casi",
+          "start": 18.8,
+          "end": 19.04
+        },
+        {
+          "word": "tocando",
+          "start": 19.04,
+          "end": 19.42
+        },
+        {
+          "word": "la",
+          "start": 19.42,
+          "end": 19.6
+        },
+        {
+          "word": "ballenita",
+          "start": 19.6,
+          "end": 20.34
+        }
+      ]
+    }
+  ]
+}

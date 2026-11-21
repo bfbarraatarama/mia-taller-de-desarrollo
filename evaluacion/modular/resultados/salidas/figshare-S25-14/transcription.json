@@ -1,0 +1,444 @@
+{
+  "segments": [
+    {
+      "start": 2.04,
+      "end": 6.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La plancha está entre el limón, la sirena y la ballena",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 54
+      }
+    },
+    {
+      "start": 7.78,
+      "end": 10.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "De manera que...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 17.92,
+      "end": 25.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El cablecito termina más o menos a la altura de mitad de la cabeza de la sirena",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 79
+      }
+    },
+    {
+      "start": 25.44,
+      "end": 28.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Más o menos hacia la derecha, más o menos hacia la izquierda",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 60
+      }
+    },
+    {
+      "start": 28.0,
+      "end": 32.88,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está medio milímetro hacia la izquierda, pero digamos que en eje vertical",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 73
+      }
+    },
+    {
+      "start": 34.2,
+      "end": 39.64,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El cablecito termina casi en la mitad de la cabeza de la sirena",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 63
+      }
+    },
+    {
+      "start": 40.52,
+      "end": 47.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "De manera que la punta norte de la plancha está...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 50
+      }
+    },
+    {
+      "start": 49.3,
+      "end": 50.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Digamos que...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 14
+      }
+    },
+    {
+      "start": 50.46,
+      "end": 52.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "En la primer sombra, señalando la primer sombra",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 47
+      }
+    },
+    {
+      "start": 52.34,
+      "end": 57.24,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "En la primer sombra el limón, sí, en la segunda sombra, ponéle",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 62
+      }
+    },
+    {
+      "start": 58.0,
+      "end": 62.78,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Va, tiene... De izquierda a derecha, una, dos, tres, cuatro, cinco, seis, siete, ocho sombritas",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 95
+      }
+    },
+    {
+      "start": 62.78,
+      "end": 66.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ok, tenés las dos primeras sombras chiquititas",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 46
+      }
+    },
+    {
+      "start": 66.34,
+      "end": 67.02,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Esas no van",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 11
+      }
+    },
+    {
+      "start": 67.02,
+      "end": 68.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Esas no van, ok",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 15
+      }
+    },
+    {
+      "start": 68.6,
+      "end": 71.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está más o menos a la altura de la primer sombra grande",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 55
+      }
+    },
+    {
+      "start": 71.08,
+      "end": 72.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está bien, buenísimo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 20
+      }
+    },
+    {
+      "start": 74.7,
+      "end": 77.4,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está más cerca de la ballena, más cerca del limón",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 49
+      }
+    },
+    {
+      "start": 78.54,
+      "end": 83.06,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Más o menos equidistante diría que un toquecito más cerca de la ballena que del limón",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 85
+      }
+    },
+    {
+      "start": 83.06,
+      "end": 86.78,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está bien, no se me ocurre nada más",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 35
+      }
+    },
+    {
+      "start": 86.78,
+      "end": 87.14,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ahí va",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 6
+      }
+    }
+  ]
+}

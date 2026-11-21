@@ -1,0 +1,469 @@
+{
+  "segments": [
+    {
+      "start": 1.72,
+      "end": 6.58,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, tienes que agarrar el espejo y tapar el rinoceronte.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 59
+      }
+    },
+    {
+      "start": 7.06,
+      "end": 7.54,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Totalmente?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 7.88,
+      "end": 8.94,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "No, no se puede.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 9.02,
+      "end": 9.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Qué tapo?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 10
+      }
+    },
+    {
+      "start": 9.8,
+      "end": 10.28,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Pero...",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 7
+      }
+    },
+    {
+      "start": 10.28,
+      "end": 11.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "O sea, ¿qué se ve?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 18
+      }
+    },
+    {
+      "start": 11.58,
+      "end": 12.26,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Se ve...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 8
+      }
+    },
+    {
+      "start": 12.26,
+      "end": 13.94,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Para el azul o el amarillo?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 14.18,
+      "end": 15.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ah, claro, está el azul.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "start": 15.0,
+      "end": 15.66,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El amarillo.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 16.0,
+      "end": 17.4,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ah, yo ya le iba a poner el azul.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 33
+      }
+    },
+    {
+      "start": 18.14,
+      "end": 20.14,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, ¿qué parte es tapo?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 26
+      }
+    },
+    {
+      "start": 20.86,
+      "end": 29.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Fíjate que el cuerno más largo del rinoceronte se ve la puntita del cuerno entre la parte",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 89
+      }
+    },
+    {
+      "start": 29.98,
+      "end": 33.76,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "bueno, izquierda del espejo, de la parte de abajo.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 50
+      }
+    },
+    {
+      "start": 35.42,
+      "end": 36.08,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El rabo se ve.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 14
+      }
+    },
+    {
+      "start": 36.88,
+      "end": 41.6,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí, sí, la colita y el rabo y las patas de atrás, las dos se ven.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 65
+      }
+    },
+    {
+      "start": 42.46,
+      "end": 45.88,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Las dos de adelante no se ve nada, de arriba no se ve nada.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 59
+      }
+    },
+    {
+      "start": 50.0,
+      "end": 54.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y viste que hay una... entre las patas hay una parte como más negra.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 68
+      }
+    },
+    {
+      "start": 54.58,
+      "end": 54.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 54.98,
+      "end": 61.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, eso un poquito se ve entre el bultito del espejo y la parte de abajo del espejo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 86
+      }
+    },
+    {
+      "start": 61.12,
+      "end": 61.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "a la derecha.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 13
+      }
+    }
+  ]
+}

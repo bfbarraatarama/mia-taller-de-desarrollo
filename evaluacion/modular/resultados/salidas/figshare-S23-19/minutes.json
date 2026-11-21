@@ -1,0 +1,42 @@
+{
+  "resumen": "La reunión se centró en la colocación de un elemento negro sobre dos lunas, especificando que debe tocar la mitad superior de ambas y estar justo debajo del telar. Se discutió la posición exacta para asegurar una correcta colocación.",
+  "temas": [
+    {
+      "texto": "Colocación de un elemento negro sobre dos lunas.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004"
+      ],
+      "id_ancla": "I000004"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "Determinar la posición exacta para el elemento negro.",
+      "ids_intervenciones": [
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008"
+      ],
+      "id_ancla": "I000008"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "El responsable debe determinar la posición exacta para el elemento negro.",
+      "ids_intervenciones": [
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008"
+      ],
+      "id_ancla": "I000008",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

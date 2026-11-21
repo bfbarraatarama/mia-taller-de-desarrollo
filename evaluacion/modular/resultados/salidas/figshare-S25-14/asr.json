@@ -1,0 +1,1045 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 2.04,
+      "end": 6.0,
+      "text": "La plancha está entre el limón, la sirena y la ballena",
+      "words": [
+        {
+          "word": "La",
+          "start": 2.04,
+          "end": 2.48
+        },
+        {
+          "word": "plancha",
+          "start": 2.48,
+          "end": 2.92
+        },
+        {
+          "word": "está",
+          "start": 2.92,
+          "end": 3.54
+        },
+        {
+          "word": "entre",
+          "start": 3.54,
+          "end": 4.4
+        },
+        {
+          "word": "el",
+          "start": 4.4,
+          "end": 4.62
+        },
+        {
+          "word": "limón,",
+          "start": 4.62,
+          "end": 4.88
+        },
+        {
+          "word": "la",
+          "start": 4.96,
+          "end": 5.08
+        },
+        {
+          "word": "sirena",
+          "start": 5.08,
+          "end": 5.28
+        },
+        {
+          "word": "y",
+          "start": 5.28,
+          "end": 5.38
+        },
+        {
+          "word": "la",
+          "start": 5.38,
+          "end": 5.52
+        },
+        {
+          "word": "ballena",
+          "start": 5.52,
+          "end": 6.0
+        }
+      ]
+    },
+    {
+      "start": 7.78,
+      "end": 10.0,
+      "text": "De manera que...",
+      "words": [
+        {
+          "word": "De",
+          "start": 7.78,
+          "end": 8.22
+        },
+        {
+          "word": "manera",
+          "start": 8.22,
+          "end": 8.66
+        },
+        {
+          "word": "que...",
+          "start": 8.66,
+          "end": 10.0
+        }
+      ]
+    },
+    {
+      "start": 17.92,
+      "end": 25.44,
+      "text": "El cablecito termina más o menos a la altura de mitad de la cabeza de la sirena",
+      "words": [
+        {
+          "word": "El",
+          "start": 17.92,
+          "end": 18.36
+        },
+        {
+          "word": "cablecito",
+          "start": 18.36,
+          "end": 18.8
+        },
+        {
+          "word": "termina",
+          "start": 18.8,
+          "end": 20.42
+        },
+        {
+          "word": "más",
+          "start": 20.42,
+          "end": 20.88
+        },
+        {
+          "word": "o",
+          "start": 20.88,
+          "end": 21.06
+        },
+        {
+          "word": "menos",
+          "start": 21.06,
+          "end": 22.0
+        },
+        {
+          "word": "a",
+          "start": 22.0,
+          "end": 22.68
+        },
+        {
+          "word": "la",
+          "start": 22.68,
+          "end": 22.8
+        },
+        {
+          "word": "altura",
+          "start": 22.8,
+          "end": 23.1
+        },
+        {
+          "word": "de",
+          "start": 23.1,
+          "end": 23.42
+        },
+        {
+          "word": "mitad",
+          "start": 23.42,
+          "end": 23.62
+        },
+        {
+          "word": "de",
+          "start": 23.62,
+          "end": 23.82
+        },
+        {
+          "word": "la",
+          "start": 23.82,
+          "end": 23.98
+        },
+        {
+          "word": "cabeza",
+          "start": 23.98,
+          "end": 24.42
+        },
+        {
+          "word": "de",
+          "start": 24.42,
+          "end": 24.64
+        },
+        {
+          "word": "la",
+          "start": 24.64,
+          "end": 24.78
+        },
+        {
+          "word": "sirena",
+          "start": 24.78,
+          "end": 25.44
+        }
+      ]
+    },
+    {
+      "start": 25.44,
+      "end": 28.0,
+      "text": "Más o menos hacia la derecha, más o menos hacia la izquierda",
+      "words": [
+        {
+          "word": "Más",
+          "start": 25.44,
+          "end": 26.22
+        },
+        {
+          "word": "o",
+          "start": 26.22,
+          "end": 26.32
+        },
+        {
+          "word": "menos",
+          "start": 26.32,
+          "end": 26.54
+        },
+        {
+          "word": "hacia",
+          "start": 26.54,
+          "end": 26.68
+        },
+        {
+          "word": "la",
+          "start": 26.68,
+          "end": 26.84
+        },
+        {
+          "word": "derecha,",
+          "start": 26.84,
+          "end": 27.08
+        },
+        {
+          "word": "más",
+          "start": 27.14,
+          "end": 27.26
+        },
+        {
+          "word": "o",
+          "start": 27.26,
+          "end": 27.36
+        },
+        {
+          "word": "menos",
+          "start": 27.36,
+          "end": 27.48
+        },
+        {
+          "word": "hacia",
+          "start": 27.48,
+          "end": 27.64
+        },
+        {
+          "word": "la",
+          "start": 27.64,
+          "end": 27.7
+        },
+        {
+          "word": "izquierda",
+          "start": 27.7,
+          "end": 28.0
+        }
+      ]
+    },
+    {
+      "start": 28.0,
+      "end": 32.88,
+      "text": "Está medio milímetro hacia la izquierda, pero digamos que en eje vertical",
+      "words": [
+        {
+          "word": "Está",
+          "start": 28.0,
+          "end": 29.2
+        },
+        {
+          "word": "medio",
+          "start": 29.2,
+          "end": 29.86
+        },
+        {
+          "word": "milímetro",
+          "start": 29.86,
+          "end": 30.22
+        },
+        {
+          "word": "hacia",
+          "start": 30.22,
+          "end": 30.4
+        },
+        {
+          "word": "la",
+          "start": 30.4,
+          "end": 30.6
+        },
+        {
+          "word": "izquierda,",
+          "start": 30.6,
+          "end": 30.94
+        },
+        {
+          "word": "pero",
+          "start": 31.08,
+          "end": 31.14
+        },
+        {
+          "word": "digamos",
+          "start": 31.14,
+          "end": 31.4
+        },
+        {
+          "word": "que",
+          "start": 31.4,
+          "end": 31.68
+        },
+        {
+          "word": "en",
+          "start": 31.68,
+          "end": 31.8
+        },
+        {
+          "word": "eje",
+          "start": 31.8,
+          "end": 31.98
+        },
+        {
+          "word": "vertical",
+          "start": 31.98,
+          "end": 32.88
+        }
+      ]
+    },
+    {
+      "start": 34.2,
+      "end": 39.64,
+      "text": "El cablecito termina casi en la mitad de la cabeza de la sirena",
+      "words": [
+        {
+          "word": "El",
+          "start": 34.2,
+          "end": 34.8
+        },
+        {
+          "word": "cablecito",
+          "start": 34.8,
+          "end": 35.4
+        },
+        {
+          "word": "termina",
+          "start": 35.4,
+          "end": 35.96
+        },
+        {
+          "word": "casi",
+          "start": 35.96,
+          "end": 36.36
+        },
+        {
+          "word": "en",
+          "start": 36.36,
+          "end": 36.6
+        },
+        {
+          "word": "la",
+          "start": 36.6,
+          "end": 36.72
+        },
+        {
+          "word": "mitad",
+          "start": 36.72,
+          "end": 36.88
+        },
+        {
+          "word": "de",
+          "start": 36.88,
+          "end": 37.1
+        },
+        {
+          "word": "la",
+          "start": 37.1,
+          "end": 37.28
+        },
+        {
+          "word": "cabeza",
+          "start": 37.28,
+          "end": 37.66
+        },
+        {
+          "word": "de",
+          "start": 37.66,
+          "end": 37.94
+        },
+        {
+          "word": "la",
+          "start": 37.94,
+          "end": 39.04
+        },
+        {
+          "word": "sirena",
+          "start": 39.04,
+          "end": 39.64
+        }
+      ]
+    },
+    {
+      "start": 40.52,
+      "end": 47.0,
+      "text": "De manera que la punta norte de la plancha está...",
+      "words": [
+        {
+          "word": "De",
+          "start": 40.52,
+          "end": 41.12
+        },
+        {
+          "word": "manera",
+          "start": 41.12,
+          "end": 41.36
+        },
+        {
+          "word": "que",
+          "start": 41.36,
+          "end": 41.66
+        },
+        {
+          "word": "la",
+          "start": 41.66,
+          "end": 42.04
+        },
+        {
+          "word": "punta",
+          "start": 42.04,
+          "end": 44.16
+        },
+        {
+          "word": "norte",
+          "start": 44.16,
+          "end": 44.58
+        },
+        {
+          "word": "de",
+          "start": 44.58,
+          "end": 44.8
+        },
+        {
+          "word": "la",
+          "start": 44.8,
+          "end": 45.02
+        },
+        {
+          "word": "plancha",
+          "start": 45.02,
+          "end": 45.74
+        },
+        {
+          "word": "está...",
+          "start": 45.74,
+          "end": 47.0
+        }
+      ]
+    },
+    {
+      "start": 49.3,
+      "end": 50.46,
+      "text": "Digamos que...",
+      "words": [
+        {
+          "word": "Digamos",
+          "start": 49.3,
+          "end": 49.66
+        },
+        {
+          "word": "que...",
+          "start": 49.66,
+          "end": 50.46
+        }
+      ]
+    },
+    {
+      "start": 50.46,
+      "end": 52.34,
+      "text": "En la primer sombra, señalando la primer sombra",
+      "words": [
+        {
+          "word": "En",
+          "start": 50.46,
+          "end": 50.58
+        },
+        {
+          "word": "la",
+          "start": 50.58,
+          "end": 50.74
+        },
+        {
+          "word": "primer",
+          "start": 50.74,
+          "end": 50.96
+        },
+        {
+          "word": "sombra,",
+          "start": 50.96,
+          "end": 51.38
+        },
+        {
+          "word": "señalando",
+          "start": 51.38,
+          "end": 51.74
+        },
+        {
+          "word": "la",
+          "start": 51.74,
+          "end": 51.84
+        },
+        {
+          "word": "primer",
+          "start": 51.84,
+          "end": 52.04
+        },
+        {
+          "word": "sombra",
+          "start": 52.04,
+          "end": 52.34
+        }
+      ]
+    },
+    {
+      "start": 52.34,
+      "end": 57.24,
+      "text": "En la primer sombra el limón, sí, en la segunda sombra, ponéle",
+      "words": [
+        {
+          "word": "En",
+          "start": 52.34,
+          "end": 52.68
+        },
+        {
+          "word": "la",
+          "start": 52.68,
+          "end": 53.06
+        },
+        {
+          "word": "primer",
+          "start": 53.06,
+          "end": 53.22
+        },
+        {
+          "word": "sombra",
+          "start": 53.22,
+          "end": 53.52
+        },
+        {
+          "word": "el",
+          "start": 53.52,
+          "end": 53.74
+        },
+        {
+          "word": "limón,",
+          "start": 53.74,
+          "end": 54.34
+        },
+        {
+          "word": "sí,",
+          "start": 54.62,
+          "end": 54.82
+        },
+        {
+          "word": "en",
+          "start": 55.56,
+          "end": 55.88
+        },
+        {
+          "word": "la",
+          "start": 55.88,
+          "end": 56.14
+        },
+        {
+          "word": "segunda",
+          "start": 56.14,
+          "end": 56.46
+        },
+        {
+          "word": "sombra,",
+          "start": 56.46,
+          "end": 56.82
+        },
+        {
+          "word": "ponéle",
+          "start": 56.86,
+          "end": 57.24
+        }
+      ]
+    },
+    {
+      "start": 58.0,
+      "end": 62.78,
+      "text": "Va, tiene... De izquierda a derecha, una, dos, tres, cuatro, cinco, seis, siete, ocho sombritas",
+      "words": [
+        {
+          "word": "Va,",
+          "start": 58.0,
+          "end": 58.22
+        },
+        {
+          "word": "tiene...",
+          "start": 58.58,
+          "end": 58.8
+        },
+        {
+          "word": "De",
+          "start": 58.8,
+          "end": 58.98
+        },
+        {
+          "word": "izquierda",
+          "start": 58.98,
+          "end": 59.18
+        },
+        {
+          "word": "a",
+          "start": 59.18,
+          "end": 59.26
+        },
+        {
+          "word": "derecha,",
+          "start": 59.26,
+          "end": 59.44
+        },
+        {
+          "word": "una,",
+          "start": 59.56,
+          "end": 59.84
+        },
+        {
+          "word": "dos,",
+          "start": 59.92,
+          "end": 60.24
+        },
+        {
+          "word": "tres,",
+          "start": 60.42,
+          "end": 60.5
+        },
+        {
+          "word": "cuatro,",
+          "start": 60.66,
+          "end": 60.84
+        },
+        {
+          "word": "cinco,",
+          "start": 60.9,
+          "end": 61.16
+        },
+        {
+          "word": "seis,",
+          "start": 61.16,
+          "end": 61.54
+        },
+        {
+          "word": "siete,",
+          "start": 61.54,
+          "end": 61.82
+        },
+        {
+          "word": "ocho",
+          "start": 61.84,
+          "end": 62.16
+        },
+        {
+          "word": "sombritas",
+          "start": 62.16,
+          "end": 62.78
+        }
+      ]
+    },
+    {
+      "start": 62.78,
+      "end": 66.34,
+      "text": "Ok, tenés las dos primeras sombras chiquititas",
+      "words": [
+        {
+          "word": "Ok,",
+          "start": 62.78,
+          "end": 63.18
+        },
+        {
+          "word": "tenés",
+          "start": 63.44,
+          "end": 63.9
+        },
+        {
+          "word": "las",
+          "start": 63.9,
+          "end": 64.98
+        },
+        {
+          "word": "dos",
+          "start": 64.98,
+          "end": 65.16
+        },
+        {
+          "word": "primeras",
+          "start": 65.16,
+          "end": 65.48
+        },
+        {
+          "word": "sombras",
+          "start": 65.48,
+          "end": 65.76
+        },
+        {
+          "word": "chiquititas",
+          "start": 65.76,
+          "end": 66.34
+        }
+      ]
+    },
+    {
+      "start": 66.34,
+      "end": 67.02,
+      "text": "Esas no van",
+      "words": [
+        {
+          "word": "Esas",
+          "start": 66.34,
+          "end": 66.64
+        },
+        {
+          "word": "no",
+          "start": 66.64,
+          "end": 66.82
+        },
+        {
+          "word": "van",
+          "start": 66.82,
+          "end": 67.02
+        }
+      ]
+    },
+    {
+      "start": 67.02,
+      "end": 68.0,
+      "text": "Esas no van, ok",
+      "words": [
+        {
+          "word": "Esas",
+          "start": 67.02,
+          "end": 67.48
+        },
+        {
+          "word": "no",
+          "start": 67.48,
+          "end": 67.7
+        },
+        {
+          "word": "van,",
+          "start": 67.7,
+          "end": 67.88
+        },
+        {
+          "word": "ok",
+          "start": 67.88,
+          "end": 68.08
+        }
+      ]
+    },
+    {
+      "start": 68.6,
+      "end": 71.08,
+      "text": "Está más o menos a la altura de la primer sombra grande",
+      "words": [
+        {
+          "word": "Está",
+          "start": 68.6,
+          "end": 68.96
+        },
+        {
+          "word": "más",
+          "start": 68.96,
+          "end": 69.18
+        },
+        {
+          "word": "o",
+          "start": 69.18,
+          "end": 69.26
+        },
+        {
+          "word": "menos",
+          "start": 69.26,
+          "end": 69.42
+        },
+        {
+          "word": "a",
+          "start": 69.42,
+          "end": 69.52
+        },
+        {
+          "word": "la",
+          "start": 69.52,
+          "end": 69.62
+        },
+        {
+          "word": "altura",
+          "start": 69.62,
+          "end": 69.84
+        },
+        {
+          "word": "de",
+          "start": 69.84,
+          "end": 70.0
+        },
+        {
+          "word": "la",
+          "start": 70.0,
+          "end": 70.16
+        },
+        {
+          "word": "primer",
+          "start": 70.16,
+          "end": 70.32
+        },
+        {
+          "word": "sombra",
+          "start": 70.32,
+          "end": 70.6
+        },
+        {
+          "word": "grande",
+          "start": 70.6,
+          "end": 71.08
+        }
+      ]
+    },
+    {
+      "start": 71.08,
+      "end": 72.0,
+      "text": "Está bien, buenísimo",
+      "words": [
+        {
+          "word": "Está",
+          "start": 71.08,
+          "end": 71.38
+        },
+        {
+          "word": "bien,",
+          "start": 71.38,
+          "end": 71.56
+        },
+        {
+          "word": "buenísimo",
+          "start": 71.58,
+          "end": 72.0
+        }
+      ]
+    },
+    {
+      "start": 74.7,
+      "end": 77.4,
+      "text": "Está más cerca de la ballena, más cerca del limón",
+      "words": [
+        {
+          "word": "Está",
+          "start": 74.7,
+          "end": 75.1
+        },
+        {
+          "word": "más",
+          "start": 75.1,
+          "end": 75.3
+        },
+        {
+          "word": "cerca",
+          "start": 75.3,
+          "end": 75.46
+        },
+        {
+          "word": "de",
+          "start": 75.46,
+          "end": 75.56
+        },
+        {
+          "word": "la",
+          "start": 75.56,
+          "end": 75.72
+        },
+        {
+          "word": "ballena,",
+          "start": 75.72,
+          "end": 76.08
+        },
+        {
+          "word": "más",
+          "start": 76.2,
+          "end": 76.28
+        },
+        {
+          "word": "cerca",
+          "start": 76.28,
+          "end": 76.42
+        },
+        {
+          "word": "del",
+          "start": 76.42,
+          "end": 76.6
+        },
+        {
+          "word": "limón",
+          "start": 76.6,
+          "end": 77.4
+        }
+      ]
+    },
+    {
+      "start": 78.54,
+      "end": 83.06,
+      "text": "Más o menos equidistante diría que un toquecito más cerca de la ballena que del limón",
+      "words": [
+        {
+          "word": "Más",
+          "start": 78.54,
+          "end": 78.94
+        },
+        {
+          "word": "o",
+          "start": 78.94,
+          "end": 79.02
+        },
+        {
+          "word": "menos",
+          "start": 79.02,
+          "end": 79.24
+        },
+        {
+          "word": "equidistante",
+          "start": 79.24,
+          "end": 79.88
+        },
+        {
+          "word": "diría",
+          "start": 79.88,
+          "end": 80.18
+        },
+        {
+          "word": "que",
+          "start": 80.18,
+          "end": 80.34
+        },
+        {
+          "word": "un",
+          "start": 80.34,
+          "end": 80.52
+        },
+        {
+          "word": "toquecito",
+          "start": 80.52,
+          "end": 81.1
+        },
+        {
+          "word": "más",
+          "start": 81.1,
+          "end": 81.42
+        },
+        {
+          "word": "cerca",
+          "start": 81.42,
+          "end": 81.6
+        },
+        {
+          "word": "de",
+          "start": 81.6,
+          "end": 81.76
+        },
+        {
+          "word": "la",
+          "start": 81.76,
+          "end": 81.86
+        },
+        {
+          "word": "ballena",
+          "start": 81.86,
+          "end": 82.18
+        },
+        {
+          "word": "que",
+          "start": 82.18,
+          "end": 82.32
+        },
+        {
+          "word": "del",
+          "start": 82.32,
+          "end": 82.48
+        },
+        {
+          "word": "limón",
+          "start": 82.48,
+          "end": 83.06
+        }
+      ]
+    },
+    {
+      "start": 83.06,
+      "end": 86.78,
+      "text": "Está bien, no se me ocurre nada más",
+      "words": [
+        {
+          "word": "Está",
+          "start": 83.06,
+          "end": 83.48
+        },
+        {
+          "word": "bien,",
+          "start": 83.48,
+          "end": 84.58
+        },
+        {
+          "word": "no",
+          "start": 85.48,
+          "end": 85.6
+        },
+        {
+          "word": "se",
+          "start": 85.6,
+          "end": 85.72
+        },
+        {
+          "word": "me",
+          "start": 85.72,
+          "end": 85.82
+        },
+        {
+          "word": "ocurre",
+          "start": 85.82,
+          "end": 86.0
+        },
+        {
+          "word": "nada",
+          "start": 86.0,
+          "end": 86.2
+        },
+        {
+          "word": "más",
+          "start": 86.2,
+          "end": 86.78
+        }
+      ]
+    },
+    {
+      "start": 86.78,
+      "end": 87.14,
+      "text": "Ahí va",
+      "words": [
+        {
+          "word": "Ahí",
+          "start": 86.78,
+          "end": 86.96
+        },
+        {
+          "word": "va",
+          "start": 86.96,
+          "end": 87.14
+        }
+      ]
+    }
+  ]
+}

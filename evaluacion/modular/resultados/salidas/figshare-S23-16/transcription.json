@@ -1,0 +1,113 @@
+{
+  "segments": [
+    {
+      "start": 0.6,
+      "end": 11.74,
+      "speaker": null,
+      "name": null,
+      "text": "Bueno, agarras la limusina, muy bonita, le pones entre las dos lunas. Queda bien adentro de la luna azul sin tocar la parte azul.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 129
+      }
+    },
+    {
+      "start": 12.34,
+      "end": 14.62,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "O sea, adentro de la luna azul entonces pero sin tocar.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 55
+      }
+    },
+    {
+      "start": 14.92,
+      "end": 21.6,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Claro, quedará 2 milímetros de la luna amarilla y 3 de la luna azul.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 68
+      }
+    },
+    {
+      "start": 24.74,
+      "end": 26.74,
+      "speaker": null,
+      "name": null,
+      "text": "O sea, como que se la va a comer.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 33
+      }
+    },
+    {
+      "start": 29.16,
+      "end": 33.3,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Más arriba, más abajo, justo en el medio, justo en el centro.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 61
+      }
+    }
+  ]
+}

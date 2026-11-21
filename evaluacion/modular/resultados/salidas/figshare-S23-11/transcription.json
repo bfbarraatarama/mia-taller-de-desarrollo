@@ -1,0 +1,176 @@
+{
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.54,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "bueno tienes que agarrar esa cosa verde que parece ser un limón",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 63
+      }
+    },
+    {
+      "start": 5.54,
+      "end": 8.04,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "una caracola puede ser",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 22
+      }
+    },
+    {
+      "start": 8.04,
+      "end": 9.58,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "no sé qué es",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 9.58,
+      "end": 12.96,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "tienes que ponerlo arriba de la ballena",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 39
+      }
+    },
+    {
+      "start": 12.96,
+      "end": 15.2,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "entre la cebolla",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 15.2,
+      "end": 17.84,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "pero más que nada más cerca de la ballena",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 41
+      }
+    },
+    {
+      "start": 17.84,
+      "end": 18.8,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "casi pegadita",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 13
+      }
+    },
+    {
+      "start": 18.8,
+      "end": 20.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "casi tocando la ballenita",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 25
+      }
+    }
+  ]
+}

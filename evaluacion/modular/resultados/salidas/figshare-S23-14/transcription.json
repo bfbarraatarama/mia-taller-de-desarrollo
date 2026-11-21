@@ -1,0 +1,184 @@
+{
+  "segments": [
+    {
+      "start": 1.6,
+      "end": 7.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La plancha la tenes que poner justo debajo de la caracola o el limón",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 68
+      }
+    },
+    {
+      "start": 8.66,
+      "end": 11.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Muy cerca, muy lejos",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 20
+      }
+    },
+    {
+      "start": 11.88,
+      "end": 22.62,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Fijate que la parte más baja de la plancha está justo encima, ponle a 2 milímetros de la cabeza de la ballena",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 109
+      }
+    },
+    {
+      "start": 22.62,
+      "end": 24.07,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La parte más alta de la ballena",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 31
+      }
+    },
+    {
+      "start": 25.28,
+      "end": 29.32,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y que sería la parte celeste estaría más cerca del ovriz o el cable?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 68
+      }
+    },
+    {
+      "start": 31.1,
+      "end": 43.42,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, me dijiste que la parte más baja de la plancha está encima de la parte más alta de la ballena",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 100
+      }
+    },
+    {
+      "start": 43.42,
+      "end": 45.32,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ah, ya lo entendí",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 17
+      }
+    },
+    {
+      "start": 45.32,
+      "end": 48.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y el cable queda encima de la sirena",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 36
+      }
+    }
+  ]
+}

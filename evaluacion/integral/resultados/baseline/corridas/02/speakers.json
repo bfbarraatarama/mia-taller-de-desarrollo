@@ -1,0 +1,17 @@
+{
+  "SPEAKER_00": {
+    "name": "marta",
+    "clip_start": 162.158,
+    "clip_end": 177.158
+  },
+  "SPEAKER_01": {
+    "name": "fredy",
+    "clip_start": 286.67,
+    "clip_end": 295.023
+  },
+  "SPEAKER_02": {
+    "name": "juan",
+    "clip_start": 103.728,
+    "clip_end": 110.495
+  }
+}

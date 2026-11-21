@@ -3,7 +3,8 @@
 Cada salida se valida con el validador de su etapa, sin cargar modelos:
 - diarización: `validar_diarizacion` de `src/diarizacion/contrato.py`;
 - transcripción: `validate_asr_contract` de `src/stt/contrato.py`;
-- asociación: `validar_transcripcion` de `src/asociacion/contrato.py` y la lectura de la Etapa 5 (`leer_transcripcion`);
+- asociación: `validar_transcripcion` de `src/asociacion/contrato.py` contra el ASR normalizado (cobertura
+  literal del texto, #19) y la lectura de la Etapa 5 (`leer_transcripcion`);
 - minutas: las secciones exigidas por la configuración, el modelo de `src/minutas/contratos.py` para ellas y
   `validar_evidencias`.
 Una salida que falta se informa como faltante, no como violación.
@@ -61,11 +62,16 @@ def _violaciones(modulo: str, elemento: dict, datos: Path, inferencia: Path,
 
         return "diarization.json", validar_diarizacion(_leer(carpeta / "diarization.json"), duracion)
     if modulo == "asociacion":
-        from src.asociacion.contrato import validar_transcripcion
+        from src.asociacion.contrato import validar_asr, validar_transcripcion
+        from src.asociacion.errores import AsociacionError
         from src.minutas.entrada import leer_transcripcion
 
         etiquetas = {s["speaker"] for s in _leer(carpeta / "diarization.json")["segments"]}
-        reglas = validar_transcripcion(_leer(carpeta / "transcription.json"), duracion, etiquetas)
+        try:  # el ASR normalizado como lo recibe la asociación (#19: preservación textual)
+            asr, _ = validar_asr(_leer(carpeta / "asr.json"), duracion)
+        except AsociacionError as e:
+            return "transcription.json", [f"asr.json no se puede normalizar: {e}"]
+        reglas = validar_transcripcion(_leer(carpeta / "transcription.json"), duracion, etiquetas, asr=asr)
         try:
             leer_transcripcion(carpeta / "transcription.json")
         except Exception as e:  # la Etapa 5 no puede leerla

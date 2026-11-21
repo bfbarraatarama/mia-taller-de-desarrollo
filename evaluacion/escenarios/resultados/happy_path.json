@@ -1,0 +1,88 @@
+{
+  "escenario": "happy path",
+  "entrada": {
+    "reunion": "OSM LatAm 2022-07-30, fragmento de 339 s (muestra del #14)",
+    "audio_reproducido_sha256": "c9377dd2c5ccba00a9767622e4943bd6b56933acef027ab348fc6968067e2201",
+    "como": "reproducido con pw-play por la salida de audio del sistema y grabado con src.captura.captura (modo automático PipeWire/JACK) en un directorio elegido"
+  },
+  "grabacion": {
+    "directorio": "evaluacion/escenarios/corridas/happy-path/grabaciones (local, no versionado)",
+    "archivo": "2026_11_17_14_50_51.wav",
+    "sha256": "68de3880de64245bd9f61c62c4552b8b26b0b973d594e6cd3dda17af6242e199",
+    "estado": "completa",
+    "duracion_s": 350.043,
+    "reproduccion": {
+      "inicio": "14:50:53",
+      "fin": "14:56:32"
+    },
+    "fuentes_rms_dbfs": {
+      "mic": "-inf",
+      "sistema": -30.9
+    },
+    "pruebas": {
+      "ambas fuentes registran señal": "FALLA",
+      "sin pérdidas": "OK",
+      "sin desincronización": "OK",
+      "salida procesable (mono, 16 kHz, PCM 16)": "OK"
+    },
+    "microfono": "−∞ dBFS (muestras en cero) durante los 350 s. El operador declara que la grabación se hizo en un lugar muy silencioso y sin habla local. La reunión entró por el audio del sistema. La prueba «ambas fuentes registran señal» queda en FALLA por el micrófono; no afecta el contenido procesado."
+  },
+  "proceso": {
+    "estado": "completado",
+    "latencia_activa_s": 215.354,
+    "etapas_s": {
+      "preparar": 0.221,
+      "diarizar": 33.937,
+      "transcribir": 58.541,
+      "asociar": 0.039,
+      "minuta": 122.491
+    },
+    "hablantes": 3,
+    "intervenciones": 49,
+    "minuta": {
+      "resumen": 1,
+      "temas": 2,
+      "decisiones": 1,
+      "problemas": 2,
+      "acciones": 3
+    },
+    "fichas": "no se abren por línea de comandos: el avance por etapa y las fichas se comprueban en la interfaz (protocolo)"
+  },
+  "comparacion_wav_directo": {
+    "corrida": "#14, corrida 01 (WAV directo)",
+    "hablantes": 3,
+    "intervenciones": 52
+  },
+  "comprobaciones": [
+    {
+      "comprobacion": "Guarda la grabación en el directorio elegido",
+      "resultado": "sí",
+      "evidencia": "2026_11_17_14_50_51.wav, estado «completa», 350.043 s"
+    },
+    {
+      "comprobacion": "Procesa la grabación y deja transcripción y minuta",
+      "resultado": "sí",
+      "evidencia": "pipeline completado en 215.354 s"
+    },
+    {
+      "comprobacion": "Varios archivos en orden: una sola transcripción y una sola minuta",
+      "resultado": "sí",
+      "evidencia": "#14, corridas 02 y 04 (tres cortes en orden)"
+    },
+    {
+      "comprobacion": "Recupera los 2 temas y la acción sin inventar, en las corridas 01 y 02 del #14 (WAV directo)",
+      "resultado": "no",
+      "evidencia": "calidad.md del #14: ninguna de las dos modalidades cumple (1/2 temas en ambas; acción 0/1 y 1/1; 2 y 1 acciones inventadas)"
+    },
+    {
+      "comprobacion": "Recupera los 2 temas y la acción sin inventar, en esta grabación",
+      "resultado": "no evaluada",
+      "evidencia": "sin evaluación independiente de su minuta"
+    },
+    {
+      "comprobacion": "Avance de cada etapa y fichas con fragmento y texto",
+      "resultado": "manual",
+      "evidencia": "protocolo del tercero"
+    }
+  ]
+}

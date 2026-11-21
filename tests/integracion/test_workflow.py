@@ -206,6 +206,19 @@ def test_exclusion_por_reunion_incluso_en_el_mismo_proceso(tmp_path):
     assert len(list((tmp_path / 'ejecucion').glob('.workflow.lock'))) == 1
 
 
+def test_error_real_de_permisos_no_se_convierte_en_reunion_ocupada(tmp_path, monkeypatch):
+    """Un PermissionError al abrir el archivo de bloqueo (ACL) se propaga sin convertirse en ReunionOcupada."""
+    _original = Path.open
+    def _abrir_denegado(self, *args, **kwargs):
+        if self.name == '.workflow.lock':
+            raise PermissionError(13, 'Permiso denegado (simulado)')
+        return _original(self, *args, **kwargs)
+    monkeypatch.setattr(Path, 'open', _abrir_denegado)
+    with pytest.raises(PermissionError):
+        with ejecucion._exclusivo(tmp_path / 'acl'):
+            pass
+
+
 def test_clave_remota_de_ollama_requiere_consentimiento(monkeypatch):
     from src.pipeline.ejecucion import _consentimiento
     monkeypatch.setenv('OLLAMA_HOST', 'http://modelo.red:11434')
@@ -999,7 +1012,7 @@ def test_visor_lee_solo_resultados_vigentes_y_sin_escritor(tmp_path, modelos_fal
     from src.pipeline.ejecucion import ReunionOcupada, _exclusivo
     s = solicitud(tmp_path)
     procesar_reunion(s)
-    assert leer_resultado_texto(s.salida, 'minutes.md') == (s.salida / 'minutes.md').read_text()
+    assert leer_resultado_texto(s.salida, 'minutes.md') == (s.salida / 'minutes.md').read_text(encoding='utf-8')
     assert leer_resultado_texto(s.salida, 'transcription.json') == (s.salida / 'transcription.json').read_text()
     with _exclusivo(s.salida):
         with pytest.raises(ReunionOcupada):
@@ -1190,7 +1203,7 @@ def test_preservacion_textual_en_workflow_y_reutilizacion(tmp_path, modelos_fals
     assert datos[0]['timing'] == 'segment' and datos[0]['name'] == 'Ana'
     assert datos[0]['speakers_detected'] == [{'speaker': 'SPEAKER_00', 'name': 'Ana'}]
     assert datos[1]['timing'] == 'unknown'
-    assert 'falta de ubicación temporal' in (s.salida / 'minutes.md').read_text()
+    assert 'falta de ubicación temporal' in (s.salida / 'minutes.md').read_text(encoding='utf-8')
     inicial = instantanea(s.salida, ('audio.wav', 'diarization.json', 'asr.json', 'transcription.json', 'minutes.md'))
     assert continuar_reunion(s.salida)['estado'] == 'completado'
     assert tuple(modelos_falsos.values()) == (1, 1, 1)

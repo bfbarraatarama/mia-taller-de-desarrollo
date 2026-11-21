@@ -1,0 +1,27 @@
+{
+  "resumen": "La reunión se centró en la revisión de un diseño gráfico, específicamente sobre el posicionamiento de elementos en una imagen. Se discutió la ubicación del lóbulo y el mimo en relación con el león amarillo.",
+  "temas": [
+    {
+      "texto": "Posicionamiento del lóbulo y el mimo en relación con el león amarillo.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003"
+      ],
+      "id_ancla": "I000003"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "La ubicación precisa del lóbulo y el mimo en la imagen.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003"
+      ],
+      "id_ancla": "I000003"
+    }
+  ],
+  "acciones": []
+}

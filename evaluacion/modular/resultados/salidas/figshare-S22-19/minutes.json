@@ -1,0 +1,43 @@
+{
+  "resumen": "Los hablantes discuten sobre la posición de una víbora en un diagrama, describiendo su ubicación relativa a las lunas y líneas amarillas. Al final, se confirma que la descripción es correcta.",
+  "temas": [
+    {
+      "texto": "La posición de la víbora en el diagrama.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019"
+      ],
+      "id_ancla": "I000019"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [],
+  "acciones": [
+    {
+      "texto": "Confirmar la descripción de la posición de la víbora.",
+      "ids_intervenciones": [
+        "I000019"
+      ],
+      "id_ancla": "I000019",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

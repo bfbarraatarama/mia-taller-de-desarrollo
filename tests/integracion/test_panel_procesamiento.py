@@ -24,7 +24,19 @@ from .test_workflow import modelos_falsos, solicitud, destino_controlado, instan
 
 @pytest.fixture(scope='module')
 def app():
-    return QtWidgets.QApplication.instance() or QtWidgets.QApplication([])
+    app = QtWidgets.QApplication.instance() or QtWidgets.QApplication([])
+    if os.name == 'nt':
+        # La plataforma offscreen no carga fuentes del sistema en Windows:
+        # 'Segoe UI' cae en un fallback monoespaciado ~2.2× más ancho que el font
+        # real, lo que infla minimumSizeHint y rompe las pruebas de orientación.
+        import pathlib
+        from PySide6.QtGui import QFontDatabase
+        fonts = pathlib.Path(r'C:\Windows\Fonts')
+        for nombre in ('segoeui.ttf', 'segoeuisl.ttf', 'seguisb.ttf'):
+            p = fonts / nombre
+            if p.exists():
+                QFontDatabase.addApplicationFont(str(p))
+    return app
 
 
 @pytest.fixture

@@ -1,0 +1,561 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.84,
+      "text": "bueno vas a tener que agarrar el gusanito y ponerlo arriba de las dos lunas",
+      "words": [
+        {
+          "word": "bueno",
+          "start": 0.0,
+          "end": 0.96
+        },
+        {
+          "word": "vas",
+          "start": 0.96,
+          "end": 1.18
+        },
+        {
+          "word": "a",
+          "start": 1.18,
+          "end": 1.3
+        },
+        {
+          "word": "tener",
+          "start": 1.3,
+          "end": 1.5
+        },
+        {
+          "word": "que",
+          "start": 1.5,
+          "end": 1.74
+        },
+        {
+          "word": "agarrar",
+          "start": 1.74,
+          "end": 2.12
+        },
+        {
+          "word": "el",
+          "start": 2.12,
+          "end": 2.54
+        },
+        {
+          "word": "gusanito",
+          "start": 2.54,
+          "end": 3.58
+        },
+        {
+          "word": "y",
+          "start": 3.58,
+          "end": 4.28
+        },
+        {
+          "word": "ponerlo",
+          "start": 4.28,
+          "end": 4.82
+        },
+        {
+          "word": "arriba",
+          "start": 4.82,
+          "end": 5.06
+        },
+        {
+          "word": "de",
+          "start": 5.06,
+          "end": 5.24
+        },
+        {
+          "word": "las",
+          "start": 5.24,
+          "end": 5.4
+        },
+        {
+          "word": "dos",
+          "start": 5.4,
+          "end": 5.58
+        },
+        {
+          "word": "lunas",
+          "start": 5.58,
+          "end": 5.84
+        }
+      ]
+    },
+    {
+      "start": 6.54,
+      "end": 11.98,
+      "text": "o sea como tocando digamos las puntas de las lunas justo en el medio no no o sea",
+      "words": [
+        {
+          "word": "o",
+          "start": 6.54,
+          "end": 6.68
+        },
+        {
+          "word": "sea",
+          "start": 6.68,
+          "end": 6.82
+        },
+        {
+          "word": "como",
+          "start": 6.82,
+          "end": 7.1
+        },
+        {
+          "word": "tocando",
+          "start": 7.1,
+          "end": 7.68
+        },
+        {
+          "word": "digamos",
+          "start": 7.68,
+          "end": 8.02
+        },
+        {
+          "word": "las",
+          "start": 8.02,
+          "end": 8.22
+        },
+        {
+          "word": "puntas",
+          "start": 8.22,
+          "end": 8.48
+        },
+        {
+          "word": "de",
+          "start": 8.48,
+          "end": 8.58
+        },
+        {
+          "word": "las",
+          "start": 8.58,
+          "end": 8.7
+        },
+        {
+          "word": "lunas",
+          "start": 8.7,
+          "end": 9.46
+        },
+        {
+          "word": "justo",
+          "start": 9.46,
+          "end": 10.0
+        },
+        {
+          "word": "en",
+          "start": 10.0,
+          "end": 10.18
+        },
+        {
+          "word": "el",
+          "start": 10.18,
+          "end": 10.34
+        },
+        {
+          "word": "medio",
+          "start": 10.34,
+          "end": 10.7
+        },
+        {
+          "word": "no",
+          "start": 10.7,
+          "end": 11.16
+        },
+        {
+          "word": "no",
+          "start": 11.16,
+          "end": 11.68
+        },
+        {
+          "word": "o",
+          "start": 11.68,
+          "end": 11.84
+        },
+        {
+          "word": "sea",
+          "start": 11.84,
+          "end": 11.98
+        }
+      ]
+    },
+    {
+      "start": 11.98,
+      "end": 17.04,
+      "text": "digo la parte de arriba como si fuera un piso viste?",
+      "words": [
+        {
+          "word": "digo",
+          "start": 11.98,
+          "end": 12.22
+        },
+        {
+          "word": "la",
+          "start": 12.22,
+          "end": 12.46
+        },
+        {
+          "word": "parte",
+          "start": 12.46,
+          "end": 12.78
+        },
+        {
+          "word": "de",
+          "start": 12.78,
+          "end": 13.5
+        },
+        {
+          "word": "arriba",
+          "start": 13.5,
+          "end": 13.7
+        },
+        {
+          "word": "como",
+          "start": 13.7,
+          "end": 13.96
+        },
+        {
+          "word": "si",
+          "start": 13.96,
+          "end": 14.14
+        },
+        {
+          "word": "fuera",
+          "start": 14.14,
+          "end": 14.28
+        },
+        {
+          "word": "un",
+          "start": 14.28,
+          "end": 14.48
+        },
+        {
+          "word": "piso",
+          "start": 14.48,
+          "end": 14.96
+        },
+        {
+          "word": "viste?",
+          "start": 14.96,
+          "end": 17.04
+        }
+      ]
+    },
+    {
+      "start": 17.28,
+      "end": 20.36,
+      "text": "o sea que lo negro quede tocando la mitad de las dos",
+      "words": [
+        {
+          "word": "o",
+          "start": 17.28,
+          "end": 17.3
+        },
+        {
+          "word": "sea",
+          "start": 17.3,
+          "end": 17.42
+        },
+        {
+          "word": "que",
+          "start": 17.42,
+          "end": 17.54
+        },
+        {
+          "word": "lo",
+          "start": 17.54,
+          "end": 17.7
+        },
+        {
+          "word": "negro",
+          "start": 17.7,
+          "end": 17.88
+        },
+        {
+          "word": "quede",
+          "start": 17.88,
+          "end": 18.16
+        },
+        {
+          "word": "tocando",
+          "start": 18.16,
+          "end": 18.66
+        },
+        {
+          "word": "la",
+          "start": 18.66,
+          "end": 18.88
+        },
+        {
+          "word": "mitad",
+          "start": 18.88,
+          "end": 19.16
+        },
+        {
+          "word": "de",
+          "start": 19.16,
+          "end": 19.32
+        },
+        {
+          "word": "las",
+          "start": 19.32,
+          "end": 19.52
+        },
+        {
+          "word": "dos",
+          "start": 19.52,
+          "end": 20.36
+        }
+      ]
+    },
+    {
+      "start": 21.52,
+      "end": 26.26,
+      "text": "está justo debajo del telar o sea si está justo debajo",
+      "words": [
+        {
+          "word": "está",
+          "start": 21.52,
+          "end": 22.26
+        },
+        {
+          "word": "justo",
+          "start": 22.26,
+          "end": 22.64
+        },
+        {
+          "word": "debajo",
+          "start": 22.64,
+          "end": 22.94
+        },
+        {
+          "word": "del",
+          "start": 22.94,
+          "end": 23.08
+        },
+        {
+          "word": "telar",
+          "start": 23.08,
+          "end": 23.46
+        },
+        {
+          "word": "sea",
+          "start": 23.46,
+          "end": 24.14
+        },
+        {
+          "word": "si",
+          "start": 24.14,
+          "end": 24.4
+        },
+        {
+          "word": "está",
+          "start": 24.4,
+          "end": 24.56
+        },
+        {
+          "word": "justo",
+          "start": 24.56,
+          "end": 24.88
+        },
+        {
+          "word": "debajo",
+          "start": 24.88,
+          "end": 26.26
+        }
+      ]
+    },
+    {
+      "start": 26.26,
+      "end": 34.84,
+      "text": "si ponle viste la mano el dedo ese? bueno si vos vas bajando",
+      "words": [
+        {
+          "word": "si",
+          "start": 26.26,
+          "end": 27.24
+        },
+        {
+          "word": "ponle",
+          "start": 27.24,
+          "end": 28.68
+        },
+        {
+          "word": "viste",
+          "start": 28.68,
+          "end": 29.82
+        },
+        {
+          "word": "la",
+          "start": 29.82,
+          "end": 30.0
+        },
+        {
+          "word": "mano",
+          "start": 30.0,
+          "end": 30.58
+        },
+        {
+          "word": "el",
+          "start": 30.58,
+          "end": 31.22
+        },
+        {
+          "word": "dedo",
+          "start": 31.22,
+          "end": 31.66
+        },
+        {
+          "word": "ese?",
+          "start": 31.66,
+          "end": 32.16
+        },
+        {
+          "word": "bueno",
+          "start": 32.5,
+          "end": 32.64
+        },
+        {
+          "word": "si",
+          "start": 32.64,
+          "end": 33.0
+        },
+        {
+          "word": "vos",
+          "start": 33.0,
+          "end": 33.2
+        },
+        {
+          "word": "vas",
+          "start": 33.2,
+          "end": 33.36
+        },
+        {
+          "word": "bajando",
+          "start": 33.36,
+          "end": 34.84
+        }
+      ]
+    },
+    {
+      "start": 34.84,
+      "end": 42.04,
+      "text": "la punta del dedo? si bueno justamente es como que choca contra la cara digamos",
+      "words": [
+        {
+          "word": "la",
+          "start": 34.84,
+          "end": 35.22
+        },
+        {
+          "word": "punta",
+          "start": 35.22,
+          "end": 35.54
+        },
+        {
+          "word": "del",
+          "start": 35.54,
+          "end": 35.7
+        },
+        {
+          "word": "dedo?",
+          "start": 35.7,
+          "end": 36.38
+        },
+        {
+          "word": "si",
+          "start": 36.68,
+          "end": 36.86
+        },
+        {
+          "word": "bueno",
+          "start": 36.86,
+          "end": 37.36
+        },
+        {
+          "word": "justamente",
+          "start": 37.36,
+          "end": 38.06
+        },
+        {
+          "word": "es",
+          "start": 38.06,
+          "end": 38.54
+        },
+        {
+          "word": "como",
+          "start": 38.54,
+          "end": 38.68
+        },
+        {
+          "word": "que",
+          "start": 38.68,
+          "end": 38.96
+        },
+        {
+          "word": "choca",
+          "start": 38.96,
+          "end": 39.2
+        },
+        {
+          "word": "contra",
+          "start": 39.2,
+          "end": 39.92
+        },
+        {
+          "word": "la",
+          "start": 39.92,
+          "end": 40.34
+        },
+        {
+          "word": "cara",
+          "start": 40.34,
+          "end": 40.56
+        },
+        {
+          "word": "digamos",
+          "start": 40.56,
+          "end": 42.04
+        }
+      ]
+    },
+    {
+      "start": 42.04,
+      "end": 44.3,
+      "text": "contra la parte que más sobresale",
+      "words": [
+        {
+          "word": "contra",
+          "start": 42.04,
+          "end": 42.96
+        },
+        {
+          "word": "la",
+          "start": 42.96,
+          "end": 43.12
+        },
+        {
+          "word": "parte",
+          "start": 43.12,
+          "end": 43.28
+        },
+        {
+          "word": "que",
+          "start": 43.28,
+          "end": 43.46
+        },
+        {
+          "word": "más",
+          "start": 43.46,
+          "end": 43.6
+        },
+        {
+          "word": "sobresale",
+          "start": 43.6,
+          "end": 44.3
+        }
+      ]
+    }
+  ]
+}

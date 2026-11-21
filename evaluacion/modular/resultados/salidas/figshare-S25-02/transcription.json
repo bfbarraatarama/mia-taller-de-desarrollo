@@ -1,0 +1,204 @@
+{
+  "segments": [
+    {
+      "start": 0.78,
+      "end": 4.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, ganamos 34 centavos, tranqui.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 36
+      }
+    },
+    {
+      "start": 6.0,
+      "end": 6.86,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Cómo es la movida?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 19
+      }
+    },
+    {
+      "start": 7.58,
+      "end": 9.68,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Hay algo que es como una podadora de césped.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 44
+      }
+    },
+    {
+      "start": 10.8,
+      "end": 15.14,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, eso tiene que ir a media distancia entre los dos leones.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 63
+      }
+    },
+    {
+      "start": 16.04,
+      "end": 17.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿Y el eje vertical?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 19
+      }
+    },
+    {
+      "start": 17.6,
+      "end": 18.34,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí, sí, sí.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 11
+      }
+    },
+    {
+      "start": 18.98,
+      "end": 20.44,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Como la altura de los...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 24
+      }
+    },
+    {
+      "start": null,
+      "end": null,
+      "speaker": null,
+      "name": null,
+      "text": "¿Hay igual distancia entre un león y el otro?",
+      "overlap": null,
+      "ambiguous": true,
+      "timing": "unknown",
+      "speakers_detected": null,
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 45
+      }
+    },
+    {
+      "start": 24.12,
+      "end": 24.68,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Más o menos.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 12
+      }
+    }
+  ]
+}

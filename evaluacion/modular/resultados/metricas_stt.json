@@ -1,0 +1,1302 @@
+{
+  "normalizacion": "minúsculas; puntuación y símbolos reemplazados por espacios; tildes conservadas. Figshare: sin etiquetas <…>, sin palabras cortadas («palabra-») y sin tokens sin letras, contados en `excluidos`",
+  "agregado": "suma de errores sobre suma de palabras (micro)",
+  "por_fuente": {
+    "common_voice": {
+      "archivos": 2,
+      "sustituciones": 0,
+      "inserciones": 0,
+      "borrados": 0,
+      "palabras_referencia": 9,
+      "palabras_hipotesis": 9,
+      "errores_caracteres": 0,
+      "caracteres_referencia": 44,
+      "wer": 0.0,
+      "cer": 0.0
+    },
+    "openslr": {
+      "archivos": 3,
+      "sustituciones": 2,
+      "inserciones": 0,
+      "borrados": 0,
+      "palabras_referencia": 22,
+      "palabras_hipotesis": 22,
+      "errores_caracteres": 5,
+      "caracteres_referencia": 119,
+      "wer": 0.09090909090909091,
+      "cer": 0.04201680672268908
+    },
+    "figshare": {
+      "archivos": 74,
+      "sustituciones": 727,
+      "inserciones": 78,
+      "borrados": 2735,
+      "palabras_referencia": 13125,
+      "palabras_hipotesis": 10468,
+      "errores_caracteres": 12654,
+      "caracteres_referencia": 62933,
+      "excluidos": {
+        "etiquetas": 62,
+        "fragmentos": 283,
+        "sin_letras": 53
+      },
+      "wer": 0.26971428571428574,
+      "cer": 0.20107098024883607
+    }
+  },
+  "total": {
+    "sustituciones": 729,
+    "inserciones": 78,
+    "borrados": 2735,
+    "palabras_referencia": 13156,
+    "palabras_hipotesis": 10499,
+    "errores_caracteres": 12659,
+    "caracteres_referencia": 63096,
+    "wer": 0.2692307692307692,
+    "cer": 0.20063078483580576
+  },
+  "por_archivo": {
+    "clip-common_voice-common_voice_es_19635568": {
+      "sustituciones": 0,
+      "inserciones": 0,
+      "borrados": 0,
+      "palabras_referencia": 7,
+      "palabras_hipotesis": 7,
+      "errores_caracteres": 0,
+      "caracteres_referencia": 30,
+      "wer": 0.0,
+      "cer": 0.0
+    },
+    "clip-common_voice-common_voice_es_38141239": {
+      "sustituciones": 0,
+      "inserciones": 0,
+      "borrados": 0,
+      "palabras_referencia": 2,
+      "palabras_hipotesis": 2,
+      "errores_caracteres": 0,
+      "caracteres_referencia": 14,
+      "wer": 0.0,
+      "cer": 0.0
+    },
+    "clip-openslr-arf_01208_01340718114": {
+      "sustituciones": 0,
+      "inserciones": 0,
+      "borrados": 0,
+      "palabras_referencia": 9,
+      "palabras_hipotesis": 9,
+      "errores_caracteres": 0,
+      "caracteres_referencia": 47,
+      "wer": 0.0,
+      "cer": 0.0
+    },
+    "clip-openslr-arf_03398_01736798627": {
+      "sustituciones": 1,
+      "inserciones": 0,
+      "borrados": 0,
+      "palabras_referencia": 5,
+      "palabras_hipotesis": 5,
+      "errores_caracteres": 4,
+      "caracteres_referencia": 25,
+      "wer": 0.2,
+      "cer": 0.16
+    },
+    "clip-openslr-arm_03397_00908571298": {
+      "sustituciones": 1,
+      "inserciones": 0,
+      "borrados": 0,
+      "palabras_referencia": 8,
+      "palabras_hipotesis": 8,
+      "errores_caracteres": 1,
+      "caracteres_referencia": 47,
+      "wer": 0.125,
+      "cer": 0.02127659574468085
+    },
+    "figshare-S22-01": {
+      "sustituciones": 5,
+      "inserciones": 0,
+      "borrados": 21,
+      "palabras_referencia": 130,
+      "palabras_hipotesis": 109,
+      "errores_caracteres": 82,
+      "caracteres_referencia": 605,
+      "wer": 0.2,
+      "cer": 0.13553719008264462,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 2,
+        "sin_letras": 2
+      }
+    },
+    "figshare-S22-02": {
+      "sustituciones": 3,
+      "inserciones": 1,
+      "borrados": 49,
+      "palabras_referencia": 241,
+      "palabras_hipotesis": 193,
+      "errores_caracteres": 213,
+      "caracteres_referencia": 1187,
+      "wer": 0.21991701244813278,
+      "cer": 0.17944397641112048,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 5,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S22-03": {
+      "sustituciones": 1,
+      "inserciones": 0,
+      "borrados": 2,
+      "palabras_referencia": 37,
+      "palabras_hipotesis": 35,
+      "errores_caracteres": 11,
+      "caracteres_referencia": 195,
+      "wer": 0.08108108108108109,
+      "cer": 0.05641025641025641,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 1,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S22-04": {
+      "sustituciones": 11,
+      "inserciones": 0,
+      "borrados": 36,
+      "palabras_referencia": 302,
+      "palabras_hipotesis": 266,
+      "errores_caracteres": 166,
+      "caracteres_referencia": 1471,
+      "wer": 0.15562913907284767,
+      "cer": 0.11284840244731476,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 11,
+        "sin_letras": 3
+      }
+    },
+    "figshare-S22-05": {
+      "sustituciones": 2,
+      "inserciones": 2,
+      "borrados": 11,
+      "palabras_referencia": 59,
+      "palabras_hipotesis": 50,
+      "errores_caracteres": 65,
+      "caracteres_referencia": 297,
+      "wer": 0.2542372881355932,
+      "cer": 0.21885521885521886,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 3,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S22-06": {
+      "sustituciones": 8,
+      "inserciones": 0,
+      "borrados": 11,
+      "palabras_referencia": 72,
+      "palabras_hipotesis": 61,
+      "errores_caracteres": 54,
+      "caracteres_referencia": 352,
+      "wer": 0.2638888888888889,
+      "cer": 0.1534090909090909,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 5,
+        "sin_letras": 2
+      }
+    },
+    "figshare-S22-07": {
+      "sustituciones": 7,
+      "inserciones": 1,
+      "borrados": 19,
+      "palabras_referencia": 72,
+      "palabras_hipotesis": 54,
+      "errores_caracteres": 93,
+      "caracteres_referencia": 350,
+      "wer": 0.375,
+      "cer": 0.26571428571428574,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 2,
+        "sin_letras": 4
+      }
+    },
+    "figshare-S22-08": {
+      "sustituciones": 12,
+      "inserciones": 0,
+      "borrados": 27,
+      "palabras_referencia": 118,
+      "palabras_hipotesis": 91,
+      "errores_caracteres": 124,
+      "caracteres_referencia": 550,
+      "wer": 0.3305084745762712,
+      "cer": 0.22545454545454546,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 2,
+        "sin_letras": 3
+      }
+    },
+    "figshare-S22-09": {
+      "sustituciones": 21,
+      "inserciones": 0,
+      "borrados": 74,
+      "palabras_referencia": 412,
+      "palabras_hipotesis": 338,
+      "errores_caracteres": 328,
+      "caracteres_referencia": 1954,
+      "wer": 0.23058252427184467,
+      "cer": 0.16786079836233367,
+      "excluidos": {
+        "etiquetas": 3,
+        "fragmentos": 12,
+        "sin_letras": 1
+      }
+    },
+    "figshare-S22-10": {
+      "sustituciones": 7,
+      "inserciones": 3,
+      "borrados": 11,
+      "palabras_referencia": 123,
+      "palabras_hipotesis": 115,
+      "errores_caracteres": 52,
+      "caracteres_referencia": 562,
+      "wer": 0.17073170731707318,
+      "cer": 0.09252669039145907,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 2,
+        "sin_letras": 2
+      }
+    },
+    "figshare-S22-11": {
+      "sustituciones": 2,
+      "inserciones": 0,
+      "borrados": 7,
+      "palabras_referencia": 76,
+      "palabras_hipotesis": 69,
+      "errores_caracteres": 31,
+      "caracteres_referencia": 361,
+      "wer": 0.11842105263157894,
+      "cer": 0.08587257617728532,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 3,
+        "sin_letras": 1
+      }
+    },
+    "figshare-S22-12": {
+      "sustituciones": 15,
+      "inserciones": 0,
+      "borrados": 34,
+      "palabras_referencia": 195,
+      "palabras_hipotesis": 161,
+      "errores_caracteres": 155,
+      "caracteres_referencia": 909,
+      "wer": 0.2512820512820513,
+      "cer": 0.1705170517051705,
+      "excluidos": {
+        "etiquetas": 2,
+        "fragmentos": 9,
+        "sin_letras": 3
+      }
+    },
+    "figshare-S22-13": {
+      "sustituciones": 0,
+      "inserciones": 0,
+      "borrados": 42,
+      "palabras_referencia": 56,
+      "palabras_hipotesis": 14,
+      "errores_caracteres": 206,
+      "caracteres_referencia": 270,
+      "wer": 0.75,
+      "cer": 0.762962962962963,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 5,
+        "sin_letras": 1
+      }
+    },
+    "figshare-S22-14": {
+      "sustituciones": 10,
+      "inserciones": 1,
+      "borrados": 47,
+      "palabras_referencia": 240,
+      "palabras_hipotesis": 194,
+      "errores_caracteres": 209,
+      "caracteres_referencia": 1164,
+      "wer": 0.24166666666666667,
+      "cer": 0.179553264604811,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 4,
+        "sin_letras": 3
+      }
+    },
+    "figshare-S22-15": {
+      "sustituciones": 5,
+      "inserciones": 1,
+      "borrados": 4,
+      "palabras_referencia": 53,
+      "palabras_hipotesis": 50,
+      "errores_caracteres": 20,
+      "caracteres_referencia": 259,
+      "wer": 0.18867924528301888,
+      "cer": 0.07722007722007722,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 0,
+        "sin_letras": 2
+      }
+    },
+    "figshare-S22-16": {
+      "sustituciones": 3,
+      "inserciones": 0,
+      "borrados": 32,
+      "palabras_referencia": 132,
+      "palabras_hipotesis": 100,
+      "errores_caracteres": 135,
+      "caracteres_referencia": 632,
+      "wer": 0.26515151515151514,
+      "cer": 0.21360759493670886,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 2,
+        "sin_letras": 1
+      }
+    },
+    "figshare-S22-17": {
+      "sustituciones": 3,
+      "inserciones": 1,
+      "borrados": 4,
+      "palabras_referencia": 55,
+      "palabras_hipotesis": 52,
+      "errores_caracteres": 19,
+      "caracteres_referencia": 258,
+      "wer": 0.14545454545454545,
+      "cer": 0.07364341085271318,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 1,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S22-18": {
+      "sustituciones": 21,
+      "inserciones": 5,
+      "borrados": 27,
+      "palabras_referencia": 162,
+      "palabras_hipotesis": 140,
+      "errores_caracteres": 169,
+      "caracteres_referencia": 736,
+      "wer": 0.3271604938271605,
+      "cer": 0.2296195652173913,
+      "excluidos": {
+        "etiquetas": 2,
+        "fragmentos": 1,
+        "sin_letras": 1
+      }
+    },
+    "figshare-S22-19": {
+      "sustituciones": 9,
+      "inserciones": 0,
+      "borrados": 13,
+      "palabras_referencia": 141,
+      "palabras_hipotesis": 128,
+      "errores_caracteres": 59,
+      "caracteres_referencia": 660,
+      "wer": 0.15602836879432624,
+      "cer": 0.0893939393939394,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 3,
+        "sin_letras": 2
+      }
+    },
+    "figshare-S22-20": {
+      "sustituciones": 8,
+      "inserciones": 2,
+      "borrados": 41,
+      "palabras_referencia": 266,
+      "palabras_hipotesis": 227,
+      "errores_caracteres": 168,
+      "caracteres_referencia": 1294,
+      "wer": 0.19172932330827067,
+      "cer": 0.12982998454404945,
+      "excluidos": {
+        "etiquetas": 3,
+        "fragmentos": 8,
+        "sin_letras": 5
+      }
+    },
+    "figshare-S23-01": {
+      "sustituciones": 1,
+      "inserciones": 0,
+      "borrados": 16,
+      "palabras_referencia": 78,
+      "palabras_hipotesis": 62,
+      "errores_caracteres": 63,
+      "caracteres_referencia": 379,
+      "wer": 0.21794871794871795,
+      "cer": 0.1662269129287599,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 1,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-02": {
+      "sustituciones": 1,
+      "inserciones": 0,
+      "borrados": 3,
+      "palabras_referencia": 36,
+      "palabras_hipotesis": 33,
+      "errores_caracteres": 13,
+      "caracteres_referencia": 175,
+      "wer": 0.1111111111111111,
+      "cer": 0.07428571428571429,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 0,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-03": {
+      "sustituciones": 5,
+      "inserciones": 1,
+      "borrados": 6,
+      "palabras_referencia": 59,
+      "palabras_hipotesis": 54,
+      "errores_caracteres": 36,
+      "caracteres_referencia": 281,
+      "wer": 0.2033898305084746,
+      "cer": 0.12811387900355872,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 0,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-04": {
+      "sustituciones": 4,
+      "inserciones": 1,
+      "borrados": 6,
+      "palabras_referencia": 54,
+      "palabras_hipotesis": 49,
+      "errores_caracteres": 26,
+      "caracteres_referencia": 284,
+      "wer": 0.2037037037037037,
+      "cer": 0.09154929577464789,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 1,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-05": {
+      "sustituciones": 3,
+      "inserciones": 2,
+      "borrados": 17,
+      "palabras_referencia": 89,
+      "palabras_hipotesis": 74,
+      "errores_caracteres": 80,
+      "caracteres_referencia": 430,
+      "wer": 0.24719101123595505,
+      "cer": 0.18604651162790697,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 0,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-06": {
+      "sustituciones": 3,
+      "inserciones": 3,
+      "borrados": 1,
+      "palabras_referencia": 33,
+      "palabras_hipotesis": 35,
+      "errores_caracteres": 19,
+      "caracteres_referencia": 153,
+      "wer": 0.21212121212121213,
+      "cer": 0.12418300653594772,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 0,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-07": {
+      "sustituciones": 3,
+      "inserciones": 0,
+      "borrados": 5,
+      "palabras_referencia": 38,
+      "palabras_hipotesis": 33,
+      "errores_caracteres": 25,
+      "caracteres_referencia": 185,
+      "wer": 0.21052631578947367,
+      "cer": 0.13513513513513514,
+      "excluidos": {
+        "etiquetas": 2,
+        "fragmentos": 0,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-08": {
+      "sustituciones": 0,
+      "inserciones": 1,
+      "borrados": 3,
+      "palabras_referencia": 28,
+      "palabras_hipotesis": 26,
+      "errores_caracteres": 11,
+      "caracteres_referencia": 125,
+      "wer": 0.14285714285714285,
+      "cer": 0.088,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 0,
+        "sin_letras": 1
+      }
+    },
+    "figshare-S23-09": {
+      "sustituciones": 10,
+      "inserciones": 0,
+      "borrados": 28,
+      "palabras_referencia": 92,
+      "palabras_hipotesis": 64,
+      "errores_caracteres": 115,
+      "caracteres_referencia": 438,
+      "wer": 0.41304347826086957,
+      "cer": 0.2625570776255708,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 0,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-10": {
+      "sustituciones": 2,
+      "inserciones": 1,
+      "borrados": 23,
+      "palabras_referencia": 79,
+      "palabras_hipotesis": 57,
+      "errores_caracteres": 96,
+      "caracteres_referencia": 350,
+      "wer": 0.3291139240506329,
+      "cer": 0.2742857142857143,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 0,
+        "sin_letras": 1
+      }
+    },
+    "figshare-S23-11": {
+      "sustituciones": 2,
+      "inserciones": 0,
+      "borrados": 10,
+      "palabras_referencia": 55,
+      "palabras_hipotesis": 45,
+      "errores_caracteres": 41,
+      "caracteres_referencia": 273,
+      "wer": 0.21818181818181817,
+      "cer": 0.15018315018315018,
+      "excluidos": {
+        "etiquetas": 2,
+        "fragmentos": 0,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-12": {
+      "sustituciones": 6,
+      "inserciones": 1,
+      "borrados": 14,
+      "palabras_referencia": 124,
+      "palabras_hipotesis": 111,
+      "errores_caracteres": 75,
+      "caracteres_referencia": 619,
+      "wer": 0.1693548387096774,
+      "cer": 0.12116316639741519,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 0,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-13": {
+      "sustituciones": 0,
+      "inserciones": 1,
+      "borrados": 18,
+      "palabras_referencia": 64,
+      "palabras_hipotesis": 47,
+      "errores_caracteres": 79,
+      "caracteres_referencia": 293,
+      "wer": 0.296875,
+      "cer": 0.2696245733788396,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 0,
+        "sin_letras": 1
+      }
+    },
+    "figshare-S23-14": {
+      "sustituciones": 12,
+      "inserciones": 0,
+      "borrados": 36,
+      "palabras_referencia": 130,
+      "palabras_hipotesis": 94,
+      "errores_caracteres": 165,
+      "caracteres_referencia": 603,
+      "wer": 0.36923076923076925,
+      "cer": 0.2736318407960199,
+      "excluidos": {
+        "etiquetas": 2,
+        "fragmentos": 1,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-15": {
+      "sustituciones": 7,
+      "inserciones": 0,
+      "borrados": 27,
+      "palabras_referencia": 142,
+      "palabras_hipotesis": 115,
+      "errores_caracteres": 120,
+      "caracteres_referencia": 646,
+      "wer": 0.23943661971830985,
+      "cer": 0.18575851393188855,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 1,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-16": {
+      "sustituciones": 5,
+      "inserciones": 0,
+      "borrados": 8,
+      "palabras_referencia": 78,
+      "palabras_hipotesis": 70,
+      "errores_caracteres": 42,
+      "caracteres_referencia": 372,
+      "wer": 0.16666666666666666,
+      "cer": 0.11290322580645161,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 0,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-17": {
+      "sustituciones": 1,
+      "inserciones": 0,
+      "borrados": 16,
+      "palabras_referencia": 84,
+      "palabras_hipotesis": 68,
+      "errores_caracteres": 67,
+      "caracteres_referencia": 425,
+      "wer": 0.20238095238095238,
+      "cer": 0.15764705882352942,
+      "excluidos": {
+        "etiquetas": 2,
+        "fragmentos": 0,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-18": {
+      "sustituciones": 8,
+      "inserciones": 0,
+      "borrados": 16,
+      "palabras_referencia": 106,
+      "palabras_hipotesis": 90,
+      "errores_caracteres": 87,
+      "caracteres_referencia": 542,
+      "wer": 0.22641509433962265,
+      "cer": 0.16051660516605165,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 2,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-19": {
+      "sustituciones": 4,
+      "inserciones": 0,
+      "borrados": 22,
+      "palabras_referencia": 123,
+      "palabras_hipotesis": 101,
+      "errores_caracteres": 92,
+      "caracteres_referencia": 579,
+      "wer": 0.21138211382113822,
+      "cer": 0.15889464594127806,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 1,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-20": {
+      "sustituciones": 3,
+      "inserciones": 0,
+      "borrados": 16,
+      "palabras_referencia": 109,
+      "palabras_hipotesis": 93,
+      "errores_caracteres": 79,
+      "caracteres_referencia": 545,
+      "wer": 0.1743119266055046,
+      "cer": 0.14495412844036698,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 0,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-21": {
+      "sustituciones": 6,
+      "inserciones": 0,
+      "borrados": 43,
+      "palabras_referencia": 107,
+      "palabras_hipotesis": 64,
+      "errores_caracteres": 175,
+      "caracteres_referencia": 508,
+      "wer": 0.45794392523364486,
+      "cer": 0.34448818897637795,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 1,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-22": {
+      "sustituciones": 11,
+      "inserciones": 0,
+      "borrados": 34,
+      "palabras_referencia": 135,
+      "palabras_hipotesis": 101,
+      "errores_caracteres": 148,
+      "caracteres_referencia": 635,
+      "wer": 0.3333333333333333,
+      "cer": 0.23307086614173228,
+      "excluidos": {
+        "etiquetas": 5,
+        "fragmentos": 1,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-23": {
+      "sustituciones": 14,
+      "inserciones": 1,
+      "borrados": 23,
+      "palabras_referencia": 166,
+      "palabras_hipotesis": 144,
+      "errores_caracteres": 108,
+      "caracteres_referencia": 783,
+      "wer": 0.2289156626506024,
+      "cer": 0.13793103448275862,
+      "excluidos": {
+        "etiquetas": 10,
+        "fragmentos": 0,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S23-24": {
+      "sustituciones": 7,
+      "inserciones": 0,
+      "borrados": 25,
+      "palabras_referencia": 173,
+      "palabras_hipotesis": 148,
+      "errores_caracteres": 105,
+      "caracteres_referencia": 769,
+      "wer": 0.18497109826589594,
+      "cer": 0.13654096228868662,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 1,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-01": {
+      "sustituciones": 12,
+      "inserciones": 3,
+      "borrados": 56,
+      "palabras_referencia": 163,
+      "palabras_hipotesis": 110,
+      "errores_caracteres": 284,
+      "caracteres_referencia": 749,
+      "wer": 0.43558282208588955,
+      "cer": 0.37917222963951935,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 8,
+        "sin_letras": 1
+      }
+    },
+    "figshare-S25-02": {
+      "sustituciones": 2,
+      "inserciones": 1,
+      "borrados": 21,
+      "palabras_referencia": 74,
+      "palabras_hipotesis": 54,
+      "errores_caracteres": 91,
+      "caracteres_referencia": 343,
+      "wer": 0.32432432432432434,
+      "cer": 0.2653061224489796,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 4,
+        "sin_letras": 1
+      }
+    },
+    "figshare-S25-03": {
+      "sustituciones": 9,
+      "inserciones": 0,
+      "borrados": 25,
+      "palabras_referencia": 92,
+      "palabras_hipotesis": 67,
+      "errores_caracteres": 138,
+      "caracteres_referencia": 443,
+      "wer": 0.3695652173913043,
+      "cer": 0.3115124153498871,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 1,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-04": {
+      "sustituciones": 19,
+      "inserciones": 6,
+      "borrados": 32,
+      "palabras_referencia": 277,
+      "palabras_hipotesis": 251,
+      "errores_caracteres": 186,
+      "caracteres_referencia": 1347,
+      "wer": 0.20577617328519857,
+      "cer": 0.13808463251670378,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 6,
+        "sin_letras": 2
+      }
+    },
+    "figshare-S25-05": {
+      "sustituciones": 34,
+      "inserciones": 1,
+      "borrados": 115,
+      "palabras_referencia": 550,
+      "palabras_hipotesis": 436,
+      "errores_caracteres": 528,
+      "caracteres_referencia": 2622,
+      "wer": 0.2727272727272727,
+      "cer": 0.20137299771167047,
+      "excluidos": {
+        "etiquetas": 2,
+        "fragmentos": 12,
+        "sin_letras": 5
+      }
+    },
+    "figshare-S25-06": {
+      "sustituciones": 8,
+      "inserciones": 3,
+      "borrados": 24,
+      "palabras_referencia": 246,
+      "palabras_hipotesis": 225,
+      "errores_caracteres": 118,
+      "caracteres_referencia": 1171,
+      "wer": 0.14227642276422764,
+      "cer": 0.10076857386848848,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 5,
+        "sin_letras": 2
+      }
+    },
+    "figshare-S25-07": {
+      "sustituciones": 4,
+      "inserciones": 0,
+      "borrados": 20,
+      "palabras_referencia": 90,
+      "palabras_hipotesis": 70,
+      "errores_caracteres": 83,
+      "caracteres_referencia": 420,
+      "wer": 0.26666666666666666,
+      "cer": 0.1976190476190476,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 1,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-08": {
+      "sustituciones": 8,
+      "inserciones": 0,
+      "borrados": 17,
+      "palabras_referencia": 206,
+      "palabras_hipotesis": 189,
+      "errores_caracteres": 73,
+      "caracteres_referencia": 962,
+      "wer": 0.12135922330097088,
+      "cer": 0.07588357588357589,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 2,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-09": {
+      "sustituciones": 39,
+      "inserciones": 11,
+      "borrados": 47,
+      "palabras_referencia": 388,
+      "palabras_hipotesis": 352,
+      "errores_caracteres": 314,
+      "caracteres_referencia": 1916,
+      "wer": 0.25,
+      "cer": 0.1638830897703549,
+      "excluidos": {
+        "etiquetas": 2,
+        "fragmentos": 13,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-10": {
+      "sustituciones": 8,
+      "inserciones": 1,
+      "borrados": 84,
+      "palabras_referencia": 304,
+      "palabras_hipotesis": 221,
+      "errores_caracteres": 347,
+      "caracteres_referencia": 1507,
+      "wer": 0.3059210526315789,
+      "cer": 0.23025879230258792,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 6,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-11": {
+      "sustituciones": 9,
+      "inserciones": 2,
+      "borrados": 37,
+      "palabras_referencia": 172,
+      "palabras_hipotesis": 137,
+      "errores_caracteres": 165,
+      "caracteres_referencia": 826,
+      "wer": 0.27906976744186046,
+      "cer": 0.19975786924939468,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 2,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-12": {
+      "sustituciones": 26,
+      "inserciones": 1,
+      "borrados": 239,
+      "palabras_referencia": 820,
+      "palabras_hipotesis": 582,
+      "errores_caracteres": 1079,
+      "caracteres_referencia": 3908,
+      "wer": 0.32439024390243903,
+      "cer": 0.27610030706243605,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 24,
+        "sin_letras": 2
+      }
+    },
+    "figshare-S25-13": {
+      "sustituciones": 2,
+      "inserciones": 0,
+      "borrados": 42,
+      "palabras_referencia": 85,
+      "palabras_hipotesis": 43,
+      "errores_caracteres": 180,
+      "caracteres_referencia": 389,
+      "wer": 0.5176470588235295,
+      "cer": 0.46272493573264784,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 1,
+        "sin_letras": 1
+      }
+    },
+    "figshare-S25-14": {
+      "sustituciones": 7,
+      "inserciones": 0,
+      "borrados": 55,
+      "palabras_referencia": 235,
+      "palabras_hipotesis": 180,
+      "errores_caracteres": 235,
+      "caracteres_referencia": 1141,
+      "wer": 0.26382978723404255,
+      "cer": 0.20595968448729185,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 1,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-15": {
+      "sustituciones": 21,
+      "inserciones": 2,
+      "borrados": 18,
+      "palabras_referencia": 161,
+      "palabras_hipotesis": 145,
+      "errores_caracteres": 97,
+      "caracteres_referencia": 747,
+      "wer": 0.2546583850931677,
+      "cer": 0.12985274431057564,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 6,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-16": {
+      "sustituciones": 19,
+      "inserciones": 1,
+      "borrados": 141,
+      "palabras_referencia": 385,
+      "palabras_hipotesis": 245,
+      "errores_caracteres": 629,
+      "caracteres_referencia": 1846,
+      "wer": 0.41818181818181815,
+      "cer": 0.34073672806067173,
+      "excluidos": {
+        "etiquetas": 4,
+        "fragmentos": 10,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-17": {
+      "sustituciones": 25,
+      "inserciones": 4,
+      "borrados": 17,
+      "palabras_referencia": 128,
+      "palabras_hipotesis": 115,
+      "errores_caracteres": 120,
+      "caracteres_referencia": 630,
+      "wer": 0.359375,
+      "cer": 0.19047619047619047,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 4,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-18": {
+      "sustituciones": 4,
+      "inserciones": 0,
+      "borrados": 25,
+      "palabras_referencia": 179,
+      "palabras_hipotesis": 154,
+      "errores_caracteres": 123,
+      "caracteres_referencia": 900,
+      "wer": 0.16201117318435754,
+      "cer": 0.13666666666666666,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 7,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-19": {
+      "sustituciones": 8,
+      "inserciones": 1,
+      "borrados": 29,
+      "palabras_referencia": 134,
+      "palabras_hipotesis": 106,
+      "errores_caracteres": 148,
+      "caracteres_referencia": 670,
+      "wer": 0.2835820895522388,
+      "cer": 0.2208955223880597,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 4,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-20": {
+      "sustituciones": 18,
+      "inserciones": 0,
+      "borrados": 44,
+      "palabras_referencia": 324,
+      "palabras_hipotesis": 280,
+      "errores_caracteres": 206,
+      "caracteres_referencia": 1507,
+      "wer": 0.19135802469135801,
+      "cer": 0.1366954213669542,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 8,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-21": {
+      "sustituciones": 37,
+      "inserciones": 0,
+      "borrados": 66,
+      "palabras_referencia": 274,
+      "palabras_hipotesis": 208,
+      "errores_caracteres": 341,
+      "caracteres_referencia": 1354,
+      "wer": 0.3759124087591241,
+      "cer": 0.2518463810930576,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 12,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-22": {
+      "sustituciones": 23,
+      "inserciones": 5,
+      "borrados": 65,
+      "palabras_referencia": 329,
+      "palabras_hipotesis": 269,
+      "errores_caracteres": 297,
+      "caracteres_referencia": 1618,
+      "wer": 0.2826747720364742,
+      "cer": 0.18355995055624227,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 14,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-23": {
+      "sustituciones": 14,
+      "inserciones": 0,
+      "borrados": 93,
+      "palabras_referencia": 311,
+      "palabras_hipotesis": 218,
+      "errores_caracteres": 421,
+      "caracteres_referencia": 1471,
+      "wer": 0.3440514469453376,
+      "cer": 0.28619986403806935,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 6,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-24": {
+      "sustituciones": 15,
+      "inserciones": 0,
+      "borrados": 28,
+      "palabras_referencia": 224,
+      "palabras_hipotesis": 196,
+      "errores_caracteres": 130,
+      "caracteres_referencia": 1057,
+      "wer": 0.19196428571428573,
+      "cer": 0.12298959318826869,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 7,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-25": {
+      "sustituciones": 25,
+      "inserciones": 1,
+      "borrados": 19,
+      "palabras_referencia": 143,
+      "palabras_hipotesis": 125,
+      "errores_caracteres": 109,
+      "caracteres_referencia": 667,
+      "wer": 0.3146853146853147,
+      "cer": 0.1634182908545727,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 4,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-26": {
+      "sustituciones": 17,
+      "inserciones": 2,
+      "borrados": 88,
+      "palabras_referencia": 343,
+      "palabras_hipotesis": 257,
+      "errores_caracteres": 403,
+      "caracteres_referencia": 1655,
+      "wer": 0.3119533527696793,
+      "cer": 0.24350453172205438,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 3,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-27": {
+      "sustituciones": 4,
+      "inserciones": 0,
+      "borrados": 64,
+      "palabras_referencia": 178,
+      "palabras_hipotesis": 114,
+      "errores_caracteres": 310,
+      "caracteres_referencia": 879,
+      "wer": 0.38202247191011235,
+      "cer": 0.35267349260523323,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 2,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-28": {
+      "sustituciones": 19,
+      "inserciones": 1,
+      "borrados": 131,
+      "palabras_referencia": 460,
+      "palabras_hipotesis": 330,
+      "errores_caracteres": 605,
+      "caracteres_referencia": 2274,
+      "wer": 0.3282608695652174,
+      "cer": 0.26605101143359716,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 8,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-29": {
+      "sustituciones": 15,
+      "inserciones": 2,
+      "borrados": 105,
+      "palabras_referencia": 395,
+      "palabras_hipotesis": 292,
+      "errores_caracteres": 440,
+      "caracteres_referencia": 1908,
+      "wer": 0.30886075949367087,
+      "cer": 0.23060796645702306,
+      "excluidos": {
+        "etiquetas": 0,
+        "fragmentos": 6,
+        "sin_letras": 0
+      }
+    },
+    "figshare-S25-30": {
+      "sustituciones": 5,
+      "inserciones": 1,
+      "borrados": 60,
+      "palabras_referencia": 331,
+      "palabras_hipotesis": 272,
+      "errores_caracteres": 228,
+      "caracteres_referencia": 1548,
+      "wer": 0.19939577039274925,
+      "cer": 0.14728682170542637,
+      "excluidos": {
+        "etiquetas": 1,
+        "fragmentos": 5,
+        "sin_letras": 0
+      }
+    }
+  },
+  "faltantes": [],
+  "sin_referencia": [],
+  "contenido_sha256_muestra": "68b317117c84676f835d58473e8a9c82aa94cefb87d26f6cde487a919416b456"
+}

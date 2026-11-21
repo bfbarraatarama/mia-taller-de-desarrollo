@@ -1,0 +1,669 @@
+{
+  "segments": [
+    {
+      "start": 1.8,
+      "end": 10.82,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "el rinoceronte amarillo, ponelo en el medio entre la fruta, la oreo y el",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 72
+      }
+    },
+    {
+      "start": 10.82,
+      "end": 12.12,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "cuadro",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 73,
+        "end": 79
+      }
+    },
+    {
+      "start": 12.12,
+      "end": 15.1,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Exactamente, digamos, el de queber",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 34
+      }
+    },
+    {
+      "start": 15.1,
+      "end": 19.28,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Digamos más o menos, si, está bastante equidistante",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 51
+      }
+    },
+    {
+      "start": 19.28,
+      "end": 24.58,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Ponle la distancia que hacía la fruta y hacía la oreo, es más o menos la misma",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 78
+      }
+    },
+    {
+      "start": 25.68,
+      "end": 26.94,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Quizás, a ver",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 13
+      }
+    },
+    {
+      "start": 26.94,
+      "end": 28.28,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Más abajo o más arriba",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 22
+      }
+    },
+    {
+      "start": 30.0,
+      "end": 35.46,
+      "speaker": null,
+      "name": null,
+      "text": "Quizás medio milímetro más cerca de la fruta, pero es bastante equidistante, la verdad",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 86
+      }
+    },
+    {
+      "start": 36.8,
+      "end": 47.24,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y bastante centrado también, ponle que el cuerno del rinoceronte, la punta del cuerno del rinoceronte",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 101
+      }
+    },
+    {
+      "start": 47.24,
+      "end": 52.78,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está más o menos en el mismo eje vertical que el punto más a la izquierda de la oreo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 84
+      }
+    },
+    {
+      "start": 52.78,
+      "end": 54.28,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Hasta adentro de la derecha, al rinoceronte",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 43
+      }
+    },
+    {
+      "start": 55.18,
+      "end": 56.54,
+      "speaker": null,
+      "name": null,
+      "text": "Cómo hasta adentro de la derecha",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 32
+      }
+    },
+    {
+      "start": 56.54,
+      "end": 57.78,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está en realidad",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 57.78,
+      "end": 60.54,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "bastante centrado respecto a la oreo y respecto a la fruta",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 17,
+        "end": 75
+      }
+    },
+    {
+      "start": 62.78,
+      "end": 69.0,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Si vos dijiste que el cuerno, la punta del cuerno está más o menos a la altura del extremo izquierdo de la oreo, no?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 116
+      }
+    },
+    {
+      "start": 69.1,
+      "end": 70.8,
+      "speaker": null,
+      "name": null,
+      "text": "Si, si, si te lo haces en una línea vertical",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 44
+      }
+    },
+    {
+      "start": 70.8,
+      "end": 80.46,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Entonces, claro, entonces tengo que, el culo del rinoceronte sobrepasa bastante la fruta, bastante es dos milímetros",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 116
+      }
+    },
+    {
+      "start": 80.46,
+      "end": 80.76,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Sobrepasa",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 9
+      }
+    },
+    {
+      "start": 80.76,
+      "end": 82.46,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "bastante la fruta,",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 10,
+        "end": 28
+      }
+    },
+    {
+      "start": 82.62,
+      "end": 84.52,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "si, no sobrepasa mucho la oreo",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 29,
+        "end": 59
+      }
+    },
+    {
+      "start": 84.52,
+      "end": 86.04,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "No, la cola, ponle",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 18
+      }
+    },
+    {
+      "start": 86.04,
+      "end": 86.4,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Si,",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 3
+      }
+    },
+    {
+      "start": 86.8,
+      "end": 88.86,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "la colita no sobrepasa mucho la",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 4,
+        "end": 35
+      }
+    },
+    {
+      "start": 88.86,
+      "end": 89.4,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "oreo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 36,
+        "end": 40
+      }
+    },
+    {
+      "start": 89.4,
+      "end": 109.18,
+      "speaker": null,
+      "name": null,
+      "text": "Y ponle que entonces que si trazo una línea, a ver, en los pies del rinoceronte está más o menos a la misma altura que el extremo de abajo del espejo, no del cuadro del espejo, sino del espejo en sí",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 198
+      }
+    },
+    {
+      "start": 109.18,
+      "end": 110.68,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Claro, del espejo en sí",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 19,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 110.68,
+      "end": 111.78,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Del vidrio, exactamente",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 20,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 111.78,
+      "end": 113.12,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿Y la fruta un poco más abajo?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 21,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 114.24,
+      "end": 117.32,
+      "speaker": null,
+      "name": null,
+      "text": "No, no sé, está más o menos a la misma altura",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 22,
+        "start": 0,
+        "end": 45
+      }
+    }
+  ]
+}

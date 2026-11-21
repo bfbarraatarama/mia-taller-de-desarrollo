@@ -1,0 +1,77 @@
+{
+  "resumen": "La reunión discutió cómo ocultar el rinoceronte en un espejo, identificando partes visibles y no visibles del animal. Se concluyeron que la parte más larga del cuerno se ve entre la izquierda del espejo, las patas traseras y una parte negra se percibe a la derecha.",
+  "temas": [
+    {
+      "texto": "Cómo ocultar el rinoceronte en un espejo.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021"
+      ],
+      "id_ancla": "I000021"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "Determinar cómo ocultar el rinoceronte en un espejo sin que se vea.",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017",
+        "I000018",
+        "I000019",
+        "I000020",
+        "I000021"
+      ],
+      "id_ancla": "I000021"
+    }
+  ],
+  "acciones": [
+    {
+      "texto": "Identificar las partes del rinoceronte que se ven en el espejo y las que no.",
+      "ids_intervenciones": [
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016",
+        "I000017"
+      ],
+      "id_ancla": "I000017",
+      "responsable": null,
+      "plazo": null
+    }
+  ]
+}

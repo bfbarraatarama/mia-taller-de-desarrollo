@@ -1,0 +1,517 @@
+{
+  "segments": [
+    {
+      "start": 1.52,
+      "end": 5.92,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "El mono, ponelo entre el cinturón y la frutilla.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 48
+      }
+    },
+    {
+      "start": 8.24,
+      "end": 13.72,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Digamos, un poquito más cerca del cinturón que de la frutilla, pero igual hay una buena distancia entre",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 103
+      }
+    },
+    {
+      "start": 13.72,
+      "end": 14.54,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "todos.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 104,
+        "end": 110
+      }
+    },
+    {
+      "start": 16.7,
+      "end": 29.48,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "De manera que la mano del mono está más o menos en el mismo eje vertical que la parte derecha del cinturón.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 107
+      }
+    },
+    {
+      "start": 29.48,
+      "end": 41.62,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Digamos que apenas sobresalen un poquito los dedos del mono, de manera que la cola del mono queda un poquito más hacia la derecha que la parte izquierda del cinturón.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 166
+      }
+    },
+    {
+      "start": 43.82,
+      "end": 54.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Y en cuanto a la altura, está más cerca del cinturón que de la frutilla, pero igual está a una buena distancia de los dos.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 122
+      }
+    },
+    {
+      "start": 56.28,
+      "end": 59.18,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿Es perceptible que está más cerca del cinturón que de la frutilla?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 67
+      }
+    },
+    {
+      "start": 59.34,
+      "end": 63.94,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí, es perceptible, porque la distancia con la frutilla es más gruesa que la que tiene con el cinturón.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 103
+      }
+    },
+    {
+      "start": 65.22,
+      "end": 69.98,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Con el cinturón puede ser que tenga 1 cm y con la frutilla 3",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 60
+      }
+    },
+    {
+      "start": 69.98,
+      "end": 71.12,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "cm.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [],
+      "source": {
+        "segment": 7,
+        "start": 61,
+        "end": 64
+      }
+    },
+    {
+      "start": 71.78,
+      "end": 75.38,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Tenemos un problema, ah, capaz que tu pantalla es más grande, porque acá no hay 1 cm ni 3 cm.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 93
+      }
+    },
+    {
+      "start": 75.62,
+      "end": 76.48,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, ponelo, ponelo.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 22
+      }
+    },
+    {
+      "start": 76.62,
+      "end": 77.92,
+      "speaker": null,
+      "name": null,
+      "text": "Pero 1 a 3 cm es la distancia.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 78.02,
+      "end": 80.0,
+      "speaker": null,
+      "name": null,
+      "text": "1 a 3 cm es la distancia, sí, ponelo.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 37
+      }
+    },
+    {
+      "start": 83.14,
+      "end": 92.14,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Y supongamos que la oreja del mono, los agujeros del cinturón, si vamos desde el extremo hacia la hebilla, hay dos agujeros.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 124
+      }
+    },
+    {
+      "start": 92.94,
+      "end": 95.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "La oreja quedaría así como...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 29
+      }
+    },
+    {
+      "start": 95.82,
+      "end": 97.56,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Como en el medio, casi tirando",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 30
+      }
+    },
+    {
+      "start": 97.56,
+      "end": 98.18,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "más a la derecha.",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 31,
+        "end": 48
+      }
+    },
+    {
+      "start": 99.08,
+      "end": 102.82,
+      "speaker": null,
+      "name": null,
+      "text": "No, como en el medio, te diría como en el medio más o menos.",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 60
+      }
+    },
+    {
+      "start": 103.06,
+      "end": 103.78,
+      "speaker": null,
+      "name": null,
+      "text": "Como en el medio de los dos?",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 16,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 103.96,
+      "end": 105.18,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Sí, más o menos.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 17,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 105.66,
+      "end": 107.1,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Está bien, bueno, remando.",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 18,
+        "start": 0,
+        "end": 26
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "resumen": "La reunión se centró en la colocación de un elemento (M y M) sobre una cebolla, con el objetivo de que encaje correctamente. Se discutió sobre la posición exacta del elemento y su relación con otros ingredientes como el limón.",
+  "temas": [
+    {
+      "texto": "Colocación del M y M sobre la cebolla",
+      "ids_intervenciones": [
+        "I000001",
+        "I000002",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010",
+        "I000011",
+        "I000012",
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016"
+      ],
+      "id_ancla": "I000016"
+    }
+  ],
+  "decisiones": [],
+  "problemas": [
+    {
+      "texto": "Dificultad en la colocación del M y M sobre la cebolla, ya que no se acordó exactamente cómo debe tapar el limón o la cebolla.",
+      "ids_intervenciones": [
+        "I000013",
+        "I000014",
+        "I000015",
+        "I000016"
+      ],
+      "id_ancla": "I000016"
+    }
+  ],
+  "acciones": []
+}

@@ -1,0 +1,885 @@
+{
+  "language": "es",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.1,
+      "text": "Dale vamos, uno más y uno más",
+      "words": [
+        {
+          "word": "Dale",
+          "start": 0.0,
+          "end": 1.12
+        },
+        {
+          "word": "vamos,",
+          "start": 1.12,
+          "end": 1.44
+        },
+        {
+          "word": "uno",
+          "start": 1.5,
+          "end": 1.6
+        },
+        {
+          "word": "más",
+          "start": 1.6,
+          "end": 1.78
+        },
+        {
+          "word": "y",
+          "start": 1.78,
+          "end": 1.92
+        },
+        {
+          "word": "uno",
+          "start": 1.92,
+          "end": 2.14
+        },
+        {
+          "word": "más",
+          "start": 2.14,
+          "end": 3.1
+        }
+      ]
+    },
+    {
+      "start": 3.1,
+      "end": 3.44,
+      "text": "Dale",
+      "words": [
+        {
+          "word": "Dale",
+          "start": 3.1,
+          "end": 3.44
+        }
+      ]
+    },
+    {
+      "start": 4.5,
+      "end": 6.28,
+      "text": "Estaban re emocionadas",
+      "words": [
+        {
+          "word": "Estaban",
+          "start": 4.5,
+          "end": 5.1
+        },
+        {
+          "word": "re",
+          "start": 5.1,
+          "end": 5.42
+        },
+        {
+          "word": "emocionadas",
+          "start": 5.42,
+          "end": 6.28
+        }
+      ]
+    },
+    {
+      "start": 7.64,
+      "end": 11.78,
+      "text": "Bueno vas a tener que agarrar el rinoceronte azul",
+      "words": [
+        {
+          "word": "Bueno",
+          "start": 7.64,
+          "end": 8.24
+        },
+        {
+          "word": "vas",
+          "start": 8.24,
+          "end": 8.46
+        },
+        {
+          "word": "a",
+          "start": 8.46,
+          "end": 8.62
+        },
+        {
+          "word": "tener",
+          "start": 8.62,
+          "end": 8.82
+        },
+        {
+          "word": "que",
+          "start": 8.82,
+          "end": 9.06
+        },
+        {
+          "word": "agarrar",
+          "start": 9.06,
+          "end": 10.18
+        },
+        {
+          "word": "el",
+          "start": 10.18,
+          "end": 10.64
+        },
+        {
+          "word": "rinoceronte",
+          "start": 10.64,
+          "end": 11.22
+        },
+        {
+          "word": "azul",
+          "start": 11.22,
+          "end": 11.78
+        }
+      ]
+    },
+    {
+      "start": 11.78,
+      "end": 13.28,
+      "text": "Yo quería agarrar la de oliva",
+      "words": [
+        {
+          "word": "Yo",
+          "start": 11.78,
+          "end": 12.04
+        },
+        {
+          "word": "quería",
+          "start": 12.04,
+          "end": 12.34
+        },
+        {
+          "word": "agarrar",
+          "start": 12.34,
+          "end": 12.54
+        },
+        {
+          "word": "la",
+          "start": 12.54,
+          "end": 12.68
+        },
+        {
+          "word": "de",
+          "start": 12.68,
+          "end": 12.74
+        },
+        {
+          "word": "oliva",
+          "start": 12.74,
+          "end": 13.28
+        }
+      ]
+    },
+    {
+      "start": 13.28,
+      "end": 14.74,
+      "text": "Y yo también",
+      "words": [
+        {
+          "word": "Y",
+          "start": 13.28,
+          "end": 13.64
+        },
+        {
+          "word": "yo",
+          "start": 13.64,
+          "end": 13.94
+        },
+        {
+          "word": "también",
+          "start": 13.94,
+          "end": 14.74
+        }
+      ]
+    },
+    {
+      "start": 16.54,
+      "end": 20.44,
+      "text": "Bueno, pegarlo digamos al lado del...",
+      "words": [
+        {
+          "word": "Bueno,",
+          "start": 16.54,
+          "end": 17.14
+        },
+        {
+          "word": "pegarlo",
+          "start": 17.14,
+          "end": 17.74
+        },
+        {
+          "word": "digamos",
+          "start": 17.74,
+          "end": 18.42
+        },
+        {
+          "word": "al",
+          "start": 18.42,
+          "end": 18.72
+        },
+        {
+          "word": "lado",
+          "start": 18.72,
+          "end": 19.02
+        },
+        {
+          "word": "del...",
+          "start": 19.02,
+          "end": 20.44
+        }
+      ]
+    },
+    {
+      "start": 20.44,
+      "end": 22.66,
+      "text": "Va de la maracuyá o lo que sea",
+      "words": [
+        {
+          "word": "Va",
+          "start": 20.44,
+          "end": 20.64
+        },
+        {
+          "word": "de",
+          "start": 20.64,
+          "end": 20.94
+        },
+        {
+          "word": "la",
+          "start": 20.94,
+          "end": 21.14
+        },
+        {
+          "word": "maracuyá",
+          "start": 21.14,
+          "end": 21.78
+        },
+        {
+          "word": "o",
+          "start": 21.78,
+          "end": 21.88
+        },
+        {
+          "word": "lo",
+          "start": 21.88,
+          "end": 22.02
+        },
+        {
+          "word": "que",
+          "start": 22.02,
+          "end": 22.26
+        },
+        {
+          "word": "sea",
+          "start": 22.26,
+          "end": 22.66
+        }
+      ]
+    },
+    {
+      "start": 22.66,
+      "end": 25.7,
+      "text": "O sea que el rabito quede como adentro, viste?",
+      "words": [
+        {
+          "word": "O",
+          "start": 22.66,
+          "end": 23.32
+        },
+        {
+          "word": "sea",
+          "start": 23.32,
+          "end": 23.38
+        },
+        {
+          "word": "que",
+          "start": 23.38,
+          "end": 23.52
+        },
+        {
+          "word": "el",
+          "start": 23.52,
+          "end": 23.66
+        },
+        {
+          "word": "rabito",
+          "start": 23.66,
+          "end": 24.0
+        },
+        {
+          "word": "quede",
+          "start": 24.0,
+          "end": 24.24
+        },
+        {
+          "word": "como",
+          "start": 24.24,
+          "end": 24.52
+        },
+        {
+          "word": "adentro,",
+          "start": 24.52,
+          "end": 24.98
+        },
+        {
+          "word": "viste?",
+          "start": 24.98,
+          "end": 25.7
+        }
+      ]
+    },
+    {
+      "start": 26.3,
+      "end": 28.0,
+      "text": "Y va, bueno, arriba de...",
+      "words": [
+        {
+          "word": "Y",
+          "start": 26.3,
+          "end": 26.36
+        },
+        {
+          "word": "va,",
+          "start": 26.36,
+          "end": 26.7
+        },
+        {
+          "word": "bueno,",
+          "start": 26.74,
+          "end": 27.04
+        },
+        {
+          "word": "arriba",
+          "start": 27.28,
+          "end": 27.68
+        },
+        {
+          "word": "de...",
+          "start": 27.68,
+          "end": 28.0
+        }
+      ]
+    },
+    {
+      "start": 28.0,
+      "end": 29.16,
+      "text": "De las velas?",
+      "words": [
+        {
+          "word": "De",
+          "start": 28.0,
+          "end": 28.08
+        },
+        {
+          "word": "las",
+          "start": 28.08,
+          "end": 28.68
+        },
+        {
+          "word": "velas?",
+          "start": 28.68,
+          "end": 29.16
+        }
+      ]
+    },
+    {
+      "start": 29.16,
+      "end": 32.0,
+      "text": "Si, de las velas a un centímetro, ponle",
+      "words": [
+        {
+          "word": "Si,",
+          "start": 29.16,
+          "end": 29.4
+        },
+        {
+          "word": "de",
+          "start": 29.46,
+          "end": 29.48
+        },
+        {
+          "word": "las",
+          "start": 29.48,
+          "end": 29.72
+        },
+        {
+          "word": "velas",
+          "start": 29.72,
+          "end": 30.32
+        },
+        {
+          "word": "a",
+          "start": 30.32,
+          "end": 30.66
+        },
+        {
+          "word": "un",
+          "start": 30.66,
+          "end": 30.82
+        },
+        {
+          "word": "centímetro,",
+          "start": 30.82,
+          "end": 31.28
+        },
+        {
+          "word": "ponle",
+          "start": 31.3,
+          "end": 32.0
+        }
+      ]
+    },
+    {
+      "start": 33.22,
+      "end": 35.94,
+      "text": "Un centímetro de las velitas",
+      "words": [
+        {
+          "word": "Un",
+          "start": 33.22,
+          "end": 33.82
+        },
+        {
+          "word": "centímetro",
+          "start": 33.82,
+          "end": 34.42
+        },
+        {
+          "word": "de",
+          "start": 34.42,
+          "end": 34.62
+        },
+        {
+          "word": "las",
+          "start": 34.62,
+          "end": 34.82
+        },
+        {
+          "word": "velitas",
+          "start": 34.82,
+          "end": 35.94
+        }
+      ]
+    },
+    {
+      "start": 35.94,
+      "end": 37.84,
+      "text": "Pero bien pegado a las frutas",
+      "words": [
+        {
+          "word": "Pero",
+          "start": 35.94,
+          "end": 36.56
+        },
+        {
+          "word": "bien",
+          "start": 36.56,
+          "end": 36.8
+        },
+        {
+          "word": "pegado",
+          "start": 36.8,
+          "end": 37.22
+        },
+        {
+          "word": "a",
+          "start": 37.22,
+          "end": 37.3
+        },
+        {
+          "word": "las",
+          "start": 37.3,
+          "end": 37.48
+        },
+        {
+          "word": "frutas",
+          "start": 37.48,
+          "end": 37.84
+        }
+      ]
+    },
+    {
+      "start": 39.46,
+      "end": 41.0,
+      "text": "El rabito digamos...",
+      "words": [
+        {
+          "word": "El",
+          "start": 39.46,
+          "end": 40.06
+        },
+        {
+          "word": "rabito",
+          "start": 40.06,
+          "end": 40.66
+        },
+        {
+          "word": "digamos...",
+          "start": 40.66,
+          "end": 41.0
+        }
+      ]
+    },
+    {
+      "start": 41.0,
+      "end": 42.56,
+      "text": "Es como que queda en la parte de naranja",
+      "words": [
+        {
+          "word": "Es",
+          "start": 41.0,
+          "end": 41.06
+        },
+        {
+          "word": "como",
+          "start": 41.06,
+          "end": 41.2
+        },
+        {
+          "word": "que",
+          "start": 41.2,
+          "end": 41.5
+        },
+        {
+          "word": "en",
+          "start": 41.5,
+          "end": 41.6
+        },
+        {
+          "word": "la",
+          "start": 41.6,
+          "end": 41.68
+        },
+        {
+          "word": "parte",
+          "start": 41.68,
+          "end": 41.86
+        },
+        {
+          "word": "de",
+          "start": 41.86,
+          "end": 42.02
+        },
+        {
+          "word": "naranja",
+          "start": 42.02,
+          "end": 42.56
+        }
+      ]
+    },
+    {
+      "start": 42.56,
+      "end": 44.14,
+      "text": "Ah queda en la parte naranja",
+      "words": [
+        {
+          "word": "Ah",
+          "start": 42.56,
+          "end": 43.2
+        },
+        {
+          "word": "queda",
+          "start": 43.2,
+          "end": 43.28
+        },
+        {
+          "word": "en",
+          "start": 43.28,
+          "end": 43.4
+        },
+        {
+          "word": "la",
+          "start": 43.4,
+          "end": 43.5
+        },
+        {
+          "word": "parte",
+          "start": 43.5,
+          "end": 43.66
+        },
+        {
+          "word": "naranja",
+          "start": 43.66,
+          "end": 44.14
+        }
+      ]
+    },
+    {
+      "start": 44.14,
+      "end": 44.92,
+      "text": "Si",
+      "words": [
+        {
+          "word": "Si",
+          "start": 44.14,
+          "end": 44.92
+        }
+      ]
+    },
+    {
+      "start": 48.74,
+      "end": 50.66,
+      "text": "Un centímetro más o menos",
+      "words": [
+        {
+          "word": "Un",
+          "start": 48.74,
+          "end": 49.34
+        },
+        {
+          "word": "centímetro",
+          "start": 49.34,
+          "end": 49.88
+        },
+        {
+          "word": "más",
+          "start": 49.88,
+          "end": 50.1
+        },
+        {
+          "word": "o",
+          "start": 50.1,
+          "end": 50.2
+        },
+        {
+          "word": "menos",
+          "start": 50.2,
+          "end": 50.66
+        }
+      ]
+    },
+    {
+      "start": 50.66,
+      "end": 52.0,
+      "text": "Eso es un centímetro",
+      "words": [
+        {
+          "word": "Eso",
+          "start": 50.66,
+          "end": 50.98
+        },
+        {
+          "word": "es",
+          "start": 50.98,
+          "end": 51.2
+        },
+        {
+          "word": "un",
+          "start": 51.2,
+          "end": 51.5
+        },
+        {
+          "word": "centímetro",
+          "start": 51.5,
+          "end": 52.0
+        }
+      ]
+    },
+    {
+      "start": 53.14,
+      "end": 54.9,
+      "text": "Las patas quedan adentro?",
+      "words": [
+        {
+          "word": "Las",
+          "start": 53.14,
+          "end": 53.74
+        },
+        {
+          "word": "patas",
+          "start": 53.74,
+          "end": 54.04
+        },
+        {
+          "word": "quedan",
+          "start": 54.04,
+          "end": 54.38
+        },
+        {
+          "word": "adentro?",
+          "start": 54.38,
+          "end": 54.9
+        }
+      ]
+    },
+    {
+      "start": 55.02,
+      "end": 56.26,
+      "text": "Llega a entrar algo en las patas?",
+      "words": [
+        {
+          "word": "Llega",
+          "start": 55.02,
+          "end": 55.56
+        },
+        {
+          "word": "entrar",
+          "start": 55.56,
+          "end": 55.86
+        },
+        {
+          "word": "algo",
+          "start": 55.86,
+          "end": 56.06
+        },
+        {
+          "word": "en",
+          "start": 56.06,
+          "end": 56.1
+        },
+        {
+          "word": "las",
+          "start": 56.1,
+          "end": 56.26
+        }
+      ]
+    },
+    {
+      "start": 56.26,
+      "end": 58.44,
+      "text": "No, la parte azul por ejemplo",
+      "words": [
+        {
+          "word": "No,",
+          "start": 56.26,
+          "end": 56.38
+        },
+        {
+          "word": "la",
+          "start": 56.8,
+          "end": 57.02
+        },
+        {
+          "word": "parte",
+          "start": 57.02,
+          "end": 57.36
+        },
+        {
+          "word": "azul",
+          "start": 57.36,
+          "end": 57.68
+        },
+        {
+          "word": "por",
+          "start": 57.68,
+          "end": 58.1
+        },
+        {
+          "word": "ejemplo",
+          "start": 58.1,
+          "end": 58.44
+        }
+      ]
+    },
+    {
+      "start": 58.44,
+      "end": 61.18,
+      "text": "La cola y las patas es como que tocan",
+      "words": [
+        {
+          "word": "La",
+          "start": 58.44,
+          "end": 58.64
+        },
+        {
+          "word": "cola",
+          "start": 58.64,
+          "end": 58.86
+        },
+        {
+          "word": "y",
+          "start": 58.86,
+          "end": 59.0
+        },
+        {
+          "word": "las",
+          "start": 59.0,
+          "end": 59.18
+        },
+        {
+          "word": "patas",
+          "start": 59.18,
+          "end": 59.68
+        },
+        {
+          "word": "es",
+          "start": 59.68,
+          "end": 59.8
+        },
+        {
+          "word": "como",
+          "start": 59.8,
+          "end": 59.98
+        },
+        {
+          "word": "que",
+          "start": 59.98,
+          "end": 60.3
+        },
+        {
+          "word": "tocan",
+          "start": 60.3,
+          "end": 61.18
+        }
+      ]
+    },
+    {
+      "start": 61.18,
+      "end": 63.9,
+      "text": "La parte negra pero no llega a tocar la parte naranja",
+      "words": [
+        {
+          "word": "La",
+          "start": 61.18,
+          "end": 61.5
+        },
+        {
+          "word": "parte",
+          "start": 61.5,
+          "end": 61.76
+        },
+        {
+          "word": "negra",
+          "start": 61.76,
+          "end": 62.1
+        },
+        {
+          "word": "pero",
+          "start": 62.1,
+          "end": 62.28
+        },
+        {
+          "word": "no",
+          "start": 62.28,
+          "end": 62.48
+        },
+        {
+          "word": "llega",
+          "start": 62.48,
+          "end": 62.66
+        },
+        {
+          "word": "a",
+          "start": 62.66,
+          "end": 62.68
+        },
+        {
+          "word": "tocar",
+          "start": 62.68,
+          "end": 63.0
+        },
+        {
+          "word": "la",
+          "start": 63.0,
+          "end": 63.16
+        },
+        {
+          "word": "parte",
+          "start": 63.16,
+          "end": 63.36
+        },
+        {
+          "word": "naranja",
+          "start": 63.36,
+          "end": 63.9
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "segments": [
+    {
+      "start": 1.76,
+      "end": 5.12,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "tengo al mimo sobre la",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 22
+      }
+    },
+    {
+      "start": 5.12,
+      "end": 5.96,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "lechusa",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 23,
+        "end": 30
+      }
+    },
+    {
+      "start": 5.96,
+      "end": 9.0,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "y a la derecha de la oreja",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 31,
+        "end": 57
+      }
+    },
+    {
+      "start": 11.0,
+      "end": 13.07,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "está casi en la misma línea que la oreja",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 40
+      }
+    },
+    {
+      "start": 15.1,
+      "end": 15.56,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "¿Más",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 4
+      }
+    },
+    {
+      "start": 15.56,
+      "end": 16.48,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "abajo o más arriba?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 5,
+        "end": 24
+      }
+    },
+    {
+      "start": 17.36,
+      "end": 22.4,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "Casi en la misma línea, trata de que quede igual ni más abajo ni más arriba que la oreja",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 88
+      }
+    },
+    {
+      "start": 22.4,
+      "end": 28.06,
+      "speaker": null,
+      "name": null,
+      "text": "y más o menos, donde termina la rama, o sea, donde termina la parte izquierda de la lechusa",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 91
+      }
+    },
+    {
+      "start": 28.06,
+      "end": 32.06,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "está la manito del mimo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 23
+      }
+    },
+    {
+      "start": 33.06,
+      "end": 42.09,
+      "speaker": "SPEAKER_01",
+      "name": null,
+      "text": "y después, donde termina la lechusa, está la parte derecha del hombro del mimo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 78
+      }
+    },
+    {
+      "start": 43.0,
+      "end": 52.12,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "o sea que está así, como haciendo el encuentro ahí entre la oreja y la lechusa",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 78
+      }
+    },
+    {
+      "start": 52.12,
+      "end": 54.92,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "en un punto, encuentran a las dos",
+      "overlap": true,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 33
+      }
+    },
+    {
+      "start": 54.92,
+      "end": 57.04,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Bueno, pongo listo",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 18
+      }
+    }
+  ]
+}

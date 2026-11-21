@@ -1,0 +1,31 @@
+{
+  "resumen": "La reunión se centró en la ubicación de un objeto llamado 'la luna azul' en relación con un espejo y un telar. Se acordó que el objeto debe estar arriba del espejo a la izquierda del telar, sin superponerse sobre ninguna de las dos cosas mencionadas.",
+  "temas": [
+    {
+      "texto": "Ubicación de 'la luna azul'",
+      "ids_intervenciones": [
+        "I000001",
+        "I000003",
+        "I000004",
+        "I000005",
+        "I000006",
+        "I000007",
+        "I000008",
+        "I000009",
+        "I000010"
+      ],
+      "id_ancla": "I000010"
+    }
+  ],
+  "decisiones": [
+    {
+      "texto": "La luna azul debe estar arriba del espejo a la izquierda del telar, sin superponerse sobre ninguna de las dos cosas mencionadas.",
+      "ids_intervenciones": [
+        "I000010"
+      ],
+      "id_ancla": "I000010"
+    }
+  ],
+  "problemas": [],
+  "acciones": []
+}

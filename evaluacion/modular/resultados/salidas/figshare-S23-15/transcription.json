@@ -1,0 +1,368 @@
+{
+  "segments": [
+    {
+      "start": 1.78,
+      "end": 8.32,
+      "speaker": null,
+      "name": null,
+      "text": "vas a tener que agarrar el M y M y ponerlo arriba de la cebolla",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 63
+      }
+    },
+    {
+      "start": 8.32,
+      "end": 11.92,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "bueno justo, o sea que encajen los piecitos con",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 47
+      }
+    },
+    {
+      "start": 11.92,
+      "end": 15.32,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "los piecitos dejan ver el...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 28
+      }
+    },
+    {
+      "start": 15.32,
+      "end": 21.34,
+      "speaker": null,
+      "name": null,
+      "text": "si si, o sea, está justo arriba, tiene que encajar y el coso ese que es como...",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 3,
+        "start": 0,
+        "end": 79
+      }
+    },
+    {
+      "start": 21.34,
+      "end": 22.78,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "bueno no sé que es...",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 4,
+        "start": 0,
+        "end": 21
+      }
+    },
+    {
+      "start": 22.78,
+      "end": 23.3,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "¿el limón?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 5,
+        "start": 0,
+        "end": 10
+      }
+    },
+    {
+      "start": 23.64,
+      "end": 26.0,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "no no no, el coso de la cebolla",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 6,
+        "start": 0,
+        "end": 31
+      }
+    },
+    {
+      "start": 26.82,
+      "end": 27.86,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "ah, si si si",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 7,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 27.86,
+      "end": 29.84,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "bueno tiene que quedar eso en el medio",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 8,
+        "start": 0,
+        "end": 38
+      }
+    },
+    {
+      "start": 29.84,
+      "end": 32.16,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "pero tapa un poco la cebolla igual?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 9,
+        "start": 0,
+        "end": 35
+      }
+    },
+    {
+      "start": 32.62,
+      "end": 33.1,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "no",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 10,
+        "start": 0,
+        "end": 2
+      }
+    },
+    {
+      "start": 33.1,
+      "end": 34.04,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "no tapa nada de la cebolla?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 11,
+        "start": 0,
+        "end": 27
+      }
+    },
+    {
+      "start": 34.04,
+      "end": 36.78,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "no no no, está justo justo arriba",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 12,
+        "start": 0,
+        "end": 33
+      }
+    },
+    {
+      "start": 36.78,
+      "end": 39.74,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "o sea que tapa un poquitito del limón?",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 13,
+        "start": 0,
+        "end": 38
+      }
+    },
+    {
+      "start": 40.32,
+      "end": 41.8,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "eh... no tampoco",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 14,
+        "start": 0,
+        "end": 16
+      }
+    },
+    {
+      "start": 44.44,
+      "end": 48.56,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "está como... va encaja perfectamente los piecitos con la cebolla",
+      "overlap": true,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        },
+        {
+          "speaker": "SPEAKER_01",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 15,
+        "start": 0,
+        "end": 64
+      }
+    }
+  ]
+}

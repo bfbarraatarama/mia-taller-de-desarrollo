@@ -1,0 +1,67 @@
+{
+  "segments": [
+    {
+      "start": 1.16,
+      "end": 7.28,
+      "speaker": null,
+      "name": null,
+      "text": "Bueno, es la luna amarilla y tenes que colocarla entre el ojo y la regla",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "segment",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 0,
+        "start": 0,
+        "end": 72
+      }
+    },
+    {
+      "start": 7.28,
+      "end": 8.18,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "En el medio?",
+      "overlap": false,
+      "ambiguous": false,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 1,
+        "start": 0,
+        "end": 12
+      }
+    },
+    {
+      "start": 9.3,
+      "end": 15.42,
+      "speaker": "SPEAKER_00",
+      "name": null,
+      "text": "Si, justo en el espacio que queda ahí, en el medio, a la misma distancia de ambas",
+      "overlap": false,
+      "ambiguous": true,
+      "timing": "word",
+      "speakers_detected": [
+        {
+          "speaker": "SPEAKER_00",
+          "name": null
+        }
+      ],
+      "source": {
+        "segment": 2,
+        "start": 0,
+        "end": 81
+      }
+    }
+  ]
+}
